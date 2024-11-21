@@ -50,7 +50,7 @@ local tbl =
 						data = 
 						{
 							buffCheckType = 2,
-							buffID = 3629,
+							buffID = 743,
 							category = "Self",
 							uuid = "46cb0109-6c3a-2f84-a2c4-31984cecfea2",
 							version = 2,
