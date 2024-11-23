@@ -55,6 +55,61 @@ local tbl =
 			},
 			inheritedIndex = 1,
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							conditions = 
+							{
+								
+								{
+									"208ef0e4-7b7b-6d69-a256-a944f3bd6445",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetSubType = "Lowest HP",
+							targetType = "DPS",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "208ef0e4-7b7b-6d69-a256-a944f3bd6445",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 28.9,
+				name = "NF DPS (25)",
+				timeRange = true,
+				timelineIndex = 3,
+				timerEndOffset = 5,
+				timerOffset = -4,
+				timerStartOffset = 2,
+				uuid = "f2e5ac9e-8de0-f534-8f12-757b52bd3d26",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
 	},
 	[6] = 
 	{
@@ -556,63 +611,6 @@ local tbl =
 				timerOffset = -4,
 				timerStartOffset = -2,
 				uuid = "0b945074-f5a6-77a8-a9e6-77e8e8bc4e32",
-				version = 2,
-			},
-			inheritedIndex = 1,
-		},
-	},
-	[23] = 
-	{
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16464,
-							conditions = 
-							{
-								
-								{
-									"208ef0e4-7b7b-6d69-a256-a944f3bd6445",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							targetSubType = "Lowest HP",
-							targetType = "Ranged DPS",
-							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16464,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "208ef0e4-7b7b-6d69-a256-a944f3bd6445",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 199.5,
-				name = "NF DPS (25)",
-				timeRange = true,
-				timelineIndex = 23,
-				timerOffset = -4,
-				timerStartOffset = -2,
-				uuid = "521539cf-68bc-4282-8387-7fb7e9f29828",
 				version = 2,
 			},
 			inheritedIndex = 1,
