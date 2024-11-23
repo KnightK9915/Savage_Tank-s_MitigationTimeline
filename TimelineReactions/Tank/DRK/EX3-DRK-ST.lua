@@ -276,6 +276,24 @@ local tbl =
 			{
 				actions = 
 				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 116.1,
+				name = "_________________",
+				timelineIndex = 14,
+				uuid = "d6684823-9878-b613-8f5b-6777cf44f6cc",
+				version = 2,
+			},
+			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
 					
 					{
 						data = 
@@ -321,78 +339,6 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 3,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 3634,
-							conditions = 
-							{
-								
-								{
-									"332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							uuid = "85c81a2a-1fc1-bba8-a315-e5438e54b390",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 3634,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
-							version = 2,
-						},
-					},
-				},
-				enabled = false,
-				mechanicTime = 116.1,
-				name = "Dark Mind (M20)",
-				timeRange = true,
-				timelineIndex = 14,
-				timerEndOffset = -1,
-				timerOffset = -5,
-				timerStartOffset = -5,
-				uuid = "068e9a3b-1690-c009-96a8-36d64d8e104e",
-				version = 2,
-			},
-			inheritedIndex = 5,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 116.1,
-				name = "_________________",
-				timelineIndex = 14,
-				uuid = "d6684823-9878-b613-8f5b-6777cf44f6cc",
-				version = 2,
-			},
-			inheritedIndex = 6,
 		},
 		
 		{
@@ -464,6 +410,60 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 9,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3634,
+							conditions = 
+							{
+								
+								{
+									"332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "85c81a2a-1fc1-bba8-a315-e5438e54b390",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3634,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 116.1,
+				name = "Dark Mind (M20)",
+				timeRange = true,
+				timelineIndex = 14,
+				timerEndOffset = -1,
+				timerOffset = -5,
+				timerStartOffset = -5,
+				uuid = "068e9a3b-1690-c009-96a8-36d64d8e104e",
+				version = 2,
+			},
+			inheritedIndex = 5,
 		},
 	},
 	[18] = 
@@ -684,7 +684,7 @@ local tbl =
 				uuid = "ce3cf82c-ea5b-3e62-9b4f-8e75f4f6cb61",
 				version = 2,
 			},
-			inheritedIndex = 1,
+			inheritedIndex = 2,
 		},
 	},
 	[35] = 
@@ -852,6 +852,24 @@ local tbl =
 			{
 				actions = 
 				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 257.1,
+				name = "_________________",
+				timelineIndex = 36,
+				uuid = "bcc46071-72c3-6cd4-bd0f-fd21f4449e7c",
+				version = 2,
+			},
+			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
 					
 					{
 						data = 
@@ -897,78 +915,6 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 3,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 3634,
-							conditions = 
-							{
-								
-								{
-									"332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							uuid = "85c81a2a-1fc1-bba8-a315-e5438e54b390",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 3634,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
-							version = 2,
-						},
-					},
-				},
-				enabled = false,
-				mechanicTime = 257.1,
-				name = "Dark Mind (M20)",
-				timeRange = true,
-				timelineIndex = 36,
-				timerEndOffset = -1,
-				timerOffset = -5,
-				timerStartOffset = -5,
-				uuid = "74416808-faae-c734-8616-56c4c6656a76",
-				version = 2,
-			},
-			inheritedIndex = 5,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 257.1,
-				name = "_________________",
-				timelineIndex = 36,
-				uuid = "bcc46071-72c3-6cd4-bd0f-fd21f4449e7c",
-				version = 2,
-			},
-			inheritedIndex = 6,
 		},
 		
 		{
@@ -1040,6 +986,60 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 9,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3634,
+							conditions = 
+							{
+								
+								{
+									"332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "85c81a2a-1fc1-bba8-a315-e5438e54b390",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3634,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 257.1,
+				name = "Dark Mind (M20)",
+				timeRange = true,
+				timelineIndex = 36,
+				timerEndOffset = -1,
+				timerOffset = -5,
+				timerStartOffset = -5,
+				uuid = "74416808-faae-c734-8616-56c4c6656a76",
+				version = 2,
+			},
+			inheritedIndex = 5,
 		},
 	},
 	[42] = 
@@ -1466,6 +1466,24 @@ local tbl =
 			{
 				actions = 
 				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 430.6,
+				name = "_________________",
+				timelineIndex = 67,
+				uuid = "0f688f44-f6f8-0cf5-bc1f-d861712b7421",
+				version = 2,
+			},
+			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
 					
 					{
 						data = 
@@ -1511,78 +1529,6 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 3,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 3634,
-							conditions = 
-							{
-								
-								{
-									"332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							uuid = "85c81a2a-1fc1-bba8-a315-e5438e54b390",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 3634,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
-							version = 2,
-						},
-					},
-				},
-				enabled = false,
-				mechanicTime = 430.6,
-				name = "Dark Mind (M20)",
-				timeRange = true,
-				timelineIndex = 67,
-				timerEndOffset = -1,
-				timerOffset = -5,
-				timerStartOffset = -5,
-				uuid = "64a900a2-93eb-9a3e-a4ba-443dda1ee3e3",
-				version = 2,
-			},
-			inheritedIndex = 5,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 430.6,
-				name = "_________________",
-				timelineIndex = 67,
-				uuid = "0f688f44-f6f8-0cf5-bc1f-d861712b7421",
-				version = 2,
-			},
-			inheritedIndex = 6,
 		},
 		
 		{
@@ -1654,6 +1600,60 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 9,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3634,
+							conditions = 
+							{
+								
+								{
+									"332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "85c81a2a-1fc1-bba8-a315-e5438e54b390",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3634,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 430.6,
+				name = "Dark Mind (M20)",
+				timeRange = true,
+				timelineIndex = 67,
+				timerEndOffset = -1,
+				timerOffset = -5,
+				timerStartOffset = -5,
+				uuid = "64a900a2-93eb-9a3e-a4ba-443dda1ee3e3",
+				version = 2,
+			},
+			inheritedIndex = 5,
 		},
 	},
 	[77] = 
@@ -1995,62 +1995,6 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 5,
-		},
-	},
-	[85] = 
-	{
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7531,
-							conditions = 
-							{
-								
-								{
-									"1465472a-0137-2f48-b9fc-aa7b9991077a",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7531,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 1099.4,
-				name = "Rampart (20)",
-				timeRange = true,
-				timelineIndex = 85,
-				timerOffset = -15,
-				timerStartOffset = -1,
-				uuid = "8b488691-efc1-466f-8855-b6f16b94f5e3",
-				version = 2,
-			},
-			inheritedIndex = 1,
 		},
 	},
 	[87] = 
