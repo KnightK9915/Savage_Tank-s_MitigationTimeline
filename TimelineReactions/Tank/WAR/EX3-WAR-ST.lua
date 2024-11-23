@@ -1120,6 +1120,131 @@ local tbl =
 			inheritedIndex = 9,
 		},
 	},
+	[40] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							conditions = 
+							{
+								
+								{
+									"208ef0e4-7b7b-6d69-a256-a944f3bd6445",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "208ef0e4-7b7b-6d69-a256-a944f3bd6445",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 276.4,
+				name = "NF ST (25)",
+				timeRange = true,
+				timelineIndex = 40,
+				timerOffset = -4,
+				timerStartOffset = -2,
+				uuid = "c80ca2b0-ce15-9dc9-8e5a-94d510f3e7f8",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3552,
+							conditions = 
+							{
+								
+								{
+									"765cdb05-b839-9d7e-96f5-d5b01de337bf",
+									true,
+								},
+								
+								{
+									"36dc885b-1f9c-0471-bc08-7a017c15d6e1",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "a53a5321-b7a7-656f-8d8f-34823340d239",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3552,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "765cdb05-b839-9d7e-96f5-d5b01de337bf",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							uuid = "36dc885b-1f9c-0471-bc08-7a017c15d6e1",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 276.4,
+				name = "Equilibrium (Regen)",
+				timeRange = true,
+				timelineIndex = 40,
+				timerEndOffset = 10,
+				uuid = "486a4fdc-5f8e-a026-9ea0-ccba75db6398",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+	},
 	[42] = 
 	{
 		

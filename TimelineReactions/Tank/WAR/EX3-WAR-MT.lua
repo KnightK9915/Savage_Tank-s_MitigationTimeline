@@ -120,24 +120,6 @@ local tbl =
 			{
 				actions = 
 				{
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 113,
-				name = "_________________",
-				timelineIndex = 13,
-				uuid = "b3e2a003-eaaa-dfb0-9ac1-c161815db0d2",
-				version = 2,
-			},
-			inheritedIndex = 7,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
 					
 					{
 						data = 
@@ -183,7 +165,7 @@ local tbl =
 				uuid = "d122f0e2-9650-a1cb-a349-8e4d36eedd56",
 				version = 2,
 			},
-			inheritedIndex = 2,
+			inheritedIndex = 1,
 		},
 		
 		{
@@ -236,7 +218,7 @@ local tbl =
 				uuid = "a0ed6178-bbc9-4b58-9a00-653ff54c6f4c",
 				version = 2,
 			},
-			inheritedIndex = 3,
+			inheritedIndex = 2,
 		},
 		
 		{
@@ -303,6 +285,24 @@ local tbl =
 				timelineIndex = 13,
 				timerEndOffset = 10,
 				uuid = "baf4c025-729a-c325-bb0d-1990d4394f4b",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 113,
+				name = "_________________",
+				timelineIndex = 13,
+				uuid = "b3e2a003-eaaa-dfb0-9ac1-c161815db0d2",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -1114,6 +1114,131 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 9,
+		},
+	},
+	[40] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							conditions = 
+							{
+								
+								{
+									"208ef0e4-7b7b-6d69-a256-a944f3bd6445",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "208ef0e4-7b7b-6d69-a256-a944f3bd6445",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 276.4,
+				name = "NF ST (25)",
+				timeRange = true,
+				timelineIndex = 40,
+				timerOffset = -4,
+				timerStartOffset = -2,
+				uuid = "24486dad-8110-d719-a10a-0a82ec5955f7",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3552,
+							conditions = 
+							{
+								
+								{
+									"765cdb05-b839-9d7e-96f5-d5b01de337bf",
+									true,
+								},
+								
+								{
+									"36dc885b-1f9c-0471-bc08-7a017c15d6e1",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "a53a5321-b7a7-656f-8d8f-34823340d239",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3552,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "765cdb05-b839-9d7e-96f5-d5b01de337bf",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							uuid = "36dc885b-1f9c-0471-bc08-7a017c15d6e1",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 276.4,
+				name = "Equilibrium (Regen)",
+				timeRange = true,
+				timelineIndex = 40,
+				timerEndOffset = 10,
+				uuid = "06f7f914-b3e1-8e57-a24e-9405f909d899",
+				version = 2,
+			},
+			inheritedIndex = 3,
 		},
 	},
 	[42] = 
