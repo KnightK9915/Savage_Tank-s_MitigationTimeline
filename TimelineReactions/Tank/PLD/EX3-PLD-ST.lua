@@ -417,7 +417,7 @@ local tbl =
 				uuid = "99787ecd-126d-cf80-ba0a-119189a532b8",
 				version = 2,
 			},
-			inheritedIndex = 5,
+			inheritedIndex = 4,
 		},
 		
 		{
@@ -488,7 +488,7 @@ local tbl =
 				uuid = "abee174c-4fdd-2524-b111-0858205728db",
 				version = 2,
 			},
-			inheritedIndex = 6,
+			inheritedIndex = 5,
 		},
 	},
 	[18] = 
@@ -664,21 +664,24 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 25746,
+							actionID = 7382,
 							conditions = 
 							{
 								
 								{
-									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+								
+								{
+									"89667ff6-eab3-e46e-a10c-05d61db06eba",
 									true,
 								},
 							},
-							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
-							targetSubType = "Lowest HP",
-							targetType = "DPS",
-							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
+							targetType = "Melee DPS",
+							uuid = "5ed8c1f4-36d8-ad42-9463-1f8154296465",
 							version = 2.1,
 						},
 					},
@@ -692,17 +695,29 @@ local tbl =
 							category = "Self",
 							conditionType = 6,
 							gaugeValue = 50,
-							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 2679,
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "89667ff6-eab3-e46e-a10c-05d61db06eba",
 							version = 2,
 						},
 					},
 				},
 				mechanicTime = 205.7,
-				name = "sheltron (15 DPS",
+				name = "interven DPS (15)",
 				timeRange = true,
 				timelineIndex = 27,
 				timerStartOffset = -2,
-				uuid = "4c574eac-60fc-99a4-b5fc-7881d6d128fa",
+				uuid = "7fc27cf4-765b-fd9d-8fe4-3428215ac0bd",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -1005,24 +1020,6 @@ local tbl =
 			{
 				actions = 
 				{
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 257.1,
-				name = "_________",
-				timelineIndex = 36,
-				uuid = "3600fe06-edf1-4cbe-ba0a-22d474df1a1d",
-				version = 2,
-			},
-			inheritedIndex = 5,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
 					
 					{
 						data = 
@@ -1087,6 +1084,24 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 257.1,
+				name = "_________",
+				timelineIndex = 36,
+				uuid = "3600fe06-edf1-4cbe-ba0a-22d474df1a1d",
+				version = 2,
+			},
+			inheritedIndex = 5,
 		},
 	},
 	[42] = 
@@ -1194,6 +1209,77 @@ local tbl =
 				timelineIndex = 45,
 				timerStartOffset = -2,
 				uuid = "a80ea2b2-02ed-1faa-a676-a1d442211275",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+	},
+	[53] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+								
+								{
+									"89667ff6-eab3-e46e-a10c-05d61db06eba",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Melee DPS",
+							uuid = "5ed8c1f4-36d8-ad42-9463-1f8154296465",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 2679,
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "89667ff6-eab3-e46e-a10c-05d61db06eba",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 384.1,
+				name = "interven DPS (15)",
+				timeRange = true,
+				timelineIndex = 53,
+				timerStartOffset = -5,
+				uuid = "120518f6-0761-3697-8010-5833e7aa7fc1",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -1605,24 +1691,6 @@ local tbl =
 			{
 				actions = 
 				{
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 430.6,
-				name = "_________",
-				timelineIndex = 67,
-				uuid = "58009a8f-ba17-5932-883f-e281d39ef983",
-				version = 2,
-			},
-			inheritedIndex = 5,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
 					
 					{
 						data = 
@@ -1688,6 +1756,24 @@ local tbl =
 			},
 			inheritedIndex = 6,
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 430.6,
+				name = "_________",
+				timelineIndex = 67,
+				uuid = "58009a8f-ba17-5932-883f-e281d39ef983",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
 	},
 	[77] = 
 	{
@@ -1701,21 +1787,25 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 25746,
+							actionID = 7382,
 							conditions = 
 							{
 								
 								{
-									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+								
+								{
+									"89667ff6-eab3-e46e-a10c-05d61db06eba",
 									true,
 								},
 							},
-							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
 							targetSubType = "Lowest HP",
 							targetType = "DPS",
-							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
+							uuid = "5ed8c1f4-36d8-ad42-9463-1f8154296465",
 							version = 2.1,
 						},
 					},
@@ -1729,17 +1819,29 @@ local tbl =
 							category = "Self",
 							conditionType = 6,
 							gaugeValue = 50,
-							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 2679,
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "89667ff6-eab3-e46e-a10c-05d61db06eba",
 							version = 2,
 						},
 					},
 				},
 				mechanicTime = 1044.9,
-				name = "sheltron (15 DPS",
+				name = "interven DPS (15)",
 				timeRange = true,
 				timelineIndex = 77,
-				timerStartOffset = -2,
-				uuid = "e9250bb5-23c1-30f6-9340-108129272fc0",
+				timerStartOffset = -5,
+				uuid = "c73acbbf-6854-dbcf-8a22-ab4933748470",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -1872,6 +1974,59 @@ local tbl =
 					{
 						data = 
 						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 1098.2,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 84,
+				timerOffset = -15,
+				timerStartOffset = -2,
+				uuid = "3490aa4b-75d7-a624-af65-009892f629fc",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 22,
 							conditions = 
 							{
@@ -1915,7 +2070,7 @@ local tbl =
 				uuid = "8b41bab4-deb7-aa81-add7-5f13c2bd20bf",
 				version = 2,
 			},
-			inheritedIndex = 2,
+			inheritedIndex = 3,
 		},
 		
 		{
@@ -1966,7 +2121,7 @@ local tbl =
 				uuid = "bdf60fad-3b8e-fd94-94ec-cc344e932c1f",
 				version = 2,
 			},
-			inheritedIndex = 3,
+			inheritedIndex = 4,
 		},
 	},
 	[85] = 
@@ -2091,21 +2246,25 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 25746,
+							actionID = 7382,
 							conditions = 
 							{
 								
 								{
-									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+								
+								{
+									"89667ff6-eab3-e46e-a10c-05d61db06eba",
 									true,
 								},
 							},
-							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
 							targetSubType = "Lowest HP",
 							targetType = "DPS",
-							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
+							uuid = "5ed8c1f4-36d8-ad42-9463-1f8154296465",
 							version = 2.1,
 						},
 					},
@@ -2119,17 +2278,29 @@ local tbl =
 							category = "Self",
 							conditionType = 6,
 							gaugeValue = 50,
-							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 2679,
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "89667ff6-eab3-e46e-a10c-05d61db06eba",
 							version = 2,
 						},
 					},
 				},
 				mechanicTime = 1152.5,
-				name = "sheltron (15 DPS",
+				name = "interven DPS (15)",
 				timeRange = true,
 				timelineIndex = 90,
-				timerStartOffset = -2,
-				uuid = "be5c679c-5297-2354-bf9c-636e2dd1d57a",
+				timerStartOffset = -5,
+				uuid = "53e216e0-ee18-973d-8276-304a4b407596",
 				version = 2,
 			},
 			inheritedIndex = 4,
