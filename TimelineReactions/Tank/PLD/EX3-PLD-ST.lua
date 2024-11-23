@@ -1104,6 +1104,60 @@ local tbl =
 			inheritedIndex = 5,
 		},
 	},
+	[40] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 276.4,
+				name = "sheltron (15)",
+				timeRange = true,
+				timelineIndex = 40,
+				timerStartOffset = -2,
+				uuid = "13243801-6117-e34d-8530-ff37c995c3a6",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+	},
 	[42] = 
 	{
 		
