@@ -108,7 +108,7 @@ local tbl =
 				uuid = "c3fe1bc1-2996-4b3f-b011-d46b2b4f02cf",
 				version = 2,
 			},
-			inheritedIndex = 1,
+			inheritedIndex = 2,
 		},
 	},
 	[6] = 
@@ -2333,62 +2333,6 @@ local tbl =
 				timerOffset = -4,
 				timerStartOffset = -2,
 				uuid = "8c168219-ff4b-2667-839b-5c0cb98ec541",
-				version = 2,
-			},
-			inheritedIndex = 1,
-		},
-	},
-	[85] = 
-	{
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7531,
-							conditions = 
-							{
-								
-								{
-									"1465472a-0137-2f48-b9fc-aa7b9991077a",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7531,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 1099.4,
-				name = "Rampart (20)",
-				timeRange = true,
-				timelineIndex = 85,
-				timerOffset = -15,
-				timerStartOffset = -1,
-				uuid = "8b488691-efc1-466f-8855-b6f16b94f5e3",
 				version = 2,
 			},
 			inheritedIndex = 1,
