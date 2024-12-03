@@ -1091,7 +1091,6 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 24,
 				timerEndOffset = 5,
-				timerStartOffset = 1,
 				uuid = "c03a0943-d3d0-e828-9d61-579459918432",
 				version = 2,
 			},
@@ -2099,7 +2098,7 @@ local tbl =
 								},
 								
 								{
-									"053e66c1-e32e-2c55-adc3-f24c18c748cc",
+									"aa769c34-bdf0-f43a-9457-bbbce0a3fa88",
 									true,
 								},
 							},
@@ -2125,7 +2124,7 @@ local tbl =
 								},
 								
 								{
-									"053e66c1-e32e-2c55-adc3-f24c18c748cc",
+									"aa769c34-bdf0-f43a-9457-bbbce0a3fa88",
 									true,
 								},
 							},
@@ -2171,7 +2170,7 @@ local tbl =
 							conditionType = 4,
 							enmityValue = 100,
 							name = "is MT",
-							uuid = "053e66c1-e32e-2c55-adc3-f24c18c748cc",
+							uuid = "aa769c34-bdf0-f43a-9457-bbbce0a3fa88",
 							version = 2,
 						},
 					},
@@ -3840,6 +3839,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 653.1,
 				name = "No Buff Switch",
 				timeRange = true,
@@ -3884,6 +3884,14 @@ local tbl =
 						{
 							aType = "Lua",
 							actionLua = "SendTextCommand(\"/p 次の強攻撃は無敵で処理いたします～ヒーラーさん構わないでください～ <se.9>\")\nself.used = true\n",
+							conditions = 
+							{
+								
+								{
+									"e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
+									true,
+								},
+							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
 							uuid = "52ac5f08-6fca-27c9-b7ed-2c1e047240e0",
@@ -3906,6 +3914,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 662.8,
 				name = "Hollowed Ground (Invinsible)",
 				timeRange = true,
@@ -3914,7 +3923,7 @@ local tbl =
 				uuid = "638ad232-3eee-f1c0-ab83-e25f5435368e",
 				version = 2,
 			},
-			inheritedIndex = 7,
+			inheritedIndex = 6,
 		},
 	},
 	[106] = 
