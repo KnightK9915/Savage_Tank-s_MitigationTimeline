@@ -195,59 +195,6 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 7531,
-							conditions = 
-							{
-								
-								{
-									"1465472a-0137-2f48-b9fc-aa7b9991077a",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7531,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 40.3,
-				name = "Rampart (20)",
-				timeRange = true,
-				timelineIndex = 11,
-				timerOffset = -15,
-				timerStartOffset = -3,
-				uuid = "f41a32b4-7706-a0a1-a651-70e1e0dc4112",
-				version = 2,
-			},
-			inheritedIndex = 7,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
 							actionID = 40,
 							conditions = 
 							{
@@ -367,24 +314,6 @@ local tbl =
 			{
 				actions = 
 				{
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 40.3,
-				name = "_________",
-				timelineIndex = 11,
-				uuid = "a34cc088-8ebb-5b49-af2f-35943fa8a85c",
-				version = 2,
-			},
-			inheritedIndex = 8,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
 					
 					{
 						data = 
@@ -447,6 +376,77 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 40.3,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 11,
+				timerOffset = -15,
+				timerStartOffset = -3,
+				uuid = "f41a32b4-7706-a0a1-a651-70e1e0dc4112",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 40.3,
+				name = "_________",
+				timelineIndex = 11,
+				uuid = "a34cc088-8ebb-5b49-af2f-35943fa8a85c",
+				version = 2,
+			},
+			inheritedIndex = 8,
 		},
 	},
 	[30] = 
@@ -517,7 +517,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 30,
 				timerOffset = -3,
-				timerStartOffset = -2,
+				timerStartOffset = -5,
 				uuid = "6c200dee-e69b-ed31-a370-8508049b98f3",
 				version = 2,
 			},
@@ -576,24 +576,6 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 2,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 129.5,
-				name = "_________",
-				timelineIndex = 30,
-				uuid = "38ee17d7-e333-8bce-8ec2-bed13d9d6885",
-				version = 2,
-			},
-			inheritedIndex = 5,
 		},
 		
 		{
@@ -754,6 +736,24 @@ local tbl =
 			},
 			inheritedIndex = 6,
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 129.5,
+				name = "_________",
+				timelineIndex = 30,
+				uuid = "38ee17d7-e333-8bce-8ec2-bed13d9d6885",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
 	},
 	[35] = 
 	{
@@ -810,59 +810,6 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 1,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7531,
-							conditions = 
-							{
-								
-								{
-									"1465472a-0137-2f48-b9fc-aa7b9991077a",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7531,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 145.6,
-				name = "Rampart (20)",
-				timeRange = true,
-				timelineIndex = 35,
-				timerOffset = -15,
-				timerStartOffset = -3,
-				uuid = "a730e6a9-48dc-a2a7-bc12-6d53f02d367b",
-				version = 2,
-			},
-			inheritedIndex = 7,
 		},
 		
 		{
@@ -993,24 +940,6 @@ local tbl =
 			{
 				actions = 
 				{
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 145.6,
-				name = "_________",
-				timelineIndex = 35,
-				uuid = "382aa98f-6f8b-dc26-8632-2b5570fc2029",
-				version = 2,
-			},
-			inheritedIndex = 8,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
 					
 					{
 						data = 
@@ -1073,6 +1002,77 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 145.6,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 35,
+				timerOffset = -15,
+				timerStartOffset = -3,
+				uuid = "a730e6a9-48dc-a2a7-bc12-6d53f02d367b",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 145.6,
+				name = "_________",
+				timelineIndex = 35,
+				uuid = "382aa98f-6f8b-dc26-8632-2b5570fc2029",
+				version = 2,
+			},
+			inheritedIndex = 8,
 		},
 	},
 	[40] = 
@@ -1274,16 +1274,53 @@ local tbl =
 			{
 				actions = 
 				{
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							conditions = 
+							{
+								
+								{
+									"208ef0e4-7b7b-6d69-a256-a944f3bd6445",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetSubType = "Lowest HP",
+							targetType = "Other Tank",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "208ef0e4-7b7b-6d69-a256-a944f3bd6445",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 595.4,
-				name = "----is MT----",
+				name = "NF ST (25)",
+				timeRange = true,
 				timelineIndex = 140,
-				uuid = "8c403e97-c07d-23a7-a89b-cc05d5d337f5",
+				timerOffset = -4,
+				timerStartOffset = -2,
+				uuid = "44f1c4e5-d744-fc9f-a8ff-5f714f7c9d3c",
 				version = 2,
 			},
+			inheritedIndex = 1,
 		},
 		
 		{
@@ -1595,6 +1632,23 @@ local tbl =
 				{
 				},
 				mechanicTime = 595.4,
+				name = "----is MT----",
+				timelineIndex = 140,
+				uuid = "8c403e97-c07d-23a7-a89b-cc05d5d337f5",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 595.4,
 				name = "_______________",
 				timelineIndex = 140,
 				uuid = "9e25ea68-4462-83d0-b7eb-6fcdf446e7c8",
@@ -1619,60 +1673,6 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 10,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16464,
-							conditions = 
-							{
-								
-								{
-									"208ef0e4-7b7b-6d69-a256-a944f3bd6445",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							targetSubType = "Lowest HP",
-							targetType = "Other Tank",
-							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16464,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "208ef0e4-7b7b-6d69-a256-a944f3bd6445",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 595.4,
-				name = "NF ST (25)",
-				timeRange = true,
-				timelineIndex = 140,
-				timerOffset = -4,
-				timerStartOffset = -2,
-				uuid = "44f1c4e5-d744-fc9f-a8ff-5f714f7c9d3c",
-				version = 2,
-			},
-			inheritedIndex = 1,
 		},
 	},
 	[150] = 
@@ -1759,19 +1759,20 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 7531,
+							actionID = 16464,
 							conditions = 
 							{
 								
 								{
-									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									"208ef0e4-7b7b-6d69-a256-a944f3bd6445",
 									true,
 								},
 							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
+							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
-							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							targetSubType = "Lowest HP",
+							targetType = "Other Tank",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
 							version = 2.1,
 						},
 					},
@@ -1782,25 +1783,26 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 7531,
+							actionID = 16464,
 							category = "Self",
 							comparator = 2,
 							conditionType = 4,
-							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							uuid = "208ef0e4-7b7b-6d69-a256-a944f3bd6445",
 							version = 2,
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 644.3,
-				name = "Rampart (20)",
+				name = "NF ST (25)",
 				timeRange = true,
 				timelineIndex = 150,
-				timerOffset = -15,
-				timerStartOffset = -8,
-				uuid = "e303c5bf-4f90-fdc7-9df8-f63bf0d5538a",
+				timerOffset = -4,
+				timerStartOffset = -2,
+				uuid = "bf854d2b-6f36-86ed-9e80-05aa5ce28c55",
 				version = 2,
 			},
-			inheritedIndex = 11,
+			inheritedIndex = 3,
 		},
 		
 		{
@@ -1989,6 +1991,77 @@ local tbl =
 				{
 				},
 				mechanicTime = 644.3,
+				name = "----not Baiting----",
+				timelineIndex = 150,
+				uuid = "0eb270a7-a428-3074-859d-5d8c04c55d47",
+				version = 2,
+			},
+			inheritedIndex = 15,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 644.3,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 150,
+				timerOffset = -15,
+				timerStartOffset = -8,
+				uuid = "e303c5bf-4f90-fdc7-9df8-f63bf0d5538a",
+				version = 2,
+			},
+			inheritedIndex = 11,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 644.3,
 				name = "----is Baiting (Invuln)----",
 				timelineIndex = 150,
 				uuid = "908e599e-4798-e624-a0a6-80b5a1deed55",
@@ -2063,7 +2136,7 @@ local tbl =
 				uuid = "9e271105-3afb-6c30-9505-8f07b72ad336",
 				version = 2,
 			},
-			inheritedIndex = 12,
+			inheritedIndex = 13,
 		},
 		
 		{
@@ -2081,80 +2154,7 @@ local tbl =
 				uuid = "d148e634-f10f-3e71-923b-a0db39f1b3dd",
 				version = 2,
 			},
-			inheritedIndex = 12,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 644.3,
-				name = "----not Baiting----",
-				timelineIndex = 150,
-				uuid = "0eb270a7-a428-3074-859d-5d8c04c55d47",
-				version = 2,
-			},
-			inheritedIndex = 13,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16464,
-							conditions = 
-							{
-								
-								{
-									"208ef0e4-7b7b-6d69-a256-a944f3bd6445",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							targetSubType = "Lowest HP",
-							targetType = "Other Tank",
-							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16464,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "208ef0e4-7b7b-6d69-a256-a944f3bd6445",
-							version = 2,
-						},
-					},
-				},
-				enabled = false,
-				mechanicTime = 644.3,
-				name = "NF ST (25)",
-				timeRange = true,
-				timelineIndex = 150,
-				timerOffset = -4,
-				timerStartOffset = -2,
-				uuid = "bf854d2b-6f36-86ed-9e80-05aa5ce28c55",
-				version = 2,
-			},
-			inheritedIndex = 1,
+			inheritedIndex = 14,
 		},
 	},
 	[172] = 
@@ -2384,6 +2384,60 @@ local tbl =
 					{
 						data = 
 						{
+							actionID = 16464,
+							conditions = 
+							{
+								
+								{
+									"208ef0e4-7b7b-6d69-a256-a944f3bd6445",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetSubType = "Lowest HP",
+							targetType = "Other Tank",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "208ef0e4-7b7b-6d69-a256-a944f3bd6445",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 773.5,
+				name = "NF ST (25)",
+				timeRange = true,
+				timelineIndex = 175,
+				timerOffset = -4,
+				timerStartOffset = -2,
+				uuid = "e610a542-0136-c016-a4ab-4d11e68730aa",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 40,
 							conditions = 
 							{
@@ -2533,61 +2587,7 @@ local tbl =
 				uuid = "1eed768e-6ded-fabc-a7e2-5aa588dc8e72",
 				version = 2,
 			},
-			inheritedIndex = 8,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16464,
-							conditions = 
-							{
-								
-								{
-									"208ef0e4-7b7b-6d69-a256-a944f3bd6445",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							targetSubType = "Lowest HP",
-							targetType = "Other Tank",
-							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16464,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "208ef0e4-7b7b-6d69-a256-a944f3bd6445",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 773.5,
-				name = "NF ST (25)",
-				timeRange = true,
-				timelineIndex = 175,
-				timerOffset = -4,
-				timerStartOffset = -2,
-				uuid = "e610a542-0136-c016-a4ab-4d11e68730aa",
-				version = 2,
-			},
-			inheritedIndex = 1,
+			inheritedIndex = 9,
 		},
 	},
 	[196] = 
@@ -2800,6 +2800,61 @@ local tbl =
 					{
 						data = 
 						{
+							actionID = 16464,
+							conditions = 
+							{
+								
+								{
+									"208ef0e4-7b7b-6d69-a256-a944f3bd6445",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetSubType = "Lowest HP",
+							targetType = "Other Tank",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "208ef0e4-7b7b-6d69-a256-a944f3bd6445",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 854.9,
+				name = "NF ST (25)",
+				timeRange = true,
+				timelineIndex = 202,
+				timerOffset = -4,
+				timerStartOffset = -2,
+				uuid = "ef21b1e8-f353-c8fe-8699-30a6be7889c3",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 40,
 							conditions = 
 							{
@@ -2924,85 +2979,30 @@ local tbl =
 				{
 				},
 				mechanicTime = 854.9,
+				name = "----In----",
+				timelineIndex = 202,
+				uuid = "5b1d1e04-9dd1-12ec-8e5f-0f002dcdf255",
+				version = 2,
+			},
+			inheritedIndex = 9,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 854.9,
 				name = "_______________",
 				timelineIndex = 202,
 				uuid = "ce7ba247-c786-7f8f-8941-e1902b86fdf9",
 				version = 2,
 			},
 			inheritedIndex = 8,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 854.9,
-				name = "----In----",
-				timelineIndex = 202,
-				uuid = "5b1d1e04-9dd1-12ec-8e5f-0f002dcdf255",
-				version = 2,
-			},
-			inheritedIndex = 8,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16464,
-							conditions = 
-							{
-								
-								{
-									"208ef0e4-7b7b-6d69-a256-a944f3bd6445",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							targetSubType = "Lowest HP",
-							targetType = "Other Tank",
-							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16464,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "208ef0e4-7b7b-6d69-a256-a944f3bd6445",
-							version = 2,
-						},
-					},
-				},
-				enabled = false,
-				mechanicTime = 854.9,
-				name = "NF ST (25)",
-				timeRange = true,
-				timelineIndex = 202,
-				timerOffset = -4,
-				timerStartOffset = -2,
-				uuid = "ef21b1e8-f353-c8fe-8699-30a6be7889c3",
-				version = 2,
-			},
-			inheritedIndex = 1,
 		},
 	},
 	[218] = 
@@ -3118,17 +3118,69 @@ local tbl =
 			{
 				actions = 
 				{
+					
+					{
+						data = 
+						{
+							actionID = 36923,
+							conditions = 
+							{
+								
+								{
+									"0aeec9c1-c189-d8ba-8695-4f2d2314a955",
+									true,
+								},
+								
+								{
+									"04ce9717-4287-ff81-a58d-107c3a9e5128",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "e3339fc5-29f8-ea78-b047-31e1f4105077",
+							version = 2.1,
+						},
+					},
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							actionID = 36923,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "0aeec9c1-c189-d8ba-8695-4f2d2314a955",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99,
+							name = "don't have aggro",
+							uuid = "04ce9717-4287-ff81-a58d-107c3a9e5128",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 1029.6,
-				name = "----is ST----",
+				name = "Damnation (40)",
+				timeRange = true,
 				timelineIndex = 218,
-				uuid = "2cb6853a-64df-0ad3-b875-872073bd98c3",
+				timerOffset = -5,
+				timerStartOffset = -8,
+				uuid = "9c80b4c1-0496-a0aa-8e48-ab2d83fc5406",
 				version = 2,
 			},
-			inheritedIndex = 7,
+			inheritedIndex = 4,
 		},
 		
 		{
@@ -3272,69 +3324,17 @@ local tbl =
 			{
 				actions = 
 				{
-					
-					{
-						data = 
-						{
-							actionID = 36923,
-							conditions = 
-							{
-								
-								{
-									"0aeec9c1-c189-d8ba-8695-4f2d2314a955",
-									true,
-								},
-								
-								{
-									"04ce9717-4287-ff81-a58d-107c3a9e5128",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuWAR3_CD",
-							ignoreWeaveRules = true,
-							uuid = "e3339fc5-29f8-ea78-b047-31e1f4105077",
-							version = 2.1,
-						},
-					},
 				},
 				conditions = 
 				{
-					
-					{
-						data = 
-						{
-							actionID = 36923,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "0aeec9c1-c189-d8ba-8695-4f2d2314a955",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							comparator = 2,
-							conditionType = 4,
-							enmityValue = 99,
-							name = "don't have aggro",
-							uuid = "04ce9717-4287-ff81-a58d-107c3a9e5128",
-							version = 2,
-						},
-					},
 				},
 				mechanicTime = 1029.6,
-				name = "Damnation (40)",
-				timeRange = true,
+				name = "----is ST----",
 				timelineIndex = 218,
-				timerOffset = -5,
-				timerStartOffset = -8,
-				uuid = "9c80b4c1-0496-a0aa-8e48-ab2d83fc5406",
+				uuid = "2cb6853a-64df-0ad3-b875-872073bd98c3",
 				version = 2,
 			},
-			inheritedIndex = 2,
+			inheritedIndex = 7,
 		},
 		
 		{
@@ -3404,7 +3404,7 @@ local tbl =
 				uuid = "faa750c1-e2e1-309c-a39f-5a5820b5a227",
 				version = 2,
 			},
-			inheritedIndex = 3,
+			inheritedIndex = 8,
 		},
 		
 		{
@@ -3474,7 +3474,7 @@ local tbl =
 				uuid = "1cfe536d-454e-409c-8f91-63599fd3b180",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 9,
 		},
 	},
 	[247] = 
@@ -3590,17 +3590,69 @@ local tbl =
 			{
 				actions = 
 				{
+					
+					{
+						data = 
+						{
+							actionID = 40,
+							conditions = 
+							{
+								
+								{
+									"79d32c05-7ccb-e6a2-9493-167f1c04431a",
+									true,
+								},
+								
+								{
+									"08560017-ab8f-4cef-8e36-242bbf673857",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "9123327e-7223-9aa2-9e4b-6b502c61d83d",
+							version = 2.1,
+						},
+					},
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							actionID = 40,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "79d32c05-7ccb-e6a2-9493-167f1c04431a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99,
+							name = "don't have aggro",
+							uuid = "08560017-ab8f-4cef-8e36-242bbf673857",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 1146.3,
-				name = "----is ST----",
+				name = "ToB (HP Upscale)",
+				timeRange = true,
 				timelineIndex = 247,
-				uuid = "701177c8-1e3b-f22f-b459-93cebefe5e32",
+				timerOffset = -1,
+				timerStartOffset = -4,
+				uuid = "ea6a3365-63c9-27b7-966e-71911057e51e",
 				version = 2,
 			},
-			inheritedIndex = 7,
+			inheritedIndex = 4,
 		},
 		
 		{
@@ -3744,6 +3796,24 @@ local tbl =
 			{
 				actions = 
 				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 1146.3,
+				name = "----is ST----",
+				timelineIndex = 247,
+				uuid = "701177c8-1e3b-f22f-b459-93cebefe5e32",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
 					
 					{
 						data = 
@@ -3806,77 +3876,7 @@ local tbl =
 				uuid = "b0a126fc-6c6e-f5db-9c9d-6fcae95c918d",
 				version = 2,
 			},
-			inheritedIndex = 7,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 40,
-							conditions = 
-							{
-								
-								{
-									"79d32c05-7ccb-e6a2-9493-167f1c04431a",
-									true,
-								},
-								
-								{
-									"08560017-ab8f-4cef-8e36-242bbf673857",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuWAR3_CD",
-							ignoreWeaveRules = true,
-							uuid = "9123327e-7223-9aa2-9e4b-6b502c61d83d",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 40,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "79d32c05-7ccb-e6a2-9493-167f1c04431a",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							comparator = 2,
-							conditionType = 4,
-							enmityValue = 99,
-							name = "don't have aggro",
-							uuid = "08560017-ab8f-4cef-8e36-242bbf673857",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 1146.3,
-				name = "ToB (HP Upscale)",
-				timeRange = true,
-				timelineIndex = 247,
-				timerOffset = -1,
-				timerStartOffset = -4,
-				uuid = "ea6a3365-63c9-27b7-966e-71911057e51e",
-				version = 2,
-			},
-			inheritedIndex = 3,
+			inheritedIndex = 8,
 		},
 		
 		{
@@ -3946,7 +3946,7 @@ local tbl =
 				uuid = "6fcf11c4-c355-a7fd-ab77-e333e8d73cc8",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 9,
 		},
 	},
 	inheritedProfiles = 
