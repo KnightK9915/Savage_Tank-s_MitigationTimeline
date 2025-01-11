@@ -286,7 +286,7 @@ local tbl =
 				uuid = "f2c34d36-ac5e-bf07-befc-dbda32c43dbe",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 3,
 		},
 		
 		{
@@ -339,7 +339,25 @@ local tbl =
 				uuid = "f41a32b4-7706-a0a1-a651-70e1e0dc4112",
 				version = 2,
 			},
-			inheritedIndex = 6,
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 40.3,
+				name = "_________",
+				timelineIndex = 11,
+				uuid = "a34cc088-8ebb-5b49-af2f-35943fa8a85c",
+				version = 2,
+			},
+			inheritedIndex = 5,
 		},
 		
 		{
@@ -447,25 +465,7 @@ local tbl =
 				uuid = "a424fc26-da02-9d67-9d3f-2cc170f8c433",
 				version = 2,
 			},
-			inheritedIndex = 7,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 40.3,
-				name = "_________",
-				timelineIndex = 11,
-				uuid = "a34cc088-8ebb-5b49-af2f-35943fa8a85c",
-				version = 2,
-			},
-			inheritedIndex = 8,
+			inheritedIndex = 6,
 		},
 	},
 	[12] = 
@@ -712,6 +712,24 @@ local tbl =
 			{
 				actions = 
 				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 129.5,
+				name = "_________",
+				timelineIndex = 30,
+				uuid = "38ee17d7-e333-8bce-8ec2-bed13d9d6885",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
 					
 					{
 						data = 
@@ -903,24 +921,6 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 6,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 129.5,
-				name = "_________",
-				timelineIndex = 30,
-				uuid = "38ee17d7-e333-8bce-8ec2-bed13d9d6885",
-				version = 2,
-			},
-			inheritedIndex = 5,
 		},
 	},
 	[35] = 
@@ -1134,6 +1134,24 @@ local tbl =
 			{
 				actions = 
 				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 145.6,
+				name = "_________",
+				timelineIndex = 35,
+				uuid = "efd15d6e-040d-d6b3-83e7-4f4e089c25c9",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
 					
 					{
 						data = 
@@ -1234,25 +1252,7 @@ local tbl =
 				uuid = "7ea98708-3939-941a-9c6d-d15a87747d70",
 				version = 2,
 			},
-			inheritedIndex = 5,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 145.6,
-				name = "_________",
-				timelineIndex = 35,
-				uuid = "efd15d6e-040d-d6b3-83e7-4f4e089c25c9",
-				version = 2,
-			},
-			inheritedIndex = 7,
+			inheritedIndex = 6,
 		},
 	},
 	[40] = 
@@ -1523,7 +1523,7 @@ local tbl =
 				},
 				enabled = false,
 				mechanicTime = 595.4,
-				name = "sheltron (15)",
+				name = "[MT] sheltron (15)",
 				timeRange = true,
 				timelineIndex = 140,
 				timerEndOffset = 2,
@@ -1539,17 +1539,68 @@ local tbl =
 			{
 				actions = 
 				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+								
+								{
+									"358418a3-41e2-c06f-a1a3-d71de75a3db1",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 100,
+							name = "have aggro",
+							uuid = "358418a3-41e2-c06f-a1a3-d71de75a3db1",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 595.4,
-				name = "_______________",
+				name = "[MT] Rampart (20)",
+				timeRange = true,
 				timelineIndex = 140,
-				uuid = "9e25ea68-4462-83d0-b7eb-6fcdf446e7c8",
+				timerOffset = -15,
+				timerStartOffset = -10,
+				uuid = "a8a01b40-afea-51ad-92c3-8dd806606d4d",
 				version = 2,
 			},
-			inheritedIndex = 10,
+			inheritedIndex = 3,
 		},
 		
 		{
@@ -1607,7 +1658,7 @@ local tbl =
 				},
 				enabled = false,
 				mechanicTime = 595.4,
-				name = "Guardian (40)",
+				name = "[MT] Guardian (40)",
 				timeRange = true,
 				timelineIndex = 140,
 				timerEndOffset = -1,
@@ -1678,7 +1729,7 @@ local tbl =
 				},
 				enabled = false,
 				mechanicTime = 595.4,
-				name = "Bulwalk (Block)",
+				name = "[MT] Bulwalk (Block)",
 				timeRange = true,
 				timelineIndex = 140,
 				timerEndOffset = -1,
@@ -1695,68 +1746,35 @@ local tbl =
 			{
 				actions = 
 				{
-					
-					{
-						data = 
-						{
-							actionID = 7531,
-							conditions = 
-							{
-								
-								{
-									"1465472a-0137-2f48-b9fc-aa7b9991077a",
-									true,
-								},
-								
-								{
-									"358418a3-41e2-c06f-a1a3-d71de75a3db1",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
-							version = 2.1,
-						},
-					},
 				},
 				conditions = 
 				{
-					
-					{
-						data = 
-						{
-							actionID = 7531,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							conditionType = 4,
-							enmityValue = 100,
-							name = "have aggro",
-							uuid = "358418a3-41e2-c06f-a1a3-d71de75a3db1",
-							version = 2,
-						},
-					},
 				},
 				mechanicTime = 595.4,
-				name = "Rampart (20)",
-				timeRange = true,
+				name = "_______________",
 				timelineIndex = 140,
-				timerOffset = -15,
-				timerStartOffset = -10,
-				uuid = "a8a01b40-afea-51ad-92c3-8dd806606d4d",
+				uuid = "9e25ea68-4462-83d0-b7eb-6fcdf446e7c8",
 				version = 2,
 			},
 			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 595.4,
+				name = "----is ST----",
+				timelineIndex = 140,
+				uuid = "fcc256c9-b477-8314-883e-242cb9ffc8b6",
+				version = 2,
+			},
+			inheritedIndex = 10,
 		},
 		
 		{
@@ -1818,32 +1836,14 @@ local tbl =
 					},
 				},
 				mechanicTime = 595.4,
-				name = "interven ST (15)",
+				name = "[ST] interven ST (15)",
 				timeRange = true,
 				timelineIndex = 140,
 				timerStartOffset = -2,
 				uuid = "11a38655-c854-647e-9df1-a510c22752f8",
 				version = 2,
 			},
-			inheritedIndex = 7,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 595.4,
-				name = "----is ST----",
-				timelineIndex = 140,
-				uuid = "fcc256c9-b477-8314-883e-242cb9ffc8b6",
-				version = 2,
-			},
-			inheritedIndex = 10,
+			inheritedIndex = 8,
 		},
 	},
 	[150] = 
@@ -2242,37 +2242,6 @@ local tbl =
 			},
 			inheritedIndex = 1,
 		},
-		
-		{
-			data = 
-			{
-				name = "[Draw] Somber Farthest",
-				uuid = "3485cbe3-c630-2385-a8ed-567cf0c5e298",
-				version = 2,
-			},
-			inheritedObjectUUID = "b8ceffad-ca0c-f59f-bce4-6edf811a507b",
-			inheritedOverwrites = 
-			{
-				timerEndOffset = 0.34999999403954,
-			},
-		},
-	},
-	[173] = 
-	{
-		
-		{
-			data = 
-			{
-				name = "[Draw] Somber Nearest",
-				uuid = "6e33934f-a7ec-ce12-bd5e-6374dca2c4fb",
-				version = 2,
-			},
-			inheritedObjectUUID = "da7bb794-ec51-c6d9-af9c-72502452e665",
-			inheritedOverwrites = 
-			{
-				timerEndOffset = 0.10000000149012,
-			},
-		},
 	},
 	[175] = 
 	{
@@ -2411,53 +2380,6 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 36920,
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "1ff7ecf5-69f2-0d51-9683-ee0ea48d1ed1",
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 36920,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "aceb9492-b930-0c6d-aaca-9fb9e7c2fb2a",
-							version = 2,
-						},
-					},
-				},
-				enabled = false,
-				mechanicTime = 773.5,
-				name = "Guardian (40)",
-				timeRange = true,
-				timelineIndex = 175,
-				timerEndOffset = -1,
-				timerStartOffset = -4,
-				uuid = "97cfb307-970b-71a9-824e-9273e459369b",
-				version = 2,
-			},
-			inheritedIndex = 4,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
 							actionID = 22,
 							conditions = 
 							{
@@ -2510,6 +2432,42 @@ local tbl =
 			{
 				actions = 
 				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 773.5,
+				name = "_______________",
+				timelineIndex = 175,
+				uuid = "a8724d82-a047-0c80-af09-b71cbd94c0e6",
+				version = 2,
+			},
+			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 773.5,
+				name = "----In----",
+				timelineIndex = 175,
+				uuid = "1eed768e-6ded-fabc-a7e2-5aa588dc8e72",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
 					
 					{
 						data = 
@@ -2555,42 +2513,6 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 8,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 773.5,
-				name = "_______________",
-				timelineIndex = 175,
-				uuid = "a8724d82-a047-0c80-af09-b71cbd94c0e6",
-				version = 2,
-			},
-			inheritedIndex = 9,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 773.5,
-				name = "----In----",
-				timelineIndex = 175,
-				uuid = "1eed768e-6ded-fabc-a7e2-5aa588dc8e72",
-				version = 2,
-			},
-			inheritedIndex = 10,
 		},
 	},
 	[176] = 
