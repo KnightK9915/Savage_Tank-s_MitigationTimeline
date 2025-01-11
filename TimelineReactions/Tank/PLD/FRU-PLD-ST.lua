@@ -3298,6 +3298,24 @@ local tbl =
 			{
 				actions = 
 				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 1146.3,
+				name = "----is MT----",
+				timelineIndex = 247,
+				uuid = "16a87a3f-23fd-8dc6-a9f0-62e84a8b7499",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
 					
 					{
 						data = 
@@ -3352,7 +3370,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 1146.3,
-				name = "Hollowed Ground (Invinsible)",
+				name = "[MT] Hollowed Ground (Invinsible)",
 				timeRange = true,
 				timelineIndex = 247,
 				timerStartOffset = -3,
@@ -3360,6 +3378,42 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 1146.3,
+				name = "_______________",
+				timelineIndex = 247,
+				uuid = "9704b2e8-463d-58bf-bca5-7286e8218272",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 1146.3,
+				name = "----is ST----",
+				timelineIndex = 247,
+				uuid = "748ab51a-2b97-8112-b96c-ffbc4cb995f8",
+				version = 2,
+			},
+			inheritedIndex = 4,
 		},
 		
 		{
@@ -3420,7 +3474,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 1146.3,
-				name = "sheltron (15)",
+				name = "[ST] sheltron (15)",
 				timeRange = true,
 				timelineIndex = 247,
 				timerStartOffset = -2,
@@ -3489,7 +3543,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 1146.3,
-				name = "Rampart (20)",
+				name = "[ST] Rampart (20)",
 				timeRange = true,
 				timelineIndex = 247,
 				timerOffset = -15,
@@ -3547,7 +3601,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 1146.3,
-				name = "Guardian (40)",
+				name = "[ST] Guardian (40)",
 				timeRange = true,
 				timelineIndex = 247,
 				timerStartOffset = -5,
@@ -3612,7 +3666,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 1146.3,
-				name = "Bulwalk (Block)",
+				name = "[ST] Bulwalk (Block)",
 				timeRange = true,
 				timelineIndex = 247,
 				timerOffset = -8,
@@ -3621,59 +3675,6 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 8,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 1146.3,
-				name = "----is MT----",
-				timelineIndex = 247,
-				uuid = "16a87a3f-23fd-8dc6-a9f0-62e84a8b7499",
-				version = 2,
-			},
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 1146.3,
-				name = "_______________",
-				timelineIndex = 247,
-				uuid = "9704b2e8-463d-58bf-bca5-7286e8218272",
-				version = 2,
-			},
-			inheritedIndex = 10,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 1146.3,
-				name = "----is ST----",
-				timelineIndex = 247,
-				uuid = "748ab51a-2b97-8112-b96c-ffbc4cb995f8",
-				version = 2,
-			},
-			inheritedIndex = 11,
 		},
 	},
 	inheritedProfiles = 
