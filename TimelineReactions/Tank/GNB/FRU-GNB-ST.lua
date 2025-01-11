@@ -270,7 +270,7 @@ local tbl =
 				uuid = "e2d8ce7d-3988-3baa-a70d-0f7d9dfdfd47",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 3,
 		},
 		
 		{
@@ -326,7 +326,7 @@ local tbl =
 				uuid = "9a660d4d-15b6-bbea-8904-1aa1b872ad58",
 				version = 2,
 			},
-			inheritedIndex = 5,
+			inheritedIndex = 4,
 		},
 		
 		{
@@ -379,7 +379,7 @@ local tbl =
 				uuid = "f41a32b4-7706-a0a1-a651-70e1e0dc4112",
 				version = 2,
 			},
-			inheritedIndex = 7,
+			inheritedIndex = 5,
 		},
 		
 		{
@@ -397,7 +397,7 @@ local tbl =
 				uuid = "a34cc088-8ebb-5b49-af2f-35943fa8a85c",
 				version = 2,
 			},
-			inheritedIndex = 8,
+			inheritedIndex = 6,
 		},
 		
 		{
@@ -467,7 +467,7 @@ local tbl =
 				uuid = "9b7630a3-862c-174c-a37f-29413640e624",
 				version = 2,
 			},
-			inheritedIndex = 9,
+			inheritedIndex = 7,
 		},
 	},
 	[12] = 
@@ -1587,7 +1587,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 595.4,
-				name = "HoC (15)",
+				name = "[MT] HoC (15)",
 				timeRange = true,
 				timelineIndex = 140,
 				timerOffset = -1,
@@ -1677,7 +1677,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 595.4,
-				name = "Camou (10)",
+				name = "[MT] Camou (10)",
 				timeRange = true,
 				timelineIndex = 140,
 				timerOffset = -10,
@@ -1767,7 +1767,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 595.4,
-				name = "Rampart (20)",
+				name = "[MT] Rampart (20)",
 				timeRange = true,
 				timelineIndex = 140,
 				timerOffset = -15,
@@ -1858,7 +1858,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 595.4,
-				name = "Great Nebula (40)",
+				name = "[MT] Great Nebula (40)",
 				timeRange = true,
 				timelineIndex = 140,
 				timerStartOffset = -5,
@@ -1892,7 +1892,7 @@ local tbl =
 				{
 				},
 				mechanicTime = 595.4,
-				name = "Aurora (regen) self",
+				name = "[MT] Aurora (regen) self",
 				timeRange = true,
 				timelineIndex = 140,
 				timerEndOffset = 8,
@@ -1999,7 +1999,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 595.4,
-				name = "HoC (15) ST",
+				name = "[ST] HoC (15) ST",
 				timeRange = true,
 				timelineIndex = 140,
 				timerOffset = -1,
@@ -2095,7 +2095,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 644.3,
-				name = "HoC (15)",
+				name = "[IB] HoC (15)",
 				timeRange = true,
 				timelineIndex = 150,
 				timerOffset = -1,
@@ -2169,7 +2169,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 644.3,
-				name = "Camou (10)",
+				name = "[IB] Camou (10)",
 				timeRange = true,
 				timelineIndex = 150,
 				timerOffset = -10,
@@ -2244,7 +2244,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 644.3,
-				name = "Great Nebula (40)",
+				name = "[IB] Great Nebula (40)",
 				timeRange = true,
 				timelineIndex = 150,
 				timerStartOffset = -5,
@@ -2317,7 +2317,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 644.3,
-				name = "Rampart (20)",
+				name = "[IB] Rampart (20)",
 				timeRange = true,
 				timelineIndex = 150,
 				timerOffset = -15,
@@ -2372,7 +2372,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 644.3,
-				name = "Aurora (regen) self",
+				name = "[IB] Aurora (regen) self",
 				timeRange = true,
 				timelineIndex = 150,
 				timerEndOffset = 8,
@@ -2462,7 +2462,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 644.3,
-				name = "Superbolide (Invinsible)",
+				name = "[IB] Superbolide (Invinsible)",
 				timeRange = true,
 				timelineIndex = 150,
 				timerOffset = -1,
@@ -2554,7 +2554,7 @@ local tbl =
 				},
 				enabled = false,
 				mechanicTime = 644.3,
-				name = "HoC (15) ST",
+				name = "[NB] HoC (15) ST",
 				timeRange = true,
 				timelineIndex = 150,
 				timerOffset = -1,
@@ -2745,7 +2745,7 @@ local tbl =
 				},
 				enabled = false,
 				mechanicTime = 773.5,
-				name = "HoC (15)",
+				name = "[Out] HoC (15)",
 				timeRange = true,
 				timelineIndex = 175,
 				timerOffset = -1,
@@ -2836,7 +2836,7 @@ local tbl =
 				},
 				enabled = false,
 				mechanicTime = 773.5,
-				name = "Camou (10)",
+				name = "[Out] Camou (10)",
 				timeRange = true,
 				timelineIndex = 175,
 				timerOffset = -10,
@@ -2927,7 +2927,7 @@ local tbl =
 				},
 				enabled = false,
 				mechanicTime = 773.5,
-				name = "Rampart (20)",
+				name = "[Out] Rampart (20)",
 				timeRange = true,
 				timelineIndex = 175,
 				timerOffset = -15,
@@ -2936,61 +2936,6 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 4,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16151,
-							conditions = 
-							{
-								
-								{
-									"7ea95bcb-8a32-aac2-883a-7834a0254830",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_Tankbar_AuroraOT",
-							ignoreWeaveRules = true,
-							targetType = "Other Tank",
-							uuid = "6416a938-cb0c-be7b-bba2-31cd8d471cd4",
-							variableTogglesType = 3,
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Party",
-							comparator = 2,
-							conditionType = 2,
-							hpValue = 95,
-							partyTargetType = "Main Tank",
-							uuid = "7ea95bcb-8a32-aac2-883a-7834a0254830",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 773.5,
-				name = "Aurora (regen) ST",
-				timeRange = true,
-				timelineIndex = 175,
-				timerEndOffset = 10,
-				uuid = "fe6f1f75-1e5e-07ad-bb81-68c70f0d9316",
-				version = 2,
-			},
-			inheritedIndex = 5,
 		},
 		
 		{
@@ -3018,14 +2963,50 @@ local tbl =
 				},
 				enabled = false,
 				mechanicTime = 773.5,
-				name = "Aurora (regen) self",
+				name = "[Out] Aurora (regen) self",
 				timeRange = true,
 				timelineIndex = 175,
 				timerEndOffset = 8,
 				uuid = "4b720f63-a306-99e0-a094-7899c83b6004",
 				version = 2,
 			},
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 773.5,
+				name = "_______________",
+				timelineIndex = 175,
+				uuid = "a8724d82-a047-0c80-af09-b71cbd94c0e6",
+				version = 2,
+			},
 			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 773.5,
+				name = "----In----",
+				timelineIndex = 175,
+				uuid = "1eed768e-6ded-fabc-a7e2-5aa588dc8e72",
+				version = 2,
+			},
+			inheritedIndex = 7,
 		},
 		
 		{
@@ -3089,7 +3070,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 773.5,
-				name = "HoC (15) ST",
+				name = "[In] HoC (15) ST",
 				timeRange = true,
 				timelineIndex = 175,
 				timerOffset = -1,
@@ -3105,35 +3086,54 @@ local tbl =
 			{
 				actions = 
 				{
+					
+					{
+						data = 
+						{
+							actionID = 16151,
+							conditions = 
+							{
+								
+								{
+									"7ea95bcb-8a32-aac2-883a-7834a0254830",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_Tankbar_AuroraOT",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "6416a938-cb0c-be7b-bba2-31cd8d471cd4",
+							variableTogglesType = 3,
+							version = 2.1,
+						},
+					},
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Party",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 95,
+							partyTargetType = "Main Tank",
+							uuid = "7ea95bcb-8a32-aac2-883a-7834a0254830",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 773.5,
-				name = "_______________",
+				name = "[In] Aurora (regen) ST",
+				timeRange = true,
 				timelineIndex = 175,
-				uuid = "a8724d82-a047-0c80-af09-b71cbd94c0e6",
+				timerEndOffset = 10,
+				uuid = "fe6f1f75-1e5e-07ad-bb81-68c70f0d9316",
 				version = 2,
 			},
 			inheritedIndex = 9,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 773.5,
-				name = "----In----",
-				timelineIndex = 175,
-				uuid = "1eed768e-6ded-fabc-a7e2-5aa588dc8e72",
-				version = 2,
-			},
-			inheritedIndex = 10,
 		},
 	},
 	[195] = 
@@ -3264,7 +3264,7 @@ local tbl =
 				mechanicTime = 854.9,
 				name = "----Out----",
 				timelineIndex = 202,
-				uuid = "2e647092-938c-958b-ba26-3106057176fa",
+				uuid = "b28b48b2-ab10-f0b6-acb2-6cf7d406a5cf",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -3285,6 +3285,16 @@ local tbl =
 								
 								{
 									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"1f6706ca-1a26-5b96-a4c1-b48b49411caf",
+									true,
+								},
+								
+								{
+									"3b4db436-4c54-2cc9-a796-a5c78a7ce449",
 									true,
 								},
 							},
@@ -3311,14 +3321,41 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 100,
+							name = "have aggro",
+							uuid = "1f6706ca-1a26-5b96-a4c1-b48b49411caf",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 8,
+							jobIDList = 
+							{
+								19,
+								32,
+							},
+							partyTargetType = "Other Tank",
+							uuid = "3b4db436-4c54-2cc9-a796-a5c78a7ce449",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 854.9,
-				name = "HoC (15)",
+				name = "[Out] HoC (15)",
 				timeRange = true,
 				timelineIndex = 202,
 				timerOffset = -1,
 				timerStartOffset = -2,
-				uuid = "04c83b69-1af8-a138-b769-e59e3a990e61",
+				uuid = "3e557a34-8e59-5adf-838f-e285587f4d7f",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -3339,6 +3376,16 @@ local tbl =
 								
 								{
 									"b0a6c0ff-c966-c1fe-bedc-2d9d7afd0ff6",
+									true,
+								},
+								
+								{
+									"bb9332fb-873c-92b6-bddf-b31dce03a4af",
+									true,
+								},
+								
+								{
+									"ca51f407-944b-3cba-96e8-591308c87b46",
 									true,
 								},
 							},
@@ -3364,14 +3411,41 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 100,
+							name = "have aggro",
+							uuid = "bb9332fb-873c-92b6-bddf-b31dce03a4af",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 8,
+							jobIDList = 
+							{
+								19,
+								32,
+							},
+							partyTargetType = "Other Tank",
+							uuid = "ca51f407-944b-3cba-96e8-591308c87b46",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 854.9,
-				name = "Camou (10)",
+				name = "[Out] Camou (10)",
 				timeRange = true,
 				timelineIndex = 202,
 				timerOffset = -10,
 				timerStartOffset = -8,
-				uuid = "369f3648-f398-aacd-89ed-3e77af4340d8",
+				uuid = "61a25c5f-c524-c54c-a676-0fa8e47737d4",
 				version = 2,
 			},
 			inheritedIndex = 3,
@@ -3392,6 +3466,16 @@ local tbl =
 								
 								{
 									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+								
+								{
+									"358418a3-41e2-c06f-a1a3-d71de75a3db1",
+									true,
+								},
+								
+								{
+									"59408029-f7f9-fa85-b9db-d058588ace1b",
 									true,
 								},
 							},
@@ -3417,17 +3501,187 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 100,
+							name = "have aggro",
+							uuid = "358418a3-41e2-c06f-a1a3-d71de75a3db1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 8,
+							jobIDList = 
+							{
+								19,
+								32,
+							},
+							partyTargetType = "Other Tank",
+							uuid = "59408029-f7f9-fa85-b9db-d058588ace1b",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 854.9,
-				name = "Rampart (20)",
+				name = "[Out] Rampart (20)",
 				timeRange = true,
 				timelineIndex = 202,
 				timerOffset = -15,
 				timerStartOffset = -7,
-				uuid = "1ba54387-423d-55fc-9455-18de62bb568a",
+				uuid = "2a43a7d4-19d7-0185-8cef-bdcc4f7ca09a",
 				version = 2,
 			},
 			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16151,
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_Tankbar_AuroraSelf",
+							ignoreWeaveRules = true,
+							uuid = "6416a938-cb0c-be7b-bba2-31cd8d471cd4",
+							variableTogglesType = 3,
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 854.9,
+				name = "[Out] Aurora (regen) self",
+				timeRange = true,
+				timelineIndex = 202,
+				timerEndOffset = 8,
+				uuid = "90bf7580-a6a3-a673-8773-31b1eb3613f7",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 854.9,
+				name = "_______________",
+				timelineIndex = 202,
+				uuid = "562bbf22-4706-c5f9-b816-fbb6485cb186",
+				version = 2,
+			},
+			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 854.9,
+				name = "----In----",
+				timelineIndex = 202,
+				uuid = "3b19517b-510d-3a83-8914-029965e269af",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"58d45476-5465-875d-b686-9f14c0f5d427",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99,
+							name = "don't have aggro",
+							uuid = "58d45476-5465-875d-b686-9f14c0f5d427",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 854.9,
+				name = "[In] HoC (15) ST",
+				timeRange = true,
+				timelineIndex = 202,
+				timerOffset = -1,
+				timerStartOffset = -2,
+				uuid = "1132572c-0b05-2418-abd1-e61bd2dd5f8c",
+				version = 2,
+			},
+			inheritedIndex = 8,
 		},
 		
 		{
@@ -3476,137 +3730,11 @@ local tbl =
 				},
 				enabled = false,
 				mechanicTime = 854.9,
-				name = "Aurora (regen) ST",
+				name = "[In] Aurora (regen) ST",
 				timeRange = true,
 				timelineIndex = 202,
 				timerEndOffset = 10,
-				uuid = "e1b70743-93ee-7d4d-aafd-c40632ba8ccd",
-				version = 2,
-			},
-			inheritedIndex = 5,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16151,
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_Tankbar_AuroraSelf",
-							ignoreWeaveRules = true,
-							uuid = "6416a938-cb0c-be7b-bba2-31cd8d471cd4",
-							variableTogglesType = 3,
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 854.9,
-				name = "Aurora (regen) self",
-				timeRange = true,
-				timelineIndex = 202,
-				timerEndOffset = 8,
-				uuid = "fb518bc8-1965-c7fd-81ac-a518cc94f72c",
-				version = 2,
-			},
-			inheritedIndex = 6,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 854.9,
-				name = "----In----",
-				timelineIndex = 202,
-				uuid = "a45e41ac-7c18-e19a-92a3-6827aa2b93b6",
-				version = 2,
-			},
-			inheritedIndex = 10,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 25758,
-							conditions = 
-							{
-								
-								{
-									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Other Tank",
-							uuid = "94511374-01bd-2218-adca-8213e488a837",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 25758,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							dequeueIfLuaFalse = true,
-							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
-							version = 2,
-						},
-					},
-				},
-				enabled = false,
-				mechanicTime = 854.9,
-				name = "HoC (15) ST",
-				timeRange = true,
-				timelineIndex = 202,
-				timerOffset = -1,
-				timerStartOffset = -2,
-				uuid = "4aa73755-ac8f-5ca7-859a-bf8ab2a14d9d",
-				version = 2,
-			},
-			inheritedIndex = 8,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 854.9,
-				name = "_______________",
-				timelineIndex = 202,
-				uuid = "2c3c8ccd-17e6-7854-9ea9-6a856772cdde",
+				uuid = "0a9787cd-21d8-99f5-b7a1-e6836f278f59",
 				version = 2,
 			},
 			inheritedIndex = 9,
@@ -3692,7 +3820,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 1029.6,
-				name = "Superbolide (Invinsible)",
+				name = "[MT] Superbolide (Invinsible)",
 				timeRange = true,
 				timelineIndex = 218,
 				timerOffset = -1,
@@ -3713,12 +3841,30 @@ local tbl =
 				{
 				},
 				mechanicTime = 1029.6,
+				name = "_______________",
+				timelineIndex = 218,
+				uuid = "ed3b67ed-ca25-5415-a447-6cbd24a94fc3",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 1029.6,
 				name = "----is ST----",
 				timelineIndex = 218,
 				uuid = "2cb6853a-64df-0ad3-b875-872073bd98c3",
 				version = 2,
 			},
-			inheritedIndex = 3,
+			inheritedIndex = 4,
 		},
 		
 		{
@@ -3781,7 +3927,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 1029.6,
-				name = "HoC (15)",
+				name = "[ST] HoC (15)",
 				timeRange = true,
 				timelineIndex = 218,
 				timerOffset = -1,
@@ -3789,7 +3935,77 @@ local tbl =
 				uuid = "80669ed4-0335-c942-ba5d-8492d4859538",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16140,
+							conditions = 
+							{
+								
+								{
+									"b0a6c0ff-c966-c1fe-bedc-2d9d7afd0ff6",
+									true,
+								},
+								
+								{
+									"618aada0-f441-9594-9862-f6582312fe5e",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "8e2ebaff-1382-38db-a880-5b374c35c9fd",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16140,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "b0a6c0ff-c966-c1fe-bedc-2d9d7afd0ff6",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99,
+							name = "don't have aggro",
+							uuid = "618aada0-f441-9594-9862-f6582312fe5e",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 1029.6,
+				name = "[ST] Camou (10)",
+				timeRange = true,
+				timelineIndex = 218,
+				timerOffset = -10,
+				timerStartOffset = -8,
+				uuid = "c9f02b27-4cef-44fb-aecf-68c1e40aff95",
+				version = 2,
+			},
+			inheritedIndex = 6,
 		},
 		
 		{
@@ -3851,7 +4067,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 1029.6,
-				name = "Rampart (20)",
+				name = "[ST] Rampart (20)",
 				timeRange = true,
 				timelineIndex = 218,
 				timerOffset = -15,
@@ -3859,7 +4075,7 @@ local tbl =
 				uuid = "9d9b739e-2f02-e72d-97c0-9e0940e1033c",
 				version = 2,
 			},
-			inheritedIndex = 5,
+			inheritedIndex = 7,
 		},
 		
 		{
@@ -3921,84 +4137,14 @@ local tbl =
 					},
 				},
 				mechanicTime = 1029.6,
-				name = "Great Nebula (40)",
+				name = "[ST] Great Nebula (40)",
 				timeRange = true,
 				timelineIndex = 218,
 				timerStartOffset = -5,
 				uuid = "997da197-3de8-0997-b232-b5304c78877d",
 				version = 2,
 			},
-			inheritedIndex = 6,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16140,
-							conditions = 
-							{
-								
-								{
-									"b0a6c0ff-c966-c1fe-bedc-2d9d7afd0ff6",
-									true,
-								},
-								
-								{
-									"618aada0-f441-9594-9862-f6582312fe5e",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							uuid = "8e2ebaff-1382-38db-a880-5b374c35c9fd",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16140,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "b0a6c0ff-c966-c1fe-bedc-2d9d7afd0ff6",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							comparator = 2,
-							conditionType = 4,
-							enmityValue = 99,
-							name = "don't have aggro",
-							uuid = "618aada0-f441-9594-9862-f6582312fe5e",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 1029.6,
-				name = "Camou (10)",
-				timeRange = true,
-				timelineIndex = 218,
-				timerOffset = -10,
-				timerStartOffset = -8,
-				uuid = "c9f02b27-4cef-44fb-aecf-68c1e40aff95",
-				version = 2,
-			},
-			inheritedIndex = 7,
+			inheritedIndex = 8,
 		},
 		
 		{
@@ -4037,32 +4183,14 @@ local tbl =
 					},
 				},
 				mechanicTime = 1029.6,
-				name = "Aurora (regen) self",
+				name = "[ST] Aurora (regen) self",
 				timeRange = true,
 				timelineIndex = 218,
 				timerEndOffset = 8,
 				uuid = "06e7d1d4-4848-ee13-8e7b-947bae2a1f16",
 				version = 2,
 			},
-			inheritedIndex = 8,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 1029.6,
-				name = "_______________",
-				timelineIndex = 218,
-				uuid = "ed3b67ed-ca25-5415-a447-6cbd24a94fc3",
-				version = 2,
-			},
-			inheritedIndex = 10,
+			inheritedIndex = 9,
 		},
 	},
 	[247] = 
@@ -4080,131 +4208,10 @@ local tbl =
 				mechanicTime = 1146.3,
 				name = "----is MT----",
 				timelineIndex = 247,
-				uuid = "a8c23669-55a6-218d-ad52-f1966a825a28",
+				uuid = "fee07301-17d1-5584-b5f1-553b229e0cf8",
 				version = 2,
 			},
 			inheritedIndex = 1,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16152,
-							conditions = 
-							{
-								
-								{
-									"7e0d26db-790b-1b75-bfca-ad4daf3ae049",
-									true,
-								},
-								
-								{
-									"2521ecc8-784d-d4b6-bdad-c6d82d4adbe6",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							uuid = "9d1ae46d-0ea3-1bda-a34f-fbeb02011fe0",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16152,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "7e0d26db-790b-1b75-bfca-ad4daf3ae049",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							conditionType = 4,
-							enmityValue = 100,
-							name = "have aggro",
-							uuid = "2521ecc8-784d-d4b6-bdad-c6d82d4adbe6",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 1146.3,
-				name = "Superbolide (Invinsible)",
-				timeRange = true,
-				timelineIndex = 247,
-				timerOffset = -1,
-				timerStartOffset = -5,
-				uuid = "5fe10715-6a85-3566-98d3-126d73778260",
-				version = 2,
-			},
-			inheritedIndex = 2,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 36935,
-							conditions = 
-							{
-								
-								{
-									"30f02147-8e47-399f-99c5-279582aa248d",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							uuid = "d00db0ec-8fe2-c41e-8ee5-1c53101aa3bb",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 36935,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "30f02147-8e47-399f-99c5-279582aa248d",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 1146.3,
-				name = "Great Nebula (40)",
-				timeRange = true,
-				timelineIndex = 247,
-				timerStartOffset = -5,
-				uuid = "b84190ce-2d5c-f25d-bf00-50e2b739e3f1",
-				version = 2,
-			},
-			inheritedIndex = 3,
 		},
 		
 		{
@@ -4219,10 +4226,28 @@ local tbl =
 				mechanicTime = 1146.3,
 				name = "----is ST----",
 				timelineIndex = 247,
-				uuid = "90e7923d-9f4c-d4eb-99e4-86e5c5369ed2",
+				uuid = "42dc718a-38e4-a157-a65c-d8ac69bcff46",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 1146.3,
+				name = "_______________",
+				timelineIndex = 247,
+				uuid = "9a650b3e-63a6-6d4d-80ab-2f0f89f2f955",
+				version = 2,
+			},
+			inheritedIndex = 3,
 		},
 		
 		{
@@ -4285,15 +4310,15 @@ local tbl =
 					},
 				},
 				mechanicTime = 1146.3,
-				name = "HoC (15)",
+				name = "[ST] HoC (15)",
 				timeRange = true,
 				timelineIndex = 247,
 				timerOffset = -1,
 				timerStartOffset = -2,
-				uuid = "a21724a9-4ef3-cc88-8121-3865f88a8a35",
+				uuid = "f055fc8d-40ca-abff-bfb1-88e6918cc742",
 				version = 2,
 			},
-			inheritedIndex = 5,
+			inheritedIndex = 4,
 		},
 		
 		{
@@ -4355,79 +4380,15 @@ local tbl =
 					},
 				},
 				mechanicTime = 1146.3,
-				name = "Camou (10)",
+				name = "[ST] Camou (10)",
 				timeRange = true,
 				timelineIndex = 247,
 				timerOffset = -10,
 				timerStartOffset = -8,
-				uuid = "a7a58100-a69c-2615-9234-a56a2e232182",
+				uuid = "810ecd70-ee1e-2a9d-94c7-cbb096f3c01c",
 				version = 2,
 			},
-			inheritedIndex = 6,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16151,
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_Tankbar_AuroraSelf",
-							ignoreWeaveRules = true,
-							uuid = "6416a938-cb0c-be7b-bba2-31cd8d471cd4",
-							variableTogglesType = 3,
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							comparator = 2,
-							conditionType = 2,
-							hpValue = 70,
-							uuid = "a9cb12ba-9206-1416-bbae-b58d53ccdff2",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 1146.3,
-				name = "Aurora (regen) self",
-				timeRange = true,
-				timelineIndex = 247,
-				timerEndOffset = 8,
-				uuid = "a6e115af-ce00-4bb8-a4a8-55f24fb19b22",
-				version = 2,
-			},
-			inheritedIndex = 7,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 1146.3,
-				name = "_______________",
-				timelineIndex = 247,
-				uuid = "f8a40727-8a35-d9fc-9e82-43f20aa68a1c",
-				version = 2,
-			},
-			inheritedIndex = 9,
+			inheritedIndex = 5,
 		},
 		
 		{
@@ -4489,15 +4450,130 @@ local tbl =
 					},
 				},
 				mechanicTime = 1146.3,
-				name = "Rampart (20)",
+				name = "[ST] Rampart (20)",
 				timeRange = true,
 				timelineIndex = 247,
 				timerOffset = -15,
 				timerStartOffset = -10,
-				uuid = "4e43df31-67f7-9cec-80b0-71e13637e626",
+				uuid = "435128b8-684b-4b52-b8e9-d53133af5280",
 				version = 2,
 			},
-			inheritedIndex = 10,
+			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36935,
+							conditions = 
+							{
+								
+								{
+									"30f02147-8e47-399f-99c5-279582aa248d",
+									true,
+								},
+								
+								{
+									"c33cb43b-8ed2-2a38-8103-b5f70acfc480",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "d00db0ec-8fe2-c41e-8ee5-1c53101aa3bb",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36935,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "30f02147-8e47-399f-99c5-279582aa248d",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99,
+							name = "don't have aggro",
+							uuid = "c33cb43b-8ed2-2a38-8103-b5f70acfc480",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 1146.3,
+				name = "[ST] Great Nebula (40)",
+				timeRange = true,
+				timelineIndex = 247,
+				timerStartOffset = -5,
+				uuid = "6600620e-b1f8-b16f-a159-9ef4c4cd885f",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16151,
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_Tankbar_AuroraSelf",
+							ignoreWeaveRules = true,
+							uuid = "6416a938-cb0c-be7b-bba2-31cd8d471cd4",
+							variableTogglesType = 3,
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 70,
+							uuid = "a9cb12ba-9206-1416-bbae-b58d53ccdff2",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 1146.3,
+				name = "[ST] Aurora (regen) self",
+				timeRange = true,
+				timelineIndex = 247,
+				timerEndOffset = 8,
+				uuid = "f04b29a5-6f7e-4499-943d-136baf2e71b8",
+				version = 2,
+			},
+			inheritedIndex = 8,
 		},
 	},
 	inheritedProfiles = 
