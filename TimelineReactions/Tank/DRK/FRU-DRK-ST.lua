@@ -234,7 +234,7 @@ local tbl =
 				uuid = "f41a32b4-7706-a0a1-a651-70e1e0dc4112",
 				version = 2,
 			},
-			inheritedIndex = 3,
+			inheritedIndex = 2,
 		},
 		
 		{
@@ -286,7 +286,7 @@ local tbl =
 				uuid = "47025dca-3b5a-6655-9266-766a1c4bbf47",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 3,
 		},
 		
 		{
@@ -320,7 +320,7 @@ local tbl =
 				uuid = "a77e7eb1-799f-3ba7-b5ed-737a7abf1857",
 				version = 2,
 			},
-			inheritedIndex = 5,
+			inheritedIndex = 4,
 		},
 		
 		{
@@ -338,7 +338,7 @@ local tbl =
 				uuid = "a34cc088-8ebb-5b49-af2f-35943fa8a85c",
 				version = 2,
 			},
-			inheritedIndex = 8,
+			inheritedIndex = 5,
 		},
 		
 		{
@@ -391,7 +391,7 @@ local tbl =
 				uuid = "0cc72f18-eee1-9614-834e-90f138abb826",
 				version = 2,
 			},
-			inheritedIndex = 9,
+			inheritedIndex = 6,
 		},
 	},
 	[12] = 
@@ -575,7 +575,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 30,
 				timerOffset = -3,
-				timerStartOffset = -2,
+				timerStartOffset = -5,
 				uuid = "6c200dee-e69b-ed31-a370-8508049b98f3",
 				version = 2,
 			},
@@ -1413,7 +1413,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 595.4,
-				name = "TBN (25)",
+				name = "[MT] TBN (25)",
 				timeRange = true,
 				timelineIndex = 140,
 				timerOffset = -4,
@@ -1482,7 +1482,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 595.4,
-				name = "Rampart (20)",
+				name = "[MT] Rampart (20)",
 				timeRange = true,
 				timelineIndex = 140,
 				timerOffset = -15,
@@ -1550,7 +1550,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 595.4,
-				name = "Vigil (40)",
+				name = "[MT] Vigil (40)",
 				timeRange = true,
 				timelineIndex = 140,
 				timerOffset = -5,
@@ -1601,7 +1601,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 595.4,
-				name = "Oblation (10)",
+				name = "[MT] Oblation (10)",
 				randomOffset = 5,
 				timeRange = true,
 				timelineIndex = 140,
@@ -1669,7 +1669,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 595.4,
-				name = "Dark Mind (M20)",
+				name = "[MT] Dark Mind (M20)",
 				timeRange = true,
 				timelineIndex = 140,
 				timerOffset = -5,
@@ -1775,7 +1775,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 595.4,
-				name = "TBN ST (25)",
+				name = "[ST] TBN ST (25)",
 				timeRange = true,
 				timelineIndex = 140,
 				timerOffset = -4,
@@ -1829,7 +1829,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 595.4,
-				name = "Oblation ST (10)",
+				name = "[ST] Oblation ST (10)",
 				randomOffset = 5,
 				timeRange = true,
 				timelineIndex = 140,
@@ -1923,7 +1923,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 644.3,
-				name = "TBN (25)",
+				name = "[IB] TBN (25)",
 				timeRange = true,
 				timelineIndex = 150,
 				timerOffset = -4,
@@ -1997,7 +1997,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 644.3,
-				name = "Rampart (20)",
+				name = "[IB] Rampart (20)",
 				timeRange = true,
 				timelineIndex = 150,
 				timerOffset = -15,
@@ -2070,7 +2070,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 644.3,
-				name = "Vigil (40)",
+				name = "[IB] Vigil (40)",
 				timeRange = true,
 				timelineIndex = 150,
 				timerOffset = -5,
@@ -2126,7 +2126,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 644.3,
-				name = "Oblation (10)",
+				name = "[IB] Oblation (10)",
 				randomOffset = 5,
 				timeRange = true,
 				timelineIndex = 150,
@@ -2199,7 +2199,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 644.3,
-				name = "Dark Mind (M20)",
+				name = "[IB] Dark Mind (M20)",
 				timeRange = true,
 				timelineIndex = 150,
 				timerOffset = -5,
@@ -2290,7 +2290,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 644.3,
-				name = "Living Dead (Invinsible)",
+				name = "[IB] Living Dead (Invinsible)",
 				timeRange = true,
 				timelineIndex = 150,
 				timerStartOffset = -2,
@@ -2330,7 +2330,7 @@ local tbl =
 				mechanicTime = 644.3,
 				name = "----not Baiting----",
 				timelineIndex = 150,
-				uuid = "e06f45c6-97b8-6dee-ac09-33fa25be84f0",
+				uuid = "da517e46-fa68-67a8-ab52-1c1b876af382",
 				version = 2,
 			},
 			inheritedIndex = 10,
@@ -2379,7 +2379,7 @@ local tbl =
 				},
 				enabled = false,
 				mechanicTime = 644.3,
-				name = "TBN ST (25)",
+				name = "[NB] TBN ST (25)",
 				timeRange = true,
 				timelineIndex = 150,
 				timerOffset = -4,
@@ -2400,6 +2400,14 @@ local tbl =
 						data = 
 						{
 							actionID = 25754,
+							conditions = 
+							{
+								
+								{
+									"e2e7f1ad-0fad-1817-a2f0-c95b313b7d5a",
+									true,
+								},
+							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
 							targetType = "Other Tank",
@@ -2411,15 +2419,26 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99,
+							name = "don't have aggro",
+							uuid = "e2e7f1ad-0fad-1817-a2f0-c95b313b7d5a",
+							version = 2,
+						},
+					},
 				},
-				enabled = false,
 				mechanicTime = 644.3,
-				name = "Oblation ST (10)",
+				name = "[NB] Oblation ST (10)",
 				randomOffset = 5,
 				timeRange = true,
 				timelineIndex = 150,
 				timerStartOffset = -2,
-				uuid = "fec2d125-8b6a-9b5f-90a5-6f6c7d28f4fa",
+				uuid = "bd37ff2b-0fb5-3c0c-bbf8-8c3e550aabcd",
 				version = 2,
 			},
 			inheritedIndex = 12,
@@ -2508,7 +2527,7 @@ local tbl =
 			data = 
 			{
 				name = "[Draw] Somber Nearest",
-				uuid = "6e33934f-a7ec-ce12-bd5e-6374dca2c4fb",
+				uuid = "daf339d9-f864-3bcd-ba42-4ecea02389b8",
 				version = 2,
 			},
 			inheritedObjectUUID = "da7bb794-ec51-c6d9-af9c-72502452e665",
@@ -2581,7 +2600,7 @@ local tbl =
 				},
 				enabled = false,
 				mechanicTime = 773.5,
-				name = "TBN (25)",
+				name = "[Out] TBN (25)",
 				timeRange = true,
 				timelineIndex = 175,
 				timerOffset = -4,
@@ -2635,7 +2654,7 @@ local tbl =
 				},
 				enabled = false,
 				mechanicTime = 773.5,
-				name = "Rampart (20)",
+				name = "[Out] Rampart (20)",
 				timeRange = true,
 				timelineIndex = 175,
 				timerOffset = -15,
@@ -2668,7 +2687,7 @@ local tbl =
 				},
 				enabled = false,
 				mechanicTime = 773.5,
-				name = "Oblation (10)",
+				name = "[Out] Oblation (10)",
 				randomOffset = 5,
 				timeRange = true,
 				timelineIndex = 175,
@@ -2721,7 +2740,7 @@ local tbl =
 				},
 				enabled = false,
 				mechanicTime = 773.5,
-				name = "Dark Mind (M20)",
+				name = "[Out] Dark Mind (M20)",
 				timeRange = true,
 				timelineIndex = 175,
 				timerOffset = -5,
@@ -2810,7 +2829,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 773.5,
-				name = "TBN ST (25)",
+				name = "[In] TBN ST (25)",
 				timeRange = true,
 				timelineIndex = 175,
 				timerOffset = -4,
@@ -2844,7 +2863,7 @@ local tbl =
 				{
 				},
 				mechanicTime = 773.5,
-				name = "Oblation ST (10)",
+				name = "[In] Oblation ST (10)",
 				randomOffset = 5,
 				timeRange = true,
 				timelineIndex = 175,
@@ -3116,7 +3135,7 @@ local tbl =
 				mechanicTime = 854.9,
 				name = "----Out----",
 				timelineIndex = 202,
-				uuid = "fa665075-f194-533b-86ab-3d20286bbc0e",
+				uuid = "952b2efa-62e5-e618-bb1e-7fe18e7603d1",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -3163,12 +3182,12 @@ local tbl =
 					},
 				},
 				mechanicTime = 854.9,
-				name = "TBN (25)",
+				name = "[Out] TBN (25)",
 				timeRange = true,
 				timelineIndex = 202,
 				timerOffset = -4,
 				timerStartOffset = -2,
-				uuid = "34caa5f6-edab-ec74-8682-746aef16362b",
+				uuid = "1df55a9e-f7f8-4943-9df9-b41050a40487",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -3216,12 +3235,12 @@ local tbl =
 					},
 				},
 				mechanicTime = 854.9,
-				name = "Rampart (20)",
+				name = "[Out] Rampart (20)",
 				timeRange = true,
 				timelineIndex = 202,
 				timerOffset = -15,
-				timerStartOffset = -5,
-				uuid = "03e14225-9f74-863c-8a38-04644b3c77ac",
+				timerStartOffset = -10,
+				uuid = "2e3b4e5c-464a-35c4-b714-ef4f045a75c0",
 				version = 2,
 			},
 			inheritedIndex = 3,
@@ -3248,12 +3267,12 @@ local tbl =
 				{
 				},
 				mechanicTime = 854.9,
-				name = "Oblation (10)",
+				name = "[Out] Oblation (10)",
 				randomOffset = 5,
 				timeRange = true,
 				timelineIndex = 202,
 				timerStartOffset = -3,
-				uuid = "bca7869e-18bd-d197-94c1-b8e533775c87",
+				uuid = "9e37e935-2eda-aaa0-89ea-1f80e0fae9d8",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -3300,12 +3319,12 @@ local tbl =
 					},
 				},
 				mechanicTime = 854.9,
-				name = "Dark Mind (M20)",
+				name = "[Out] Dark Mind (M20)",
 				timeRange = true,
 				timelineIndex = 202,
 				timerOffset = -5,
-				timerStartOffset = -4,
-				uuid = "293f5219-8daa-01aa-bfb5-a83f0fbc88e3",
+				timerStartOffset = -5,
+				uuid = "df508ffc-c97f-80f1-bf42-266faea3ecc8",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -3323,7 +3342,7 @@ local tbl =
 				mechanicTime = 854.9,
 				name = "_______________",
 				timelineIndex = 202,
-				uuid = "eafb2930-eb57-f413-945b-0f069a7dd75e",
+				uuid = "ab5a53eb-4585-cc52-91c8-fb22c559cbf3",
 				version = 2,
 			},
 			inheritedIndex = 6,
@@ -3341,7 +3360,7 @@ local tbl =
 				mechanicTime = 854.9,
 				name = "----In----",
 				timelineIndex = 202,
-				uuid = "dbb4373b-04f0-3441-ade5-a9ce3c9f8350",
+				uuid = "4f5b2a74-e4dc-012f-9425-7f335deff8de",
 				version = 2,
 			},
 			inheritedIndex = 7,
@@ -3390,12 +3409,12 @@ local tbl =
 				},
 				enabled = false,
 				mechanicTime = 854.9,
-				name = "TBN ST (25)",
+				name = "[In] TBN ST (25)",
 				timeRange = true,
 				timelineIndex = 202,
 				timerOffset = -4,
 				timerStartOffset = -2,
-				uuid = "0d3bacd9-f330-8f1f-adea-229ca8e171be",
+				uuid = "0c941f44-a8be-1310-9be4-97b420df5744",
 				version = 2,
 			},
 			inheritedIndex = 8,
@@ -3425,12 +3444,12 @@ local tbl =
 				},
 				enabled = false,
 				mechanicTime = 854.9,
-				name = "Oblation ST (10)",
+				name = "[In] Oblation ST (10)",
 				randomOffset = 5,
 				timeRange = true,
 				timelineIndex = 202,
 				timerStartOffset = -3,
-				uuid = "3e087fa2-68c6-9ac9-ad4a-df4bf4f178db",
+				uuid = "7d57fe45-2ea3-1fb5-b58b-c17728d7a445",
 				version = 2,
 			},
 			inheritedIndex = 9,
@@ -3438,6 +3457,24 @@ local tbl =
 	},
 	[218] = 
 	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 1029.6,
+				name = "----is MT----",
+				timelineIndex = 218,
+				uuid = "0e4f6853-de13-ba96-9cfc-26b0f4f11c39",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
 		
 		{
 			data = 
@@ -3497,7 +3534,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 1029.6,
-				name = "Living Dead (Invinsible)",
+				name = "[MT] Living Dead (Invinsible)",
 				timeRange = true,
 				timelineIndex = 218,
 				timerStartOffset = -2,
@@ -3520,6 +3557,24 @@ local tbl =
 				name = "_______________",
 				timelineIndex = 218,
 				uuid = "ed3b67ed-ca25-5415-a447-6cbd24a94fc3",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 1029.6,
+				name = "----is ST----",
+				timelineIndex = 218,
+				uuid = "2cb6853a-64df-0ad3-b875-872073bd98c3",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -3583,7 +3638,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 1029.6,
-				name = "TBN (25)",
+				name = "[ST] TBN (25)",
 				timeRange = true,
 				timelineIndex = 218,
 				timerOffset = -4,
@@ -3653,7 +3708,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 1029.6,
-				name = "Rampart (20)",
+				name = "[ST] Rampart (20)",
 				timeRange = true,
 				timelineIndex = 218,
 				timerOffset = -15,
@@ -3705,7 +3760,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 1029.6,
-				name = "Oblation (10)",
+				name = "[ST] Oblation (10)",
 				randomOffset = 5,
 				timeRange = true,
 				timelineIndex = 218,
@@ -3774,7 +3829,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 1029.6,
-				name = "Dark Mind (M20)",
+				name = "[ST] Dark Mind (M20)",
 				timeRange = true,
 				timelineIndex = 218,
 				timerOffset = -5,
@@ -3784,43 +3839,27 @@ local tbl =
 			},
 			inheritedIndex = 8,
 		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 1029.6,
-				name = "----is MT----",
-				timelineIndex = 218,
-				uuid = "0e4f6853-de13-ba96-9cfc-26b0f4f11c39",
-				version = 2,
-			},
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 1029.6,
-				name = "----is ST----",
-				timelineIndex = 218,
-				uuid = "2cb6853a-64df-0ad3-b875-872073bd98c3",
-				version = 2,
-			},
-		},
 	},
 	[247] = 
 	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 1146.3,
+				name = "----is MT----",
+				timelineIndex = 247,
+				uuid = "758d9379-3994-bce9-8211-32178c3577b9",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
 		
 		{
 			data = 
@@ -3880,11 +3919,11 @@ local tbl =
 					},
 				},
 				mechanicTime = 1146.3,
-				name = "Living Dead (Invinsible)",
+				name = "[MT] Living Dead (Invinsible)",
 				timeRange = true,
 				timelineIndex = 247,
 				timerStartOffset = -2,
-				uuid = "74fa8c15-f60d-136e-8e54-607e833dc3f2",
+				uuid = "0b6dabdd-0c55-aa54-864c-df7cc75ea188",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -3902,7 +3941,25 @@ local tbl =
 				mechanicTime = 1146.3,
 				name = "_______________",
 				timelineIndex = 247,
-				uuid = "366333bf-72e4-f851-9cd6-5f31cb2ac5f1",
+				uuid = "19f6a264-666e-dd80-b546-dcd931f6a734",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 1146.3,
+				name = "----is ST----",
+				timelineIndex = 247,
+				uuid = "44576925-1db1-06c0-986c-5334362f1d35",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -3966,12 +4023,12 @@ local tbl =
 					},
 				},
 				mechanicTime = 1146.3,
-				name = "TBN (25)",
+				name = "[ST] TBN (25)",
 				timeRange = true,
 				timelineIndex = 247,
 				timerOffset = -4,
 				timerStartOffset = -2,
-				uuid = "d0b1496c-82c7-cc84-952e-72e0e6f858f4",
+				uuid = "677600ad-9bb8-01f6-874e-da6ffd969fc4",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -4036,12 +4093,12 @@ local tbl =
 					},
 				},
 				mechanicTime = 1146.3,
-				name = "Rampart (20)",
+				name = "[ST] Rampart (20)",
 				timeRange = true,
 				timelineIndex = 247,
 				timerOffset = -15,
 				timerStartOffset = -10,
-				uuid = "c3b16018-5a3d-6196-bce6-cc262de32746",
+				uuid = "fbba52ea-bd51-2394-bb89-a7ea243a34a2",
 				version = 2,
 			},
 			inheritedIndex = 6,
@@ -4088,12 +4145,12 @@ local tbl =
 					},
 				},
 				mechanicTime = 1146.3,
-				name = "Oblation (10)",
+				name = "[ST] Oblation (10)",
 				randomOffset = 5,
 				timeRange = true,
 				timelineIndex = 247,
 				timerStartOffset = -3,
-				uuid = "2fb76ba1-50a7-98b4-90bc-813427e073c7",
+				uuid = "50d7908c-608b-c297-8731-b4405d649733",
 				version = 2,
 			},
 			inheritedIndex = 7,
@@ -4157,49 +4214,15 @@ local tbl =
 					},
 				},
 				mechanicTime = 1146.3,
-				name = "Dark Mind (M20)",
+				name = "[ST] Dark Mind (M20)",
 				timeRange = true,
 				timelineIndex = 247,
 				timerOffset = -5,
 				timerStartOffset = -5,
-				uuid = "dbdb5850-821e-ad97-b2cd-eb27ab2cbf34",
+				uuid = "e29e6885-dc36-dca6-be07-a2d7c2991b13",
 				version = 2,
 			},
 			inheritedIndex = 8,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 1146.3,
-				name = "----is MT----",
-				timelineIndex = 247,
-				uuid = "6a7a5db9-8c03-b305-978f-96823e456797",
-				version = 2,
-			},
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 1146.3,
-				name = "----is ST----",
-				timelineIndex = 247,
-				uuid = "1911a7a5-78d3-eff7-83bc-098923546f38",
-				version = 2,
-			},
 		},
 	},
 	inheritedProfiles = 
