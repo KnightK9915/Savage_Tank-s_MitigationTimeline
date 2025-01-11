@@ -4219,6 +4219,76 @@ local tbl =
 			{
 				actions = 
 				{
+					
+					{
+						data = 
+						{
+							actionID = 16152,
+							conditions = 
+							{
+								
+								{
+									"7e0d26db-790b-1b75-bfca-ad4daf3ae049",
+									true,
+								},
+								
+								{
+									"2521ecc8-784d-d4b6-bdad-c6d82d4adbe6",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "9d1ae46d-0ea3-1bda-a34f-fbeb02011fe0",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16152,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "7e0d26db-790b-1b75-bfca-ad4daf3ae049",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 100,
+							name = "have aggro",
+							uuid = "2521ecc8-784d-d4b6-bdad-c6d82d4adbe6",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				mechanicTime = 1146.3,
+				name = "[MT] Superbolide (Invinsible)",
+				timeRange = true,
+				timelineIndex = 247,
+				timerOffset = -1,
+				timerStartOffset = -5,
+				uuid = "55c1053c-1915-f386-840e-95f7873f0374",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
 				},
 				conditions = 
 				{
@@ -4229,7 +4299,7 @@ local tbl =
 				uuid = "42dc718a-38e4-a157-a65c-d8ac69bcff46",
 				version = 2,
 			},
-			inheritedIndex = 2,
+			inheritedIndex = 3,
 		},
 		
 		{
@@ -4247,7 +4317,7 @@ local tbl =
 				uuid = "9a650b3e-63a6-6d4d-80ab-2f0f89f2f955",
 				version = 2,
 			},
-			inheritedIndex = 3,
+			inheritedIndex = 4,
 		},
 		
 		{
@@ -4318,7 +4388,7 @@ local tbl =
 				uuid = "f055fc8d-40ca-abff-bfb1-88e6918cc742",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 5,
 		},
 		
 		{
@@ -4388,7 +4458,7 @@ local tbl =
 				uuid = "810ecd70-ee1e-2a9d-94c7-cbb096f3c01c",
 				version = 2,
 			},
-			inheritedIndex = 5,
+			inheritedIndex = 6,
 		},
 		
 		{
@@ -4458,7 +4528,7 @@ local tbl =
 				uuid = "435128b8-684b-4b52-b8e9-d53133af5280",
 				version = 2,
 			},
-			inheritedIndex = 6,
+			inheritedIndex = 7,
 		},
 		
 		{
@@ -4527,7 +4597,7 @@ local tbl =
 				uuid = "6600620e-b1f8-b16f-a159-9ef4c4cd885f",
 				version = 2,
 			},
-			inheritedIndex = 7,
+			inheritedIndex = 8,
 		},
 		
 		{
@@ -4573,7 +4643,7 @@ local tbl =
 				uuid = "f04b29a5-6f7e-4499-943d-136baf2e71b8",
 				version = 2,
 			},
-			inheritedIndex = 8,
+			inheritedIndex = 9,
 		},
 	},
 	inheritedProfiles = 
