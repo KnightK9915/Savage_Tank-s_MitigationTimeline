@@ -176,7 +176,7 @@ local tbl =
 				name = "sheltron (15)",
 				timeRange = true,
 				timelineIndex = 11,
-				timerStartOffset = -3,
+				timerStartOffset = -2,
 				uuid = "521c8e95-2205-595d-8280-8cf2af81bd30",
 				version = 2,
 			},
@@ -229,7 +229,7 @@ local tbl =
 				name = "interven ST (15)",
 				timeRange = true,
 				timelineIndex = 11,
-				timerStartOffset = -2,
+				timerStartOffset = -4,
 				uuid = "ca689593-ab9c-a764-9d41-048af74bfc00",
 				version = 2,
 			},
@@ -2425,7 +2425,7 @@ local tbl =
 				uuid = "ffb5c71c-765c-fd9d-989a-b4be5e18346f",
 				version = 2,
 			},
-			inheritedIndex = 5,
+			inheritedIndex = 4,
 		},
 		
 		{
@@ -2443,7 +2443,7 @@ local tbl =
 				uuid = "a8724d82-a047-0c80-af09-b71cbd94c0e6",
 				version = 2,
 			},
-			inheritedIndex = 6,
+			inheritedIndex = 5,
 		},
 		
 		{
@@ -2461,7 +2461,7 @@ local tbl =
 				uuid = "1eed768e-6ded-fabc-a7e2-5aa588dc8e72",
 				version = 2,
 			},
-			inheritedIndex = 7,
+			inheritedIndex = 6,
 		},
 		
 		{
@@ -2513,7 +2513,7 @@ local tbl =
 				uuid = "0ab617eb-2082-881c-8455-c003793e1a6c",
 				version = 2,
 			},
-			inheritedIndex = 8,
+			inheritedIndex = 7,
 		},
 	},
 	[176] = 
