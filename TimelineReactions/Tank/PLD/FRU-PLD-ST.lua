@@ -229,7 +229,7 @@ local tbl =
 				name = "interven ST (15)",
 				timeRange = true,
 				timelineIndex = 11,
-				timerStartOffset = -4,
+				timerStartOffset = -3.5,
 				uuid = "ca689593-ab9c-a764-9d41-048af74bfc00",
 				version = 2,
 			},
