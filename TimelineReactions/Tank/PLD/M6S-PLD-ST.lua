@@ -759,6 +759,11 @@ local tbl =
 									"225770af-0877-da33-9de4-dc8b513d4bc8",
 									true,
 								},
+								
+								{
+									"ca0f200a-ae72-6864-a217-af68bd780447",
+									true,
+								},
 							},
 							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
@@ -806,6 +811,17 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99.999000549316,
+							uuid = "ca0f200a-ae72-6864-a217-af68bd780447",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 107.5,
 				name = "interven ST (15)",
@@ -844,6 +860,11 @@ local tbl =
 								
 								{
 									"85019f5c-67f4-7194-b502-87e4a15bbcbb",
+									true,
+								},
+								
+								{
+									"a94cd6c8-a745-e6ff-bf92-a325fd926aba",
 									true,
 								},
 							},
@@ -888,6 +909,16 @@ local tbl =
 							conditionType = 2,
 							hpValue = 80,
 							uuid = "85019f5c-67f4-7194-b502-87e4a15bbcbb",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 99.999000549316,
+							uuid = "a94cd6c8-a745-e6ff-bf92-a325fd926aba",
 							version = 2,
 						},
 					},

@@ -758,6 +758,11 @@ local tbl =
 									"85019f5c-67f4-7194-b502-87e4a15bbcbb",
 									true,
 								},
+								
+								{
+									"ad56b97b-4eaa-c822-bc32-d42b4532b959",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -803,6 +808,16 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 99.999000549316,
+							uuid = "ad56b97b-4eaa-c822-bc32-d42b4532b959",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 107.5,
 				name = "sheltron (15)",
@@ -841,6 +856,11 @@ local tbl =
 								
 								{
 									"225770af-0877-da33-9de4-dc8b513d4bc8",
+									true,
+								},
+								
+								{
+									"6dc915f3-4913-f71f-b34b-cfbd02faa659",
 									true,
 								},
 							},
@@ -887,6 +907,17 @@ local tbl =
 							hpValue = 80,
 							partyTargetType = "Other Tank",
 							uuid = "225770af-0877-da33-9de4-dc8b513d4bc8",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99.999000549316,
+							uuid = "6dc915f3-4913-f71f-b34b-cfbd02faa659",
 							version = 2,
 						},
 					},
