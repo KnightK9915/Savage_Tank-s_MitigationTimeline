@@ -1631,6 +1631,61 @@ local tbl =
 			},
 			inheritedIndex = 4,
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3541,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"3e9b55c6-b654-2126-9301-1bea02920fe3",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5692a6c4-1fc1-8c1c-9cb9-7f7ce5bbef22",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 30,
+							uuid = "3e9b55c6-b654-2126-9301-1bea02920fe3",
+							version = 2,
+						},
+					},
+				},
+				loop = true,
+				mechanicTime = 227.4,
+				name = "Self Heal",
+				timeRange = true,
+				timelineIndex = 36,
+				timerEndOffset = 29,
+				uuid = "98e5cc86-241d-34b9-8f78-6cc663cddbac",
+				version = 2,
+			},
+		},
 	},
 	[43] = 
 	{
@@ -1785,6 +1840,7 @@ local tbl =
 							},
 							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
+							targetType = "Other Tank",
 							uuid = "5692a6c4-1fc1-8c1c-9cb9-7f7ce5bbef22",
 							version = 2.1,
 						},
@@ -1800,12 +1856,13 @@ local tbl =
 							category = "Self",
 							comparator = 2,
 							conditionType = 2,
-							hpValue = 50,
+							hpValue = 30,
 							uuid = "3e9b55c6-b654-2126-9301-1bea02920fe3",
 							version = 2,
 						},
 					},
 				},
+				loop = true,
 				mechanicTime = 278.6,
 				name = "Self Heal",
 				timeRange = true,
@@ -2160,6 +2217,61 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3541,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"3e9b55c6-b654-2126-9301-1bea02920fe3",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5692a6c4-1fc1-8c1c-9cb9-7f7ce5bbef22",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 30,
+							uuid = "3e9b55c6-b654-2126-9301-1bea02920fe3",
+							version = 2,
+						},
+					},
+				},
+				loop = true,
+				mechanicTime = 317.7,
+				name = "Self Heal",
+				timeRange = true,
+				timelineIndex = 48,
+				timerEndOffset = 71,
+				uuid = "47f8d204-a15b-07b9-9e1b-f1368c89c267",
+				version = 2,
+			},
 		},
 	},
 	[56] = 

@@ -1630,6 +1630,61 @@ local tbl =
 			},
 			inheritedIndex = 4,
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3541,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"3e9b55c6-b654-2126-9301-1bea02920fe3",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5692a6c4-1fc1-8c1c-9cb9-7f7ce5bbef22",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 30,
+							uuid = "3e9b55c6-b654-2126-9301-1bea02920fe3",
+							version = 2,
+						},
+					},
+				},
+				loop = true,
+				mechanicTime = 227.4,
+				name = "Self Heal",
+				timeRange = true,
+				timelineIndex = 37,
+				timerEndOffset = 29,
+				uuid = "d178f04d-9c3e-9162-b18c-4aeaf5b5883c",
+				version = 2,
+			},
+		},
 	},
 	[41] = 
 	{
@@ -1835,6 +1890,61 @@ local tbl =
 			},
 			inheritedIndex = 4,
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3541,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"3e9b55c6-b654-2126-9301-1bea02920fe3",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5692a6c4-1fc1-8c1c-9cb9-7f7ce5bbef22",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 30,
+							uuid = "3e9b55c6-b654-2126-9301-1bea02920fe3",
+							version = 2,
+						},
+					},
+				},
+				loop = true,
+				mechanicTime = 256.5,
+				name = "Self Heal",
+				timeRange = true,
+				timelineIndex = 41,
+				timerEndOffset = 22,
+				uuid = "810cff18-e8d2-8620-b3b6-c6c1c7c42163",
+				version = 2,
+			},
+		},
 	},
 	[42] = 
 	{
@@ -1909,6 +2019,61 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3541,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"3e9b55c6-b654-2126-9301-1bea02920fe3",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5692a6c4-1fc1-8c1c-9cb9-7f7ce5bbef22",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 30,
+							uuid = "3e9b55c6-b654-2126-9301-1bea02920fe3",
+							version = 2,
+						},
+					},
+				},
+				loop = true,
+				mechanicTime = 275.5,
+				name = "Self Heal",
+				timeRange = true,
+				timelineIndex = 42,
+				timerEndOffset = 39,
+				uuid = "74dbeb16-20f9-de39-b707-214cc9060206",
+				version = 2,
+			},
 		},
 	},
 	[50] = 
@@ -2150,6 +2315,61 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3541,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"3e9b55c6-b654-2126-9301-1bea02920fe3",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5692a6c4-1fc1-8c1c-9cb9-7f7ce5bbef22",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 30,
+							uuid = "3e9b55c6-b654-2126-9301-1bea02920fe3",
+							version = 2,
+						},
+					},
+				},
+				loop = true,
+				mechanicTime = 317.7,
+				name = "Self Heal",
+				timeRange = true,
+				timelineIndex = 50,
+				timerEndOffset = 71,
+				uuid = "30ecaa36-706c-c3dc-842f-2f7f1e339378",
+				version = 2,
+			},
 		},
 	},
 	[56] = 
