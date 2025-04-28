@@ -3759,6 +3759,7 @@ local tbl =
 							ignoreWeaveRules = true,
 							targetContentID = 13832,
 							targetName = "ヤーン",
+							targetSubType = "Highest HP",
 							targetType = "ContentID",
 							uuid = "60473b1b-0a58-1c84-8e34-d67d1014a4df",
 							version = 2.1,
