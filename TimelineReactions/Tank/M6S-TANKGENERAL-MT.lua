@@ -3058,9 +3058,7 @@ local tbl =
 				},
 				mechanicTime = 224.3,
 				name = "Smart AoE OFF",
-				timeRange = true,
 				timelineIndex = 35,
-				timerOffset = -15,
 				timerStartOffset = -10,
 				uuid = "85a54075-2dda-0e97-b808-6ffcaa88dc86",
 				version = 2,
@@ -3211,10 +3209,8 @@ local tbl =
 				},
 				mechanicTime = 224.3,
 				name = "CD OFF",
-				timeRange = true,
 				timelineIndex = 35,
-				timerOffset = -15,
-				timerStartOffset = -10,
+				timerEndOffset = 5,
 				uuid = "db4fca5f-4046-e103-9033-42ff0dd658e9",
 				version = 2,
 			},
@@ -3409,9 +3405,7 @@ local tbl =
 				},
 				mechanicTime = 253.4,
 				name = "CD ON",
-				timeRange = true,
 				timelineIndex = 39,
-				timerOffset = -15,
 				timerStartOffset = -10,
 				uuid = "13f93927-8ddc-53e0-bdc3-4b3b0eaea9b3",
 				version = 2,
@@ -3426,6 +3420,53 @@ local tbl =
 			{
 				actions = 
 				{
+					
+					{
+						data = 
+						{
+							aType = "Misc",
+							conditions = 
+							{
+								
+								{
+									"1b564b35-638f-3e37-8800-9fb551bfe6d2",
+									true,
+								},
+								
+								{
+									"71afd271-a79f-36cf-ad7e-1a650b59aeae",
+									true,
+								},
+								
+								{
+									"d65d00ec-0105-268d-ace7-2d367b431eea",
+									true,
+								},
+								
+								{
+									"141bab94-d7aa-79e7-9987-f20285c48bb1",
+									true,
+								},
+								
+								{
+									"058998a0-28fc-7f7e-b215-5d374c803274",
+									true,
+								},
+								
+								{
+									"d9dbed19-25f5-7a0e-b7fa-ec367904db22",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							setTarget = true,
+							targetContentID = 13834,
+							targetType = "ContentID",
+							uuid = "f6c4f798-9ddc-984d-9149-046c399528b8",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
 					
 					{
 						data = 
@@ -3631,7 +3672,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 40,
 				timerEndOffset = 10,
-				timerStartOffset = 0.5,
+				timerStartOffset = 5.5,
 				uuid = "d445857d-c181-e62d-a3c8-fb743a6ff4f8",
 				version = 2,
 			},
@@ -3812,6 +3853,7 @@ local tbl =
 						},
 					},
 				},
+				loop = true,
 				mechanicTime = 286.6,
 				name = "Stun Jabberwock",
 				timeRange = true,
@@ -4422,6 +4464,53 @@ local tbl =
 					{
 						data = 
 						{
+							aType = "Misc",
+							conditions = 
+							{
+								
+								{
+									"1b564b35-638f-3e37-8800-9fb551bfe6d2",
+									true,
+								},
+								
+								{
+									"71afd271-a79f-36cf-ad7e-1a650b59aeae",
+									true,
+								},
+								
+								{
+									"d65d00ec-0105-268d-ace7-2d367b431eea",
+									true,
+								},
+								
+								{
+									"141bab94-d7aa-79e7-9987-f20285c48bb1",
+									true,
+								},
+								
+								{
+									"058998a0-28fc-7f7e-b215-5d374c803274",
+									true,
+								},
+								
+								{
+									"d9dbed19-25f5-7a0e-b7fa-ec367904db22",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							setTarget = true,
+							targetContentID = 13834,
+							targetType = "ContentID",
+							uuid = "f6c4f798-9ddc-984d-9149-046c399528b8",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
 							actionID = 7386,
 							allowInterrupt = true,
 							atomicPriority = true,
@@ -4623,8 +4712,8 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 49,
 				timerEndOffset = 10,
-				timerStartOffset = 0.5,
-				uuid = "eaf7c5a7-25c3-5fbd-bd96-4d0a749f5402",
+				timerStartOffset = 5.5,
+				uuid = "1fed1b54-3a22-099c-b620-2839bdfff9c0",
 				version = 2,
 			},
 		},
@@ -5090,6 +5179,154 @@ local tbl =
 				timerOffset = -3,
 				timerStartOffset = -2,
 				uuid = "967c48d2-a4e8-5a94-84fc-878fbac69e8f",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_AOE",
+							ignoreWeaveRules = true,
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_SmartAOE",
+							ignoreWeaveRules = true,
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_SmartAOE",
+							ignoreWeaveRules = true,
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_SmartAOE",
+							ignoreWeaveRules = true,
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 388.7,
+				name = "Smart AoE ON",
+				timelineIndex = 53,
+				timerStartOffset = -10,
+				uuid = "3b64f701-d796-1725-ae60-76d2a7328746",
 				version = 2,
 			},
 		},
