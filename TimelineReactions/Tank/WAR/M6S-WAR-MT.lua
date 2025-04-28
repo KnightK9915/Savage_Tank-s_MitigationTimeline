@@ -1498,7 +1498,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 37,
 				timerEndOffset = 29,
-				timerStartOffset = 0.5,
+				timerStartOffset = 1,
 				uuid = "6c795b5d-c6c2-7303-b7db-a3e510ed8af5",
 				version = 2,
 			},
@@ -1881,100 +1881,11 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 41,
 				timerEndOffset = 22,
-				timerStartOffset = 0.5,
+				timerStartOffset = 1,
 				uuid = "a297d599-bd55-31a1-8846-8aeb5d28b1e1",
 				version = 2,
 			},
 			inheritedIndex = 3,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 3552,
-							conditions = 
-							{
-								
-								{
-									"765cdb05-b839-9d7e-96f5-d5b01de337bf",
-									true,
-								},
-								
-								{
-									"36dc885b-1f9c-0471-bc08-7a017c15d6e1",
-									true,
-								},
-								
-								{
-									"8064becd-1f2d-8232-a658-a417738c6747",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuWAR3_CD",
-							ignoreWeaveRules = true,
-							uuid = "a53a5321-b7a7-656f-8d8f-34823340d239",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 3552,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "765cdb05-b839-9d7e-96f5-d5b01de337bf",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							comparator = 2,
-							conditionType = 2,
-							hpValue = 60,
-							uuid = "36dc885b-1f9c-0471-bc08-7a017c15d6e1",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffIDList = 
-							{
-								409,
-							},
-							category = "Self",
-							uuid = "8064becd-1f2d-8232-a658-a417738c6747",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 256.5,
-				name = "Equilibrium (Regen)",
-				timeRange = true,
-				timelineIndex = 41,
-				timerEndOffset = 22,
-				timerStartOffset = 0.5,
-				uuid = "8687eeae-dc6c-ad75-9683-a032a767b96b",
-				version = 2,
-			},
-			inheritedIndex = 5,
 		},
 		
 		{
@@ -2145,6 +2056,95 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3552,
+							conditions = 
+							{
+								
+								{
+									"765cdb05-b839-9d7e-96f5-d5b01de337bf",
+									true,
+								},
+								
+								{
+									"36dc885b-1f9c-0471-bc08-7a017c15d6e1",
+									true,
+								},
+								
+								{
+									"8064becd-1f2d-8232-a658-a417738c6747",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "a53a5321-b7a7-656f-8d8f-34823340d239",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3552,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "765cdb05-b839-9d7e-96f5-d5b01de337bf",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 60,
+							uuid = "36dc885b-1f9c-0471-bc08-7a017c15d6e1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								409,
+							},
+							category = "Self",
+							uuid = "8064becd-1f2d-8232-a658-a417738c6747",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 256.5,
+				name = "Equilibrium (Regen)",
+				timeRange = true,
+				timelineIndex = 41,
+				timerEndOffset = 22,
+				timerStartOffset = 0.5,
+				uuid = "8687eeae-dc6c-ad75-9683-a032a767b96b",
+				version = 2,
+			},
+			inheritedIndex = 5,
 		},
 	},
 	[50] = 
@@ -2416,7 +2416,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 50,
 				timerEndOffset = 71,
-				timerStartOffset = 0.5,
+				timerStartOffset = 1,
 				uuid = "216b2ecd-f036-768e-b839-e604c83b1304",
 				version = 2,
 			},
