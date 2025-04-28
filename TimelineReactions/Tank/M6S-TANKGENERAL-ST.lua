@@ -4050,11 +4050,12 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Event",
+							comparator = 2,
 							conditionType = 3,
 							eventArgOptionType = 3,
 							eventEntityName = "ヤーン",
 							filterTargetType = "Named Target",
+							hpValue = 1,
 							uuid = "62ab36a2-1604-895c-a438-1fb3852858c7",
 							version = 2,
 						},
