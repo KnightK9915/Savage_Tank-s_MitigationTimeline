@@ -643,7 +643,6 @@ local tbl =
 						},
 					},
 				},
-				eventType = 2,
 				mechanicTime = 22.4,
 				name = "Instant Dash",
 				timeRange = true,
@@ -1407,7 +1406,6 @@ local tbl =
 						},
 					},
 				},
-				eventType = 2,
 				mechanicTime = 81.9,
 				name = "Instant Dash",
 				timeRange = true,
@@ -2522,7 +2520,6 @@ local tbl =
 						},
 					},
 				},
-				eventType = 2,
 				mechanicTime = 207.1,
 				name = "Instant Dash",
 				timeRange = true,
@@ -2580,6 +2577,160 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_AOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_SmartAOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_SmartAOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_SmartAOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 224.3,
+				name = "Smart AoE OFF",
+				timeRange = true,
+				timelineIndex = 35,
+				timerOffset = -15,
+				timerStartOffset = -10,
+				uuid = "85a54075-2dda-0e97-b808-6ffcaa88dc86",
+				version = 2,
+			},
 		},
 	},
 	[39] = 
@@ -2658,6 +2809,11 @@ local tbl =
 									"1b564b35-638f-3e37-8800-9fb551bfe6d2",
 									true,
 								},
+								
+								{
+									"71afd271-a79f-36cf-ad7e-1a650b59aeae",
+									true,
+								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -2683,6 +2839,11 @@ local tbl =
 								
 								{
 									"1b564b35-638f-3e37-8800-9fb551bfe6d2",
+									true,
+								},
+								
+								{
+									"71afd271-a79f-36cf-ad7e-1a650b59aeae",
 									true,
 								},
 							},
@@ -2712,6 +2873,11 @@ local tbl =
 									"1b564b35-638f-3e37-8800-9fb551bfe6d2",
 									true,
 								},
+								
+								{
+									"71afd271-a79f-36cf-ad7e-1a650b59aeae",
+									true,
+								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -2737,6 +2903,11 @@ local tbl =
 								
 								{
 									"1b564b35-638f-3e37-8800-9fb551bfe6d2",
+									true,
+								},
+								
+								{
+									"71afd271-a79f-36cf-ad7e-1a650b59aeae",
 									true,
 								},
 							},
@@ -2809,15 +2980,23 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							conditionType = 5,
+							uuid = "71afd271-a79f-36cf-ad7e-1a650b59aeae",
+							version = 2,
+						},
+					},
 				},
-				eventType = 2,
 				mechanicTime = 256.5,
-				name = "Instant Dash",
+				name = "Instant Dash towards Fey",
 				timeRange = true,
 				timelineIndex = 40,
 				timerEndOffset = 10,
 				timerStartOffset = 0.5,
-				uuid = "c31dd177-38a3-063e-b151-7d8a6048d6c2",
+				uuid = "d445857d-c181-e62d-a3c8-fb743a6ff4f8",
 				version = 2,
 			},
 		},
@@ -3522,6 +3701,11 @@ local tbl =
 									"1b564b35-638f-3e37-8800-9fb551bfe6d2",
 									true,
 								},
+								
+								{
+									"71afd271-a79f-36cf-ad7e-1a650b59aeae",
+									true,
+								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -3547,6 +3731,11 @@ local tbl =
 								
 								{
 									"1b564b35-638f-3e37-8800-9fb551bfe6d2",
+									true,
+								},
+								
+								{
+									"71afd271-a79f-36cf-ad7e-1a650b59aeae",
 									true,
 								},
 							},
@@ -3576,6 +3765,11 @@ local tbl =
 									"1b564b35-638f-3e37-8800-9fb551bfe6d2",
 									true,
 								},
+								
+								{
+									"71afd271-a79f-36cf-ad7e-1a650b59aeae",
+									true,
+								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -3601,6 +3795,11 @@ local tbl =
 								
 								{
 									"1b564b35-638f-3e37-8800-9fb551bfe6d2",
+									true,
+								},
+								
+								{
+									"71afd271-a79f-36cf-ad7e-1a650b59aeae",
 									true,
 								},
 							},
@@ -3673,8 +3872,16 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							conditionType = 5,
+							uuid = "71afd271-a79f-36cf-ad7e-1a650b59aeae",
+							version = 2,
+						},
+					},
 				},
-				eventType = 2,
 				mechanicTime = 317.7,
 				name = "Instant Dash towards Fey",
 				timeRange = true,
@@ -4323,15 +4530,175 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventSpellName = "-1",
+							uuid = "4e0f80ca-33dc-9c2a-bb5d-83a79bb36709",
+							version = 2,
+						},
+					},
 				},
-				eventType = 2,
 				mechanicTime = 410.9,
 				name = "Instant Dash",
 				timeRange = true,
 				timelineIndex = 56,
 				timerEndOffset = 5,
 				timerStartOffset = 0.5,
-				uuid = "4c993baf-6284-f6de-ac2c-f33c2288c5ee",
+				uuid = "794b48fa-4bed-eb78-84c8-d5fd765cd49e",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_AOE",
+							ignoreWeaveRules = true,
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_SmartAOE",
+							ignoreWeaveRules = true,
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_SmartAOE",
+							ignoreWeaveRules = true,
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_SmartAOE",
+							ignoreWeaveRules = true,
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 410.9,
+				name = "Smart AoE ON",
+				timeRange = true,
+				timelineIndex = 56,
+				timerEndOffset = 5,
+				timerOffset = -15,
+				uuid = "250c5341-1d20-81b4-832b-949e29415e1e",
 				version = 2,
 			},
 		},
@@ -5904,7 +6271,6 @@ local tbl =
 						},
 					},
 				},
-				eventType = 2,
 				mechanicTime = 618.6,
 				name = "Instant Dash",
 				timeRange = true,
