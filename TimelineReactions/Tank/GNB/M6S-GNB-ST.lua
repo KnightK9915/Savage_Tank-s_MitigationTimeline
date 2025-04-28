@@ -953,6 +953,11 @@ local tbl =
 									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
 									true,
 								},
+								
+								{
+									"1eab48a5-e428-4424-acc8-b84f846291b8",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -989,6 +994,18 @@ local tbl =
 							hpValue = 60,
 							partyTargetType = "Main Tank",
 							uuid = "fdec73f5-3a9c-d888-91c8-e1a17f38eace",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 4454,
+							category = "Party",
+							partyTargetType = "Main Tank",
+							uuid = "1eab48a5-e428-4424-acc8-b84f846291b8",
 							version = 2,
 						},
 					},
@@ -1058,13 +1075,19 @@ local tbl =
 					{
 						data = 
 						{
-							buffCheckType = 2,
+							buffCheckType = 5,
 							buffID = 1835,
+							buffIDList = 
+							{
+								4454,
+								1835,
+							},
 							category = "Party",
 							partyTargetType = "Main Tank",
 							uuid = "72456347-2b41-8c9c-9cce-296ea8585e56",
 							version = 2,
 						},
+						inheritedIndex = 2,
 					},
 				},
 				mechanicTime = 107.5,
