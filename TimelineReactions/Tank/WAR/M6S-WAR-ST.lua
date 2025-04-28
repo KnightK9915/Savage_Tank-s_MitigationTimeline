@@ -879,6 +879,16 @@ local tbl =
 									"d52afe69-30c0-a8ab-9c33-416f45167d63",
 									true,
 								},
+								
+								{
+									"70e22e4f-ecaa-023f-9940-5fb52f87eedc",
+									true,
+								},
+								
+								{
+									"a40a8bcf-2c6b-b36d-9fe8-10e08d100e48",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuWAR3_CD",
@@ -903,6 +913,16 @@ local tbl =
 								
 								{
 									"56277087-3cfb-d9dc-a407-af3eb506ed46",
+									true,
+								},
+								
+								{
+									"0a6f1224-a85e-156d-9fd5-f11b75036fbf",
+									true,
+								},
+								
+								{
+									"fb0cd382-47d6-4af3-a7a6-04e16a3b390e",
 									true,
 								},
 							},
@@ -967,6 +987,52 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							uuid = "70e22e4f-ecaa-023f-9940-5fb52f87eedc",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							partyTargetType = "Other Tank",
+							uuid = "0a6f1224-a85e-156d-9fd5-f11b75036fbf",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 99.999000549316,
+							uuid = "a40a8bcf-2c6b-b36d-9fe8-10e08d100e48",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99.999000549316,
+							uuid = "fb0cd382-47d6-4af3-a7a6-04e16a3b390e",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 107.5,
 				name = "BW/NF (20)",
@@ -974,7 +1040,168 @@ local tbl =
 				timelineIndex = 17,
 				timerEndOffset = 34,
 				timerStartOffset = 1,
-				uuid = "66379713-8c43-bd85-8144-ff7be06cf649",
+				uuid = "bc7eae32-5d89-ff24-9405-6b4f08b5f0a4",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[24] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25751,
+							conditions = 
+							{
+								
+								{
+									"7ff7d550-e7f1-b813-8c61-8d51598a9cff",
+									true,
+								},
+								
+								{
+									"0f8628f3-99de-2bb0-b1ff-1df3c94b2276",
+									true,
+								},
+								
+								{
+									"a4c3190a-ac65-81cc-94c2-6246d8c33a56",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "f128886d-3f9c-d873-b184-840ce732e9d1",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							conditions = 
+							{
+								
+								{
+									"cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
+									true,
+								},
+								
+								{
+									"4f25e7d2-e5c2-ae81-bd11-727a54c8ac3e",
+									true,
+								},
+								
+								{
+									"fc980913-dd61-cb27-90a1-dc2f24dfdf57",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetSubType = "Lowest HP",
+							targetType = "Other Tank",
+							uuid = "9ea7cc5f-8777-744b-b6de-e198fbc4ef27",
+							version = 2.1,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25751,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							name = "CD BW",
+							uuid = "7ff7d550-e7f1-b813-8c61-8d51598a9cff",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							name = "CD NF",
+							uuid = "cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 100,
+							name = "is MT",
+							uuid = "0f8628f3-99de-2bb0-b1ff-1df3c94b2276",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99.999000549316,
+							name = "is ST",
+							uuid = "4f25e7d2-e5c2-ae81-bd11-727a54c8ac3e",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							uuid = "a4c3190a-ac65-81cc-94c2-6246d8c33a56",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							partyTargetType = "Other Tank",
+							uuid = "fc980913-dd61-cb27-90a1-dc2f24dfdf57",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 157.3,
+				name = "BW/NF (20)",
+				timeRange = true,
+				timelineIndex = 24,
+				timerEndOffset = 25,
+				timerStartOffset = 1,
+				uuid = "63213b5f-b7ed-ef07-bc35-61a49aeeb5b6",
 				version = 2,
 			},
 			inheritedIndex = 1,
