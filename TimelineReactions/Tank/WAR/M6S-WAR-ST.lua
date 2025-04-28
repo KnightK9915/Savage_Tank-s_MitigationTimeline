@@ -118,7 +118,8 @@ local tbl =
 				name = "BW/NF (20)",
 				timeRange = true,
 				timelineIndex = 2,
-				timerStartOffset = -2,
+				timerEndOffset = 1,
+				timerStartOffset = -0.5,
 				uuid = "06be2cbc-7572-e914-ae0d-bf56053c4571",
 				version = 2,
 			},
@@ -544,7 +545,8 @@ local tbl =
 				name = "BW/NF (20)",
 				timeRange = true,
 				timelineIndex = 13,
-				timerStartOffset = -2,
+				timerEndOffset = 1,
+				timerStartOffset = -0.5,
 				uuid = "8f02e2f2-7e89-f2c0-ab8f-f45cfa64c936",
 				version = 2,
 			},
@@ -970,7 +972,8 @@ local tbl =
 				name = "BW/NF (20)",
 				timeRange = true,
 				timelineIndex = 32,
-				timerStartOffset = -2,
+				timerEndOffset = 1,
+				timerStartOffset = -0.5,
 				uuid = "f3d5767e-739c-0790-aa19-c154ce454f45",
 				version = 2,
 			},
@@ -2245,95 +2248,6 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 3552,
-							conditions = 
-							{
-								
-								{
-									"765cdb05-b839-9d7e-96f5-d5b01de337bf",
-									true,
-								},
-								
-								{
-									"36dc885b-1f9c-0471-bc08-7a017c15d6e1",
-									true,
-								},
-								
-								{
-									"8064becd-1f2d-8232-a658-a417738c6747",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuWAR3_CD",
-							ignoreWeaveRules = true,
-							uuid = "a53a5321-b7a7-656f-8d8f-34823340d239",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 3552,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "765cdb05-b839-9d7e-96f5-d5b01de337bf",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							comparator = 2,
-							conditionType = 2,
-							hpValue = 60,
-							uuid = "36dc885b-1f9c-0471-bc08-7a017c15d6e1",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffIDList = 
-							{
-								409,
-							},
-							category = "Self",
-							uuid = "8064becd-1f2d-8232-a658-a417738c6747",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 317.7,
-				name = "Equilibrium (Regen)",
-				timeRange = true,
-				timelineIndex = 48,
-				timerEndOffset = 71,
-				timerStartOffset = 0.5,
-				uuid = "f918c7aa-d707-25b8-8f9a-7a713be15be9",
-				version = 2,
-			},
-			inheritedIndex = 7,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
 							actionID = 25751,
 							conditions = 
 							{
@@ -2494,6 +2408,95 @@ local tbl =
 			},
 			inheritedIndex = 6,
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3552,
+							conditions = 
+							{
+								
+								{
+									"765cdb05-b839-9d7e-96f5-d5b01de337bf",
+									true,
+								},
+								
+								{
+									"36dc885b-1f9c-0471-bc08-7a017c15d6e1",
+									true,
+								},
+								
+								{
+									"8064becd-1f2d-8232-a658-a417738c6747",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "a53a5321-b7a7-656f-8d8f-34823340d239",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3552,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "765cdb05-b839-9d7e-96f5-d5b01de337bf",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 60,
+							uuid = "36dc885b-1f9c-0471-bc08-7a017c15d6e1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								409,
+							},
+							category = "Self",
+							uuid = "8064becd-1f2d-8232-a658-a417738c6747",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 317.7,
+				name = "Equilibrium (Regen)",
+				timeRange = true,
+				timelineIndex = 48,
+				timerEndOffset = 71,
+				timerStartOffset = 0.5,
+				uuid = "f918c7aa-d707-25b8-8f9a-7a713be15be9",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
 	},
 	[56] = 
 	{
@@ -2613,7 +2616,8 @@ local tbl =
 				name = "BW/NF (20)",
 				timeRange = true,
 				timelineIndex = 56,
-				timerStartOffset = -2,
+				timerEndOffset = 1,
+				timerStartOffset = -0.5,
 				uuid = "47f4762e-93fc-342d-b27a-68e45d745efd",
 				version = 2,
 			},
@@ -3039,7 +3043,8 @@ local tbl =
 				name = "BW/NF (20)",
 				timeRange = true,
 				timelineIndex = 92,
-				timerStartOffset = -2,
+				timerEndOffset = 1,
+				timerStartOffset = -0.5,
 				uuid = "2c5c69a0-2730-14d1-abe3-8a1b4255a9ad",
 				version = 2,
 			},
