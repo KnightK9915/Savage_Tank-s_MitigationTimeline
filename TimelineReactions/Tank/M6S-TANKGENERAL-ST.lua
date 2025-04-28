@@ -797,8 +797,9 @@ local tbl =
 				name = "W4 Potion ",
 				timeRange = true,
 				timelineIndex = 1,
+				timerEndOffset = 10,
 				timerOffset = -15,
-				timerStartOffset = -12,
+				timerStartOffset = 5,
 				uuid = "da0b2a80-9406-6505-902f-5eef9811920c",
 				version = 2,
 			},
@@ -1033,6 +1034,11 @@ local tbl =
 							{
 								
 								{
+									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									true,
+								},
+								
+								{
 									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
 									true,
 								},
@@ -1059,6 +1065,11 @@ local tbl =
 							{
 								
 								{
+									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									true,
+								},
+								
+								{
 									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
 									true,
 								},
@@ -1074,6 +1085,7 @@ local tbl =
 							uuid = "4ba76f6c-741d-feab-b500-b08ad7b97c5b",
 							version = 2.1,
 						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -1082,6 +1094,11 @@ local tbl =
 							actionID = 36926,
 							conditions = 
 							{
+								
+								{
+									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									true,
+								},
 								
 								{
 									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
@@ -1109,6 +1126,11 @@ local tbl =
 							{
 								
 								{
+									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									true,
+								},
+								
+								{
 									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
 									true,
 								},
@@ -1129,6 +1151,19 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							uuid = "639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
 					
 					{
 						data = 
@@ -1193,7 +1228,7 @@ local tbl =
 				name = "Instant Dash",
 				timeRange = true,
 				timelineIndex = 2,
-				timerEndOffset = 5,
+				timerEndOffset = 10,
 				timerStartOffset = 0.5,
 				uuid = "b0b61a36-bce2-1446-b029-9f50b0bb4a4d",
 				version = 2,
@@ -1977,6 +2012,11 @@ local tbl =
 							{
 								
 								{
+									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									true,
+								},
+								
+								{
 									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
 									true,
 								},
@@ -2003,6 +2043,11 @@ local tbl =
 							{
 								
 								{
+									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									true,
+								},
+								
+								{
 									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
 									true,
 								},
@@ -2018,6 +2063,7 @@ local tbl =
 							uuid = "4ba76f6c-741d-feab-b500-b08ad7b97c5b",
 							version = 2.1,
 						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -2026,6 +2072,11 @@ local tbl =
 							actionID = 36926,
 							conditions = 
 							{
+								
+								{
+									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									true,
+								},
 								
 								{
 									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
@@ -2053,6 +2104,11 @@ local tbl =
 							{
 								
 								{
+									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									true,
+								},
+								
+								{
 									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
 									true,
 								},
@@ -2073,6 +2129,19 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							uuid = "639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
 					
 					{
 						data = 
@@ -2137,9 +2206,9 @@ local tbl =
 				name = "Instant Dash",
 				timeRange = true,
 				timelineIndex = 13,
-				timerEndOffset = 5,
+				timerEndOffset = 10,
 				timerStartOffset = 0.5,
-				uuid = "ebf61269-cd38-6935-a616-215858223770",
+				uuid = "91956e2a-d10b-5cb7-818f-5558b18f59a5",
 				version = 2,
 			},
 		},
@@ -2209,9 +2278,8 @@ local tbl =
 				name = "Provoke",
 				timeRange = true,
 				timelineIndex = 17,
-				timerEndOffset = 5,
+				timerEndOffset = 10,
 				timerOffset = -3,
-				timerStartOffset = 1,
 				uuid = "96975736-2c3e-dc47-86a4-ea7f1150e82d",
 				version = 2,
 			},
@@ -2955,6 +3023,11 @@ local tbl =
 							{
 								
 								{
+									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									true,
+								},
+								
+								{
 									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
 									true,
 								},
@@ -2981,6 +3054,11 @@ local tbl =
 							{
 								
 								{
+									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									true,
+								},
+								
+								{
 									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
 									true,
 								},
@@ -2996,6 +3074,7 @@ local tbl =
 							uuid = "4ba76f6c-741d-feab-b500-b08ad7b97c5b",
 							version = 2.1,
 						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -3004,6 +3083,11 @@ local tbl =
 							actionID = 36926,
 							conditions = 
 							{
+								
+								{
+									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									true,
+								},
 								
 								{
 									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
@@ -3031,6 +3115,11 @@ local tbl =
 							{
 								
 								{
+									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									true,
+								},
+								
+								{
 									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
 									true,
 								},
@@ -3051,6 +3140,19 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							uuid = "639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
 					
 					{
 						data = 
@@ -3115,9 +3217,9 @@ local tbl =
 				name = "Instant Dash",
 				timeRange = true,
 				timelineIndex = 32,
-				timerEndOffset = 5,
+				timerEndOffset = 10,
 				timerStartOffset = 0.5,
-				uuid = "f8d6bc2f-3079-5202-8bc2-885c0fc3381d",
+				uuid = "e860e4aa-820a-9d4d-bddf-c48e1ce6fd63",
 				version = 2,
 			},
 		},
@@ -3342,7 +3444,7 @@ local tbl =
 								},
 							},
 							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_ForceAOE",
+							gVar = "ACR_RikuGNB3_AOE",
 							gVarValue = 2,
 							ignoreWeaveRules = true,
 							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
@@ -3987,6 +4089,154 @@ local tbl =
 									true,
 								},
 							},
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 253.4,
+				name = "CD ON",
+				timelineIndex = 39,
+				timerStartOffset = -10,
+				uuid = "90680f75-a7a3-0e72-9164-a0eb3e080d7f",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_AOE",
 							ignoreWeaveRules = true,
@@ -4114,6 +4364,7 @@ local tbl =
 				uuid = "84012cd6-0b96-601e-bf83-32d8e05f8097",
 				version = 2,
 			},
+			inheritedIndex = 4,
 		},
 		
 		{
@@ -4136,7 +4387,7 @@ local tbl =
 								},
 							},
 							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_ForceAOE",
+							gVar = "ACR_RikuGNB3_AOE",
 							ignoreWeaveRules = true,
 							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
 							version = 2.1,
@@ -4262,154 +4513,7 @@ local tbl =
 				uuid = "c9bc0415-6a25-b301-b5b9-661b25753f38",
 				version = 2,
 			},
-			inheritedIndex = 4,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "ACR",
-							actionID = 16142,
-							conditions = 
-							{
-								
-								{
-									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-									true,
-								},
-							},
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							aType = "ACR",
-							actionID = 28,
-							conditions = 
-							{
-								
-								{
-									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-									true,
-								},
-							},
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							aType = "ACR",
-							actionID = 3629,
-							conditions = 
-							{
-								
-								{
-									"231b6a98-9a2f-8a76-bdab-236bd5622569",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
-							version = 2.1,
-						},
-						inheritedIndex = 3,
-					},
-					
-					{
-						data = 
-						{
-							aType = "ACR",
-							actionID = 48,
-							conditions = 
-							{
-								
-								{
-									"bc680113-345f-6d33-add6-1f151475b614",
-									true,
-								},
-							},
-							gVar = "ACR_RikuWAR3_CD",
-							ignoreWeaveRules = true,
-							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 13,
-							jobValue = "GUNBREAKER",
-							name = "GNB Job",
-							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 13,
-							jobValue = "PALADIN",
-							name = "PLD Job",
-							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 13,
-							jobValue = "DARKKNIGHT",
-							name = "DRK Job",
-							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							conditionType = 9,
-							jobValue = "WARRIOR",
-							name = "WAR Job",
-							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 253.4,
-				name = "CD ON",
-				timelineIndex = 39,
-				timerStartOffset = -10,
-				uuid = "90680f75-a7a3-0e72-9164-a0eb3e080d7f",
-				version = 2,
-			},
+			inheritedIndex = 5,
 		},
 	},
 	[42] = 
@@ -4691,6 +4795,158 @@ local tbl =
 									true,
 								},
 							},
+							gVar = "ACR_RikuGNB3_CD",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 275.5,
+				name = "CD OFF",
+				timelineIndex = 42,
+				timerStartOffset = -10,
+				uuid = "a778ce97-6ff9-451e-94c6-c566ed62284b",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_AOE",
 							gVarValue = 2,
@@ -4844,7 +5100,7 @@ local tbl =
 								},
 							},
 							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_ForceAOE",
+							gVar = "ACR_RikuGNB3_AOE",
 							gVarValue = 2,
 							ignoreWeaveRules = true,
 							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
@@ -4974,158 +5230,7 @@ local tbl =
 				uuid = "a11adf04-bee5-d4a4-b4dd-d98288f08da3",
 				version = 2,
 			},
-			inheritedIndex = 4,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "ACR",
-							actionID = 16142,
-							conditions = 
-							{
-								
-								{
-									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-									true,
-								},
-							},
-							gVar = "ACR_RikuGNB3_CD",
-							gVarValue = 2,
-							ignoreWeaveRules = true,
-							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							aType = "ACR",
-							actionID = 28,
-							conditions = 
-							{
-								
-								{
-									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-									true,
-								},
-							},
-							gVar = "ACR_RikuPLD3_CD",
-							gVarValue = 2,
-							ignoreWeaveRules = true,
-							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							aType = "ACR",
-							actionID = 3629,
-							conditions = 
-							{
-								
-								{
-									"231b6a98-9a2f-8a76-bdab-236bd5622569",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							gVarValue = 2,
-							ignoreWeaveRules = true,
-							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
-							version = 2.1,
-						},
-						inheritedIndex = 3,
-					},
-					
-					{
-						data = 
-						{
-							aType = "ACR",
-							actionID = 48,
-							conditions = 
-							{
-								
-								{
-									"bc680113-345f-6d33-add6-1f151475b614",
-									true,
-								},
-							},
-							gVar = "ACR_RikuWAR3_CD",
-							gVarValue = 2,
-							ignoreWeaveRules = true,
-							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 13,
-							jobValue = "GUNBREAKER",
-							name = "GNB Job",
-							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 13,
-							jobValue = "PALADIN",
-							name = "PLD Job",
-							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 13,
-							jobValue = "DARKKNIGHT",
-							name = "DRK Job",
-							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							conditionType = 9,
-							jobValue = "WARRIOR",
-							name = "WAR Job",
-							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 275.5,
-				name = "CD OFF",
-				timelineIndex = 42,
-				timerStartOffset = -10,
-				uuid = "a778ce97-6ff9-451e-94c6-c566ed62284b",
-				version = 2,
-			},
+			inheritedIndex = 5,
 		},
 	},
 	[43] = 
@@ -6010,7 +6115,7 @@ local tbl =
 								},
 							},
 							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_ForceAOE",
+							gVar = "ACR_RikuGNB3_AOE",
 							ignoreWeaveRules = true,
 							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
 							version = 2.1,
@@ -7033,6 +7138,11 @@ local tbl =
 							{
 								
 								{
+									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									true,
+								},
+								
+								{
 									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
 									true,
 								},
@@ -7059,6 +7169,11 @@ local tbl =
 							{
 								
 								{
+									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									true,
+								},
+								
+								{
 									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
 									true,
 								},
@@ -7074,6 +7189,7 @@ local tbl =
 							uuid = "4ba76f6c-741d-feab-b500-b08ad7b97c5b",
 							version = 2.1,
 						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -7082,6 +7198,11 @@ local tbl =
 							actionID = 36926,
 							conditions = 
 							{
+								
+								{
+									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									true,
+								},
 								
 								{
 									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
@@ -7109,6 +7230,11 @@ local tbl =
 							{
 								
 								{
+									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									true,
+								},
+								
+								{
 									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
 									true,
 								},
@@ -7129,6 +7255,19 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							uuid = "639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
 					
 					{
 						data = 
@@ -7193,9 +7332,9 @@ local tbl =
 				name = "Instant Dash",
 				timeRange = true,
 				timelineIndex = 56,
-				timerEndOffset = 5,
+				timerEndOffset = 10,
 				timerStartOffset = 0.5,
-				uuid = "5280f561-8555-8442-aeba-954f0484b807",
+				uuid = "8fd41ae6-c2cb-0ed2-800f-d91b13dc0f4b",
 				version = 2,
 			},
 		},
@@ -8612,6 +8751,11 @@ local tbl =
 							{
 								
 								{
+									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									true,
+								},
+								
+								{
 									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
 									true,
 								},
@@ -8638,6 +8782,11 @@ local tbl =
 							{
 								
 								{
+									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									true,
+								},
+								
+								{
 									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
 									true,
 								},
@@ -8653,6 +8802,7 @@ local tbl =
 							uuid = "4ba76f6c-741d-feab-b500-b08ad7b97c5b",
 							version = 2.1,
 						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -8661,6 +8811,11 @@ local tbl =
 							actionID = 36926,
 							conditions = 
 							{
+								
+								{
+									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									true,
+								},
 								
 								{
 									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
@@ -8688,6 +8843,11 @@ local tbl =
 							{
 								
 								{
+									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									true,
+								},
+								
+								{
 									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
 									true,
 								},
@@ -8708,6 +8868,19 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							uuid = "639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
 					
 					{
 						data = 
@@ -8772,9 +8945,9 @@ local tbl =
 				name = "Instant Dash",
 				timeRange = true,
 				timelineIndex = 92,
-				timerEndOffset = 5,
+				timerEndOffset = 10,
 				timerStartOffset = 0.5,
-				uuid = "4456e366-52d3-696a-b0eb-49b5cf9709ea",
+				uuid = "d1a2e789-34d6-f72a-995e-246651cda64e",
 				version = 2,
 			},
 		},
