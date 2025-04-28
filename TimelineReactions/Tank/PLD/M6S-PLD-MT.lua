@@ -1624,11 +1624,11 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 37,
 				timerEndOffset = 29,
-				timerStartOffset = 1,
+				timerStartOffset = 5,
 				uuid = "b50e08f6-e7cc-0f72-9dd9-892fc703e4a8",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 2,
 		},
 		
 		{
@@ -1884,11 +1884,11 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 41,
 				timerEndOffset = 22,
-				timerStartOffset = 1,
+				timerStartOffset = 5,
 				uuid = "9f0abec5-8b51-c65c-add0-3ad0657bd2ef",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 3,
 		},
 		
 		{
@@ -2311,6 +2311,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 50,
 				timerEndOffset = 71,
+				timerStartOffset = 5,
 				uuid = "2ac9915d-4070-2935-8124-acdba8a49ca7",
 				version = 2,
 			},

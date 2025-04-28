@@ -1625,11 +1625,11 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 36,
 				timerEndOffset = 29,
-				timerStartOffset = 1,
+				timerStartOffset = 5,
 				uuid = "c2571231-1f68-966e-b5bf-ca67c52dd443",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 3,
 		},
 		
 		{
@@ -2213,6 +2213,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 48,
 				timerEndOffset = 71,
+				timerStartOffset = 5,
 				uuid = "f38c6bc8-59eb-5235-bafd-3a20ed426839",
 				version = 2,
 			},
