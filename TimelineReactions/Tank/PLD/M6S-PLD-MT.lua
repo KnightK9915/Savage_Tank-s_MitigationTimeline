@@ -988,6 +988,179 @@ local tbl =
 			inheritedIndex = 4,
 		},
 	},
+	[24] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+								
+								{
+									"85019f5c-67f4-7194-b502-87e4a15bbcbb",
+									true,
+								},
+								
+								{
+									"ad56b97b-4eaa-c822-bc32-d42b4532b959",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							uuid = "85019f5c-67f4-7194-b502-87e4a15bbcbb",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 100,
+							uuid = "ad56b97b-4eaa-c822-bc32-d42b4532b959",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 157.3,
+				name = "sheltron (15)",
+				timeRange = true,
+				timelineIndex = 24,
+				timerEndOffset = 25,
+				timerStartOffset = 1,
+				uuid = "e33f672b-08c2-6bc3-a5e9-468256610120",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+								
+								{
+									"225770af-0877-da33-9de4-dc8b513d4bc8",
+									true,
+								},
+								
+								{
+									"6dc915f3-4913-f71f-b34b-cfbd02faa659",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5ed8c1f4-36d8-ad42-9463-1f8154296465",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							partyTargetType = "Other Tank",
+							uuid = "225770af-0877-da33-9de4-dc8b513d4bc8",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99.999000549316,
+							uuid = "6dc915f3-4913-f71f-b34b-cfbd02faa659",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 157.3,
+				name = "interven ST (15)",
+				timeRange = true,
+				timelineIndex = 24,
+				timerEndOffset = 25,
+				timerStartOffset = 1,
+				uuid = "13a18e0c-c117-91ac-9e7a-84b9aa551f63",
+				version = 2,
+			},
+			inheritedIndex = 6,
+		},
+	},
 	[32] = 
 	{
 		
