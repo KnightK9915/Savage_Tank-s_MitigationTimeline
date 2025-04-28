@@ -849,6 +849,83 @@ local tbl =
 			inheritedIndex = 9,
 		},
 	},
+	[17] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25754,
+							conditions = 
+							{
+								
+								{
+									"3a44eee3-8ce4-3fce-9e07-d86c41c9dda8",
+									true,
+								},
+								
+								{
+									"ac1eff48-41d3-756b-82df-6acbb22faa68",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Main Tank",
+							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 4454,
+							category = "Party",
+							partyTargetType = "Main Tank",
+							uuid = "3a44eee3-8ce4-3fce-9e07-d86c41c9dda8",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							partyTargetType = "Main Tank",
+							uuid = "ac1eff48-41d3-756b-82df-6acbb22faa68",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 107.5,
+				name = "Oblation (10)",
+				randomOffset = -1,
+				timeRange = true,
+				timelineIndex = 17,
+				timerEndOffset = 34,
+				timerOffset = -3,
+				timerStartOffset = 1,
+				uuid = "b85928c4-a357-0f1a-96f8-209d49181eb7",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+	},
 	[32] = 
 	{
 		
