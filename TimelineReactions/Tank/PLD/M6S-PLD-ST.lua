@@ -208,8 +208,8 @@ local tbl =
 				name = "sheltron (15)",
 				timeRange = true,
 				timelineIndex = 2,
-				timerEndOffset = 1,
-				timerStartOffset = -0.5,
+				timerEndOffset = 2,
+				timerStartOffset = 0.5,
 				uuid = "19d16c98-c444-af2d-97df-dde83dc5f2ac",
 				version = 2,
 			},
@@ -331,7 +331,7 @@ local tbl =
 				name = "interven ST (15)",
 				timeRange = true,
 				timelineIndex = 2,
-				timerStartOffset = -2,
+				timerStartOffset = -1,
 				uuid = "bb2c7bfc-2fe5-7337-9920-3077b0cf26d8",
 				version = 2,
 			},
@@ -599,8 +599,8 @@ local tbl =
 				name = "sheltron (15)",
 				timeRange = true,
 				timelineIndex = 13,
-				timerEndOffset = 1,
-				timerStartOffset = -0.5,
+				timerEndOffset = 2,
+				timerStartOffset = 0.5,
 				uuid = "4e09efb8-7772-e17a-8761-bff4398df1f6",
 				version = 2,
 			},
@@ -722,11 +722,186 @@ local tbl =
 				name = "interven ST (15)",
 				timeRange = true,
 				timelineIndex = 13,
-				timerStartOffset = -2,
+				timerStartOffset = -1,
 				uuid = "82377c20-237f-70c9-8843-08b6dd24e1dc",
 				version = 2,
 			},
 			inheritedIndex = 7,
+		},
+	},
+	[17] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+								
+								{
+									"74d99a99-a095-b499-a06e-de22e702e8ba",
+									true,
+								},
+								
+								{
+									"225770af-0877-da33-9de4-dc8b513d4bc8",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5ed8c1f4-36d8-ad42-9463-1f8154296465",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 4454,
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "74d99a99-a095-b499-a06e-de22e702e8ba",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							partyTargetType = "Other Tank",
+							uuid = "225770af-0877-da33-9de4-dc8b513d4bc8",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 107.5,
+				name = "interven ST (15)",
+				timeRange = true,
+				timelineIndex = 17,
+				timerEndOffset = 34,
+				timerStartOffset = 1,
+				uuid = "7da07f40-8e96-1809-9088-f6a351c50f44",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+								
+								{
+									"b758406c-5054-8519-89ee-8782bae615cf",
+									true,
+								},
+								
+								{
+									"85019f5c-67f4-7194-b502-87e4a15bbcbb",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 4454,
+							category = "Self",
+							uuid = "b758406c-5054-8519-89ee-8782bae615cf",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							uuid = "85019f5c-67f4-7194-b502-87e4a15bbcbb",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 107.5,
+				name = "sheltron (15)",
+				timeRange = true,
+				timelineIndex = 17,
+				timerEndOffset = 34,
+				timerStartOffset = 1,
+				uuid = "18064425-7e5b-8db9-949b-61051afadc43",
+				version = 2,
+			},
+			inheritedIndex = 6,
 		},
 	},
 	[22] = 
@@ -991,8 +1166,8 @@ local tbl =
 				name = "sheltron (15)",
 				timeRange = true,
 				timelineIndex = 32,
-				timerEndOffset = 1,
-				timerStartOffset = -0.5,
+				timerEndOffset = 2,
+				timerStartOffset = 0.5,
 				uuid = "b6ac90e2-c646-99ca-ba88-42f219dbf94b",
 				version = 2,
 			},
@@ -1115,7 +1290,7 @@ local tbl =
 				name = "interven ST (15)",
 				timeRange = true,
 				timelineIndex = 32,
-				timerStartOffset = -2,
+				timerStartOffset = -1,
 				uuid = "fd8edc58-5a7b-3bba-a2b5-59a3ef84be6e",
 				version = 2,
 			},
@@ -1991,8 +2166,8 @@ local tbl =
 				name = "sheltron (15)",
 				timeRange = true,
 				timelineIndex = 56,
-				timerEndOffset = 1,
-				timerStartOffset = -0.5,
+				timerEndOffset = 2,
+				timerStartOffset = 0.5,
 				uuid = "33c823d4-bf3a-55ab-b8b4-2dc81c9be1f6",
 				version = 2,
 			},
@@ -2114,7 +2289,7 @@ local tbl =
 				name = "interven ST (15)",
 				timeRange = true,
 				timelineIndex = 56,
-				timerStartOffset = -2,
+				timerStartOffset = -1,
 				uuid = "a7f27391-2612-bda1-b244-f23707c9c113",
 				version = 2,
 			},
@@ -2328,8 +2503,8 @@ local tbl =
 				name = "sheltron (15)",
 				timeRange = true,
 				timelineIndex = 92,
-				timerEndOffset = 1,
-				timerStartOffset = -0.5,
+				timerEndOffset = 2,
+				timerStartOffset = 0.5,
 				uuid = "c6210545-bd71-0b70-894b-feb7e0d3c072",
 				version = 2,
 			},
@@ -2451,7 +2626,7 @@ local tbl =
 				name = "interven ST (15)",
 				timeRange = true,
 				timelineIndex = 92,
-				timerStartOffset = -2,
+				timerStartOffset = -1,
 				uuid = "6c891f1d-1b84-feb7-85f5-b39989b3c579",
 				version = 2,
 			},
@@ -2463,7 +2638,7 @@ local tbl =
 		"Tank\\M6S-TANKGENERAL-ST",
 		"M6S-DiscordShared",
 		"store\\anyone\\savage5\\r6s\\modules\\core",
-		"store\\anyone\\savage5\\r6s\\modules\\mitigation",
+		"store\\anyone\\savage5\\r6s\\modules\\draws",
 		"store\\anyone\\savage5\\r6s\\modules\\optimization",
 		"TTK\\M6S-Draw",
 	},
