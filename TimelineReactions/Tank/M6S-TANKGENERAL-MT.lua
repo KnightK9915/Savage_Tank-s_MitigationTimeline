@@ -1566,6 +1566,187 @@ local tbl =
 				version = 2,
 			},
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7386,
+							conditions = 
+							{
+								
+								{
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									true,
+								},
+								
+								{
+									"d65d00ec-0105-268d-ace7-2d367b431eea",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "2d012730-d487-9fb8-81b6-66af39a29bba",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16461,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									true,
+								},
+								
+								{
+									"141bab94-d7aa-79e7-9987-f20285c48bb1",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "4ba76f6c-741d-feab-b500-b08ad7b97c5b",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36926,
+							conditions = 
+							{
+								
+								{
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									true,
+								},
+								
+								{
+									"058998a0-28fc-7f7e-b215-5d374c803274",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "c7be4aad-5362-c644-8cd3-e1700a519ae1",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36934,
+							conditions = 
+							{
+								
+								{
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									true,
+								},
+								
+								{
+									"d9dbed19-25f5-7a0e-b7fa-ec367904db22",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "cf600fc3-8a2b-2639-ae39-fdaa4595eb7f",
+							version = 2.1,
+						},
+						inheritedIndex = 4,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							conditionType = 6,
+							inRangeValue = 6,
+							uuid = "aae77abe-fb05-50a4-9346-c8aa68b5e213",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "WARRIOR",
+							name = "Warrior",
+							uuid = "d65d00ec-0105-268d-ace7-2d367b431eea",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "Paladin",
+							uuid = "141bab94-d7aa-79e7-9987-f20285c48bb1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "Darkknight",
+							uuid = "058998a0-28fc-7f7e-b215-5d374c803274",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "Gunbreaker",
+							uuid = "d9dbed19-25f5-7a0e-b7fa-ec367904db22",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 70.6,
+				name = "Instant Dash",
+				timeRange = true,
+				timelineIndex = 11,
+				timerEndOffset = 5,
+				timerStartOffset = 0.5,
+				uuid = "19a72b5e-a14c-afe2-9839-ea9fd57517ca",
+				version = 2,
+			},
+		},
 	},
 	[13] = 
 	{
@@ -1747,6 +1928,351 @@ local tbl =
 				timerEndOffset = 5,
 				timerStartOffset = 0.5,
 				uuid = "1e9312f4-d6e0-04ae-abaa-bd2917bf81ec",
+				version = 2,
+			},
+		},
+	},
+	[17] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7533,
+							conditions = 
+							{
+								
+								{
+									"158e3d7c-aed1-3623-ad3e-9ac368bbd03d",
+									true,
+								},
+								
+								{
+									"6d495a4e-8155-eb89-8b8a-98d8b04bc546",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_Hotbar_Provoke",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "001b735f-0c3d-3481-8712-978c4ccf1420",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99,
+							uuid = "158e3d7c-aed1-3623-ad3e-9ac368bbd03d",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 4454,
+							category = "Self",
+							uuid = "6d495a4e-8155-eb89-8b8a-98d8b04bc546",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 107.5,
+				name = "Provoke",
+				timeRange = true,
+				timelineIndex = 17,
+				timerEndOffset = 10,
+				timerOffset = -3,
+				timerStartOffset = 1,
+				uuid = "25b7293a-782a-9478-9ab4-1f6309efdfcc",
+				version = 2,
+			},
+			inheritedIndex = 8,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7537,
+							conditions = 
+							{
+								
+								{
+									"f0eaecb7-c7fd-4486-a153-e2ff288e57b4",
+									true,
+								},
+								
+								{
+									"06e223a0-2c8e-bbf2-b4b3-9b6f87978bd8",
+									true,
+								},
+								
+								{
+									"aab5077e-0c2b-0852-adee-8008f77fc010",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_Hotbar_ShirkOT",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5081694c-978d-1724-a1f2-f6c6f17dc2bf",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99,
+							uuid = "f0eaecb7-c7fd-4486-a153-e2ff288e57b4",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionCDValue = 1,
+							actionID = 7533,
+							category = "Party",
+							conditionType = 9,
+							partyTargetType = "Other Tank",
+							uuid = "06e223a0-2c8e-bbf2-b4b3-9b6f87978bd8",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffID = 4454,
+							category = "Self",
+							uuid = "aab5077e-0c2b-0852-adee-8008f77fc010",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 107.5,
+				name = "Shirk OT",
+				timeRange = true,
+				timelineIndex = 17,
+				timerEndOffset = 10,
+				timerStartOffset = 1,
+				uuid = "1565c41f-11ef-4850-88f8-e759c31361ca",
+				version = 2,
+			},
+			inheritedIndex = 11,
+		},
+	},
+	[19] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7386,
+							conditions = 
+							{
+								
+								{
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									true,
+								},
+								
+								{
+									"d65d00ec-0105-268d-ace7-2d367b431eea",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "2d012730-d487-9fb8-81b6-66af39a29bba",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16461,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									true,
+								},
+								
+								{
+									"141bab94-d7aa-79e7-9987-f20285c48bb1",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "4ba76f6c-741d-feab-b500-b08ad7b97c5b",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36926,
+							conditions = 
+							{
+								
+								{
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									true,
+								},
+								
+								{
+									"058998a0-28fc-7f7e-b215-5d374c803274",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "c7be4aad-5362-c644-8cd3-e1700a519ae1",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36934,
+							conditions = 
+							{
+								
+								{
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									true,
+								},
+								
+								{
+									"d9dbed19-25f5-7a0e-b7fa-ec367904db22",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "cf600fc3-8a2b-2639-ae39-fdaa4595eb7f",
+							version = 2.1,
+						},
+						inheritedIndex = 4,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							conditionType = 6,
+							inRangeValue = 6,
+							uuid = "aae77abe-fb05-50a4-9346-c8aa68b5e213",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "WARRIOR",
+							name = "Warrior",
+							uuid = "d65d00ec-0105-268d-ace7-2d367b431eea",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "Paladin",
+							uuid = "141bab94-d7aa-79e7-9987-f20285c48bb1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "Darkknight",
+							uuid = "058998a0-28fc-7f7e-b215-5d374c803274",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "Gunbreaker",
+							uuid = "d9dbed19-25f5-7a0e-b7fa-ec367904db22",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 141.1,
+				name = "Instant Dash",
+				timeRange = true,
+				timelineIndex = 19,
+				timerEndOffset = 5,
+				timerStartOffset = 0.5,
+				uuid = "1813c1d7-4bcf-caf7-9a20-d325db231014",
 				version = 2,
 			},
 		},
@@ -2865,6 +3391,58 @@ local tbl =
 			},
 		},
 	},
+	[34] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "local featherRays = MEntityList(\"targetable,alive,attackable,contentid=13834\")\nif featherRays ~= nil then\n    for _, ent in pairs(featherRays) do\n        local tethers = Argus.getTethersOnEnt(ent.id)\n        if tethers then\n            if ent.pos.x > 100 then\n                if ent.pos.z > 100 then\n                    data.M6SFeatherRaysLineRightDown = ent.id\n                else\n                    data.M6SFeatherRaysLineRightUp = ent.id\n                end\n            else\n                if ent.pos.z > 100 then\n                    data.M6SFeatherRaysLineLeftDown = ent.id\n                else\n                    data.M6SFeatherRaysLineLeftUp = ent.id\n                end\n            end\n        end\n    end\nend\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"871ff39f-7f54-aa59-84e3-03ab19fa9152",
+									true,
+								},
+							},
+							gVar = "ACR_TensorViper3_CD",
+							uuid = "c70b39f4-017a-6588-ada4-fceec90cd0b4",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.M6SFeatherRaysLineRightDown == nil \nor data.M6SFeatherRaysLineRightUp == nil\nor data.M6SFeatherRaysLineLeftDown == nil \nor data.M6SFeatherRaysLineLeftUp == nil",
+							uuid = "871ff39f-7f54-aa59-84e3-03ab19fa9152",
+							version = 2,
+						},
+					},
+				},
+				loop = true,
+				mechanicTime = 217.2,
+				name = "判断鱼是否连线 feat.MuAi",
+				timeRange = true,
+				timelineIndex = 34,
+				timerEndOffset = 220,
+				uuid = "8c38e4f8-18f8-cf41-9a91-c89a19defb47",
+				version = 2,
+			},
+		},
+	},
 	[35] = 
 	{
 		
@@ -3424,45 +4002,69 @@ local tbl =
 					{
 						data = 
 						{
-							aType = "Misc",
+							aType = "Lua",
+							actionLua = "Player:SetTarget(data.M6SFeatherRaysLineRightUp)\nself.used = true",
 							conditions = 
 							{
 								
 								{
-									"1b564b35-638f-3e37-8800-9fb551bfe6d2",
-									true,
-								},
-								
-								{
-									"71afd271-a79f-36cf-ad7e-1a650b59aeae",
-									true,
-								},
-								
-								{
-									"d65d00ec-0105-268d-ace7-2d367b431eea",
-									true,
-								},
-								
-								{
-									"141bab94-d7aa-79e7-9987-f20285c48bb1",
-									true,
-								},
-								
-								{
-									"058998a0-28fc-7f7e-b215-5d374c803274",
-									true,
-								},
-								
-								{
-									"d9dbed19-25f5-7a0e-b7fa-ec367904db22",
+									"169020c1-793f-cf51-88e3-47ed73e813d2",
 									true,
 								},
 							},
 							gVar = "ACR_RikuGNB3_CD",
-							setTarget = true,
-							targetContentID = 13834,
-							targetType = "ContentID",
-							uuid = "f6c4f798-9ddc-984d-9149-046c399528b8",
+							uuid = "43c338fb-1916-c79b-b31d-f92f2d2c6060",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.M6SFeatherRaysLineRightUp ~= nil",
+							uuid = "169020c1-793f-cf51-88e3-47ed73e813d2",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				mechanicTime = 256.5,
+				name = "SelectRightUp",
+				timeRange = true,
+				timelineIndex = 40,
+				timerEndOffset = 22,
+				timerStartOffset = -2,
+				uuid = "45898bb7-a470-0246-aed2-7302572a6bda",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "local target  = Player:GetTarget()\nd(target.id)\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "2dadaa15-8812-5e00-a9b1-744f4254d37e",
 							version = 2.1,
 						},
 						inheritedIndex = 1,
@@ -3484,11 +4086,6 @@ local tbl =
 								
 								{
 									"1b564b35-638f-3e37-8800-9fb551bfe6d2",
-									true,
-								},
-								
-								{
-									"71afd271-a79f-36cf-ad7e-1a650b59aeae",
 									true,
 								},
 							},
@@ -3518,11 +4115,6 @@ local tbl =
 									"1b564b35-638f-3e37-8800-9fb551bfe6d2",
 									true,
 								},
-								
-								{
-									"71afd271-a79f-36cf-ad7e-1a650b59aeae",
-									true,
-								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -3548,11 +4140,6 @@ local tbl =
 								
 								{
 									"1b564b35-638f-3e37-8800-9fb551bfe6d2",
-									true,
-								},
-								
-								{
-									"71afd271-a79f-36cf-ad7e-1a650b59aeae",
 									true,
 								},
 							},
@@ -3582,11 +4169,6 @@ local tbl =
 									"1b564b35-638f-3e37-8800-9fb551bfe6d2",
 									true,
 								},
-								
-								{
-									"71afd271-a79f-36cf-ad7e-1a650b59aeae",
-									true,
-								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -3599,6 +4181,18 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.M6SFeatherRaysLineRightUp ~= nil and Player:GetTarget().id == data.M6SFeatherRaysLineRightUp",
+							name = "判断当前目标是否是右上鱼",
+							uuid = "8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
 					
 					{
 						data = 
@@ -3657,21 +4251,12 @@ local tbl =
 							version = 2,
 						},
 					},
-					
-					{
-						data = 
-						{
-							conditionType = 5,
-							uuid = "71afd271-a79f-36cf-ad7e-1a650b59aeae",
-							version = 2,
-						},
-					},
 				},
 				mechanicTime = 256.5,
 				name = "Instant Dash towards Fey",
 				timeRange = true,
 				timelineIndex = 40,
-				timerEndOffset = 10,
+				timerEndOffset = 22,
 				timerStartOffset = 5.5,
 				uuid = "d445857d-c181-e62d-a3c8-fb743a6ff4f8",
 				version = 2,
@@ -4464,45 +5049,69 @@ local tbl =
 					{
 						data = 
 						{
-							aType = "Misc",
+							aType = "Lua",
+							actionLua = "Player:SetTarget(data.M6SFeatherRaysLineRightDown)\nself.used = true",
 							conditions = 
 							{
 								
 								{
-									"1b564b35-638f-3e37-8800-9fb551bfe6d2",
-									true,
-								},
-								
-								{
-									"71afd271-a79f-36cf-ad7e-1a650b59aeae",
-									true,
-								},
-								
-								{
-									"d65d00ec-0105-268d-ace7-2d367b431eea",
-									true,
-								},
-								
-								{
-									"141bab94-d7aa-79e7-9987-f20285c48bb1",
-									true,
-								},
-								
-								{
-									"058998a0-28fc-7f7e-b215-5d374c803274",
-									true,
-								},
-								
-								{
-									"d9dbed19-25f5-7a0e-b7fa-ec367904db22",
+									"169020c1-793f-cf51-88e3-47ed73e813d2",
 									true,
 								},
 							},
 							gVar = "ACR_RikuGNB3_CD",
-							setTarget = true,
-							targetContentID = 13834,
-							targetType = "ContentID",
-							uuid = "f6c4f798-9ddc-984d-9149-046c399528b8",
+							uuid = "43c338fb-1916-c79b-b31d-f92f2d2c6060",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.M6SFeatherRaysLineRightDown == nil ",
+							uuid = "169020c1-793f-cf51-88e3-47ed73e813d2",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				mechanicTime = 317.7,
+				name = "SelectRightDown",
+				timeRange = true,
+				timelineIndex = 49,
+				timerEndOffset = 22,
+				timerStartOffset = -2,
+				uuid = "1a57d7e7-4a57-9ce3-9e75-2682f3ff7ac7",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "local target  = Player:GetTarget()\nd(target.id)\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "2dadaa15-8812-5e00-a9b1-744f4254d37e",
 							version = 2.1,
 						},
 						inheritedIndex = 1,
@@ -4524,11 +5133,6 @@ local tbl =
 								
 								{
 									"1b564b35-638f-3e37-8800-9fb551bfe6d2",
-									true,
-								},
-								
-								{
-									"71afd271-a79f-36cf-ad7e-1a650b59aeae",
 									true,
 								},
 							},
@@ -4558,11 +5162,6 @@ local tbl =
 									"1b564b35-638f-3e37-8800-9fb551bfe6d2",
 									true,
 								},
-								
-								{
-									"71afd271-a79f-36cf-ad7e-1a650b59aeae",
-									true,
-								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -4588,11 +5187,6 @@ local tbl =
 								
 								{
 									"1b564b35-638f-3e37-8800-9fb551bfe6d2",
-									true,
-								},
-								
-								{
-									"71afd271-a79f-36cf-ad7e-1a650b59aeae",
 									true,
 								},
 							},
@@ -4622,11 +5216,6 @@ local tbl =
 									"1b564b35-638f-3e37-8800-9fb551bfe6d2",
 									true,
 								},
-								
-								{
-									"71afd271-a79f-36cf-ad7e-1a650b59aeae",
-									true,
-								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -4639,6 +5228,18 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.M6SFeatherRaysLineRightDown ~= nil and Player:GetTarget().id == data.M6SFeatherRaysLineRightDown",
+							name = "判断当前目标是否是右下鱼",
+							uuid = "8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
 					
 					{
 						data = 
@@ -4697,23 +5298,14 @@ local tbl =
 							version = 2,
 						},
 					},
-					
-					{
-						data = 
-						{
-							conditionType = 5,
-							uuid = "71afd271-a79f-36cf-ad7e-1a650b59aeae",
-							version = 2,
-						},
-					},
 				},
 				mechanicTime = 317.7,
 				name = "Instant Dash towards Fey",
 				timeRange = true,
 				timelineIndex = 49,
-				timerEndOffset = 10,
+				timerEndOffset = 22,
 				timerStartOffset = 5.5,
-				uuid = "1fed1b54-3a22-099c-b620-2839bdfff9c0",
+				uuid = "5d28cfb2-ef67-5a7e-b30e-8dd977e14148",
 				version = 2,
 			},
 		},
