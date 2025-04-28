@@ -1451,12 +1451,12 @@ local tbl =
 					},
 				},
 				mechanicTime = 227.4,
-				name = "Rampart (20)",
+				name = "1.Rampart (20)",
 				timeRange = true,
 				timelineIndex = 36,
 				timerEndOffset = 5,
 				timerOffset = -15,
-				timerStartOffset = 1,
+				timerStartOffset = 0.5,
 				uuid = "885cb141-b84e-ea8a-9f69-a62214ba9216",
 				version = 2,
 			},
@@ -1638,6 +1638,60 @@ local tbl =
 					{
 						data = 
 						{
+							actionID = 16140,
+							conditions = 
+							{
+								
+								{
+									"b0a6c0ff-c966-c1fe-bedc-2d9d7afd0ff6",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "8e2ebaff-1382-38db-a880-5b374c35c9fd",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16140,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "b0a6c0ff-c966-c1fe-bedc-2d9d7afd0ff6",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 278.6,
+				name = "1.Camou (10)",
+				timeRange = true,
+				timelineIndex = 43,
+				timerEndOffset = 20,
+				timerOffset = -10,
+				timerStartOffset = 0.5,
+				uuid = "4c6944e3-e16b-7524-89eb-4fe52878bc80",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 25758,
 							conditions = 
 							{
@@ -1683,7 +1737,7 @@ local tbl =
 				uuid = "009f9eac-f51b-d3e8-b8b1-5c99bb1f5637",
 				version = 2,
 			},
-			inheritedIndex = 2,
+			inheritedIndex = 3,
 		},
 		
 		{
@@ -1753,7 +1807,7 @@ local tbl =
 				uuid = "385119f6-fb56-79e5-8892-e0e54422ae41",
 				version = 2,
 			},
-			inheritedIndex = 3,
+			inheritedIndex = 4,
 		},
 	},
 	[48] = 
