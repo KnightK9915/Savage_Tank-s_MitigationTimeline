@@ -1591,7 +1591,7 @@ local tbl =
 				timelineIndex = 37,
 				timerEndOffset = 29,
 				timerOffset = -4,
-				timerStartOffset = 1,
+				timerStartOffset = 5,
 				uuid = "cae8564b-7382-c50c-bc15-a6af00e9ccfd",
 				version = 2,
 			},
@@ -1654,7 +1654,7 @@ local tbl =
 				timelineIndex = 37,
 				timerEndOffset = 29,
 				timerOffset = -3,
-				timerStartOffset = 1,
+				timerStartOffset = 5,
 				uuid = "d5713e22-13be-c9d8-86de-1fc0e3b88132",
 				version = 2,
 			},
@@ -1881,7 +1881,7 @@ local tbl =
 				timelineIndex = 41,
 				timerEndOffset = 22,
 				timerOffset = -4,
-				timerStartOffset = 1,
+				timerStartOffset = 5,
 				uuid = "467ec19f-4f92-82a7-b92f-bb1979878860",
 				version = 2,
 			},
@@ -1944,11 +1944,157 @@ local tbl =
 				timelineIndex = 41,
 				timerEndOffset = 22,
 				timerOffset = -3,
-				timerStartOffset = 1,
+				timerStartOffset = 5,
 				uuid = "4dcff0a5-ad41-9317-99e7-cb690b6e5ef0",
 				version = 2,
 			},
 			inheritedIndex = 5,
+		},
+	},
+	[42] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25754,
+							conditions = 
+							{
+								
+								{
+									"def7b2d7-911a-f611-8d72-c3b3a504b4e7",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2682,
+								1178,
+								746,
+								1191,
+								3835,
+								810,
+							},
+							category = "Self",
+							uuid = "def7b2d7-911a-f611-8d72-c3b3a504b4e7",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				loop = true,
+				mechanicTime = 275.5,
+				name = "Oblation (10)",
+				randomOffset = -1,
+				timeRange = true,
+				timelineIndex = 42,
+				timerEndOffset = 39,
+				timerOffset = -3,
+				timerStartOffset = 1,
+				uuid = "be139a4b-98ea-e2ab-af4c-6d2d4dc0a949",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"10c34ac9-fc81-51e9-b4d2-bf171b53c11b",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2682,
+								1178,
+								746,
+								1191,
+								3835,
+								810,
+							},
+							category = "Self",
+							uuid = "10c34ac9-fc81-51e9-b4d2-bf171b53c11b",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				loop = true,
+				mechanicTime = 275.5,
+				name = "TBN (25)",
+				timeRange = true,
+				timelineIndex = 42,
+				timerEndOffset = 39,
+				timerOffset = -4,
+				timerStartOffset = 1,
+				uuid = "d7b0aeb5-582a-40b1-9141-1504e64c7c0a",
+				version = 2,
+			},
+			inheritedIndex = 3,
 		},
 	},
 	[50] = 
@@ -2151,7 +2297,7 @@ local tbl =
 				timelineIndex = 50,
 				timerEndOffset = 71,
 				timerOffset = -4,
-				timerStartOffset = 1,
+				timerStartOffset = 5,
 				uuid = "20426888-4915-10e8-b695-71f76d3fd81a",
 				version = 2,
 			},
@@ -2214,7 +2360,7 @@ local tbl =
 				timelineIndex = 50,
 				timerEndOffset = 71,
 				timerOffset = -3,
-				timerStartOffset = 1,
+				timerStartOffset = 5,
 				uuid = "9cf900c3-1398-24ed-a1f1-fd7f64653dd0",
 				version = 2,
 			},

@@ -1574,7 +1574,7 @@ local tbl =
 				timelineIndex = 36,
 				timerEndOffset = 29,
 				timerOffset = -4,
-				timerStartOffset = 1,
+				timerStartOffset = 5,
 				uuid = "4e06db59-184e-75a2-a381-483bc7c58785",
 				version = 2,
 			},
@@ -1637,7 +1637,7 @@ local tbl =
 				timelineIndex = 36,
 				timerEndOffset = 29,
 				timerOffset = -3,
-				timerStartOffset = 1,
+				timerStartOffset = 5,
 				uuid = "42c12c8f-75a9-a623-97ac-eb623557de9b",
 				version = 2,
 			},
@@ -1929,7 +1929,7 @@ local tbl =
 				timelineIndex = 43,
 				timerEndOffset = 39,
 				timerOffset = -3,
-				timerStartOffset = 1,
+				timerStartOffset = 5,
 				uuid = "566b5c79-90c9-ee11-a43c-897823767635",
 				version = 2,
 			},
@@ -2002,6 +2002,71 @@ local tbl =
 					{
 						data = 
 						{
+							actionID = 3638,
+							conditions = 
+							{
+								
+								{
+									"e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "9b1f0885-3a72-1913-ad03-47c71acda8e5",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3638,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 70,
+							uuid = "d7728407-e25a-0c05-82ea-92a74ccb2b61",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 317.7,
+				name = "2.Living Dead (Invinsible)",
+				timeRange = true,
+				timelineIndex = 48,
+				timerEndOffset = 30,
+				timerStartOffset = 15,
+				uuid = "fd2a7fe7-3122-82db-b25b-a90fd960c094",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 36927,
 							conditions = 
 							{
@@ -2043,7 +2108,7 @@ local tbl =
 				uuid = "0f9e6513-2daa-7601-a54f-63e01e3ee519",
 				version = 2,
 			},
-			inheritedIndex = 3,
+			inheritedIndex = 4,
 		},
 		
 		{
@@ -2114,7 +2179,7 @@ local tbl =
 				uuid = "d7f4134b-8dde-65ed-a923-351c296761fe",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 5,
 		},
 		
 		{
@@ -2190,11 +2255,11 @@ local tbl =
 				timelineIndex = 48,
 				timerEndOffset = 71,
 				timerOffset = -4,
-				timerStartOffset = 1,
+				timerStartOffset = 5,
 				uuid = "4ffc56c6-1e09-1fe3-9256-3e345a71154d",
 				version = 2,
 			},
-			inheritedIndex = 5,
+			inheritedIndex = 6,
 		},
 		
 		{
@@ -2253,73 +2318,8 @@ local tbl =
 				timelineIndex = 48,
 				timerEndOffset = 71,
 				timerOffset = -3,
-				timerStartOffset = 1,
+				timerStartOffset = 5,
 				uuid = "c9035780-f09b-19c3-b6d1-a5acfed17ec0",
-				version = 2,
-			},
-			inheritedIndex = 6,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 3638,
-							conditions = 
-							{
-								
-								{
-									"e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "9b1f0885-3a72-1913-ad03-47c71acda8e5",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 3638,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							comparator = 2,
-							conditionType = 2,
-							hpValue = 70,
-							uuid = "d7728407-e25a-0c05-82ea-92a74ccb2b61",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 317.7,
-				name = "2.Living Dead (Invinsible)",
-				timeRange = true,
-				timelineIndex = 48,
-				timerEndOffset = 30,
-				timerStartOffset = 15,
-				uuid = "fd2a7fe7-3122-82db-b25b-a90fd960c094",
 				version = 2,
 			},
 			inheritedIndex = 7,
