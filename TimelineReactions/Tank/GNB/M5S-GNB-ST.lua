@@ -158,7 +158,6 @@ local tbl =
 				name = "Rampart (20)",
 				timeRange = true,
 				timelineIndex = 2,
-				timerEndOffset = 9999,
 				timerOffset = -15,
 				timerStartOffset = -18.5,
 				uuid = "94f0c2d6-039e-d1e9-91a4-390c7edd9d0b",
@@ -912,7 +911,6 @@ local tbl =
 				name = "Rampart (20)",
 				timeRange = true,
 				timelineIndex = 32,
-				timerEndOffset = 9999,
 				timerOffset = -15,
 				timerStartOffset = -18.5,
 				uuid = "7d668970-a0ed-ce7a-90f2-b1c5ab0e9ba3",
@@ -1121,6 +1119,24 @@ local tbl =
 			{
 				actions = 
 				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 136,
+				name = "_________________",
+				timelineIndex = 32,
+				uuid = "80ee6bf7-c186-09fb-9d18-7514362d5137",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
 					
 					{
 						data = 
@@ -1186,7 +1202,7 @@ local tbl =
 				uuid = "4b330977-0342-8056-b540-0d92e316dec7",
 				version = 2,
 			},
-			inheritedIndex = 10,
+			inheritedIndex = 8,
 		},
 		
 		{
@@ -1241,24 +1257,6 @@ local tbl =
 				timerOffset = -1,
 				timerStartOffset = -3,
 				uuid = "85f614a2-a69d-c017-9732-8bd00181a00a",
-				version = 2,
-			},
-			inheritedIndex = 10,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 136,
-				name = "_________________",
-				timelineIndex = 32,
-				uuid = "80ee6bf7-c186-09fb-9d18-7514362d5137",
 				version = 2,
 			},
 			inheritedIndex = 9,
@@ -1753,7 +1751,6 @@ local tbl =
 				name = "Rampart (20)",
 				timeRange = true,
 				timelineIndex = 69,
-				timerEndOffset = 9999,
 				timerOffset = -15,
 				timerStartOffset = -18.5,
 				uuid = "5a0dc732-b3b4-5523-b951-9804628df173",
@@ -1961,6 +1958,24 @@ local tbl =
 			{
 				actions = 
 				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 283.6,
+				name = "_________________",
+				timelineIndex = 69,
+				uuid = "838275bd-24c8-da03-83fd-305a01a5b398",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
 					
 					{
 						data = 
@@ -2026,7 +2041,7 @@ local tbl =
 				uuid = "b30df478-9475-ba54-9341-eae6e450688f",
 				version = 2,
 			},
-			inheritedIndex = 10,
+			inheritedIndex = 8,
 		},
 		
 		{
@@ -2084,24 +2099,6 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 10,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 283.6,
-				name = "_________________",
-				timelineIndex = 69,
-				uuid = "838275bd-24c8-da03-83fd-305a01a5b398",
-				version = 2,
-			},
-			inheritedIndex = 9,
 		},
 	},
 	[73] = 
@@ -2655,7 +2652,6 @@ local tbl =
 				name = "Rampart (20)",
 				timeRange = true,
 				timelineIndex = 115,
-				timerEndOffset = 9999,
 				timerOffset = -15,
 				timerStartOffset = -18.5,
 				uuid = "ad453774-c9fc-54ea-9406-80c966758ea4",
