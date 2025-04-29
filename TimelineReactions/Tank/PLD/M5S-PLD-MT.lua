@@ -337,6 +337,61 @@ local tbl =
 			inheritedIndex = 7,
 		},
 	},
+	[7] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 39.6,
+				name = "sheltron (15)",
+				timeRange = true,
+				timelineIndex = 7,
+				timerStartOffset = -2,
+				uuid = "4292ab56-d01c-6358-a958-f9817b31a867",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+	},
 	[12] = 
 	{
 		
@@ -796,60 +851,6 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 7,
-		},
-	},
-	[34] = 
-	{
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 25746,
-							conditions = 
-							{
-								
-								{
-									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 6,
-							gaugeValue = 50,
-							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 146.9,
-				name = "sheltron (15)",
-				timeRange = true,
-				timelineIndex = 34,
-				timerStartOffset = -3,
-				uuid = "ccea8b30-506c-80fb-ad83-1d2cc5779fe1",
-				version = 2,
-			},
-			inheritedIndex = 4,
 		},
 	},
 	[36] = 
@@ -1437,7 +1438,7 @@ local tbl =
 			inheritedIndex = 7,
 		},
 	},
-	[84] = 
+	[81] = 
 	{
 		
 		{
@@ -1480,12 +1481,13 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 374.3,
+				enabled = false,
+				mechanicTime = 356.9,
 				name = "sheltron (15)",
 				timeRange = true,
-				timelineIndex = 84,
-				timerStartOffset = -3,
-				uuid = "ba6ded87-4f4b-3bda-8b69-a061ddfc46cb",
+				timelineIndex = 81,
+				timerStartOffset = -2,
+				uuid = "6aaf1b5b-3935-d3dd-9673-de045df31472",
 				version = 2,
 			},
 			inheritedIndex = 4,
