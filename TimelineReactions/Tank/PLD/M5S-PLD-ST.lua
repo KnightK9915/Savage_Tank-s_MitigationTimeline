@@ -360,7 +360,7 @@ local tbl =
 							},
 							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
-							targetType = "Party",
+							targetType = "Other Tank",
 							uuid = "5ed8c1f4-36d8-ad42-9463-1f8154296465",
 							version = 2.1,
 						},
@@ -381,11 +381,11 @@ local tbl =
 					},
 				},
 				mechanicTime = 39.6,
-				name = "interven Near (15)",
+				name = "interven ST (15)",
 				timeRange = true,
 				timelineIndex = 7,
 				timerStartOffset = -3,
-				uuid = "c72a7331-a374-7e91-8e09-ae613b6ac51e",
+				uuid = "84278223-086e-8941-ba62-d104046e32c8",
 				version = 2,
 			},
 			inheritedIndex = 7,
@@ -849,60 +849,6 @@ local tbl =
 				timelineIndex = 32,
 				timerStartOffset = -3,
 				uuid = "de3dc874-e60c-1cae-8ecd-aa7c6eaba293",
-				version = 2,
-			},
-			inheritedIndex = 7,
-		},
-	},
-	[34] = 
-	{
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7382,
-							conditions = 
-							{
-								
-								{
-									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
-									true,
-								},
-							},
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Other Tank",
-							uuid = "5ed8c1f4-36d8-ad42-9463-1f8154296465",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 6,
-							gaugeValue = 50,
-							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 146.9,
-				name = "interven ST (15)",
-				timeRange = true,
-				timelineIndex = 34,
-				timerStartOffset = -3,
-				uuid = "2f4425f6-3987-be1c-bfd9-50669b17d9e9",
 				version = 2,
 			},
 			inheritedIndex = 7,
@@ -1495,7 +1441,7 @@ local tbl =
 			inheritedIndex = 7,
 		},
 	},
-	[84] = 
+	[81] = 
 	{
 		
 		{
@@ -1538,12 +1484,12 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 374.3,
+				mechanicTime = 356.9,
 				name = "interven ST (15)",
 				timeRange = true,
-				timelineIndex = 84,
+				timelineIndex = 81,
 				timerStartOffset = -3,
-				uuid = "a2f936af-eac5-e333-81be-6e8397d1a1d7",
+				uuid = "c3fe6d1a-8bd1-84f0-9964-c13daa1025d6",
 				version = 2,
 			},
 			inheritedIndex = 7,
