@@ -513,7 +513,7 @@ local tbl =
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
 							ignoreWeaveRules = true,
-							targetType = "Party",
+							targetType = "Main Tank",
 							uuid = "94511374-01bd-2218-adca-8213e488a837",
 							version = 2.1,
 						},
@@ -537,12 +537,12 @@ local tbl =
 					},
 				},
 				mechanicTime = 39.6,
-				name = "HoC (15) Near",
+				name = "HoC (15) ST",
 				timeRange = true,
 				timelineIndex = 7,
 				timerOffset = -1,
 				timerStartOffset = -3,
-				uuid = "f02a486e-2d9f-13e4-a57f-722af74bab5b",
+				uuid = "e20fb6e7-1528-2e9d-afdf-2b5d90973d36",
 				version = 2,
 			},
 			inheritedIndex = 9,
@@ -1264,65 +1264,6 @@ local tbl =
 			inheritedIndex = 9,
 		},
 	},
-	[34] = 
-	{
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 25758,
-							conditions = 
-							{
-								
-								{
-									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Main Tank",
-							uuid = "94511374-01bd-2218-adca-8213e488a837",
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 25758,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							dequeueIfLuaFalse = true,
-							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 146.9,
-				name = "HoC (15) ST",
-				timeRange = true,
-				timelineIndex = 34,
-				timerOffset = -1,
-				timerStartOffset = -3,
-				uuid = "ba4be861-fd43-9393-828d-de824e78a658",
-				version = 2,
-			},
-			inheritedIndex = 9,
-		},
-	},
 	[36] = 
 	{
 		
@@ -1561,14 +1502,6 @@ local tbl =
 						data = 
 						{
 							actionID = 25758,
-							conditions = 
-							{
-								
-								{
-									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
-									true,
-								},
-							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
 							ignoreWeaveRules = true,
@@ -1581,19 +1514,6 @@ local tbl =
 				},
 				conditions = 
 				{
-					
-					{
-						data = 
-						{
-							actionID = 25758,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							dequeueIfLuaFalse = true,
-							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
-							version = 2,
-						},
-					},
 					
 					{
 						data = 
@@ -2244,7 +2164,7 @@ local tbl =
 			inheritedIndex = 9,
 		},
 	},
-	[84] = 
+	[81] = 
 	{
 		
 		{
@@ -2291,13 +2211,13 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 374.3,
+				mechanicTime = 356.9,
 				name = "HoC (15) ST",
 				timeRange = true,
-				timelineIndex = 84,
+				timelineIndex = 81,
 				timerOffset = -1,
 				timerStartOffset = -3,
-				uuid = "cb85fd7f-2773-197e-b4b7-2d44f29176dc",
+				uuid = "de27094f-40b0-e620-b649-7123ba956d02",
 				version = 2,
 			},
 			inheritedIndex = 9,
@@ -2541,14 +2461,6 @@ local tbl =
 						data = 
 						{
 							actionID = 25758,
-							conditions = 
-							{
-								
-								{
-									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
-									true,
-								},
-							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
 							ignoreWeaveRules = true,
@@ -2561,19 +2473,6 @@ local tbl =
 				},
 				conditions = 
 				{
-					
-					{
-						data = 
-						{
-							actionID = 25758,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							dequeueIfLuaFalse = true,
-							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
-							version = 2,
-						},
-					},
 					
 					{
 						data = 
