@@ -477,63 +477,6 @@ local tbl =
 			inheritedIndex = 10,
 		},
 	},
-	[7] = 
-	{
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7393,
-							conditions = 
-							{
-								
-								{
-									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							targetSubType = "Lowest HP",
-							targetType = "Party",
-							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 3,
-							mpType = 2,
-							mpValue = 3000,
-							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 39.6,
-				name = "TBN Near (25)",
-				timeRange = true,
-				timelineIndex = 7,
-				timerOffset = -4,
-				timerStartOffset = -3,
-				uuid = "4fab199c-afb4-7d3b-8e14-656cfbc97d9d",
-				version = 2,
-			},
-			inheritedIndex = 1,
-		},
-	},
 	[12] = 
 	{
 		
