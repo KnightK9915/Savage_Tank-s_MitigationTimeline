@@ -184,7 +184,6 @@ local tbl =
 				name = "HoL",
 				timeRange = true,
 				timelineIndex = 1,
-				timerEndOffset = 9999,
 				timerStartOffset = -5,
 				uuid = "6a5fd797-63c0-c488-ab4f-32e9b72437d0",
 				version = 2,
@@ -279,7 +278,6 @@ local tbl =
 				name = "Dark Missinary",
 				timeRange = true,
 				timelineIndex = 1,
-				timerEndOffset = 9999,
 				timerOffset = -10,
 				timerStartOffset = -5,
 				uuid = "423c5ad3-0bb5-f062-a2f9-d716e78ea3c9",
@@ -374,7 +372,6 @@ local tbl =
 				name = "Shake it off",
 				timeRange = true,
 				timelineIndex = 1,
-				timerEndOffset = 9999,
 				timerStartOffset = -5,
 				uuid = "525636cf-5a3e-91b5-9b7c-4644ac3d301d",
 				version = 2,
@@ -1285,7 +1282,6 @@ local tbl =
 				name = "HoL",
 				timeRange = true,
 				timelineIndex = 11,
-				timerEndOffset = 9999,
 				timerStartOffset = -5,
 				uuid = "d0f6ebf0-865f-efb2-aa34-bd8accf9071b",
 				version = 2,
@@ -1379,7 +1375,6 @@ local tbl =
 				name = "Dark Missinary",
 				timeRange = true,
 				timelineIndex = 11,
-				timerEndOffset = 9999,
 				timerOffset = -10,
 				timerStartOffset = -5,
 				uuid = "a96b03c4-3b61-4329-80eb-b1999bf46c1d",
@@ -1473,7 +1468,6 @@ local tbl =
 				name = "Shake it off",
 				timeRange = true,
 				timelineIndex = 11,
-				timerEndOffset = 9999,
 				timerStartOffset = -5,
 				uuid = "a0af30bd-de1d-5674-996b-166288d27786",
 				version = 2,
@@ -2091,6 +2085,113 @@ local tbl =
 			},
 			inheritedIndex = 11,
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							conditions = 
+							{
+								
+								{
+									"4032ed2a-58f3-b158-9a6e-5dbaeba022dc",
+									true,
+								},
+								
+								{
+									"01d39de9-2218-25a2-b698-da0fd8fa34b0",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							holdActionDuration = 33,
+							holdActionID = 16461,
+							uuid = "a4990b20-49d1-3d77-bf22-79fefd186146",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							conditions = 
+							{
+								
+								{
+									"4032ed2a-58f3-b158-9a6e-5dbaeba022dc",
+									true,
+								},
+								
+								{
+									"8e350aa5-d6e2-514f-a42f-efc991a52a09",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							holdActionDuration = 33,
+							holdActionID = 7386,
+							uuid = "fe652ec0-fe5d-622d-87df-0e1431d2be6b",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							buffID = 4454,
+							category = "Self",
+							uuid = "4032ed2a-58f3-b158-9a6e-5dbaeba022dc",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "01d39de9-2218-25a2-b698-da0fd8fa34b0",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "8e350aa5-d6e2-514f-a42f-efc991a52a09",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 107.5,
+				name = "Hold Jump",
+				timeRange = true,
+				timelineIndex = 17,
+				timerEndOffset = 5,
+				timerStartOffset = -1,
+				uuid = "9fab13dd-9d80-f87b-811a-132c707a7256",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
 	},
 	[19] = 
 	{
@@ -2458,7 +2559,6 @@ local tbl =
 				name = "HoL",
 				timeRange = true,
 				timelineIndex = 22,
-				timerEndOffset = 9999,
 				timerStartOffset = -5,
 				uuid = "ed213bbd-ed20-bf45-aeb9-b27e3136ed25",
 				version = 2,
@@ -2552,7 +2652,6 @@ local tbl =
 				name = "Dark Missinary",
 				timeRange = true,
 				timelineIndex = 22,
-				timerEndOffset = 9999,
 				timerOffset = -10,
 				timerStartOffset = -5,
 				uuid = "4ef06468-2a8c-339a-aaa1-ac3873085b57",
@@ -2646,7 +2745,6 @@ local tbl =
 				name = "Shake it off",
 				timeRange = true,
 				timelineIndex = 22,
-				timerEndOffset = 9999,
 				timerStartOffset = -5,
 				uuid = "2f479209-4c67-7493-928a-2dd3af15c492",
 				version = 2,
@@ -2739,6 +2837,96 @@ local tbl =
 				uuid = "26c55e1d-4c7a-7847-8444-0428f85ea472",
 				version = 2,
 			},
+		},
+	},
+	[30] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							conditions = 
+							{
+								
+								{
+									"01d39de9-2218-25a2-b698-da0fd8fa34b0",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							holdActionCharges = 2,
+							holdActionDuration = 14,
+							holdActionID = 16461,
+							uuid = "a4990b20-49d1-3d77-bf22-79fefd186146",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							conditions = 
+							{
+								
+								{
+									"8e350aa5-d6e2-514f-a42f-efc991a52a09",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							holdActionCharges = 3,
+							holdActionDuration = 14,
+							holdActionID = 7386,
+							uuid = "fe652ec0-fe5d-622d-87df-0e1431d2be6b",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "01d39de9-2218-25a2-b698-da0fd8fa34b0",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "8e350aa5-d6e2-514f-a42f-efc991a52a09",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 190,
+				name = "Hold Jump",
+				timeRange = true,
+				timelineIndex = 30,
+				timerStartOffset = -5,
+				uuid = "2ad58ba6-c658-def8-b582-04eb52540ab7",
+				version = 2,
+			},
+			inheritedIndex = 1,
 		},
 	},
 	[31] = 
@@ -2923,7 +3111,6 @@ local tbl =
 				name = "HoL",
 				timeRange = true,
 				timelineIndex = 31,
-				timerEndOffset = 9999,
 				timerStartOffset = -5,
 				uuid = "f713c7ad-65f6-91c0-b158-80f4e1296914",
 				version = 2,
@@ -3017,7 +3204,6 @@ local tbl =
 				name = "Dark Missinary",
 				timeRange = true,
 				timelineIndex = 31,
-				timerEndOffset = 9999,
 				timerOffset = -10,
 				timerStartOffset = -5,
 				uuid = "258f22ce-1c93-99de-af68-1a2d334fbb9d",
@@ -3111,7 +3297,6 @@ local tbl =
 				name = "Shake it off",
 				timeRange = true,
 				timelineIndex = 31,
-				timerEndOffset = 9999,
 				timerStartOffset = -5,
 				uuid = "7e1872cf-a199-0ffa-a02c-13e37bf1039f",
 				version = 2,
@@ -5043,7 +5228,6 @@ local tbl =
 				name = "HoL",
 				timeRange = true,
 				timelineIndex = 46,
-				timerEndOffset = 9999,
 				timerStartOffset = -5,
 				uuid = "4b6aacf9-0c64-687b-8696-d60d213f87fe",
 				version = 2,
@@ -5137,7 +5321,6 @@ local tbl =
 				name = "Dark Missinary",
 				timeRange = true,
 				timelineIndex = 46,
-				timerEndOffset = 9999,
 				timerOffset = -10,
 				timerStartOffset = -5,
 				uuid = "307a2fd0-ebf8-88a0-b831-88a33cbfffc5",
@@ -5231,7 +5414,6 @@ local tbl =
 				name = "Shake it off",
 				timeRange = true,
 				timelineIndex = 46,
-				timerEndOffset = 9999,
 				timerStartOffset = -5,
 				uuid = "1fbd8e8c-7c66-edd4-8f2a-b51778dbe2a4",
 				version = 2,
@@ -5998,7 +6180,6 @@ local tbl =
 				name = "HoL",
 				timeRange = true,
 				timelineIndex = 53,
-				timerEndOffset = 9999,
 				timerStartOffset = -5,
 				uuid = "59eee026-5209-d977-aafa-7d3da00bf1de",
 				version = 2,
@@ -6092,7 +6273,6 @@ local tbl =
 				name = "Dark Missinary",
 				timeRange = true,
 				timelineIndex = 53,
-				timerEndOffset = 9999,
 				timerOffset = -10,
 				timerStartOffset = -5,
 				uuid = "e25990c9-d2bd-c339-8da2-00d13208390d",
@@ -6186,7 +6366,6 @@ local tbl =
 				name = "Shake it off",
 				timeRange = true,
 				timelineIndex = 53,
-				timerEndOffset = 9999,
 				timerStartOffset = -5,
 				uuid = "16c8a704-58e8-62d0-bc79-0443002edbdf",
 				version = 2,
@@ -6956,7 +7135,6 @@ local tbl =
 				name = "HoL",
 				timeRange = true,
 				timelineIndex = 58,
-				timerEndOffset = 9999,
 				timerStartOffset = -5,
 				uuid = "1e280922-cf11-9841-9d63-3d1f87693007",
 				version = 2,
@@ -7050,7 +7228,6 @@ local tbl =
 				name = "Dark Missinary",
 				timeRange = true,
 				timelineIndex = 58,
-				timerEndOffset = 9999,
 				timerOffset = -10,
 				timerStartOffset = -5,
 				uuid = "a21e0fd9-a20b-93ea-8f4c-7c7b2d77e2a3",
@@ -7144,7 +7321,6 @@ local tbl =
 				name = "Shake it off",
 				timeRange = true,
 				timelineIndex = 58,
-				timerEndOffset = 9999,
 				timerStartOffset = -5,
 				uuid = "f5646019-67a4-96ca-8154-58a986b80e84",
 				version = 2,
@@ -7421,7 +7597,6 @@ local tbl =
 				name = "HoL",
 				timeRange = true,
 				timelineIndex = 88,
-				timerEndOffset = 9999,
 				timerStartOffset = -5,
 				uuid = "4320b612-e4ac-f942-95de-9a23e5fcd572",
 				version = 2,
@@ -7515,7 +7690,6 @@ local tbl =
 				name = "Dark Missinary",
 				timeRange = true,
 				timelineIndex = 88,
-				timerEndOffset = 9999,
 				timerOffset = -10,
 				timerStartOffset = -5,
 				uuid = "fcc3e285-1cb5-7cf8-91a4-1f5ac16a5467",
@@ -7609,7 +7783,6 @@ local tbl =
 				name = "Shake it off",
 				timeRange = true,
 				timelineIndex = 88,
-				timerEndOffset = 9999,
 				timerStartOffset = -5,
 				uuid = "4c0bbbf4-1178-eb63-b591-30d37a0c6d78",
 				version = 2,
@@ -7886,7 +8059,6 @@ local tbl =
 				name = "HoL",
 				timeRange = true,
 				timelineIndex = 90,
-				timerEndOffset = 9999,
 				timerStartOffset = -5,
 				uuid = "62ef7f21-591a-a733-b044-ffbf0cfe4ff6",
 				version = 2,
@@ -7980,7 +8152,6 @@ local tbl =
 				name = "Dark Missinary",
 				timeRange = true,
 				timelineIndex = 90,
-				timerEndOffset = 9999,
 				timerOffset = -10,
 				timerStartOffset = -5,
 				uuid = "0d117ecf-fd71-5a56-a53f-c205f6cda899",
@@ -8074,7 +8245,6 @@ local tbl =
 				name = "Shake it off",
 				timeRange = true,
 				timelineIndex = 90,
-				timerEndOffset = 9999,
 				timerStartOffset = -5,
 				uuid = "9816f42f-0bb3-71f2-a97e-4f041ba1d6b3",
 				version = 2,
