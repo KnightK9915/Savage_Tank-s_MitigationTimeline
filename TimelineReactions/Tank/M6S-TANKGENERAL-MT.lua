@@ -1927,7 +1927,7 @@ local tbl =
 			},
 		},
 	},
-	[17] = 
+	[16] = 
 	{
 		
 		{
@@ -1971,7 +1971,7 @@ local tbl =
 						{
 							comparator = 2,
 							conditionType = 4,
-							enmityValue = 99,
+							enmityValue = 99.999000549316,
 							uuid = "158e3d7c-aed1-3623-ad3e-9ac368bbd03d",
 							version = 2,
 						},
@@ -1988,13 +1988,14 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 107.5,
+				mechanicTime = 91.3,
 				name = "Provoke",
 				timeRange = true,
-				timelineIndex = 17,
+				timelineIndex = 16,
 				timerEndOffset = 10,
 				timerOffset = -3,
-				uuid = "25b7293a-782a-9478-9ab4-1f6309efdfcc",
+				timerStartOffset = 0.5,
+				uuid = "1e2b229d-84a2-1b76-a317-dc356800373a",
 				version = 2,
 			},
 			inheritedIndex = 8,
@@ -2020,11 +2021,6 @@ local tbl =
 								
 								{
 									"06e223a0-2c8e-bbf2-b4b3-9b6f87978bd8",
-									true,
-								},
-								
-								{
-									"aab5077e-0c2b-0852-adee-8008f77fc010",
 									true,
 								},
 							},
@@ -2064,27 +2060,21 @@ local tbl =
 							version = 2,
 						},
 					},
-					
-					{
-						data = 
-						{
-							buffID = 4454,
-							category = "Self",
-							uuid = "aab5077e-0c2b-0852-adee-8008f77fc010",
-							version = 2,
-						},
-					},
 				},
-				mechanicTime = 107.5,
+				mechanicTime = 91.3,
 				name = "Shirk OT",
 				timeRange = true,
-				timelineIndex = 17,
+				timelineIndex = 16,
 				timerEndOffset = 10,
-				uuid = "1565c41f-11ef-4850-88f8-e759c31361ca",
+				timerStartOffset = 0.5,
+				uuid = "9243cf2f-077c-8a2c-9d90-0111b9a3f044",
 				version = 2,
 			},
 			inheritedIndex = 11,
 		},
+	},
+	[17] = 
+	{
 		
 		{
 			data = 
@@ -2835,6 +2825,190 @@ local tbl =
 				timerOffset = -3,
 				timerStartOffset = -3,
 				uuid = "26c55e1d-4c7a-7847-8444-0428f85ea472",
+				version = 2,
+			},
+		},
+	},
+	[28] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7386,
+							conditions = 
+							{
+								
+								{
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									true,
+								},
+								
+								{
+									"d65d00ec-0105-268d-ace7-2d367b431eea",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "2d012730-d487-9fb8-81b6-66af39a29bba",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16461,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									true,
+								},
+								
+								{
+									"141bab94-d7aa-79e7-9987-f20285c48bb1",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "4ba76f6c-741d-feab-b500-b08ad7b97c5b",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36926,
+							conditions = 
+							{
+								
+								{
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									true,
+								},
+								
+								{
+									"058998a0-28fc-7f7e-b215-5d374c803274",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "c7be4aad-5362-c644-8cd3-e1700a519ae1",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36934,
+							conditions = 
+							{
+								
+								{
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									true,
+								},
+								
+								{
+									"d9dbed19-25f5-7a0e-b7fa-ec367904db22",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "cf600fc3-8a2b-2639-ae39-fdaa4595eb7f",
+							version = 2.1,
+						},
+						inheritedIndex = 4,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							conditionType = 6,
+							inRangeValue = 6,
+							uuid = "aae77abe-fb05-50a4-9346-c8aa68b5e213",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "WARRIOR",
+							name = "Warrior",
+							uuid = "d65d00ec-0105-268d-ace7-2d367b431eea",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "Paladin",
+							uuid = "141bab94-d7aa-79e7-9987-f20285c48bb1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "Darkknight",
+							uuid = "058998a0-28fc-7f7e-b215-5d374c803274",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "Gunbreaker",
+							uuid = "d9dbed19-25f5-7a0e-b7fa-ec367904db22",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 179.8,
+				name = "Instant Dash",
+				timeRange = true,
+				timelineIndex = 28,
+				timerEndOffset = 5,
+				timerStartOffset = 0.5,
+				uuid = "f92759c9-6652-a4af-968c-4a9f2fb15f31",
 				version = 2,
 			},
 		},
