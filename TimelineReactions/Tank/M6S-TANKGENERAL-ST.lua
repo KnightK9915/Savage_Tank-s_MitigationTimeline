@@ -4040,11 +4040,6 @@ local tbl =
 									"46cb0109-6c3a-2f84-a2c4-31984cecfea2",
 									true,
 								},
-								
-								{
-									"62ab36a2-1604-895c-a438-1fb3852858c7",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -4068,11 +4063,6 @@ local tbl =
 								
 								{
 									"c87032d2-c148-cb6a-9a76-9a849a23a2b1",
-									true,
-								},
-								
-								{
-									"62ab36a2-1604-895c-a438-1fb3852858c7",
 									true,
 								},
 							},
@@ -4099,11 +4089,6 @@ local tbl =
 									"18f1b609-641e-ed19-9e7e-897be06b8984",
 									true,
 								},
-								
-								{
-									"62ab36a2-1604-895c-a438-1fb3852858c7",
-									true,
-								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -4127,11 +4112,6 @@ local tbl =
 								
 								{
 									"bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
-									true,
-								},
-								
-								{
-									"62ab36a2-1604-895c-a438-1fb3852858c7",
 									true,
 								},
 							},
@@ -4234,20 +4214,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 8,
-					},
-					
-					{
-						data = 
-						{
-							comparator = 2,
-							conditionType = 3,
-							eventArgOptionType = 3,
-							eventEntityName = "ヤーン",
-							filterTargetType = "Named Target",
-							hpValue = 1,
-							uuid = "62ab36a2-1604-895c-a438-1fb3852858c7",
-							version = 2,
-						},
 					},
 				},
 				mechanicTime = 253.4,
