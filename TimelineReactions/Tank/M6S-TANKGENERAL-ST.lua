@@ -658,7 +658,7 @@ local tbl =
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_Potion",
 							gVarValue = 2,
-							holdActionDuration = 314.60000610352,
+							holdActionDuration = 303.29998779297,
 							holdActionID = 846,
 							ignoreWeaveRules = true,
 							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
@@ -682,7 +682,7 @@ local tbl =
 							},
 							gVar = "ACR_RikuPLD3_Potion",
 							gVarValue = 2,
-							holdActionDuration = 314.60000610352,
+							holdActionDuration = 303.29998779297,
 							holdActionID = 846,
 							ignoreWeaveRules = true,
 							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
@@ -706,7 +706,7 @@ local tbl =
 							},
 							gVar = "ACR_RikuDRK3_Potion",
 							gVarValue = 2,
-							holdActionDuration = 314.60000610352,
+							holdActionDuration = 303.29998779297,
 							holdActionID = 846,
 							ignoreWeaveRules = true,
 							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
@@ -731,7 +731,7 @@ local tbl =
 							},
 							gVar = "ACR_RikuWAR3_Potion",
 							gVarValue = 2,
-							holdActionDuration = 314.60000610352,
+							holdActionDuration = 303.29998779297,
 							holdActionID = 846,
 							ignoreWeaveRules = true,
 							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
@@ -796,8 +796,7 @@ local tbl =
 				timelineIndex = 1,
 				timerEndOffset = 10,
 				timerOffset = -15,
-				timerStartOffset = 5,
-				uuid = "da0b2a80-9406-6505-902f-5eef9811920c",
+				uuid = "223ea680-fd6e-0716-82dd-5ce3a56c4737",
 				version = 2,
 			},
 		},
@@ -4229,6 +4228,11 @@ local tbl =
 									"46cb0109-6c3a-2f84-a2c4-31984cecfea2",
 									true,
 								},
+								
+								{
+									"73be0ea8-463a-c7f3-bbe6-2e5cdab7ea86",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -4252,6 +4256,11 @@ local tbl =
 								
 								{
 									"c87032d2-c148-cb6a-9a76-9a849a23a2b1",
+									true,
+								},
+								
+								{
+									"73be0ea8-463a-c7f3-bbe6-2e5cdab7ea86",
 									true,
 								},
 							},
@@ -4278,6 +4287,11 @@ local tbl =
 									"18f1b609-641e-ed19-9e7e-897be06b8984",
 									true,
 								},
+								
+								{
+									"73be0ea8-463a-c7f3-bbe6-2e5cdab7ea86",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -4301,6 +4315,11 @@ local tbl =
 								
 								{
 									"bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
+									true,
+								},
+								
+								{
+									"73be0ea8-463a-c7f3-bbe6-2e5cdab7ea86",
 									true,
 								},
 							},
@@ -4404,7 +4423,19 @@ local tbl =
 						},
 						inheritedIndex = 8,
 					},
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgOptionType = 2,
+							eventEntityContentID = 13832,
+							uuid = "73be0ea8-463a-c7f3-bbe6-2e5cdab7ea86",
+							version = 2,
+						},
+					},
 				},
+				eventType = 6,
 				mechanicTime = 253.4,
 				name = "Stance OFF",
 				timeRange = true,
