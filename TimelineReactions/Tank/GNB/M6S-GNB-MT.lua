@@ -1027,8 +1027,9 @@ local tbl =
 						},
 					},
 				},
+				loop = true,
 				mechanicTime = 107.5,
-				name = "HoC (15) ST",
+				name = "HoC (15)",
 				timeRange = true,
 				timelineIndex = 17,
 				timerEndOffset = 34,
@@ -1814,76 +1815,6 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 16151,
-							conditions = 
-							{
-								
-								{
-									"306b76dc-ee6e-e3dc-a1e0-8c60894dc919",
-									true,
-								},
-								
-								{
-									"cb23ea77-1f47-0a21-982c-a9c7f15ad1d1",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_Tankbar_AuroraSelf",
-							ignoreWeaveRules = true,
-							uuid = "6416a938-cb0c-be7b-bba2-31cd8d471cd4",
-							variableTogglesType = 3,
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							comparator = 2,
-							conditionType = 2,
-							hpValue = 90,
-							uuid = "306b76dc-ee6e-e3dc-a1e0-8c60894dc919",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 2,
-							buffID = 1835,
-							category = "Self",
-							uuid = "cb23ea77-1f47-0a21-982c-a9c7f15ad1d1",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 227.4,
-				name = "Aurora (regen) self",
-				timeRange = true,
-				timelineIndex = 37,
-				timerEndOffset = 29,
-				uuid = "6f0bd10f-d758-6b3b-84a2-37e84a2cb478",
-				version = 2,
-			},
-			inheritedIndex = 5,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
 							actionID = 25758,
 							conditions = 
 							{
@@ -1948,6 +1879,76 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16151,
+							conditions = 
+							{
+								
+								{
+									"306b76dc-ee6e-e3dc-a1e0-8c60894dc919",
+									true,
+								},
+								
+								{
+									"cb23ea77-1f47-0a21-982c-a9c7f15ad1d1",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_Tankbar_AuroraSelf",
+							ignoreWeaveRules = true,
+							uuid = "6416a938-cb0c-be7b-bba2-31cd8d471cd4",
+							variableTogglesType = 3,
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 90,
+							uuid = "306b76dc-ee6e-e3dc-a1e0-8c60894dc919",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1835,
+							category = "Self",
+							uuid = "cb23ea77-1f47-0a21-982c-a9c7f15ad1d1",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 227.4,
+				name = "Aurora (regen) self",
+				timeRange = true,
+				timelineIndex = 37,
+				timerEndOffset = 29,
+				uuid = "6f0bd10f-d758-6b3b-84a2-37e84a2cb478",
+				version = 2,
+			},
+			inheritedIndex = 5,
 		},
 	},
 	[41] = 
@@ -2242,7 +2243,7 @@ local tbl =
 				uuid = "6c6bafe6-2d07-4af5-b70a-950b66e1204d",
 				version = 2,
 			},
-			inheritedIndex = 5,
+			inheritedIndex = 6,
 		},
 	},
 	[42] = 
