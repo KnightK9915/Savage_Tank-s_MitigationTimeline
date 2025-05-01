@@ -929,6 +929,7 @@ local tbl =
 						},
 					},
 				},
+				loop = true,
 				mechanicTime = 107.5,
 				name = "TBN (25)",
 				timeRange = true,
