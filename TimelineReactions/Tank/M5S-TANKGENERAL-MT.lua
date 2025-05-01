@@ -3567,6 +3567,114 @@ local tbl =
 					{
 						data = 
 						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							conditions = 
+							{
+								
+								{
+									"4032ed2a-58f3-b158-9a6e-5dbaeba022dc",
+									true,
+								},
+								
+								{
+									"01d39de9-2218-25a2-b698-da0fd8fa34b0",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							holdActionDuration = 59,
+							holdActionID = 16461,
+							uuid = "a4990b20-49d1-3d77-bf22-79fefd186146",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							conditions = 
+							{
+								
+								{
+									"4032ed2a-58f3-b158-9a6e-5dbaeba022dc",
+									true,
+								},
+								
+								{
+									"8e350aa5-d6e2-514f-a42f-efc991a52a09",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							holdActionDuration = 59,
+							holdActionID = 7386,
+							uuid = "fe652ec0-fe5d-622d-87df-0e1431d2be6b",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							buffID = 4454,
+							category = "Self",
+							uuid = "4032ed2a-58f3-b158-9a6e-5dbaeba022dc",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "01d39de9-2218-25a2-b698-da0fd8fa34b0",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "8e350aa5-d6e2-514f-a42f-efc991a52a09",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 335.2,
+				name = "Hold Jump",
+				timeRange = true,
+				timelineIndex = 76,
+				timerEndOffset = 5,
+				timerStartOffset = -30,
+				uuid = "352bc7c7-e349-f5e5-bc90-45c779a5e85d",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 7386,
 							conditions = 
 							{
@@ -3578,6 +3686,11 @@ local tbl =
 								
 								{
 									"d65d00ec-0105-268d-ace7-2d367b431eea",
+									true,
+								},
+								
+								{
+									"dd58817f-03cb-031d-a66e-d03457a257cb",
 									true,
 								},
 							},
@@ -3606,6 +3719,11 @@ local tbl =
 									"141bab94-d7aa-79e7-9987-f20285c48bb1",
 									true,
 								},
+								
+								{
+									"dd58817f-03cb-031d-a66e-d03457a257cb",
+									true,
+								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -3631,6 +3749,11 @@ local tbl =
 									"058998a0-28fc-7f7e-b215-5d374c803274",
 									true,
 								},
+								
+								{
+									"dd58817f-03cb-031d-a66e-d03457a257cb",
+									true,
+								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -3654,6 +3777,11 @@ local tbl =
 								
 								{
 									"d9dbed19-25f5-7a0e-b7fa-ec367904db22",
+									true,
+								},
+								
+								{
+									"dd58817f-03cb-031d-a66e-d03457a257cb",
 									true,
 								},
 							},
@@ -3726,6 +3854,18 @@ local tbl =
 							uuid = "d9dbed19-25f5-7a0e-b7fa-ec367904db22",
 							version = 2,
 						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 4461,
+							category = "Self",
+							uuid = "dd58817f-03cb-031d-a66e-d03457a257cb",
+							version = 2,
+						},
+						inheritedIndex = 6,
 					},
 				},
 				eventType = 2,
