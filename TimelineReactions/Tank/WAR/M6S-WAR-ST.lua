@@ -1034,6 +1034,7 @@ local tbl =
 						},
 					},
 				},
+				loop = true,
 				mechanicTime = 107.5,
 				name = "BW/NF (20)",
 				timeRange = true,

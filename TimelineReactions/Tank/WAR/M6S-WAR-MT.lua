@@ -1034,6 +1034,7 @@ local tbl =
 						},
 					},
 				},
+				loop = true,
 				mechanicTime = 107.5,
 				name = "BW/NF (20)",
 				timeRange = true,
@@ -2250,6 +2251,95 @@ local tbl =
 					{
 						data = 
 						{
+							actionID = 3552,
+							conditions = 
+							{
+								
+								{
+									"765cdb05-b839-9d7e-96f5-d5b01de337bf",
+									true,
+								},
+								
+								{
+									"36dc885b-1f9c-0471-bc08-7a017c15d6e1",
+									true,
+								},
+								
+								{
+									"8064becd-1f2d-8232-a658-a417738c6747",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "a53a5321-b7a7-656f-8d8f-34823340d239",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3552,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "765cdb05-b839-9d7e-96f5-d5b01de337bf",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 60,
+							uuid = "36dc885b-1f9c-0471-bc08-7a017c15d6e1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								409,
+							},
+							category = "Self",
+							uuid = "8064becd-1f2d-8232-a658-a417738c6747",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 256.5,
+				name = "Equilibrium (Regen)",
+				timeRange = true,
+				timelineIndex = 41,
+				timerEndOffset = 22,
+				timerStartOffset = 0.5,
+				uuid = "8687eeae-dc6c-ad75-9683-a032a767b96b",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 25751,
 							conditions = 
 							{
@@ -2409,95 +2499,6 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 6,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 3552,
-							conditions = 
-							{
-								
-								{
-									"765cdb05-b839-9d7e-96f5-d5b01de337bf",
-									true,
-								},
-								
-								{
-									"36dc885b-1f9c-0471-bc08-7a017c15d6e1",
-									true,
-								},
-								
-								{
-									"8064becd-1f2d-8232-a658-a417738c6747",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuWAR3_CD",
-							ignoreWeaveRules = true,
-							uuid = "a53a5321-b7a7-656f-8d8f-34823340d239",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 3552,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "765cdb05-b839-9d7e-96f5-d5b01de337bf",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							comparator = 2,
-							conditionType = 2,
-							hpValue = 60,
-							uuid = "36dc885b-1f9c-0471-bc08-7a017c15d6e1",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffIDList = 
-							{
-								409,
-							},
-							category = "Self",
-							uuid = "8064becd-1f2d-8232-a658-a417738c6747",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 256.5,
-				name = "Equilibrium (Regen)",
-				timeRange = true,
-				timelineIndex = 41,
-				timerEndOffset = 22,
-				timerStartOffset = 0.5,
-				uuid = "8687eeae-dc6c-ad75-9683-a032a767b96b",
-				version = 2,
-			},
-			inheritedIndex = 5,
 		},
 	},
 	[42] = 
@@ -2722,7 +2723,7 @@ local tbl =
 				uuid = "ccc82369-bbb4-de85-b47d-a104dca6d3ce",
 				version = 2,
 			},
-			inheritedIndex = 1,
+			inheritedIndex = 2,
 		},
 		
 		{
@@ -2776,7 +2777,7 @@ local tbl =
 				uuid = "3b983e20-4ed0-4c8c-b26f-4ed25aa0edd8",
 				version = 2,
 			},
-			inheritedIndex = 2,
+			inheritedIndex = 3,
 		},
 		
 		{
@@ -2929,7 +2930,7 @@ local tbl =
 				uuid = "216b2ecd-f036-768e-b839-e604c83b1304",
 				version = 2,
 			},
-			inheritedIndex = 3,
+			inheritedIndex = 4,
 		},
 		
 		{
