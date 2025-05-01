@@ -3791,7 +3791,7 @@ local tbl =
 				},
 				loop = true,
 				mechanicTime = 217.2,
-				name = "判断鱼是否连线 feat.MuAi",
+				name = "Check if Fey is tethered feat.MuAi",
 				timeRange = true,
 				timelineIndex = 34,
 				timerEndOffset = 220,
@@ -4606,6 +4606,11 @@ local tbl =
 							{
 								
 								{
+									"8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
+									true,
+								},
+								
+								{
 									"d65d00ec-0105-268d-ace7-2d367b431eea",
 									true,
 								},
@@ -4631,6 +4636,11 @@ local tbl =
 							atomicPriority = true,
 							conditions = 
 							{
+								
+								{
+									"8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
+									true,
+								},
 								
 								{
 									"141bab94-d7aa-79e7-9987-f20285c48bb1",
@@ -4660,6 +4670,11 @@ local tbl =
 							{
 								
 								{
+									"8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
+									true,
+								},
+								
+								{
 									"058998a0-28fc-7f7e-b215-5d374c803274",
 									true,
 								},
@@ -4685,6 +4700,11 @@ local tbl =
 							atomicPriority = true,
 							conditions = 
 							{
+								
+								{
+									"8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
+									true,
+								},
 								
 								{
 									"d9dbed19-25f5-7a0e-b7fa-ec367904db22",
@@ -4713,7 +4733,7 @@ local tbl =
 						{
 							category = "Lua",
 							conditionLua = "return data.M6SFeatherRaysLineRightUp ~= nil and Player:GetTarget().id == data.M6SFeatherRaysLineRightUp",
-							name = "判断当前目标是否是右上鱼",
+							name = "Ckeck if target is (RightUpFey)",
 							uuid = "8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
 							version = 2,
 						},
@@ -5803,7 +5823,7 @@ local tbl =
 								},
 							},
 							gVar = "ACR_RikuGNB3_CD",
-							uuid = "2dadaa15-8812-5e00-a9b1-744f4254d37e",
+							uuid = "b07e1de2-0156-8863-9d95-b22073c299e2",
 							version = 2.1,
 						},
 						inheritedIndex = 1,
@@ -5817,6 +5837,11 @@ local tbl =
 							atomicPriority = true,
 							conditions = 
 							{
+								
+								{
+									"8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
+									true,
+								},
 								
 								{
 									"d65d00ec-0105-268d-ace7-2d367b431eea",
@@ -5846,6 +5871,11 @@ local tbl =
 							{
 								
 								{
+									"8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
+									true,
+								},
+								
+								{
 									"141bab94-d7aa-79e7-9987-f20285c48bb1",
 									true,
 								},
@@ -5871,6 +5901,11 @@ local tbl =
 							atomicPriority = true,
 							conditions = 
 							{
+								
+								{
+									"8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
+									true,
+								},
 								
 								{
 									"058998a0-28fc-7f7e-b215-5d374c803274",
@@ -5900,6 +5935,11 @@ local tbl =
 							{
 								
 								{
+									"8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
+									true,
+								},
+								
+								{
 									"d9dbed19-25f5-7a0e-b7fa-ec367904db22",
 									true,
 								},
@@ -5926,7 +5966,7 @@ local tbl =
 						{
 							category = "Lua",
 							conditionLua = "return data.M6SFeatherRaysLineRightDown ~= nil and Player:GetTarget().id == data.M6SFeatherRaysLineRightDown",
-							name = "判断当前目标是否是右下鱼",
+							name = "Ckeck if target is (RightDownFey)",
 							uuid = "8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
 							version = 2,
 						},
