@@ -803,7 +803,7 @@ local tbl =
 							category = "Self",
 							comparator = 2,
 							conditionType = 2,
-							hpValue = 80,
+							hpValue = 60,
 							uuid = "85019f5c-67f4-7194-b502-87e4a15bbcbb",
 							version = 2,
 						},
@@ -819,6 +819,7 @@ local tbl =
 						},
 					},
 				},
+				loop = true,
 				mechanicTime = 107.5,
 				name = "sheltron (15)",
 				timeRange = true,
@@ -828,7 +829,7 @@ local tbl =
 				uuid = "0fc3075e-0bfa-2abb-b098-1bd42c1765df",
 				version = 2,
 			},
-			inheritedIndex = 5,
+			inheritedIndex = 4,
 		},
 		
 		{
@@ -904,7 +905,7 @@ local tbl =
 							category = "Party",
 							comparator = 2,
 							conditionType = 2,
-							hpValue = 80,
+							hpValue = 60,
 							partyTargetType = "Other Tank",
 							uuid = "225770af-0877-da33-9de4-dc8b513d4bc8",
 							version = 2,
@@ -922,6 +923,7 @@ local tbl =
 						},
 					},
 				},
+				loop = true,
 				mechanicTime = 107.5,
 				name = "interven ST (15)",
 				timeRange = true,
@@ -2143,92 +2145,6 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 36920,
-							conditions = 
-							{
-								
-								{
-									"aceb9492-b930-0c6d-aaca-9fb9e7c2fb2a",
-									true,
-								},
-								
-								{
-									"39980eaa-8359-8a24-b2f0-ff1edb790301",
-									true,
-								},
-								
-								{
-									"2eaeff09-b9fd-05ec-b135-351a109a16d1",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "1ff7ecf5-69f2-0d51-9683-ee0ea48d1ed1",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 36920,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "aceb9492-b930-0c6d-aaca-9fb9e7c2fb2a",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionCDValue = 1,
-							actionID = 30,
-							category = "Self",
-							conditionType = 4,
-							uuid = "39980eaa-8359-8a24-b2f0-ff1edb790301",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 2,
-							buffID = 82,
-							category = "Self",
-							uuid = "2eaeff09-b9fd-05ec-b135-351a109a16d1",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 317.7,
-				name = "2.Guardian (40)",
-				timeRange = true,
-				timelineIndex = 50,
-				timerEndOffset = 25,
-				timerStartOffset = 10,
-				uuid = "594d8611-ec57-4d38-a36f-b42af6c7af30",
-				version = 2,
-			},
-			inheritedIndex = 6,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
 							actionID = 25746,
 							conditions = 
 							{
@@ -2316,6 +2232,92 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36920,
+							conditions = 
+							{
+								
+								{
+									"aceb9492-b930-0c6d-aaca-9fb9e7c2fb2a",
+									true,
+								},
+								
+								{
+									"39980eaa-8359-8a24-b2f0-ff1edb790301",
+									true,
+								},
+								
+								{
+									"2eaeff09-b9fd-05ec-b135-351a109a16d1",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "1ff7ecf5-69f2-0d51-9683-ee0ea48d1ed1",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36920,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "aceb9492-b930-0c6d-aaca-9fb9e7c2fb2a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionCDValue = 1,
+							actionID = 30,
+							category = "Self",
+							conditionType = 4,
+							uuid = "39980eaa-8359-8a24-b2f0-ff1edb790301",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 82,
+							category = "Self",
+							uuid = "2eaeff09-b9fd-05ec-b135-351a109a16d1",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 317.7,
+				name = "2.Guardian (40)",
+				timeRange = true,
+				timelineIndex = 50,
+				timerEndOffset = 25,
+				timerStartOffset = 10,
+				uuid = "594d8611-ec57-4d38-a36f-b42af6c7af30",
+				version = 2,
+			},
+			inheritedIndex = 6,
 		},
 		
 		{

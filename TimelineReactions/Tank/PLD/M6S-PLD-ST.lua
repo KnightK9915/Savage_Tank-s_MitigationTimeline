@@ -327,6 +327,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 22.4,
 				name = "interven ST (15)",
 				timeRange = true,
@@ -718,6 +719,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 81.9,
 				name = "interven ST (15)",
 				timeRange = true,
@@ -731,6 +733,107 @@ local tbl =
 	},
 	[17] = 
 	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+								
+								{
+									"b758406c-5054-8519-89ee-8782bae615cf",
+									true,
+								},
+								
+								{
+									"85019f5c-67f4-7194-b502-87e4a15bbcbb",
+									true,
+								},
+								
+								{
+									"a94cd6c8-a745-e6ff-bf92-a325fd926aba",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 4454,
+							category = "Self",
+							uuid = "b758406c-5054-8519-89ee-8782bae615cf",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 60,
+							uuid = "85019f5c-67f4-7194-b502-87e4a15bbcbb",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 99.999000549316,
+							uuid = "a94cd6c8-a745-e6ff-bf92-a325fd926aba",
+							version = 2,
+						},
+					},
+				},
+				loop = true,
+				mechanicTime = 107.5,
+				name = "sheltron (15)",
+				timeRange = true,
+				timelineIndex = 17,
+				timerEndOffset = 34,
+				timerStartOffset = 1,
+				uuid = "18064425-7e5b-8db9-949b-61051afadc43",
+				version = 2,
+			},
+			inheritedIndex = 6,
+		},
 		
 		{
 			data = 
@@ -805,7 +908,7 @@ local tbl =
 							category = "Party",
 							comparator = 2,
 							conditionType = 2,
-							hpValue = 80,
+							hpValue = 60,
 							partyTargetType = "Other Tank",
 							uuid = "225770af-0877-da33-9de4-dc8b513d4bc8",
 							version = 2,
@@ -823,6 +926,7 @@ local tbl =
 						},
 					},
 				},
+				loop = true,
 				mechanicTime = 107.5,
 				name = "interven ST (15)",
 				timeRange = true,
@@ -833,106 +937,6 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 5,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 25746,
-							conditions = 
-							{
-								
-								{
-									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
-									true,
-								},
-								
-								{
-									"b758406c-5054-8519-89ee-8782bae615cf",
-									true,
-								},
-								
-								{
-									"85019f5c-67f4-7194-b502-87e4a15bbcbb",
-									true,
-								},
-								
-								{
-									"a94cd6c8-a745-e6ff-bf92-a325fd926aba",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 6,
-							gaugeValue = 50,
-							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 2,
-							buffID = 4454,
-							category = "Self",
-							uuid = "b758406c-5054-8519-89ee-8782bae615cf",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							comparator = 2,
-							conditionType = 2,
-							hpValue = 80,
-							uuid = "85019f5c-67f4-7194-b502-87e4a15bbcbb",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							conditionType = 4,
-							enmityValue = 99.999000549316,
-							uuid = "a94cd6c8-a745-e6ff-bf92-a325fd926aba",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 107.5,
-				name = "sheltron (15)",
-				timeRange = true,
-				timelineIndex = 17,
-				timerEndOffset = 34,
-				timerStartOffset = 1,
-				uuid = "18064425-7e5b-8db9-949b-61051afadc43",
-				version = 2,
-			},
-			inheritedIndex = 6,
 		},
 	},
 	[22] = 
