@@ -2321,7 +2321,7 @@ local tbl =
 						{
 							comparator = 2,
 							conditionType = 4,
-							enmityValue = 99,
+							enmityValue = 99.999000549316,
 							uuid = "f0eaecb7-c7fd-4486-a153-e2ff288e57b4",
 							version = 2,
 						},
@@ -5608,6 +5608,40 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7537,
+							gVar = "ACR_RikuPLD3_Hotbar_ShirkOT",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5081694c-978d-1724-a1f2-f6c6f17dc2bf",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 275.5,
+				name = "Shirk OT",
+				timeRange = true,
+				timelineIndex = 42,
+				timerEndOffset = 2,
+				timerStartOffset = -2,
+				uuid = "00cfbbca-10a6-eefb-abba-6847872b3e9f",
+				version = 2,
+			},
+			inheritedIndex = 11,
 		},
 	},
 	[43] = 
