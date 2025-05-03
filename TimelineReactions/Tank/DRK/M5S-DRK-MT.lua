@@ -354,6 +354,11 @@ local tbl =
 									"5cf17619-127d-b210-88cb-64658ca76476",
 									true,
 								},
+								
+								{
+									"2946b167-76ae-8893-a912-726e5868c3e8",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -376,12 +381,25 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 3,
+							buffDuration = 3,
+							buffID = 810,
+							category = "Self",
+							comparator = 2,
+							uuid = "2946b167-76ae-8893-a912-726e5868c3e8",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 15.3,
 				name = "Vigil (for regen)",
 				timeRange = true,
 				timelineIndex = 2,
-				timerEndOffset = 5,
+				timerEndOffset = 10,
 				timerOffset = -5,
 				uuid = "360a5f9d-c833-899b-97a2-30f1f95f4111",
 				version = 2,

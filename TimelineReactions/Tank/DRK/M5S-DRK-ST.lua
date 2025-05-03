@@ -355,12 +355,18 @@ local tbl =
 									"5cf17619-127d-b210-88cb-64658ca76476",
 									true,
 								},
+								
+								{
+									"89a748f9-f22d-bd86-8ee8-9aafcbd5450d",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
 							uuid = "10a88836-1aee-2730-ae23-3306adfd5729",
 							version = 2.1,
 						},
+						inheritedIndex = 1,
 					},
 				},
 				conditions = 
@@ -377,12 +383,25 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 3,
+							buffDuration = 3,
+							buffID = 810,
+							category = "Self",
+							comparator = 2,
+							uuid = "89a748f9-f22d-bd86-8ee8-9aafcbd5450d",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 15.3,
 				name = "Vigil (for regen)",
 				timeRange = true,
 				timelineIndex = 2,
-				timerEndOffset = 5,
+				timerEndOffset = 10,
 				timerOffset = -5,
 				uuid = "b1b96672-627b-b255-9c74-bf8fd6943060",
 				version = 2,
@@ -2100,6 +2119,77 @@ local tbl =
 					{
 						data = 
 						{
+							actionID = 36927,
+							conditions = 
+							{
+								
+								{
+									"5cf17619-127d-b210-88cb-64658ca76476",
+									true,
+								},
+								
+								{
+									"89a748f9-f22d-bd86-8ee8-9aafcbd5450d",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "10a88836-1aee-2730-ae23-3306adfd5729",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36927,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "5cf17619-127d-b210-88cb-64658ca76476",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 3,
+							buffDuration = 3,
+							buffID = 810,
+							category = "Self",
+							comparator = 2,
+							uuid = "89a748f9-f22d-bd86-8ee8-9aafcbd5450d",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 512.3,
+				name = "Vigil (for regen)",
+				timeRange = true,
+				timelineIndex = 115,
+				timerEndOffset = 10,
+				timerOffset = -5,
+				uuid = "92caf119-601d-ac94-9f1e-b9ab4385ba52",
+				version = 2,
+			},
+			inheritedIndex = 8,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 25754,
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -2122,7 +2212,7 @@ local tbl =
 				uuid = "92a1bcb2-f42c-5b30-a6a3-bf7d8e0d048a",
 				version = 2,
 			},
-			inheritedIndex = 8,
+			inheritedIndex = 9,
 		},
 		
 		{
@@ -2175,7 +2265,7 @@ local tbl =
 				uuid = "8e101616-9b01-b3a8-b845-c16ab5e9f316",
 				version = 2,
 			},
-			inheritedIndex = 9,
+			inheritedIndex = 10,
 		},
 	},
 	[117] = 
