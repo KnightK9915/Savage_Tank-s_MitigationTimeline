@@ -4112,7 +4112,7 @@ local tbl =
 				name = "Check if Fey is tethered feat.MuAi",
 				timeRange = true,
 				timelineIndex = 34,
-				timerEndOffset = 220,
+				timerEndOffset = 193.69999694824,
 				uuid = "8c38e4f8-18f8-cf41-9a91-c89a19defb47",
 				version = 2,
 			},
