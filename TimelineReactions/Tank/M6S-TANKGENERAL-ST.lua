@@ -6822,155 +6822,6 @@ local tbl =
 				version = 2,
 			},
 		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "ACR",
-							actionID = 16142,
-							conditions = 
-							{
-								
-								{
-									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_AOE",
-							ignoreWeaveRules = true,
-							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							aType = "ACR",
-							actionID = 28,
-							conditions = 
-							{
-								
-								{
-									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-									true,
-								},
-							},
-							gVar = "ACR_RikuPLD3_SmartAOE",
-							ignoreWeaveRules = true,
-							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							aType = "ACR",
-							actionID = 3629,
-							conditions = 
-							{
-								
-								{
-									"231b6a98-9a2f-8a76-bdab-236bd5622569",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_SmartAOE",
-							ignoreWeaveRules = true,
-							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
-							version = 2.1,
-						},
-						inheritedIndex = 3,
-					},
-					
-					{
-						data = 
-						{
-							aType = "ACR",
-							actionID = 48,
-							conditions = 
-							{
-								
-								{
-									"bc680113-345f-6d33-add6-1f151475b614",
-									true,
-								},
-							},
-							gVar = "ACR_RikuWAR3_SmartAOE",
-							ignoreWeaveRules = true,
-							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 13,
-							jobValue = "GUNBREAKER",
-							name = "GNB Job",
-							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 13,
-							jobValue = "PALADIN",
-							name = "PLD Job",
-							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 13,
-							jobValue = "DARKKNIGHT",
-							name = "DRK Job",
-							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							conditionType = 9,
-							jobValue = "WARRIOR",
-							name = "WAR Job",
-							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 314.6,
-				name = "Smart AoE ON",
-				timelineIndex = 47,
-				timerStartOffset = -10,
-				uuid = "9f10ddd3-5065-572e-95af-1fb57c63d3b8",
-				version = 2,
-			},
-			inheritedIndex = 4,
-		},
 	},
 	[48] = 
 	{
@@ -7153,13 +7004,13 @@ local tbl =
 						},
 					},
 				},
+				eventType = 12,
 				loop = true,
 				mechanicTime = 325.7,
 				name = "Stun Jabberwock",
 				timeRange = true,
 				timelineIndex = 52,
 				timerEndOffset = 10,
-				timerStartOffset = 0.5,
 				uuid = "7f67c400-6402-e67f-af87-a1f733ed92d2",
 				version = 2,
 			},
