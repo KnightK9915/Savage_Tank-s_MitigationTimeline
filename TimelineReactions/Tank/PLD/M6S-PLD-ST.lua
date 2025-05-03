@@ -1657,13 +1657,14 @@ local tbl =
 								},
 								
 								{
-									"3e9b55c6-b654-2126-9301-1bea02920fe3",
+									"e3919995-cae9-0cf8-b822-9f6fb5f6b07b",
 									true,
 								},
 							},
-							gVar = "ACR_RikuPLD3_CD",
+							gVar = "ACR_RikuPLD3_Tankbar_HolySheltron",
 							ignoreWeaveRules = true,
 							uuid = "db2d70ef-13fc-e740-9cad-b36dff6e18a1",
+							variableTogglesType = 3,
 							version = 2.1,
 						},
 						inheritedIndex = 1,
@@ -1684,7 +1685,7 @@ local tbl =
 								},
 								
 								{
-									"3e9b55c6-b654-2126-9301-1bea02920fe3",
+									"e3919995-cae9-0cf8-b822-9f6fb5f6b07b",
 									true,
 								},
 							},
@@ -1734,7 +1735,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 2,
 							hpValue = 50,
-							uuid = "3e9b55c6-b654-2126-9301-1bea02920fe3",
+							uuid = "e3919995-cae9-0cf8-b822-9f6fb5f6b07b",
 							version = 2,
 						},
 					},
