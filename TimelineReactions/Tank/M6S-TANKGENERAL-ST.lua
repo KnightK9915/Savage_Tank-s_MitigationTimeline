@@ -4440,6 +4440,7 @@ local tbl =
 							setTarget = true,
 							targetContentID = 13832,
 							targetName = "ヤーン",
+							targetSubType = "Highest HP",
 							targetType = "ContentID",
 							uuid = "2e6395ba-d949-9e2e-8b96-fc2af3995b9e",
 							version = 2.1,
@@ -4450,6 +4451,7 @@ local tbl =
 						data = 
 						{
 							actionID = 7533,
+							atomicPriority = true,
 							gVar = "ACR_RikuGNB3_CD",
 							ignoreWeaveRules = true,
 							targetContentID = 13832,
@@ -5989,6 +5991,7 @@ local tbl =
 						data = 
 						{
 							actionID = 7533,
+							atomicPriority = true,
 							gVar = "ACR_RikuGNB3_CD",
 							ignoreWeaveRules = true,
 							targetContentID = 13832,
@@ -6997,6 +7000,7 @@ local tbl =
 						data = 
 						{
 							actionID = 7533,
+							atomicPriority = true,
 							gVar = "ACR_RikuGNB3_CD",
 							ignoreWeaveRules = true,
 							targetContentID = 13832,
