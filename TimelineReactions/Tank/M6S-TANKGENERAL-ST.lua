@@ -3919,6 +3919,58 @@ local tbl =
 			},
 		},
 	},
+	[34] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "local featherRays = MEntityList(\"targetable,alive,attackable,contentid=13834\")\nif featherRays ~= nil then\n    for _, ent in pairs(featherRays) do\n        local tethers = Argus.getTethersOnEnt(ent.id)\n        if tethers then\n            if ent.pos.x > 100 then\n                if ent.pos.z > 100 then\n                    data.M6SFeatherRaysLineRightDown = ent.id\n                else\n                    data.M6SFeatherRaysLineRightUp = ent.id\n                end\n            else\n                if ent.pos.z > 100 then\n                    data.M6SFeatherRaysLineLeftDown = ent.id\n                else\n                    data.M6SFeatherRaysLineLeftUp = ent.id\n                end\n            end\n        end\n    end\nend\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"871ff39f-7f54-aa59-84e3-03ab19fa9152",
+									true,
+								},
+							},
+							gVar = "ACR_TensorViper3_CD",
+							uuid = "c70b39f4-017a-6588-ada4-fceec90cd0b4",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.M6SFeatherRaysLineRightDown == nil \nor data.M6SFeatherRaysLineRightUp == nil\nor data.M6SFeatherRaysLineLeftDown == nil \nor data.M6SFeatherRaysLineLeftUp == nil",
+							uuid = "871ff39f-7f54-aa59-84e3-03ab19fa9152",
+							version = 2,
+						},
+					},
+				},
+				loop = true,
+				mechanicTime = 217.2,
+				name = "Check if Fey is tethered feat.MuAi",
+				timeRange = true,
+				timelineIndex = 34,
+				timerEndOffset = 193.69999694824,
+				uuid = "813b61a8-9d01-f335-a36c-6730c15f09af",
+				version = 2,
+			},
+		},
+	},
 	[35] = 
 	{
 		
@@ -5210,6 +5262,405 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 5,
+		},
+	},
+	[40] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "Player:SetTarget(data.M6SFeatherRaysLineRightUp)\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"169020c1-793f-cf51-88e3-47ed73e813d2",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "43c338fb-1916-c79b-b31d-f92f2d2c6060",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.M6SFeatherRaysLineRightUp ~= nil",
+							uuid = "169020c1-793f-cf51-88e3-47ed73e813d2",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				mechanicTime = 256.5,
+				name = "SelectRightUp",
+				timeRange = true,
+				timelineIndex = 40,
+				timerEndOffset = 22,
+				timerStartOffset = 5,
+				uuid = "7e0424d1-b486-4308-bfde-73647e127c3d",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "local target  = Player:GetTarget()\nd(target.id)\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "2dadaa15-8812-5e00-a9b1-744f4254d37e",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7386,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
+									true,
+								},
+								
+								{
+									"d65d00ec-0105-268d-ace7-2d367b431eea",
+									true,
+								},
+								
+								{
+									"1b564b35-638f-3e37-8800-9fb551bfe6d2",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "2d012730-d487-9fb8-81b6-66af39a29bba",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16461,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
+									true,
+								},
+								
+								{
+									"141bab94-d7aa-79e7-9987-f20285c48bb1",
+									true,
+								},
+								
+								{
+									"1b564b35-638f-3e37-8800-9fb551bfe6d2",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "4ba76f6c-741d-feab-b500-b08ad7b97c5b",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36926,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
+									true,
+								},
+								
+								{
+									"058998a0-28fc-7f7e-b215-5d374c803274",
+									true,
+								},
+								
+								{
+									"1b564b35-638f-3e37-8800-9fb551bfe6d2",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "c7be4aad-5362-c644-8cd3-e1700a519ae1",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36934,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
+									true,
+								},
+								
+								{
+									"d9dbed19-25f5-7a0e-b7fa-ec367904db22",
+									true,
+								},
+								
+								{
+									"1b564b35-638f-3e37-8800-9fb551bfe6d2",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "cf600fc3-8a2b-2639-ae39-fdaa4595eb7f",
+							version = 2.1,
+						},
+						inheritedIndex = 4,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.M6SFeatherRaysLineRightUp ~= nil and Player:GetTarget().id == data.M6SFeatherRaysLineRightUp",
+							name = "Ckeck if target is (RightUpFey)",
+							uuid = "8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "WARRIOR",
+							name = "Warrior",
+							uuid = "d65d00ec-0105-268d-ace7-2d367b431eea",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "Paladin",
+							uuid = "141bab94-d7aa-79e7-9987-f20285c48bb1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "Darkknight",
+							uuid = "058998a0-28fc-7f7e-b215-5d374c803274",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "Gunbreaker",
+							uuid = "d9dbed19-25f5-7a0e-b7fa-ec367904db22",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 2,
+							contentid = 13834,
+							uuid = "1b564b35-638f-3e37-8800-9fb551bfe6d2",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 256.5,
+				name = "Instant Dash towards Fey",
+				timeRange = true,
+				timelineIndex = 40,
+				timerEndOffset = 22,
+				timerStartOffset = 5.5,
+				uuid = "bd3d3025-3b93-b2af-86ff-bb2e54ef4a59",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							conditions = 
+							{
+								
+								{
+									"4032ed2a-58f3-b158-9a6e-5dbaeba022dc",
+									true,
+								},
+								
+								{
+									"01d39de9-2218-25a2-b698-da0fd8fa34b0",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							holdActionDuration = 30,
+							holdActionID = 16461,
+							uuid = "a4990b20-49d1-3d77-bf22-79fefd186146",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							conditions = 
+							{
+								
+								{
+									"4032ed2a-58f3-b158-9a6e-5dbaeba022dc",
+									true,
+								},
+								
+								{
+									"8e350aa5-d6e2-514f-a42f-efc991a52a09",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							holdActionDuration = 30,
+							holdActionID = 7386,
+							uuid = "fe652ec0-fe5d-622d-87df-0e1431d2be6b",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							buffID = 4454,
+							category = "Self",
+							uuid = "4032ed2a-58f3-b158-9a6e-5dbaeba022dc",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "01d39de9-2218-25a2-b698-da0fd8fa34b0",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "8e350aa5-d6e2-514f-a42f-efc991a52a09",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 256.5,
+				name = "Hold Jump",
+				timeRange = true,
+				timelineIndex = 40,
+				timerStartOffset = -30,
+				uuid = "5434e64b-c30a-7516-9940-28b3374f9dbf",
+				version = 2,
+			},
+			inheritedIndex = 1,
 		},
 	},
 	[42] = 
