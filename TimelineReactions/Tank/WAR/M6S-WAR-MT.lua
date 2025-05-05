@@ -2003,7 +2003,7 @@ local tbl =
 							category = "Self",
 							comparator = 2,
 							conditionType = 2,
-							hpValue = 50,
+							hpValue = 30,
 							uuid = "0b88a785-a885-b1ab-bc81-321c03dd897b",
 							version = 2,
 						},
@@ -2038,6 +2038,16 @@ local tbl =
 									"1465472a-0137-2f48-b9fc-aa7b9991077a",
 									true,
 								},
+								
+								{
+									"80e1f59a-be7f-924d-8afa-a37be3dd5bbe",
+									true,
+								},
+								
+								{
+									"6da4053a-1c05-c6b0-9857-bd93562132ad",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -2060,6 +2070,19 @@ local tbl =
 							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
 							version = 2,
 						},
+					},
+					
+					{
+						data = 
+						{
+							actionCDValue = 1,
+							actionID = 43,
+							category = "Self",
+							conditionType = 4,
+							uuid = "80e1f59a-be7f-924d-8afa-a37be3dd5bbe",
+							version = 2,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -2328,7 +2351,7 @@ local tbl =
 				uuid = "8687eeae-dc6c-ad75-9683-a032a767b96b",
 				version = 2,
 			},
-			inheritedIndex = 5,
+			inheritedIndex = 4,
 		},
 		
 		{
@@ -2498,7 +2521,7 @@ local tbl =
 				uuid = "c76320ef-af35-792f-995f-26363190e42d",
 				version = 2,
 			},
-			inheritedIndex = 6,
+			inheritedIndex = 5,
 		},
 	},
 	[42] = 

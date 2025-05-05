@@ -2280,7 +2280,7 @@ local tbl =
 				name = "1.Rampart (20)",
 				timeRange = true,
 				timelineIndex = 48,
-				timerEndOffset = 20,
+				timerEndOffset = 71,
 				timerOffset = -15,
 				timerStartOffset = 0.5,
 				uuid = "3fe0ec57-6b32-287a-8f14-add614de2141",
@@ -2306,6 +2306,11 @@ local tbl =
 									"aeb29bc7-62f7-4fec-a7f0-e449ceee7e7b",
 									true,
 								},
+								
+								{
+									"cc90aa09-65c5-2820-81ab-afb71d4c8df0",
+									true,
+								},
 							},
 							gVar = "ACR_RikuWAR3_CD",
 							ignoreWeaveRules = true,
@@ -2329,12 +2334,24 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 20,
+							uuid = "cc90aa09-65c5-2820-81ab-afb71d4c8df0",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 317.7,
 				name = "2.Holmgang (Invincible)",
 				timeRange = true,
 				timelineIndex = 48,
-				timerEndOffset = 30,
+				timerEndOffset = 71,
 				timerStartOffset = 20,
 				uuid = "6f0729a9-349f-d7a4-9835-91fb56b37b70",
 				version = 2,
@@ -2359,6 +2376,16 @@ local tbl =
 									"0aeec9c1-c189-d8ba-8695-4f2d2314a955",
 									true,
 								},
+								
+								{
+									"b21a6a0f-851d-d5d6-bc96-e3e90a06ccdb",
+									true,
+								},
+								
+								{
+									"11ba2f34-17a6-10fb-a989-35cd19e4c1fa",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuWAR3_CD",
@@ -2366,6 +2393,7 @@ local tbl =
 							uuid = "e3339fc5-29f8-ea78-b047-31e1f4105077",
 							version = 2.1,
 						},
+						inheritedIndex = 1,
 					},
 				},
 				conditions = 
@@ -2382,12 +2410,39 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							actionCDValue = 1,
+							actionID = 43,
+							category = "Self",
+							conditionType = 4,
+							uuid = "b21a6a0f-851d-d5d6-bc96-e3e90a06ccdb",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								409,
+							},
+							category = "Self",
+							uuid = "11ba2f34-17a6-10fb-a989-35cd19e4c1fa",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 317.7,
 				name = "3.Damnation (40)",
 				timeRange = true,
 				timelineIndex = 48,
-				timerEndOffset = 45,
+				timerEndOffset = 71,
 				timerOffset = -5,
 				timerStartOffset = 30,
 				uuid = "0e538a52-5bfc-a675-bdbd-76e1f57aebdd",
@@ -2413,6 +2468,16 @@ local tbl =
 									"79d32c05-7ccb-e6a2-9493-167f1c04431a",
 									true,
 								},
+								
+								{
+									"fac89667-94a2-e4fe-ad4d-1a84564e71df",
+									true,
+								},
+								
+								{
+									"aea58a6b-ab0d-c1be-a311-5bb8d58ca2c6",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuWAR3_CD",
@@ -2436,12 +2501,38 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							actionCDValue = 1,
+							actionID = 36923,
+							category = "Self",
+							conditionType = 4,
+							uuid = "fac89667-94a2-e4fe-ad4d-1a84564e71df",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								3832,
+							},
+							category = "Self",
+							uuid = "aea58a6b-ab0d-c1be-a311-5bb8d58ca2c6",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 317.7,
 				name = "4.ToB (HP Upscale)",
 				timeRange = true,
 				timelineIndex = 48,
-				timerEndOffset = 55,
+				timerEndOffset = 71,
 				timerOffset = -1,
 				timerStartOffset = 45,
 				uuid = "b5b2fd4f-a807-76ad-936e-ce6cbe8737ba",
@@ -2755,7 +2846,7 @@ local tbl =
 				name = "BW/NF (regen during holmgang)",
 				timeRange = true,
 				timelineIndex = 48,
-				timerEndOffset = 30,
+				timerEndOffset = 71,
 				timerStartOffset = 20,
 				uuid = "fc56e7dd-916b-e7d3-9242-2ff46a92b60d",
 				version = 2,
