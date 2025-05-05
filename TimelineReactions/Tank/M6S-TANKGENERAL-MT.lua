@@ -4107,6 +4107,7 @@ local tbl =
 						},
 					},
 				},
+				eventType = 12,
 				loop = true,
 				mechanicTime = 217.2,
 				name = "Check if Fey is tethered feat.MuAi",
@@ -5329,12 +5330,13 @@ local tbl =
 						inheritedIndex = 1,
 					},
 				},
+				eventType = 12,
 				mechanicTime = 256.5,
 				name = "SelectRightUp",
 				timeRange = true,
 				timelineIndex = 40,
 				timerEndOffset = 22,
-				timerStartOffset = 5,
+				timerStartOffset = 4,
 				uuid = "45898bb7-a470-0246-aed2-7302572a6bda",
 				version = 2,
 			},
@@ -5569,6 +5571,7 @@ local tbl =
 						},
 					},
 				},
+				eventType = 12,
 				mechanicTime = 256.5,
 				name = "Instant Dash towards Fey",
 				timeRange = true,
@@ -5578,6 +5581,7 @@ local tbl =
 				uuid = "d445857d-c181-e62d-a3c8-fb743a6ff4f8",
 				version = 2,
 			},
+			inheritedIndex = 2,
 		},
 		
 		{
@@ -6377,6 +6381,18 @@ local tbl =
 						{
 							aType = "Misc",
 							gVar = "ACR_RikuPLD3_CD",
+							untarget = true,
+							uuid = "c58c7dad-060a-e99e-95be-05038d9087a3",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							aType = "Misc",
+							gVar = "ACR_RikuPLD3_CD",
 							setTarget = true,
 							targetContentID = 13833,
 							targetType = "ContentID",
@@ -6390,6 +6406,7 @@ local tbl =
 						data = 
 						{
 							actionID = 7540,
+							allowInterrupt = true,
 							atomicPriority = true,
 							conditions = 
 							{
@@ -6440,6 +6457,7 @@ local tbl =
 							uuid = "da4d9478-385c-de11-8dd0-d296b8882dd1",
 							version = 2.1,
 						},
+						inheritedIndex = 4,
 					},
 				},
 				conditions = 
@@ -6496,7 +6514,8 @@ local tbl =
 				name = "Stun Jabberwock",
 				timeRange = true,
 				timelineIndex = 45,
-				timerEndOffset = 10,
+				timerEndOffset = 15,
+				timerStartOffset = 3,
 				uuid = "8850ec5a-62ac-5e2f-a3bc-1676ef22324e",
 				version = 2,
 			},
@@ -7882,12 +7901,13 @@ local tbl =
 						inheritedIndex = 1,
 					},
 				},
+				eventType = 12,
 				mechanicTime = 317.7,
 				name = "SelectRightDown",
 				timeRange = true,
 				timelineIndex = 49,
 				timerEndOffset = 22,
-				timerStartOffset = 5,
+				timerStartOffset = 4,
 				uuid = "1a57d7e7-4a57-9ce3-9e75-2682f3ff7ac7",
 				version = 2,
 			},
@@ -8122,6 +8142,7 @@ local tbl =
 						},
 					},
 				},
+				eventType = 12,
 				mechanicTime = 317.7,
 				name = "Instant Dash towards Fey",
 				timeRange = true,
