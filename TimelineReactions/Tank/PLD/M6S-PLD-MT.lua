@@ -1790,6 +1790,11 @@ local tbl =
 									"e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
 									true,
 								},
+								
+								{
+									"de92f306-5250-77b4-b8df-4cbae0e6ea88",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -1813,13 +1818,25 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 50,
+							uuid = "de92f306-5250-77b4-b8df-4cbae0e6ea88",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 256.5,
 				name = "1.Hollowed Ground (Invinsible)",
 				timeRange = true,
 				timelineIndex = 41,
 				timerEndOffset = 22,
-				timerStartOffset = 5,
+				timerStartOffset = 0.5,
 				uuid = "57f4d9af-a268-5f46-927a-ebac9c0c8b2e",
 				version = 2,
 			},
@@ -1841,6 +1858,11 @@ local tbl =
 								
 								{
 									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+								
+								{
+									"1253bace-f2ad-6652-9795-0be98732b856",
 									true,
 								},
 								
@@ -1875,6 +1897,19 @@ local tbl =
 					{
 						data = 
 						{
+							actionCDValue = 1,
+							actionID = 30,
+							category = "Self",
+							conditionType = 4,
+							uuid = "1253bace-f2ad-6652-9795-0be98732b856",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
 							buffCheckType = 5,
 							buffID = 82,
 							buffIDList = 
@@ -1891,9 +1926,9 @@ local tbl =
 				name = "2.Rampart (20)",
 				timeRange = true,
 				timelineIndex = 41,
-				timerEndOffset = 20,
+				timerEndOffset = 22,
 				timerOffset = -15,
-				timerStartOffset = 15,
+				timerStartOffset = 10,
 				uuid = "86a391f1-da94-d854-8cf8-722ea8bb2b49",
 				version = 2,
 			},

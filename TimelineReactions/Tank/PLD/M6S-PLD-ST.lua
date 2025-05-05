@@ -1952,9 +1952,9 @@ local tbl =
 				name = "1.Rampart (20)",
 				timeRange = true,
 				timelineIndex = 48,
-				timerEndOffset = 20,
+				timerEndOffset = 71,
 				timerOffset = -15,
-				timerStartOffset = 1,
+				timerStartOffset = 0.5,
 				uuid = "bc6f6801-b0f6-ba79-beb6-ea95e263ba9e",
 				version = 2,
 			},
@@ -1976,6 +1976,11 @@ local tbl =
 								
 								{
 									"e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
+									true,
+								},
+								
+								{
+									"f5c616ca-7192-cd29-b9c3-6403768e888a",
 									true,
 								},
 							},
@@ -2001,12 +2006,24 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 50,
+							uuid = "f5c616ca-7192-cd29-b9c3-6403768e888a",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 317.7,
 				name = "2.Hollowed Ground (Invinsible)",
 				timeRange = true,
 				timelineIndex = 48,
-				timerEndOffset = 30,
+				timerEndOffset = 71,
 				timerStartOffset = 20,
 				uuid = "c47655b7-98f6-553c-90f8-8ef16009b523",
 				version = 2,
@@ -2063,6 +2080,7 @@ local tbl =
 							uuid = "aceb9492-b930-0c6d-aaca-9fb9e7c2fb2a",
 							version = 2,
 						},
+						inheritedIndex = 1,
 					},
 					
 					{
@@ -2092,7 +2110,7 @@ local tbl =
 				name = "3.Guardian (40)",
 				timeRange = true,
 				timelineIndex = 48,
-				timerEndOffset = 45,
+				timerEndOffset = 71,
 				timerStartOffset = 30,
 				uuid = "9158efed-682e-708f-8bf6-9c13c49de84d",
 				version = 2,
@@ -2115,6 +2133,16 @@ local tbl =
 								
 								{
 									"dda24e11-6d3b-8a80-80e0-e75a85a9579a",
+									true,
+								},
+								
+								{
+									"ef81fc90-bdb2-692a-bea8-3779590871e5",
+									true,
+								},
+								
+								{
+									"58d8e1cc-0b10-cbb2-9c70-1eb64786524c",
 									true,
 								},
 							},
@@ -2141,12 +2169,39 @@ local tbl =
 						},
 						inheritedIndex = 1,
 					},
+					
+					{
+						data = 
+						{
+							actionCDValue = 1,
+							actionID = 36920,
+							category = "Self",
+							conditionType = 4,
+							uuid = "ef81fc90-bdb2-692a-bea8-3779590871e5",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								3829,
+							},
+							category = "Self",
+							uuid = "58d8e1cc-0b10-cbb2-9c70-1eb64786524c",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 317.7,
 				name = "4.Bulwalk (Block)",
 				timeRange = true,
 				timelineIndex = 48,
-				timerEndOffset = 55,
+				timerEndOffset = 71,
 				timerOffset = -8,
 				timerStartOffset = 45,
 				uuid = "28f3ad75-0767-e443-8940-9fc939d44a2e",
