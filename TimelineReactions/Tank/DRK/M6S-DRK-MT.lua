@@ -1694,6 +1694,7 @@ local tbl =
 							uuid = "9b1f0885-3a72-1913-ad03-47c71acda8e5",
 							version = 2.1,
 						},
+						inheritedIndex = 1,
 					},
 				},
 				conditions = 
@@ -1754,6 +1755,11 @@ local tbl =
 								},
 								
 								{
+									"e505f6f1-3c4a-08c2-8a5a-4f9ff5bff04c",
+									true,
+								},
+								
+								{
 									"a7f16d80-4d77-0c8c-855a-1912c9ae01cd",
 									true,
 								},
@@ -1779,6 +1785,19 @@ local tbl =
 							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
 							version = 2,
 						},
+					},
+					
+					{
+						data = 
+						{
+							actionCDValue = 1,
+							actionID = 3638,
+							category = "Self",
+							conditionType = 4,
+							uuid = "e505f6f1-3c4a-08c2-8a5a-4f9ff5bff04c",
+							version = 2,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -1949,74 +1968,11 @@ local tbl =
 				uuid = "4dcff0a5-ad41-9317-99e7-cb690b6e5ef0",
 				version = 2,
 			},
-			inheritedIndex = 5,
+			inheritedIndex = 4,
 		},
 	},
 	[42] = 
 	{
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 25754,
-							conditions = 
-							{
-								
-								{
-									"def7b2d7-911a-f611-8d72-c3b3a504b4e7",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffIDList = 
-							{
-								2682,
-								1178,
-								746,
-								1191,
-								3835,
-								810,
-							},
-							category = "Self",
-							uuid = "def7b2d7-911a-f611-8d72-c3b3a504b4e7",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-				},
-				loop = true,
-				mechanicTime = 275.5,
-				name = "Oblation (10)",
-				randomOffset = -1,
-				timeRange = true,
-				timelineIndex = 42,
-				timerEndOffset = 39,
-				timerOffset = -3,
-				timerStartOffset = 1,
-				uuid = "be139a4b-98ea-e2ab-af4c-6d2d4dc0a949",
-				version = 2,
-			},
-			inheritedIndex = 5,
-		},
 		
 		{
 			data = 
@@ -2096,6 +2052,69 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25754,
+							conditions = 
+							{
+								
+								{
+									"def7b2d7-911a-f611-8d72-c3b3a504b4e7",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2682,
+								1178,
+								746,
+								1191,
+								3835,
+								810,
+							},
+							category = "Self",
+							uuid = "def7b2d7-911a-f611-8d72-c3b3a504b4e7",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				loop = true,
+				mechanicTime = 275.5,
+				name = "Oblation (10)",
+				randomOffset = -1,
+				timeRange = true,
+				timelineIndex = 42,
+				timerEndOffset = 39,
+				timerOffset = -3,
+				timerStartOffset = 1,
+				uuid = "be139a4b-98ea-e2ab-af4c-6d2d4dc0a949",
+				version = 2,
+			},
+			inheritedIndex = 5,
 		},
 	},
 	[50] = 

@@ -1985,7 +1985,7 @@ local tbl =
 				name = "1.Rampart (20)",
 				timeRange = true,
 				timelineIndex = 48,
-				timerEndOffset = 20,
+				timerEndOffset = 71,
 				timerOffset = -15,
 				timerStartOffset = 0.5,
 				uuid = "f8dbaf10-1ed3-cbfb-a891-bd264b648b51",
@@ -2041,7 +2041,7 @@ local tbl =
 							category = "Self",
 							comparator = 2,
 							conditionType = 2,
-							hpValue = 70,
+							hpValue = 50,
 							uuid = "d7728407-e25a-0c05-82ea-92a74ccb2b61",
 							version = 2,
 						},
@@ -2051,8 +2051,8 @@ local tbl =
 				name = "2.Living Dead (Invinsible)",
 				timeRange = true,
 				timelineIndex = 48,
-				timerEndOffset = 30,
-				timerStartOffset = 15,
+				timerEndOffset = 71,
+				timerStartOffset = 20,
 				uuid = "fd2a7fe7-3122-82db-b25b-a90fd960c094",
 				version = 2,
 			},
@@ -2074,6 +2074,16 @@ local tbl =
 								
 								{
 									"5cf17619-127d-b210-88cb-64658ca76476",
+									true,
+								},
+								
+								{
+									"bdd35840-314a-0506-9ba0-42a5c1e316d9",
+									true,
+								},
+								
+								{
+									"b92299a3-319f-50ef-b244-2d124cdff95c",
 									true,
 								},
 							},
@@ -2098,12 +2108,35 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							actionCDValue = 1,
+							actionID = 3638,
+							category = "Self",
+							conditionType = 4,
+							uuid = "bdd35840-314a-0506-9ba0-42a5c1e316d9",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 810,
+							category = "Self",
+							uuid = "b92299a3-319f-50ef-b244-2d124cdff95c",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 317.7,
 				name = "3.Vigil (40)",
 				timeRange = true,
 				timelineIndex = 48,
-				timerEndOffset = 45,
+				timerEndOffset = 71,
 				timerOffset = -5,
 				timerStartOffset = 30,
 				uuid = "0f9e6513-2daa-7601-a54f-63e01e3ee519",
@@ -2132,6 +2165,16 @@ local tbl =
 								
 								{
 									"332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
+									true,
+								},
+								
+								{
+									"2babe3fe-74ba-badb-95fc-c1b23de1fa36",
+									true,
+								},
+								
+								{
+									"af40a47b-9db2-19c7-ae22-8c97b6fb6865",
 									true,
 								},
 							},
@@ -2169,12 +2212,35 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							actionCDValue = 1,
+							actionID = 36927,
+							category = "Self",
+							conditionType = 4,
+							uuid = "2babe3fe-74ba-badb-95fc-c1b23de1fa36",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 3835,
+							category = "Self",
+							uuid = "af40a47b-9db2-19c7-ae22-8c97b6fb6865",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 317.7,
 				name = "4.Dark Mind (M20)",
 				timeRange = true,
 				timelineIndex = 48,
-				timerEndOffset = 55,
+				timerEndOffset = 71,
 				timerOffset = -5,
 				timerStartOffset = 45,
 				uuid = "d7f4134b-8dde-65ed-a923-351c296761fe",
@@ -2246,7 +2312,7 @@ local tbl =
 							uuid = "10c34ac9-fc81-51e9-b4d2-bf171b53c11b",
 							version = 2,
 						},
-						inheritedIndex = 1,
+						inheritedIndex = 2,
 					},
 				},
 				loop = true,
