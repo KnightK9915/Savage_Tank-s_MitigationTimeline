@@ -2184,9 +2184,9 @@ local tbl =
 				name = "1.Rampart (20)",
 				timeRange = true,
 				timelineIndex = 48,
-				timerEndOffset = 20,
+				timerEndOffset = 71,
 				timerOffset = -15,
-				timerStartOffset = 1,
+				timerStartOffset = 0.5,
 				uuid = "9cad2414-b134-bcbf-9e34-5e9102972eab",
 				version = 2,
 			},
@@ -2208,6 +2208,11 @@ local tbl =
 								
 								{
 									"7e0d26db-790b-1b75-bfca-ad4daf3ae049",
+									true,
+								},
+								
+								{
+									"cfd5d885-1759-ab6b-82bb-21164f88d49a",
 									true,
 								},
 							},
@@ -2233,12 +2238,25 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 50,
+							uuid = "cfd5d885-1759-ab6b-82bb-21164f88d49a",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
 				},
 				mechanicTime = 317.7,
 				name = "2.Superbolide (Invinsible)",
 				timeRange = true,
 				timelineIndex = 48,
-				timerEndOffset = 30,
+				timerEndOffset = 71,
 				timerOffset = -1,
 				timerStartOffset = 20,
 				uuid = "c14ee994-484e-c80c-ad58-4642fae425e6",
@@ -2325,7 +2343,7 @@ local tbl =
 				name = "3.Great Nebula (40)",
 				timeRange = true,
 				timelineIndex = 48,
-				timerEndOffset = 45,
+				timerEndOffset = 71,
 				timerStartOffset = 30,
 				uuid = "7c3d40aa-9890-3819-8e84-5ab473692906",
 				version = 2,
@@ -2348,6 +2366,16 @@ local tbl =
 								
 								{
 									"b0a6c0ff-c966-c1fe-bedc-2d9d7afd0ff6",
+									true,
+								},
+								
+								{
+									"74ec3a67-a754-8359-b2f8-72f766474ca7",
+									true,
+								},
+								
+								{
+									"0403cdf3-67fe-ffe4-8a9b-7e88a65f00df",
 									true,
 								},
 							},
@@ -2373,12 +2401,36 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							actionCDValue = 1,
+							actionID = 36935,
+							category = "Self",
+							conditionType = 4,
+							uuid = "74ec3a67-a754-8359-b2f8-72f766474ca7",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 3838,
+							category = "Self",
+							uuid = "0403cdf3-67fe-ffe4-8a9b-7e88a65f00df",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 317.7,
 				name = "4.Camou (10)",
 				timeRange = true,
 				timelineIndex = 48,
-				timerEndOffset = 60,
+				timerEndOffset = 71,
 				timerOffset = -10,
 				timerStartOffset = 45,
 				uuid = "bb31b5fe-a0ea-e9c6-922f-f0d298f66b8d",
