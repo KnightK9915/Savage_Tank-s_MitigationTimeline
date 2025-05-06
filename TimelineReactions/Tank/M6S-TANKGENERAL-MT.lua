@@ -4225,22 +4225,24 @@ local tbl =
 						data = 
 						{
 							aType = "Lua",
-							actionLua = "local range = 6\nlocal priorityList = {13833, 13835, 13834, 13831} \nlocal bossID = 13822\nlocal current = Player:GetTarget()\nlocal function isValidTarget(obj)\n  return obj ~= nil and obj.targetable and obj.distance <= range\nend\n\nif isValidTarget(current) then\n  return\nend\n\nfor _, cid in ipairs(priorityList) do\n  local elist = EntityList(\"type=2,targetable,contentid=\" .. cid)\n  if table.valid(elist) then\n    if cid == 13831 then\n      local lowest = nil\n      for _, v in pairs(elist) do\n        if v.distance <= range then\n          if lowest == nil or v.hp.percent < lowest.hp.percent then\n            lowest = v\n          end\n        end\n      end\n      if lowest ~= nil then\n        Player:SetTarget(lowest.id)\n        return\n      end\n    else\n      for _, v in pairs(elist) do\n        if v.distance <= range then\n          Player:SetTarget(v.id)\n          return\n        end\n      end\n    end\n  end\nend\n\nlocal bossList = EntityList(\"type=2,targetable,contentid=\" .. bossID)\nif table.valid(bossList) then\n  for _, v in pairs(bossList) do\n    if v.distance <= range then\n      Player:SetTarget(v.id)\n      return\n    end\n  end\nend",
+							actionLua = "local mainTarget = 13835\nlocal subTargets = {13833, 13834, 13831}\nlocal fallbackTarget = 13822\nlocal range = 7.5\n\nlocal current = Player:GetTarget()\nlocal function isValidTarget(obj)\n  return obj ~= nil and obj.targetable and obj.distance <= range\nend\n\nif isValidTarget(current) and current.contentid == mainTarget then\n  return\nend\n\nlocal mainList = EntityList(\"type=2,targetable,contentid=\" .. mainTarget)\nif table.valid(mainList) then\n  for _, v in pairs(mainList) do\n    if v.distance <= range then\n      if current == nil or current.id ~= v.id then\n        Player:SetTarget(v.id)\n      end\n      return\n    end\n  end\nend\n\nfor _, cid in ipairs(subTargets) do\n  local elist = EntityList(\"type=2,targetable,contentid=\" .. cid)\n  if table.valid(elist) then\n    for _, v in pairs(elist) do\n      if v.distance <= range then\n        if current == nil or current.id ~= v.id then\n          Player:SetTarget(v.id)\n        end\n        return\n      end\n    end\n  end\nend\n\nlocal fallbackList = EntityList(\"type=2,targetable,contentid=\" .. fallbackTarget)\nif table.valid(fallbackList) then\n  for _, v in pairs(fallbackList) do\n    if current == nil or current.id ~= v.id then\n      Player:SetTarget(v.id)\n    end\n    return\n  end\nend",
 							gVar = "ACR_RikuGNB3_CD",
 							uuid = "d4e986a4-89f3-e61e-8255-375231273b52",
 							version = 2.1,
 						},
+						inheritedIndex = 1,
 					},
 				},
 				conditions = 
 				{
 				},
+				eventType = 12,
 				mechanicTime = 217.2,
 				name = "AutoTarget:Cat",
 				timeRange = true,
 				timelineIndex = 34,
-				timerEndOffset = 193.69999694824,
-				uuid = "6bf771ba-3527-8a3e-9f84-ad0544937d9a",
+				timerEndOffset = 171.5,
+				uuid = "08f0b538-35df-8a1d-af07-a7a9b86d6c8f",
 				version = 2,
 			},
 		},
