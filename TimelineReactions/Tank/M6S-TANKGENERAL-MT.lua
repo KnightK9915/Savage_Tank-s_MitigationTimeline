@@ -823,6 +823,11 @@ local tbl =
 								},
 								
 								{
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
+									true,
+								},
+								
+								{
 									"d65d00ec-0105-268d-ace7-2d367b431eea",
 									true,
 								},
@@ -845,6 +850,11 @@ local tbl =
 								
 								{
 									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									true,
+								},
+								
+								{
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
 									true,
 								},
 								
@@ -874,6 +884,11 @@ local tbl =
 								},
 								
 								{
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
+									true,
+								},
+								
+								{
 									"058998a0-28fc-7f7e-b215-5d374c803274",
 									true,
 								},
@@ -895,6 +910,11 @@ local tbl =
 								
 								{
 									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									true,
+								},
+								
+								{
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
 									true,
 								},
 								
@@ -924,6 +944,19 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							uuid = "1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
+							version = 2,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -979,7 +1012,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 2,
 				timerEndOffset = 5,
-				timerStartOffset = 1.5,
+				timerStartOffset = 1,
 				uuid = "7835ae3d-d348-bf28-a229-00b4c9da34b4",
 				version = 2,
 			},
@@ -1870,6 +1903,11 @@ local tbl =
 								},
 								
 								{
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
+									true,
+								},
+								
+								{
 									"d65d00ec-0105-268d-ace7-2d367b431eea",
 									true,
 								},
@@ -1892,6 +1930,11 @@ local tbl =
 								
 								{
 									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									true,
+								},
+								
+								{
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
 									true,
 								},
 								
@@ -1921,6 +1964,11 @@ local tbl =
 								},
 								
 								{
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
+									true,
+								},
+								
+								{
 									"058998a0-28fc-7f7e-b215-5d374c803274",
 									true,
 								},
@@ -1942,6 +1990,11 @@ local tbl =
 								
 								{
 									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									true,
+								},
+								
+								{
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
 									true,
 								},
 								
@@ -1971,6 +2024,19 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							uuid = "1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
+							version = 2,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -2026,8 +2092,8 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 13,
 				timerEndOffset = 5,
-				timerStartOffset = 1.5,
-				uuid = "1e9312f4-d6e0-04ae-abaa-bd2917bf81ec",
+				timerStartOffset = 1,
+				uuid = "a6446e25-b1e3-b84a-b9c5-1de3147875f5",
 				version = 2,
 			},
 		},
@@ -2097,7 +2163,7 @@ local tbl =
 				name = "Provoke",
 				timeRange = true,
 				timelineIndex = 16,
-				timerEndOffset = 10,
+				timerEndOffset = 15,
 				timerOffset = -3,
 				timerStartOffset = 7.5,
 				uuid = "1e2b229d-84a2-1b76-a317-dc356800373a",
@@ -2167,7 +2233,7 @@ local tbl =
 				name = "Shirk OT",
 				timeRange = true,
 				timelineIndex = 16,
-				timerEndOffset = 10,
+				timerEndOffset = 15,
 				timerStartOffset = 7.5,
 				uuid = "d4f09690-9773-ba84-b1a7-c045b7c1902d",
 				version = 2,
@@ -3901,6 +3967,11 @@ local tbl =
 								},
 								
 								{
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
+									true,
+								},
+								
+								{
 									"d65d00ec-0105-268d-ace7-2d367b431eea",
 									true,
 								},
@@ -3923,6 +3994,11 @@ local tbl =
 								
 								{
 									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									true,
+								},
+								
+								{
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
 									true,
 								},
 								
@@ -3952,6 +4028,11 @@ local tbl =
 								},
 								
 								{
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
+									true,
+								},
+								
+								{
 									"058998a0-28fc-7f7e-b215-5d374c803274",
 									true,
 								},
@@ -3973,6 +4054,11 @@ local tbl =
 								
 								{
 									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									true,
+								},
+								
+								{
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
 									true,
 								},
 								
@@ -4002,6 +4088,19 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							uuid = "1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
+							version = 2,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -4057,8 +4156,8 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 32,
 				timerEndOffset = 5,
-				timerStartOffset = 1.5,
-				uuid = "b3814943-f860-f67f-aa9b-dad6e335c932",
+				timerStartOffset = 1,
+				uuid = "76650bd1-b509-7107-9414-afc8a5e4ccd2",
 				version = 2,
 			},
 		},
@@ -8962,199 +9061,6 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 7386,
-							conditions = 
-							{
-								
-								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
-									true,
-								},
-								
-								{
-									"d65d00ec-0105-268d-ace7-2d367b431eea",
-									true,
-								},
-							},
-							gVar = "ACR_TensorWeeb3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Current Target",
-							uuid = "2d012730-d487-9fb8-81b6-66af39a29bba",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionID = 16461,
-							atomicPriority = true,
-							conditions = 
-							{
-								
-								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
-									true,
-								},
-								
-								{
-									"141bab94-d7aa-79e7-9987-f20285c48bb1",
-									true,
-								},
-							},
-							gVar = "ACR_TensorWeeb3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Current Target",
-							uuid = "4ba76f6c-741d-feab-b500-b08ad7b97c5b",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionID = 36926,
-							conditions = 
-							{
-								
-								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
-									true,
-								},
-								
-								{
-									"058998a0-28fc-7f7e-b215-5d374c803274",
-									true,
-								},
-							},
-							gVar = "ACR_TensorWeeb3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Current Target",
-							uuid = "c7be4aad-5362-c644-8cd3-e1700a519ae1",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionID = 36934,
-							conditions = 
-							{
-								
-								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
-									true,
-								},
-								
-								{
-									"d9dbed19-25f5-7a0e-b7fa-ec367904db22",
-									true,
-								},
-							},
-							gVar = "ACR_TensorWeeb3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Current Target",
-							uuid = "cf600fc3-8a2b-2639-ae39-fdaa4595eb7f",
-							version = 2.1,
-						},
-						inheritedIndex = 4,
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							conditionType = 6,
-							inRangeValue = 6,
-							uuid = "aae77abe-fb05-50a4-9346-c8aa68b5e213",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 13,
-							jobValue = "WARRIOR",
-							name = "Warrior",
-							uuid = "d65d00ec-0105-268d-ace7-2d367b431eea",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 13,
-							jobValue = "PALADIN",
-							name = "Paladin",
-							uuid = "141bab94-d7aa-79e7-9987-f20285c48bb1",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 13,
-							jobValue = "DARKKNIGHT",
-							name = "Darkknight",
-							uuid = "058998a0-28fc-7f7e-b215-5d374c803274",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 13,
-							jobValue = "GUNBREAKER",
-							name = "Gunbreaker",
-							uuid = "d9dbed19-25f5-7a0e-b7fa-ec367904db22",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgType = 2,
-							eventSpellName = "-1",
-							uuid = "4e0f80ca-33dc-9c2a-bb5d-83a79bb36709",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 410.9,
-				name = "Instant Dash",
-				timeRange = true,
-				timelineIndex = 56,
-				timerEndOffset = 5,
-				timerStartOffset = 1.5,
-				uuid = "794b48fa-4bed-eb78-84c8-d5fd765cd49e",
-				version = 2,
-			},
-			inheritedIndex = 1,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
 							aType = "ACR",
 							actionID = 16142,
 							conditions = 
@@ -9440,6 +9346,220 @@ local tbl =
 				timerEndOffset = 5,
 				timerOffset = -15,
 				uuid = "250c5341-1d20-81b4-832b-949e29415e1e",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7386,
+							conditions = 
+							{
+								
+								{
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									true,
+								},
+								
+								{
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
+									true,
+								},
+								
+								{
+									"d65d00ec-0105-268d-ace7-2d367b431eea",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "2d012730-d487-9fb8-81b6-66af39a29bba",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16461,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									true,
+								},
+								
+								{
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
+									true,
+								},
+								
+								{
+									"141bab94-d7aa-79e7-9987-f20285c48bb1",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "4ba76f6c-741d-feab-b500-b08ad7b97c5b",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36926,
+							conditions = 
+							{
+								
+								{
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									true,
+								},
+								
+								{
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
+									true,
+								},
+								
+								{
+									"058998a0-28fc-7f7e-b215-5d374c803274",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "c7be4aad-5362-c644-8cd3-e1700a519ae1",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36934,
+							conditions = 
+							{
+								
+								{
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									true,
+								},
+								
+								{
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
+									true,
+								},
+								
+								{
+									"d9dbed19-25f5-7a0e-b7fa-ec367904db22",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "cf600fc3-8a2b-2639-ae39-fdaa4595eb7f",
+							version = 2.1,
+						},
+						inheritedIndex = 4,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							conditionType = 6,
+							inRangeValue = 6,
+							uuid = "aae77abe-fb05-50a4-9346-c8aa68b5e213",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							uuid = "1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "WARRIOR",
+							name = "Warrior",
+							uuid = "d65d00ec-0105-268d-ace7-2d367b431eea",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "Paladin",
+							uuid = "141bab94-d7aa-79e7-9987-f20285c48bb1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "Darkknight",
+							uuid = "058998a0-28fc-7f7e-b215-5d374c803274",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "Gunbreaker",
+							uuid = "d9dbed19-25f5-7a0e-b7fa-ec367904db22",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 410.9,
+				name = "Instant Dash",
+				timeRange = true,
+				timelineIndex = 56,
+				timerEndOffset = 5,
+				timerStartOffset = 1,
+				uuid = "cb6d3a19-ba31-c2d1-998d-8def5afe51e4",
 				version = 2,
 			},
 		},
@@ -11776,6 +11896,11 @@ local tbl =
 								},
 								
 								{
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
+									true,
+								},
+								
+								{
 									"d65d00ec-0105-268d-ace7-2d367b431eea",
 									true,
 								},
@@ -11798,6 +11923,11 @@ local tbl =
 								
 								{
 									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									true,
+								},
+								
+								{
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
 									true,
 								},
 								
@@ -11827,6 +11957,11 @@ local tbl =
 								},
 								
 								{
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
+									true,
+								},
+								
+								{
 									"058998a0-28fc-7f7e-b215-5d374c803274",
 									true,
 								},
@@ -11848,6 +11983,11 @@ local tbl =
 								
 								{
 									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									true,
+								},
+								
+								{
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
 									true,
 								},
 								
@@ -11877,6 +12017,19 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							uuid = "1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
+							version = 2,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -11932,8 +12085,8 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 92,
 				timerEndOffset = 5,
-				timerStartOffset = 1.5,
-				uuid = "b021b75d-eec4-8c9a-9faa-c3dc7210e698",
+				timerStartOffset = 1,
+				uuid = "f04113f8-cbb5-ad1b-8dd1-9a105f2be605",
 				version = 2,
 			},
 		},

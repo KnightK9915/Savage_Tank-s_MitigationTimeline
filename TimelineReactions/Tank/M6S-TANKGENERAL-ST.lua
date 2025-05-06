@@ -1030,12 +1030,12 @@ local tbl =
 							{
 								
 								{
-									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
 									true,
 								},
 								
 								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
 									true,
 								},
 								
@@ -1061,12 +1061,12 @@ local tbl =
 							{
 								
 								{
-									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
 									true,
 								},
 								
 								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
 									true,
 								},
 								
@@ -1081,7 +1081,6 @@ local tbl =
 							uuid = "4ba76f6c-741d-feab-b500-b08ad7b97c5b",
 							version = 2.1,
 						},
-						inheritedIndex = 2,
 					},
 					
 					{
@@ -1092,12 +1091,12 @@ local tbl =
 							{
 								
 								{
-									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
 									true,
 								},
 								
 								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
 									true,
 								},
 								
@@ -1122,12 +1121,12 @@ local tbl =
 							{
 								
 								{
-									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
 									true,
 								},
 								
 								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
 									true,
 								},
 								
@@ -1151,11 +1150,9 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Self",
-							comparator = 2,
-							conditionType = 2,
-							hpValue = 80,
-							uuid = "639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+							conditionType = 6,
+							inRangeValue = 6,
+							uuid = "aae77abe-fb05-50a4-9346-c8aa68b5e213",
 							version = 2,
 						},
 						inheritedIndex = 1,
@@ -1164,12 +1161,14 @@ local tbl =
 					{
 						data = 
 						{
-							conditionType = 6,
-							inRangeValue = 6,
-							uuid = "aae77abe-fb05-50a4-9346-c8aa68b5e213",
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							uuid = "1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
 							version = 2,
 						},
-						inheritedIndex = 1,
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -1224,9 +1223,9 @@ local tbl =
 				name = "Instant Dash",
 				timeRange = true,
 				timelineIndex = 2,
-				timerEndOffset = 10,
-				timerStartOffset = 1.5,
-				uuid = "b0b61a36-bce2-1446-b029-9f50b0bb4a4d",
+				timerEndOffset = 5,
+				timerStartOffset = 1,
+				uuid = "20b4e684-20a7-52fc-a763-9c37de9a61c6",
 				version = 2,
 			},
 		},
@@ -2111,12 +2110,12 @@ local tbl =
 							{
 								
 								{
-									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
 									true,
 								},
 								
 								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
 									true,
 								},
 								
@@ -2142,12 +2141,12 @@ local tbl =
 							{
 								
 								{
-									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
 									true,
 								},
 								
 								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
 									true,
 								},
 								
@@ -2162,7 +2161,6 @@ local tbl =
 							uuid = "4ba76f6c-741d-feab-b500-b08ad7b97c5b",
 							version = 2.1,
 						},
-						inheritedIndex = 2,
 					},
 					
 					{
@@ -2173,12 +2171,12 @@ local tbl =
 							{
 								
 								{
-									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
 									true,
 								},
 								
 								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
 									true,
 								},
 								
@@ -2203,12 +2201,12 @@ local tbl =
 							{
 								
 								{
-									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
 									true,
 								},
 								
 								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
 									true,
 								},
 								
@@ -2232,11 +2230,9 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Self",
-							comparator = 2,
-							conditionType = 2,
-							hpValue = 80,
-							uuid = "639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+							conditionType = 6,
+							inRangeValue = 6,
+							uuid = "aae77abe-fb05-50a4-9346-c8aa68b5e213",
 							version = 2,
 						},
 						inheritedIndex = 1,
@@ -2245,12 +2241,14 @@ local tbl =
 					{
 						data = 
 						{
-							conditionType = 6,
-							inRangeValue = 6,
-							uuid = "aae77abe-fb05-50a4-9346-c8aa68b5e213",
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							uuid = "1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
 							version = 2,
 						},
-						inheritedIndex = 1,
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -2305,9 +2303,9 @@ local tbl =
 				name = "Instant Dash",
 				timeRange = true,
 				timelineIndex = 13,
-				timerEndOffset = 10,
-				timerStartOffset = 1.5,
-				uuid = "91956e2a-d10b-5cb7-818f-5558b18f59a5",
+				timerEndOffset = 5,
+				timerStartOffset = 1,
+				uuid = "8044a5ee-ec8f-5bd2-bac8-52ebb56d5966",
 				version = 2,
 			},
 		},
@@ -2377,7 +2375,7 @@ local tbl =
 				name = "Provoke",
 				timeRange = true,
 				timelineIndex = 16,
-				timerEndOffset = 10,
+				timerEndOffset = 15,
 				timerOffset = -3,
 				timerStartOffset = 7.5,
 				uuid = "65bbd40c-5924-8698-bb8d-85ce7e6f03cd",
@@ -2447,7 +2445,7 @@ local tbl =
 				name = "Shirk OT",
 				timeRange = true,
 				timelineIndex = 16,
-				timerEndOffset = 10,
+				timerEndOffset = 15,
 				timerStartOffset = 7.5,
 				uuid = "0676efe8-7212-94e8-94a1-8075a6385941",
 				version = 2,
@@ -3715,12 +3713,12 @@ local tbl =
 							{
 								
 								{
-									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
 									true,
 								},
 								
 								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
 									true,
 								},
 								
@@ -3746,12 +3744,12 @@ local tbl =
 							{
 								
 								{
-									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
 									true,
 								},
 								
 								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
 									true,
 								},
 								
@@ -3766,7 +3764,6 @@ local tbl =
 							uuid = "4ba76f6c-741d-feab-b500-b08ad7b97c5b",
 							version = 2.1,
 						},
-						inheritedIndex = 2,
 					},
 					
 					{
@@ -3777,12 +3774,12 @@ local tbl =
 							{
 								
 								{
-									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
 									true,
 								},
 								
 								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
 									true,
 								},
 								
@@ -3807,12 +3804,12 @@ local tbl =
 							{
 								
 								{
-									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
 									true,
 								},
 								
 								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
 									true,
 								},
 								
@@ -3836,11 +3833,9 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Self",
-							comparator = 2,
-							conditionType = 2,
-							hpValue = 80,
-							uuid = "639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+							conditionType = 6,
+							inRangeValue = 6,
+							uuid = "aae77abe-fb05-50a4-9346-c8aa68b5e213",
 							version = 2,
 						},
 						inheritedIndex = 1,
@@ -3849,12 +3844,14 @@ local tbl =
 					{
 						data = 
 						{
-							conditionType = 6,
-							inRangeValue = 6,
-							uuid = "aae77abe-fb05-50a4-9346-c8aa68b5e213",
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							uuid = "1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
 							version = 2,
 						},
-						inheritedIndex = 1,
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -3909,9 +3906,9 @@ local tbl =
 				name = "Instant Dash",
 				timeRange = true,
 				timelineIndex = 32,
-				timerEndOffset = 10,
-				timerStartOffset = 1.5,
-				uuid = "e860e4aa-820a-9d4d-bddf-c48e1ce6fd63",
+				timerEndOffset = 5,
+				timerStartOffset = 1,
+				uuid = "dedc0730-86d3-521a-bf97-45ca358befda",
 				version = 2,
 			},
 		},
@@ -7692,221 +7689,6 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 7386,
-							conditions = 
-							{
-								
-								{
-									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
-									true,
-								},
-								
-								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
-									true,
-								},
-								
-								{
-									"d65d00ec-0105-268d-ace7-2d367b431eea",
-									true,
-								},
-							},
-							gVar = "ACR_TensorWeeb3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Current Target",
-							uuid = "2d012730-d487-9fb8-81b6-66af39a29bba",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionID = 16461,
-							atomicPriority = true,
-							conditions = 
-							{
-								
-								{
-									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
-									true,
-								},
-								
-								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
-									true,
-								},
-								
-								{
-									"141bab94-d7aa-79e7-9987-f20285c48bb1",
-									true,
-								},
-							},
-							gVar = "ACR_TensorWeeb3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Current Target",
-							uuid = "4ba76f6c-741d-feab-b500-b08ad7b97c5b",
-							version = 2.1,
-						},
-						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							actionID = 36926,
-							conditions = 
-							{
-								
-								{
-									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
-									true,
-								},
-								
-								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
-									true,
-								},
-								
-								{
-									"058998a0-28fc-7f7e-b215-5d374c803274",
-									true,
-								},
-							},
-							gVar = "ACR_TensorWeeb3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Current Target",
-							uuid = "c7be4aad-5362-c644-8cd3-e1700a519ae1",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionID = 36934,
-							conditions = 
-							{
-								
-								{
-									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
-									true,
-								},
-								
-								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
-									true,
-								},
-								
-								{
-									"d9dbed19-25f5-7a0e-b7fa-ec367904db22",
-									true,
-								},
-							},
-							gVar = "ACR_TensorWeeb3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Current Target",
-							uuid = "cf600fc3-8a2b-2639-ae39-fdaa4595eb7f",
-							version = 2.1,
-						},
-						inheritedIndex = 4,
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							comparator = 2,
-							conditionType = 2,
-							hpValue = 80,
-							uuid = "639d9248-ad7e-02b0-b7ff-4be1753d56a1",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							conditionType = 6,
-							inRangeValue = 6,
-							uuid = "aae77abe-fb05-50a4-9346-c8aa68b5e213",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 13,
-							jobValue = "WARRIOR",
-							name = "Warrior",
-							uuid = "d65d00ec-0105-268d-ace7-2d367b431eea",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 13,
-							jobValue = "PALADIN",
-							name = "Paladin",
-							uuid = "141bab94-d7aa-79e7-9987-f20285c48bb1",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 13,
-							jobValue = "DARKKNIGHT",
-							name = "Darkknight",
-							uuid = "058998a0-28fc-7f7e-b215-5d374c803274",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 13,
-							jobValue = "GUNBREAKER",
-							name = "Gunbreaker",
-							uuid = "d9dbed19-25f5-7a0e-b7fa-ec367904db22",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 410.9,
-				name = "Instant Dash",
-				timeRange = true,
-				timelineIndex = 56,
-				timerEndOffset = 10,
-				timerStartOffset = 1.5,
-				uuid = "8fd41ae6-c2cb-0ed2-800f-d91b13dc0f4b",
-				version = 2,
-			},
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
 							aType = "ACR",
 							actionID = 16142,
 							conditions = 
@@ -8194,6 +7976,220 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7386,
+							conditions = 
+							{
+								
+								{
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									true,
+								},
+								
+								{
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
+									true,
+								},
+								
+								{
+									"d65d00ec-0105-268d-ace7-2d367b431eea",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "2d012730-d487-9fb8-81b6-66af39a29bba",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16461,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									true,
+								},
+								
+								{
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
+									true,
+								},
+								
+								{
+									"141bab94-d7aa-79e7-9987-f20285c48bb1",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "4ba76f6c-741d-feab-b500-b08ad7b97c5b",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36926,
+							conditions = 
+							{
+								
+								{
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									true,
+								},
+								
+								{
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
+									true,
+								},
+								
+								{
+									"058998a0-28fc-7f7e-b215-5d374c803274",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "c7be4aad-5362-c644-8cd3-e1700a519ae1",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36934,
+							conditions = 
+							{
+								
+								{
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									true,
+								},
+								
+								{
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
+									true,
+								},
+								
+								{
+									"d9dbed19-25f5-7a0e-b7fa-ec367904db22",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "cf600fc3-8a2b-2639-ae39-fdaa4595eb7f",
+							version = 2.1,
+						},
+						inheritedIndex = 4,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							conditionType = 6,
+							inRangeValue = 6,
+							uuid = "aae77abe-fb05-50a4-9346-c8aa68b5e213",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							uuid = "1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "WARRIOR",
+							name = "Warrior",
+							uuid = "d65d00ec-0105-268d-ace7-2d367b431eea",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "Paladin",
+							uuid = "141bab94-d7aa-79e7-9987-f20285c48bb1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "Darkknight",
+							uuid = "058998a0-28fc-7f7e-b215-5d374c803274",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "Gunbreaker",
+							uuid = "d9dbed19-25f5-7a0e-b7fa-ec367904db22",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 410.9,
+				name = "Instant Dash",
+				timeRange = true,
+				timelineIndex = 56,
+				timerEndOffset = 5,
+				timerStartOffset = 1,
+				uuid = "c4ae0f41-8afb-3e5d-9fc0-167816b2ad97",
+				version = 2,
+			},
 		},
 	},
 	[58] = 
@@ -10523,12 +10519,12 @@ local tbl =
 							{
 								
 								{
-									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
 									true,
 								},
 								
 								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
 									true,
 								},
 								
@@ -10554,12 +10550,12 @@ local tbl =
 							{
 								
 								{
-									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
 									true,
 								},
 								
 								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
 									true,
 								},
 								
@@ -10574,7 +10570,6 @@ local tbl =
 							uuid = "4ba76f6c-741d-feab-b500-b08ad7b97c5b",
 							version = 2.1,
 						},
-						inheritedIndex = 2,
 					},
 					
 					{
@@ -10585,12 +10580,12 @@ local tbl =
 							{
 								
 								{
-									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
 									true,
 								},
 								
 								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
 									true,
 								},
 								
@@ -10615,12 +10610,12 @@ local tbl =
 							{
 								
 								{
-									"639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
 									true,
 								},
 								
 								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									"1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
 									true,
 								},
 								
@@ -10644,11 +10639,9 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Self",
-							comparator = 2,
-							conditionType = 2,
-							hpValue = 80,
-							uuid = "639d9248-ad7e-02b0-b7ff-4be1753d56a1",
+							conditionType = 6,
+							inRangeValue = 6,
+							uuid = "aae77abe-fb05-50a4-9346-c8aa68b5e213",
 							version = 2,
 						},
 						inheritedIndex = 1,
@@ -10657,12 +10650,14 @@ local tbl =
 					{
 						data = 
 						{
-							conditionType = 6,
-							inRangeValue = 6,
-							uuid = "aae77abe-fb05-50a4-9346-c8aa68b5e213",
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							uuid = "1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
 							version = 2,
 						},
-						inheritedIndex = 1,
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -10717,9 +10712,9 @@ local tbl =
 				name = "Instant Dash",
 				timeRange = true,
 				timelineIndex = 92,
-				timerEndOffset = 10,
-				timerStartOffset = 1.5,
-				uuid = "d1a2e789-34d6-f72a-995e-246651cda64e",
+				timerEndOffset = 5,
+				timerStartOffset = 1,
+				uuid = "ca981fda-1563-c715-960e-9bcb686d9512",
 				version = 2,
 			},
 		},
