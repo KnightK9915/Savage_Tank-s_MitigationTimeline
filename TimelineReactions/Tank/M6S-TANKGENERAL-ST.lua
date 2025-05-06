@@ -3976,7 +3976,7 @@ local tbl =
 						data = 
 						{
 							aType = "Lua",
-							actionLua = "local mainTarget = 13835\nlocal subTargets = {13833, 13834, 13832}\nlocal range = 6\n\nlocal current = Player:GetTarget()\nlocal function isValidTarget(obj)\n  return obj ~= nil and obj.targetable and obj.distance <= range\nend\n\n-- Step 1: Check if current target is main target and in range\nif isValidTarget(current) and current.contentid == mainTarget then\n  return -- keep current target, do nothing\nend\n\n-- Step 2: Try to find main target in range and select it\nlocal mainList = EntityList(\"type=2,targetable,contentid=\" .. mainTarget)\nif table.valid(mainList) then\n  for _, v in pairs(mainList) do\n    if v.distance <= range then\n      if current == nil or current.id ~= v.id then\n        Player:SetTarget(v.id)\n      end\n      return\n    end\n  end\nend\n\n-- Step 3: Try sub-targets in priority order\nfor _, cid in ipairs(subTargets) do\n  local elist = EntityList(\"type=2,targetable,contentid=\" .. cid)\n  if table.valid(elist) then\n    for _, v in pairs(elist) do\n      if v.distance <= range then\n        if current == nil or current.id ~= v.id then\n          Player:SetTarget(v.id)\n        end\n        return\n      end\n    end\n  end\nend\n",
+							actionLua = "local range = 6\nlocal priorityList = {13833, 13835, 13834, 13832} \nlocal bossID = 13822\nlocal current = Player:GetTarget()\nlocal function isValidTarget(obj)\n  return obj ~= nil and obj.targetable and obj.distance <= range\nend\n\nif isValidTarget(current) then\n  return\nend\n\nfor _, cid in ipairs(priorityList) do\n  local elist = EntityList(\"type=2,targetable,contentid=\" .. cid)\n  if table.valid(elist) then\n    if cid == 13832 then\n      local lowest = nil\n      for _, v in pairs(elist) do\n        if v.distance <= range then\n          if lowest == nil or v.hp.percent < lowest.hp.percent then\n            lowest = v\n          end\n        end\n      end\n      if lowest ~= nil then\n        Player:SetTarget(lowest.id)\n        return\n      end\n    else\n      for _, v in pairs(elist) do\n        if v.distance <= range then\n          Player:SetTarget(v.id)\n          return\n        end\n      end\n    end\n  end\nend\n\nlocal bossList = EntityList(\"type=2,targetable,contentid=\" .. bossID)\nif table.valid(bossList) then\n  for _, v in pairs(bossList) do\n    if v.distance <= range then\n      Player:SetTarget(v.id)\n      return\n    end\n  end\nend",
 							gVar = "ACR_RikuGNB3_CD",
 							uuid = "d4e986a4-89f3-e61e-8255-375231273b52",
 							version = 2.1,
@@ -3986,13 +3986,12 @@ local tbl =
 				conditions = 
 				{
 				},
-				loop = true,
 				mechanicTime = 217.2,
-				name = "SetTarget:Cat if close to me",
+				name = "AutoTarget:Cat",
 				timeRange = true,
 				timelineIndex = 34,
 				timerEndOffset = 193.69999694824,
-				uuid = "4daf09e3-1131-7ceb-bb3e-a3a935ce6b6a",
+				uuid = "9b23a457-2399-9428-a953-07d0ae57f257",
 				version = 2,
 			},
 		},

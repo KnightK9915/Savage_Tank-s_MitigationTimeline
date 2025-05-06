@@ -4225,7 +4225,7 @@ local tbl =
 						data = 
 						{
 							aType = "Lua",
-							actionLua = "local mainTarget = 13835\nlocal subTargets = {13833, 13834, 13831}\nlocal range = 6\n\nlocal current = Player:GetTarget()\nlocal function isValidTarget(obj)\n  return obj ~= nil and obj.targetable and obj.distance <= range\nend\n\n-- Step 1: Check if current target is main target and in range\nif isValidTarget(current) and current.contentid == mainTarget then\n  return -- keep current target, do nothing\nend\n\n-- Step 2: Try to find main target in range and select it\nlocal mainList = EntityList(\"type=2,targetable,contentid=\" .. mainTarget)\nif table.valid(mainList) then\n  for _, v in pairs(mainList) do\n    if v.distance <= range then\n      if current == nil or current.id ~= v.id then\n        Player:SetTarget(v.id)\n      end\n      return\n    end\n  end\nend\n\n-- Step 3: Try sub-targets in priority order\nfor _, cid in ipairs(subTargets) do\n  local elist = EntityList(\"type=2,targetable,contentid=\" .. cid)\n  if table.valid(elist) then\n    for _, v in pairs(elist) do\n      if v.distance <= range then\n        if current == nil or current.id ~= v.id then\n          Player:SetTarget(v.id)\n        end\n        return\n      end\n    end\n  end\nend\n",
+							actionLua = "local range = 6\nlocal priorityList = {13833, 13835, 13834, 13831} \nlocal bossID = 13822\nlocal current = Player:GetTarget()\nlocal function isValidTarget(obj)\n  return obj ~= nil and obj.targetable and obj.distance <= range\nend\n\nif isValidTarget(current) then\n  return\nend\n\nfor _, cid in ipairs(priorityList) do\n  local elist = EntityList(\"type=2,targetable,contentid=\" .. cid)\n  if table.valid(elist) then\n    if cid == 13831 then\n      local lowest = nil\n      for _, v in pairs(elist) do\n        if v.distance <= range then\n          if lowest == nil or v.hp.percent < lowest.hp.percent then\n            lowest = v\n          end\n        end\n      end\n      if lowest ~= nil then\n        Player:SetTarget(lowest.id)\n        return\n      end\n    else\n      for _, v in pairs(elist) do\n        if v.distance <= range then\n          Player:SetTarget(v.id)\n          return\n        end\n      end\n    end\n  end\nend\n\nlocal bossList = EntityList(\"type=2,targetable,contentid=\" .. bossID)\nif table.valid(bossList) then\n  for _, v in pairs(bossList) do\n    if v.distance <= range then\n      Player:SetTarget(v.id)\n      return\n    end\n  end\nend",
 							gVar = "ACR_RikuGNB3_CD",
 							uuid = "d4e986a4-89f3-e61e-8255-375231273b52",
 							version = 2.1,
@@ -4235,13 +4235,12 @@ local tbl =
 				conditions = 
 				{
 				},
-				loop = true,
 				mechanicTime = 217.2,
-				name = "SetTarget:Cat if close to me",
+				name = "AutoTarget:Cat",
 				timeRange = true,
 				timelineIndex = 34,
 				timerEndOffset = 193.69999694824,
-				uuid = "8c66dd07-b578-39c1-9cff-5423fa9987d2",
+				uuid = "6bf771ba-3527-8a3e-9f84-ad0544937d9a",
 				version = 2,
 			},
 		},
@@ -5815,37 +5814,6 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 1,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "Lua",
-							actionLua = "local myID = Player.id\nlocal furthest = nil\nlocal maxDist = 0\n\nlocal adds = EntityList(\"type=2,targetable,contentid=13834\")\nif table.valid(adds) then\n  for _, v in pairs(adds) do\n    if v.targetid ~= 0 and v.targetid ~= myID and v.distance > maxDist then\n      furthest = v\n      maxDist = v.distance\n    end\n  end\nend\n\nif furthest then\n  if Player:GetTarget() == nil or Player:GetTarget().id ~= furthest.id then\n    Player:SetTarget(furthest.id)\n  end\nend",
-							gVar = "ACR_RikuGNB3_CD",
-							uuid = "ea62ef9e-163f-d280-96f0-75eb447eab91",
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 256.5,
-				name = "target fey test",
-				timeRange = true,
-				timelineIndex = 40,
-				timerEndOffset = 10,
-				uuid = "5eb3dd09-3028-7186-8c2b-8bb87277df1b",
-				version = 2,
-			},
 		},
 	},
 	[41] = 
