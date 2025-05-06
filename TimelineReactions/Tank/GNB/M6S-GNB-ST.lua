@@ -235,6 +235,11 @@ local tbl =
 									"306b76dc-ee6e-e3dc-a1e0-8c60894dc919",
 									true,
 								},
+								
+								{
+									"ac542fcb-7faa-8d8c-9a88-043f40b36c74",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_Tankbar_AuroraSelf",
@@ -257,6 +262,17 @@ local tbl =
 							conditionType = 2,
 							hpValue = 90,
 							uuid = "306b76dc-ee6e-e3dc-a1e0-8c60894dc919",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1835,
+							category = "Self",
+							uuid = "ac542fcb-7faa-8d8c-9a88-043f40b36c74",
 							version = 2,
 						},
 					},
@@ -290,6 +306,11 @@ local tbl =
 									"7ea95bcb-8a32-aac2-883a-7834a0254830",
 									true,
 								},
+								
+								{
+									"0f6d887b-ebc2-52a2-a125-b5c0abae05fe",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_Tankbar_AuroraOT",
@@ -313,6 +334,18 @@ local tbl =
 							hpValue = 90,
 							partyTargetType = "Main Tank",
 							uuid = "7ea95bcb-8a32-aac2-883a-7834a0254830",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1835,
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "0f6d887b-ebc2-52a2-a125-b5c0abae05fe",
 							version = 2,
 						},
 					},
@@ -692,6 +725,11 @@ local tbl =
 									"306b76dc-ee6e-e3dc-a1e0-8c60894dc919",
 									true,
 								},
+								
+								{
+									"ac542fcb-7faa-8d8c-9a88-043f40b36c74",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_Tankbar_AuroraSelf",
@@ -717,6 +755,17 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1835,
+							category = "Self",
+							uuid = "ac542fcb-7faa-8d8c-9a88-043f40b36c74",
+							version = 2,
+						},
+					},
 				},
 				enabled = false,
 				mechanicTime = 81.9,
@@ -724,7 +773,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 13,
 				timerEndOffset = 10,
-				uuid = "4c8ed7fe-b67e-910d-b4a7-84b0baae1242",
+				uuid = "81dbd474-8e29-4f6f-ad3b-be39a2a9b912",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -745,6 +794,11 @@ local tbl =
 								
 								{
 									"7ea95bcb-8a32-aac2-883a-7834a0254830",
+									true,
+								},
+								
+								{
+									"0f6d887b-ebc2-52a2-a125-b5c0abae05fe",
 									true,
 								},
 							},
@@ -773,13 +827,25 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1835,
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "0f6d887b-ebc2-52a2-a125-b5c0abae05fe",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 81.9,
 				name = "Aurora (regen) ST",
 				timeRange = true,
 				timelineIndex = 13,
 				timerEndOffset = 10,
-				uuid = "455071f4-e974-c078-ae49-72120e0be062",
+				uuid = "c6ad7f9b-f2b2-3f89-b179-aced5981b024",
 				version = 2,
 			},
 			inheritedIndex = 6,
@@ -800,7 +866,7 @@ local tbl =
 				uuid = "5e483b5c-8e92-99b0-acba-bfb48ed4c61d",
 				version = 2,
 			},
-			inheritedIndex = 7,
+			inheritedIndex = 9,
 		},
 		
 		{
@@ -873,7 +939,7 @@ local tbl =
 				uuid = "35ea4d5d-f2e7-a921-b677-f94c6d1625d3",
 				version = 2,
 			},
-			inheritedIndex = 8,
+			inheritedIndex = 10,
 		},
 		
 		{
@@ -930,7 +996,7 @@ local tbl =
 				uuid = "ca5dbc06-1165-6e7f-b05c-c087d1703fef",
 				version = 2,
 			},
-			inheritedIndex = 9,
+			inheritedIndex = 11,
 		},
 	},
 	[17] = 
@@ -951,6 +1017,11 @@ local tbl =
 								
 								{
 									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"fdec73f5-3a9c-d888-91c8-e1a17f38eace",
 									true,
 								},
 								
@@ -1121,6 +1192,11 @@ local tbl =
 								
 								{
 									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"fdec73f5-3a9c-d888-91c8-e1a17f38eace",
 									true,
 								},
 							},
@@ -1490,6 +1566,11 @@ local tbl =
 									"306b76dc-ee6e-e3dc-a1e0-8c60894dc919",
 									true,
 								},
+								
+								{
+									"ac542fcb-7faa-8d8c-9a88-043f40b36c74",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_Tankbar_AuroraSelf",
@@ -1515,6 +1596,17 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1835,
+							category = "Self",
+							uuid = "ac542fcb-7faa-8d8c-9a88-043f40b36c74",
+							version = 2,
+						},
+					},
 				},
 				enabled = false,
 				mechanicTime = 207.1,
@@ -1522,7 +1614,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 32,
 				timerEndOffset = 10,
-				uuid = "873c76fd-4af8-bf1c-9c22-3cadaed56051",
+				uuid = "8a7f2a69-f3b8-0136-a322-12409a1337be",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -1543,6 +1635,11 @@ local tbl =
 								
 								{
 									"7ea95bcb-8a32-aac2-883a-7834a0254830",
+									true,
+								},
+								
+								{
+									"0f6d887b-ebc2-52a2-a125-b5c0abae05fe",
 									true,
 								},
 							},
@@ -1571,17 +1668,85 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1835,
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "0f6d887b-ebc2-52a2-a125-b5c0abae05fe",
+							version = 2,
+						},
+					},
 				},
-				enabled = false,
 				mechanicTime = 207.1,
 				name = "Aurora (regen) ST",
 				timeRange = true,
 				timelineIndex = 32,
 				timerEndOffset = 10,
-				uuid = "8120567f-eedb-3807-9924-d0499c5fe475",
+				uuid = "46c590b1-2bc1-0a04-85d5-b696b38c4263",
 				version = 2,
 			},
 			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Main Tank",
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 207.1,
+				name = "HoC (15) ST",
+				timeRange = true,
+				timelineIndex = 32,
+				timerOffset = -1,
+				timerStartOffset = -3,
+				uuid = "80db19dc-b090-204d-bab5-5276febef3e1",
+				version = 2,
+			},
+			inheritedIndex = 11,
 		},
 		
 		{
@@ -1599,7 +1764,7 @@ local tbl =
 				uuid = "4e538828-684b-db2a-b82b-98e4c9cb068a",
 				version = 2,
 			},
-			inheritedIndex = 7,
+			inheritedIndex = 9,
 		},
 		
 		{
@@ -1672,64 +1837,7 @@ local tbl =
 				uuid = "70947c7b-2758-5635-a056-4bcf78e4e4bc",
 				version = 2,
 			},
-			inheritedIndex = 8,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 25758,
-							conditions = 
-							{
-								
-								{
-									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Main Tank",
-							uuid = "94511374-01bd-2218-adca-8213e488a837",
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 25758,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							dequeueIfLuaFalse = true,
-							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
-							version = 2,
-						},
-					},
-				},
-				enabled = false,
-				mechanicTime = 207.1,
-				name = "HoC (15) ST",
-				timeRange = true,
-				timelineIndex = 32,
-				timerOffset = -1,
-				timerStartOffset = -3,
-				uuid = "80db19dc-b090-204d-bab5-5276febef3e1",
-				version = 2,
-			},
-			inheritedIndex = 9,
+			inheritedIndex = 10,
 		},
 	},
 	[36] = 
@@ -2006,7 +2114,7 @@ local tbl =
 				uuid = "4c6944e3-e16b-7524-89eb-4fe52878bc80",
 				version = 2,
 			},
-			inheritedIndex = 2,
+			inheritedIndex = 1,
 		},
 		
 		{
@@ -2063,7 +2171,7 @@ local tbl =
 				uuid = "009f9eac-f51b-d3e8-b8b1-5c99bb1f5637",
 				version = 2,
 			},
-			inheritedIndex = 3,
+			inheritedIndex = 2,
 		},
 		
 		{
@@ -2133,7 +2241,7 @@ local tbl =
 				uuid = "385119f6-fb56-79e5-8892-e0e54422ae41",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 3,
 		},
 	},
 	[48] = 
@@ -2180,6 +2288,7 @@ local tbl =
 						},
 					},
 				},
+				eventType = 12,
 				mechanicTime = 317.7,
 				name = "1.Rampart (20)",
 				timeRange = true,
@@ -2252,6 +2361,7 @@ local tbl =
 						inheritedIndex = 2,
 					},
 				},
+				eventType = 12,
 				mechanicTime = 317.7,
 				name = "2.Superbolide (Invinsible)",
 				timeRange = true,
@@ -2339,6 +2449,7 @@ local tbl =
 						},
 					},
 				},
+				eventType = 12,
 				mechanicTime = 317.7,
 				name = "3.Great Nebula (40)",
 				timeRange = true,
@@ -2426,6 +2537,7 @@ local tbl =
 						},
 					},
 				},
+				eventType = 12,
 				mechanicTime = 317.7,
 				name = "4.Camou (10)",
 				timeRange = true,
@@ -2525,6 +2637,7 @@ local tbl =
 						inheritedIndex = 3,
 					},
 				},
+				eventType = 12,
 				loop = true,
 				mechanicTime = 317.7,
 				name = "HoC (15)",
@@ -2598,6 +2711,7 @@ local tbl =
 						},
 					},
 				},
+				eventType = 12,
 				mechanicTime = 317.7,
 				name = "Aurora (regen) self",
 				timeRange = true,
@@ -2845,6 +2959,11 @@ local tbl =
 									"306b76dc-ee6e-e3dc-a1e0-8c60894dc919",
 									true,
 								},
+								
+								{
+									"ac542fcb-7faa-8d8c-9a88-043f40b36c74",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_Tankbar_AuroraSelf",
@@ -2870,13 +2989,25 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1835,
+							category = "Self",
+							uuid = "ac542fcb-7faa-8d8c-9a88-043f40b36c74",
+							version = 2,
+						},
+					},
 				},
+				enabled = false,
 				mechanicTime = 410.9,
 				name = "Aurora (regen) self",
 				timeRange = true,
 				timelineIndex = 56,
 				timerEndOffset = 10,
-				uuid = "e11ee757-8cf9-353c-911f-e8f507b09424",
+				uuid = "6f7f0eef-bc0d-d0fb-b105-0bdd93d90077",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -2897,6 +3028,11 @@ local tbl =
 								
 								{
 									"7ea95bcb-8a32-aac2-883a-7834a0254830",
+									true,
+								},
+								
+								{
+									"0f6d887b-ebc2-52a2-a125-b5c0abae05fe",
 									true,
 								},
 							},
@@ -2925,13 +3061,25 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1835,
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "0f6d887b-ebc2-52a2-a125-b5c0abae05fe",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 410.9,
 				name = "Aurora (regen) ST",
 				timeRange = true,
 				timelineIndex = 56,
 				timerEndOffset = 10,
-				uuid = "b9a47de8-43f7-e3be-b1d6-8f6f97c69d78",
+				uuid = "9f7585c8-4420-3090-adc0-12561b3db759",
 				version = 2,
 			},
 			inheritedIndex = 6,
@@ -2952,7 +3100,7 @@ local tbl =
 				uuid = "0117aa63-433a-6130-8e32-3b23db3d3968",
 				version = 2,
 			},
-			inheritedIndex = 7,
+			inheritedIndex = 9,
 		},
 		
 		{
@@ -3025,7 +3173,7 @@ local tbl =
 				uuid = "f0ce7947-b59e-41f8-9bfa-5223110728f3",
 				version = 2,
 			},
-			inheritedIndex = 8,
+			inheritedIndex = 10,
 		},
 		
 		{
@@ -3082,7 +3230,7 @@ local tbl =
 				uuid = "dd71f7a2-f927-c00b-9322-544ee5cf903b",
 				version = 2,
 			},
-			inheritedIndex = 9,
+			inheritedIndex = 11,
 		},
 	},
 	[92] = 
@@ -3320,6 +3468,11 @@ local tbl =
 									"306b76dc-ee6e-e3dc-a1e0-8c60894dc919",
 									true,
 								},
+								
+								{
+									"ac542fcb-7faa-8d8c-9a88-043f40b36c74",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_Tankbar_AuroraSelf",
@@ -3345,13 +3498,25 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1835,
+							category = "Self",
+							uuid = "ac542fcb-7faa-8d8c-9a88-043f40b36c74",
+							version = 2,
+						},
+					},
 				},
+				enabled = false,
 				mechanicTime = 618.6,
 				name = "Aurora (regen) self",
 				timeRange = true,
 				timelineIndex = 92,
 				timerEndOffset = 10,
-				uuid = "d776684d-61f5-55be-9050-0699fc0d68d8",
+				uuid = "98bbc34b-0263-cbd8-b497-d3290de49754",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -3372,6 +3537,11 @@ local tbl =
 								
 								{
 									"7ea95bcb-8a32-aac2-883a-7834a0254830",
+									true,
+								},
+								
+								{
+									"0f6d887b-ebc2-52a2-a125-b5c0abae05fe",
 									true,
 								},
 							},
@@ -3400,16 +3570,85 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1835,
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "0f6d887b-ebc2-52a2-a125-b5c0abae05fe",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 618.6,
 				name = "Aurora (regen) ST",
 				timeRange = true,
 				timelineIndex = 92,
 				timerEndOffset = 10,
-				uuid = "984423b1-6233-23b1-b289-9a24ca5d895e",
+				uuid = "a34b382a-995c-1517-aef9-7340047ed0c0",
 				version = 2,
 			},
 			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Main Tank",
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 618.6,
+				name = "HoC (15) ST",
+				timeRange = true,
+				timelineIndex = 92,
+				timerOffset = -1,
+				timerStartOffset = -3,
+				uuid = "08dac608-7d9a-73b2-b3dc-ca8a1613057e",
+				version = 2,
+			},
+			inheritedIndex = 11,
 		},
 		
 		{
@@ -3427,7 +3666,7 @@ local tbl =
 				uuid = "ed97ffc7-91de-537a-ae01-1558a17a1e93",
 				version = 2,
 			},
-			inheritedIndex = 7,
+			inheritedIndex = 9,
 		},
 		
 		{
@@ -3500,64 +3739,7 @@ local tbl =
 				uuid = "029ce996-3794-bf4a-a23a-eef0f0a3d64e",
 				version = 2,
 			},
-			inheritedIndex = 8,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 25758,
-							conditions = 
-							{
-								
-								{
-									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Main Tank",
-							uuid = "94511374-01bd-2218-adca-8213e488a837",
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 25758,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							dequeueIfLuaFalse = true,
-							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
-							version = 2,
-						},
-					},
-				},
-				enabled = false,
-				mechanicTime = 618.6,
-				name = "HoC (15) ST",
-				timeRange = true,
-				timelineIndex = 92,
-				timerOffset = -1,
-				timerStartOffset = -3,
-				uuid = "08dac608-7d9a-73b2-b3dc-ca8a1613057e",
-				version = 2,
-			},
-			inheritedIndex = 9,
+			inheritedIndex = 10,
 		},
 	},
 	inheritedProfiles = 
