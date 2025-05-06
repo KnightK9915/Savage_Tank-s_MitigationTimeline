@@ -1225,7 +1225,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 2,
 				timerEndOffset = 10,
-				timerStartOffset = 0.5,
+				timerStartOffset = 1.5,
 				uuid = "b0b61a36-bce2-1446-b029-9f50b0bb4a4d",
 				version = 2,
 			},
@@ -2088,7 +2088,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 11,
 				timerEndOffset = 5,
-				timerStartOffset = 0.5,
+				timerStartOffset = 1,
 				uuid = "9cc88ec8-77f3-dfb7-bf3d-40410ca8baa9",
 				version = 2,
 			},
@@ -2306,7 +2306,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 13,
 				timerEndOffset = 10,
-				timerStartOffset = 0.5,
+				timerStartOffset = 1.5,
 				uuid = "91956e2a-d10b-5cb7-818f-5558b18f59a5",
 				version = 2,
 			},
@@ -2405,7 +2405,7 @@ local tbl =
 								},
 								
 								{
-									"06e223a0-2c8e-bbf2-b4b3-9b6f87978bd8",
+									"aad96c63-1de9-85f6-8a56-b431c00818b6",
 									true,
 								},
 							},
@@ -2436,12 +2436,9 @@ local tbl =
 					{
 						data = 
 						{
-							actionCDValue = 1,
-							actionID = 7533,
-							category = "Party",
-							conditionType = 9,
-							partyTargetType = "Other Tank",
-							uuid = "06e223a0-2c8e-bbf2-b4b3-9b6f87978bd8",
+							buffID = 4454,
+							category = "Self",
+							uuid = "aad96c63-1de9-85f6-8a56-b431c00818b6",
 							version = 2,
 						},
 					},
@@ -3913,7 +3910,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 32,
 				timerEndOffset = 10,
-				timerStartOffset = 0.5,
+				timerStartOffset = 1.5,
 				uuid = "e860e4aa-820a-9d4d-bddf-c48e1ce6fd63",
 				version = 2,
 			},
@@ -3968,6 +3965,37 @@ local tbl =
 				timelineIndex = 34,
 				timerEndOffset = 193.69999694824,
 				uuid = "813b61a8-9d01-f335-a36c-6730c15f09af",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "local mainTarget = 13835\nlocal subTargets = {13833, 13834, 13832}\nlocal range = 6\n\nlocal current = Player:GetTarget()\nlocal function isValidTarget(obj)\n  return obj ~= nil and obj.targetable and obj.distance <= range\nend\n\n-- Step 1: Check if current target is main target and in range\nif isValidTarget(current) and current.contentid == mainTarget then\n  return -- keep current target, do nothing\nend\n\n-- Step 2: Try to find main target in range and select it\nlocal mainList = EntityList(\"type=2,targetable,contentid=\" .. mainTarget)\nif table.valid(mainList) then\n  for _, v in pairs(mainList) do\n    if v.distance <= range then\n      if current == nil or current.id ~= v.id then\n        Player:SetTarget(v.id)\n      end\n      return\n    end\n  end\nend\n\n-- Step 3: Try sub-targets in priority order\nfor _, cid in ipairs(subTargets) do\n  local elist = EntityList(\"type=2,targetable,contentid=\" .. cid)\n  if table.valid(elist) then\n    for _, v in pairs(elist) do\n      if v.distance <= range then\n        if current == nil or current.id ~= v.id then\n          Player:SetTarget(v.id)\n        end\n        return\n      end\n    end\n  end\nend\n",
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "d4e986a4-89f3-e61e-8255-375231273b52",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				loop = true,
+				mechanicTime = 217.2,
+				name = "SetTarget:Cat if close to me",
+				timeRange = true,
+				timelineIndex = 34,
+				timerEndOffset = 193.69999694824,
+				uuid = "4daf09e3-1131-7ceb-bb3e-a3a935ce6b6a",
 				version = 2,
 			},
 		},
@@ -4484,6 +4512,21 @@ local tbl =
 			{
 				actions = 
 				{
+					
+					{
+						data = 
+						{
+							aType = "Misc",
+							gVar = "ACR_RikuGNB3_CD",
+							setTarget = true,
+							targetContentID = 13832,
+							targetSubType = "Highest HP",
+							targetType = "ContentID",
+							uuid = "ad5c0dd5-0447-9f05-9498-f3f7c30ae102",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
 					
 					{
 						data = 
@@ -6044,6 +6087,21 @@ local tbl =
 					{
 						data = 
 						{
+							aType = "Misc",
+							gVar = "ACR_RikuGNB3_CD",
+							setTarget = true,
+							targetContentID = 13832,
+							targetSubType = "Highest HP",
+							targetType = "ContentID",
+							uuid = "561280aa-9520-511b-9e25-fdf633b28378",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
 							actionID = 7533,
 							atomicPriority = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -6055,6 +6113,7 @@ local tbl =
 							uuid = "60473b1b-0a58-1c84-8e34-d67d1014a4df",
 							version = 2.1,
 						},
+						inheritedIndex = 1,
 					},
 				},
 				conditions = 
@@ -6737,6 +6796,21 @@ local tbl =
 			{
 				actions = 
 				{
+					
+					{
+						data = 
+						{
+							aType = "Misc",
+							gVar = "ACR_RikuGNB3_CD",
+							setTarget = true,
+							targetContentID = 13832,
+							targetSubType = "Highest HP",
+							targetType = "ContentID",
+							uuid = "5fc487fb-a01f-2742-8337-a40c06c38851",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
 					
 					{
 						data = 
@@ -7818,7 +7892,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 56,
 				timerEndOffset = 10,
-				timerStartOffset = 0.5,
+				timerStartOffset = 1.5,
 				uuid = "8fd41ae6-c2cb-0ed2-800f-d91b13dc0f4b",
 				version = 2,
 			},
@@ -10644,7 +10718,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 92,
 				timerEndOffset = 10,
-				timerStartOffset = 0.5,
+				timerStartOffset = 1.5,
 				uuid = "d1a2e789-34d6-f72a-995e-246651cda64e",
 				version = 2,
 			},

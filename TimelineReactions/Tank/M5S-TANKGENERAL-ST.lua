@@ -2582,6 +2582,40 @@ local tbl =
 			},
 		},
 	},
+	[58] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "-- 获取自己职业ID、MP、gauge\nlocal job = Player.job\nlocal mp = Player.mp.percent\nlocal gauge = Player.gauge\n\n-- 遍历队伍成员\nfor _, member in pairs(EntityList.myparty) do\n  if member.hp.percent < 50 and member.distance <= 30 and member.los then\n    -- GNB: 25758 - Heart of Corundum\n    if job == 37 and ActionList:Get(1, 25758):IsReady(member.id) then\n      ActionList:Get(1, 25758):Cast(member.id)\n      break\n    end\n\n    -- DRK: 7393 - The Blackest Night (requires MP > 50%)\n    if job == 32 and mp > 50 and ActionList:Get(1, 7393):IsReady(member.id) then\n      ActionList:Get(1, 7393):Cast(member.id)\n      break\n    end\n\n    -- PLD: 7382 - Intervention (requires gauge > 50)\n    if job == 19 and gauge >= 50 and ActionList:Get(1, 7382):IsReady(member.id) then\n      ActionList:Get(1, 7382):Cast(member.id)\n      break\n    end\n\n    -- WAR: 16464 - Nascent Flash\n    if job == 21 and ActionList:Get(1, 16464):IsReady(member.id) then\n      ActionList:Get(1, 16464):Cast(member.id)\n      break\n    end\n  end\nend\n",
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "3bc6f8a8-6f2f-f8a8-a980-7024a043ceb6",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 208.7,
+				name = "Miti LowestHP",
+				timeRange = true,
+				timelineIndex = 58,
+				timerOffset = -3,
+				timerStartOffset = -3,
+				uuid = "46af8faf-aeb5-7422-b09d-ed955171a6fc",
+				version = 2,
+			},
+		},
+	},
 	[68] = 
 	{
 		
@@ -5216,6 +5250,40 @@ local tbl =
 				timerOffset = -3,
 				timerStartOffset = -2.5,
 				uuid = "f8b4ab59-7390-5267-81a8-243791b6790a",
+				version = 2,
+			},
+		},
+	},
+	[104] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "-- 获取自己职业ID、MP、gauge\nlocal job = Player.job\nlocal mp = Player.mp.percent\nlocal gauge = Player.gauge\n\n-- 遍历队伍成员\nfor _, member in pairs(EntityList.myparty) do\n  if member.hp.percent < 50 and member.distance <= 30 and member.los then\n    -- GNB: 25758 - Heart of Corundum\n    if job == 37 and ActionList:Get(1, 25758):IsReady(member.id) then\n      ActionList:Get(1, 25758):Cast(member.id)\n      break\n    end\n\n    -- DRK: 7393 - The Blackest Night (requires MP > 50%)\n    if job == 32 and mp > 50 and ActionList:Get(1, 7393):IsReady(member.id) then\n      ActionList:Get(1, 7393):Cast(member.id)\n      break\n    end\n\n    -- PLD: 7382 - Intervention (requires gauge > 50)\n    if job == 19 and gauge >= 50 and ActionList:Get(1, 7382):IsReady(member.id) then\n      ActionList:Get(1, 7382):Cast(member.id)\n      break\n    end\n\n    -- WAR: 16464 - Nascent Flash\n    if job == 21 and ActionList:Get(1, 16464):IsReady(member.id) then\n      ActionList:Get(1, 16464):Cast(member.id)\n      break\n    end\n  end\nend\n",
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "3bc6f8a8-6f2f-f8a8-a980-7024a043ceb6",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 428.2,
+				name = "Miti LowestHP",
+				timeRange = true,
+				timelineIndex = 104,
+				timerOffset = -3,
+				timerStartOffset = -3,
+				uuid = "2197e65d-c440-6980-880c-edc20d08878a",
 				version = 2,
 			},
 		},
