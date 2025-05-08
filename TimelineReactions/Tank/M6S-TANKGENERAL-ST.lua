@@ -3977,14 +3977,63 @@ local tbl =
 						{
 							aType = "Lua",
 							actionLua = "local mainTarget = 13835\nlocal subTargets = {13833, 13834, 13832, 13831}\nlocal fallbackTarget = 13822\nlocal range = 7.5\n\nlocal current = Player:GetTarget()\n\nlocal function isValidTarget(obj)\n  return obj ~= nil and obj.targetable and obj.distance <= range and obj.alive\nend\n\nlocal function getFirstValidTarget(cid)\n  local list = EntityList(\"type=2,targetable,contentid=\" .. cid)\n  if table.valid(list) then\n    for _, v in pairs(list) do\n      if v.distance <= range and v.alive then\n        return v\n      end\n    end\n  end\n  return nil\nend\n\nlocal function anyAlive(cid)\n  local list = EntityList(\"type=2,targetable,contentid=\" .. cid)\n  if table.valid(list) then\n    for _, v in pairs(list) do\n      if v.alive then\n        return true\n      end\n    end\n  end\n  return false\nend\n\nif isValidTarget(current) and current.contentid == mainTarget then\n  return\nend\n\nlocal mainList = EntityList(\"type=2,targetable,contentid=\" .. mainTarget)\nif table.valid(mainList) then\n  for _, v in pairs(mainList) do\n    if v.distance <= range and v.alive then\n      if current == nil or current.id ~= v.id then\n        Player:SetTarget(v.id)\n      end\n      return\n    end\n  end\nend\n\nfor _, cid in ipairs(subTargets) do\n  local v = getFirstValidTarget(cid)\n  if v then\n    if current == nil or current.id ~= v.id then\n      Player:SetTarget(v.id)\n    end\n    return\n  end\nend\n\nlocal allDead = true\nif anyAlive(mainTarget) then allDead = false end\nfor _, cid in ipairs(subTargets) do\n  if anyAlive(cid) then\n    allDead = false\n    break\n  end\nend\n\nif allDead then\n  local fallbackList = EntityList(\"type=2,targetable,contentid=\" .. fallbackTarget)\n  if table.valid(fallbackList) then\n    for _, v in pairs(fallbackList) do\n      if v.alive then\n        if current == nil or current.id ~= v.id then\n          Player:SetTarget(v.id)\n        end\n        return\n      end\n    end\n  end\nend",
+							conditions = 
+							{
+								
+								{
+									"3b44759c-dbcc-c14e-8c61-0cc978b17661",
+									true,
+								},
+							},
 							gVar = "ACR_RikuGNB3_CD",
 							uuid = "d4e986a4-89f3-e61e-8255-375231273b52",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "local lowestHP = nil\nlocal minHPPercent = 101 -- 初始化为大于100%，确保能被替换\n\nlocal enemies = EntityList(\"type=2,targetable,contentid=13832\")\n\nif table.valid(enemies) then\n    for _, entity in pairs(enemies) do\n        if entity.alive and entity.distance <= 7.5 and entity.hp.percent < minHPPercent then\n            lowestHP = entity\n            minHPPercent = entity.hp.percent\n        end\n    end\nend\n\n-- 选中这个血量最少的对象\nif lowestHP and (Player:GetTarget() == nil or Player:GetTarget().id ~= lowestHP.id) then\n    Player:SetTarget(lowestHP.id)\nend\n",
+							conditions = 
+							{
+								
+								{
+									"8e6e476c-c6ec-33b8-b8f1-40b51c68e6f3",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "c9bd53f0-ccf7-9cd2-aeb5-dbc183a35f8f",
 							version = 2.1,
 						},
 					},
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"AT ON\"].bool\n",
+							uuid = "3b44759c-dbcc-c14e-8c61-0cc978b17661",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"AT OFF\"].bool\n",
+							uuid = "8e6e476c-c6ec-33b8-b8f1-40b51c68e6f3",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
 				},
 				eventType = 12,
 				mechanicTime = 217.2,
@@ -3995,6 +4044,7 @@ local tbl =
 				uuid = "9b23a457-2399-9428-a953-07d0ae57f257",
 				version = 2,
 			},
+			inheritedIndex = 2,
 		},
 	},
 	[35] = 
