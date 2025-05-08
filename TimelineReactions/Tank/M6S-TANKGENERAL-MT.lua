@@ -4244,7 +4244,7 @@ local tbl =
 						data = 
 						{
 							aType = "Lua",
-							actionLua = "local lowestHP = nil\nlocal minHPPercent = 101\n\nlocal enemies = EntityList(\"type=2,targetable,contentid=13831\")\n\nif table.valid(enemies) then\n    for _, entity in pairs(enemies) do\n        if entity.alive and entity.distance <= 7.5 and entity.hp.percent < minHPPercent then\n            lowestHP = entity\n            minHPPercent = entity.hp.percent\n        end\n    end\nend\n\nif lowestHP and (Player:GetTarget() == nil or Player:GetTarget().id ~= lowestHP.id) then\n    Player:SetTarget(lowestHP.id)\nend\n",
+							actionLua = "local lowestHP = nil\nlocal minHPPercent = 101\nlocal range = 7.5\nlocal mainID = 13831\nlocal fallbackID = 18322\n\nlocal mainList = EntityList(\"type=2,targetable,contentid=\" .. mainID)\nif table.valid(mainList) then\n    for _, entity in pairs(mainList) do\n        if entity.alive and entity.distance <= range and entity.hp.percent < minHPPercent then\n            lowestHP = entity\n            minHPPercent = entity.hp.percent\n        end\n    end\nend\n\nif lowestHP then\n    if Player:GetTarget() == nil or Player:GetTarget().id ~= lowestHP.id then\n        Player:SetTarget(lowestHP.id)\n    end\n    return\nend\n\nlocal fallbackList = EntityList(\"type=2,targetable,contentid=\" .. fallbackID)\nif table.valid(fallbackList) then\n    for _, v in pairs(fallbackList) do\n        if v.alive then\n            if Player:GetTarget() == nil or Player:GetTarget().id ~= v.id then\n                Player:SetTarget(v.id)\n            end\n            return\n        end\n    end\nend",
 							conditions = 
 							{
 								
@@ -4254,9 +4254,10 @@ local tbl =
 								},
 							},
 							gVar = "ACR_RikuGNB3_CD",
-							uuid = "1eca30d4-41d6-bc2c-ba53-b298bc02388b",
+							uuid = "60a59dbb-2c1a-af61-8946-37d5020b4911",
 							version = 2.1,
 						},
+						inheritedIndex = 2,
 					},
 				},
 				conditions = 
