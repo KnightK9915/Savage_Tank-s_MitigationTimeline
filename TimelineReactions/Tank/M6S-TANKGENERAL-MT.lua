@@ -4225,12 +4225,11 @@ local tbl =
 						data = 
 						{
 							aType = "Lua",
-							actionLua = "local mainTarget = 13835\nlocal subTargets = {13833, 13834, 13831}\nlocal fallbackTarget = 13822\nlocal range = 7.5\n\nlocal current = Player:GetTarget()\nlocal function isValidTarget(obj)\n  return obj ~= nil and obj.targetable and obj.distance <= range\nend\n\nif isValidTarget(current) and current.contentid == mainTarget then\n  return\nend\n\nlocal mainList = EntityList(\"type=2,targetable,contentid=\" .. mainTarget)\nif table.valid(mainList) then\n  for _, v in pairs(mainList) do\n    if v.distance <= range then\n      if current == nil or current.id ~= v.id then\n        Player:SetTarget(v.id)\n      end\n      return\n    end\n  end\nend\n\nfor _, cid in ipairs(subTargets) do\n  local elist = EntityList(\"type=2,targetable,contentid=\" .. cid)\n  if table.valid(elist) then\n    for _, v in pairs(elist) do\n      if v.distance <= range then\n        if current == nil or current.id ~= v.id then\n          Player:SetTarget(v.id)\n        end\n        return\n      end\n    end\n  end\nend\n\nlocal fallbackList = EntityList(\"type=2,targetable,contentid=\" .. fallbackTarget)\nif table.valid(fallbackList) then\n  for _, v in pairs(fallbackList) do\n    if current == nil or current.id ~= v.id then\n      Player:SetTarget(v.id)\n    end\n    return\n  end\nend",
+							actionLua = "local mainTarget = 13835\nlocal subTargets = {13833, 13834, 13831, 13832}\nlocal fallbackTarget = 13822\nlocal range = 7.5\n\nlocal current = Player:GetTarget()\n\nlocal function isValidTarget(obj)\n  return obj ~= nil and obj.targetable and obj.distance <= range and obj.alive\nend\n\nlocal function getFirstValidTarget(cid)\n  local list = EntityList(\"type=2,targetable,contentid=\" .. cid)\n  if table.valid(list) then\n    for _, v in pairs(list) do\n      if v.distance <= range and v.alive then\n        return v\n      end\n    end\n  end\n  return nil\nend\n\nlocal function anyAlive(cid)\n  local list = EntityList(\"type=2,targetable,contentid=\" .. cid)\n  if table.valid(list) then\n    for _, v in pairs(list) do\n      if v.alive then\n        return true\n      end\n    end\n  end\n  return false\nend\n\nif isValidTarget(current) and current.contentid == mainTarget then\n  return\nend\n\nlocal mainList = EntityList(\"type=2,targetable,contentid=\" .. mainTarget)\nif table.valid(mainList) then\n  for _, v in pairs(mainList) do\n    if v.distance <= range and v.alive then\n      if current == nil or current.id ~= v.id then\n        Player:SetTarget(v.id)\n      end\n      return\n    end\n  end\nend\n\nfor _, cid in ipairs(subTargets) do\n  local v = getFirstValidTarget(cid)\n  if v then\n    if current == nil or current.id ~= v.id then\n      Player:SetTarget(v.id)\n    end\n    return\n  end\nend\n\nlocal allDead = true\nif anyAlive(mainTarget) then allDead = false end\nfor _, cid in ipairs(subTargets) do\n  if anyAlive(cid) then\n    allDead = false\n    break\n  end\nend\n\nif allDead then\n  local fallbackList = EntityList(\"type=2,targetable,contentid=\" .. fallbackTarget)\n  if table.valid(fallbackList) then\n    for _, v in pairs(fallbackList) do\n      if v.alive then\n        if current == nil or current.id ~= v.id then\n          Player:SetTarget(v.id)\n        end\n        return\n      end\n    end\n  end\nend",
 							gVar = "ACR_RikuGNB3_CD",
 							uuid = "d4e986a4-89f3-e61e-8255-375231273b52",
 							version = 2.1,
 						},
-						inheritedIndex = 1,
 					},
 				},
 				conditions = 
@@ -4242,7 +4241,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 34,
 				timerEndOffset = 171.5,
-				uuid = "08f0b538-35df-8a1d-af07-a7a9b86d6c8f",
+				uuid = "69eba572-d257-dda8-bece-34c68f471253",
 				version = 2,
 			},
 		},
@@ -6813,7 +6812,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 46,
 				timerOffset = -10,
-				timerStartOffset = -5,
+				timerStartOffset = -3,
 				uuid = "223d1ba3-bb65-73c1-a859-a6220908e16c",
 				version = 2,
 			},
@@ -6905,7 +6904,7 @@ local tbl =
 				name = "HoL",
 				timeRange = true,
 				timelineIndex = 46,
-				timerStartOffset = -5,
+				timerStartOffset = -3,
 				uuid = "4b6aacf9-0c64-687b-8696-d60d213f87fe",
 				version = 2,
 			},
@@ -6999,7 +6998,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 46,
 				timerOffset = -10,
-				timerStartOffset = -5,
+				timerStartOffset = -3,
 				uuid = "307a2fd0-ebf8-88a0-b831-88a33cbfffc5",
 				version = 2,
 			},
@@ -7091,7 +7090,7 @@ local tbl =
 				name = "Shake it off",
 				timeRange = true,
 				timelineIndex = 46,
-				timerStartOffset = -5,
+				timerStartOffset = -3,
 				uuid = "1fbd8e8c-7c66-edd4-8f2a-b51778dbe2a4",
 				version = 2,
 			},
@@ -7986,6 +7985,153 @@ local tbl =
 			},
 			inheritedIndex = 5,
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_Potion",
+							ignoreWeaveRules = true,
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_Potion",
+							ignoreWeaveRules = true,
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_Potion",
+							ignoreWeaveRules = true,
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_Potion",
+							ignoreWeaveRules = true,
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 314.6,
+				name = "Potion ON",
+				timelineIndex = 47,
+				timerStartOffset = -10,
+				uuid = "035b5aec-05cc-6f52-a771-d1b6df0ad879",
+				version = 2,
+			},
+		},
 	},
 	[49] = 
 	{
@@ -8647,7 +8793,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 53,
 				timerOffset = -10,
-				timerStartOffset = -5,
+				timerStartOffset = -3,
 				uuid = "e071d977-012b-0ab3-9c28-318ea4ac3d26",
 				version = 2,
 			},
@@ -8739,7 +8885,7 @@ local tbl =
 				name = "HoL",
 				timeRange = true,
 				timelineIndex = 53,
-				timerStartOffset = -5,
+				timerStartOffset = -3,
 				uuid = "59eee026-5209-d977-aafa-7d3da00bf1de",
 				version = 2,
 			},
@@ -8833,7 +8979,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 53,
 				timerOffset = -10,
-				timerStartOffset = -5,
+				timerStartOffset = -3,
 				uuid = "e25990c9-d2bd-c339-8da2-00d13208390d",
 				version = 2,
 			},
@@ -8925,7 +9071,7 @@ local tbl =
 				name = "Shake it off",
 				timeRange = true,
 				timelineIndex = 53,
-				timerStartOffset = -5,
+				timerStartOffset = -3,
 				uuid = "16c8a704-58e8-62d0-bc79-0443002edbdf",
 				version = 2,
 			},
@@ -10918,6 +11064,176 @@ local tbl =
 				uuid = "3e179a48-5aa2-44df-9934-a6752114c890",
 				version = 2,
 			},
+		},
+	},
+	[85] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_Potion",
+							gVarValue = 2,
+							holdActionDuration = 61.900001525879,
+							holdActionID = 846,
+							ignoreWeaveRules = true,
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_Potion",
+							gVarValue = 2,
+							holdActionDuration = 61.900001525879,
+							holdActionID = 846,
+							ignoreWeaveRules = true,
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_Potion",
+							gVarValue = 2,
+							holdActionDuration = 61.900001525879,
+							holdActionID = 846,
+							ignoreWeaveRules = true,
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_Potion",
+							gVarValue = 2,
+							holdActionDuration = 61.900001525879,
+							holdActionID = 846,
+							ignoreWeaveRules = true,
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 569.1,
+				name = "Hold Potion ",
+				timeRange = true,
+				timelineIndex = 85,
+				timerEndOffset = 10,
+				timerOffset = -15,
+				uuid = "597a6c98-7b4c-c501-a2a3-ef3873347616",
+				version = 2,
+			},
+			inheritedIndex = 1,
 		},
 	},
 	[88] = 
