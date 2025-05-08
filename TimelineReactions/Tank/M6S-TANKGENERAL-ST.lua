@@ -3995,7 +3995,7 @@ local tbl =
 						data = 
 						{
 							aType = "Lua",
-							actionLua = "local lowestHP = nil\nlocal minHPPercent = 101 -- 初始化为大于100%，确保能被替换\n\nlocal enemies = EntityList(\"type=2,targetable,contentid=13832\")\n\nif table.valid(enemies) then\n    for _, entity in pairs(enemies) do\n        if entity.alive and entity.distance <= 7.5 and entity.hp.percent < minHPPercent then\n            lowestHP = entity\n            minHPPercent = entity.hp.percent\n        end\n    end\nend\n\n-- 选中这个血量最少的对象\nif lowestHP and (Player:GetTarget() == nil or Player:GetTarget().id ~= lowestHP.id) then\n    Player:SetTarget(lowestHP.id)\nend\n",
+							actionLua = "local lowestHP = nil\nlocal minHPPercent = 101\n\nlocal enemies = EntityList(\"type=2,targetable,contentid=13832\")\n\nif table.valid(enemies) then\n    for _, entity in pairs(enemies) do\n        if entity.alive and entity.distance <= 7.5 and entity.hp.percent < minHPPercent then\n            lowestHP = entity\n            minHPPercent = entity.hp.percent\n        end\n    end\nend\n\nif lowestHP and (Player:GetTarget() == nil or Player:GetTarget().id ~= lowestHP.id) then\n    Player:SetTarget(lowestHP.id)\nend\n",
 							conditions = 
 							{
 								
