@@ -1,5 +1,429 @@
 local tbl = 
 {
+	[6] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 37.9,
+				name = "TBN (25)",
+				timeRange = true,
+				timelineIndex = 6,
+				timerOffset = -4,
+				timerStartOffset = -2,
+				uuid = "ec49dfae-82af-c9f0-9c5a-6415a9460715",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 37.9,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 6,
+				timerOffset = -15,
+				timerStartOffset = -10,
+				uuid = "9f42a7bb-b2cb-7c22-8678-65dcabf07934",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36927,
+							conditions = 
+							{
+								
+								{
+									"5cf17619-127d-b210-88cb-64658ca76476",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "10a88836-1aee-2730-ae23-3306adfd5729",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36927,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "5cf17619-127d-b210-88cb-64658ca76476",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 37.9,
+				name = "Vigil (40)",
+				timeRange = true,
+				timelineIndex = 6,
+				timerOffset = -5,
+				timerStartOffset = -5,
+				uuid = "6d418d99-964c-c9f0-8162-d3b275e2555b",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25754,
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				enabled = false,
+				mechanicTime = 37.9,
+				name = "Oblation (10)",
+				randomOffset = -1,
+				timeRange = true,
+				timelineIndex = 6,
+				timerOffset = -3,
+				timerStartOffset = -8,
+				uuid = "9408f590-8f23-bbaa-9e02-3bff8c2622d5",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3634,
+							conditions = 
+							{
+								
+								{
+									"85632b1d-acad-d58b-b26f-ede352e4c489",
+									true,
+								},
+								
+								{
+									"332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "85c81a2a-1fc1-bba8-a315-e5438e54b390",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgOptionType = 2,
+							eventArgType = 2,
+							eventSpellName = "ディープカット",
+							uuid = "85632b1d-acad-d58b-b26f-ede352e4c489",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 3634,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 37.9,
+				name = "Dark Mind (M20)",
+				timeRange = true,
+				timelineIndex = 6,
+				timerOffset = -5,
+				timerStartOffset = -4,
+				uuid = "3670090b-9a59-fe4b-940f-9e4288c63fa9",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 37.9,
+				name = "_________________",
+				timelineIndex = 6,
+				uuid = "39835052-3a7f-7310-8d68-5db4da1c8300",
+				version = 2,
+			},
+			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3638,
+							conditions = 
+							{
+								
+								{
+									"e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "9b1f0885-3a72-1913-ad03-47c71acda8e5",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3638,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 37.9,
+				name = "Living Dead (Invinsible)",
+				timeRange = true,
+				timelineIndex = 6,
+				timerStartOffset = -1.5,
+				uuid = "9df9ab37-4f71-7e56-a899-7b022c7be0c7",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25754,
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 37.9,
+				name = "Oblation ST (10)",
+				randomOffset = 2,
+				timeRange = true,
+				timelineIndex = 6,
+				timerStartOffset = -8,
+				uuid = "991c99ad-1a61-bfc9-9b0b-cabf496d0ba0",
+				version = 2,
+			},
+			inheritedIndex = 8,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 37.9,
+				name = "TBN ST (25)",
+				timeRange = true,
+				timelineIndex = 6,
+				timerOffset = -4,
+				timerStartOffset = -2,
+				uuid = "264698ac-b981-91b7-93a7-f55554b56a6f",
+				version = 2,
+			},
+			inheritedIndex = 9,
+		},
+	},
 	[25] = 
 	{
 		
@@ -126,6 +550,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 119.9,
 				name = "Rampart (20)",
 				timeRange = true,
@@ -193,7 +618,6 @@ local tbl =
 						},
 					},
 				},
-				enabled = false,
 				mechanicTime = 119.9,
 				name = "Vigil (40)",
 				timeRange = true,
@@ -330,6 +754,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 119.9,
 				name = "Dark Mind (M20)",
 				timeRange = true,
@@ -542,6 +967,854 @@ local tbl =
 				timerOffset = -4,
 				timerStartOffset = -2,
 				uuid = "2f8b4211-dc74-2108-a1fe-cf01c8b7c846",
+				version = 2,
+			},
+			inheritedIndex = 9,
+		},
+	},
+	[35] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 157,
+				name = "TBN (25)",
+				timeRange = true,
+				timelineIndex = 35,
+				timerOffset = -4,
+				timerStartOffset = -2,
+				uuid = "45a84326-ccaa-d628-923a-ca61f5a53eb1",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 157,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 35,
+				timerOffset = -15,
+				timerStartOffset = -10,
+				uuid = "4c00f904-893a-4cba-b644-847ef8cc4d07",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36927,
+							conditions = 
+							{
+								
+								{
+									"5cf17619-127d-b210-88cb-64658ca76476",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "10a88836-1aee-2730-ae23-3306adfd5729",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36927,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "5cf17619-127d-b210-88cb-64658ca76476",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 157,
+				name = "Vigil (40)",
+				timeRange = true,
+				timelineIndex = 35,
+				timerOffset = -5,
+				timerStartOffset = -5,
+				uuid = "a8dbb29a-e6bb-4457-ba89-1d4311bce8d8",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25754,
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				enabled = false,
+				mechanicTime = 157,
+				name = "Oblation (10)",
+				randomOffset = -1,
+				timeRange = true,
+				timelineIndex = 35,
+				timerOffset = -3,
+				timerStartOffset = -8,
+				uuid = "7039db19-9ba2-7a89-8b6a-3d67f0416d3f",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3634,
+							conditions = 
+							{
+								
+								{
+									"85632b1d-acad-d58b-b26f-ede352e4c489",
+									true,
+								},
+								
+								{
+									"332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "85c81a2a-1fc1-bba8-a315-e5438e54b390",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgOptionType = 2,
+							eventArgType = 2,
+							eventSpellName = "ディープカット",
+							uuid = "85632b1d-acad-d58b-b26f-ede352e4c489",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 3634,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 157,
+				name = "Dark Mind (M20)",
+				timeRange = true,
+				timelineIndex = 35,
+				timerOffset = -5,
+				timerStartOffset = -4,
+				uuid = "c80a8b09-c1f1-df9f-8a22-0e6f6fc92f1e",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 157,
+				name = "_________________",
+				timelineIndex = 35,
+				uuid = "d5a10be3-86e9-ea0a-b7ad-2273faeaa943",
+				version = 2,
+			},
+			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3638,
+							conditions = 
+							{
+								
+								{
+									"e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "9b1f0885-3a72-1913-ad03-47c71acda8e5",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3638,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 157,
+				name = "Living Dead (Invinsible)",
+				timeRange = true,
+				timelineIndex = 35,
+				timerStartOffset = -1.5,
+				uuid = "080591fe-a282-44b8-a39b-ccc081e902ac",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25754,
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 157,
+				name = "Oblation ST (10)",
+				randomOffset = 2,
+				timeRange = true,
+				timelineIndex = 35,
+				timerStartOffset = -8,
+				uuid = "9a56a115-7221-d275-bb8f-f35e241d359c",
+				version = 2,
+			},
+			inheritedIndex = 8,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 157,
+				name = "TBN ST (25)",
+				timeRange = true,
+				timelineIndex = 35,
+				timerOffset = -4,
+				timerStartOffset = -2,
+				uuid = "aeeb95f0-0c3a-c532-872f-833ecb2e1338",
+				version = 2,
+			},
+			inheritedIndex = 9,
+		},
+	},
+	[60] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 360.5,
+				name = "TBN (25)",
+				timeRange = true,
+				timelineIndex = 60,
+				timerOffset = -4,
+				timerStartOffset = -2,
+				uuid = "f5c6b089-c7cc-f682-9f7c-c438d8908764",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 360.5,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 60,
+				timerOffset = -15,
+				timerStartOffset = -10,
+				uuid = "3c0ac028-1a5f-8198-99e8-788b8c564b52",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36927,
+							conditions = 
+							{
+								
+								{
+									"5cf17619-127d-b210-88cb-64658ca76476",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "10a88836-1aee-2730-ae23-3306adfd5729",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36927,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "5cf17619-127d-b210-88cb-64658ca76476",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 360.5,
+				name = "Vigil (40)",
+				timeRange = true,
+				timelineIndex = 60,
+				timerOffset = -5,
+				timerStartOffset = -5,
+				uuid = "b624fa2f-8a65-1687-bb77-3c77c0e1b67a",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25754,
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				enabled = false,
+				mechanicTime = 360.5,
+				name = "Oblation (10)",
+				randomOffset = -1,
+				timeRange = true,
+				timelineIndex = 60,
+				timerOffset = -3,
+				timerStartOffset = -8,
+				uuid = "0ec41081-eaf5-5bbc-83a1-2ecfdc649a9b",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3634,
+							conditions = 
+							{
+								
+								{
+									"85632b1d-acad-d58b-b26f-ede352e4c489",
+									true,
+								},
+								
+								{
+									"332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "85c81a2a-1fc1-bba8-a315-e5438e54b390",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgOptionType = 2,
+							eventArgType = 2,
+							eventSpellName = "ディープカット",
+							uuid = "85632b1d-acad-d58b-b26f-ede352e4c489",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 3634,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 360.5,
+				name = "Dark Mind (M20)",
+				timeRange = true,
+				timelineIndex = 60,
+				timerOffset = -5,
+				timerStartOffset = -4,
+				uuid = "79873a34-9c43-45ed-b960-e91ccfa02737",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 360.5,
+				name = "_________________",
+				timelineIndex = 60,
+				uuid = "e4a34d00-4fd2-ed49-8e20-cc106b46c7d7",
+				version = 2,
+			},
+			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3638,
+							conditions = 
+							{
+								
+								{
+									"e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "9b1f0885-3a72-1913-ad03-47c71acda8e5",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3638,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 360.5,
+				name = "Living Dead (Invinsible)",
+				timeRange = true,
+				timelineIndex = 60,
+				timerStartOffset = -1.5,
+				uuid = "a7098a4c-83bc-ac2d-a5be-083e74278472",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25754,
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 360.5,
+				name = "Oblation ST (10)",
+				randomOffset = 2,
+				timeRange = true,
+				timelineIndex = 60,
+				timerStartOffset = -8,
+				uuid = "118fb24c-3f07-4930-a5b2-506dcbb956f2",
+				version = 2,
+			},
+			inheritedIndex = 8,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 360.5,
+				name = "TBN ST (25)",
+				timeRange = true,
+				timelineIndex = 60,
+				timerOffset = -4,
+				timerStartOffset = -2,
+				uuid = "ebac4474-8b0b-648f-850f-6a5858c2bbf1",
 				version = 2,
 			},
 			inheritedIndex = 9,
