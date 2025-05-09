@@ -142,7 +142,54 @@ local tbl =
 			uuid = "585c09c1-1e47-538d-a10b-459becf1492b",
 			version = 2,
 		},
-		inheritedIndex = 2,
+		inheritedIndex = 3,
+	},
+	
+	{
+		data = 
+		{
+			actions = 
+			{
+				
+				{
+					data = 
+					{
+						aType = "Lua",
+						actionLua = "GUI:Begin(\"Megaminx mini reaction\",true,GUI.WindowFlags_NoTitleBar + GUI.WindowFlags_NoScrollbar + GUI.WindowFlags_NoScrollWithMouse + GUI.WindowFlags_NoCollapse + GUI.WindowFlags_AlwaysAutoResize)\nlocal p = TensorCore.mGetPlayer()\nif p then\n    if TensorReactions_CurrentTimer ~= nil then\n        GUI:Text(\"sync: \" ..string.format(\"%.2f\",TensorReactions_CurrentTimer))\n    end\n    if TensorReactions_CurrentCombatTimer ~= nil then\n        GUI:Text(\"no sync: \" .. string.format(\"%.2f\",TensorReactions_CurrentCombatTimer))\n    end\n\tif data.megaminx_m8s_time1 ~= nil then\n        GUI:Text(\"time1: \" .. string.format(\"%.2f\",(Now() - data.megaminx_m8s_time1)/1000))\n    end\n\tif data.megaminx_m8s_time2 ~= nil then\n        GUI:Text(\"time2: \" .. string.format(\"%.2f\",(Now() - data.megaminx_m8s_time2)/1000))\n    end\n    GUI:BeginGroup()\n    GUI:Text(\"x: \" .. string.format(\"%.2f\",p.pos.x))\n    GUI:Text(\"y: \" .. string.format(\"%.2f\",p.pos.y))\n    GUI:Text(\"z: \" .. string.format(\"%.2f\",p.pos.z))\n    GUI:EndGroup()\nend\nGUI:End()\nself.used = true",
+						conditions = 
+						{
+							
+							{
+								"40dd9f8e-c560-0cb0-9ca2-dfa2ce0ab3b6",
+								true,
+							},
+						},
+						gVar = "ACR_RikuDRK3_CD",
+						uuid = "cacfffd7-0d8e-a87c-ac60-32970eda6921",
+						version = 2.1,
+					},
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					data = 
+					{
+						category = "Self",
+						conditionType = 8,
+						localmapid = 1263,
+						uuid = "40dd9f8e-c560-0cb0-9ca2-dfa2ce0ab3b6",
+						version = 2,
+					},
+				},
+			},
+			eventType = 13,
+			name = "M8S Sync Timer",
+			timelineIndex = 1,
+			uuid = "b23dac5d-598c-22d0-8a5a-cd8297b8460b",
+			version = 2,
+		},
 	}, 
 	inheritedProfiles = 
 	{
