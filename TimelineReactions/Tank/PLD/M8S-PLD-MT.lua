@@ -847,6 +847,11 @@ local tbl =
 									"55b30480-d565-052a-95ca-562ccba1daf8",
 									true,
 								},
+								
+								{
+									"0e0126a3-3feb-6c83-b440-60e864e9c3c7",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -880,6 +885,16 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "0e0126a3-3feb-6c83-b440-60e864e9c3c7",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 553,
 				name = "Rampart (20)",
@@ -887,7 +902,7 @@ local tbl =
 				timelineIndex = 82,
 				timerOffset = -15,
 				timerStartOffset = -10,
-				uuid = "de308064-40f6-7df3-beaf-ea5b54d5b4b2",
+				uuid = "396bc585-26ac-2183-a911-7533a1794d5c",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -915,6 +930,11 @@ local tbl =
 									"eaef15c7-683d-867c-a604-5e2ab353d19c",
 									true,
 								},
+								
+								{
+									"316c079c-1972-6290-9ef3-df8a5c13cb39",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -922,6 +942,7 @@ local tbl =
 							uuid = "1ff7ecf5-69f2-0d51-9683-ee0ea48d1ed1",
 							version = 2.1,
 						},
+						inheritedIndex = 1,
 					},
 				},
 				conditions = 
@@ -948,6 +969,16 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "316c079c-1972-6290-9ef3-df8a5c13cb39",
+							version = 2,
+						},
+					},
 				},
 				enabled = false,
 				mechanicTime = 553,
@@ -955,7 +986,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 82,
 				timerStartOffset = -10,
-				uuid = "5c7034f9-b0e1-618a-bb8f-d397cd01de00",
+				uuid = "4d290cea-baa6-8b2a-a8f0-31477f4d51db",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -981,6 +1012,11 @@ local tbl =
 								
 								{
 									"870f662a-e61a-ea36-a0c5-7c4a58f83688",
+									true,
+								},
+								
+								{
+									"f37b676b-76a7-6f0d-802c-f2330d8a34ef",
 									true,
 								},
 							},
@@ -1017,6 +1053,16 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "f37b676b-76a7-6f0d-802c-f2330d8a34ef",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 553,
 				name = "Bulwalk (Block)",
@@ -1024,7 +1070,7 @@ local tbl =
 				timelineIndex = 82,
 				timerOffset = -8,
 				timerStartOffset = -5,
-				uuid = "a82664f4-c1df-885e-bf3c-83c9877ee283",
+				uuid = "aa15463c-608f-8a42-8771-4e1e14ab60d6",
 				version = 2,
 			},
 			inheritedIndex = 3,
@@ -1050,6 +1096,11 @@ local tbl =
 								
 								{
 									"59b0d8fb-1bc0-c785-801f-ffaba798c6e3",
+									true,
+								},
+								
+								{
+									"43f22055-406c-2633-bc4e-55c155a5ef6a",
 									true,
 								},
 							},
@@ -1084,13 +1135,23 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "43f22055-406c-2633-bc4e-55c155a5ef6a",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 553,
 				name = "sheltron (15)",
 				timeRange = true,
 				timelineIndex = 82,
 				timerStartOffset = -2,
-				uuid = "8b7b80af-52d5-58d6-a9ea-93865ba68bd3",
+				uuid = "8b637ed3-5f53-7eb2-8082-24c94f8bc9fc",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -1108,7 +1169,7 @@ local tbl =
 				mechanicTime = 553,
 				name = "_________",
 				timelineIndex = 82,
-				uuid = "07b4cbf0-2e19-8fcb-ab47-4f1813e5d952",
+				uuid = "c36cfcd2-b047-e9c6-9ece-8dddf7a4dcc5",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -1136,6 +1197,11 @@ local tbl =
 									"1b3dc22e-071b-82fb-bf9c-809dd7710833",
 									true,
 								},
+								
+								{
+									"efe526dd-550d-8c59-ae8b-7c246ffc7207",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -1143,6 +1209,7 @@ local tbl =
 							uuid = "9b1f0885-3a72-1913-ad03-47c71acda8e5",
 							version = 2.1,
 						},
+						inheritedIndex = 1,
 					},
 				},
 				conditions = 
@@ -1169,13 +1236,23 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "efe526dd-550d-8c59-ae8b-7c246ffc7207",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 553,
 				name = "Hollowed Ground (Invinsible)",
 				timeRange = true,
 				timelineIndex = 82,
 				timerStartOffset = -1.5,
-				uuid = "e15e6f39-0bef-b037-9e77-74430a78353a",
+				uuid = "916832ea-2345-2667-9db7-8fff269d7832",
 				version = 2,
 			},
 			inheritedIndex = 6,
@@ -1196,6 +1273,11 @@ local tbl =
 								
 								{
 									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+								
+								{
+									"4d9bc62c-394d-5d57-b884-057ea3f02587",
 									true,
 								},
 							},
@@ -1220,13 +1302,23 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "4d9bc62c-394d-5d57-b884-057ea3f02587",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 553,
 				name = "interven ST (15)",
 				timeRange = true,
 				timelineIndex = 82,
 				timerStartOffset = -3,
-				uuid = "287ef7f9-d0ea-3de4-86a1-10764406ee4d",
+				uuid = "f55a2537-0f6e-85bf-969a-30c5efbbc437",
 				version = 2,
 			},
 			inheritedIndex = 7,
@@ -1257,6 +1349,11 @@ local tbl =
 									"55b30480-d565-052a-95ca-562ccba1daf8",
 									true,
 								},
+								
+								{
+									"4d509d9f-1285-90e8-a272-875b94d73ca3",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -1290,6 +1387,16 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "4d509d9f-1285-90e8-a272-875b94d73ca3",
+							version = 2,
+						},
+					},
 				},
 				enabled = false,
 				mechanicTime = 733.9,
@@ -1298,7 +1405,7 @@ local tbl =
 				timelineIndex = 105,
 				timerOffset = -15,
 				timerStartOffset = -10,
-				uuid = "5d977d3a-6469-8694-8406-c1e3eb3f4c96",
+				uuid = "7d38e039-e3bb-6300-b45d-f7448b2a4416",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -1324,6 +1431,11 @@ local tbl =
 								
 								{
 									"eaef15c7-683d-867c-a604-5e2ab353d19c",
+									true,
+								},
+								
+								{
+									"489b5d25-9bc4-eefd-aa48-7516ecccd21d",
 									true,
 								},
 							},
@@ -1359,13 +1471,23 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "489b5d25-9bc4-eefd-aa48-7516ecccd21d",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 733.9,
 				name = "Guardian (40)",
 				timeRange = true,
 				timelineIndex = 105,
 				timerStartOffset = -10,
-				uuid = "c3a72c8c-e409-a357-9f64-4accd3137b6a",
+				uuid = "578f244c-feeb-38de-a4d1-5ccf0d84edd6",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -1391,6 +1513,11 @@ local tbl =
 								
 								{
 									"870f662a-e61a-ea36-a0c5-7c4a58f83688",
+									true,
+								},
+								
+								{
+									"54f34e44-082e-10e1-90a3-7b7e03138bf7",
 									true,
 								},
 							},
@@ -1427,6 +1554,16 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "54f34e44-082e-10e1-90a3-7b7e03138bf7",
+							version = 2,
+						},
+					},
 				},
 				enabled = false,
 				mechanicTime = 733.9,
@@ -1435,7 +1572,7 @@ local tbl =
 				timelineIndex = 105,
 				timerOffset = -8,
 				timerStartOffset = -5,
-				uuid = "a3a3bb64-ed09-7cdb-a31d-0dec8ca035d7",
+				uuid = "b48c0457-263a-a2cc-8d29-bab29f463f62",
 				version = 2,
 			},
 			inheritedIndex = 3,
@@ -1461,6 +1598,11 @@ local tbl =
 								
 								{
 									"59b0d8fb-1bc0-c785-801f-ffaba798c6e3",
+									true,
+								},
+								
+								{
+									"ba50b961-eafb-72f6-8029-27e27a15c102",
 									true,
 								},
 							},
@@ -1495,13 +1637,23 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "ba50b961-eafb-72f6-8029-27e27a15c102",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 733.9,
 				name = "sheltron (15)",
 				timeRange = true,
 				timelineIndex = 105,
 				timerStartOffset = -2,
-				uuid = "20676615-ac8b-43e1-a29f-6c2c997cb74b",
+				uuid = "a27d356e-22df-2c6f-922b-8acbf233fb0f",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -1519,7 +1671,7 @@ local tbl =
 				mechanicTime = 733.9,
 				name = "_________",
 				timelineIndex = 105,
-				uuid = "a4dd8711-4e7b-1844-8957-8019f6cdad13",
+				uuid = "387474b8-c952-66bf-9e63-c768fbf3e573",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -1545,6 +1697,11 @@ local tbl =
 								
 								{
 									"773e684f-05e0-7921-ae07-88b48252bdec",
+									true,
+								},
+								
+								{
+									"f0da14f9-7d04-b4e6-bd09-e8e41c810828",
 									true,
 								},
 							},
@@ -1581,13 +1738,23 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "f0da14f9-7d04-b4e6-bd09-e8e41c810828",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 733.9,
 				name = "Hollowed Ground (Invinsible)",
 				timeRange = true,
 				timelineIndex = 105,
 				timerStartOffset = -1.5,
-				uuid = "ac84e7a3-b7ed-b7dc-b0f2-e4b959e34ffd",
+				uuid = "e4210a03-47ed-fb1a-a21a-3ccb8cdc21d3",
 				version = 2,
 			},
 			inheritedIndex = 6,
@@ -1608,6 +1775,11 @@ local tbl =
 								
 								{
 									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+								
+								{
+									"65c08f0a-8ac5-ac0b-979f-f43b4a4299a8",
 									true,
 								},
 							},
@@ -1632,13 +1804,23 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "65c08f0a-8ac5-ac0b-979f-f43b4a4299a8",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 733.9,
 				name = "interven ST (15)",
 				timeRange = true,
 				timelineIndex = 105,
 				timerStartOffset = -3,
-				uuid = "2925ddaf-88fc-44ec-9e7f-883cb2ceb419",
+				uuid = "b34ea8d0-4dbf-db47-a024-41045845b9e4",
 				version = 2,
 			},
 			inheritedIndex = 7,
