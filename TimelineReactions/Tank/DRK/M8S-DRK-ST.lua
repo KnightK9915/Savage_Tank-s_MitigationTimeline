@@ -1122,6 +1122,11 @@ local tbl =
 									"1909117c-94dd-1499-9c96-b520f2d4f35c",
 									true,
 								},
+								
+								{
+									"1445450d-5cae-fb57-97a3-48fc94d13448",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -1151,6 +1156,16 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return data.string_SelectionDR[\"正攻法\"].bool\n",
 							uuid = "1909117c-94dd-1499-9c96-b520f2d4f35c",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "1445450d-5cae-fb57-97a3-48fc94d13448",
 							version = 2,
 						},
 					},
@@ -1189,6 +1204,11 @@ local tbl =
 									"bf595b1d-9421-6534-8ecb-93c7bb748fed",
 									true,
 								},
+								
+								{
+									"5b3c0bc9-49e7-2c7c-96b9-ee3d3e60bd37",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -1219,6 +1239,16 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return data.string_SelectionDR[\"正攻法\"].bool\n",
 							uuid = "bf595b1d-9421-6534-8ecb-93c7bb748fed",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "5b3c0bc9-49e7-2c7c-96b9-ee3d3e60bd37",
 							version = 2,
 						},
 					},
@@ -1257,6 +1287,11 @@ local tbl =
 									"007f21c1-31ff-a32c-8774-10aac1b2c601",
 									true,
 								},
+								
+								{
+									"f248d6ab-fb99-5ae3-b63e-162e420a37e5",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -1286,6 +1321,16 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return data.string_SelectionDR[\"正攻法\"].bool\n",
 							uuid = "007f21c1-31ff-a32c-8774-10aac1b2c601",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "f248d6ab-fb99-5ae3-b63e-162e420a37e5",
 							version = 2,
 						},
 					},
@@ -1320,6 +1365,11 @@ local tbl =
 									"44253413-0a5b-6a78-b366-46b753a2f445",
 									true,
 								},
+								
+								{
+									"0ea4ad9b-992c-ec7e-9b82-bf07fb54a226",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -1337,6 +1387,16 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return data.string_SelectionDR[\"正攻法\"].bool\n",
 							uuid = "44253413-0a5b-6a78-b366-46b753a2f445",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "0ea4ad9b-992c-ec7e-9b82-bf07fb54a226",
 							version = 2,
 						},
 					},
@@ -1381,6 +1441,11 @@ local tbl =
 									"4dc2d068-8095-2688-8660-f08d5dc5088e",
 									true,
 								},
+								
+								{
+									"c136616b-816b-059c-baac-08448d08e848",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -1423,6 +1488,16 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return data.string_SelectionDR[\"正攻法\"].bool\n",
 							uuid = "4dc2d068-8095-2688-8660-f08d5dc5088e",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "c136616b-816b-059c-baac-08448d08e848",
 							version = 2,
 						},
 					},
@@ -1479,6 +1554,11 @@ local tbl =
 									"90dc1c7e-e2f5-23f3-b93b-7eeb75a75d45",
 									true,
 								},
+								
+								{
+									"47ca9912-d34e-b649-83a7-40c24273654c",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -1512,6 +1592,16 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "47ca9912-d34e-b649-83a7-40c24273654c",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 553,
 				name = "Living Dead (Invinsible)",
@@ -1541,6 +1631,11 @@ local tbl =
 									"79f8600d-3645-7dd6-aede-c2699577ca6f",
 									true,
 								},
+								
+								{
+									"b7d5f06b-1f4e-e59d-ba47-8af43f16edb3",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -1560,6 +1655,16 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
 							uuid = "79f8600d-3645-7dd6-aede-c2699577ca6f",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "b7d5f06b-1f4e-e59d-ba47-8af43f16edb3",
 							version = 2,
 						},
 					},
@@ -1598,6 +1703,11 @@ local tbl =
 									"04c40f1b-60c6-1be6-a3c6-d77ee1a9ef7e",
 									true,
 								},
+								
+								{
+									"7e30e3d2-6a2e-f699-a153-191c44220750",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -1628,6 +1738,16 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
 							uuid = "04c40f1b-60c6-1be6-a3c6-d77ee1a9ef7e",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "7e30e3d2-6a2e-f699-a153-191c44220750",
 							version = 2,
 						},
 					},
@@ -1669,6 +1789,11 @@ local tbl =
 									"373e1f76-bf61-009f-8601-885af70354bc",
 									true,
 								},
+								
+								{
+									"c83b6158-aa8e-e1de-9ad6-998c6da68061",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -1698,6 +1823,16 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return data.string_SelectionDR[\"正攻法\"].bool\n",
 							uuid = "373e1f76-bf61-009f-8601-885af70354bc",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "c83b6158-aa8e-e1de-9ad6-998c6da68061",
 							version = 2,
 						},
 					},
@@ -1736,6 +1871,11 @@ local tbl =
 									"f36135c5-d5ca-5967-bdc5-a4df7c81704a",
 									true,
 								},
+								
+								{
+									"6da85506-5385-962c-9269-db7a93c9f5b8",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -1743,6 +1883,7 @@ local tbl =
 							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
 							version = 2.1,
 						},
+						inheritedIndex = 1,
 					},
 				},
 				conditions = 
@@ -1766,6 +1907,16 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return data.string_SelectionDR[\"正攻法\"].bool\n",
 							uuid = "f36135c5-d5ca-5967-bdc5-a4df7c81704a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "6da85506-5385-962c-9269-db7a93c9f5b8",
 							version = 2,
 						},
 					},
@@ -1805,6 +1956,11 @@ local tbl =
 									"0cb2914b-698c-99a2-9b34-e338e2a175fb",
 									true,
 								},
+								
+								{
+									"a710dcb3-668b-12ca-a206-8f4cd7cfd2c5",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -1838,6 +1994,16 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "a710dcb3-668b-12ca-a206-8f4cd7cfd2c5",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 733.9,
 				name = "Vigil (40)",
@@ -1868,6 +2034,11 @@ local tbl =
 									"3746d62a-2741-fbc8-ac1f-123680dde965",
 									true,
 								},
+								
+								{
+									"cc57b3e4-337a-2939-a943-e22170ba5a73",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -1885,6 +2056,16 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return data.string_SelectionDR[\"正攻法\"].bool\n",
 							uuid = "3746d62a-2741-fbc8-ac1f-123680dde965",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "cc57b3e4-337a-2939-a943-e22170ba5a73",
 							version = 2,
 						},
 					},
@@ -1927,6 +2108,11 @@ local tbl =
 								
 								{
 									"ac2e6b01-d60e-24bf-b145-6bc06e186bf7",
+									true,
+								},
+								
+								{
+									"c12bbf79-87d4-beaf-96fd-0e24527e4d5d",
 									true,
 								},
 							},
@@ -1972,6 +2158,16 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return data.string_SelectionDR[\"正攻法\"].bool\n",
 							uuid = "ac2e6b01-d60e-24bf-b145-6bc06e186bf7",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "c12bbf79-87d4-beaf-96fd-0e24527e4d5d",
 							version = 2,
 						},
 					},
@@ -2029,6 +2225,11 @@ local tbl =
 									"5fa0f760-edd0-39cd-872b-dd90d7fb6ce3",
 									true,
 								},
+								
+								{
+									"1fac30af-a31e-3250-9053-b175a6c251ee",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -2062,6 +2263,16 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "1fac30af-a31e-3250-9053-b175a6c251ee",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 733.9,
 				name = "Living Dead (Invinsible)",
@@ -2091,6 +2302,11 @@ local tbl =
 									"639f9d9b-d32d-0265-b0ac-07daa610d3fb",
 									true,
 								},
+								
+								{
+									"b4acc1c7-3f91-3cbe-98ef-041613d09344",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -2110,6 +2326,16 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
 							uuid = "639f9d9b-d32d-0265-b0ac-07daa610d3fb",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "b4acc1c7-3f91-3cbe-98ef-041613d09344",
 							version = 2,
 						},
 					},
@@ -2148,6 +2374,11 @@ local tbl =
 									"696a2098-0bd4-0815-a408-d036117b6973",
 									true,
 								},
+								
+								{
+									"5d5de640-7066-cd5a-b903-76640f567b5a",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -2178,6 +2409,16 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
 							uuid = "696a2098-0bd4-0815-a408-d036117b6973",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "5d5de640-7066-cd5a-b903-76640f567b5a",
 							version = 2,
 						},
 					},
