@@ -4225,39 +4225,20 @@ local tbl =
 						data = 
 						{
 							aType = "Lua",
-							actionLua = "local mainTarget = 13835\nlocal subTargets = {13833, 13834, 13831, 13832}\nlocal fallbackTarget = 13822\nlocal range = 7.5\n\nlocal current = Player:GetTarget()\n\nlocal function isValidTarget(obj)\n  return obj ~= nil and obj.targetable and obj.distance <= range and obj.alive\nend\n\nlocal function getFirstValidTarget(cid)\n  local list = EntityList(\"type=2,targetable,contentid=\" .. cid)\n  if table.valid(list) then\n    for _, v in pairs(list) do\n      if v.distance <= range and v.alive then\n        return v\n      end\n    end\n  end\n  return nil\nend\n\nlocal function anyAlive(cid)\n  local list = EntityList(\"type=2,targetable,contentid=\" .. cid)\n  if table.valid(list) then\n    for _, v in pairs(list) do\n      if v.alive then\n        return true\n      end\n    end\n  end\n  return false\nend\n\nif isValidTarget(current) and current.contentid == mainTarget then\n  return\nend\n\nlocal mainList = EntityList(\"type=2,targetable,contentid=\" .. mainTarget)\nif table.valid(mainList) then\n  for _, v in pairs(mainList) do\n    if v.distance <= range and v.alive then\n      if current == nil or current.id ~= v.id then\n        Player:SetTarget(v.id)\n      end\n      return\n    end\n  end\nend\n\nfor _, cid in ipairs(subTargets) do\n  local v = getFirstValidTarget(cid)\n  if v then\n    if current == nil or current.id ~= v.id then\n      Player:SetTarget(v.id)\n    end\n    return\n  end\nend\n\nlocal allDead = true\nif anyAlive(mainTarget) then allDead = false end\nfor _, cid in ipairs(subTargets) do\n  if anyAlive(cid) then\n    allDead = false\n    break\n  end\nend\n\nif allDead then\n  local fallbackList = EntityList(\"type=2,targetable,contentid=\" .. fallbackTarget)\n  if table.valid(fallbackList) then\n    for _, v in pairs(fallbackList) do\n      if v.alive then\n        if current == nil or current.id ~= v.id then\n          Player:SetTarget(v.id)\n        end\n        return\n      end\n    end\n  end\nend",
+							actionLua = "local function drawQT(name, info)\n    GUI:Begin(\"Selection Damage Reduction GUI\", true,\n        GUI.WindowFlags_NoTitleBar +\n        GUI.WindowFlags_NoScrollbar +\n        GUI.WindowFlags_NoScrollWithMouse +\n        GUI.WindowFlags_NoCollapse +\n        GUI.WindowFlags_AlwaysAutoResize\n    )\n\n    local ChildColor = info.bool and \n        {r=0, g=1, b=0, a=0.5} or\n        {r=1, g=0.07, b=0, a=0.5}\n\n    GUI:PushStyleVar(GUI.StyleVar_ChildWindowRounding, 5)\n    GUI:PushStyleVar(GUI.StyleVar_ItemSpacing, 3, 3)\n    GUI:PushStyleColor(GUI.Col_ChildWindowBg, ChildColor.r, ChildColor.g, ChildColor.b, ChildColor.a)\n\n    local text_width = GUI:CalcTextSize(name)\n    GUI:BeginChild(name, 105, 30, false, GUI.WindowFlags_AlwaysAutoResize)\n    GUI:SetCursorPosX((105 - text_width) * 0.5)\n    GUI:SetCursorPosY((30 - GUI:GetTextLineHeightWithSpacing()) * 0.5)\n    GUI:Text(name)\n    GUI:EndChild()\n\n    if GUI:IsItemHovered() and GUI:IsMouseClicked(0) then\n        for otherName, otherInfo in pairs(data.string_SelectionDR) do\n            otherInfo.bool = (otherName == name)\n        end\n    end\n\n    GUI:PopStyleColor()\n    GUI:PopStyleVar(2)\n    GUI:End()\nend\n\n-- 初始化状态表\nif data.string_SelectionDR == nil then\n    data.string_SelectionDR = {\n        [\"Prioritize Cat\"] = {bool = true},\n        [\"LowestHP Mu\"] = {bool = false},\n        [\"Manual\"] = {bool = false},\n    }\nend\n\n-- 初始化显示顺序\nif data.string_SelectionDR_Order == nil then\n    data.string_SelectionDR_Order = {\n        \"Prioritize Cat\",\n        \"LowestHP Mu\",\n        \"Manual\",\n    }\nend\n\n-- 按指定顺序渲染按钮\nfor _, btnName in ipairs(data.string_SelectionDR_Order) do\n    local config = data.string_SelectionDR[btnName]\n    if config then\n        drawQT(btnName, config)\n    end\nend\n\nself.used = true\n",
 							conditions = 
 							{
 								
 								{
-									"38233eca-5035-3de7-b1a0-dfb23a0a2a6b",
+									"e9a325a0-d643-1580-8308-9722fd95d6af",
 									true,
 								},
 							},
 							gVar = "ACR_RikuGNB3_CD",
-							uuid = "d4e986a4-89f3-e61e-8255-375231273b52",
+							uuid = "fad63cca-adcc-7c20-aaf8-35fc211851de",
 							version = 2.1,
 						},
-					},
-					
-					{
-						data = 
-						{
-							aType = "Lua",
-							actionLua = "local lowestHP = nil\nlocal minHPPercent = 101\nlocal range = 7.5\nlocal mainID = 13831\nlocal fallbackID = 18322\n\nlocal otTarget = nil\nlocal otMinHP = 101\nlocal otList = EntityList(\"type=2,targetable,contentid=\" .. mainID)\nif table.valid(otList) then\n    for _, entity in pairs(otList) do\n        if entity.alive and entity.distance <= range and entity.aggro_target_id and entity.aggro_target_id ~= Player.id then\n            if entity.hp.percent < otMinHP then\n                otTarget = entity\n                otMinHP = entity.hp.percent\n            end\n        end\n    end\nend\n\nif otTarget then\n    if Player:GetTarget() == nil or Player:GetTarget().id ~= otTarget.id then\n        Player:SetTarget(otTarget.id)\n    end\n    return\nend\n\nlocal mainList = EntityList(\"type=2,targetable,contentid=\" .. mainID)\nif table.valid(mainList) then\n    for _, entity in pairs(mainList) do\n        if entity.alive and entity.distance <= range and entity.hp.percent < minHPPercent then\n            lowestHP = entity\n            minHPPercent = entity.hp.percent\n        end\n    end\nend\n\nif lowestHP then\n    if Player:GetTarget() == nil or Player:GetTarget().id ~= lowestHP.id then\n        Player:SetTarget(lowestHP.id)\n    end\n    return\nend\n\nlocal fallbackList = EntityList(\"type=2,targetable,contentid=\" .. fallbackID)\nif table.valid(fallbackList) then\n    for _, v in pairs(fallbackList) do\n        if v.alive then\n            if Player:GetTarget() == nil or Player:GetTarget().id ~= v.id then\n                Player:SetTarget(v.id)\n            end\n            return\n        end\n    end\nend",
-							conditions = 
-							{
-								
-								{
-									"245cda0c-206a-3a4b-8a7f-239316402607",
-									true,
-								},
-							},
-							gVar = "ACR_RikuGNB3_CD",
-							uuid = "26bb9f01-e962-75a0-90e9-e94f71b1a310",
-							version = 2.1,
-						},
-						inheritedIndex = 2,
+						inheritedIndex = 1,
 					},
 				},
 				conditions = 
@@ -4266,32 +4247,24 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"AT ON\"].bool\n",
-							uuid = "38233eca-5035-3de7-b1a0-dfb23a0a2a6b",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"AT OFF\"].bool\n",
-							uuid = "245cda0c-206a-3a4b-8a7f-239316402607",
+							category = "Self",
+							conditionType = 8,
+							localmapid = 1259,
+							uuid = "e9a325a0-d643-1580-8308-9722fd95d6af",
 							version = 2,
 						},
 					},
 				},
-				eventType = 12,
+				eventType = 13,
 				mechanicTime = 217.2,
-				name = "AutoTarget:Cat",
+				name = "Autotarget Control",
 				timeRange = true,
 				timelineIndex = 34,
-				timerEndOffset = 171.5,
-				uuid = "69eba572-d257-dda8-bece-34c68f471253",
+				timerEndOffset = 193.69999694824,
+				uuid = "9d8dde2d-9580-c0f1-a7c7-18abe8b53f67",
 				version = 2,
 			},
+			inheritedIndex = 2,
 		},
 	},
 	[35] = 
@@ -4798,6 +4771,89 @@ local tbl =
 				uuid = "85a54075-2dda-0e97-b808-6ffcaa88dc86",
 				version = 2,
 			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "local range = 6\nlocal fallbackID = 13822\nlocal priorityList = {13833, 13835, 13834, 13831, 13832}\nlocal currentTarget = Player:GetTarget()\n\nlocal function isValidInRange(entity)\n    return entity.alive and entity.targetable and entity.distance <= range\nend\n\nlocal function anyAlive(cid)\n    local list = EntityList(\"type=2,targetable,contentid=\" .. cid)\n    if table.valid(list) then\n        for _, v in pairs(list) do\n            if v.alive then\n                return true\n            end\n        end\n    end\n    return false\nend\n\nfor _, cid in ipairs(priorityList) do\n    local candidates = EntityList(\"type=2,targetable,contentid=\" .. cid)\n    if table.valid(candidates) then\n        for _, entity in pairs(candidates) do\n            if isValidInRange(entity) then\n                if currentTarget == nil or currentTarget.id ~= entity.id then\n                    Player:SetTarget(entity.id)\n                end\n                return\n            end\n        end\n    end\nend\n\nlocal fallbackList = EntityList(\"type=2,targetable,contentid=\" .. fallbackID)\nif table.valid(fallbackList) then\n    for _, entity in pairs(fallbackList) do\n        if entity.alive then\n            if currentTarget == nil or currentTarget.id ~= entity.id then\n                Player:SetTarget(entity.id)\n            end\n            return\n        end\n    end\nend",
+							conditions = 
+							{
+								
+								{
+									"3b44759c-dbcc-c14e-8c61-0cc978b17661",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "b24c16e7-dd34-a612-9fce-c907f6e8c5ce",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "local lowestHP = nil\nlocal minHPPercent = 101\nlocal range = 4.5\nlocal mainID = 13831\nlocal fallbackID = 18322\n\nlocal mainList = EntityList(\"type=2,targetable,contentid=\" .. mainID)\nif table.valid(mainList) then\n    for _, entity in pairs(mainList) do\n        if entity.alive and entity.distance <= range and entity.hp.percent < minHPPercent then\n            lowestHP = entity\n            minHPPercent = entity.hp.percent\n        end\n    end\nend\n\nif lowestHP then\n    if Player:GetTarget() == nil or Player:GetTarget().id ~= lowestHP.id then\n        Player:SetTarget(lowestHP.id)\n    end\n    return\nend\n\nlocal fallbackList = EntityList(\"type=2,targetable,contentid=\" .. fallbackID)\nif table.valid(fallbackList) then\n    for _, v in pairs(fallbackList) do\n        if v.alive then\n            if Player:GetTarget() == nil or Player:GetTarget().id ~= v.id then\n                Player:SetTarget(v.id)\n            end\n            return\n        end\n    end\nend",
+							conditions = 
+							{
+								
+								{
+									"8e6e476c-c6ec-33b8-b8f1-40b51c68e6f3",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "7fe609f5-2b2f-e487-ad80-fbd15aceb16a",
+							version = 2.1,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"Prioritize Cat\"].bool\n",
+							uuid = "3b44759c-dbcc-c14e-8c61-0cc978b17661",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"LowestHP Mu\"].bool\n",
+							uuid = "8e6e476c-c6ec-33b8-b8f1-40b51c68e6f3",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				eventType = 12,
+				mechanicTime = 224.3,
+				name = "AutoTarget:Cat",
+				timeRange = true,
+				timelineIndex = 35,
+				timerEndOffset = 186.60000610352,
+				uuid = "2a0bd820-c6be-ab33-b27e-ed1028a99774",
+				version = 2,
+			},
+			inheritedIndex = 3,
 		},
 	},
 	[37] = 
