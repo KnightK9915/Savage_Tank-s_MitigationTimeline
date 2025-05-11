@@ -574,7 +574,7 @@ local tbl =
 				uuid = "84ee57b3-d691-c115-9822-a0985e1b57ea",
 				version = 2,
 			},
-			inheritedIndex = 1,
+			inheritedIndex = 7,
 		},
 		
 		{
@@ -1222,7 +1222,7 @@ local tbl =
 				uuid = "d6da66c1-715b-b2ed-a65d-34a66cf205da",
 				version = 2,
 			},
-			inheritedIndex = 1,
+			inheritedIndex = 7,
 		},
 		
 		{
@@ -1295,7 +1295,7 @@ local tbl =
 			inheritedIndex = 8,
 		},
 	},
-	[86] = 
+	[83] = 
 	{
 		
 		{
@@ -1429,12 +1429,12 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 463.2,
+				mechanicTime = 432.3,
 				name = "BW/NF (20)",
 				timeRange = true,
-				timelineIndex = 86,
+				timelineIndex = 83,
 				timerStartOffset = -1.5,
-				uuid = "7b4f8329-7615-19b7-9194-fef7896c2bc1",
+				uuid = "8cfeece4-e1ce-bcb4-a5b3-9f6580611b9c",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -1496,13 +1496,13 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 463.2,
+				mechanicTime = 432.3,
 				name = "Rampart (20)",
 				timeRange = true,
-				timelineIndex = 86,
+				timelineIndex = 83,
 				timerOffset = -15,
 				timerStartOffset = -10,
-				uuid = "4bfbcc48-38d1-7eae-beea-3abe9988087f",
+				uuid = "85f9211f-3268-bcc0-bed3-020ffb704ba5",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -1565,13 +1565,13 @@ local tbl =
 					},
 				},
 				enabled = false,
-				mechanicTime = 463.2,
+				mechanicTime = 432.3,
 				name = "Damnation (40)",
 				timeRange = true,
-				timelineIndex = 86,
+				timelineIndex = 83,
 				timerOffset = -5,
 				timerStartOffset = -5,
-				uuid = "1f1791e5-2d6a-8be4-8970-c4655e988bea",
+				uuid = "cf82666b-92e3-975c-8e00-5d5e3fc28d2f",
 				version = 2,
 			},
 			inheritedIndex = 3,
@@ -1633,13 +1633,14 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 463.2,
+				enabled = false,
+				mechanicTime = 432.3,
 				name = "ToB (HP Upscale)",
 				timeRange = true,
-				timelineIndex = 86,
+				timelineIndex = 83,
 				timerOffset = -1,
 				timerStartOffset = -8,
-				uuid = "de28d69a-036f-3df2-8e51-96b950cbdc40",
+				uuid = "1327d208-b169-60ac-9207-efd93e9e955f",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -1654,10 +1655,10 @@ local tbl =
 				conditions = 
 				{
 				},
-				mechanicTime = 463.2,
+				mechanicTime = 432.3,
 				name = "_________________",
-				timelineIndex = 86,
-				uuid = "86f0d443-9248-a60e-947e-a07dad605d5e",
+				timelineIndex = 83,
+				uuid = "81b9490a-2ca1-721f-bc0d-957e1a4082ad",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -1719,12 +1720,12 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 463.2,
+				mechanicTime = 432.3,
 				name = "Holmgang (Invincible)",
 				timeRange = true,
-				timelineIndex = 86,
+				timelineIndex = 83,
 				timerStartOffset = -1.5,
-				uuid = "b10db1f4-9c2b-6158-88a3-e171c149e0c4",
+				uuid = "e7532a9c-9066-bd07-9534-71518c453dd6",
 				version = 2,
 			},
 			inheritedIndex = 6,
@@ -1861,6 +1862,555 @@ local tbl =
 						},
 					},
 				},
+				mechanicTime = 432.3,
+				name = "BW/NF (for regen)",
+				timeRange = true,
+				timelineIndex = 83,
+				timerStartOffset = -0.5,
+				uuid = "f12afa67-2cd4-e96f-a34b-1985cfc6b18e",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3552,
+							conditions = 
+							{
+								
+								{
+									"765cdb05-b839-9d7e-96f5-d5b01de337bf",
+									true,
+								},
+								
+								{
+									"36dc885b-1f9c-0471-bc08-7a017c15d6e1",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "a53a5321-b7a7-656f-8d8f-34823340d239",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3552,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "765cdb05-b839-9d7e-96f5-d5b01de337bf",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 60,
+							uuid = "36dc885b-1f9c-0471-bc08-7a017c15d6e1",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 432.3,
+				name = "Equilibrium (Regen)",
+				timeRange = true,
+				timelineIndex = 83,
+				timerEndOffset = 10,
+				timerStartOffset = 1,
+				uuid = "b86cb3b6-8ab5-ee71-b274-338d457f68f5",
+				version = 2,
+			},
+			inheritedIndex = 8,
+		},
+	},
+	[86] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25751,
+							conditions = 
+							{
+								
+								{
+									"7ff7d550-e7f1-b813-8c61-8d51598a9cff",
+									true,
+								},
+								
+								{
+									"0f8628f3-99de-2bb0-b1ff-1df3c94b2276",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "f128886d-3f9c-d873-b184-840ce732e9d1",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							conditions = 
+							{
+								
+								{
+									"cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
+									true,
+								},
+								
+								{
+									"4f25e7d2-e5c2-ae81-bd11-727a54c8ac3e",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetSubType = "Lowest HP",
+							targetType = "Other Tank",
+							uuid = "9ea7cc5f-8777-744b-b6de-e198fbc4ef27",
+							version = 2.1,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25751,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							name = "CD BW",
+							uuid = "7ff7d550-e7f1-b813-8c61-8d51598a9cff",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							name = "CD NF",
+							uuid = "cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 100,
+							name = "is MT",
+							uuid = "0f8628f3-99de-2bb0-b1ff-1df3c94b2276",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99,
+							name = "is ST",
+							uuid = "4f25e7d2-e5c2-ae81-bd11-727a54c8ac3e",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 463.2,
+				name = "BW/NF (20)",
+				timeRange = true,
+				timelineIndex = 86,
+				timerStartOffset = -1.5,
+				uuid = "7b4f8329-7615-19b7-9194-fef7896c2bc1",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 463.2,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 86,
+				timerOffset = -15,
+				timerStartOffset = -10,
+				uuid = "4bfbcc48-38d1-7eae-beea-3abe9988087f",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36923,
+							conditions = 
+							{
+								
+								{
+									"0aeec9c1-c189-d8ba-8695-4f2d2314a955",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "e3339fc5-29f8-ea78-b047-31e1f4105077",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36923,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "0aeec9c1-c189-d8ba-8695-4f2d2314a955",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 463.2,
+				name = "Damnation (40)",
+				timeRange = true,
+				timelineIndex = 86,
+				timerOffset = -5,
+				timerStartOffset = -5,
+				uuid = "1f1791e5-2d6a-8be4-8970-c4655e988bea",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 40,
+							conditions = 
+							{
+								
+								{
+									"79d32c05-7ccb-e6a2-9493-167f1c04431a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "9123327e-7223-9aa2-9e4b-6b502c61d83d",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 40,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "79d32c05-7ccb-e6a2-9493-167f1c04431a",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 463.2,
+				name = "ToB (HP Upscale)",
+				timeRange = true,
+				timelineIndex = 86,
+				timerOffset = -1,
+				timerStartOffset = -8,
+				uuid = "de28d69a-036f-3df2-8e51-96b950cbdc40",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 463.2,
+				name = "_________________",
+				timelineIndex = 86,
+				uuid = "86f0d443-9248-a60e-947e-a07dad605d5e",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 43,
+							conditions = 
+							{
+								
+								{
+									"aeb29bc7-62f7-4fec-a7f0-e449ceee7e7b",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "a62e49e7-f005-8fa5-ae7f-0c85bbae4c05",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 43,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "aeb29bc7-62f7-4fec-a7f0-e449ceee7e7b",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 463.2,
+				name = "Holmgang (Invincible)",
+				timeRange = true,
+				timelineIndex = 86,
+				timerStartOffset = -1.5,
+				uuid = "b10db1f4-9c2b-6158-88a3-e171c149e0c4",
+				version = 2,
+			},
+			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25751,
+							conditions = 
+							{
+								
+								{
+									"7ff7d550-e7f1-b813-8c61-8d51598a9cff",
+									true,
+								},
+								
+								{
+									"0f8628f3-99de-2bb0-b1ff-1df3c94b2276",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "f128886d-3f9c-d873-b184-840ce732e9d1",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							conditions = 
+							{
+								
+								{
+									"cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
+									true,
+								},
+								
+								{
+									"4f25e7d2-e5c2-ae81-bd11-727a54c8ac3e",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetSubType = "Lowest HP",
+							targetType = "Other Tank",
+							uuid = "9ea7cc5f-8777-744b-b6de-e198fbc4ef27",
+							version = 2.1,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25751,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							name = "CD BW",
+							uuid = "7ff7d550-e7f1-b813-8c61-8d51598a9cff",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							name = "CD NF",
+							uuid = "cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 100,
+							name = "is MT",
+							uuid = "0f8628f3-99de-2bb0-b1ff-1df3c94b2276",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99,
+							name = "is ST",
+							uuid = "4f25e7d2-e5c2-ae81-bd11-727a54c8ac3e",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
 				mechanicTime = 463.2,
 				name = "BW/NF (for regen)",
 				timeRange = true,
@@ -1869,7 +2419,7 @@ local tbl =
 				uuid = "78216a35-4453-7253-a99a-acb7099292d8",
 				version = 2,
 			},
-			inheritedIndex = 1,
+			inheritedIndex = 7,
 		},
 		
 		{
@@ -1936,13 +2486,13 @@ local tbl =
 				timelineIndex = 86,
 				timerEndOffset = 10,
 				timerStartOffset = 1,
-				uuid = "99c93c2e-bd0a-ffc9-8eb2-5a424d708479",
+				uuid = "c399d88f-ca33-fe61-a0f9-89f276cef393",
 				version = 2,
 			},
 			inheritedIndex = 8,
 		},
 	},
-	[121] = 
+	[119] = 
 	{
 		
 		{
@@ -2076,12 +2626,12 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 626.3,
+				mechanicTime = 611.2,
 				name = "BW/NF (20)",
 				timeRange = true,
-				timelineIndex = 121,
+				timelineIndex = 119,
 				timerStartOffset = -2,
-				uuid = "907048b1-b748-832c-aa54-b4732fdff858",
+				uuid = "26e60115-c5b7-3e9d-b0b1-9bf8db2f0bb2",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -2143,14 +2693,13 @@ local tbl =
 						},
 					},
 				},
-				enabled = false,
-				mechanicTime = 626.3,
+				mechanicTime = 611.2,
 				name = "Rampart (20)",
 				timeRange = true,
-				timelineIndex = 121,
+				timelineIndex = 119,
 				timerOffset = -15,
 				timerStartOffset = -10,
-				uuid = "7f93883b-1872-5748-ae49-e6004d316d67",
+				uuid = "62cc2056-cb54-7aeb-9ed9-1d347700b91e",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -2212,13 +2761,14 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 626.3,
+				enabled = false,
+				mechanicTime = 611.2,
 				name = "Damnation (40)",
 				timeRange = true,
-				timelineIndex = 121,
+				timelineIndex = 119,
 				timerOffset = -5,
 				timerStartOffset = -5,
-				uuid = "464e1523-892e-5ccd-94dd-752b2b044238",
+				uuid = "cd35354e-1c73-524d-a071-c132a6279deb",
 				version = 2,
 			},
 			inheritedIndex = 3,
@@ -2281,13 +2831,13 @@ local tbl =
 					},
 				},
 				enabled = false,
-				mechanicTime = 626.3,
+				mechanicTime = 611.2,
 				name = "ToB (HP Upscale)",
 				timeRange = true,
-				timelineIndex = 121,
+				timelineIndex = 119,
 				timerOffset = -1,
 				timerStartOffset = -8,
-				uuid = "b386dd96-69e4-6c17-9986-fb4a68362152",
+				uuid = "2d78915c-b5d2-c6a0-8203-1e72d86555b1",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -2302,10 +2852,10 @@ local tbl =
 				conditions = 
 				{
 				},
-				mechanicTime = 626.3,
+				mechanicTime = 611.2,
 				name = "_________________",
-				timelineIndex = 121,
-				uuid = "7310a085-633f-a0b3-8518-a1f45bb15146",
+				timelineIndex = 119,
+				uuid = "b2f94435-88a6-b880-9993-8c6e73ec6ea4",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -2367,12 +2917,12 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 626.3,
+				mechanicTime = 611.2,
 				name = "Holmgang (Invincible)",
 				timeRange = true,
-				timelineIndex = 121,
+				timelineIndex = 119,
 				timerStartOffset = -1.5,
-				uuid = "238c62a7-beea-2611-adab-0556b8bf7d5a",
+				uuid = "d89421d0-7500-67ae-bab0-c78bedd15bf0",
 				version = 2,
 			},
 			inheritedIndex = 6,
@@ -2509,15 +3059,564 @@ local tbl =
 						},
 					},
 				},
+				mechanicTime = 611.2,
+				name = "BW/NF (for regen)",
+				timeRange = true,
+				timelineIndex = 119,
+				timerStartOffset = -0.5,
+				uuid = "4c807396-5f45-f7a4-b160-80f60d89d4f2",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3552,
+							conditions = 
+							{
+								
+								{
+									"765cdb05-b839-9d7e-96f5-d5b01de337bf",
+									true,
+								},
+								
+								{
+									"36dc885b-1f9c-0471-bc08-7a017c15d6e1",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "a53a5321-b7a7-656f-8d8f-34823340d239",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3552,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "765cdb05-b839-9d7e-96f5-d5b01de337bf",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 60,
+							uuid = "36dc885b-1f9c-0471-bc08-7a017c15d6e1",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 611.2,
+				name = "Equilibrium (Regen)",
+				timeRange = true,
+				timelineIndex = 119,
+				timerEndOffset = 10,
+				timerStartOffset = 1,
+				uuid = "5f6f29d7-9a2a-f1fd-b365-2570541cb74d",
+				version = 2,
+			},
+			inheritedIndex = 8,
+		},
+	},
+	[121] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25751,
+							conditions = 
+							{
+								
+								{
+									"7ff7d550-e7f1-b813-8c61-8d51598a9cff",
+									true,
+								},
+								
+								{
+									"0f8628f3-99de-2bb0-b1ff-1df3c94b2276",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "f128886d-3f9c-d873-b184-840ce732e9d1",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							conditions = 
+							{
+								
+								{
+									"cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
+									true,
+								},
+								
+								{
+									"4f25e7d2-e5c2-ae81-bd11-727a54c8ac3e",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetSubType = "Lowest HP",
+							targetType = "Other Tank",
+							uuid = "9ea7cc5f-8777-744b-b6de-e198fbc4ef27",
+							version = 2.1,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25751,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							name = "CD BW",
+							uuid = "7ff7d550-e7f1-b813-8c61-8d51598a9cff",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							name = "CD NF",
+							uuid = "cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 100,
+							name = "is MT",
+							uuid = "0f8628f3-99de-2bb0-b1ff-1df3c94b2276",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99,
+							name = "is ST",
+							uuid = "4f25e7d2-e5c2-ae81-bd11-727a54c8ac3e",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 626.3,
+				name = "BW/NF (20)",
+				timeRange = true,
+				timelineIndex = 121,
+				timerStartOffset = -1.5,
+				uuid = "59e2c23c-f1e2-b108-9ffc-e54df90f65e4",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 626.3,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 121,
+				timerOffset = -15,
+				timerStartOffset = -10,
+				uuid = "209fea89-6ccd-c9f8-ad0f-67f2bc19ae7d",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36923,
+							conditions = 
+							{
+								
+								{
+									"0aeec9c1-c189-d8ba-8695-4f2d2314a955",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "e3339fc5-29f8-ea78-b047-31e1f4105077",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36923,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "0aeec9c1-c189-d8ba-8695-4f2d2314a955",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 626.3,
+				name = "Damnation (40)",
+				timeRange = true,
+				timelineIndex = 121,
+				timerOffset = -5,
+				timerStartOffset = -5,
+				uuid = "1803eb3d-4f82-cfca-bcb5-7be8fbcbd6fb",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 40,
+							conditions = 
+							{
+								
+								{
+									"79d32c05-7ccb-e6a2-9493-167f1c04431a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "9123327e-7223-9aa2-9e4b-6b502c61d83d",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 40,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "79d32c05-7ccb-e6a2-9493-167f1c04431a",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 626.3,
+				name = "ToB (HP Upscale)",
+				timeRange = true,
+				timelineIndex = 121,
+				timerOffset = -1,
+				timerStartOffset = -8,
+				uuid = "2b1a195f-2632-5718-b7fe-8a79a817d258",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 626.3,
+				name = "_________________",
+				timelineIndex = 121,
+				uuid = "ba80d52e-bf2b-da26-8726-1b065aa682d7",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 43,
+							conditions = 
+							{
+								
+								{
+									"aeb29bc7-62f7-4fec-a7f0-e449ceee7e7b",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "a62e49e7-f005-8fa5-ae7f-0c85bbae4c05",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 43,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "aeb29bc7-62f7-4fec-a7f0-e449ceee7e7b",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 626.3,
+				name = "Holmgang (Invincible)",
+				timeRange = true,
+				timelineIndex = 121,
+				timerStartOffset = -1.5,
+				uuid = "7742edbe-a10d-d9e4-a34c-a87b09f4ea99",
+				version = 2,
+			},
+			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25751,
+							conditions = 
+							{
+								
+								{
+									"7ff7d550-e7f1-b813-8c61-8d51598a9cff",
+									true,
+								},
+								
+								{
+									"0f8628f3-99de-2bb0-b1ff-1df3c94b2276",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "f128886d-3f9c-d873-b184-840ce732e9d1",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							conditions = 
+							{
+								
+								{
+									"cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
+									true,
+								},
+								
+								{
+									"4f25e7d2-e5c2-ae81-bd11-727a54c8ac3e",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetSubType = "Lowest HP",
+							targetType = "Other Tank",
+							uuid = "9ea7cc5f-8777-744b-b6de-e198fbc4ef27",
+							version = 2.1,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25751,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							name = "CD BW",
+							uuid = "7ff7d550-e7f1-b813-8c61-8d51598a9cff",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							name = "CD NF",
+							uuid = "cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 100,
+							name = "is MT",
+							uuid = "0f8628f3-99de-2bb0-b1ff-1df3c94b2276",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99,
+							name = "is ST",
+							uuid = "4f25e7d2-e5c2-ae81-bd11-727a54c8ac3e",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
 				mechanicTime = 626.3,
 				name = "BW/NF (for regen)",
 				timeRange = true,
 				timelineIndex = 121,
 				timerStartOffset = -0.5,
-				uuid = "1661f3bf-04c0-6217-89e2-678203d770e8",
+				uuid = "9b245960-c82a-f73f-a8d0-dfe321e91f50",
 				version = 2,
 			},
-			inheritedIndex = 1,
+			inheritedIndex = 7,
 		},
 		
 		{
@@ -2584,7 +3683,7 @@ local tbl =
 				timelineIndex = 121,
 				timerEndOffset = 10,
 				timerStartOffset = 1,
-				uuid = "6a7385b2-83cd-ec4d-a6c1-de084532df0a",
+				uuid = "7dc0eb4f-f476-783f-99ea-544fcb245f83",
 				version = 2,
 			},
 			inheritedIndex = 8,
