@@ -821,7 +821,7 @@ local tbl =
 			inheritedIndex = 7,
 		},
 	},
-	[86] = 
+	[83] = 
 	{
 		
 		{
@@ -880,13 +880,13 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 463.2,
+				mechanicTime = 432.3,
 				name = "Rampart (20)",
 				timeRange = true,
-				timelineIndex = 86,
+				timelineIndex = 83,
 				timerOffset = -15,
 				timerStartOffset = -10,
-				uuid = "c1c04076-ff62-aca5-a592-7f40340f7794",
+				uuid = "fec91586-403b-fcbe-8722-2cddb73d2d75",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -949,12 +949,12 @@ local tbl =
 					},
 				},
 				enabled = false,
-				mechanicTime = 463.2,
+				mechanicTime = 432.3,
 				name = "Guardian (40)",
 				timeRange = true,
-				timelineIndex = 86,
+				timelineIndex = 83,
 				timerStartOffset = -10,
-				uuid = "431cfe4c-7928-b30c-8bba-03135a9dde7d",
+				uuid = "e927706c-4bb7-a756-a553-45a6b6093fb0",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -1017,13 +1017,13 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 463.2,
+				mechanicTime = 432.3,
 				name = "Bulwalk (Block)",
 				timeRange = true,
-				timelineIndex = 86,
+				timelineIndex = 83,
 				timerOffset = -8,
 				timerStartOffset = -5,
-				uuid = "fb1d9a78-3c97-14e8-991e-e637eb9c559e",
+				uuid = "5f9a7170-abf9-efa5-9ed6-040a4f464370",
 				version = 2,
 			},
 			inheritedIndex = 3,
@@ -1084,12 +1084,12 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 463.2,
+				mechanicTime = 432.3,
 				name = "sheltron (15)",
 				timeRange = true,
-				timelineIndex = 86,
+				timelineIndex = 83,
 				timerStartOffset = -2,
-				uuid = "0885cf57-4489-206b-8546-d8ad9dcd0301",
+				uuid = "9c116b7c-e5f3-d86c-8a16-ecc3e064f4d7",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -1104,10 +1104,10 @@ local tbl =
 				conditions = 
 				{
 				},
-				mechanicTime = 463.2,
+				mechanicTime = 432.3,
 				name = "_________",
-				timelineIndex = 86,
-				uuid = "98989dc8-7196-f356-8eef-78a51c0ec6d0",
+				timelineIndex = 83,
+				uuid = "042f5011-422b-ca65-a7ae-5ca9b1d6a912",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -1169,6 +1169,358 @@ local tbl =
 						},
 					},
 				},
+				mechanicTime = 432.3,
+				name = "Hollowed Ground (Invinsible)",
+				timeRange = true,
+				timelineIndex = 83,
+				timerStartOffset = -1.5,
+				uuid = "46266bcd-5a5b-6759-a55b-f4f605008c33",
+				version = 2,
+			},
+			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+								
+								{
+									"97e0d8ec-e3d7-52c5-875d-2d2326f9b3a6",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5ed8c1f4-36d8-ad42-9463-1f8154296465",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
+							uuid = "97e0d8ec-e3d7-52c5-875d-2d2326f9b3a6",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 432.3,
+				name = "interven ST (15)",
+				timeRange = true,
+				timelineIndex = 83,
+				timerStartOffset = -3,
+				uuid = "91a4f504-ab61-a9c0-b438-c30287bb0f92",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+	},
+	[86] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 463.2,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 86,
+				timerOffset = -15,
+				timerStartOffset = -10,
+				uuid = "c1c04076-ff62-aca5-a592-7f40340f7794",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36920,
+							conditions = 
+							{
+								
+								{
+									"aceb9492-b930-0c6d-aaca-9fb9e7c2fb2a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "1ff7ecf5-69f2-0d51-9683-ee0ea48d1ed1",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36920,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "aceb9492-b930-0c6d-aaca-9fb9e7c2fb2a",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 463.2,
+				name = "Guardian (40)",
+				timeRange = true,
+				timelineIndex = 86,
+				timerStartOffset = -10,
+				uuid = "431cfe4c-7928-b30c-8bba-03135a9dde7d",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 22,
+							conditions = 
+							{
+								
+								{
+									"dda24e11-6d3b-8a80-80e0-e75a85a9579a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "cd802a09-49f8-cce6-9c5c-b944183b020a",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 22,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "dda24e11-6d3b-8a80-80e0-e75a85a9579a",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				enabled = false,
+				mechanicTime = 463.2,
+				name = "Bulwalk (Block)",
+				timeRange = true,
+				timelineIndex = 86,
+				timerOffset = -8,
+				timerStartOffset = -5,
+				uuid = "fb1d9a78-3c97-14e8-991e-e637eb9c559e",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 463.2,
+				name = "sheltron (15)",
+				timeRange = true,
+				timelineIndex = 86,
+				timerStartOffset = -2,
+				uuid = "0885cf57-4489-206b-8546-d8ad9dcd0301",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 463.2,
+				name = "_________",
+				timelineIndex = 86,
+				uuid = "98989dc8-7196-f356-8eef-78a51c0ec6d0",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 30,
+							conditions = 
+							{
+								
+								{
+									"e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "9b1f0885-3a72-1913-ad03-47c71acda8e5",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 30,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
 				mechanicTime = 463.2,
 				name = "Hollowed Ground (Invinsible)",
 				timeRange = true,
@@ -1231,7 +1583,7 @@ local tbl =
 			inheritedIndex = 7,
 		},
 	},
-	[121] = 
+	[119] = 
 	{
 		
 		{
@@ -1290,14 +1642,13 @@ local tbl =
 						},
 					},
 				},
-				enabled = false,
-				mechanicTime = 626.3,
+				mechanicTime = 611.2,
 				name = "Rampart (20)",
 				timeRange = true,
-				timelineIndex = 121,
+				timelineIndex = 119,
 				timerOffset = -15,
 				timerStartOffset = -10,
-				uuid = "5f345f1e-82ce-8e09-af05-64d667bc7e79",
+				uuid = "5418d9e2-2682-e37b-a0f8-677b87a82487",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -1359,12 +1710,13 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 626.3,
+				enabled = false,
+				mechanicTime = 611.2,
 				name = "Guardian (40)",
 				timeRange = true,
-				timelineIndex = 121,
+				timelineIndex = 119,
 				timerStartOffset = -10,
-				uuid = "7e3a45fb-0b63-0e85-9fa4-011a640a3687",
+				uuid = "a65771f6-16f4-8e59-a7c8-48112b340e31",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -1427,14 +1779,13 @@ local tbl =
 						},
 					},
 				},
-				enabled = false,
-				mechanicTime = 626.3,
+				mechanicTime = 611.2,
 				name = "Bulwalk (Block)",
 				timeRange = true,
-				timelineIndex = 121,
+				timelineIndex = 119,
 				timerOffset = -8,
 				timerStartOffset = -5,
-				uuid = "327a88df-dc9f-b104-b0fa-12fe35241683",
+				uuid = "14c2ac88-0410-37ab-aaed-3885ad5984a4",
 				version = 2,
 			},
 			inheritedIndex = 3,
@@ -1495,12 +1846,12 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 626.3,
+				mechanicTime = 611.2,
 				name = "sheltron (15)",
 				timeRange = true,
-				timelineIndex = 121,
+				timelineIndex = 119,
 				timerStartOffset = -2,
-				uuid = "55671b0d-ad96-48b6-93df-4124ffca06fe",
+				uuid = "28d0afd7-4aee-f9fa-92d9-a8d2b14349ff",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -1515,10 +1866,10 @@ local tbl =
 				conditions = 
 				{
 				},
-				mechanicTime = 626.3,
+				mechanicTime = 611.2,
 				name = "_________",
-				timelineIndex = 121,
-				uuid = "59df5619-87f7-39ef-bf96-d7ba85eee72b",
+				timelineIndex = 119,
+				uuid = "751e53b6-917c-fb3e-8f4a-8fd8d25b3197",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -1580,6 +1931,358 @@ local tbl =
 						},
 					},
 				},
+				mechanicTime = 611.2,
+				name = "Hollowed Ground (Invinsible)",
+				timeRange = true,
+				timelineIndex = 119,
+				timerStartOffset = -1.5,
+				uuid = "aede985d-8dea-afe4-8743-51beff2a3905",
+				version = 2,
+			},
+			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+								
+								{
+									"8463158f-29fe-0fab-8fa1-365f9a265fad",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5ed8c1f4-36d8-ad42-9463-1f8154296465",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
+							uuid = "8463158f-29fe-0fab-8fa1-365f9a265fad",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 611.2,
+				name = "interven ST (15)",
+				timeRange = true,
+				timelineIndex = 119,
+				timerStartOffset = -3,
+				uuid = "d014ff75-6609-cb2f-b242-7124812ba6b4",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+	},
+	[121] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 626.3,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 121,
+				timerOffset = -15,
+				timerStartOffset = -10,
+				uuid = "5f345f1e-82ce-8e09-af05-64d667bc7e79",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36920,
+							conditions = 
+							{
+								
+								{
+									"aceb9492-b930-0c6d-aaca-9fb9e7c2fb2a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "1ff7ecf5-69f2-0d51-9683-ee0ea48d1ed1",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36920,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "aceb9492-b930-0c6d-aaca-9fb9e7c2fb2a",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 626.3,
+				name = "Guardian (40)",
+				timeRange = true,
+				timelineIndex = 121,
+				timerStartOffset = -10,
+				uuid = "7e3a45fb-0b63-0e85-9fa4-011a640a3687",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 22,
+							conditions = 
+							{
+								
+								{
+									"dda24e11-6d3b-8a80-80e0-e75a85a9579a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "cd802a09-49f8-cce6-9c5c-b944183b020a",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 22,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "dda24e11-6d3b-8a80-80e0-e75a85a9579a",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				enabled = false,
+				mechanicTime = 626.3,
+				name = "Bulwalk (Block)",
+				timeRange = true,
+				timelineIndex = 121,
+				timerOffset = -8,
+				timerStartOffset = -5,
+				uuid = "327a88df-dc9f-b104-b0fa-12fe35241683",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 626.3,
+				name = "sheltron (15)",
+				timeRange = true,
+				timelineIndex = 121,
+				timerStartOffset = -2,
+				uuid = "55671b0d-ad96-48b6-93df-4124ffca06fe",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 626.3,
+				name = "_________",
+				timelineIndex = 121,
+				uuid = "59df5619-87f7-39ef-bf96-d7ba85eee72b",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 30,
+							conditions = 
+							{
+								
+								{
+									"e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "9b1f0885-3a72-1913-ad03-47c71acda8e5",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 30,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
 				mechanicTime = 626.3,
 				name = "Hollowed Ground (Invinsible)",
 				timeRange = true,
