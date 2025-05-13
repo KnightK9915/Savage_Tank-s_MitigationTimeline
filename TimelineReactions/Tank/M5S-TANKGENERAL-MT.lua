@@ -2382,24 +2382,262 @@ local tbl =
 					{
 						data = 
 						{
-							aType = "Lua",
-							actionLua = "-- 获取自己职业ID、MP、gauge\nlocal job = Player.job\nlocal mp = Player.mp.percent\nlocal gauge = Player.gauge\n\n-- 遍历队伍成员\nfor _, member in pairs(EntityList.myparty) do\n  if member.hp.percent < 50 and member.distance <= 30 and member.los then\n    -- GNB: 25758 - Heart of Corundum\n    if job == 37 and ActionList:Get(1, 25758):IsReady(member.id) then\n      ActionList:Get(1, 25758):Cast(member.id)\n      break\n    end\n\n    -- DRK: 7393 - The Blackest Night (requires MP > 50%)\n    if job == 32 and mp > 50 and ActionList:Get(1, 7393):IsReady(member.id) then\n      ActionList:Get(1, 7393):Cast(member.id)\n      break\n    end\n\n    -- PLD: 7382 - Intervention (requires gauge > 50)\n    if job == 19 and gauge >= 50 and ActionList:Get(1, 7382):IsReady(member.id) then\n      ActionList:Get(1, 7382):Cast(member.id)\n      break\n    end\n\n    -- WAR: 16464 - Nascent Flash\n    if job == 21 and ActionList:Get(1, 16464):IsReady(member.id) then\n      ActionList:Get(1, 16464):Cast(member.id)\n      break\n    end\n  end\nend\n",
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+								
+								{
+									"46cb0109-6c3a-2f84-a2c4-31984cecfea2",
+									true,
+								},
+							},
+							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
-							uuid = "3bc6f8a8-6f2f-f8a8-a980-7024a043ceb6",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+								
+								{
+									"c87032d2-c148-cb6a-9a76-9a849a23a2b1",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+								
+								{
+									"18f1b609-641e-ed19-9e7e-897be06b8984",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+								
+								{
+									"bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
 							version = 2.1,
 						},
 					},
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							conditions = 
+							{
+								
+								{
+									"8c71da96-ad5e-4e67-be0e-d09d31309942",
+									true,
+								},
+							},
+							filterTargetType = "Party",
+							uuid = "fcd897d9-5fd2-af94-b079-2d99de6abac2",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 50,
+							partyTargetType = "Detection Target",
+							uuid = "8c71da96-ad5e-4e67-be0e-d09d31309942",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1833,
+							category = "Self",
+							name = "GNB Buff",
+							uuid = "46cb0109-6c3a-2f84-a2c4-31984cecfea2",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 79,
+							category = "Self",
+							name = "PLD Buff",
+							uuid = "c87032d2-c148-cb6a-9a76-9a849a23a2b1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							name = "DRK Buff",
+							uuid = "18f1b609-641e-ed19-9e7e-897be06b8984",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 91,
+							name = "WAR Buff",
+							uuid = "bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
+							version = 2,
+						},
+						inheritedIndex = 8,
+					},
 				},
 				mechanicTime = 208.7,
 				name = "Miti LowestHP",
 				timeRange = true,
 				timelineIndex = 58,
-				timerOffset = -3,
-				timerStartOffset = -3,
-				uuid = "d374b25e-2808-5e66-8d4e-1bf0c0ee8f2f",
+				timerOffset = -15,
+				timerStartOffset = -2,
+				uuid = "a2b8b724-2dad-6e54-ace5-ee924b3a1e18",
 				version = 2,
 			},
 		},
@@ -5036,24 +5274,262 @@ local tbl =
 					{
 						data = 
 						{
-							aType = "Lua",
-							actionLua = "-- 获取自己职业ID、MP、gauge\nlocal job = Player.job\nlocal mp = Player.mp.percent\nlocal gauge = Player.gauge\n\n-- 遍历队伍成员\nfor _, member in pairs(EntityList.myparty) do\n  if member.hp.percent < 50 and member.distance <= 30 and member.los then\n    -- GNB: 25758 - Heart of Corundum\n    if job == 37 and ActionList:Get(1, 25758):IsReady(member.id) then\n      ActionList:Get(1, 25758):Cast(member.id)\n      break\n    end\n\n    -- DRK: 7393 - The Blackest Night (requires MP > 50%)\n    if job == 32 and mp > 50 and ActionList:Get(1, 7393):IsReady(member.id) then\n      ActionList:Get(1, 7393):Cast(member.id)\n      break\n    end\n\n    -- PLD: 7382 - Intervention (requires gauge > 50)\n    if job == 19 and gauge >= 50 and ActionList:Get(1, 7382):IsReady(member.id) then\n      ActionList:Get(1, 7382):Cast(member.id)\n      break\n    end\n\n    -- WAR: 16464 - Nascent Flash\n    if job == 21 and ActionList:Get(1, 16464):IsReady(member.id) then\n      ActionList:Get(1, 16464):Cast(member.id)\n      break\n    end\n  end\nend\n",
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+								
+								{
+									"46cb0109-6c3a-2f84-a2c4-31984cecfea2",
+									true,
+								},
+							},
+							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
-							uuid = "3bc6f8a8-6f2f-f8a8-a980-7024a043ceb6",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+								
+								{
+									"c87032d2-c148-cb6a-9a76-9a849a23a2b1",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+								
+								{
+									"18f1b609-641e-ed19-9e7e-897be06b8984",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+								
+								{
+									"bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
 							version = 2.1,
 						},
 					},
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							conditions = 
+							{
+								
+								{
+									"8c71da96-ad5e-4e67-be0e-d09d31309942",
+									true,
+								},
+							},
+							filterTargetType = "Party",
+							uuid = "fcd897d9-5fd2-af94-b079-2d99de6abac2",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 50,
+							partyTargetType = "Detection Target",
+							uuid = "8c71da96-ad5e-4e67-be0e-d09d31309942",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1833,
+							category = "Self",
+							name = "GNB Buff",
+							uuid = "46cb0109-6c3a-2f84-a2c4-31984cecfea2",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 79,
+							category = "Self",
+							name = "PLD Buff",
+							uuid = "c87032d2-c148-cb6a-9a76-9a849a23a2b1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							name = "DRK Buff",
+							uuid = "18f1b609-641e-ed19-9e7e-897be06b8984",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 91,
+							name = "WAR Buff",
+							uuid = "bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
+							version = 2,
+						},
+						inheritedIndex = 8,
+					},
 				},
 				mechanicTime = 428.2,
 				name = "Miti LowestHP",
 				timeRange = true,
 				timelineIndex = 104,
-				timerOffset = -3,
-				timerStartOffset = -3,
-				uuid = "80ff2ef5-b65f-c883-9757-df3bd032b889",
+				timerOffset = -15,
+				timerStartOffset = -2,
+				uuid = "717a10ec-7ff0-1814-a11d-8a43f34b39bc",
 				version = 2,
 			},
 		},

@@ -7089,33 +7089,6 @@ local tbl =
 					{
 						data = 
 						{
-							aType = "Misc",
-							gVar = "ACR_RikuPLD3_CD",
-							untarget = true,
-							uuid = "723c5cb5-a323-3580-9004-c62a4870a248",
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							aType = "Misc",
-							gVar = "ACR_RikuPLD3_CD",
-							setTarget = true,
-							targetContentID = 13833,
-							targetSubType = "Highest HP",
-							targetType = "ContentID",
-							uuid = "f990ed4d-3343-fcfa-a469-34576da1174f",
-							version = 2.1,
-						},
-						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
 							actionID = 7540,
 							allowInterrupt = true,
 							atomicPriority = true,
@@ -7124,6 +7097,11 @@ local tbl =
 								
 								{
 									"6c544ff2-7f0a-eadb-a06b-f864ca496fa8",
+									true,
+								},
+								
+								{
+									"877de244-ea71-0cb1-a3cf-3f1febd4e668",
 									true,
 								},
 								
@@ -7153,6 +7131,11 @@ local tbl =
 								
 								{
 									"de384013-3bbf-f463-96a3-16c956198004",
+									true,
+								},
+								
+								{
+									"877de244-ea71-0cb1-a3cf-3f1febd4e668",
 									true,
 								},
 								
@@ -7203,6 +7186,17 @@ local tbl =
 							uuid = "de384013-3bbf-f463-96a3-16c956198004",
 							version = 2,
 						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 2,
+							contentid = 13833,
+							uuid = "877de244-ea71-0cb1-a3cf-3f1febd4e668",
+							version = 2,
+						},
+						inheritedIndex = 3,
 					},
 					
 					{
@@ -7302,6 +7296,40 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Misc",
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							potType = 4,
+							usePot = true,
+							uuid = "2254123b-6bbd-b71d-a30b-7e4ffd2d6214",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 325.7,
+				name = "Potion",
+				timeRange = true,
+				timelineIndex = 52,
+				timerEndOffset = 5,
+				timerStartOffset = 1,
+				uuid = "726a749e-8ef9-c3cd-ad38-146f03e47c70",
+				version = 2,
+			},
 		},
 	},
 	[53] = 
@@ -9354,7 +9382,7 @@ local tbl =
 			},
 		},
 	},
-	[66] = 
+	[65] = 
 	{
 		
 		{
@@ -9436,7 +9464,6 @@ local tbl =
 						data = 
 						{
 							category = "Event",
-							dequeueIfLuaFalse = true,
 							eventArgType = 2,
 							eventMarkerID = 602,
 							uuid = "bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
@@ -9449,7 +9476,6 @@ local tbl =
 						{
 							category = "Party",
 							conditionType = 10,
-							dequeueIfLuaFalse = true,
 							inGroupTargetType = "Other Tank",
 							partyTargetType = "Event Entity",
 							uuid = "c2cb9d3b-196d-fc9d-b9a5-682ed76f4bf6",
@@ -9463,7 +9489,6 @@ local tbl =
 						{
 							category = "Party",
 							conditionType = 10,
-							dequeueIfLuaFalse = true,
 							inGroupTargetType = "Self",
 							partyTargetType = "Event Entity",
 							uuid = "d73a437b-daee-5b25-9e29-bfcac45843c2",
@@ -9495,12 +9520,12 @@ local tbl =
 				},
 				eventType = 4,
 				loop = true,
-				mechanicTime = 479,
+				mechanicTime = 473,
 				name = "Provoke/Shirk on marked",
 				timeRange = true,
-				timelineIndex = 66,
-				timerEndOffset = 36.900001525879,
-				uuid = "3ee9a75e-d566-8dd5-ad6b-0ad2c26594c6",
+				timelineIndex = 65,
+				timerEndOffset = 42.900001525879,
+				uuid = "191402ab-5627-4c6f-a002-510d88528e40",
 				version = 2,
 			},
 		},

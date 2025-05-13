@@ -924,6 +924,112 @@ local tbl =
 			},
 		},
 	},
+	[19] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7538,
+							atomicPriority = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "76717418-5ac1-fbef-9aac-e608d2e7401f",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							conditions = 
+							{
+								
+								{
+									"41cc70f7-6d31-8387-8e14-50f8d4e1585f",
+									true,
+								},
+								
+								{
+									"38f6061a-4ecd-5cb1-bb44-8611bd333e93",
+									true,
+								},
+								
+								{
+									"1e861465-1b08-c939-88b1-966b7cf67c45",
+									true,
+								},
+							},
+							filterTargetSubtype = "Topmost Partylist",
+							filterTargetType = "ContentID",
+							partyTargetContentID = 13755,
+							uuid = "03f39940-c860-5eed-92a7-9c2d08b61bd4",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							channelCheckSpellID = 43277,
+							conditionType = 5,
+							partyTargetType = "Detection Target",
+							uuid = "41cc70f7-6d31-8387-8e14-50f8d4e1585f",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							channelCheckTimeRemain = 3,
+							channelCheckType = 3,
+							comparator = 2,
+							conditionType = 5,
+							partyTargetType = "Detection Target",
+							uuid = "38f6061a-4ecd-5cb1-bb44-8611bd333e93",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							comparator = 2,
+							conditionType = 4,
+							inRangeValue = 5,
+							partyTargetType = "Detection Target",
+							uuid = "1e861465-1b08-c939-88b1-966b7cf67c45",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 70.7,
+				name = "interrupt Seeds",
+				timeRange = true,
+				timelineIndex = 19,
+				timerEndOffset = 15,
+				timerStartOffset = -15,
+				uuid = "6f660a98-1fd3-651c-b0aa-9b932fca179f",
+				version = 2,
+			},
+		},
+	},
 	[26] = 
 	{
 		
@@ -2391,7 +2497,6 @@ local tbl =
 						data = 
 						{
 							category = "Event",
-							dequeueIfLuaFalse = true,
 							eventArgType = 2,
 							eventMarkerID = 327,
 							uuid = "bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
@@ -2404,7 +2509,6 @@ local tbl =
 						{
 							category = "Party",
 							conditionType = 10,
-							dequeueIfLuaFalse = true,
 							inGroupTargetType = "Other Tank",
 							partyTargetType = "Event Entity",
 							uuid = "c2cb9d3b-196d-fc9d-b9a5-682ed76f4bf6",
@@ -2418,7 +2522,6 @@ local tbl =
 						{
 							category = "Party",
 							conditionType = 10,
-							dequeueIfLuaFalse = true,
 							inGroupTargetType = "Self",
 							partyTargetType = "Event Entity",
 							uuid = "d73a437b-daee-5b25-9e29-bfcac45843c2",
@@ -2439,7 +2542,6 @@ local tbl =
 								4502,
 							},
 							category = "Party",
-							dequeueIfLuaFalse = true,
 							matchAnyBuff = true,
 							partyTargetType = "Other Tank",
 							uuid = "d1031fa6-b0e7-a45c-bd35-70356720bc3c",
@@ -2460,7 +2562,6 @@ local tbl =
 								4502,
 							},
 							category = "Self",
-							dequeueIfLuaFalse = true,
 							matchAnyBuff = true,
 							uuid = "ca880c56-32a5-5eb6-9c2c-a478da04338a",
 							version = 2,
@@ -2468,16 +2569,16 @@ local tbl =
 					},
 				},
 				eventType = 4,
-				loop = true,
 				mechanicTime = 222.5,
 				name = "Provoke/Shirk on Meteor",
 				timeRange = true,
 				timelineIndex = 44,
 				timerEndOffset = 3,
 				timerStartOffset = -1,
-				uuid = "356733d5-fc73-d2fe-ac63-b523e4940acc",
+				uuid = "14b86a1d-1ccb-638e-9718-560fbb559576",
 				version = 2,
 			},
+			inheritedIndex = 1,
 		},
 		
 		{
@@ -2571,7 +2672,7 @@ local tbl =
 				uuid = "f7b0a97d-fc7f-d2ce-aa71-e0d05d567c0f",
 				version = 2,
 			},
-			inheritedIndex = 1,
+			inheritedIndex = 2,
 		},
 		
 		{
@@ -2663,7 +2764,7 @@ local tbl =
 				uuid = "9944d6ae-2de4-1858-8e86-60172a5eef23",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 5,
 		},
 		
 		{
@@ -3482,7 +3583,6 @@ local tbl =
 						data = 
 						{
 							category = "Event",
-							dequeueIfLuaFalse = true,
 							eventArgType = 2,
 							eventMarkerID = 327,
 							uuid = "bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
@@ -3495,7 +3595,6 @@ local tbl =
 						{
 							category = "Party",
 							conditionType = 10,
-							dequeueIfLuaFalse = true,
 							inGroupTargetType = "Other Tank",
 							partyTargetType = "Event Entity",
 							uuid = "c2cb9d3b-196d-fc9d-b9a5-682ed76f4bf6",
@@ -3509,7 +3608,6 @@ local tbl =
 						{
 							category = "Party",
 							conditionType = 10,
-							dequeueIfLuaFalse = true,
 							inGroupTargetType = "Self",
 							partyTargetType = "Event Entity",
 							uuid = "d73a437b-daee-5b25-9e29-bfcac45843c2",
@@ -3530,7 +3628,6 @@ local tbl =
 								4502,
 							},
 							category = "Party",
-							dequeueIfLuaFalse = true,
 							matchAnyBuff = true,
 							partyTargetType = "Other Tank",
 							uuid = "d1031fa6-b0e7-a45c-bd35-70356720bc3c",
@@ -3551,7 +3648,6 @@ local tbl =
 								4502,
 							},
 							category = "Self",
-							dequeueIfLuaFalse = true,
 							matchAnyBuff = true,
 							uuid = "ca880c56-32a5-5eb6-9c2c-a478da04338a",
 							version = 2,
@@ -3559,16 +3655,16 @@ local tbl =
 					},
 				},
 				eventType = 4,
-				loop = true,
 				mechanicTime = 281.1,
 				name = "Provoke/Shirk on Meteor",
 				timeRange = true,
 				timelineIndex = 54,
 				timerEndOffset = 3,
 				timerStartOffset = -1,
-				uuid = "abb4c675-e4de-620a-b472-d9fbf83e7bab",
+				uuid = "b5522c2a-929b-0bae-82e3-d8d123c61c39",
 				version = 2,
 			},
+			inheritedIndex = 1,
 		},
 		
 		{
@@ -3662,7 +3758,7 @@ local tbl =
 				uuid = "a0119e86-7c4d-29a8-9944-d50b78e83631",
 				version = 2,
 			},
-			inheritedIndex = 1,
+			inheritedIndex = 2,
 		},
 		
 		{
@@ -3754,7 +3850,7 @@ local tbl =
 				uuid = "f35951dd-012d-9c77-bbfa-2e5632a9afee",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 5,
 		},
 		
 		{
