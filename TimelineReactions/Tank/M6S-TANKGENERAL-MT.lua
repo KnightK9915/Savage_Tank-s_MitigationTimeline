@@ -10708,6 +10708,157 @@ local tbl =
 			},
 		},
 	},
+	[66] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7533,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
+									true,
+								},
+								
+								{
+									"c2cb9d3b-196d-fc9d-b9a5-682ed76f4bf6",
+									true,
+								},
+								
+								{
+									"793315f6-95e5-64dd-ad82-b5068ac21c08",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 13822,
+							targetType = "ContentID",
+							uuid = "a1aed48d-295b-da3e-978a-460aac09e87e",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7537,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
+									true,
+								},
+								
+								{
+									"d73a437b-daee-5b25-9e29-bfcac45843c2",
+									true,
+								},
+								
+								{
+									"463b432b-49d1-5a42-80c0-43e42e255c1c",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "08223bfd-5bf6-6938-8c37-b67cddd359ec",
+							version = 2.1,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							dequeueIfLuaFalse = true,
+							eventArgType = 2,
+							eventMarkerID = 602,
+							uuid = "bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							dequeueIfLuaFalse = true,
+							inGroupTargetType = "Other Tank",
+							partyTargetType = "Event Entity",
+							uuid = "c2cb9d3b-196d-fc9d-b9a5-682ed76f4bf6",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							dequeueIfLuaFalse = true,
+							inGroupTargetType = "Self",
+							partyTargetType = "Event Entity",
+							uuid = "d73a437b-daee-5b25-9e29-bfcac45843c2",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99.999000549316,
+							uuid = "793315f6-95e5-64dd-ad82-b5068ac21c08",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 100,
+							uuid = "463b432b-49d1-5a42-80c0-43e42e255c1c",
+							version = 2,
+						},
+					},
+				},
+				eventType = 4,
+				loop = true,
+				mechanicTime = 479,
+				name = "Provoke/Shirk on marked",
+				timeRange = true,
+				timelineIndex = 66,
+				timerEndOffset = 36.900001525879,
+				uuid = "7ebace17-5cbb-a027-b691-e90826ce5deb",
+				version = 2,
+			},
+		},
+	},
 	[74] = 
 	{
 		
@@ -11166,6 +11317,276 @@ local tbl =
 				timerOffset = -3,
 				timerStartOffset = -2,
 				uuid = "3e179a48-5aa2-44df-9934-a6752114c890",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+								
+								{
+									"46cb0109-6c3a-2f84-a2c4-31984cecfea2",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+								
+								{
+									"c87032d2-c148-cb6a-9a76-9a849a23a2b1",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+								
+								{
+									"18f1b609-641e-ed19-9e7e-897be06b8984",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+								
+								{
+									"bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							conditions = 
+							{
+								
+								{
+									"8c71da96-ad5e-4e67-be0e-d09d31309942",
+									true,
+								},
+							},
+							filterTargetType = "Party",
+							uuid = "fcd897d9-5fd2-af94-b079-2d99de6abac2",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 50,
+							partyTargetType = "Detection Target",
+							uuid = "8c71da96-ad5e-4e67-be0e-d09d31309942",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1833,
+							category = "Self",
+							name = "GNB Buff",
+							uuid = "46cb0109-6c3a-2f84-a2c4-31984cecfea2",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 79,
+							category = "Self",
+							name = "PLD Buff",
+							uuid = "c87032d2-c148-cb6a-9a76-9a849a23a2b1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							name = "DRK Buff",
+							uuid = "18f1b609-641e-ed19-9e7e-897be06b8984",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 91,
+							name = "WAR Buff",
+							uuid = "bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
+							version = 2,
+						},
+						inheritedIndex = 8,
+					},
+				},
+				mechanicTime = 515.9,
+				name = "Miti LowestHP",
+				timeRange = true,
+				timelineIndex = 74,
+				timerEndOffset = 3,
+				timerOffset = -15,
+				timerStartOffset = -2,
+				uuid = "9017bb65-ee7a-bd80-ac6f-645cb817e02e",
 				version = 2,
 			},
 		},
