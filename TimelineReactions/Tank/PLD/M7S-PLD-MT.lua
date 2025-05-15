@@ -33,6 +33,31 @@ local tbl =
 							version = 2.1,
 						},
 					},
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+								
+								{
+									"2d01924a-4990-b757-a1fc-bc71b15efda7",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "427d5750-6665-c05d-8ac6-29554650c876",
+							version = 2.1,
+						},
+					},
 				},
 				conditions = 
 				{
@@ -55,6 +80,16 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return data.string_SelectionDR[\"正攻法\"].bool\n",
 							uuid = "55b30480-d565-052a-95ca-562ccba1daf8",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
+							uuid = "2d01924a-4990-b757-a1fc-bc71b15efda7",
 							version = 2,
 						},
 					},
@@ -101,6 +136,31 @@ local tbl =
 							version = 2.1,
 						},
 					},
+					
+					{
+						data = 
+						{
+							actionID = 36920,
+							conditions = 
+							{
+								
+								{
+									"aceb9492-b930-0c6d-aaca-9fb9e7c2fb2a",
+									true,
+								},
+								
+								{
+									"c38a89a8-279d-2a4e-9be6-1350eb897442",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "90bded01-4522-ecb2-9636-6b0bda23b927",
+							version = 2.1,
+						},
+					},
 				},
 				conditions = 
 				{
@@ -126,8 +186,17 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
+							uuid = "c38a89a8-279d-2a4e-9be6-1350eb897442",
+							version = 2,
+						},
+					},
 				},
-				enabled = false,
 				mechanicTime = 32,
 				name = "Guardian (40)",
 				timeRange = true,
@@ -169,6 +238,31 @@ local tbl =
 							version = 2.1,
 						},
 					},
+					
+					{
+						data = 
+						{
+							actionID = 22,
+							conditions = 
+							{
+								
+								{
+									"dda24e11-6d3b-8a80-80e0-e75a85a9579a",
+									true,
+								},
+								
+								{
+									"45aa024e-6c69-cbd7-adee-d64e6bdc9e42",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "fd9255fe-6c6f-1dfe-a4d0-77d74a6f89f2",
+							version = 2.1,
+						},
+					},
 				},
 				conditions = 
 				{
@@ -192,6 +286,16 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return data.string_SelectionDR[\"正攻法\"].bool\n",
 							uuid = "870f662a-e61a-ea36-a0c5-7c4a58f83688",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
+							uuid = "45aa024e-6c69-cbd7-adee-d64e6bdc9e42",
 							version = 2,
 						},
 					},
@@ -238,6 +342,31 @@ local tbl =
 							version = 2.1,
 						},
 					},
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+								
+								{
+									"22e0a0b4-350d-edc5-a445-0820345d22e4",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "e844a57c-65a1-be57-98ac-0670f46eaf66",
+							version = 2.1,
+						},
+					},
 				},
 				conditions = 
 				{
@@ -259,6 +388,16 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return data.string_SelectionDR[\"正攻法\"].bool\n",
 							uuid = "59b0d8fb-1bc0-c785-801f-ffaba798c6e3",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
+							uuid = "22e0a0b4-350d-edc5-a445-0820345d22e4",
 							version = 2,
 						},
 					},
@@ -309,11 +448,6 @@ local tbl =
 									"e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
 									true,
 								},
-								
-								{
-									"1b3dc22e-071b-82fb-bf9c-809dd7710833",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -337,17 +471,8 @@ local tbl =
 							version = 2,
 						},
 					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
-							uuid = "1b3dc22e-071b-82fb-bf9c-809dd7710833",
-							version = 2,
-						},
-					},
 				},
+				enabled = false,
 				mechanicTime = 32,
 				name = "Hollowed Ground (Invinsible)",
 				timeRange = true,
@@ -376,6 +501,37 @@ local tbl =
 									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
 									true,
 								},
+								
+								{
+									"01e8dfeb-b032-4ed6-a5a5-32a28cd28a1f",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "7a7985e9-ca5c-1be8-a382-3c656362944e",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+								
+								{
+									"89c345a3-b20a-1acf-8800-684fa9e3d06d",
+									true,
+								},
 							},
 							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
@@ -395,6 +551,27 @@ local tbl =
 							conditionType = 6,
 							gaugeValue = 50,
 							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"正攻法\"].bool\n",
+							uuid = "01e8dfeb-b032-4ed6-a5a5-32a28cd28a1f",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
+							uuid = "89c345a3-b20a-1acf-8800-684fa9e3d06d",
 							version = 2,
 						},
 					},
@@ -787,6 +964,37 @@ local tbl =
 									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
 									true,
 								},
+								
+								{
+									"5162b723-e374-975e-bd92-3f0447bf180f",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5b1bda98-9caa-b389-9994-88e50de57a2e",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+								
+								{
+									"903efabe-8c8f-8895-b048-28e7b58b8f18",
+									true,
+								},
 							},
 							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
@@ -806,6 +1014,27 @@ local tbl =
 							conditionType = 6,
 							gaugeValue = 50,
 							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"正攻法\"].bool\n",
+							uuid = "5162b723-e374-975e-bd92-3f0447bf180f",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
+							uuid = "903efabe-8c8f-8895-b048-28e7b58b8f18",
 							version = 2,
 						},
 					},
