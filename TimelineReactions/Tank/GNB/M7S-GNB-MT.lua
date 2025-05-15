@@ -133,7 +133,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 3,
 				timerOffset = -1,
-				timerStartOffset = -2,
+				timerStartOffset = -0.20000000298023,
 				uuid = "aa398f82-ea07-9b4c-bf56-599d822f64e6",
 				version = 2,
 			},
@@ -497,7 +497,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 3,
 				timerOffset = -1,
-				timerStartOffset = -1.5,
+				timerStartOffset = -0.20000000298023,
 				uuid = "61d98b03-7061-e12b-b87e-83c240653898",
 				version = 2,
 			},
@@ -568,11 +568,11 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 3,
 				timerOffset = -1,
-				timerStartOffset = -2,
+				timerStartOffset = -0.20000000298023,
 				uuid = "5f56026c-ec9c-dce8-bbfd-5c25e19f9420",
 				version = 2,
 			},
-			inheritedIndex = 10,
+			inheritedIndex = 9,
 		},
 	},
 	[27] = 
@@ -709,7 +709,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 27,
 				timerOffset = -1,
-				timerStartOffset = -2,
+				timerStartOffset = -0.20000000298023,
 				uuid = "7576edf6-84d1-8958-8e74-8c21844344c8",
 				version = 2,
 			},
@@ -1073,7 +1073,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 27,
 				timerOffset = -1,
-				timerStartOffset = -1.5,
+				timerStartOffset = -0.20000000298023,
 				uuid = "54399122-e642-5a5b-bfbd-b0af301be30b",
 				version = 2,
 			},
@@ -1144,11 +1144,241 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 27,
 				timerOffset = -1,
-				timerStartOffset = -2,
+				timerStartOffset = -0.20000000298023,
 				uuid = "28fde8b1-c0c9-39f6-93f5-0d57bcf62732",
 				version = 2,
 			},
 			inheritedIndex = 9,
+		},
+	},
+	[44] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
+									true,
+								},
+								
+								{
+									"c2cb9d3b-196d-fc9d-b9a5-682ed76f4bf6",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "a1aed48d-295b-da3e-978a-460aac09e87e",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
+									true,
+								},
+								
+								{
+									"d73a437b-daee-5b25-9e29-bfcac45843c2",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Event Entity",
+							uuid = "08223bfd-5bf6-6938-8c37-b67cddd359ec",
+							version = 2.1,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 327,
+							uuid = "bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetType = "Other Tank",
+							partyTargetType = "Event Entity",
+							uuid = "c2cb9d3b-196d-fc9d-b9a5-682ed76f4bf6",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetType = "Self",
+							partyTargetType = "Event Entity",
+							uuid = "d73a437b-daee-5b25-9e29-bfcac45843c2",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				eventType = 4,
+				mechanicTime = 222.5,
+				name = "HoC on Meteor",
+				timeRange = true,
+				timelineIndex = 44,
+				timerEndOffset = 3,
+				uuid = "2d33876c-33f7-6141-abeb-081b3efb8742",
+				version = 2,
+			},
+		},
+	},
+	[54] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
+									true,
+								},
+								
+								{
+									"c2cb9d3b-196d-fc9d-b9a5-682ed76f4bf6",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "a1aed48d-295b-da3e-978a-460aac09e87e",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
+									true,
+								},
+								
+								{
+									"d73a437b-daee-5b25-9e29-bfcac45843c2",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Event Entity",
+							uuid = "08223bfd-5bf6-6938-8c37-b67cddd359ec",
+							version = 2.1,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 327,
+							uuid = "bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetType = "Other Tank",
+							partyTargetType = "Event Entity",
+							uuid = "c2cb9d3b-196d-fc9d-b9a5-682ed76f4bf6",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetType = "Self",
+							partyTargetType = "Event Entity",
+							uuid = "d73a437b-daee-5b25-9e29-bfcac45843c2",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				eventType = 4,
+				mechanicTime = 281.1,
+				name = "HoC on Meteor",
+				timeRange = true,
+				timelineIndex = 54,
+				timerEndOffset = 3,
+				uuid = "d3434718-8ad2-8539-ae53-fd702cf7ed7a",
+				version = 2,
+			},
 		},
 	},
 	[83] = 
@@ -1284,7 +1514,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 83,
 				timerOffset = -1,
-				timerStartOffset = -2,
+				timerStartOffset = -0.20000000298023,
 				uuid = "40877374-b294-b60c-af2f-4401d4557e27",
 				version = 2,
 			},
@@ -1648,7 +1878,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 83,
 				timerOffset = -1,
-				timerStartOffset = -1.5,
+				timerStartOffset = -1,
 				uuid = "5879b1b7-600d-cf1e-a4b4-52d7a6e2c7a3",
 				version = 2,
 			},
@@ -1719,7 +1949,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 83,
 				timerOffset = -1,
-				timerStartOffset = -2,
+				timerStartOffset = -0.20000000298023,
 				uuid = "bbfba5f6-6aaa-e728-8ea0-56cdf2799a40",
 				version = 2,
 			},
@@ -1830,7 +2060,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 86,
 				timerOffset = -1,
-				timerStartOffset = -2,
+				timerStartOffset = -0.5,
 				uuid = "d944acde-b59e-56ff-920a-4122cfe5e935",
 				version = 2,
 			},
@@ -2711,7 +2941,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 119,
 				timerOffset = -1,
-				timerStartOffset = -1.5,
+				timerStartOffset = -1,
 				uuid = "29939fe8-a626-e81a-961a-ea50c6d4b3ee",
 				version = 2,
 			},
@@ -2893,7 +3123,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 121,
 				timerOffset = -1,
-				timerStartOffset = -2,
+				timerStartOffset = -0.5,
 				uuid = "e83bb12c-9db1-4836-bfed-a4d273274bb2",
 				version = 2,
 			},
