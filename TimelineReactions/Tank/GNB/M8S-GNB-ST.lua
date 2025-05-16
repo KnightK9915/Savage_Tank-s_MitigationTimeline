@@ -1030,7 +1030,7 @@ local tbl =
 								},
 								
 								{
-									"14d12681-0c32-daf8-9cf1-140f1acdb610",
+									"e9fd5c91-d423-514a-a8fd-2c932aebcec2",
 									true,
 								},
 							},
@@ -1064,8 +1064,8 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
-							uuid = "14d12681-0c32-daf8-9cf1-140f1acdb610",
+							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
+							uuid = "e9fd5c91-d423-514a-a8fd-2c932aebcec2",
 							version = 2,
 						},
 					},
@@ -1076,7 +1076,7 @@ local tbl =
 				timelineIndex = 25,
 				timerOffset = -1,
 				timerStartOffset = -2,
-				uuid = "6e82f4ed-1553-7da3-960f-d0a69eabc215",
+				uuid = "8c6de779-fb61-9538-a634-45409a315b81",
 				version = 2,
 			},
 			inheritedIndex = 9,
@@ -2618,7 +2618,7 @@ local tbl =
 								},
 								
 								{
-									"e9fd5c91-d423-514a-a8fd-2c932aebcec2",
+									"14d12681-0c32-daf8-9cf1-140f1acdb610",
 									true,
 								},
 							},
@@ -2652,8 +2652,8 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
-							uuid = "e9fd5c91-d423-514a-a8fd-2c932aebcec2",
+							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
+							uuid = "14d12681-0c32-daf8-9cf1-140f1acdb610",
 							version = 2,
 						},
 					},
@@ -2664,7 +2664,7 @@ local tbl =
 				timelineIndex = 65,
 				timerOffset = -1,
 				timerStartOffset = -2,
-				uuid = "ccb3f1d7-928e-929f-88d9-4ec649b8a4f9",
+				uuid = "a367992d-7106-e44d-bce3-0580aab8f7d7",
 				version = 2,
 			},
 			inheritedIndex = 9,
@@ -3299,7 +3299,7 @@ local tbl =
 								},
 								
 								{
-									"14d12681-0c32-daf8-9cf1-140f1acdb610",
+									"365438b0-aeea-d758-a399-7b4d4639369f",
 									true,
 								},
 								
@@ -3338,10 +3338,11 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
-							uuid = "14d12681-0c32-daf8-9cf1-140f1acdb610",
+							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
+							uuid = "365438b0-aeea-d758-a399-7b4d4639369f",
 							version = 2,
 						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -3995,7 +3996,7 @@ local tbl =
 								},
 								
 								{
-									"e9fd5c91-d423-514a-a8fd-2c932aebcec2",
+									"2c8810a3-d9f1-a3b7-af7b-e2040ddeb722",
 									true,
 								},
 								
@@ -4034,10 +4035,11 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
-							uuid = "e9fd5c91-d423-514a-a8fd-2c932aebcec2",
+							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
+							uuid = "2c8810a3-d9f1-a3b7-af7b-e2040ddeb722",
 							version = 2,
 						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -4057,6 +4059,889 @@ local tbl =
 				timerOffset = -1,
 				timerStartOffset = -2,
 				uuid = "f068e5fe-8f8e-075b-8cc7-69aab4bd0310",
+				version = 2,
+			},
+			inheritedIndex = 9,
+		},
+	},
+	[114] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16152,
+							conditions = 
+							{
+								
+								{
+									"7e0d26db-790b-1b75-bfca-ad4daf3ae049",
+									true,
+								},
+								
+								{
+									"749ffea6-ec19-e872-89c1-f2947c1dfc30",
+									true,
+								},
+								
+								{
+									"448c960b-893b-ebae-8a6c-e7b270d9a40c",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "9d1ae46d-0ea3-1bda-a34f-fbeb02011fe0",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16152,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "7e0d26db-790b-1b75-bfca-ad4daf3ae049",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
+							uuid = "749ffea6-ec19-e872-89c1-f2947c1dfc30",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "448c960b-893b-ebae-8a6c-e7b270d9a40c",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 829.2,
+				name = "Superbolide (Invinsible)",
+				timeRange = true,
+				timelineIndex = 114,
+				timerOffset = -1,
+				timerStartOffset = -1.5,
+				uuid = "f294fcf9-ff7c-59ef-8c76-b533e55d7c35",
+				version = 2,
+			},
+			inheritedIndex = 8,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"365438b0-aeea-d758-a399-7b4d4639369f",
+									true,
+								},
+								
+								{
+									"e501ee6a-a532-5f0e-b780-923f446dd492",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
+							uuid = "365438b0-aeea-d758-a399-7b4d4639369f",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "e501ee6a-a532-5f0e-b780-923f446dd492",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 829.2,
+				name = "HoC (15) ST",
+				timeRange = true,
+				timelineIndex = 114,
+				timerOffset = -1,
+				timerStartOffset = -2,
+				uuid = "25df224f-8f53-5932-97cf-570ccef070a6",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+	},
+	[116] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16152,
+							conditions = 
+							{
+								
+								{
+									"7e0d26db-790b-1b75-bfca-ad4daf3ae049",
+									true,
+								},
+								
+								{
+									"79cc5241-a487-6d7b-b6ba-3bba1fe85bfa",
+									true,
+								},
+								
+								{
+									"b48ff30d-8c31-7a13-8ff0-a262ef45a5d4",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "9d1ae46d-0ea3-1bda-a34f-fbeb02011fe0",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16152,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "7e0d26db-790b-1b75-bfca-ad4daf3ae049",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
+							uuid = "79cc5241-a487-6d7b-b6ba-3bba1fe85bfa",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "b48ff30d-8c31-7a13-8ff0-a262ef45a5d4",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 848.7,
+				name = "Superbolide (Invinsible)",
+				timeRange = true,
+				timelineIndex = 116,
+				timerOffset = -1,
+				timerStartOffset = -1.5,
+				uuid = "b09f0c95-db9e-ed30-94cb-bcb7462c3846",
+				version = 2,
+			},
+			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"2c8810a3-d9f1-a3b7-af7b-e2040ddeb722",
+									true,
+								},
+								
+								{
+									"18236b57-e4f1-80b0-b1c6-be31d4f11d26",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
+							uuid = "2c8810a3-d9f1-a3b7-af7b-e2040ddeb722",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "18236b57-e4f1-80b0-b1c6-be31d4f11d26",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 848.7,
+				name = "HoC (15) ST",
+				timeRange = true,
+				timelineIndex = 116,
+				timerOffset = -1,
+				timerStartOffset = -2,
+				uuid = "036ef30d-f522-1bdc-8b58-6b1dd8440b37",
+				version = 2,
+			},
+			inheritedIndex = 9,
+		},
+	},
+	[118] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16140,
+							conditions = 
+							{
+								
+								{
+									"b0a6c0ff-c966-c1fe-bedc-2d9d7afd0ff6",
+									true,
+								},
+								
+								{
+									"71d80b25-b532-0311-88b7-77f8b21f8c49",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "8e2ebaff-1382-38db-a880-5b374c35c9fd",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16140,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "b0a6c0ff-c966-c1fe-bedc-2d9d7afd0ff6",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "71d80b25-b532-0311-88b7-77f8b21f8c49",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 868.2,
+				name = "Camou (10)",
+				timeRange = true,
+				timelineIndex = 118,
+				timerOffset = -10,
+				timerStartOffset = -10,
+				uuid = "15bd6385-f136-9aef-aba4-bfe68b40a02c",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"4023f15e-23be-4cf9-b398-9215c9bea278",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "4023f15e-23be-4cf9-b398-9215c9bea278",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 868.2,
+				name = "HoC (15)",
+				timeRange = true,
+				timelineIndex = 118,
+				timerOffset = -1,
+				timerStartOffset = -2,
+				uuid = "71d15927-5300-20c4-b842-075c4a3ba33d",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+								
+								{
+									"b2e50b39-d067-5f29-a4d5-41cb6140e19b",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "b2e50b39-d067-5f29-a4d5-41cb6140e19b",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 868.2,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 118,
+				timerOffset = -15,
+				timerStartOffset = -10,
+				uuid = "c3014209-fe74-50e2-ac55-6251c11954c6",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36935,
+							conditions = 
+							{
+								
+								{
+									"30f02147-8e47-399f-99c5-279582aa248d",
+									true,
+								},
+								
+								{
+									"00bd2cb8-9612-9dd8-89ea-853528633c5f",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "d00db0ec-8fe2-c41e-8ee5-1c53101aa3bb",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36935,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "30f02147-8e47-399f-99c5-279582aa248d",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "00bd2cb8-9612-9dd8-89ea-853528633c5f",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 868.2,
+				name = "Great Nebula (40)",
+				timeRange = true,
+				timelineIndex = 118,
+				timerStartOffset = -5,
+				uuid = "ecdb7b57-2003-7add-9238-f87a587065c6",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16151,
+							conditions = 
+							{
+								
+								{
+									"306b76dc-ee6e-e3dc-a1e0-8c60894dc919",
+									true,
+								},
+								
+								{
+									"20ee6c50-934e-7100-920d-3ed7873ff42b",
+									true,
+								},
+								
+								{
+									"7d9b90f4-12df-4cd2-9fe0-cdf10d290565",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_Tankbar_AuroraSelf",
+							ignoreWeaveRules = true,
+							uuid = "6416a938-cb0c-be7b-bba2-31cd8d471cd4",
+							variableTogglesType = 3,
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 90,
+							uuid = "306b76dc-ee6e-e3dc-a1e0-8c60894dc919",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1835,
+							category = "Self",
+							uuid = "20ee6c50-934e-7100-920d-3ed7873ff42b",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "7d9b90f4-12df-4cd2-9fe0-cdf10d290565",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 868.2,
+				name = "Aurora (regen) self",
+				timeRange = true,
+				timelineIndex = 118,
+				timerEndOffset = 10,
+				uuid = "5e1c6892-a89d-0e3d-8c08-39cd16d09581",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16151,
+							conditions = 
+							{
+								
+								{
+									"7ea95bcb-8a32-aac2-883a-7834a0254830",
+									true,
+								},
+								
+								{
+									"b445afdb-5c04-2e5e-9c9f-ab41daded937",
+									true,
+								},
+								
+								{
+									"55373a9d-1aa4-6d54-828e-893b0226ae1c",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_Tankbar_AuroraOT",
+							ignoreWeaveRules = true,
+							targetType = "Main Tank",
+							uuid = "6416a938-cb0c-be7b-bba2-31cd8d471cd4",
+							variableTogglesType = 3,
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Party",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 70,
+							partyTargetType = "Main Tank",
+							uuid = "7ea95bcb-8a32-aac2-883a-7834a0254830",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1835,
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "b445afdb-5c04-2e5e-9c9f-ab41daded937",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "55373a9d-1aa4-6d54-828e-893b0226ae1c",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 868.2,
+				name = "Aurora (regen) ST",
+				timeRange = true,
+				timelineIndex = 118,
+				timerEndOffset = 10,
+				uuid = "8d4893f7-e42f-1ad6-927a-eeca5454e187",
+				version = 2,
+			},
+			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 868.2,
+				name = "_________________",
+				timelineIndex = 118,
+				uuid = "be461e85-e823-d3c0-82e8-e0f01bcb41b7",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"2a9e31d8-c087-8818-8d11-12b2cfca5eef",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "2a9e31d8-c087-8818-8d11-12b2cfca5eef",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 868.2,
+				name = "HoC (15) ST",
+				timeRange = true,
+				timelineIndex = 118,
+				timerOffset = -1,
+				timerStartOffset = -2,
+				uuid = "5c660fdb-b141-7b10-b5d3-fa97b8e371ac",
 				version = 2,
 			},
 			inheritedIndex = 9,
