@@ -861,58 +861,6 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 25754,
-							conditions = 
-							{
-								
-								{
-									"79f8600d-3645-7dd6-aede-c2699577ca6f",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Other Tank",
-							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
-							uuid = "79f8600d-3645-7dd6-aede-c2699577ca6f",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 119.9,
-				name = "Oblation ST (10)",
-				randomOffset = 2,
-				timeRange = true,
-				timelineIndex = 25,
-				timerStartOffset = -8,
-				uuid = "149a270f-3429-298b-b23a-eec2ce4d1270",
-				version = 2,
-			},
-			inheritedIndex = 8,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
 							actionID = 7393,
 							conditions = 
 							{
@@ -923,7 +871,12 @@ local tbl =
 								},
 								
 								{
-									"04c40f1b-60c6-1be6-a3c6-d77ee1a9ef7e",
+									"696a2098-0bd4-0815-a408-d036117b6973",
+									true,
+								},
+								
+								{
+									"2270e95e-dc87-109e-bfc4-2ff846822af4",
 									true,
 								},
 							},
@@ -954,8 +907,24 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
-							uuid = "04c40f1b-60c6-1be6-a3c6-d77ee1a9ef7e",
+							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
+							uuid = "696a2098-0bd4-0815-a408-d036117b6973",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								82,
+								1836,
+							},
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "2270e95e-dc87-109e-bfc4-2ff846822af4",
 							version = 2,
 						},
 					},
@@ -966,7 +935,80 @@ local tbl =
 				timelineIndex = 25,
 				timerOffset = -4,
 				timerStartOffset = -2,
-				uuid = "2f8b4211-dc74-2108-a1fe-cf01c8b7c846",
+				uuid = "e9fe8334-c2cd-842e-b695-fcecabc7c632",
+				version = 2,
+			},
+			inheritedIndex = 8,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25754,
+							conditions = 
+							{
+								
+								{
+									"5853c82b-88a7-2561-9bbc-985638a6f368",
+									true,
+								},
+								
+								{
+									"8f591687-4c92-16f5-aacc-9ed99573e369",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
+							uuid = "5853c82b-88a7-2561-9bbc-985638a6f368",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								82,
+								1836,
+							},
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "8f591687-4c92-16f5-aacc-9ed99573e369",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 119.9,
+				name = "Oblation ST (10)",
+				randomOffset = 2,
+				timeRange = true,
+				timelineIndex = 25,
+				timerStartOffset = -8,
+				uuid = "149a270f-3429-298b-b23a-eec2ce4d1270",
 				version = 2,
 			},
 			inheritedIndex = 9,
@@ -2259,58 +2301,6 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 25754,
-							conditions = 
-							{
-								
-								{
-									"639f9d9b-d32d-0265-b0ac-07daa610d3fb",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Other Tank",
-							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
-							uuid = "639f9d9b-d32d-0265-b0ac-07daa610d3fb",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 379.4,
-				name = "Oblation ST (10)",
-				randomOffset = 2,
-				timeRange = true,
-				timelineIndex = 65,
-				timerStartOffset = -8,
-				uuid = "4d1eec5d-0b10-5016-b99c-8184ab881475",
-				version = 2,
-			},
-			inheritedIndex = 8,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
 							actionID = 7393,
 							conditions = 
 							{
@@ -2321,7 +2311,12 @@ local tbl =
 								},
 								
 								{
-									"696a2098-0bd4-0815-a408-d036117b6973",
+									"04c40f1b-60c6-1be6-a3c6-d77ee1a9ef7e",
+									true,
+								},
+								
+								{
+									"84175180-badb-f1ab-9dd5-8b7a7c06f62b",
 									true,
 								},
 							},
@@ -2352,8 +2347,24 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
-							uuid = "696a2098-0bd4-0815-a408-d036117b6973",
+							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
+							uuid = "04c40f1b-60c6-1be6-a3c6-d77ee1a9ef7e",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								82,
+								1836,
+							},
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "84175180-badb-f1ab-9dd5-8b7a7c06f62b",
 							version = 2,
 						},
 					},
@@ -2364,7 +2375,80 @@ local tbl =
 				timelineIndex = 65,
 				timerOffset = -4,
 				timerStartOffset = -2,
-				uuid = "54201650-0b25-e624-bc69-e4b58185915f",
+				uuid = "a4388e28-15b2-38e2-bd0d-6d4f07bd7820",
+				version = 2,
+			},
+			inheritedIndex = 8,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25754,
+							conditions = 
+							{
+								
+								{
+									"79f8600d-3645-7dd6-aede-c2699577ca6f",
+									true,
+								},
+								
+								{
+									"709f6db1-a448-babd-bd51-86bafdc4142c",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
+							uuid = "79f8600d-3645-7dd6-aede-c2699577ca6f",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								82,
+								1836,
+							},
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "709f6db1-a448-babd-bd51-86bafdc4142c",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 379.4,
+				name = "Oblation ST (10)",
+				randomOffset = 2,
+				timeRange = true,
+				timelineIndex = 65,
+				timerStartOffset = -8,
+				uuid = "7085dbab-95f8-3556-aa1a-50295daa06b4",
 				version = 2,
 			},
 			inheritedIndex = 9,
@@ -3484,88 +3568,6 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 3638,
-							conditions = 
-							{
-								
-								{
-									"e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
-									true,
-								},
-								
-								{
-									"90dc1c7e-e2f5-23f3-b93b-7eeb75a75d45",
-									true,
-								},
-								
-								{
-									"47ca9912-d34e-b649-83a7-40c24273654c",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "9b1f0885-3a72-1913-ad03-47c71acda8e5",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 3638,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
-							uuid = "90dc1c7e-e2f5-23f3-b93b-7eeb75a75d45",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "47ca9912-d34e-b649-83a7-40c24273654c",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 829.2,
-				name = "Living Dead (Invinsible)",
-				timeRange = true,
-				timelineIndex = 114,
-				timerStartOffset = -2.5,
-				uuid = "c3eae006-8972-43ea-92f7-e02941bb40d3",
-				version = 2,
-			},
-			inheritedIndex = 7,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
 							actionID = 7393,
 							conditions = 
 							{
@@ -3639,9 +3641,6 @@ local tbl =
 			},
 			inheritedIndex = 1,
 		},
-	},
-	[116] = 
-	{
 		
 		{
 			data = 
@@ -3662,12 +3661,12 @@ local tbl =
 								},
 								
 								{
-									"5fa0f760-edd0-39cd-872b-dd90d7fb6ce3",
+									"90dc1c7e-e2f5-23f3-b93b-7eeb75a75d45",
 									true,
 								},
 								
 								{
-									"1fac30af-a31e-3250-9053-b175a6c251ee",
+									"47ca9912-d34e-b649-83a7-40c24273654c",
 									true,
 								},
 							},
@@ -3698,8 +3697,8 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
-							uuid = "5fa0f760-edd0-39cd-872b-dd90d7fb6ce3",
+							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
+							uuid = "90dc1c7e-e2f5-23f3-b93b-7eeb75a75d45",
 							version = 2,
 						},
 					},
@@ -3709,21 +3708,24 @@ local tbl =
 						{
 							category = "Lua",
 							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "1fac30af-a31e-3250-9053-b175a6c251ee",
+							uuid = "47ca9912-d34e-b649-83a7-40c24273654c",
 							version = 2,
 						},
 					},
 				},
-				mechanicTime = 848.7,
+				mechanicTime = 829.2,
 				name = "Living Dead (Invinsible)",
 				timeRange = true,
-				timelineIndex = 116,
+				timelineIndex = 114,
 				timerStartOffset = -2.5,
-				uuid = "c239939d-90a9-af4c-bb51-e2577d5c06f1",
+				uuid = "c3eae006-8972-43ea-92f7-e02941bb40d3",
 				version = 2,
 			},
 			inheritedIndex = 7,
 		},
+	},
+	[116] = 
+	{
 		
 		{
 			data = 
@@ -3806,6 +3808,88 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3638,
+							conditions = 
+							{
+								
+								{
+									"e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
+									true,
+								},
+								
+								{
+									"5fa0f760-edd0-39cd-872b-dd90d7fb6ce3",
+									true,
+								},
+								
+								{
+									"1fac30af-a31e-3250-9053-b175a6c251ee",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "9b1f0885-3a72-1913-ad03-47c71acda8e5",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3638,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
+							uuid = "5fa0f760-edd0-39cd-872b-dd90d7fb6ce3",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "1fac30af-a31e-3250-9053-b175a6c251ee",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 848.7,
+				name = "Living Dead (Invinsible)",
+				timeRange = true,
+				timelineIndex = 116,
+				timerStartOffset = -2.5,
+				uuid = "c239939d-90a9-af4c-bb51-e2577d5c06f1",
+				version = 2,
+			},
+			inheritedIndex = 7,
 		},
 	},
 	[118] = 

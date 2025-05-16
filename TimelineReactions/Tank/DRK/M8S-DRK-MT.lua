@@ -861,58 +861,6 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 25754,
-							conditions = 
-							{
-								
-								{
-									"79f8600d-3645-7dd6-aede-c2699577ca6f",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Other Tank",
-							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
-							uuid = "79f8600d-3645-7dd6-aede-c2699577ca6f",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 119.9,
-				name = "Oblation ST (10)",
-				randomOffset = 2,
-				timeRange = true,
-				timelineIndex = 25,
-				timerStartOffset = -8,
-				uuid = "149a270f-3429-298b-b23a-eec2ce4d1270",
-				version = 2,
-			},
-			inheritedIndex = 8,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
 							actionID = 7393,
 							conditions = 
 							{
@@ -923,7 +871,7 @@ local tbl =
 								},
 								
 								{
-									"04c40f1b-60c6-1be6-a3c6-d77ee1a9ef7e",
+									"696a2098-0bd4-0815-a408-d036117b6973",
 									true,
 								},
 							},
@@ -954,8 +902,8 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
-							uuid = "04c40f1b-60c6-1be6-a3c6-d77ee1a9ef7e",
+							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
+							uuid = "696a2098-0bd4-0815-a408-d036117b6973",
 							version = 2,
 						},
 					},
@@ -966,7 +914,59 @@ local tbl =
 				timelineIndex = 25,
 				timerOffset = -4,
 				timerStartOffset = -2,
-				uuid = "2f8b4211-dc74-2108-a1fe-cf01c8b7c846",
+				uuid = "111cfdd3-5603-ecbd-baef-f3c4a64e531f",
+				version = 2,
+			},
+			inheritedIndex = 8,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25754,
+							conditions = 
+							{
+								
+								{
+									"639f9d9b-d32d-0265-b0ac-07daa610d3fb",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
+							uuid = "639f9d9b-d32d-0265-b0ac-07daa610d3fb",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 119.9,
+				name = "Oblation ST (10)",
+				randomOffset = 2,
+				timeRange = true,
+				timelineIndex = 25,
+				timerStartOffset = -8,
+				uuid = "cea91f0c-0e16-b916-b503-bbee48641051",
 				version = 2,
 			},
 			inheritedIndex = 9,
@@ -2259,58 +2259,6 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 25754,
-							conditions = 
-							{
-								
-								{
-									"639f9d9b-d32d-0265-b0ac-07daa610d3fb",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Other Tank",
-							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
-							uuid = "639f9d9b-d32d-0265-b0ac-07daa610d3fb",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 379.4,
-				name = "Oblation ST (10)",
-				randomOffset = 2,
-				timeRange = true,
-				timelineIndex = 65,
-				timerStartOffset = -8,
-				uuid = "4d1eec5d-0b10-5016-b99c-8184ab881475",
-				version = 2,
-			},
-			inheritedIndex = 8,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
 							actionID = 7393,
 							conditions = 
 							{
@@ -2321,7 +2269,7 @@ local tbl =
 								},
 								
 								{
-									"696a2098-0bd4-0815-a408-d036117b6973",
+									"04c40f1b-60c6-1be6-a3c6-d77ee1a9ef7e",
 									true,
 								},
 							},
@@ -2352,8 +2300,8 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
-							uuid = "696a2098-0bd4-0815-a408-d036117b6973",
+							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
+							uuid = "04c40f1b-60c6-1be6-a3c6-d77ee1a9ef7e",
 							version = 2,
 						},
 					},
@@ -2364,10 +2312,62 @@ local tbl =
 				timelineIndex = 65,
 				timerOffset = -4,
 				timerStartOffset = -2,
-				uuid = "54201650-0b25-e624-bc69-e4b58185915f",
+				uuid = "5ceb6d1c-7a3a-3106-85f4-d9e7ca8df654",
 				version = 2,
 			},
-			inheritedIndex = 9,
+			inheritedIndex = 8,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25754,
+							conditions = 
+							{
+								
+								{
+									"79f8600d-3645-7dd6-aede-c2699577ca6f",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
+							uuid = "79f8600d-3645-7dd6-aede-c2699577ca6f",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 379.4,
+				name = "Oblation ST (10)",
+				randomOffset = 2,
+				timeRange = true,
+				timelineIndex = 65,
+				timerStartOffset = -8,
+				uuid = "b846a6c3-fb4a-8fb9-948e-5a94c03038b4",
+				version = 2,
+			},
+			inheritedIndex = 10,
 		},
 	},
 	[82] = 
