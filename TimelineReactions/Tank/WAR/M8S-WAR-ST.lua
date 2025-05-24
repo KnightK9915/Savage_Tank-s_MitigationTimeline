@@ -1245,7 +1245,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 37,
 				timerOffset = -15,
-				timerStartOffset = -10,
+				timerStartOffset = -5,
 				uuid = "b407fdeb-a1e9-84a7-9ebb-0eccd5ec7e18",
 				version = 2,
 			},
@@ -1347,6 +1347,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 162.4,
 				name = "ToB (HP Upscale)",
 				timeRange = true,
@@ -1591,6 +1592,257 @@ local tbl =
 				uuid = "a3cc3ea5-d66a-eac5-82c2-66b4402a62eb",
 				version = 2,
 			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36923,
+							conditions = 
+							{
+								
+								{
+									"4fac7081-fe91-ff6b-ad14-e08554cb26d6",
+									true,
+								},
+								
+								{
+									"91a95e1f-fcbb-43b2-bd18-f4c7115b081a",
+									true,
+								},
+								
+								{
+									"0aeec9c1-c189-d8ba-8695-4f2d2314a955",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "e3339fc5-29f8-ea78-b047-31e1f4105077",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 23,
+							uuid = "4fac7081-fe91-ff6b-ad14-e08554cb26d6",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetType = "Party",
+							partyTargetType = "Event Entity",
+							uuid = "91a95e1f-fcbb-43b2-bd18-f4c7115b081a",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36923,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "0aeec9c1-c189-d8ba-8695-4f2d2314a955",
+							version = 2,
+						},
+					},
+				},
+				eventType = 4,
+				mechanicTime = 174.5,
+				name = "Damnation (40)",
+				timeRange = true,
+				timelineIndex = 40,
+				timerEndOffset = 15,
+				timerOffset = -5,
+				uuid = "00589c95-3900-2ab6-a90e-f2f33df9457d",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 40,
+							conditions = 
+							{
+								
+								{
+									"73389fbb-377e-035c-abf8-7787b730478b",
+									true,
+								},
+								
+								{
+									"e11e1b0d-16d5-758c-a88e-4fa1e5df8e0a",
+									true,
+								},
+								
+								{
+									"79d32c05-7ccb-e6a2-9493-167f1c04431a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "9123327e-7223-9aa2-9e4b-6b502c61d83d",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 23,
+							uuid = "73389fbb-377e-035c-abf8-7787b730478b",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetType = "Party",
+							partyTargetType = "Event Entity",
+							uuid = "e11e1b0d-16d5-758c-a88e-4fa1e5df8e0a",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 40,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "79d32c05-7ccb-e6a2-9493-167f1c04431a",
+							version = 2,
+						},
+					},
+				},
+				eventType = 4,
+				mechanicTime = 174.5,
+				name = "ToB (HP Upscale)",
+				timeRange = true,
+				timelineIndex = 40,
+				timerEndOffset = 25,
+				timerOffset = -1,
+				timerStartOffset = 15,
+				uuid = "7f789ab2-1bc8-800c-a2cd-3bcb9f941689",
+				version = 2,
+			},
+			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3552,
+							conditions = 
+							{
+								
+								{
+									"765cdb05-b839-9d7e-96f5-d5b01de337bf",
+									true,
+								},
+								
+								{
+									"36dc885b-1f9c-0471-bc08-7a017c15d6e1",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "a53a5321-b7a7-656f-8d8f-34823340d239",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3552,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "765cdb05-b839-9d7e-96f5-d5b01de337bf",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 60,
+							uuid = "36dc885b-1f9c-0471-bc08-7a017c15d6e1",
+							version = 2,
+						},
+					},
+				},
+				loop = true,
+				mechanicTime = 174.5,
+				name = "Equilibrium (Regen)",
+				timeRange = true,
+				timelineIndex = 40,
+				timerEndOffset = 70.099998474121,
+				timerStartOffset = 1,
+				uuid = "db42ef94-3235-9e9b-900f-800e3cdfefef",
+				version = 2,
+			},
+			inheritedIndex = 7,
 		},
 	},
 	[62] = 
