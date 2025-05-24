@@ -13,6 +13,83 @@ local tbl =
 						data = 
 						{
 							aType = "Lua",
+							actionLua = "local drawTime = 10000\nif data.MuAiGd_M8S_Blade == nil then\n    data.MuAiGd_M8S_Blade = {\n        Left = 41923,\n        Right = 41922\n    }\n    data.MuAiGd_M8S_BladeEnt = {}\n    data.MuAiGd_M8S_BladeEntCnt = 0\nend\n\ndata.MuAiGd_M8S_BladeFunc = function(data1, data2, distance)\n    local spell1 = data1.spell\n    local spell2 = data2.spell\n    local OA = { x = data1.ent.pos.x - 100, z = data1.ent.pos.z - 100 }\n    local OB = { x = data2.ent.pos.x - 100, z = data2.ent.pos.z - 100 }\n    local crossProduct = OA.x * OB.z - OA.z * OB.x\n    local offsetHeading\n    -- 非标准坐标系，叉乘结果要反着来\n    if crossProduct > 0 then\n        -- 顺\n        if spell1 == data.MuAiGd_M8S_Blade.Left then\n            if spell2 == data.MuAiGd_M8S_Blade.Left then\n                offsetHeading = math.pi / 4\n            else\n                offsetHeading = math.pi * 3 / 4\n            end\n        else\n            if spell2 == data.MuAiGd_M8S_Blade.Left then\n                offsetHeading = -math.pi / 4\n            else\n                offsetHeading = -math.pi * 3 / 4\n            end\n        end\n    elseif crossProduct < 0 then\n        -- 逆\n        if spell1 == data.MuAiGd_M8S_Blade.Left then\n            if spell2 == data.MuAiGd_M8S_Blade.Left then\n                offsetHeading = math.pi * 3 / 4\n            else\n                offsetHeading = math.pi * 1 / 4\n            end\n        else\n            if spell2 == data.MuAiGd_M8S_Blade.Left then\n                offsetHeading = -math.pi * 3 / 4\n            else\n                offsetHeading = -math.pi * 1 / 4\n            end\n        end\n    end\n\n    local endHading = TensorCore.getHeadingToTarget({ x = 100, y = 0, z = 100 }, data1.ent.pos)\n    local pos = TensorCore.getPosInDirection({ x = 100, y = 0, z = 100 }, endHading + offsetHeading, distance)\n    return pos\nend\n\nif data.MuAiGd_M8S_BladeEntCnt < 4 then\n    data.MuAiGd_M8S_BladeEntCnt = data.MuAiGd_M8S_BladeEntCnt + 1\n    local curData = {\n        ent = TensorCore.mGetEntity(eventArgs.entityID),\n        spell = eventArgs.spellID\n    }\n    if data.MuAiGd_M8S_BladeEnt[data.MuAiGd_M8S_BladeEntCnt] == nil then\n        data.MuAiGd_M8S_BladeEnt[data.MuAiGd_M8S_BladeEntCnt] = curData\n    end\n    local blading = nil\n    local drawer = nil\n    if data.MuAiGd_M8S_BladeEntCnt == 1 then\n        blading = data.MuAiGd_M8S_BladeEnt[1]\n        drawer = Argus2.ShapeDrawer:new(\n                (GUI:ColorConvertFloat4ToU32(0, 1, 0, 0.4)),\n                (GUI:ColorConvertFloat4ToU32(0, 1, 0, 0.4)),\n                (GUI:ColorConvertFloat4ToU32(0, 1, 0, 0.4)),\n                (GUI:ColorConvertFloat4ToU32(1, 1, 1, 1)),\n                3\n        )\n    elseif data.MuAiGd_M8S_BladeEntCnt == 3 then\n        local worldTextPos = data.MuAiGd_M8S_BladeFunc(data.MuAiGd_M8S_BladeEnt[2], data.MuAiGd_M8S_BladeEnt[3], 6)\n        AnyoneCore.addTimedWorldText(drawTime, \"Later Safe\", worldTextPos, GUI:ColorConvertFloat4ToU32(1, 1, 1, 1), true, 3)\n        local coneDrawer = Argus2.ShapeDrawer:new(\n                (GUI:ColorConvertFloat4ToU32(0, 1, 1, 0)),\n                (GUI:ColorConvertFloat4ToU32(0, 1, 1, 0)),\n                (GUI:ColorConvertFloat4ToU32(0, 1, 1, 0)),\n                (GUI:ColorConvertFloat4ToU32(0, 1, 0, 0.7)),\n                15\n        )\n        local heading = TensorCore.getHeadingToTarget({ x = 100, y = 0, z = 100 }, worldTextPos)\n        coneDrawer:addTimedCone(drawTime, 100, 0, 100, 11.9, math.pi / 2, heading, 0, true)\n    elseif data.MuAiGd_M8S_BladeEntCnt == 4 then\n        blading = data.MuAiGd_M8S_BladeEnt[4]\n        drawer = Argus2.ShapeDrawer:new(\n                (GUI:ColorConvertFloat4ToU32(0, 1, 1, 0.4)),\n                (GUI:ColorConvertFloat4ToU32(0, 1, 1, 0.4)),\n                (GUI:ColorConvertFloat4ToU32(0, 1, 1, 0.4)),\n                (GUI:ColorConvertFloat4ToU32(1, 1, 1, 1)),\n                3\n        )\n    end\n    if blading ~= nil then\n        local heading\n        local oM = TensorCore.getHeadingToTarget({ x = 100, y = 0, z = 100 }, blading.ent.pos)\n        if blading.spell == data.MuAiGd_M8S_Blade.Left then\n            heading = oM - math.pi / 2\n        elseif blading.spell == data.MuAiGd_M8S_Blade.Right then\n            heading = oM + math.pi / 2\n        end\n        drawer:addTimedArrow(drawTime, 100, 0, 100, heading, 8, 1.5, 3, 2, 0, true)\n    end\nend\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"5c611951-c7e8-2f58-a1a7-8504e91205fa",
+									true,
+								},
+								
+								{
+									"6bff941b-c55e-e1c1-8e56-e1daad141dd2",
+									true,
+								},
+							},
+							gVar = "ACR_TensorViper3_CD",
+							uuid = "b98a6a3a-94b2-e9e6-beef-1a0de5d1acc7",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							conditionType = 2,
+							eventArgOptionType = 3,
+							eventArgType = 2,
+							name = "幻狼剑读条",
+							spellIDList = 
+							{
+								41922,
+								41923,
+							},
+							uuid = "5c611951-c7e8-2f58-a1a7-8504e91205fa",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgOptionType = 2,
+							eventEntityContentID = 13845,
+							name = "是幻狼",
+							uuid = "6bff941b-c55e-e1c1-8e56-e1daad141dd2",
+							version = 2,
+						},
+					},
+				},
+				eventType = 3,
+				loop = true,
+				mechanicTime = 11.2,
+				name = "[MuAi]DrawHeading",
+				timeRange = true,
+				timelineIndex = 1,
+				timerEndOffset = 1000,
+				timerStartOffset = -20,
+				uuid = "3420f1d9-f09f-0d47-8d5a-9fa6e92119dd",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
 							actionLua = "local function drawQT(name, info)\n    GUI:Begin(\"Selection Damage Reduction GUI\", true,\n        GUI.WindowFlags_NoTitleBar +\n        GUI.WindowFlags_NoScrollbar +\n        GUI.WindowFlags_NoScrollWithMouse +\n        GUI.WindowFlags_NoCollapse +\n        GUI.WindowFlags_AlwaysAutoResize\n    )\n\n    local ChildColor = info.bool and \n        {r=0, g=1, b=0, a=0.5} or\n        {r=1, g=0.07, b=0, a=0.5}\n\n    GUI:PushStyleVar(GUI.StyleVar_ChildWindowRounding, 5)\n    GUI:PushStyleVar(GUI.StyleVar_ItemSpacing, 3, 3)\n    GUI:PushStyleColor(GUI.Col_ChildWindowBg, ChildColor.r, ChildColor.g, ChildColor.b, ChildColor.a)\n\n    local text_width = GUI:CalcTextSize(name)\n    GUI:BeginChild(name, 105, 30, false, GUI.WindowFlags_AlwaysAutoResize)\n    GUI:SetCursorPosX((105 - text_width) * 0.5)\n    GUI:SetCursorPosY((30 - GUI:GetTextLineHeightWithSpacing()) * 0.5)\n    GUI:Text(name)\n    GUI:EndChild()\n\n    if GUI:IsItemHovered() and GUI:IsMouseClicked(0) then\n        for otherName, otherInfo in pairs(data.string_SelectionDR) do\n            otherInfo.bool = (otherName == name)\n        end\n    end\n\n    GUI:PopStyleColor()\n    GUI:PopStyleVar(2)\n    GUI:End()\nend\n\n-- 初始化状态表\nif data.string_SelectionDR == nil then\n    data.string_SelectionDR = {\n        [\"正攻法\"] = {bool = false},\n        [\"1/3無敵\"] = {bool = false},\n        [\"2/4無敵\"] = {bool = true},\n    }\nend\n\n-- 初始化显示顺序\nif data.string_SelectionDR_Order == nil then\n    data.string_SelectionDR_Order = {\n        \"正攻法\",\n        \"1/3無敵\",\n        \"2/4無敵\",\n    }\nend\n\n-- 按指定顺序渲染按钮\nfor _, btnName in ipairs(data.string_SelectionDR_Order) do\n    local config = data.string_SelectionDR[btnName]\n    if config then\n        drawQT(btnName, config)\n    end\nend\n\nself.used = true\n",
 							conditions = 
 							{
@@ -54,7 +131,7 @@ local tbl =
 				uuid = "2b998330-a490-ae4c-a9eb-ae0d55f5aa2d",
 				version = 2,
 			},
-			inheritedIndex = 1,
+			inheritedIndex = 4,
 		},
 		
 		{
@@ -148,7 +225,7 @@ local tbl =
 				uuid = "5fdfe09b-46dd-7371-9b88-a939b8f21435",
 				version = 2,
 			},
-			inheritedIndex = 2,
+			inheritedIndex = 5,
 		},
 		
 		{
@@ -240,7 +317,7 @@ local tbl =
 				uuid = "b22a35f8-12a3-4b2d-b70b-59d6e935ed5e",
 				version = 2,
 			},
-			inheritedIndex = 5,
+			inheritedIndex = 8,
 		},
 		
 		{
@@ -547,9 +624,10 @@ local tbl =
 				uuid = "a50ff5f3-595c-36bb-a921-55a32a29372b",
 				version = 2,
 			},
+			inheritedIndex = 8,
 		},
 	}, 
-	[6] = 
+	[8] = 
 	{
 		
 		{
@@ -634,13 +712,13 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 37.9,
+				mechanicTime = 43.3,
 				name = "Veil",
 				timeRange = true,
-				timelineIndex = 6,
+				timelineIndex = 8,
 				timerOffset = -10,
 				timerStartOffset = -5,
-				uuid = "239429d3-f1a2-1925-9d88-50fb4025b634",
+				uuid = "0ba9b066-819c-01a8-b37e-6aa36488abe7",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -727,12 +805,12 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 37.9,
+				mechanicTime = 43.3,
 				name = "HoL",
 				timeRange = true,
-				timelineIndex = 6,
+				timelineIndex = 8,
 				timerStartOffset = -5,
-				uuid = "f6168ca6-e318-4b7a-a431-fb110d5fa6b4",
+				uuid = "45ff209c-ff54-dd18-993d-8d1bfd520336",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -820,13 +898,13 @@ local tbl =
 						inheritedIndex = 3,
 					},
 				},
-				mechanicTime = 37.9,
+				mechanicTime = 43.3,
 				name = "Dark Missinary",
 				timeRange = true,
-				timelineIndex = 6,
+				timelineIndex = 8,
 				timerOffset = -10,
 				timerStartOffset = -5,
-				uuid = "a755f2bb-718e-ad79-85e6-bc2068b2322d",
+				uuid = "26ff5a77-fdf1-d055-9472-17ac93dd6324",
 				version = 2,
 			},
 		},
@@ -913,12 +991,12 @@ local tbl =
 						inheritedIndex = 3,
 					},
 				},
-				mechanicTime = 37.9,
+				mechanicTime = 43.3,
 				name = "Shake it off",
 				timeRange = true,
-				timelineIndex = 6,
+				timelineIndex = 8,
 				timerStartOffset = -5,
-				uuid = "91ba63e3-1006-20bf-811c-ec023d51d7fb",
+				uuid = "2f0e58bb-0cd4-5b17-8715-7e9dd3328f72",
 				version = 2,
 			},
 		},
@@ -981,458 +1059,14 @@ local tbl =
 						inheritedIndex = 2,
 					},
 				},
-				mechanicTime = 37.9,
+				mechanicTime = 43.3,
 				name = "Reprisal",
 				randomOffset = -2,
 				timeRange = true,
-				timelineIndex = 6,
+				timelineIndex = 8,
 				timerOffset = -3,
 				timerStartOffset = -2,
-				uuid = "b63171ac-b0b8-5f62-98bb-4f5a02c62ecc",
-				version = 2,
-			},
-		},
-	},
-	[9] = 
-	{
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 3540,
-							conditions = 
-							{
-								
-								{
-									"d509fc50-866e-82e0-a683-7f673386a79e",
-									true,
-								},
-								
-								{
-									"28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-									true,
-								},
-								
-								{
-									"a787167c-e665-8709-84d0-298a7dbe954a",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "208d8d0c-038a-0156-ae05-da413fbdfa98",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 3540,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 14,
-							jobIDList = 
-							{
-								19,
-							},
-							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffID = 1457,
-							buffIDList = 
-							{
-								1457,
-								1839,
-								1894,
-							},
-							category = "Self",
-							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 49.5,
-				name = "Veil",
-				timeRange = true,
-				timelineIndex = 9,
-				timerOffset = -10,
-				timerStartOffset = -5,
-				uuid = "a303dcfa-cf99-1a85-983a-20c87d3c4cd4",
-				version = 2,
-			},
-			inheritedIndex = 1,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16160,
-							conditions = 
-							{
-								
-								{
-									"a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-									true,
-								},
-								
-								{
-									"115eca71-8e25-2c76-be17-c29c66dcf324",
-									true,
-								},
-								
-								{
-									"a6929435-5dcb-3407-8d89-b38a0596d1ac",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuDRK3_CD",
-							uuid = "dbc99f8f-e1c5-f477-89e0-30fa7efeda14",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16160,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 14,
-							jobIDList = 
-							{
-								37,
-							},
-							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffID = 1457,
-							buffIDList = 
-							{
-								1457,
-								1894,
-								1362,
-							},
-							category = "Self",
-							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 49.5,
-				name = "HoL",
-				timeRange = true,
-				timelineIndex = 9,
-				timerStartOffset = -5,
-				uuid = "6571e195-6557-05c8-80b5-031f878b2b68",
-				version = 2,
-			},
-			inheritedIndex = 4,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16471,
-							conditions = 
-							{
-								
-								{
-									"142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-									true,
-								},
-								
-								{
-									"322dd20f-009d-0bff-941f-f877ce997638",
-									true,
-								},
-								
-								{
-									"e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							uuid = "32970969-7f85-6bc8-90e1-4f30e8ce8093",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16471,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 14,
-							jobIDList = 
-							{
-								32,
-							},
-							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffID = 1457,
-							buffIDList = 
-							{
-								1457,
-								1362,
-								1839,
-							},
-							category = "Self",
-							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
-						},
-						inheritedIndex = 3,
-					},
-				},
-				mechanicTime = 49.5,
-				name = "Dark Missinary",
-				timeRange = true,
-				timelineIndex = 9,
-				timerOffset = -10,
-				timerStartOffset = -5,
-				uuid = "715e9532-4bba-b907-9d37-c2c9f80e265f",
-				version = 2,
-			},
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7388,
-							conditions = 
-							{
-								
-								{
-									"c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-									true,
-								},
-								
-								{
-									"cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-									true,
-								},
-								
-								{
-									"3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							uuid = "83ae2ac2-4e1e-673e-befc-12d5802ce1cd",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7388,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 14,
-							jobIDList = 
-							{
-								21,
-							},
-							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffID = 1457,
-							buffIDList = 
-							{
-								1362,
-								1839,
-								1894,
-							},
-							category = "Self",
-							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
-						},
-						inheritedIndex = 3,
-					},
-				},
-				mechanicTime = 49.5,
-				name = "Shake it off",
-				timeRange = true,
-				timelineIndex = 9,
-				timerStartOffset = -5,
-				uuid = "b95b8583-d7b5-5482-a95e-efdc86454350",
-				version = 2,
-			},
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7535,
-							conditions = 
-							{
-								
-								{
-									"5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-									true,
-								},
-								
-								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Current Target",
-							uuid = "c9c9cc18-aa2e-c48a-bebe-6ab6f4e7c114",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							buffCheckType = 2,
-							buffID = 1193,
-							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							comparator = 2,
-							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
-							version = 2,
-						},
-						inheritedIndex = 2,
-					},
-				},
-				mechanicTime = 49.5,
-				name = "Reprisal",
-				randomOffset = -2,
-				timeRange = true,
-				timelineIndex = 9,
-				timerOffset = -3,
-				timerStartOffset = -2,
-				uuid = "9a076ef1-a36f-a490-8c02-50179d6545a5",
+				uuid = "1ec34ad2-c3d3-347f-91cb-39efe8f4c6db",
 				version = 2,
 			},
 		},
@@ -3591,7 +3225,7 @@ local tbl =
 			inheritedIndex = 8,
 		},
 	},
-	[35] = 
+	[37] = 
 	{
 		
 		{
@@ -3676,13 +3310,13 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 157,
+				mechanicTime = 162.4,
 				name = "Veil",
 				timeRange = true,
-				timelineIndex = 35,
+				timelineIndex = 37,
 				timerOffset = -10,
 				timerStartOffset = -5,
-				uuid = "2a8ba8f1-61ef-3015-b706-234db5587399",
+				uuid = "f3ffe675-a3cb-1a9b-bcfa-d138c98eb2b0",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -3769,12 +3403,12 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 157,
+				mechanicTime = 162.4,
 				name = "HoL",
 				timeRange = true,
-				timelineIndex = 35,
+				timelineIndex = 37,
 				timerStartOffset = -5,
-				uuid = "3d362480-9937-c8e7-bbb0-0e710eafa1a8",
+				uuid = "055688c1-f10d-18ba-8630-204553b795b0",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -3862,13 +3496,13 @@ local tbl =
 						inheritedIndex = 3,
 					},
 				},
-				mechanicTime = 157,
+				mechanicTime = 162.4,
 				name = "Dark Missinary",
 				timeRange = true,
-				timelineIndex = 35,
+				timelineIndex = 37,
 				timerOffset = -10,
 				timerStartOffset = -5,
-				uuid = "00428706-13b5-bbc7-9b63-c7b09604e120",
+				uuid = "a700536e-9cc4-46ae-b067-2ac8602976f3",
 				version = 2,
 			},
 		},
@@ -3955,12 +3589,12 @@ local tbl =
 						inheritedIndex = 3,
 					},
 				},
-				mechanicTime = 157,
+				mechanicTime = 162.4,
 				name = "Shake it off",
 				timeRange = true,
-				timelineIndex = 35,
+				timelineIndex = 37,
 				timerStartOffset = -5,
-				uuid = "c8323d3f-1d92-af7e-8b3f-490c60ec5d80",
+				uuid = "5b9641b3-b8a0-8f93-85e2-4725d69f3c5f",
 				version = 2,
 			},
 		},
@@ -4023,14 +3657,14 @@ local tbl =
 						inheritedIndex = 2,
 					},
 				},
-				mechanicTime = 157,
+				mechanicTime = 162.4,
 				name = "Reprisal",
 				randomOffset = -2,
 				timeRange = true,
-				timelineIndex = 35,
+				timelineIndex = 37,
 				timerOffset = -3,
 				timerStartOffset = -2,
-				uuid = "c367de55-0d53-0b0d-b485-0a03ff5c3189",
+				uuid = "d54809e0-8176-5a8e-8021-6aecac26f45d",
 				version = 2,
 			},
 		},
@@ -4923,7 +4557,7 @@ local tbl =
 			},
 		},
 	},
-	[60] = 
+	[62] = 
 	{
 		
 		{
@@ -5008,13 +4642,13 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 360.5,
+				mechanicTime = 365.9,
 				name = "Veil",
 				timeRange = true,
-				timelineIndex = 60,
+				timelineIndex = 62,
 				timerOffset = -10,
 				timerStartOffset = -5,
-				uuid = "c7a0f9fe-4ff0-dbe8-996d-3fbf31d08266",
+				uuid = "6f62279a-7882-1de1-8ade-c04e533897a9",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -5101,12 +4735,12 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 360.5,
+				mechanicTime = 365.9,
 				name = "HoL",
 				timeRange = true,
-				timelineIndex = 60,
+				timelineIndex = 62,
 				timerStartOffset = -5,
-				uuid = "47c0cf67-a7ca-b4e1-9127-5c85e109ff37",
+				uuid = "53b5caca-20a1-8ff0-a5e9-33b85a63b551",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -5194,13 +4828,13 @@ local tbl =
 						inheritedIndex = 3,
 					},
 				},
-				mechanicTime = 360.5,
+				mechanicTime = 365.9,
 				name = "Dark Missinary",
 				timeRange = true,
-				timelineIndex = 60,
+				timelineIndex = 62,
 				timerOffset = -10,
 				timerStartOffset = -5,
-				uuid = "0ca62e85-f45a-8602-b37f-c65404141d65",
+				uuid = "a2cd4952-eb38-f6e0-a3dd-a56dd4227479",
 				version = 2,
 			},
 		},
@@ -5287,12 +4921,12 @@ local tbl =
 						inheritedIndex = 3,
 					},
 				},
-				mechanicTime = 360.5,
+				mechanicTime = 365.9,
 				name = "Shake it off",
 				timeRange = true,
-				timelineIndex = 60,
+				timelineIndex = 62,
 				timerStartOffset = -5,
-				uuid = "9ae16b72-4d29-cedf-940a-b278b7ea48d0",
+				uuid = "bd6413f2-ea7f-e671-8f35-3731bd1ae890",
 				version = 2,
 			},
 		},
@@ -5355,14 +4989,14 @@ local tbl =
 						inheritedIndex = 2,
 					},
 				},
-				mechanicTime = 360.5,
+				mechanicTime = 365.9,
 				name = "Reprisal",
 				randomOffset = -2,
 				timeRange = true,
-				timelineIndex = 60,
+				timelineIndex = 62,
 				timerOffset = -3,
 				timerStartOffset = -2,
-				uuid = "9fcfb52b-0917-e51c-b71b-cfaa8f7ca34f",
+				uuid = "ae35cf95-bba7-44b5-97c4-a9cd0dc023c9",
 				version = 2,
 			},
 		},
