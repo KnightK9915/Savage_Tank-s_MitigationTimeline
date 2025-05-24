@@ -2411,6 +2411,193 @@ local tbl =
 			inheritedIndex = 7,
 		},
 	},
+	[87] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"2ba7d2e4-c389-fd61-b35c-5aec45cd04f3",
+									true,
+								},
+								
+								{
+									"b0749ba0-d56d-2d7f-bf44-55f8b1fd0439",
+									true,
+								},
+								
+								{
+									"d7e18023-4fd0-c3f5-97d9-b0d0b47464cf",
+									true,
+								},
+								
+								{
+									"913f79bb-d1bc-ed4f-94ed-ca70544f4716",
+									true,
+								},
+								
+								{
+									"4b550c5a-db1b-03cc-a41f-f7225d4498cd",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 13822,
+							uuid = "abb5b37d-bcdf-3e66-a7f5-fb0f4d2163fe",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"2ba7d2e4-c389-fd61-b35c-5aec45cd04f3",
+									true,
+								},
+								
+								{
+									"c0b320b0-34d7-3810-8990-1f84470ef666",
+									true,
+								},
+								
+								{
+									"41a8baf5-e5cd-8aa0-962f-e24a96d875be",
+									true,
+								},
+								
+								{
+									"913f79bb-d1bc-ed4f-94ed-ca70544f4716",
+									true,
+								},
+								
+								{
+									"4b550c5a-db1b-03cc-a41f-f7225d4498cd",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5c2d56e1-c2f4-d416-b67f-da2405bf5b72",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 23,
+							uuid = "2ba7d2e4-c389-fd61-b35c-5aec45cd04f3",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetType = "Other Tank",
+							partyTargetType = "Event Entity",
+							uuid = "b0749ba0-d56d-2d7f-bf44-55f8b1fd0439",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetType = "Self",
+							partyTargetType = "Event Entity",
+							uuid = "c0b320b0-34d7-3810-8990-1f84470ef666",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99.999000549316,
+							uuid = "d7e18023-4fd0-c3f5-97d9-b0d0b47464cf",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 100,
+							uuid = "41a8baf5-e5cd-8aa0-962f-e24a96d875be",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "913f79bb-d1bc-ed4f-94ed-ca70544f4716",
+							version = 2,
+						},
+						inheritedIndex = 6,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "4b550c5a-db1b-03cc-a41f-f7225d4498cd",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				eventType = 4,
+				mechanicTime = 606.4,
+				name = "Sheltron on marked",
+				timeRange = true,
+				timelineIndex = 87,
+				timerEndOffset = 3,
+				timerStartOffset = -3,
+				uuid = "c76af1f9-eada-bac1-83ae-48ac1553de3f",
+				version = 2,
+			},
+		},
+	},
 	[105] = 
 	{
 		
