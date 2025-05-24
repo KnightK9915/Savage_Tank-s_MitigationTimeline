@@ -1,6 +1,6 @@
 local tbl = 
 {
-	[6] = 
+	[8] = 
 	{
 		
 		{
@@ -43,13 +43,13 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 37.9,
+				mechanicTime = 43.3,
 				name = "TBN (25)",
 				timeRange = true,
-				timelineIndex = 6,
+				timelineIndex = 8,
 				timerOffset = -4,
 				timerStartOffset = -2,
-				uuid = "ec49dfae-82af-c9f0-9c5a-6415a9460715",
+				uuid = "fc7efb5c-d026-8731-92fa-a8bb30d1fd72",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -96,13 +96,13 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 37.9,
+				mechanicTime = 43.3,
 				name = "Rampart (20)",
 				timeRange = true,
-				timelineIndex = 6,
+				timelineIndex = 8,
 				timerOffset = -15,
 				timerStartOffset = -10,
-				uuid = "9f42a7bb-b2cb-7c22-8678-65dcabf07934",
+				uuid = "5ea8488e-5dc9-fb90-8cc4-ec3f3bd3955a",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -149,13 +149,13 @@ local tbl =
 					},
 				},
 				enabled = false,
-				mechanicTime = 37.9,
+				mechanicTime = 43.3,
 				name = "Vigil (40)",
 				timeRange = true,
-				timelineIndex = 6,
+				timelineIndex = 8,
 				timerOffset = -5,
 				timerStartOffset = -5,
-				uuid = "6d418d99-964c-c9f0-8162-d3b275e2555b",
+				uuid = "13696edf-f04f-86f2-a648-77699bd1fb3b",
 				version = 2,
 			},
 			inheritedIndex = 3,
@@ -182,14 +182,14 @@ local tbl =
 				{
 				},
 				enabled = false,
-				mechanicTime = 37.9,
+				mechanicTime = 43.3,
 				name = "Oblation (10)",
 				randomOffset = -1,
 				timeRange = true,
-				timelineIndex = 6,
+				timelineIndex = 8,
 				timerOffset = -3,
 				timerStartOffset = -8,
-				uuid = "9408f590-8f23-bbaa-9e02-3bff8c2622d5",
+				uuid = "1c3e5407-a4a4-2186-b875-1538cab4ae7a",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -253,13 +253,13 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 37.9,
+				mechanicTime = 43.3,
 				name = "Dark Mind (M20)",
 				timeRange = true,
-				timelineIndex = 6,
+				timelineIndex = 8,
 				timerOffset = -5,
 				timerStartOffset = -4,
-				uuid = "3670090b-9a59-fe4b-940f-9e4288c63fa9",
+				uuid = "bbacf284-320d-9943-8c03-4250a202a20e",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -274,10 +274,10 @@ local tbl =
 				conditions = 
 				{
 				},
-				mechanicTime = 37.9,
+				mechanicTime = 43.3,
 				name = "_________________",
-				timelineIndex = 6,
-				uuid = "39835052-3a7f-7310-8d68-5db4da1c8300",
+				timelineIndex = 8,
+				uuid = "fa504821-912e-540b-930a-361642a642d0",
 				version = 2,
 			},
 			inheritedIndex = 6,
@@ -325,12 +325,12 @@ local tbl =
 					},
 				},
 				enabled = false,
-				mechanicTime = 37.9,
+				mechanicTime = 43.3,
 				name = "Living Dead (Invinsible)",
 				timeRange = true,
-				timelineIndex = 6,
+				timelineIndex = 8,
 				timerStartOffset = -1.5,
-				uuid = "9df9ab37-4f71-7e56-a899-7b022c7be0c7",
+				uuid = "4a484d81-c0b0-c66e-9118-52d042d9f7b1",
 				version = 2,
 			},
 			inheritedIndex = 7,
@@ -358,13 +358,13 @@ local tbl =
 				conditions = 
 				{
 				},
-				mechanicTime = 37.9,
+				mechanicTime = 43.3,
 				name = "Oblation ST (10)",
 				randomOffset = 2,
 				timeRange = true,
-				timelineIndex = 6,
+				timelineIndex = 8,
 				timerStartOffset = -8,
-				uuid = "991c99ad-1a61-bfc9-9b0b-cabf496d0ba0",
+				uuid = "1b7ca137-21b7-5e75-a88e-87171bd4af3b",
 				version = 2,
 			},
 			inheritedIndex = 8,
@@ -412,13 +412,13 @@ local tbl =
 					},
 				},
 				enabled = false,
-				mechanicTime = 37.9,
+				mechanicTime = 43.3,
 				name = "TBN ST (25)",
 				timeRange = true,
-				timelineIndex = 6,
+				timelineIndex = 8,
 				timerOffset = -4,
 				timerStartOffset = -2,
-				uuid = "264698ac-b981-91b7-93a7-f55554b56a6f",
+				uuid = "a13d6f26-dc05-b7af-86d0-3ab1e80a6d86",
 				version = 2,
 			},
 			inheritedIndex = 9,
@@ -874,6 +874,11 @@ local tbl =
 									"696a2098-0bd4-0815-a408-d036117b6973",
 									true,
 								},
+								
+								{
+									"2270e95e-dc87-109e-bfc4-2ff846822af4",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -907,6 +912,22 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								82,
+								1836,
+							},
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "2270e95e-dc87-109e-bfc4-2ff846822af4",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 119.9,
 				name = "TBN ST (25)",
@@ -914,7 +935,7 @@ local tbl =
 				timelineIndex = 25,
 				timerOffset = -4,
 				timerStartOffset = -2,
-				uuid = "111cfdd3-5603-ecbd-baef-f3c4a64e531f",
+				uuid = "e9fe8334-c2cd-842e-b695-fcecabc7c632",
 				version = 2,
 			},
 			inheritedIndex = 8,
@@ -934,7 +955,12 @@ local tbl =
 							{
 								
 								{
-									"639f9d9b-d32d-0265-b0ac-07daa610d3fb",
+									"5853c82b-88a7-2561-9bbc-985638a6f368",
+									true,
+								},
+								
+								{
+									"8f591687-4c92-16f5-aacc-9ed99573e369",
 									true,
 								},
 							},
@@ -955,7 +981,23 @@ local tbl =
 						{
 							category = "Lua",
 							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
-							uuid = "639f9d9b-d32d-0265-b0ac-07daa610d3fb",
+							uuid = "5853c82b-88a7-2561-9bbc-985638a6f368",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								82,
+								1836,
+							},
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "8f591687-4c92-16f5-aacc-9ed99573e369",
 							version = 2,
 						},
 					},
@@ -966,13 +1008,13 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 25,
 				timerStartOffset = -8,
-				uuid = "cea91f0c-0e16-b916-b503-bbee48641051",
+				uuid = "149a270f-3429-298b-b23a-eec2ce4d1270",
 				version = 2,
 			},
 			inheritedIndex = 9,
 		},
 	},
-	[35] = 
+	[37] = 
 	{
 		
 		{
@@ -1015,13 +1057,13 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 157,
+				mechanicTime = 162.4,
 				name = "TBN (25)",
 				timeRange = true,
-				timelineIndex = 35,
+				timelineIndex = 37,
 				timerOffset = -4,
 				timerStartOffset = -2,
-				uuid = "45a84326-ccaa-d628-923a-ca61f5a53eb1",
+				uuid = "6a659f67-ec33-7d2c-a987-2e4fb75b3ffb",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -1068,13 +1110,13 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 157,
+				mechanicTime = 162.4,
 				name = "Rampart (20)",
 				timeRange = true,
-				timelineIndex = 35,
+				timelineIndex = 37,
 				timerOffset = -15,
 				timerStartOffset = -10,
-				uuid = "4c00f904-893a-4cba-b644-847ef8cc4d07",
+				uuid = "6a071d30-4de5-809e-ba5e-cb2f47e12eef",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -1121,13 +1163,13 @@ local tbl =
 					},
 				},
 				enabled = false,
-				mechanicTime = 157,
+				mechanicTime = 162.4,
 				name = "Vigil (40)",
 				timeRange = true,
-				timelineIndex = 35,
+				timelineIndex = 37,
 				timerOffset = -5,
 				timerStartOffset = -5,
-				uuid = "a8dbb29a-e6bb-4457-ba89-1d4311bce8d8",
+				uuid = "88ff3ca2-5440-c61d-b743-a2e173d3197b",
 				version = 2,
 			},
 			inheritedIndex = 3,
@@ -1154,14 +1196,14 @@ local tbl =
 				{
 				},
 				enabled = false,
-				mechanicTime = 157,
+				mechanicTime = 162.4,
 				name = "Oblation (10)",
 				randomOffset = -1,
 				timeRange = true,
-				timelineIndex = 35,
+				timelineIndex = 37,
 				timerOffset = -3,
 				timerStartOffset = -8,
-				uuid = "7039db19-9ba2-7a89-8b6a-3d67f0416d3f",
+				uuid = "c7a97c88-a446-67f0-b535-405bdd14e157",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -1225,13 +1267,13 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 157,
+				mechanicTime = 162.4,
 				name = "Dark Mind (M20)",
 				timeRange = true,
-				timelineIndex = 35,
+				timelineIndex = 37,
 				timerOffset = -5,
 				timerStartOffset = -4,
-				uuid = "c80a8b09-c1f1-df9f-8a22-0e6f6fc92f1e",
+				uuid = "accb91ef-554f-44f2-94c9-f1ed8eb6f553",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -1246,10 +1288,10 @@ local tbl =
 				conditions = 
 				{
 				},
-				mechanicTime = 157,
+				mechanicTime = 162.4,
 				name = "_________________",
-				timelineIndex = 35,
-				uuid = "d5a10be3-86e9-ea0a-b7ad-2273faeaa943",
+				timelineIndex = 37,
+				uuid = "4adfcc97-9fdc-894e-90d2-323b14750359",
 				version = 2,
 			},
 			inheritedIndex = 6,
@@ -1297,12 +1339,12 @@ local tbl =
 					},
 				},
 				enabled = false,
-				mechanicTime = 157,
+				mechanicTime = 162.4,
 				name = "Living Dead (Invinsible)",
 				timeRange = true,
-				timelineIndex = 35,
+				timelineIndex = 37,
 				timerStartOffset = -1.5,
-				uuid = "080591fe-a282-44b8-a39b-ccc081e902ac",
+				uuid = "84e4e9fe-a3b6-00bb-abe3-e07461535b4b",
 				version = 2,
 			},
 			inheritedIndex = 7,
@@ -1330,13 +1372,13 @@ local tbl =
 				conditions = 
 				{
 				},
-				mechanicTime = 157,
+				mechanicTime = 162.4,
 				name = "Oblation ST (10)",
 				randomOffset = 2,
 				timeRange = true,
-				timelineIndex = 35,
+				timelineIndex = 37,
 				timerStartOffset = -8,
-				uuid = "9a56a115-7221-d275-bb8f-f35e241d359c",
+				uuid = "6415fd35-7c92-88a6-bf08-3334eb694bbe",
 				version = 2,
 			},
 			inheritedIndex = 8,
@@ -1384,13 +1426,13 @@ local tbl =
 					},
 				},
 				enabled = false,
-				mechanicTime = 157,
+				mechanicTime = 162.4,
 				name = "TBN ST (25)",
 				timeRange = true,
-				timelineIndex = 35,
+				timelineIndex = 37,
 				timerOffset = -4,
 				timerStartOffset = -2,
-				uuid = "aeeb95f0-0c3a-c532-872f-833ecb2e1338",
+				uuid = "4c13c663-84a6-cfce-a502-d70882494e55",
 				version = 2,
 			},
 			inheritedIndex = 9,
@@ -1424,7 +1466,7 @@ local tbl =
 								},
 								
 								{
-									"03980021-36a7-5dae-971a-60a06c11808a",
+									"620011ee-65aa-f27d-b6a4-f227caea7758",
 									true,
 								},
 							},
@@ -1470,7 +1512,7 @@ local tbl =
 							conditionType = 3,
 							mpType = 2,
 							mpValue = 3000,
-							uuid = "03980021-36a7-5dae-971a-60a06c11808a",
+							uuid = "620011ee-65aa-f27d-b6a4-f227caea7758",
 							version = 2,
 						},
 					},
@@ -1483,12 +1525,13 @@ local tbl =
 				timelineIndex = 40,
 				timerEndOffset = 70.099998474121,
 				timerStartOffset = -2,
-				uuid = "81e1e080-9368-fa7e-9c07-e07e848ac4fb",
+				uuid = "2accb71a-96c3-22c8-816b-8a317b66f0b6",
 				version = 2,
 			},
+			inheritedIndex = 4,
 		},
 	},
-	[60] = 
+	[62] = 
 	{
 		
 		{
@@ -1531,13 +1574,13 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 360.5,
+				mechanicTime = 365.9,
 				name = "TBN (25)",
 				timeRange = true,
-				timelineIndex = 60,
+				timelineIndex = 62,
 				timerOffset = -4,
 				timerStartOffset = -2,
-				uuid = "f5c6b089-c7cc-f682-9f7c-c438d8908764",
+				uuid = "4bfc976b-fe88-4c20-b3ca-966feefcbdf5",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -1584,13 +1627,13 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 360.5,
+				mechanicTime = 365.9,
 				name = "Rampart (20)",
 				timeRange = true,
-				timelineIndex = 60,
+				timelineIndex = 62,
 				timerOffset = -15,
 				timerStartOffset = -10,
-				uuid = "3c0ac028-1a5f-8198-99e8-788b8c564b52",
+				uuid = "4383bd30-d1ef-c3dd-8d40-2ecee2d056aa",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -1637,13 +1680,13 @@ local tbl =
 					},
 				},
 				enabled = false,
-				mechanicTime = 360.5,
+				mechanicTime = 365.9,
 				name = "Vigil (40)",
 				timeRange = true,
-				timelineIndex = 60,
+				timelineIndex = 62,
 				timerOffset = -5,
 				timerStartOffset = -5,
-				uuid = "b624fa2f-8a65-1687-bb77-3c77c0e1b67a",
+				uuid = "b97e4bc3-79c9-fdaf-84c3-e3aae3a23662",
 				version = 2,
 			},
 			inheritedIndex = 3,
@@ -1670,14 +1713,14 @@ local tbl =
 				{
 				},
 				enabled = false,
-				mechanicTime = 360.5,
+				mechanicTime = 365.9,
 				name = "Oblation (10)",
 				randomOffset = -1,
 				timeRange = true,
-				timelineIndex = 60,
+				timelineIndex = 62,
 				timerOffset = -3,
 				timerStartOffset = -8,
-				uuid = "0ec41081-eaf5-5bbc-83a1-2ecfdc649a9b",
+				uuid = "1e906e7a-a5f9-d7b1-b158-98e3cac55a3c",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -1741,13 +1784,13 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 360.5,
+				mechanicTime = 365.9,
 				name = "Dark Mind (M20)",
 				timeRange = true,
-				timelineIndex = 60,
+				timelineIndex = 62,
 				timerOffset = -5,
 				timerStartOffset = -4,
-				uuid = "79873a34-9c43-45ed-b960-e91ccfa02737",
+				uuid = "57961ddb-979a-7ba1-8594-4fbfd830e694",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -1762,10 +1805,10 @@ local tbl =
 				conditions = 
 				{
 				},
-				mechanicTime = 360.5,
+				mechanicTime = 365.9,
 				name = "_________________",
-				timelineIndex = 60,
-				uuid = "e4a34d00-4fd2-ed49-8e20-cc106b46c7d7",
+				timelineIndex = 62,
+				uuid = "c63e33a0-fcab-6fc4-a260-f1120fd3e4ab",
 				version = 2,
 			},
 			inheritedIndex = 6,
@@ -1813,12 +1856,12 @@ local tbl =
 					},
 				},
 				enabled = false,
-				mechanicTime = 360.5,
+				mechanicTime = 365.9,
 				name = "Living Dead (Invinsible)",
 				timeRange = true,
-				timelineIndex = 60,
+				timelineIndex = 62,
 				timerStartOffset = -1.5,
-				uuid = "a7098a4c-83bc-ac2d-a5be-083e74278472",
+				uuid = "f8d15888-637b-0fc2-82e2-f81dc800d5b3",
 				version = 2,
 			},
 			inheritedIndex = 7,
@@ -1846,13 +1889,13 @@ local tbl =
 				conditions = 
 				{
 				},
-				mechanicTime = 360.5,
+				mechanicTime = 365.9,
 				name = "Oblation ST (10)",
 				randomOffset = 2,
 				timeRange = true,
-				timelineIndex = 60,
+				timelineIndex = 62,
 				timerStartOffset = -8,
-				uuid = "118fb24c-3f07-4930-a5b2-506dcbb956f2",
+				uuid = "9357d8c2-b6fc-cb21-a81d-89b53485e441",
 				version = 2,
 			},
 			inheritedIndex = 8,
@@ -1900,13 +1943,13 @@ local tbl =
 					},
 				},
 				enabled = false,
-				mechanicTime = 360.5,
+				mechanicTime = 365.9,
 				name = "TBN ST (25)",
 				timeRange = true,
-				timelineIndex = 60,
+				timelineIndex = 62,
 				timerOffset = -4,
 				timerStartOffset = -2,
-				uuid = "ebac4474-8b0b-648f-850f-6a5858c2bbf1",
+				uuid = "d763d418-9a00-418d-89a8-285a88fe6184",
 				version = 2,
 			},
 			inheritedIndex = 9,
@@ -2364,6 +2407,11 @@ local tbl =
 									"04c40f1b-60c6-1be6-a3c6-d77ee1a9ef7e",
 									true,
 								},
+								
+								{
+									"84175180-badb-f1ab-9dd5-8b7a7c06f62b",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -2397,6 +2445,22 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								82,
+								1836,
+							},
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "84175180-badb-f1ab-9dd5-8b7a7c06f62b",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 379.4,
 				name = "TBN ST (25)",
@@ -2404,7 +2468,7 @@ local tbl =
 				timelineIndex = 65,
 				timerOffset = -4,
 				timerStartOffset = -2,
-				uuid = "5ceb6d1c-7a3a-3106-85f4-d9e7ca8df654",
+				uuid = "a4388e28-15b2-38e2-bd0d-6d4f07bd7820",
 				version = 2,
 			},
 			inheritedIndex = 8,
@@ -2425,6 +2489,11 @@ local tbl =
 								
 								{
 									"79f8600d-3645-7dd6-aede-c2699577ca6f",
+									true,
+								},
+								
+								{
+									"709f6db1-a448-babd-bd51-86bafdc4142c",
 									true,
 								},
 							},
@@ -2449,6 +2518,22 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								82,
+								1836,
+							},
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "709f6db1-a448-babd-bd51-86bafdc4142c",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 379.4,
 				name = "Oblation ST (10)",
@@ -2456,10 +2541,10 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 65,
 				timerStartOffset = -8,
-				uuid = "b846a6c3-fb4a-8fb9-948e-5a94c03038b4",
+				uuid = "7085dbab-95f8-3556-aa1a-50295daa06b4",
 				version = 2,
 			},
-			inheritedIndex = 10,
+			inheritedIndex = 9,
 		},
 	},
 	[82] = 
@@ -2733,11 +2818,6 @@ local tbl =
 							{
 								
 								{
-									"85632b1d-acad-d58b-b26f-ede352e4c489",
-									true,
-								},
-								
-								{
 									"332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
 									true,
 								},
@@ -2756,19 +2836,6 @@ local tbl =
 				},
 				conditions = 
 				{
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventArgType = 2,
-							eventSpellName = "ディープカット",
-							uuid = "85632b1d-acad-d58b-b26f-ede352e4c489",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
 					
 					{
 						data = 
@@ -3194,7 +3261,7 @@ local tbl =
 				timelineIndex = 87,
 				timerEndOffset = 3,
 				timerStartOffset = -3,
-				uuid = "e33a1c6f-2e32-039b-ad5e-7e794fbbc9bb",
+				uuid = "03a5a5be-14ca-d645-99cd-0718ca7b1b10",
 				version = 2,
 			},
 		},
@@ -3472,11 +3539,6 @@ local tbl =
 							{
 								
 								{
-									"85632b1d-acad-d58b-b26f-ede352e4c489",
-									true,
-								},
-								
-								{
 									"332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
 									true,
 								},
@@ -3500,19 +3562,6 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventArgType = 2,
-							eventSpellName = "ディープカット",
-							uuid = "85632b1d-acad-d58b-b26f-ede352e4c489",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
 							actionID = 3634,
 							category = "Self",
 							comparator = 2,
@@ -3530,6 +3579,7 @@ local tbl =
 							uuid = "c12bbf79-87d4-beaf-96fd-0e24527e4d5d",
 							version = 2,
 						},
+						inheritedIndex = 3,
 					},
 				},
 				enabled = false,
@@ -3739,7 +3789,6 @@ local tbl =
 						},
 					},
 				},
-				enabled = false,
 				mechanicTime = 733.9,
 				name = "TBN ST (25)",
 				timeRange = true,
@@ -3754,6 +3803,89 @@ local tbl =
 	},
 	[114] = 
 	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"ecf18397-b1d0-24ad-b17b-83fb48319c0d",
+									true,
+								},
+								
+								{
+									"c83b6158-aa8e-e1de-9ad6-998c6da68061",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
+							uuid = "ecf18397-b1d0-24ad-b17b-83fb48319c0d",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "c83b6158-aa8e-e1de-9ad6-998c6da68061",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 829.2,
+				name = "TBN (25)",
+				timeRange = true,
+				timelineIndex = 114,
+				timerOffset = -4,
+				timerStartOffset = -5,
+				uuid = "a6ed96ff-edb7-4cf0-8e50-ae63d9a037a8",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
 		
 		{
 			data = 
@@ -3836,6 +3968,9 @@ local tbl =
 			},
 			inheritedIndex = 7,
 		},
+	},
+	[116] = 
+	{
 		
 		{
 			data = 
@@ -3908,20 +4043,17 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 829.2,
+				mechanicTime = 848.7,
 				name = "TBN (25)",
 				timeRange = true,
-				timelineIndex = 114,
+				timelineIndex = 116,
 				timerOffset = -4,
 				timerStartOffset = -5,
-				uuid = "fd5fbb27-ecf8-43b2-8654-86ec26f14064",
+				uuid = "72f57400-b1d5-6359-82ba-f2db1f0232ff",
 				version = 2,
 			},
-			inheritedIndex = 2,
+			inheritedIndex = 1,
 		},
-	},
-	[116] = 
-	{
 		
 		{
 			data = 
@@ -4004,89 +4136,6 @@ local tbl =
 			},
 			inheritedIndex = 7,
 		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7393,
-							conditions = 
-							{
-								
-								{
-									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
-									true,
-								},
-								
-								{
-									"716b11b0-7f31-2dd3-b3b7-b6b31a5a310a",
-									true,
-								},
-								
-								{
-									"c83b6158-aa8e-e1de-9ad6-998c6da68061",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 3,
-							mpType = 2,
-							mpValue = 3000,
-							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
-							uuid = "716b11b0-7f31-2dd3-b3b7-b6b31a5a310a",
-							version = 2,
-						},
-						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "c83b6158-aa8e-e1de-9ad6-998c6da68061",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 848.7,
-				name = "TBN (25)",
-				timeRange = true,
-				timelineIndex = 116,
-				timerOffset = -4,
-				timerStartOffset = -5,
-				uuid = "f41031f5-3bad-b1b1-ac18-adf75005a2ed",
-				version = 2,
-			},
-			inheritedIndex = 2,
-		},
 	},
 	[118] = 
 	{
@@ -4152,7 +4201,7 @@ local tbl =
 				timelineIndex = 118,
 				timerOffset = -4,
 				timerStartOffset = -2,
-				uuid = "a6a06250-1ef2-0a71-8ea7-8a3833f6c190",
+				uuid = "c4c86ecc-3cee-4246-abe6-fc527aaaea22",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -4221,7 +4270,7 @@ local tbl =
 				timelineIndex = 118,
 				timerOffset = -15,
 				timerStartOffset = -10,
-				uuid = "31318df8-05c4-e52c-863b-bc3ca3cc85cd",
+				uuid = "36353883-cec7-268e-9bc4-d0c8c43733fe",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -4289,7 +4338,7 @@ local tbl =
 				timelineIndex = 118,
 				timerOffset = -5,
 				timerStartOffset = -5,
-				uuid = "866fe8a7-2d41-9bf5-ac15-437920a0fa45",
+				uuid = "f1bfaab0-623b-eb8a-8423-f859d8fd8ad9",
 				version = 2,
 			},
 			inheritedIndex = 3,
@@ -4340,7 +4389,7 @@ local tbl =
 				timelineIndex = 118,
 				timerOffset = -3,
 				timerStartOffset = -8,
-				uuid = "95374baf-8abf-f7e3-9ca3-db96e2ae8196",
+				uuid = "74b9bc6a-26d9-ec76-beac-939f77100828",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -4426,7 +4475,7 @@ local tbl =
 				timelineIndex = 118,
 				timerOffset = -5,
 				timerStartOffset = -4,
-				uuid = "b7881dcf-1fae-4c07-89ec-9ff0eca9b45e",
+				uuid = "b115cd96-66d3-1de3-954e-c1d4cb60f1d0",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -4444,7 +4493,7 @@ local tbl =
 				mechanicTime = 868.2,
 				name = "_________________",
 				timelineIndex = 118,
-				uuid = "f84dc4e5-16b7-adf1-b687-c747465558b5",
+				uuid = "08d1cff3-7608-371d-8472-72ec29c30135",
 				version = 2,
 			},
 			inheritedIndex = 6,
@@ -4513,7 +4562,7 @@ local tbl =
 				timelineIndex = 118,
 				timerOffset = -4,
 				timerStartOffset = -2,
-				uuid = "2025c5a9-7a65-28ca-bd63-4aa452fa59fc",
+				uuid = "97f00391-2f2f-9a1a-beb6-c9af18d1a107",
 				version = 2,
 			},
 			inheritedIndex = 9,
@@ -4565,7 +4614,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 118,
 				timerStartOffset = -8,
-				uuid = "aee234be-aff3-6f96-84e1-960588ff9e23",
+				uuid = "cd0f3fed-11ea-c6c0-ba16-883504db7f9a",
 				version = 2,
 			},
 			inheritedIndex = 8,
