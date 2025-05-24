@@ -1469,6 +1469,11 @@ local tbl =
 									"620011ee-65aa-f27d-b6a4-f227caea7758",
 									true,
 								},
+								
+								{
+									"650ab3b1-ccf8-aed3-ad24-4eef4e368f25",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -1516,6 +1521,26 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2682,
+								1178,
+								746,
+								1191,
+								3835,
+								810,
+							},
+							category = "Self",
+							uuid = "650ab3b1-ccf8-aed3-ad24-4eef4e368f25",
+							version = 2,
+						},
+						inheritedIndex = 4,
+					},
 				},
 				eventType = 4,
 				loop = true,
@@ -1525,7 +1550,282 @@ local tbl =
 				timelineIndex = 40,
 				timerEndOffset = 70.099998474121,
 				timerStartOffset = -2,
-				uuid = "2accb71a-96c3-22c8-816b-8a317b66f0b6",
+				uuid = "c9792e2e-07d0-6ee1-ac7e-716fe1d2d9d4",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36927,
+							conditions = 
+							{
+								
+								{
+									"7579d3a8-e511-96db-85c5-d7639160889d",
+									true,
+								},
+								
+								{
+									"1564c060-c704-2247-905e-3de563fc7549",
+									true,
+								},
+								
+								{
+									"5cf17619-127d-b210-88cb-64658ca76476",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "10a88836-1aee-2730-ae23-3306adfd5729",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 23,
+							uuid = "7579d3a8-e511-96db-85c5-d7639160889d",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetType = "Party",
+							partyTargetType = "Event Entity",
+							uuid = "1564c060-c704-2247-905e-3de563fc7549",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36927,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "5cf17619-127d-b210-88cb-64658ca76476",
+							version = 2,
+						},
+					},
+				},
+				eventType = 4,
+				mechanicTime = 174.5,
+				name = "Vigil (40)",
+				timeRange = true,
+				timelineIndex = 40,
+				timerEndOffset = 15,
+				timerOffset = -5,
+				uuid = "87df4fb7-f1d3-ef67-8237-dae8fb2e378e",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3634,
+							conditions = 
+							{
+								
+								{
+									"9c106c0f-0790-8b52-ae57-3a31e0b7e723",
+									true,
+								},
+								
+								{
+									"0e19fc2c-599b-eeb4-9cc4-976d9a30f004",
+									true,
+								},
+								
+								{
+									"332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "85c81a2a-1fc1-bba8-a315-e5438e54b390",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 23,
+							uuid = "9c106c0f-0790-8b52-ae57-3a31e0b7e723",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetType = "Party",
+							partyTargetType = "Event Entity",
+							uuid = "0e19fc2c-599b-eeb4-9cc4-976d9a30f004",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 3634,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
+							version = 2,
+						},
+					},
+				},
+				eventType = 4,
+				mechanicTime = 174.5,
+				name = "Dark Mind (M20)",
+				timeRange = true,
+				timelineIndex = 40,
+				timerEndOffset = 30,
+				timerOffset = -5,
+				timerStartOffset = 15,
+				uuid = "f7fd8ffc-fde4-58c9-8b57-7d210b309983",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25754,
+							conditions = 
+							{
+								
+								{
+									"90d90f80-a4c7-e84f-b50b-18c39b22f4db",
+									true,
+								},
+								
+								{
+									"f7341ccb-b926-c93f-9dc6-4363fd3ecbd2",
+									true,
+								},
+								
+								{
+									"e29d685a-67c8-bc23-866f-ae8935a41bfa",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 23,
+							uuid = "90d90f80-a4c7-e84f-b50b-18c39b22f4db",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetType = "Party",
+							partyTargetType = "Event Entity",
+							uuid = "f7341ccb-b926-c93f-9dc6-4363fd3ecbd2",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2682,
+								1178,
+								746,
+								1191,
+								3835,
+								810,
+							},
+							category = "Self",
+							uuid = "e29d685a-67c8-bc23-866f-ae8935a41bfa",
+							version = 2,
+						},
+						inheritedIndex = 4,
+					},
+				},
+				eventType = 4,
+				mechanicTime = 174.5,
+				name = "Oblation (10)",
+				randomOffset = -1,
+				timeRange = true,
+				timelineIndex = 40,
+				timerEndOffset = 70.099998474121,
+				timerOffset = -3,
+				timerStartOffset = 2,
+				uuid = "b49c4d85-ecab-b283-96af-ab3518fe80db",
 				version = 2,
 			},
 			inheritedIndex = 4,
