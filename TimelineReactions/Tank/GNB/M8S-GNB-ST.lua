@@ -1131,7 +1131,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 37,
 				timerOffset = -10,
-				timerStartOffset = -10,
+				timerStartOffset = -5,
 				uuid = "70e830fb-10c4-9c74-85e7-97442f2bbc69",
 				version = 2,
 			},
@@ -1238,7 +1238,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 37,
 				timerOffset = -15,
-				timerStartOffset = -10,
+				timerStartOffset = -5,
 				uuid = "b3a4957e-98bc-ece5-83f0-4c776f98a7e8",
 				version = 2,
 			},
@@ -1679,6 +1679,185 @@ local tbl =
 				uuid = "b9973b98-08ba-5768-9caa-f8717203abed",
 				version = 2,
 			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36935,
+							conditions = 
+							{
+								
+								{
+									"4b910db2-ffc9-a6f3-a300-59699e4f8f77",
+									true,
+								},
+								
+								{
+									"294f80f8-6995-0942-a29c-f06fc0352077",
+									true,
+								},
+								
+								{
+									"30f02147-8e47-399f-99c5-279582aa248d",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "d00db0ec-8fe2-c41e-8ee5-1c53101aa3bb",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 23,
+							uuid = "4b910db2-ffc9-a6f3-a300-59699e4f8f77",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetType = "Party",
+							partyTargetType = "Event Entity",
+							uuid = "294f80f8-6995-0942-a29c-f06fc0352077",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36935,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "30f02147-8e47-399f-99c5-279582aa248d",
+							version = 2,
+						},
+					},
+				},
+				eventType = 4,
+				mechanicTime = 174.5,
+				name = "Great Nebula (40)",
+				timeRange = true,
+				timelineIndex = 40,
+				timerEndOffset = 15,
+				uuid = "facfe49e-821d-71aa-b162-705d535f61c8",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16140,
+							conditions = 
+							{
+								
+								{
+									"aa4699c9-0f18-92c6-a594-ffced0dd4706",
+									true,
+								},
+								
+								{
+									"0750db01-40f2-725c-a0ac-b2b28466dc0c",
+									true,
+								},
+								
+								{
+									"b0a6c0ff-c966-c1fe-bedc-2d9d7afd0ff6",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "8e2ebaff-1382-38db-a880-5b374c35c9fd",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 23,
+							uuid = "aa4699c9-0f18-92c6-a594-ffced0dd4706",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetType = "Party",
+							partyTargetType = "Event Entity",
+							uuid = "0750db01-40f2-725c-a0ac-b2b28466dc0c",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16140,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "b0a6c0ff-c966-c1fe-bedc-2d9d7afd0ff6",
+							version = 2,
+						},
+					},
+				},
+				eventType = 4,
+				mechanicTime = 174.5,
+				name = "Camou (10)",
+				timeRange = true,
+				timelineIndex = 40,
+				timerEndOffset = 45,
+				timerOffset = -10,
+				timerStartOffset = 15,
+				uuid = "bef14f63-51ac-1f04-9f8d-7c2e672827d4",
+				version = 2,
+			},
+			inheritedIndex = 6,
 		},
 	},
 	[62] = 
