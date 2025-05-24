@@ -1070,450 +1070,6 @@ local tbl =
 			},
 		},
 	},
-	[11] = 
-	{
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 3540,
-							conditions = 
-							{
-								
-								{
-									"d509fc50-866e-82e0-a683-7f673386a79e",
-									true,
-								},
-								
-								{
-									"28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-									true,
-								},
-								
-								{
-									"a787167c-e665-8709-84d0-298a7dbe954a",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "208d8d0c-038a-0156-ae05-da413fbdfa98",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 3540,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 14,
-							jobIDList = 
-							{
-								19,
-							},
-							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffID = 1457,
-							buffIDList = 
-							{
-								1457,
-								1839,
-								1894,
-							},
-							category = "Self",
-							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 63.1,
-				name = "Veil",
-				timeRange = true,
-				timelineIndex = 11,
-				timerOffset = -10,
-				timerStartOffset = -5,
-				uuid = "024c27a4-7927-c633-8cdc-455210ea8f91",
-				version = 2,
-			},
-			inheritedIndex = 1,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16160,
-							conditions = 
-							{
-								
-								{
-									"a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-									true,
-								},
-								
-								{
-									"115eca71-8e25-2c76-be17-c29c66dcf324",
-									true,
-								},
-								
-								{
-									"a6929435-5dcb-3407-8d89-b38a0596d1ac",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuDRK3_CD",
-							uuid = "dbc99f8f-e1c5-f477-89e0-30fa7efeda14",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16160,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 14,
-							jobIDList = 
-							{
-								37,
-							},
-							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffID = 1457,
-							buffIDList = 
-							{
-								1457,
-								1894,
-								1362,
-							},
-							category = "Self",
-							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 63.1,
-				name = "HoL",
-				timeRange = true,
-				timelineIndex = 11,
-				timerStartOffset = -5,
-				uuid = "a1d16429-2431-20a8-b7f1-5473fdc19b06",
-				version = 2,
-			},
-			inheritedIndex = 4,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16471,
-							conditions = 
-							{
-								
-								{
-									"142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-									true,
-								},
-								
-								{
-									"322dd20f-009d-0bff-941f-f877ce997638",
-									true,
-								},
-								
-								{
-									"e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							uuid = "32970969-7f85-6bc8-90e1-4f30e8ce8093",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16471,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 14,
-							jobIDList = 
-							{
-								32,
-							},
-							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffID = 1457,
-							buffIDList = 
-							{
-								1457,
-								1362,
-								1839,
-							},
-							category = "Self",
-							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
-						},
-						inheritedIndex = 3,
-					},
-				},
-				mechanicTime = 63.1,
-				name = "Dark Missinary",
-				timeRange = true,
-				timelineIndex = 11,
-				timerOffset = -10,
-				timerStartOffset = -5,
-				uuid = "daf09362-469f-ae88-9074-35c15a7c08dc",
-				version = 2,
-			},
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7388,
-							conditions = 
-							{
-								
-								{
-									"c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-									true,
-								},
-								
-								{
-									"cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-									true,
-								},
-								
-								{
-									"3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							uuid = "83ae2ac2-4e1e-673e-befc-12d5802ce1cd",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7388,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 14,
-							jobIDList = 
-							{
-								21,
-							},
-							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffID = 1457,
-							buffIDList = 
-							{
-								1362,
-								1839,
-								1894,
-							},
-							category = "Self",
-							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
-						},
-						inheritedIndex = 3,
-					},
-				},
-				mechanicTime = 63.1,
-				name = "Shake it off",
-				timeRange = true,
-				timelineIndex = 11,
-				timerStartOffset = -5,
-				uuid = "d39632eb-fa56-616d-b2c0-e5e18e224bc4",
-				version = 2,
-			},
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7535,
-							conditions = 
-							{
-								
-								{
-									"5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-									true,
-								},
-								
-								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Current Target",
-							uuid = "c9c9cc18-aa2e-c48a-bebe-6ab6f4e7c114",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							buffCheckType = 2,
-							buffID = 1193,
-							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							comparator = 2,
-							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
-							version = 2,
-						},
-						inheritedIndex = 2,
-					},
-				},
-				mechanicTime = 63.1,
-				name = "Reprisal",
-				randomOffset = -2,
-				timeRange = true,
-				timelineIndex = 11,
-				timerOffset = -3,
-				timerStartOffset = -2,
-				uuid = "b975f267-5895-a355-af10-7a5d91b0083e",
-				version = 2,
-			},
-		},
-	},
 	[12] = 
 	{
 		
@@ -1604,8 +1160,8 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 12,
 				timerOffset = -10,
-				timerStartOffset = -5,
-				uuid = "c8a80d9f-97a0-7b5f-a16e-b85c39e20d33",
+				timerStartOffset = -12,
+				uuid = "7c21cf67-e39f-7223-99be-b0be612493fc",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -1696,8 +1252,8 @@ local tbl =
 				name = "HoL",
 				timeRange = true,
 				timelineIndex = 12,
-				timerStartOffset = -5,
-				uuid = "660ef662-4f3e-8f1f-9225-30bcb32231da",
+				timerStartOffset = -12,
+				uuid = "7963d3d5-1e78-92ca-bf50-163380d2a939",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -1790,8 +1346,8 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 12,
 				timerOffset = -10,
-				timerStartOffset = -5,
-				uuid = "ff223104-c238-f434-9860-d5392de82942",
+				timerStartOffset = -12,
+				uuid = "a408ab02-1f8f-11ff-9ef2-6fa68d35df01",
 				version = 2,
 			},
 		},
@@ -1882,8 +1438,78 @@ local tbl =
 				name = "Shake it off",
 				timeRange = true,
 				timelineIndex = 12,
-				timerStartOffset = -5,
-				uuid = "b7f0e9fc-e576-528c-bce3-2c5125bb2d4a",
+				timerStartOffset = -12,
+				uuid = "413b6557-b5cf-5775-9a35-6b2458a80ef8",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7535,
+							conditions = 
+							{
+								
+								{
+									"5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+									true,
+								},
+								
+								{
+									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "c9c9cc18-aa2e-c48a-bebe-6ab6f4e7c114",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1193,
+							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 6,
+							dequeueIfLuaFalse = true,
+							inRangeValue = 5,
+							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				mechanicTime = 73.8,
+				name = "Reprisal",
+				randomOffset = -2,
+				timeRange = true,
+				timelineIndex = 12,
+				timerOffset = -3,
+				timerStartOffset = -13,
+				uuid = "8405ac14-3c83-594c-a89e-9ca622141c6e",
 				version = 2,
 			},
 		},
@@ -1978,8 +1604,8 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 20,
 				timerOffset = -10,
-				timerStartOffset = -5,
-				uuid = "ec9b962a-a891-a573-9df3-436fc70a8a65",
+				timerStartOffset = -14.5,
+				uuid = "04ff4db1-99bf-70cc-844c-717313799f82",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -2070,8 +1696,8 @@ local tbl =
 				name = "HoL",
 				timeRange = true,
 				timelineIndex = 20,
-				timerStartOffset = -5,
-				uuid = "c5e8e189-c853-def0-928b-f1bede93106f",
+				timerStartOffset = -14.5,
+				uuid = "89bc57a3-9ab5-b0d3-a45d-c57bf4ade303",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -2164,8 +1790,8 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 20,
 				timerOffset = -10,
-				timerStartOffset = -5,
-				uuid = "bd2cbb19-b4d8-fb76-87a8-9bbc6060c9e4",
+				timerStartOffset = -14.5,
+				uuid = "42388269-0190-e584-97e8-df0260d0dc08",
 				version = 2,
 			},
 		},
@@ -2256,452 +1882,8 @@ local tbl =
 				name = "Shake it off",
 				timeRange = true,
 				timelineIndex = 20,
-				timerStartOffset = -5,
-				uuid = "7f40b148-b84a-b24d-9efb-1bf50a138bda",
-				version = 2,
-			},
-		},
-	},
-	[23] = 
-	{
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 3540,
-							conditions = 
-							{
-								
-								{
-									"d509fc50-866e-82e0-a683-7f673386a79e",
-									true,
-								},
-								
-								{
-									"28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-									true,
-								},
-								
-								{
-									"a787167c-e665-8709-84d0-298a7dbe954a",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "208d8d0c-038a-0156-ae05-da413fbdfa98",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 3540,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 14,
-							jobIDList = 
-							{
-								19,
-							},
-							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffID = 1457,
-							buffIDList = 
-							{
-								1457,
-								1839,
-								1894,
-							},
-							category = "Self",
-							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 97.3,
-				name = "Veil",
-				timeRange = true,
-				timelineIndex = 23,
-				timerOffset = -10,
-				timerStartOffset = -5,
-				uuid = "601fc97b-8649-763f-89b1-24b1516b589b",
-				version = 2,
-			},
-			inheritedIndex = 1,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16160,
-							conditions = 
-							{
-								
-								{
-									"a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-									true,
-								},
-								
-								{
-									"115eca71-8e25-2c76-be17-c29c66dcf324",
-									true,
-								},
-								
-								{
-									"a6929435-5dcb-3407-8d89-b38a0596d1ac",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuDRK3_CD",
-							uuid = "dbc99f8f-e1c5-f477-89e0-30fa7efeda14",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16160,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 14,
-							jobIDList = 
-							{
-								37,
-							},
-							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffID = 1457,
-							buffIDList = 
-							{
-								1457,
-								1894,
-								1362,
-							},
-							category = "Self",
-							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 97.3,
-				name = "HoL",
-				timeRange = true,
-				timelineIndex = 23,
-				timerStartOffset = -5,
-				uuid = "47e6bcbb-1642-eed6-88ee-0c4762736772",
-				version = 2,
-			},
-			inheritedIndex = 4,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16471,
-							conditions = 
-							{
-								
-								{
-									"142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-									true,
-								},
-								
-								{
-									"322dd20f-009d-0bff-941f-f877ce997638",
-									true,
-								},
-								
-								{
-									"e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							uuid = "32970969-7f85-6bc8-90e1-4f30e8ce8093",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16471,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 14,
-							jobIDList = 
-							{
-								32,
-							},
-							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffID = 1457,
-							buffIDList = 
-							{
-								1457,
-								1362,
-								1839,
-							},
-							category = "Self",
-							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
-						},
-						inheritedIndex = 3,
-					},
-				},
-				mechanicTime = 97.3,
-				name = "Dark Missinary",
-				timeRange = true,
-				timelineIndex = 23,
-				timerOffset = -10,
-				timerStartOffset = -5,
-				uuid = "cad6f7f4-2af6-0644-88a3-d7f579f61120",
-				version = 2,
-			},
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7388,
-							conditions = 
-							{
-								
-								{
-									"c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-									true,
-								},
-								
-								{
-									"cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-									true,
-								},
-								
-								{
-									"3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							uuid = "83ae2ac2-4e1e-673e-befc-12d5802ce1cd",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7388,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 14,
-							jobIDList = 
-							{
-								21,
-							},
-							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffID = 1457,
-							buffIDList = 
-							{
-								1362,
-								1839,
-								1894,
-							},
-							category = "Self",
-							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
-						},
-						inheritedIndex = 3,
-					},
-				},
-				mechanicTime = 97.3,
-				name = "Shake it off",
-				timeRange = true,
-				timelineIndex = 23,
-				timerStartOffset = -5,
-				uuid = "11ecca60-71ca-87c3-a309-09f082c02971",
-				version = 2,
-			},
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7535,
-							conditions = 
-							{
-								
-								{
-									"5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-									true,
-								},
-								
-								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Current Target",
-							uuid = "c9c9cc18-aa2e-c48a-bebe-6ab6f4e7c114",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							buffCheckType = 2,
-							buffID = 1193,
-							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							comparator = 2,
-							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
-							version = 2,
-						},
-						inheritedIndex = 2,
-					},
-				},
-				mechanicTime = 97.3,
-				name = "Reprisal",
-				randomOffset = -2,
-				timeRange = true,
-				timelineIndex = 23,
-				timerOffset = -3,
-				timerStartOffset = -2,
-				uuid = "93a9f6e0-5721-9ce0-8877-33ae1f5e2118",
+				timerStartOffset = -14.5,
+				uuid = "58874400-b173-f984-9066-4c098eccfc2e",
 				version = 2,
 			},
 		},
@@ -2796,8 +1978,8 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 24,
 				timerOffset = -10,
-				timerStartOffset = -5,
-				uuid = "306db0fd-a06d-233e-8e89-a2ec6fc2b00c",
+				timerStartOffset = -14.5,
+				uuid = "ebcaf557-8e04-d66d-b04e-ba311204ebbc",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -2888,8 +2070,8 @@ local tbl =
 				name = "HoL",
 				timeRange = true,
 				timelineIndex = 24,
-				timerStartOffset = -5,
-				uuid = "46cdbef8-0baf-55be-8eb6-744f47a4fbbd",
+				timerStartOffset = -14.5,
+				uuid = "7f94f43f-a7e4-5ed8-8dbb-6375923faeaa",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -2982,8 +2164,8 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 24,
 				timerOffset = -10,
-				timerStartOffset = -5,
-				uuid = "44929cf7-c722-a80c-a89f-1aa55a254344",
+				timerStartOffset = -14.5,
+				uuid = "03a6c1dc-f80f-264b-9e35-132eddd9f70a",
 				version = 2,
 			},
 		},
@@ -3074,8 +2256,8 @@ local tbl =
 				name = "Shake it off",
 				timeRange = true,
 				timelineIndex = 24,
-				timerStartOffset = -5,
-				uuid = "34fdfbc5-8a3b-0fd2-936d-5072fb4dc3ff",
+				timerStartOffset = -14.5,
+				uuid = "59c03fcd-8f3b-8109-b1e3-63bf24c1e039",
 				version = 2,
 			},
 		},
@@ -3144,8 +2326,8 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 24,
 				timerOffset = -3,
-				timerStartOffset = -2,
-				uuid = "660eae51-26a4-ed03-9235-df65b0378954",
+				timerStartOffset = -14,
+				uuid = "ded0b67b-a365-09e3-83b8-31483a91e333",
 				version = 2,
 			},
 		},
@@ -3758,7 +2940,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 42,
 				timerOffset = -10,
-				timerStartOffset = -5,
+				timerStartOffset = -10,
 				uuid = "79eb4805-b66a-ffab-a9ce-17ae22cd375d",
 				version = 2,
 			},
@@ -3850,7 +3032,7 @@ local tbl =
 				name = "HoL",
 				timeRange = true,
 				timelineIndex = 42,
-				timerStartOffset = -5,
+				timerStartOffset = -10,
 				uuid = "2604c44a-711b-7639-8d9c-89a6bd724b8e",
 				version = 2,
 			},
@@ -3944,7 +3126,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 42,
 				timerOffset = -10,
-				timerStartOffset = -5,
+				timerStartOffset = -10,
 				uuid = "c59a8b67-0720-569a-b110-ea5a62c59a12",
 				version = 2,
 			},
@@ -4036,7 +3218,7 @@ local tbl =
 				name = "Shake it off",
 				timeRange = true,
 				timelineIndex = 42,
-				timerStartOffset = -5,
+				timerStartOffset = -10,
 				uuid = "bfaf60d0-a044-1391-be7f-548901dd42b0",
 				version = 2,
 			},
@@ -4106,7 +3288,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 42,
 				timerOffset = -3,
-				timerStartOffset = -2,
+				timerStartOffset = -11,
 				uuid = "236bf0ba-f85c-726b-802f-55ee2a013efb",
 				version = 2,
 			},
