@@ -401,7 +401,7 @@ local tbl =
 				name = "Vigil (for regen)",
 				timeRange = true,
 				timelineIndex = 2,
-				timerEndOffset = 10,
+				timerEndOffset = 15,
 				timerOffset = -5,
 				uuid = "b1b96672-627b-b255-9c74-bf8fd6943060",
 				version = 2,
@@ -1032,79 +1032,6 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 9,
-		},
-	},
-	[58] = 
-	{
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7393,
-							conditions = 
-							{
-								
-								{
-									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
-									true,
-								},
-								
-								{
-									"a1b638fb-0be1-11a0-b336-589ae41c9e6d",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Detection Target",
-							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 3,
-							mpType = 2,
-							mpValue = 3000,
-							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffID = 2911,
-							category = "Party",
-							partyTargetSubType = "Lowest HP",
-							uuid = "a1b638fb-0be1-11a0-b336-589ae41c9e6d",
-							version = 2,
-						},
-						inheritedIndex = 2,
-					},
-				},
-				mechanicTime = 208.7,
-				name = "TBN Near (25)",
-				timeRange = true,
-				timelineIndex = 58,
-				timerOffset = -4,
-				timerStartOffset = -3,
-				uuid = "e525fd6c-da01-7a52-97ac-13df6b43e040",
-				version = 2,
-			},
-			inheritedIndex = 1,
 		},
 	},
 	[61] = 

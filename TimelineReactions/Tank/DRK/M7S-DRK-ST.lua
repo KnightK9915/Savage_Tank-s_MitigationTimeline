@@ -1,5 +1,83 @@
 local tbl = 
 {
+	
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"b1eaa207-d018-5733-8e86-0dab32e19c28",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Main Tank",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1178,
+							buffIDList = 
+							{
+								1178,
+							},
+							category = "Party",
+							partyTargetType = "Off Tank",
+							uuid = "b1eaa207-d018-5733-8e86-0dab32e19c28",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 10.5,
+				name = "TBN (25)",
+				timeRange = true,
+				timelineIndex = 1,
+				timerOffset = -4,
+				timerStartOffset = -5,
+				uuid = "9b7a0319-a6fb-9b3f-80c1-12cec0abdb08",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	}, 
 	[3] = 
 	{
 		
@@ -32,6 +110,30 @@ local tbl =
 							version = 2.1,
 						},
 					},
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"e1a3f76a-d55b-5a0c-8b23-b5b8e82b3ef7",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "c770f21b-1964-4155-9832-017ba143fdbc",
+							version = 2.1,
+						},
+					},
 				},
 				conditions = 
 				{
@@ -54,6 +156,16 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return data.string_SelectionDR[\"正攻法\"].bool\n",
 							uuid = "1909117c-94dd-1499-9c96-b520f2d4f35c",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
+							uuid = "e1a3f76a-d55b-5a0c-8b23-b5b8e82b3ef7",
 							version = 2,
 						},
 					},
@@ -643,7 +755,7 @@ local tbl =
 				timelineIndex = 17,
 				timerEndOffset = 24.799999237061,
 				timerOffset = -4,
-				timerStartOffset = -1,
+				timerStartOffset = -3,
 				uuid = "5ab7cbe0-be16-d184-9791-78063a10ab40",
 				version = 2,
 			},
@@ -763,6 +875,119 @@ local tbl =
 			inheritedIndex = 3,
 		},
 	},
+	[19] = 
+	{
+		
+		{
+			data = 
+			{
+				name = "[Tank] Interrupt Wildwinds",
+				uuid = "c19be2fb-7824-2d58-9951-236cf87b6eb6",
+				version = 2,
+			},
+			inheritedObjectUUID = "25d8f120-4f59-7f3f-bc32-2459e2df24c1",
+			inheritedOverwrites = 
+			{
+				enabled = false,
+			},
+		},
+	},
+	[21] = 
+	{
+		
+		{
+			data = 
+			{
+				name = "[Opti] Find Target",
+				uuid = "8fc6b4a3-04f6-e436-8440-d85c8ebd80c6",
+				version = 2,
+			},
+			inheritedObjectUUID = "aa7cf95f-d8e6-8ae3-adc2-110fe8dca801",
+			inheritedOverwrites = 
+			{
+				enabled = false,
+			},
+		},
+	},
+	[26] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"b1eaa207-d018-5733-8e86-0dab32e19c28",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetSubType = "Lowest HP",
+							targetType = "Party",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1178,
+							buffIDList = 
+							{
+								1178,
+							},
+							category = "Party",
+							partyTargetType = "Off Tank",
+							uuid = "b1eaa207-d018-5733-8e86-0dab32e19c28",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 110.6,
+				name = "TBN (25)",
+				timeRange = true,
+				timelineIndex = 26,
+				timerOffset = -4,
+				timerStartOffset = -6,
+				uuid = "c07143f3-7bd6-bc7c-a1a3-271ae5894320",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
 	[27] = 
 	{
 		
@@ -795,6 +1020,30 @@ local tbl =
 							version = 2.1,
 						},
 					},
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"bd43585c-0842-4da1-b648-d11477186eb5",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "15043865-ae23-7232-a053-1d3cb5d1774f",
+							version = 2.1,
+						},
+					},
 				},
 				conditions = 
 				{
@@ -817,6 +1066,16 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return data.string_SelectionDR[\"正攻法\"].bool\n",
 							uuid = "373e1f76-bf61-009f-8601-885af70354bc",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
+							uuid = "bd43585c-0842-4da1-b648-d11477186eb5",
 							version = 2,
 						},
 					},
@@ -1335,6 +1594,162 @@ local tbl =
 			inheritedIndex = 9,
 		},
 	},
+	[30] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"b1eaa207-d018-5733-8e86-0dab32e19c28",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Main Tank",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1178,
+							buffIDList = 
+							{
+								1178,
+							},
+							category = "Party",
+							partyTargetType = "Off Tank",
+							uuid = "b1eaa207-d018-5733-8e86-0dab32e19c28",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 127.3,
+				name = "TBN (25)",
+				timeRange = true,
+				timelineIndex = 30,
+				timerOffset = -4,
+				timerStartOffset = -2,
+				uuid = "520026bd-1936-1d49-bddd-7cc60e30a3f2",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[41] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"b1eaa207-d018-5733-8e86-0dab32e19c28",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Main Tank",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1178,
+							buffIDList = 
+							{
+								1178,
+							},
+							category = "Party",
+							partyTargetType = "Off Tank",
+							uuid = "b1eaa207-d018-5733-8e86-0dab32e19c28",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 195.2,
+				name = "TBN (25)",
+				timeRange = true,
+				timelineIndex = 41,
+				timerOffset = -4,
+				timerStartOffset = -2,
+				uuid = "9ce8ff81-0b77-c0a1-90d7-89ec4184cfbf",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
 	[44] = 
 	{
 		
@@ -1484,6 +1899,84 @@ local tbl =
 			inheritedIndex = 2,
 		},
 	},
+	[52] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"b1eaa207-d018-5733-8e86-0dab32e19c28",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Main Tank",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1178,
+							buffIDList = 
+							{
+								1178,
+							},
+							category = "Party",
+							partyTargetType = "Off Tank",
+							uuid = "b1eaa207-d018-5733-8e86-0dab32e19c28",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 257.6,
+				name = "TBN (25)",
+				timeRange = true,
+				timelineIndex = 52,
+				timerOffset = -4,
+				timerStartOffset = -2,
+				uuid = "697ffe24-6ee8-1d0b-ad47-0550edc3013d",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
 	[54] = 
 	{
 		
@@ -1616,6 +2109,318 @@ local tbl =
 			inheritedIndex = 2,
 		},
 	},
+	[65] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"b1eaa207-d018-5733-8e86-0dab32e19c28",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Party",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1178,
+							buffIDList = 
+							{
+								1178,
+							},
+							category = "Party",
+							partyTargetType = "Off Tank",
+							uuid = "b1eaa207-d018-5733-8e86-0dab32e19c28",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 319.1,
+				name = "TBN (25)",
+				timeRange = true,
+				timelineIndex = 65,
+				timerOffset = -4,
+				timerStartOffset = -2,
+				uuid = "b422bcd1-c050-34ed-ada0-d8f3722e2220",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[70] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"b1eaa207-d018-5733-8e86-0dab32e19c28",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Main Tank",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1178,
+							buffIDList = 
+							{
+								1178,
+							},
+							category = "Party",
+							partyTargetType = "Off Tank",
+							uuid = "b1eaa207-d018-5733-8e86-0dab32e19c28",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 340,
+				name = "TBN (25)",
+				timeRange = true,
+				timelineIndex = 70,
+				timerOffset = -4,
+				timerStartOffset = -2,
+				uuid = "b11cb485-7593-8791-bef8-ca21446e98ff",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[74] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"b1eaa207-d018-5733-8e86-0dab32e19c28",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Main Tank",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1178,
+							buffIDList = 
+							{
+								1178,
+							},
+							category = "Party",
+							partyTargetType = "Off Tank",
+							uuid = "b1eaa207-d018-5733-8e86-0dab32e19c28",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 381.5,
+				name = "TBN (25)",
+				timeRange = true,
+				timelineIndex = 74,
+				timerOffset = -4,
+				timerStartOffset = -5,
+				uuid = "30bd4082-bca3-e38e-aea1-0feb875bf4ff",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[78] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"b1eaa207-d018-5733-8e86-0dab32e19c28",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Main Tank",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1178,
+							buffIDList = 
+							{
+								1178,
+							},
+							category = "Party",
+							partyTargetType = "Off Tank",
+							uuid = "b1eaa207-d018-5733-8e86-0dab32e19c28",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 409,
+				name = "TBN (25)",
+				timeRange = true,
+				timelineIndex = 78,
+				timerOffset = -4,
+				timerStartOffset = -2,
+				uuid = "1185e12f-8354-1c8b-b487-51b9fb62afd4",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
 	[83] = 
 	{
 		
@@ -1648,6 +2453,30 @@ local tbl =
 							version = 2.1,
 						},
 					},
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"a462e934-36a4-34a0-bd7d-86701b5a7255",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "a7c68b2e-593f-6a6a-a1c5-c842242f819d",
+							version = 2.1,
+						},
+					},
 				},
 				conditions = 
 				{
@@ -1670,6 +2499,16 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return data.string_SelectionDR[\"正攻法\"].bool\n",
 							uuid = "1909117c-94dd-1499-9c96-b520f2d4f35c",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
+							uuid = "a462e934-36a4-34a0-bd7d-86701b5a7255",
 							version = 2,
 						},
 					},
@@ -2186,6 +3025,84 @@ local tbl =
 			inheritedIndex = 9,
 		},
 	},
+	[84] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"b1eaa207-d018-5733-8e86-0dab32e19c28",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Main Tank",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1178,
+							buffIDList = 
+							{
+								1178,
+							},
+							category = "Party",
+							partyTargetType = "Off Tank",
+							uuid = "b1eaa207-d018-5733-8e86-0dab32e19c28",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 441.5,
+				name = "TBN (25)",
+				timeRange = true,
+				timelineIndex = 84,
+				timerOffset = -4,
+				timerStartOffset = -5,
+				uuid = "fdcf9f83-ec52-803a-bad9-9a09b67f7293",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
 	[86] = 
 	{
 		
@@ -2622,6 +3539,59 @@ local tbl =
 					{
 						data = 
 						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 494.4,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 94,
+				timerEndOffset = 5,
+				timerOffset = -15,
+				uuid = "1ad97b29-374d-798f-b45a-34abdd0b397c",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 7393,
 							atomicPriority = true,
 							conditions = 
@@ -2747,6 +3717,9 @@ local tbl =
 			},
 			inheritedIndex = 4,
 		},
+	},
+	[95] = 
+	{
 		
 		{
 			data = 
@@ -2757,19 +3730,24 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 7531,
+							actionID = 7393,
+							atomicPriority = true,
 							conditions = 
 							{
 								
 								{
-									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"b1eaa207-d018-5733-8e86-0dab32e19c28",
 									true,
 								},
 							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
+							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
-							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
 							version = 2.1,
 						},
 					},
@@ -2780,25 +3758,197 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 7531,
 							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1178,
+							buffIDList = 
+							{
+								1178,
+							},
+							category = "Party",
+							partyTargetType = "Off Tank",
+							uuid = "b1eaa207-d018-5733-8e86-0dab32e19c28",
 							version = 2,
 						},
 					},
 				},
-				mechanicTime = 494.4,
-				name = "Rampart (20)",
+				mechanicTime = 495.7,
+				name = "TBN (25)",
 				timeRange = true,
-				timelineIndex = 94,
-				timerEndOffset = 5,
-				timerOffset = -15,
-				uuid = "1ad97b29-374d-798f-b45a-34abdd0b397c",
+				timelineIndex = 95,
+				timerOffset = -4,
+				timerStartOffset = -2,
+				uuid = "426cf631-3174-718b-a858-973714e78fb2",
 				version = 2,
 			},
-			inheritedIndex = 5,
+			inheritedIndex = 1,
+		},
+	},
+	[106] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"b1eaa207-d018-5733-8e86-0dab32e19c28",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Main Tank",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1178,
+							buffIDList = 
+							{
+								1178,
+							},
+							category = "Party",
+							partyTargetType = "Off Tank",
+							uuid = "b1eaa207-d018-5733-8e86-0dab32e19c28",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 541.7,
+				name = "TBN (25)",
+				timeRange = true,
+				timelineIndex = 106,
+				timerOffset = -4,
+				timerStartOffset = -2,
+				uuid = "f9982598-d525-ada6-bc2e-5f5c794489a1",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[108] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"b1eaa207-d018-5733-8e86-0dab32e19c28",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Main Tank",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1178,
+							buffIDList = 
+							{
+								1178,
+							},
+							category = "Party",
+							partyTargetType = "Off Tank",
+							uuid = "b1eaa207-d018-5733-8e86-0dab32e19c28",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 550,
+				name = "TBN (25)",
+				timeRange = true,
+				timelineIndex = 108,
+				timerOffset = -4,
+				timerStartOffset = -5,
+				uuid = "658ea3a6-0ec2-2276-ac30-ccbccb82872d",
+				version = 2,
+			},
+			inheritedIndex = 1,
 		},
 	},
 	[119] = 
@@ -2833,6 +3983,30 @@ local tbl =
 							version = 2.1,
 						},
 					},
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"cf203585-6267-c912-9f8a-a0c8d3c57b3c",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "6124e09c-b36d-df05-b417-6b14af7c2989",
+							version = 2.1,
+						},
+					},
 				},
 				conditions = 
 				{
@@ -2855,6 +4029,16 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return data.string_SelectionDR[\"正攻法\"].bool\n",
 							uuid = "373e1f76-bf61-009f-8601-885af70354bc",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
+							uuid = "cf203585-6267-c912-9f8a-a0c8d3c57b3c",
 							version = 2,
 						},
 					},
@@ -3795,6 +4979,162 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 9,
+		},
+	},
+	[124] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"b1eaa207-d018-5733-8e86-0dab32e19c28",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Main Tank",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1178,
+							buffIDList = 
+							{
+								1178,
+							},
+							category = "Party",
+							partyTargetType = "Off Tank",
+							uuid = "b1eaa207-d018-5733-8e86-0dab32e19c28",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 637.4,
+				name = "TBN (25)",
+				timeRange = true,
+				timelineIndex = 124,
+				timerOffset = -4,
+				timerStartOffset = -5,
+				uuid = "b5ddf55a-392c-14c2-b626-20311eaec252",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[126] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"b1eaa207-d018-5733-8e86-0dab32e19c28",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Main Tank",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1178,
+							buffIDList = 
+							{
+								1178,
+							},
+							category = "Party",
+							partyTargetType = "Off Tank",
+							uuid = "b1eaa207-d018-5733-8e86-0dab32e19c28",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 665.6,
+				name = "TBN (25)",
+				timeRange = true,
+				timelineIndex = 126,
+				timerOffset = -4,
+				timerStartOffset = -5,
+				uuid = "3dd650cb-91d1-300c-8fa8-8843512459f0",
+				version = 2,
+			},
+			inheritedIndex = 1,
 		},
 	},
 	inheritedProfiles = 
