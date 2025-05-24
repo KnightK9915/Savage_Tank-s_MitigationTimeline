@@ -400,11 +400,6 @@ local tbl =
 									"293daf40-34c7-3d12-ac20-7b597e340bdc",
 									true,
 								},
-								
-								{
-									"136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -439,19 +434,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventArgType = 2,
-							eventSpellName = "セレブレート・グッドタイムズ",
-							uuid = "136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-							version = 2,
-						},
-						inheritedIndex = 1,
 					},
 				},
 				enabled = false,
@@ -1742,11 +1724,6 @@ local tbl =
 									"293daf40-34c7-3d12-ac20-7b597e340bdc",
 									true,
 								},
-								
-								{
-									"136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -1781,19 +1758,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventArgType = 2,
-							eventSpellName = "セレブレート・グッドタイムズ",
-							uuid = "136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-							version = 2,
-						},
-						inheritedIndex = 1,
 					},
 				},
 				mechanicTime = 70.6,
@@ -3632,11 +3596,6 @@ local tbl =
 									"293daf40-34c7-3d12-ac20-7b597e340bdc",
 									true,
 								},
-								
-								{
-									"136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -3671,19 +3630,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventArgType = 2,
-							eventSpellName = "セレブレート・グッドタイムズ",
-							uuid = "136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-							version = 2,
-						},
-						inheritedIndex = 1,
 					},
 				},
 				mechanicTime = 199,
@@ -4534,7 +4480,7 @@ local tbl =
 						data = 
 						{
 							aType = "Lua",
-							actionLua = "local range = 6\nlocal fallbackID = 13822\nlocal priorityList = {13833, 13835, 13834, 13832, 13831}\nlocal currentTarget = Player:GetTarget()\n\nlocal function isValidInRange(entity)\n    return entity.alive and entity.targetable and entity.distance <= range\nend\n\nlocal function anyAlive(cid)\n    local list = EntityList(\"type=2,targetable,contentid=\" .. cid)\n    if table.valid(list) then\n        for _, v in pairs(list) do\n            if v.alive then\n                return true\n            end\n        end\n    end\n    return false\nend\n\nfor _, cid in ipairs(priorityList) do\n    local candidates = EntityList(\"type=2,targetable,contentid=\" .. cid)\n    if table.valid(candidates) then\n        for _, entity in pairs(candidates) do\n            if isValidInRange(entity) then\n                if currentTarget == nil or currentTarget.id ~= entity.id then\n                    Player:SetTarget(entity.id)\n                end\n                return\n            end\n        end\n    end\nend\n\nlocal fallbackList = EntityList(\"type=2,targetable,contentid=\" .. fallbackID)\nif table.valid(fallbackList) then\n    for _, entity in pairs(fallbackList) do\n        if entity.alive then\n            if currentTarget == nil or currentTarget.id ~= entity.id then\n                Player:SetTarget(entity.id)\n            end\n            return\n        end\n    end\nend",
+							actionLua = "local range = 7.5\nlocal fallbackID = 13822\nlocal priorityList = {13833, 13835, 13834, 13832, 13831}\nlocal currentTarget = Player:GetTarget()\n\nlocal function isValidInRange(entity)\n    return entity.alive and entity.targetable and entity.distance <= range\nend\n\nlocal function anyAlive(cid)\n    local list = EntityList(\"type=2,targetable,contentid=\" .. cid)\n    if table.valid(list) then\n        for _, v in pairs(list) do\n            if v.alive then\n                return true\n            end\n        end\n    end\n    return false\nend\n\nfor _, cid in ipairs(priorityList) do\n    local candidates = EntityList(\"type=2,targetable,contentid=\" .. cid)\n    if table.valid(candidates) then\n        for _, entity in pairs(candidates) do\n            if isValidInRange(entity) then\n                if currentTarget == nil or currentTarget.id ~= entity.id then\n                    Player:SetTarget(entity.id)\n                end\n                return\n            end\n        end\n    end\nend\n\nlocal fallbackList = EntityList(\"type=2,targetable,contentid=\" .. fallbackID)\nif table.valid(fallbackList) then\n    for _, entity in pairs(fallbackList) do\n        if entity.alive then\n            if currentTarget == nil or currentTarget.id ~= entity.id then\n                Player:SetTarget(entity.id)\n            end\n            return\n        end\n    end\nend",
 							conditions = 
 							{
 								
@@ -4554,7 +4500,7 @@ local tbl =
 						data = 
 						{
 							aType = "Lua",
-							actionLua = "local lowestHP = nil\nlocal minHPPercent = 101\nlocal range = 4.5\nlocal mainID = 13832\nlocal fallbackID = 18322\n\nlocal mainList = EntityList(\"type=2,targetable,contentid=\" .. mainID)\nif table.valid(mainList) then\n    for _, entity in pairs(mainList) do\n        if entity.alive and entity.distance <= range and entity.hp.percent < minHPPercent then\n            lowestHP = entity\n            minHPPercent = entity.hp.percent\n        end\n    end\nend\n\nif lowestHP then\n    if Player:GetTarget() == nil or Player:GetTarget().id ~= lowestHP.id then\n        Player:SetTarget(lowestHP.id)\n    end\n    return\nend\n\nlocal fallbackList = EntityList(\"type=2,targetable,contentid=\" .. fallbackID)\nif table.valid(fallbackList) then\n    for _, v in pairs(fallbackList) do\n        if v.alive then\n            if Player:GetTarget() == nil or Player:GetTarget().id ~= v.id then\n                Player:SetTarget(v.id)\n            end\n            return\n        end\n    end\nend",
+							actionLua = "local lowestHP = nil\nlocal minHPPercent = 101\nlocal range = 7.5\nlocal mainID = 13832\nlocal fallbackID = 18322\n\nlocal mainList = EntityList(\"type=2,targetable,contentid=\" .. mainID)\nif table.valid(mainList) then\n    for _, entity in pairs(mainList) do\n        if entity.alive and entity.distance <= range and entity.hp.percent < minHPPercent then\n            lowestHP = entity\n            minHPPercent = entity.hp.percent\n        end\n    end\nend\n\nif lowestHP then\n    if Player:GetTarget() == nil or Player:GetTarget().id ~= lowestHP.id then\n        Player:SetTarget(lowestHP.id)\n    end\n    return\nend\n\nlocal fallbackList = EntityList(\"type=2,targetable,contentid=\" .. fallbackID)\nif table.valid(fallbackList) then\n    for _, v in pairs(fallbackList) do\n        if v.alive then\n            if Player:GetTarget() == nil or Player:GetTarget().id ~= v.id then\n                Player:SetTarget(v.id)\n            end\n            return\n        end\n    end\nend",
 							conditions = 
 							{
 								
@@ -4657,6 +4603,220 @@ local tbl =
 				timerEndOffset = 3,
 				timerStartOffset = -1.5,
 				uuid = "83e3067d-f73a-b0e8-a88c-59adc5744af1",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+								
+								{
+									"46cb0109-6c3a-2f84-a2c4-31984cecfea2",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+								
+								{
+									"c87032d2-c148-cb6a-9a76-9a849a23a2b1",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+								
+								{
+									"18f1b609-641e-ed19-9e7e-897be06b8984",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+								
+								{
+									"bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1833,
+							category = "Self",
+							name = "GNB Buff",
+							uuid = "46cb0109-6c3a-2f84-a2c4-31984cecfea2",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 79,
+							category = "Self",
+							name = "PLD Buff",
+							uuid = "c87032d2-c148-cb6a-9a76-9a849a23a2b1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 743,
+							name = "DRK Buff",
+							uuid = "18f1b609-641e-ed19-9e7e-897be06b8984",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 91,
+							name = "WAR Buff",
+							uuid = "bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
+							version = 2,
+						},
+						inheritedIndex = 8,
+					},
+				},
+				mechanicTime = 227.4,
+				name = "Stance ON",
+				timeRange = true,
+				timelineIndex = 36,
+				timerOffset = -15,
+				timerStartOffset = -10,
+				uuid = "ffc36c0a-0c23-5acb-8ffd-02c0951de9e2",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -6629,11 +6789,6 @@ local tbl =
 									"293daf40-34c7-3d12-ac20-7b597e340bdc",
 									true,
 								},
-								
-								{
-									"136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -6668,19 +6823,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventArgType = 2,
-							eventSpellName = "セレブレート・グッドタイムズ",
-							uuid = "136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-							version = 2,
-						},
-						inheritedIndex = 1,
 					},
 				},
 				enabled = false,
@@ -7076,6 +7218,40 @@ local tbl =
 				version = 2,
 			},
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Misc",
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							potType = 4,
+							usePot = true,
+							uuid = "2254123b-6bbd-b71d-a30b-7e4ffd2d6214",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 317.7,
+				name = "Potion",
+				timeRange = true,
+				timelineIndex = 48,
+				timerEndOffset = 5,
+				timerStartOffset = 2,
+				uuid = "d31c8b8c-434c-c250-87d7-fd3890bcf8bd",
+				version = 2,
+			},
+		},
 	},
 	[52] = 
 	{
@@ -7296,40 +7472,6 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 2,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "Misc",
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							potType = 4,
-							usePot = true,
-							uuid = "2254123b-6bbd-b71d-a30b-7e4ffd2d6214",
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 325.7,
-				name = "Potion",
-				timeRange = true,
-				timelineIndex = 52,
-				timerEndOffset = 5,
-				timerStartOffset = 1,
-				uuid = "726a749e-8ef9-c3cd-ad38-146f03e47c70",
-				version = 2,
-			},
 		},
 	},
 	[53] = 
@@ -7728,11 +7870,6 @@ local tbl =
 									"293daf40-34c7-3d12-ac20-7b597e340bdc",
 									true,
 								},
-								
-								{
-									"136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -7767,19 +7904,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventArgType = 2,
-							eventSpellName = "セレブレート・グッドタイムズ",
-							uuid = "136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-							version = 2,
-						},
-						inheritedIndex = 1,
 					},
 				},
 				mechanicTime = 388.7,
@@ -8854,11 +8978,6 @@ local tbl =
 									"293daf40-34c7-3d12-ac20-7b597e340bdc",
 									true,
 								},
-								
-								{
-									"136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -8893,19 +9012,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventArgType = 2,
-							eventSpellName = "セレブレート・グッドタイムズ",
-							uuid = "136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-							version = 2,
-						},
-						inheritedIndex = 1,
 					},
 				},
 				mechanicTime = 418.9,
@@ -9316,11 +9422,6 @@ local tbl =
 									"293daf40-34c7-3d12-ac20-7b597e340bdc",
 									true,
 								},
-								
-								{
-									"136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -9356,19 +9457,6 @@ local tbl =
 						},
 						inheritedIndex = 2,
 					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventArgType = 2,
-							eventSpellName = "セレブレート・グッドタイムズ",
-							uuid = "136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
 				},
 				mechanicTime = 452.5,
 				name = "Reprisal",
@@ -9380,6 +9468,161 @@ local tbl =
 				uuid = "8b25e998-fa9d-764f-a86e-6a71dae287ca",
 				version = 2,
 			},
+		},
+	},
+	[63] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 454.5,
+				name = "CD OFF",
+				timelineIndex = 63,
+				timerStartOffset = -10,
+				uuid = "31e36434-ea09-d517-aed0-b9bf4793a4ae",
+				version = 2,
+			},
+			inheritedIndex = 3,
 		},
 	},
 	[65] = 
@@ -9525,6 +9768,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 65,
 				timerEndOffset = 42.900001525879,
+				timerStartOffset = -5,
 				uuid = "191402ab-5627-4c6f-a002-510d88528e40",
 				version = 2,
 			},
@@ -9532,6 +9776,155 @@ local tbl =
 	},
 	[74] = 
 	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 515.9,
+				name = "CD ON",
+				timelineIndex = 74,
+				timerOffset = -5,
+				timerStartOffset = -10,
+				uuid = "048f9655-c71c-4386-875f-65df87ea46c0",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
 		
 		{
 			data = 
@@ -9624,7 +10017,7 @@ local tbl =
 				uuid = "4ea69972-62fa-2117-872b-68023875742e",
 				version = 2,
 			},
-			inheritedIndex = 1,
+			inheritedIndex = 2,
 		},
 		
 		{
@@ -9716,7 +10109,7 @@ local tbl =
 				uuid = "9c1e9161-4fb3-86cc-8414-83c4f201de12",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 5,
 		},
 		
 		{
@@ -9926,11 +10319,6 @@ local tbl =
 									"293daf40-34c7-3d12-ac20-7b597e340bdc",
 									true,
 								},
-								
-								{
-									"136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -9965,19 +10353,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventArgType = 2,
-							eventSpellName = "セレブレート・グッドタイムズ",
-							uuid = "136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-							version = 2,
-						},
-						inheritedIndex = 1,
 					},
 				},
 				mechanicTime = 515.9,
@@ -10828,11 +11203,6 @@ local tbl =
 									"293daf40-34c7-3d12-ac20-7b597e340bdc",
 									true,
 								},
-								
-								{
-									"136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -10867,19 +11237,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventArgType = 2,
-							eventSpellName = "セレブレート・グッドタイムズ",
-							uuid = "136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-							version = 2,
-						},
-						inheritedIndex = 1,
 					},
 				},
 				mechanicTime = 596.3,
@@ -11290,11 +11647,6 @@ local tbl =
 									"293daf40-34c7-3d12-ac20-7b597e340bdc",
 									true,
 								},
-								
-								{
-									"136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -11329,19 +11681,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventArgType = 2,
-							eventSpellName = "セレブレート・グッドタイムズ",
-							uuid = "136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-							version = 2,
-						},
-						inheritedIndex = 1,
 					},
 				},
 				mechanicTime = 607.3,

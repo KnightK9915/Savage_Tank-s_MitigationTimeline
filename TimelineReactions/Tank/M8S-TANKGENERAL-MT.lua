@@ -450,11 +450,6 @@ local tbl =
 									"293daf40-34c7-3d12-ac20-7b597e340bdc",
 									true,
 								},
-								
-								{
-									"136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -489,19 +484,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventArgType = 2,
-							eventSpellName = "セレブレート・グッドタイムズ",
-							uuid = "136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-							version = 2,
-						},
-						inheritedIndex = 1,
 					},
 				},
 				mechanicTime = 11.2,
@@ -963,11 +945,6 @@ local tbl =
 									"293daf40-34c7-3d12-ac20-7b597e340bdc",
 									true,
 								},
-								
-								{
-									"136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -1002,19 +979,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventArgType = 2,
-							eventSpellName = "セレブレート・グッドタイムズ",
-							uuid = "136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-							version = 2,
-						},
-						inheritedIndex = 1,
 					},
 				},
 				mechanicTime = 37.9,
@@ -1425,11 +1389,6 @@ local tbl =
 									"293daf40-34c7-3d12-ac20-7b597e340bdc",
 									true,
 								},
-								
-								{
-									"136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -1464,19 +1423,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventArgType = 2,
-							eventSpellName = "セレブレート・グッドタイムズ",
-							uuid = "136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-							version = 2,
-						},
-						inheritedIndex = 1,
 					},
 				},
 				mechanicTime = 49.5,
@@ -1887,11 +1833,6 @@ local tbl =
 									"293daf40-34c7-3d12-ac20-7b597e340bdc",
 									true,
 								},
-								
-								{
-									"136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -1926,19 +1867,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventArgType = 2,
-							eventSpellName = "セレブレート・グッドタイムズ",
-							uuid = "136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-							version = 2,
-						},
-						inheritedIndex = 1,
 					},
 				},
 				mechanicTime = 63.1,
@@ -3097,11 +3025,6 @@ local tbl =
 									"293daf40-34c7-3d12-ac20-7b597e340bdc",
 									true,
 								},
-								
-								{
-									"136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -3136,19 +3059,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventArgType = 2,
-							eventSpellName = "セレブレート・グッドタイムズ",
-							uuid = "136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-							version = 2,
-						},
-						inheritedIndex = 1,
 					},
 				},
 				mechanicTime = 97.3,
@@ -3559,11 +3469,6 @@ local tbl =
 									"293daf40-34c7-3d12-ac20-7b597e340bdc",
 									true,
 								},
-								
-								{
-									"136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -3598,19 +3503,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventArgType = 2,
-							eventSpellName = "セレブレート・グッドタイムズ",
-							uuid = "136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-							version = 2,
-						},
-						inheritedIndex = 1,
 					},
 				},
 				mechanicTime = 110.9,
@@ -4095,11 +3987,6 @@ local tbl =
 									"293daf40-34c7-3d12-ac20-7b597e340bdc",
 									true,
 								},
-								
-								{
-									"136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -4134,19 +4021,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventArgType = 2,
-							eventSpellName = "セレブレート・グッドタイムズ",
-							uuid = "136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-							version = 2,
-						},
-						inheritedIndex = 1,
 					},
 				},
 				mechanicTime = 157,
@@ -4557,11 +4431,6 @@ local tbl =
 									"293daf40-34c7-3d12-ac20-7b597e340bdc",
 									true,
 								},
-								
-								{
-									"136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -4596,19 +4465,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventArgType = 2,
-							eventSpellName = "セレブレート・グッドタイムズ",
-							uuid = "136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-							version = 2,
-						},
-						inheritedIndex = 1,
 					},
 				},
 				mechanicTime = 183.7,
@@ -5019,11 +4875,6 @@ local tbl =
 									"293daf40-34c7-3d12-ac20-7b597e340bdc",
 									true,
 								},
-								
-								{
-									"136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -5058,19 +4909,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventArgType = 2,
-							eventSpellName = "セレブレート・グッドタイムズ",
-							uuid = "136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-							version = 2,
-						},
-						inheritedIndex = 1,
 					},
 				},
 				mechanicTime = 316.6,
@@ -5481,11 +5319,6 @@ local tbl =
 									"293daf40-34c7-3d12-ac20-7b597e340bdc",
 									true,
 								},
-								
-								{
-									"136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -5520,19 +5353,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventArgType = 2,
-							eventSpellName = "セレブレート・グッドタイムズ",
-							uuid = "136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-							version = 2,
-						},
-						inheritedIndex = 1,
 					},
 				},
 				mechanicTime = 360.5,
@@ -6015,11 +5835,6 @@ local tbl =
 									"293daf40-34c7-3d12-ac20-7b597e340bdc",
 									true,
 								},
-								
-								{
-									"136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -6054,19 +5869,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventArgType = 2,
-							eventSpellName = "セレブレート・グッドタイムズ",
-							uuid = "136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-							version = 2,
-						},
-						inheritedIndex = 1,
 					},
 				},
 				mechanicTime = 433,
@@ -6477,11 +6279,6 @@ local tbl =
 									"293daf40-34c7-3d12-ac20-7b597e340bdc",
 									true,
 								},
-								
-								{
-									"136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -6516,19 +6313,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventArgType = 2,
-							eventSpellName = "セレブレート・グッドタイムズ",
-							uuid = "136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-							version = 2,
-						},
-						inheritedIndex = 1,
 					},
 				},
 				mechanicTime = 446.6,
@@ -7002,11 +6786,6 @@ local tbl =
 								},
 								
 								{
-									"136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-									true,
-								},
-								
-								{
 									"847e0945-73c7-4ea6-a7d5-3fffa678b831",
 									true,
 								},
@@ -7044,19 +6823,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventArgType = 2,
-							eventSpellName = "セレブレート・グッドタイムズ",
-							uuid = "136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-							version = 2,
-						},
-						inheritedIndex = 1,
 					},
 					
 					{
@@ -7540,11 +7306,6 @@ local tbl =
 								},
 								
 								{
-									"136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-									true,
-								},
-								
-								{
 									"847e0945-73c7-4ea6-a7d5-3fffa678b831",
 									true,
 								},
@@ -7582,19 +7343,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventArgType = 2,
-							eventSpellName = "セレブレート・グッドタイムズ",
-							uuid = "136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-							version = 2,
-						},
-						inheritedIndex = 1,
 					},
 					
 					{
@@ -8041,6 +7789,11 @@ local tbl =
 									"a787167c-e665-8709-84d0-298a7dbe954a",
 									true,
 								},
+								
+								{
+									"d0434958-6780-9413-b2f2-b79ae1bb12d3",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -8095,6 +7848,16 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "d0434958-6780-9413-b2f2-b79ae1bb12d3",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 643.8,
 				name = "Veil",
@@ -8102,7 +7865,7 @@ local tbl =
 				timelineIndex = 94,
 				timerOffset = -10,
 				timerStartOffset = -10,
-				uuid = "0015066e-6b61-83e8-8270-09a771d3b5d3",
+				uuid = "dc345908-545b-8720-b1a9-8f5f18eec79f",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -8133,6 +7896,11 @@ local tbl =
 								
 								{
 									"a6929435-5dcb-3407-8d89-b38a0596d1ac",
+									true,
+								},
+								
+								{
+									"460aa844-c072-ce09-ac0d-abdee2b23003",
 									true,
 								},
 							},
@@ -8188,13 +7956,23 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "460aa844-c072-ce09-ac0d-abdee2b23003",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 643.8,
 				name = "HoL",
 				timeRange = true,
 				timelineIndex = 94,
 				timerStartOffset = -10,
-				uuid = "52d4dbfb-fcba-5954-ae49-dc6ffab81776",
+				uuid = "f35f664e-062a-64a1-b12f-82966251128e",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -8225,6 +8003,11 @@ local tbl =
 								
 								{
 									"e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+									true,
+								},
+								
+								{
+									"2a1b3bda-dff7-5d7e-964d-03cee8a78478",
 									true,
 								},
 							},
@@ -8281,6 +8064,16 @@ local tbl =
 						},
 						inheritedIndex = 3,
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "2a1b3bda-dff7-5d7e-964d-03cee8a78478",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 643.8,
 				name = "Dark Missinary",
@@ -8288,7 +8081,7 @@ local tbl =
 				timelineIndex = 94,
 				timerOffset = -10,
 				timerStartOffset = -10,
-				uuid = "9e7a7e68-ee0f-1b13-9ec9-555bbcfe762d",
+				uuid = "bceedb13-3748-bb47-868f-cc522e285d8b",
 				version = 2,
 			},
 		},
@@ -8318,6 +8111,11 @@ local tbl =
 								
 								{
 									"3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+									true,
+								},
+								
+								{
+									"eac79e93-a684-cf2f-8a86-b4c0be30c40e",
 									true,
 								},
 							},
@@ -8374,13 +8172,23 @@ local tbl =
 						},
 						inheritedIndex = 3,
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "eac79e93-a684-cf2f-8a86-b4c0be30c40e",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 643.8,
 				name = "Shake it off",
 				timeRange = true,
 				timelineIndex = 94,
 				timerStartOffset = -10,
-				uuid = "19bfdbcf-73fc-c927-a040-3d9432606d73",
+				uuid = "abfc1201-992b-c4ba-8d68-a5a3b32768cb",
 				version = 2,
 			},
 		},
@@ -8409,7 +8217,7 @@ local tbl =
 								},
 								
 								{
-									"136ef88f-f7d7-24db-9351-f9d8ef07f45e",
+									"5a1ae25d-df34-0407-9510-ee3e225e2cdc",
 									true,
 								},
 							},
@@ -8451,14 +8259,11 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventArgType = 2,
-							eventSpellName = "セレブレート・グッドタイムズ",
-							uuid = "136ef88f-f7d7-24db-9351-f9d8ef07f45e",
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "5a1ae25d-df34-0407-9510-ee3e225e2cdc",
 							version = 2,
 						},
-						inheritedIndex = 1,
 					},
 				},
 				mechanicTime = 643.8,
@@ -8468,7 +8273,7 @@ local tbl =
 				timelineIndex = 94,
 				timerOffset = -3,
 				timerStartOffset = -9,
-				uuid = "5bb5116e-00e9-ffac-bd6a-84a6c8f146b2",
+				uuid = "dbd5ca3f-25d8-88f5-92c2-5f5b6a67b383",
 				version = 2,
 			},
 		},
@@ -8503,6 +8308,11 @@ local tbl =
 									"a787167c-e665-8709-84d0-298a7dbe954a",
 									true,
 								},
+								
+								{
+									"d0434958-6780-9413-b2f2-b79ae1bb12d3",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -8557,6 +8367,16 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "d0434958-6780-9413-b2f2-b79ae1bb12d3",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 657.8,
 				name = "Veil",
@@ -8564,7 +8384,7 @@ local tbl =
 				timelineIndex = 96,
 				timerOffset = -10,
 				timerStartOffset = -10,
-				uuid = "d33e1110-e200-e039-b50b-e48b94b5416c",
+				uuid = "e34bd77f-7d09-d6d0-8fd5-693fb7a04ebe",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -8595,6 +8415,11 @@ local tbl =
 								
 								{
 									"a6929435-5dcb-3407-8d89-b38a0596d1ac",
+									true,
+								},
+								
+								{
+									"460aa844-c072-ce09-ac0d-abdee2b23003",
 									true,
 								},
 							},
@@ -8650,13 +8475,23 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "460aa844-c072-ce09-ac0d-abdee2b23003",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 657.8,
 				name = "HoL",
 				timeRange = true,
 				timelineIndex = 96,
 				timerStartOffset = -10,
-				uuid = "84a6c40e-876b-50f5-8718-8f6776572073",
+				uuid = "53b70f16-ab02-fcd4-84e1-13ce1408b90c",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -8687,6 +8522,11 @@ local tbl =
 								
 								{
 									"e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+									true,
+								},
+								
+								{
+									"2a1b3bda-dff7-5d7e-964d-03cee8a78478",
 									true,
 								},
 							},
@@ -8743,6 +8583,16 @@ local tbl =
 						},
 						inheritedIndex = 3,
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "2a1b3bda-dff7-5d7e-964d-03cee8a78478",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 657.8,
 				name = "Dark Missinary",
@@ -8750,7 +8600,7 @@ local tbl =
 				timelineIndex = 96,
 				timerOffset = -10,
 				timerStartOffset = -10,
-				uuid = "8a272b87-d5ab-b86b-a1a4-64fe35a0b556",
+				uuid = "8721e829-b566-96a6-ad32-82f31e743a15",
 				version = 2,
 			},
 		},
@@ -8780,6 +8630,11 @@ local tbl =
 								
 								{
 									"3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+									true,
+								},
+								
+								{
+									"eac79e93-a684-cf2f-8a86-b4c0be30c40e",
 									true,
 								},
 							},
@@ -8836,13 +8691,23 @@ local tbl =
 						},
 						inheritedIndex = 3,
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "eac79e93-a684-cf2f-8a86-b4c0be30c40e",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 657.8,
 				name = "Shake it off",
 				timeRange = true,
 				timelineIndex = 96,
 				timerStartOffset = -10,
-				uuid = "09be5732-b761-dcc5-8170-9d133d915e93",
+				uuid = "1ed5e4f3-c3b3-8b81-b124-637c9f081f75",
 				version = 2,
 			},
 		},
@@ -8871,7 +8736,7 @@ local tbl =
 								},
 								
 								{
-									"136ef88f-f7d7-24db-9351-f9d8ef07f45e",
+									"5a1ae25d-df34-0407-9510-ee3e225e2cdc",
 									true,
 								},
 							},
@@ -8913,14 +8778,11 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventArgType = 2,
-							eventSpellName = "セレブレート・グッドタイムズ",
-							uuid = "136ef88f-f7d7-24db-9351-f9d8ef07f45e",
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "5a1ae25d-df34-0407-9510-ee3e225e2cdc",
 							version = 2,
 						},
-						inheritedIndex = 1,
 					},
 				},
 				mechanicTime = 657.8,
@@ -8930,7 +8792,7 @@ local tbl =
 				timelineIndex = 96,
 				timerOffset = -3,
 				timerStartOffset = -9,
-				uuid = "635da8ae-d6b5-fe1a-9066-61b0167ddd6e",
+				uuid = "cf048c23-1678-c2d7-951e-a676880072f8",
 				version = 2,
 			},
 		},
@@ -9394,11 +9256,6 @@ local tbl =
 								},
 								
 								{
-									"136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-									true,
-								},
-								
-								{
 									"847e0945-73c7-4ea6-a7d5-3fffa678b831",
 									true,
 								},
@@ -9436,19 +9293,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventArgType = 2,
-							eventSpellName = "セレブレート・グッドタイムズ",
-							uuid = "136ef88f-f7d7-24db-9351-f9d8ef07f45e",
-							version = 2,
-						},
-						inheritedIndex = 1,
 					},
 					
 					{
@@ -9503,6 +9347,11 @@ local tbl =
 									"a787167c-e665-8709-84d0-298a7dbe954a",
 									true,
 								},
+								
+								{
+									"3278b9aa-1a37-d1df-b5f6-3d368cacf02b",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -9557,14 +9406,24 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "3278b9aa-1a37-d1df-b5f6-3d368cacf02b",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 809.5,
 				name = "Veil",
 				timeRange = true,
 				timelineIndex = 112,
 				timerOffset = -10,
-				timerStartOffset = -10,
-				uuid = "3437559a-5c46-baef-b127-a72a73784f45",
+				timerStartOffset = -5,
+				uuid = "b6cf5ce3-99ca-8f92-8a88-44d9cf9cbe0d",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -9595,6 +9454,11 @@ local tbl =
 								
 								{
 									"a6929435-5dcb-3407-8d89-b38a0596d1ac",
+									true,
+								},
+								
+								{
+									"436464bf-c205-abdf-b995-8c9d628989a7",
 									true,
 								},
 							},
@@ -9650,16 +9514,26 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "436464bf-c205-abdf-b995-8c9d628989a7",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 809.5,
 				name = "HoL",
 				timeRange = true,
 				timelineIndex = 112,
-				timerStartOffset = -10,
-				uuid = "1d0a3e77-7a59-c120-8df1-9d6ae3ca0e2e",
+				timerStartOffset = -5,
+				uuid = "743ab8e1-1c65-de8a-b4b1-7dcad91195bc",
 				version = 2,
 			},
-			inheritedIndex = 2,
+			inheritedIndex = 4,
 		},
 		
 		{
@@ -9687,6 +9561,11 @@ local tbl =
 								
 								{
 									"e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+									true,
+								},
+								
+								{
+									"6d0ba2f2-b132-2b13-a976-c2030d918e48",
 									true,
 								},
 							},
@@ -9743,14 +9622,24 @@ local tbl =
 						},
 						inheritedIndex = 3,
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "6d0ba2f2-b132-2b13-a976-c2030d918e48",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 809.5,
 				name = "Dark Missinary",
 				timeRange = true,
 				timelineIndex = 112,
 				timerOffset = -10,
-				timerStartOffset = -10,
-				uuid = "38f1e58c-c239-8e1f-a7a4-8bc25ad1c0b4",
+				timerStartOffset = -5,
+				uuid = "ac6e92f0-51c6-c90f-9af7-79f2951bb646",
 				version = 2,
 			},
 		},
@@ -9782,12 +9671,18 @@ local tbl =
 									"3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
 									true,
 								},
+								
+								{
+									"4120db3f-f271-0100-b9bd-5ebcfc771a91",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
 							uuid = "83ae2ac2-4e1e-673e-befc-12d5802ce1cd",
 							version = 2.1,
 						},
+						inheritedIndex = 1,
 					},
 				},
 				conditions = 
@@ -9836,13 +9731,23 @@ local tbl =
 						},
 						inheritedIndex = 3,
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "4120db3f-f271-0100-b9bd-5ebcfc771a91",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 809.5,
 				name = "Shake it off",
 				timeRange = true,
 				timelineIndex = 112,
-				timerStartOffset = -10,
-				uuid = "6b414158-2c61-18ca-84d6-d640c5aa0d84",
+				timerStartOffset = -5,
+				uuid = "624f120c-f3d9-7bcc-a65c-00b8e71c0544",
 				version = 2,
 			},
 		},
@@ -9871,7 +9776,7 @@ local tbl =
 								},
 								
 								{
-									"136ef88f-f7d7-24db-9351-f9d8ef07f45e",
+									"847e0945-73c7-4ea6-a7d5-3fffa678b831",
 									true,
 								},
 							},
@@ -9913,14 +9818,11 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventArgType = 2,
-							eventSpellName = "セレブレート・グッドタイムズ",
-							uuid = "136ef88f-f7d7-24db-9351-f9d8ef07f45e",
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "847e0945-73c7-4ea6-a7d5-3fffa678b831",
 							version = 2,
 						},
-						inheritedIndex = 1,
 					},
 				},
 				mechanicTime = 809.5,
@@ -9929,8 +9831,8 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 112,
 				timerOffset = -3,
-				timerStartOffset = -9,
-				uuid = "a3239963-356b-e665-9db2-623a9ab4db54",
+				timerStartOffset = -2,
+				uuid = "b86bafe0-4f6f-f605-9b48-2496524f4e64",
 				version = 2,
 			},
 		},
@@ -9965,6 +9867,11 @@ local tbl =
 									"a787167c-e665-8709-84d0-298a7dbe954a",
 									true,
 								},
+								
+								{
+									"3278b9aa-1a37-d1df-b5f6-3d368cacf02b",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -10019,14 +9926,24 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "3278b9aa-1a37-d1df-b5f6-3d368cacf02b",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 887.7,
 				name = "Veil",
 				timeRange = true,
 				timelineIndex = 120,
 				timerOffset = -10,
-				timerStartOffset = -10,
-				uuid = "44e93dbf-f999-7cb0-97d7-b3a61f665a37",
+				timerStartOffset = -5,
+				uuid = "1e18c3ca-fa7a-0999-82f6-afb7a265fdcd",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -10057,6 +9974,11 @@ local tbl =
 								
 								{
 									"a6929435-5dcb-3407-8d89-b38a0596d1ac",
+									true,
+								},
+								
+								{
+									"436464bf-c205-abdf-b995-8c9d628989a7",
 									true,
 								},
 							},
@@ -10112,16 +10034,26 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "436464bf-c205-abdf-b995-8c9d628989a7",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 887.7,
 				name = "HoL",
 				timeRange = true,
 				timelineIndex = 120,
-				timerStartOffset = -10,
-				uuid = "0897b73d-b44d-04f3-9eae-54068bcdaf05",
+				timerStartOffset = -5,
+				uuid = "7c4c11e5-bdfa-063b-af22-84f124d4e7fa",
 				version = 2,
 			},
-			inheritedIndex = 2,
+			inheritedIndex = 4,
 		},
 		
 		{
@@ -10149,6 +10081,11 @@ local tbl =
 								
 								{
 									"e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+									true,
+								},
+								
+								{
+									"6d0ba2f2-b132-2b13-a976-c2030d918e48",
 									true,
 								},
 							},
@@ -10205,14 +10142,24 @@ local tbl =
 						},
 						inheritedIndex = 3,
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "6d0ba2f2-b132-2b13-a976-c2030d918e48",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 887.7,
 				name = "Dark Missinary",
 				timeRange = true,
 				timelineIndex = 120,
 				timerOffset = -10,
-				timerStartOffset = -10,
-				uuid = "98ce7f2f-174e-ff17-8d86-6104c08f9f3c",
+				timerStartOffset = -5,
+				uuid = "befba16f-7b14-bac5-8959-56e4c2c89c77",
 				version = 2,
 			},
 		},
@@ -10244,12 +10191,18 @@ local tbl =
 									"3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
 									true,
 								},
+								
+								{
+									"4120db3f-f271-0100-b9bd-5ebcfc771a91",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
 							uuid = "83ae2ac2-4e1e-673e-befc-12d5802ce1cd",
 							version = 2.1,
 						},
+						inheritedIndex = 1,
 					},
 				},
 				conditions = 
@@ -10298,13 +10251,23 @@ local tbl =
 						},
 						inheritedIndex = 3,
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "4120db3f-f271-0100-b9bd-5ebcfc771a91",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 887.7,
 				name = "Shake it off",
 				timeRange = true,
 				timelineIndex = 120,
-				timerStartOffset = -10,
-				uuid = "c881cbfa-7627-ce81-a99c-372b4277ca7c",
+				timerStartOffset = -5,
+				uuid = "81b61bdd-c2e1-d30a-a6b7-f77e2e622279",
 				version = 2,
 			},
 		},
@@ -10333,7 +10296,7 @@ local tbl =
 								},
 								
 								{
-									"136ef88f-f7d7-24db-9351-f9d8ef07f45e",
+									"847e0945-73c7-4ea6-a7d5-3fffa678b831",
 									true,
 								},
 							},
@@ -10375,14 +10338,11 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventArgType = 2,
-							eventSpellName = "セレブレート・グッドタイムズ",
-							uuid = "136ef88f-f7d7-24db-9351-f9d8ef07f45e",
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "847e0945-73c7-4ea6-a7d5-3fffa678b831",
 							version = 2,
 						},
-						inheritedIndex = 1,
 					},
 				},
 				mechanicTime = 887.7,
@@ -10391,8 +10351,8 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 120,
 				timerOffset = -3,
-				timerStartOffset = -9,
-				uuid = "12847e2b-41cb-c253-b1ce-174626b16bb1",
+				timerStartOffset = -2,
+				uuid = "d155a039-9ff9-9b56-81a7-fd08020a7554",
 				version = 2,
 			},
 		},
