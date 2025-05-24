@@ -7655,7 +7655,7 @@ local tbl =
 							gVar = "ACR_RikuGNB3_CD",
 							ignoreWeaveRules = true,
 							targetContentID = 13822,
-							targetType = "ContentID",
+							targetType = "Current Target",
 							uuid = "a1aed48d-295b-da3e-978a-460aac09e87e",
 							version = 2.1,
 						},
