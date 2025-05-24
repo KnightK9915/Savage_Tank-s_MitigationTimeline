@@ -1500,6 +1500,99 @@ local tbl =
 			inheritedIndex = 7,
 		},
 	},
+	[40] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25751,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
+									true,
+								},
+								
+								{
+									"c2cb9d3b-196d-fc9d-b9a5-682ed76f4bf6",
+									true,
+								},
+								
+								{
+									"340c3be1-3657-85eb-9056-4d0de1887919",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "6d10d4e9-7468-c888-85d8-d824b8bd228d",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 23,
+							uuid = "bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetType = "Party",
+							partyTargetType = "Event Entity",
+							uuid = "c2cb9d3b-196d-fc9d-b9a5-682ed76f4bf6",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 25751,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							name = "CD BW",
+							uuid = "340c3be1-3657-85eb-9056-4d0de1887919",
+							version = 2,
+						},
+					},
+				},
+				eventType = 4,
+				loop = true,
+				mechanicTime = 174.5,
+				name = "BW when Marked",
+				timeRange = true,
+				timelineIndex = 40,
+				timerEndOffset = 70.099998474121,
+				timerStartOffset = -2,
+				uuid = "6bab5248-0f3e-bc25-9481-aefe9a793d87",
+				version = 2,
+			},
+		},
+	},
 	[60] = 
 	{
 		
