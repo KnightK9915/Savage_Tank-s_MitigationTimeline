@@ -1514,127 +1514,24 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 3541,
-							allowInterrupt = true,
-							atomicPriority = true,
-							conditions = 
-							{
-								
-								{
-									"206a8946-b8e4-5fe8-8025-4fc6d356169b",
-									true,
-								},
-								
-								{
-									"e3919995-cae9-0cf8-b822-9f6fb5f6b07b",
-									true,
-								},
-							},
-							gVar = "ACR_RikuPLD3_Tankbar_HolySheltron",
-							ignoreWeaveRules = true,
-							uuid = "db2d70ef-13fc-e740-9cad-b36dff6e18a1",
-							variableTogglesType = 3,
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							actionID = 3541,
-							allowInterrupt = true,
-							atomicPriority = true,
-							conditions = 
-							{
-								
-								{
-									"767d3f6d-cc1c-9c2a-83f6-031b0349a679",
-									true,
-								},
-								
-								{
-									"e3919995-cae9-0cf8-b822-9f6fb5f6b07b",
-									true,
-								},
-								
-								{
-									"82a27ad6-c697-6467-9141-4a5b73989f74",
-									true,
-								},
-							},
+							aType = "Lua",
+							actionLua = "local skillID = 3541\nlocal rangeCheck = 30\nlocal hpSelf = Player.hp.percent\n\nif hpSelf < 30 then\n  if ActionList:Get(1, skillID):IsReady(Player.id) then\n    ActionList:Get(1, skillID):Cast(Player.id)\n  end\n  return\nend\n\nif hpSelf < 50 then\n  local otherTank = nil\n  for _, member in pairs(EntityList.myparty) do\n    if member and member.role == 1 and member.id ~= Player.id and member.hp.current > 0 then\n      otherTank = member\n      break\n    end\n  end\n\n  if otherTank then\n    if otherTank.distance <= rangeCheck then\n      if ActionList:Get(1, skillID):IsReady(otherTank.id) then\n        ActionList:Get(1, skillID):Cast(otherTank.id)\n      end\n    else\n      if ActionList:Get(1, skillID):IsReady(Player.id) then\n        ActionList:Get(1, skillID):Cast(Player.id)\n      end\n    end\n  end\nend",
 							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Other Tank",
-							uuid = "5692a6c4-1fc1-8c1c-9cb9-7f7ce5bbef22",
+							uuid = "95049621-0be5-5075-ab77-5bfd5e466882",
 							version = 2.1,
 						},
-						inheritedIndex = 1,
 					},
 				},
 				conditions = 
 				{
-					
-					{
-						data = 
-						{
-							category = "Party",
-							conditionType = 4,
-							inRangeValue = 30,
-							partyTargetType = "Other Tank",
-							uuid = "206a8946-b8e4-5fe8-8025-4fc6d356169b",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							category = "Party",
-							comparator = 2,
-							conditionType = 4,
-							inRangeValue = 29.999000549316,
-							partyTargetType = "Other Tank",
-							uuid = "767d3f6d-cc1c-9c2a-83f6-031b0349a679",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							comparator = 2,
-							conditionType = 2,
-							hpValue = 50,
-							uuid = "e3919995-cae9-0cf8-b822-9f6fb5f6b07b",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Party",
-							comparator = 2,
-							conditionType = 2,
-							hpValue = 60,
-							partyTargetType = "Other Tank",
-							uuid = "82a27ad6-c697-6467-9141-4a5b73989f74",
-							version = 2,
-						},
-					},
 				},
-				eventType = 12,
 				loop = true,
 				mechanicTime = 224.3,
 				name = "Self Heal",
 				timeRange = true,
 				timelineIndex = 35,
 				timerEndOffset = 186.60000610352,
-				uuid = "b1548599-83ca-9eed-8f1c-13fa8b8eb7fa",
+				uuid = "dfd34d6d-2d07-f8de-b5fa-14f749694a54",
 				version = 2,
 			},
 		},
