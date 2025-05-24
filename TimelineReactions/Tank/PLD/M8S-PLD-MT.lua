@@ -827,7 +827,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 37,
 				timerOffset = -15,
-				timerStartOffset = -10,
+				timerStartOffset = -5,
 				uuid = "635c64eb-6063-5ce9-b8d6-d3c0dedf607e",
 				version = 2,
 			},
@@ -880,7 +880,7 @@ local tbl =
 				name = "Guardian (40)",
 				timeRange = true,
 				timelineIndex = 37,
-				timerStartOffset = -10,
+				timerStartOffset = -5,
 				uuid = "d03f32a8-517b-e01f-85d2-6194895fb9e3",
 				version = 2,
 			},
@@ -929,6 +929,7 @@ local tbl =
 						inheritedIndex = 1,
 					},
 				},
+				enabled = false,
 				mechanicTime = 162.4,
 				name = "Bulwalk (Block)",
 				timeRange = true,
@@ -1103,6 +1104,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 162.4,
 				name = "interven ST (15)",
 				timeRange = true,
@@ -1203,6 +1205,186 @@ local tbl =
 				uuid = "5996b9e3-8d4d-20c2-8ec6-a03e6b66bdc6",
 				version = 2,
 			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36920,
+							conditions = 
+							{
+								
+								{
+									"676ca69c-0ac1-a678-ba31-b9fc61a9444a",
+									true,
+								},
+								
+								{
+									"ebb58e98-a59d-afaf-aee7-7e52d8cc8f29",
+									true,
+								},
+								
+								{
+									"aceb9492-b930-0c6d-aaca-9fb9e7c2fb2a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "1ff7ecf5-69f2-0d51-9683-ee0ea48d1ed1",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 23,
+							uuid = "676ca69c-0ac1-a678-ba31-b9fc61a9444a",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetType = "Party",
+							partyTargetType = "Event Entity",
+							uuid = "ebb58e98-a59d-afaf-aee7-7e52d8cc8f29",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36920,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "aceb9492-b930-0c6d-aaca-9fb9e7c2fb2a",
+							version = 2,
+						},
+					},
+				},
+				eventType = 4,
+				mechanicTime = 174.5,
+				name = "Guardian (40)",
+				timeRange = true,
+				timelineIndex = 40,
+				timerEndOffset = 15,
+				uuid = "2e698d48-1c8d-97e4-93b4-2dd61fb53f3e",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 22,
+							conditions = 
+							{
+								
+								{
+									"4e3e3483-fb62-dc45-9419-2e6e2af590f7",
+									true,
+								},
+								
+								{
+									"ba0f4054-6946-0795-9e20-52b496c417fc",
+									true,
+								},
+								
+								{
+									"dda24e11-6d3b-8a80-80e0-e75a85a9579a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "cd802a09-49f8-cce6-9c5c-b944183b020a",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 23,
+							uuid = "4e3e3483-fb62-dc45-9419-2e6e2af590f7",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetType = "Party",
+							partyTargetType = "Event Entity",
+							uuid = "ba0f4054-6946-0795-9e20-52b496c417fc",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 22,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "dda24e11-6d3b-8a80-80e0-e75a85a9579a",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				eventType = 4,
+				mechanicTime = 174.5,
+				name = "Bulwalk (Block)",
+				timeRange = true,
+				timelineIndex = 40,
+				timerEndOffset = 25,
+				timerOffset = -8,
+				timerStartOffset = 15,
+				uuid = "d2b8cbbf-932f-8683-85b6-7f31fb3c78f1",
+				version = 2,
+			},
+			inheritedIndex = 6,
 		},
 	},
 	[62] = 
