@@ -49,7 +49,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 2,
 				timerOffset = -10,
-				timerStartOffset = -18.5,
+				timerStartOffset = -10,
 				uuid = "24d5de29-d597-87e3-ae22-7c2ecb7400a2",
 				version = 2,
 			},
@@ -152,13 +152,14 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 22.4,
 				name = "Rampart (20)",
 				timeRange = true,
 				timelineIndex = 2,
 				timerEndOffset = 9999,
 				timerOffset = -15,
-				timerStartOffset = -18.5,
+				timerStartOffset = -10,
 				uuid = "8412ed12-e565-e208-915c-14e94307f778",
 				version = 2,
 			},
@@ -211,7 +212,7 @@ local tbl =
 				name = "Great Nebula (40)",
 				timeRange = true,
 				timelineIndex = 2,
-				timerStartOffset = -13.5,
+				timerStartOffset = -5,
 				uuid = "6bcc7198-7660-e319-b926-7aed32320a6a",
 				version = 2,
 			},
@@ -534,6 +535,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 81.9,
 				name = "Camou (10)",
 				timeRange = true,
@@ -642,7 +644,6 @@ local tbl =
 						},
 					},
 				},
-				enabled = false,
 				mechanicTime = 81.9,
 				name = "Rampart (20)",
 				timeRange = true,
@@ -697,6 +698,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 81.9,
 				name = "Great Nebula (40)",
 				timeRange = true,
@@ -1062,7 +1064,7 @@ local tbl =
 							category = "Party",
 							comparator = 2,
 							conditionType = 2,
-							hpValue = 60,
+							hpValue = 70,
 							partyTargetType = "Main Tank",
 							uuid = "fdec73f5-3a9c-d888-91c8-e1a17f38eace",
 							version = 2,
@@ -1088,7 +1090,7 @@ local tbl =
 				timelineIndex = 17,
 				timerEndOffset = 34,
 				timerOffset = -1,
-				timerStartOffset = 1,
+				timerStartOffset = -15,
 				uuid = "02238237-4acb-ef1c-b94d-d8943cf01ed5",
 				version = 2,
 			},
@@ -1137,7 +1139,7 @@ local tbl =
 							category = "Party",
 							comparator = 2,
 							conditionType = 2,
-							hpValue = 60,
+							hpValue = 80,
 							partyTargetType = "Main Tank",
 							uuid = "7ea95bcb-8a32-aac2-883a-7834a0254830",
 							version = 2,
@@ -1232,7 +1234,7 @@ local tbl =
 							category = "Party",
 							comparator = 2,
 							conditionType = 2,
-							hpValue = 60,
+							hpValue = 70,
 							partyTargetType = "Main Tank",
 							uuid = "fdec73f5-3a9c-d888-91c8-e1a17f38eace",
 							version = 2,
@@ -1294,7 +1296,7 @@ local tbl =
 							category = "Party",
 							comparator = 2,
 							conditionType = 2,
-							hpValue = 60,
+							hpValue = 80,
 							partyTargetType = "Main Tank",
 							uuid = "7ea95bcb-8a32-aac2-883a-7834a0254830",
 							version = 2,
@@ -1681,6 +1683,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 207.1,
 				name = "Aurora (regen) ST",
 				timeRange = true,
@@ -1690,63 +1693,6 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 6,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 25758,
-							conditions = 
-							{
-								
-								{
-									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Main Tank",
-							uuid = "94511374-01bd-2218-adca-8213e488a837",
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 25758,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							dequeueIfLuaFalse = true,
-							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
-							version = 2,
-						},
-					},
-				},
-				enabled = false,
-				mechanicTime = 207.1,
-				name = "HoC (15) ST",
-				timeRange = true,
-				timelineIndex = 32,
-				timerOffset = -1,
-				timerStartOffset = -3,
-				uuid = "80db19dc-b090-204d-bab5-5276febef3e1",
-				version = 2,
-			},
-			inheritedIndex = 11,
 		},
 		
 		{
@@ -1764,7 +1710,7 @@ local tbl =
 				uuid = "4e538828-684b-db2a-b82b-98e4c9cb068a",
 				version = 2,
 			},
-			inheritedIndex = 9,
+			inheritedIndex = 7,
 		},
 		
 		{
@@ -1837,7 +1783,81 @@ local tbl =
 				uuid = "70947c7b-2758-5635-a056-4bcf78e4e4bc",
 				version = 2,
 			},
-			inheritedIndex = 10,
+			inheritedIndex = 8,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Main Tank",
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 207.1,
+				name = "HoC (15) ST",
+				timeRange = true,
+				timelineIndex = 32,
+				timerOffset = -1,
+				timerStartOffset = -3,
+				uuid = "80db19dc-b090-204d-bab5-5276febef3e1",
+				version = 2,
+			},
+			inheritedIndex = 9,
+		},
+	},
+	[35] = 
+	{
+		
+		{
+			data = 
+			{
+				name = "AutoTarget:Cat",
+				uuid = "dd959fc4-5b5b-40c2-9279-574a05c703df",
+				version = 2,
+			},
+			inheritedObjectUUID = "4307c8a1-868c-5ad2-be22-137cbe1cfbe2",
+			inheritedOverwrites = 
+			{
+				timerEndOffset = 186.60000610352,
+			},
 		},
 	},
 	[36] = 
@@ -2060,6 +2080,41 @@ local tbl =
 			inheritedIndex = 4,
 		},
 	},
+	[39] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							gVar = "ACR_RikuGNB3_CD",
+							holdActionDuration = 5,
+							holdActionID = 16159,
+							uuid = "00a7f83c-6765-cc8f-9a58-280db5393c1f",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 253.4,
+				name = "Hold Dot",
+				timeRange = true,
+				timelineIndex = 39,
+				timerEndOffset = 10,
+				uuid = "4fa212bc-35f7-321c-9ff3-36e54ec7cdc3",
+				version = 2,
+			},
+		},
+	},
 	[43] = 
 	{
 		
@@ -2244,6 +2299,41 @@ local tbl =
 			inheritedIndex = 3,
 		},
 	},
+	[47] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							gVar = "ACR_RikuGNB3_CD",
+							holdActionDuration = 5,
+							holdActionID = 16159,
+							uuid = "00a7f83c-6765-cc8f-9a58-280db5393c1f",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 314.6,
+				name = "Hold Dot",
+				timeRange = true,
+				timelineIndex = 47,
+				timerEndOffset = 10,
+				uuid = "6324e944-7706-46f3-89bc-b6ba5e06c472",
+				version = 2,
+			},
+		},
+	},
 	[48] = 
 	{
 		
@@ -2295,7 +2385,7 @@ local tbl =
 				timelineIndex = 48,
 				timerEndOffset = 71,
 				timerOffset = -15,
-				timerStartOffset = 0.5,
+				timerStartOffset = 1.5,
 				uuid = "9cad2414-b134-bcbf-9e34-5e9102972eab",
 				version = 2,
 			},
@@ -3231,6 +3321,162 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 11,
+		},
+	},
+	[66] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"fdec73f5-3a9c-d888-91c8-e1a17f38eace",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Main Tank",
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 60,
+							partyTargetType = "Main Tank",
+							uuid = "fdec73f5-3a9c-d888-91c8-e1a17f38eace",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 479,
+				name = "HoC (15)",
+				timeRange = true,
+				timelineIndex = 66,
+				timerEndOffset = 32.5,
+				timerOffset = -1,
+				timerStartOffset = 5,
+				uuid = "f00b07e8-add6-2085-bceb-4c35eccb59c8",
+				version = 2,
+			},
+			inheritedIndex = 9,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16151,
+							conditions = 
+							{
+								
+								{
+									"7ea95bcb-8a32-aac2-883a-7834a0254830",
+									true,
+								},
+								
+								{
+									"72456347-2b41-8c9c-9cce-296ea8585e56",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_Tankbar_AuroraOT",
+							ignoreWeaveRules = true,
+							targetType = "Main Tank",
+							uuid = "6416a938-cb0c-be7b-bba2-31cd8d471cd4",
+							variableTogglesType = 3,
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Party",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							partyTargetType = "Main Tank",
+							uuid = "7ea95bcb-8a32-aac2-883a-7834a0254830",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1835,
+							buffIDList = 
+							{
+								1835,
+							},
+							category = "Party",
+							partyTargetType = "Main Tank",
+							uuid = "72456347-2b41-8c9c-9cce-296ea8585e56",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				mechanicTime = 479,
+				name = "Aurora (regen) ST",
+				timeRange = true,
+				timelineIndex = 66,
+				timerEndOffset = 32.5,
+				timerStartOffset = 5,
+				uuid = "28e098a9-b5ea-b07c-a2f6-f430c091b03c",
+				version = 2,
+			},
+			inheritedIndex = 6,
 		},
 	},
 	[92] = 

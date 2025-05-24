@@ -1315,55 +1315,6 @@ local tbl =
 			inheritedIndex = 6,
 		},
 	},
-	[58] = 
-	{
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 25758,
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Detection Target",
-							uuid = "94511374-01bd-2218-adca-8213e488a837",
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							buffID = 2911,
-							category = "Party",
-							partyTargetSubType = "Lowest HP",
-							uuid = "8af01d4d-79ae-746f-82c6-14fbb80a86ac",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 208.7,
-				name = "HoC (15) Near",
-				timeRange = true,
-				timelineIndex = 58,
-				timerOffset = -1,
-				timerStartOffset = -3,
-				uuid = "bba3613d-5812-ce11-afa0-cce40fd3e4cb",
-				version = 2,
-			},
-			inheritedIndex = 9,
-		},
-	},
 	[61] = 
 	{
 		
