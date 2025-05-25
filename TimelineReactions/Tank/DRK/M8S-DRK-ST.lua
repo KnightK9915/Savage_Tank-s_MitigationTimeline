@@ -44,7 +44,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 43.3,
-				name = "TBN (25)",
+				name = "TBN (15)",
 				timeRange = true,
 				timelineIndex = 8,
 				timerOffset = -4,
@@ -422,6 +422,228 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 9,
+		},
+	},
+	[13] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25754,
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Main Tank",
+							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 75.2,
+				name = "Oblation (10)",
+				randomOffset = -1,
+				timeRange = true,
+				timelineIndex = 13,
+				timerOffset = -3,
+				timerStartOffset = -2,
+				uuid = "2646be44-2f3f-6068-913f-604b112447c1",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+	},
+	[14] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"84bfe452-55fd-1cb7-ac02-76052f1a208b",
+									true,
+								},
+								
+								{
+									"b70d1053-ebeb-8abe-a385-bf81ea578a26",
+									true,
+								},
+								
+								{
+									"8691ef64-2e35-ec07-bd26-41ad690fabd9",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Main Tank",
+							uuid = "c6f13b9f-f2c1-b7a0-bbb5-e78cc7c2c0d8",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 376,
+							uuid = "84bfe452-55fd-1cb7-ac02-76052f1a208b",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetType = "Tank",
+							partyTargetType = "Event Entity",
+							uuid = "b70d1053-ebeb-8abe-a385-bf81ea578a26",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "8691ef64-2e35-ec07-bd26-41ad690fabd9",
+							version = 2,
+						},
+					},
+				},
+				eventType = 4,
+				mechanicTime = 75.6,
+				name = "TBN (15)",
+				timeRange = true,
+				timelineIndex = 14,
+				timerOffset = -1,
+				timerStartOffset = -6,
+				uuid = "bb280bdb-f0b3-609d-bcd4-144672fa322f",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+	},
+	[17] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"84bfe452-55fd-1cb7-ac02-76052f1a208b",
+									true,
+								},
+								
+								{
+									"b70d1053-ebeb-8abe-a385-bf81ea578a26",
+									true,
+								},
+								
+								{
+									"8691ef64-2e35-ec07-bd26-41ad690fabd9",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Main Tank",
+							uuid = "c6f13b9f-f2c1-b7a0-bbb5-e78cc7c2c0d8",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 376,
+							uuid = "84bfe452-55fd-1cb7-ac02-76052f1a208b",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetType = "Tank",
+							partyTargetType = "Event Entity",
+							uuid = "b70d1053-ebeb-8abe-a385-bf81ea578a26",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "8691ef64-2e35-ec07-bd26-41ad690fabd9",
+							version = 2,
+						},
+					},
+				},
+				eventType = 4,
+				mechanicTime = 80.6,
+				name = "TBN (15)",
+				timeRange = true,
+				timelineIndex = 17,
+				timerOffset = -1,
+				timerStartOffset = -6,
+				uuid = "286fda15-ed29-8a10-8115-06fc51b5c721",
+				version = 2,
+			},
+			inheritedIndex = 2,
 		},
 	},
 	[25] = 
