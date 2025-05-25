@@ -1,5 +1,63 @@
 local tbl = 
 {
+	
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Main Tank",
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 11.2,
+				name = "HoC (15)",
+				timeRange = true,
+				timelineIndex = 1,
+				timerOffset = -1,
+				timerStartOffset = -2,
+				uuid = "f07b0e26-3ebe-62bf-abae-106e3ab75f71",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	}, 
 	[8] = 
 	{
 		
@@ -225,6 +283,7 @@ local tbl =
 					{
 						data = 
 						{
+							aType = "ACR",
 							actionID = 16151,
 							conditions = 
 							{
@@ -295,6 +354,7 @@ local tbl =
 					{
 						data = 
 						{
+							aType = "ACR",
 							actionID = 16151,
 							conditions = 
 							{
@@ -792,6 +852,7 @@ local tbl =
 					{
 						data = 
 						{
+							aType = "ACR",
 							actionID = 16151,
 							conditions = 
 							{
@@ -862,6 +923,7 @@ local tbl =
 					{
 						data = 
 						{
+							aType = "ACR",
 							actionID = 16151,
 							conditions = 
 							{
@@ -1131,7 +1193,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 37,
 				timerOffset = -10,
-				timerStartOffset = -5,
+				timerStartOffset = -10,
 				uuid = "70e830fb-10c4-9c74-85e7-97442f2bbc69",
 				version = 2,
 			},
@@ -1233,6 +1295,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 162.4,
 				name = "Rampart (20)",
 				timeRange = true,
@@ -1307,6 +1370,7 @@ local tbl =
 					{
 						data = 
 						{
+							aType = "ACR",
 							actionID = 16151,
 							conditions = 
 							{
@@ -1377,6 +1441,7 @@ local tbl =
 					{
 						data = 
 						{
+							aType = "ACR",
 							actionID = 16151,
 							conditions = 
 							{
@@ -1619,6 +1684,11 @@ local tbl =
 									"7d147bca-6f99-13a8-a080-ea5593fd3057",
 									true,
 								},
+								
+								{
+									"9b10b8e4-5200-24d2-b3f1-412b19d0a2bf",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -1667,6 +1737,22 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								3838,
+								1832,
+								2683,
+							},
+							category = "Self",
+							uuid = "9b10b8e4-5200-24d2-b3f1-412b19d0a2bf",
+							version = 2,
+						},
+					},
 				},
 				eventType = 4,
 				loop = true,
@@ -1675,7 +1761,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 40,
 				timerEndOffset = 70.099998474121,
-				timerStartOffset = -2,
+				timerStartOffset = 5,
 				uuid = "b9973b98-08ba-5768-9caa-f8717203abed",
 				version = 2,
 			},
@@ -1707,6 +1793,11 @@ local tbl =
 								
 								{
 									"30f02147-8e47-399f-99c5-279582aa248d",
+									true,
+								},
+								
+								{
+									"06cbd191-1a38-15eb-a3ef-7b2e4ce1959a",
 									true,
 								},
 							},
@@ -1757,13 +1848,30 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								3838,
+								1832,
+								2683,
+								1191,
+							},
+							category = "Self",
+							uuid = "06cbd191-1a38-15eb-a3ef-7b2e4ce1959a",
+							version = 2,
+						},
+					},
 				},
 				eventType = 4,
 				mechanicTime = 174.5,
 				name = "Great Nebula (40)",
 				timeRange = true,
 				timelineIndex = 40,
-				timerEndOffset = 15,
+				timerEndOffset = 70.099998474121,
 				uuid = "facfe49e-821d-71aa-b162-705d535f61c8",
 				version = 2,
 			},
@@ -1779,31 +1887,37 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 16140,
+							actionID = 7531,
 							conditions = 
 							{
 								
 								{
-									"aa4699c9-0f18-92c6-a594-ffced0dd4706",
+									"65c37171-7043-9286-a733-9f014d5432c5",
 									true,
 								},
 								
 								{
-									"0750db01-40f2-725c-a0ac-b2b28466dc0c",
+									"fa308e28-6875-2dd7-9d05-64ac27ee17bb",
 									true,
 								},
 								
 								{
-									"b0a6c0ff-c966-c1fe-bedc-2d9d7afd0ff6",
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+								
+								{
+									"7e6ab615-239e-a851-a1ec-500d84a2b225",
 									true,
 								},
 							},
 							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
+							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
-							uuid = "8e2ebaff-1382-38db-a880-5b374c35c9fd",
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
 							version = 2.1,
 						},
+						inheritedIndex = 1,
 					},
 				},
 				conditions = 
@@ -1815,7 +1929,7 @@ local tbl =
 							category = "Event",
 							eventArgType = 2,
 							eventMarkerID = 23,
-							uuid = "aa4699c9-0f18-92c6-a594-ffced0dd4706",
+							uuid = "65c37171-7043-9286-a733-9f014d5432c5",
 							version = 2,
 						},
 						inheritedIndex = 1,
@@ -1828,7 +1942,7 @@ local tbl =
 							conditionType = 10,
 							inGroupTargetType = "Party",
 							partyTargetType = "Event Entity",
-							uuid = "0750db01-40f2-725c-a0ac-b2b28466dc0c",
+							uuid = "fa308e28-6875-2dd7-9d05-64ac27ee17bb",
 							version = 2,
 						},
 						inheritedIndex = 2,
@@ -1837,24 +1951,41 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 16140,
+							actionID = 7531,
 							category = "Self",
 							comparator = 2,
 							conditionType = 4,
-							uuid = "b0a6c0ff-c966-c1fe-bedc-2d9d7afd0ff6",
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								3838,
+								1832,
+								2683,
+								1191,
+							},
+							category = "Self",
+							uuid = "7e6ab615-239e-a851-a1ec-500d84a2b225",
 							version = 2,
 						},
 					},
 				},
 				eventType = 4,
 				mechanicTime = 174.5,
-				name = "Camou (10)",
+				name = "Rampart (20)",
 				timeRange = true,
 				timelineIndex = 40,
-				timerEndOffset = 45,
-				timerOffset = -10,
+				timerEndOffset = 70.099998474121,
+				timerOffset = -15,
 				timerStartOffset = 15,
-				uuid = "bef14f63-51ac-1f04-9f8d-7c2e672827d4",
+				uuid = "93e733ce-4c20-e9a0-a065-9633eb96dfec",
 				version = 2,
 			},
 			inheritedIndex = 6,
@@ -2085,6 +2216,7 @@ local tbl =
 					{
 						data = 
 						{
+							aType = "ACR",
 							actionID = 16151,
 							conditions = 
 							{
@@ -2155,6 +2287,7 @@ local tbl =
 					{
 						data = 
 						{
+							aType = "ACR",
 							actionID = 16151,
 							conditions = 
 							{
@@ -2652,6 +2785,7 @@ local tbl =
 					{
 						data = 
 						{
+							aType = "ACR",
 							actionID = 16151,
 							conditions = 
 							{
@@ -2722,6 +2856,7 @@ local tbl =
 					{
 						data = 
 						{
+							aType = "ACR",
 							actionID = 16151,
 							conditions = 
 							{
@@ -3228,6 +3363,7 @@ local tbl =
 					{
 						data = 
 						{
+							aType = "ACR",
 							actionID = 16151,
 							conditions = 
 							{
@@ -3313,6 +3449,7 @@ local tbl =
 					{
 						data = 
 						{
+							aType = "ACR",
 							actionID = 16151,
 							conditions = 
 							{
@@ -4023,6 +4160,7 @@ local tbl =
 					{
 						data = 
 						{
+							aType = "ACR",
 							actionID = 16151,
 							conditions = 
 							{
@@ -4108,6 +4246,7 @@ local tbl =
 					{
 						data = 
 						{
+							aType = "ACR",
 							actionID = 16151,
 							conditions = 
 							{
@@ -4526,6 +4665,7 @@ local tbl =
 					{
 						data = 
 						{
+							aType = "ACR",
 							actionID = 16151,
 							conditions = 
 							{
@@ -4800,6 +4940,7 @@ local tbl =
 					{
 						data = 
 						{
+							aType = "ACR",
 							actionID = 16151,
 							conditions = 
 							{
@@ -5176,6 +5317,7 @@ local tbl =
 					{
 						data = 
 						{
+							aType = "ACR",
 							actionID = 16151,
 							conditions = 
 							{
@@ -5261,6 +5403,7 @@ local tbl =
 					{
 						data = 
 						{
+							aType = "ACR",
 							actionID = 16151,
 							conditions = 
 							{
