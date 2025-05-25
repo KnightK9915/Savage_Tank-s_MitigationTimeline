@@ -1,5 +1,61 @@
 local tbl = 
 {
+	
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Main Tank",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 11.2,
+				name = "TBN (15)",
+				timeRange = true,
+				timelineIndex = 1,
+				timerOffset = -4,
+				timerStartOffset = -2,
+				uuid = "d5b73bf5-cd62-8190-bcf5-cd213187f56f",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	}, 
 	[8] = 
 	{
 		
@@ -455,7 +511,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 13,
 				timerOffset = -3,
-				timerStartOffset = -2,
+				timerStartOffset = -1,
 				uuid = "2646be44-2f3f-6068-913f-604b112447c1",
 				version = 2,
 			},
@@ -1755,7 +1811,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 40,
 				timerEndOffset = 70.099998474121,
-				timerStartOffset = -2,
+				timerStartOffset = 5,
 				uuid = "2accb71a-96c3-22c8-816b-8a317b66f0b6",
 				version = 2,
 			},
