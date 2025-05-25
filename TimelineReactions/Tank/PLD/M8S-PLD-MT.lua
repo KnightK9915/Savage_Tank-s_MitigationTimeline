@@ -822,6 +822,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 162.4,
 				name = "Rampart (20)",
 				timeRange = true,
@@ -929,7 +930,6 @@ local tbl =
 						inheritedIndex = 1,
 					},
 				},
-				enabled = false,
 				mechanicTime = 162.4,
 				name = "Bulwalk (Block)",
 				timeRange = true,
@@ -1147,6 +1147,11 @@ local tbl =
 									"2e1c5b17-a022-c6cb-b575-87d888d23805",
 									true,
 								},
+								
+								{
+									"11444f78-c401-dd0e-8339-ac0a5dcb5384",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -1193,6 +1198,27 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								1191,
+								3829,
+								3830,
+								82,
+								2674,
+								2675,
+							},
+							category = "Self",
+							matchAnyBuff = true,
+							uuid = "11444f78-c401-dd0e-8339-ac0a5dcb5384",
+							version = 2,
+						},
+						inheritedIndex = 4,
+					},
 				},
 				eventType = 4,
 				loop = true,
@@ -1201,7 +1227,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 40,
 				timerEndOffset = 70.099998474121,
-				timerStartOffset = -2,
+				timerStartOffset = 5,
 				uuid = "5996b9e3-8d4d-20c2-8ec6-a03e6b66bdc6",
 				version = 2,
 			},
@@ -1233,6 +1259,11 @@ local tbl =
 								
 								{
 									"aceb9492-b930-0c6d-aaca-9fb9e7c2fb2a",
+									true,
+								},
+								
+								{
+									"3cd5e63f-399d-a21a-a49f-d0584bdc7945",
 									true,
 								},
 							},
@@ -1283,13 +1314,34 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								1191,
+								3829,
+								3830,
+								82,
+								2674,
+								2675,
+							},
+							category = "Self",
+							matchAnyBuff = true,
+							uuid = "3cd5e63f-399d-a21a-a49f-d0584bdc7945",
+							version = 2,
+						},
+						inheritedIndex = 4,
+					},
 				},
 				eventType = 4,
 				mechanicTime = 174.5,
 				name = "Guardian (40)",
 				timeRange = true,
 				timelineIndex = 40,
-				timerEndOffset = 15,
+				timerEndOffset = 70.099998474121,
 				uuid = "2e698d48-1c8d-97e4-93b4-2dd61fb53f3e",
 				version = 2,
 			},
@@ -1305,31 +1357,37 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 22,
+							actionID = 7531,
 							conditions = 
 							{
 								
 								{
-									"4e3e3483-fb62-dc45-9419-2e6e2af590f7",
+									"65c37171-7043-9286-a733-9f014d5432c5",
 									true,
 								},
 								
 								{
-									"ba0f4054-6946-0795-9e20-52b496c417fc",
+									"fa308e28-6875-2dd7-9d05-64ac27ee17bb",
 									true,
 								},
 								
 								{
-									"dda24e11-6d3b-8a80-80e0-e75a85a9579a",
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+								
+								{
+									"6b074db5-0807-398c-a522-4a3d43eeec7c",
 									true,
 								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
-							uuid = "cd802a09-49f8-cce6-9c5c-b944183b020a",
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
 							version = 2.1,
 						},
+						inheritedIndex = 1,
 					},
 				},
 				conditions = 
@@ -1341,7 +1399,7 @@ local tbl =
 							category = "Event",
 							eventArgType = 2,
 							eventMarkerID = 23,
-							uuid = "4e3e3483-fb62-dc45-9419-2e6e2af590f7",
+							uuid = "65c37171-7043-9286-a733-9f014d5432c5",
 							version = 2,
 						},
 						inheritedIndex = 1,
@@ -1354,7 +1412,7 @@ local tbl =
 							conditionType = 10,
 							inGroupTargetType = "Party",
 							partyTargetType = "Event Entity",
-							uuid = "ba0f4054-6946-0795-9e20-52b496c417fc",
+							uuid = "fa308e28-6875-2dd7-9d05-64ac27ee17bb",
 							version = 2,
 						},
 						inheritedIndex = 2,
@@ -1363,25 +1421,45 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 22,
+							actionID = 7531,
 							category = "Self",
 							comparator = 2,
 							conditionType = 4,
-							uuid = "dda24e11-6d3b-8a80-80e0-e75a85a9579a",
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
 							version = 2,
 						},
-						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								1191,
+								3829,
+								3830,
+								82,
+								2674,
+								2675,
+							},
+							category = "Self",
+							matchAnyBuff = true,
+							uuid = "6b074db5-0807-398c-a522-4a3d43eeec7c",
+							version = 2,
+						},
+						inheritedIndex = 4,
 					},
 				},
 				eventType = 4,
 				mechanicTime = 174.5,
-				name = "Bulwalk (Block)",
+				name = "Rampart (20)",
 				timeRange = true,
 				timelineIndex = 40,
-				timerEndOffset = 25,
-				timerOffset = -8,
+				timerEndOffset = 70.099998474121,
+				timerOffset = -15,
 				timerStartOffset = 15,
-				uuid = "d2b8cbbf-932f-8683-85b6-7f31fb3c78f1",
+				uuid = "30e70253-6774-d0e6-898c-cc7508cbd175",
 				version = 2,
 			},
 			inheritedIndex = 6,
