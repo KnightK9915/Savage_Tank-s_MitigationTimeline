@@ -1240,6 +1240,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 162.4,
 				name = "Rampart (20)",
 				timeRange = true,
@@ -1347,7 +1348,6 @@ local tbl =
 						},
 					},
 				},
-				enabled = false,
 				mechanicTime = 162.4,
 				name = "ToB (HP Upscale)",
 				timeRange = true,
@@ -1532,6 +1532,11 @@ local tbl =
 									"ce3da94f-055c-2659-807f-0c75678e97bf",
 									true,
 								},
+								
+								{
+									"04bf6872-3fa3-421b-99d9-31d4ecbb0afb",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -1580,6 +1585,25 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2678,
+								2679,
+								2680,
+								1191,
+								3832,
+								409,
+							},
+							category = "Self",
+							uuid = "04bf6872-3fa3-421b-99d9-31d4ecbb0afb",
+							version = 2,
+						},
+					},
 				},
 				eventType = 4,
 				loop = true,
@@ -1588,7 +1612,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 40,
 				timerEndOffset = 70.099998474121,
-				timerStartOffset = -2,
+				timerStartOffset = 5,
 				uuid = "a3cc3ea5-d66a-eac5-82c2-66b4402a62eb",
 				version = 2,
 			},
@@ -1620,6 +1644,11 @@ local tbl =
 								
 								{
 									"0aeec9c1-c189-d8ba-8695-4f2d2314a955",
+									true,
+								},
+								
+								{
+									"82fb8694-d438-8598-a2de-8ec76c3cb100",
 									true,
 								},
 							},
@@ -1670,13 +1699,32 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2678,
+								2679,
+								2680,
+								1191,
+								3832,
+								409,
+							},
+							category = "Self",
+							uuid = "82fb8694-d438-8598-a2de-8ec76c3cb100",
+							version = 2,
+						},
+					},
 				},
 				eventType = 4,
 				mechanicTime = 174.5,
 				name = "Damnation (40)",
 				timeRange = true,
 				timelineIndex = 40,
-				timerEndOffset = 15,
+				timerEndOffset = 70.099998474121,
 				timerOffset = -5,
 				uuid = "00589c95-3900-2ab6-a90e-f2f33df9457d",
 				version = 2,
@@ -1693,31 +1741,37 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 40,
+							actionID = 7531,
 							conditions = 
 							{
 								
 								{
-									"73389fbb-377e-035c-abf8-7787b730478b",
+									"65c37171-7043-9286-a733-9f014d5432c5",
 									true,
 								},
 								
 								{
-									"e11e1b0d-16d5-758c-a88e-4fa1e5df8e0a",
+									"fa308e28-6875-2dd7-9d05-64ac27ee17bb",
 									true,
 								},
 								
 								{
-									"79d32c05-7ccb-e6a2-9493-167f1c04431a",
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+								
+								{
+									"a0bd871e-95be-a3b3-a4f6-a577596f0ad6",
 									true,
 								},
 							},
 							endIfUsed = true,
-							gVar = "ACR_RikuWAR3_CD",
+							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
-							uuid = "9123327e-7223-9aa2-9e4b-6b502c61d83d",
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
 							version = 2.1,
 						},
+						inheritedIndex = 1,
 					},
 				},
 				conditions = 
@@ -1729,7 +1783,7 @@ local tbl =
 							category = "Event",
 							eventArgType = 2,
 							eventMarkerID = 23,
-							uuid = "73389fbb-377e-035c-abf8-7787b730478b",
+							uuid = "65c37171-7043-9286-a733-9f014d5432c5",
 							version = 2,
 						},
 						inheritedIndex = 1,
@@ -1742,7 +1796,7 @@ local tbl =
 							conditionType = 10,
 							inGroupTargetType = "Party",
 							partyTargetType = "Event Entity",
-							uuid = "e11e1b0d-16d5-758c-a88e-4fa1e5df8e0a",
+							uuid = "fa308e28-6875-2dd7-9d05-64ac27ee17bb",
 							version = 2,
 						},
 						inheritedIndex = 2,
@@ -1751,24 +1805,43 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 40,
+							actionID = 7531,
 							category = "Self",
 							comparator = 2,
 							conditionType = 4,
-							uuid = "79d32c05-7ccb-e6a2-9493-167f1c04431a",
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2678,
+								2679,
+								2680,
+								1191,
+								3832,
+								409,
+							},
+							category = "Self",
+							uuid = "a0bd871e-95be-a3b3-a4f6-a577596f0ad6",
 							version = 2,
 						},
 					},
 				},
 				eventType = 4,
 				mechanicTime = 174.5,
-				name = "ToB (HP Upscale)",
+				name = "Rampart (20)",
 				timeRange = true,
 				timelineIndex = 40,
-				timerEndOffset = 25,
-				timerOffset = -1,
+				timerEndOffset = 70.099998474121,
+				timerOffset = -15,
 				timerStartOffset = 15,
-				uuid = "7f789ab2-1bc8-800c-a2cd-3bcb9f941689",
+				uuid = "8c8b8ced-ce98-e57c-bb21-11daa61099f6",
 				version = 2,
 			},
 			inheritedIndex = 6,
@@ -1842,7 +1915,7 @@ local tbl =
 				uuid = "db42ef94-3235-9e9b-900f-800e3cdfefef",
 				version = 2,
 			},
-			inheritedIndex = 7,
+			inheritedIndex = 8,
 		},
 	},
 	[62] = 
