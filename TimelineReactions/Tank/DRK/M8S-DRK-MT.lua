@@ -1110,6 +1110,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 162.4,
 				name = "Rampart (20)",
 				timeRange = true,
@@ -1583,6 +1584,11 @@ local tbl =
 									"5cf17619-127d-b210-88cb-64658ca76476",
 									true,
 								},
+								
+								{
+									"41335415-755d-5c7e-8791-721e7ab3a6f3",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -1630,13 +1636,33 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2682,
+								1178,
+								746,
+								1191,
+								3835,
+								810,
+							},
+							category = "Self",
+							uuid = "41335415-755d-5c7e-8791-721e7ab3a6f3",
+							version = 2,
+						},
+						inheritedIndex = 4,
+					},
 				},
 				eventType = 4,
 				mechanicTime = 174.5,
 				name = "Vigil (40)",
 				timeRange = true,
 				timelineIndex = 40,
-				timerEndOffset = 15,
+				timerEndOffset = 70.099998474121,
 				timerOffset = -5,
 				uuid = "87df4fb7-f1d3-ef67-8237-dae8fb2e378e",
 				version = 2,
@@ -1653,30 +1679,37 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 3634,
+							actionID = 7531,
 							conditions = 
 							{
 								
 								{
-									"9c106c0f-0790-8b52-ae57-3a31e0b7e723",
+									"65c37171-7043-9286-a733-9f014d5432c5",
 									true,
 								},
 								
 								{
-									"0e19fc2c-599b-eeb4-9cc4-976d9a30f004",
+									"fa308e28-6875-2dd7-9d05-64ac27ee17bb",
 									true,
 								},
 								
 								{
-									"332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+								
+								{
+									"bee30724-b01a-e4c5-8fb3-db950284acf0",
 									true,
 								},
 							},
-							gVar = "ACR_RikuDRK3_CD",
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
-							uuid = "85c81a2a-1fc1-bba8-a315-e5438e54b390",
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
 							version = 2.1,
 						},
+						inheritedIndex = 1,
 					},
 				},
 				conditions = 
@@ -1688,7 +1721,7 @@ local tbl =
 							category = "Event",
 							eventArgType = 2,
 							eventMarkerID = 23,
-							uuid = "9c106c0f-0790-8b52-ae57-3a31e0b7e723",
+							uuid = "65c37171-7043-9286-a733-9f014d5432c5",
 							version = 2,
 						},
 						inheritedIndex = 1,
@@ -1701,7 +1734,7 @@ local tbl =
 							conditionType = 10,
 							inGroupTargetType = "Party",
 							partyTargetType = "Event Entity",
-							uuid = "0e19fc2c-599b-eeb4-9cc4-976d9a30f004",
+							uuid = "fa308e28-6875-2dd7-9d05-64ac27ee17bb",
 							version = 2,
 						},
 						inheritedIndex = 2,
@@ -1710,27 +1743,47 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 3634,
+							actionID = 7531,
 							category = "Self",
 							comparator = 2,
 							conditionType = 4,
-							uuid = "332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
 							version = 2,
 						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2682,
+								1178,
+								746,
+								1191,
+								3835,
+								810,
+							},
+							category = "Self",
+							uuid = "bee30724-b01a-e4c5-8fb3-db950284acf0",
+							version = 2,
+						},
+						inheritedIndex = 4,
 					},
 				},
 				eventType = 4,
 				mechanicTime = 174.5,
-				name = "Dark Mind (M20)",
+				name = "Rampart (20)",
 				timeRange = true,
 				timelineIndex = 40,
-				timerEndOffset = 30,
-				timerOffset = -5,
+				timerEndOffset = 70.099998474121,
+				timerOffset = -15,
 				timerStartOffset = 15,
-				uuid = "f7fd8ffc-fde4-58c9-8b57-7d210b309983",
+				uuid = "5f9fcd67-5fe9-f561-a45d-ce04441f4d62",
 				version = 2,
 			},
-			inheritedIndex = 5,
+			inheritedIndex = 6,
 		},
 		
 		{
@@ -1828,7 +1881,7 @@ local tbl =
 				uuid = "b49c4d85-ecab-b283-96af-ab3518fe80db",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 8,
 		},
 	},
 	[62] = 
