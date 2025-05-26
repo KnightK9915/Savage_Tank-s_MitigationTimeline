@@ -1363,7 +1363,12 @@ local tbl =
 								},
 								
 								{
-									"4c5c107d-4818-e1a6-8104-037478ecbc05",
+									"b2724a7f-85d0-8270-897b-4f0f1da3ee39",
+									true,
+								},
+								
+								{
+									"059f60e3-e3cd-75e1-bba2-f225d888d7e1",
 									true,
 								},
 							},
@@ -1435,6 +1440,33 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
 							uuid = "4c5c107d-4818-e1a6-8104-037478ecbc05",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
+							uuid = "b2724a7f-85d0-8270-897b-4f0f1da3ee39",
+							version = 2,
+						},
+						inheritedIndex = 6,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								82,
+								1836,
+							},
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "059f60e3-e3cd-75e1-bba2-f225d888d7e1",
 							version = 2,
 						},
 					},
@@ -3281,7 +3313,12 @@ local tbl =
 								},
 								
 								{
-									"b220c1ca-a6ab-9e05-b37b-b46909668ad1",
+									"637bc307-1ea9-6ff6-859a-983fa23327cd",
+									true,
+								},
+								
+								{
+									"ac3eef02-02d9-d41e-875b-6d136c96ad98",
 									true,
 								},
 							},
@@ -3353,6 +3390,33 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
 							uuid = "b220c1ca-a6ab-9e05-b37b-b46909668ad1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
+							uuid = "637bc307-1ea9-6ff6-859a-983fa23327cd",
+							version = 2,
+						},
+						inheritedIndex = 6,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								82,
+								1836,
+							},
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "ac3eef02-02d9-d41e-875b-6d136c96ad98",
 							version = 2,
 						},
 					},

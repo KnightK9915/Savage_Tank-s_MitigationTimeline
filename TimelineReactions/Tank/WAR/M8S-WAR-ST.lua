@@ -1363,7 +1363,12 @@ local tbl =
 								},
 								
 								{
-									"4c5c107d-4818-e1a6-8104-037478ecbc05",
+									"b2724a7f-85d0-8270-897b-4f0f1da3ee39",
+									true,
+								},
+								
+								{
+									"059f60e3-e3cd-75e1-bba2-f225d888d7e1",
 									true,
 								},
 							},
@@ -1438,13 +1443,40 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
+							uuid = "b2724a7f-85d0-8270-897b-4f0f1da3ee39",
+							version = 2,
+						},
+						inheritedIndex = 6,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								82,
+								1836,
+							},
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "059f60e3-e3cd-75e1-bba2-f225d888d7e1",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 119.9,
 				name = "BW/NF (for regen)",
 				timeRange = true,
 				timelineIndex = 25,
 				timerStartOffset = -0.5,
-				uuid = "097ed9a2-5600-a35c-ac6d-392cb722c47e",
+				uuid = "18fb9926-cca9-9e2f-a529-62ad23b4865c",
 				version = 2,
 			},
 			inheritedIndex = 7,
@@ -3281,7 +3313,12 @@ local tbl =
 								},
 								
 								{
-									"b220c1ca-a6ab-9e05-b37b-b46909668ad1",
+									"637bc307-1ea9-6ff6-859a-983fa23327cd",
+									true,
+								},
+								
+								{
+									"ac3eef02-02d9-d41e-875b-6d136c96ad98",
 									true,
 								},
 							},
@@ -3356,13 +3393,40 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
+							uuid = "637bc307-1ea9-6ff6-859a-983fa23327cd",
+							version = 2,
+						},
+						inheritedIndex = 6,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								82,
+								1836,
+							},
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "ac3eef02-02d9-d41e-875b-6d136c96ad98",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 379.4,
 				name = "BW/NF (for regen)",
 				timeRange = true,
 				timelineIndex = 65,
 				timerStartOffset = -0.5,
-				uuid = "2225beb2-cc1f-9587-a250-72705eb961ad",
+				uuid = "69dffb10-fe7b-0aa9-a205-3af679cffbe7",
 				version = 2,
 			},
 			inheritedIndex = 7,
@@ -3435,7 +3499,7 @@ local tbl =
 				uuid = "005142ba-cdcf-42d0-bc50-0decdbc95a9d",
 				version = 2,
 			},
-			inheritedIndex = 8,
+			inheritedIndex = 9,
 		},
 	},
 	[82] = 
