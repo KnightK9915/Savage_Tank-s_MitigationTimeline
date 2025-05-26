@@ -1185,7 +1185,6 @@ local tbl =
 							buffIDList = 
 							{
 								82,
-								1836,
 							},
 							category = "Party",
 							partyTargetType = "Other Tank",
@@ -2672,7 +2671,6 @@ local tbl =
 							buffIDList = 
 							{
 								82,
-								1836,
 							},
 							category = "Party",
 							partyTargetType = "Other Tank",
