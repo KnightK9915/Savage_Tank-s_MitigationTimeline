@@ -348,17 +348,87 @@ local tbl =
 					{
 						data = 
 						{
+							aType = "Lua",
+							actionLua = "data.hasGust = true\nself.used=true",
+							conditions = 
+							{
+								
+								{
+									"3f7ab2b5-2abf-8740-b2f7-62ed352a7013",
+									true,
+								},
+								
+								{
+									"195c3228-4c6e-eb63-875a-e07bfe5ecae4",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_TensorWeeb3_CD",
+							name = "Record Gust Marker",
+							uuid = "0478aa81-f7e3-ff56-83e2-39146a8c6059",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							dequeueIfLuaFalse = true,
+							eventArgType = 2,
+							eventMarkerID = 376,
+							name = "Gust Marker",
+							uuid = "195c3228-4c6e-eb63-875a-e07bfe5ecae4",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							dequeueIfLuaFalse = true,
+							eventArgType = 2,
+							inGroupTargetType = "Tank",
+							name = "Has Gust Marker",
+							partyTargetType = "Event Entity",
+							uuid = "3f7ab2b5-2abf-8740-b2f7-62ed352a7013",
+							version = 2,
+						},
+					},
+				},
+				eventType = 4,
+				mechanicTime = 75.6,
+				name = "Check Gust Marker",
+				timeRange = true,
+				timelineIndex = 14,
+				timerStartOffset = -7,
+				uuid = "d241b8a7-84b6-4c21-9563-dd3392b00572",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 25746,
 							conditions = 
 							{
 								
 								{
-									"587ec071-8607-c8c6-864f-65251ad5b572",
-									true,
-								},
-								
-								{
-									"36e95342-0d42-e768-b0b9-bc0e975d8582",
+									"2e75846a-d3c9-50d4-b506-5050e6f3b89c",
 									true,
 								},
 								
@@ -388,12 +458,7 @@ local tbl =
 							{
 								
 								{
-									"587ec071-8607-c8c6-864f-65251ad5b572",
-									true,
-								},
-								
-								{
-									"36e95342-0d42-e768-b0b9-bc0e975d8582",
+									"2e75846a-d3c9-50d4-b506-5050e6f3b89c",
 									true,
 								},
 								
@@ -421,26 +486,14 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Event",
-							eventArgType = 2,
-							eventMarkerID = 376,
-							uuid = "587ec071-8607-c8c6-864f-65251ad5b572",
+							category = "Lua",
+							conditionLua = "return data.hasGust",
+							dequeueIfLuaFalse = true,
+							name = "Check Gust Marker",
+							uuid = "2e75846a-d3c9-50d4-b506-5050e6f3b89c",
 							version = 2,
 						},
 						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							category = "Party",
-							conditionType = 10,
-							inGroupTargetType = "Tank",
-							partyTargetType = "Event Entity",
-							uuid = "36e95342-0d42-e768-b0b9-bc0e975d8582",
-							version = 2,
-						},
-						inheritedIndex = 2,
 					},
 					
 					{
@@ -475,13 +528,12 @@ local tbl =
 						},
 					},
 				},
-				eventType = 4,
 				mechanicTime = 75.6,
 				name = "sheltron/interven (15)",
 				timeRange = true,
 				timelineIndex = 14,
 				timerStartOffset = -2,
-				uuid = "0498467c-3947-52c4-bb42-92a9a53f7902",
+				uuid = "653600d1-f2bd-8f9f-b361-71848d3db5ed",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -499,17 +551,87 @@ local tbl =
 					{
 						data = 
 						{
+							aType = "Lua",
+							actionLua = "data.hasGust = true\nself.used=true",
+							conditions = 
+							{
+								
+								{
+									"3f7ab2b5-2abf-8740-b2f7-62ed352a7013",
+									true,
+								},
+								
+								{
+									"195c3228-4c6e-eb63-875a-e07bfe5ecae4",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_TensorWeeb3_CD",
+							name = "Record Gust Marker",
+							uuid = "0478aa81-f7e3-ff56-83e2-39146a8c6059",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							dequeueIfLuaFalse = true,
+							eventArgType = 2,
+							eventMarkerID = 376,
+							name = "Gust Marker",
+							uuid = "195c3228-4c6e-eb63-875a-e07bfe5ecae4",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							dequeueIfLuaFalse = true,
+							eventArgType = 2,
+							inGroupTargetType = "Tank",
+							name = "Has Gust Marker",
+							partyTargetType = "Event Entity",
+							uuid = "3f7ab2b5-2abf-8740-b2f7-62ed352a7013",
+							version = 2,
+						},
+					},
+				},
+				eventType = 4,
+				mechanicTime = 80.6,
+				name = "Check Gust Marker",
+				timeRange = true,
+				timelineIndex = 17,
+				timerStartOffset = -7,
+				uuid = "127367c4-df47-53a9-a928-3a10f582e766",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 25746,
 							conditions = 
 							{
 								
 								{
-									"587ec071-8607-c8c6-864f-65251ad5b572",
-									true,
-								},
-								
-								{
-									"36e95342-0d42-e768-b0b9-bc0e975d8582",
+									"2e75846a-d3c9-50d4-b506-5050e6f3b89c",
 									true,
 								},
 								
@@ -539,12 +661,7 @@ local tbl =
 							{
 								
 								{
-									"587ec071-8607-c8c6-864f-65251ad5b572",
-									true,
-								},
-								
-								{
-									"36e95342-0d42-e768-b0b9-bc0e975d8582",
+									"2e75846a-d3c9-50d4-b506-5050e6f3b89c",
 									true,
 								},
 								
@@ -572,26 +689,14 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Event",
-							eventArgType = 2,
-							eventMarkerID = 376,
-							uuid = "587ec071-8607-c8c6-864f-65251ad5b572",
+							category = "Lua",
+							conditionLua = "return data.hasGust",
+							dequeueIfLuaFalse = true,
+							name = "Check Gust Marker",
+							uuid = "2e75846a-d3c9-50d4-b506-5050e6f3b89c",
 							version = 2,
 						},
 						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							category = "Party",
-							conditionType = 10,
-							inGroupTargetType = "Tank",
-							partyTargetType = "Event Entity",
-							uuid = "36e95342-0d42-e768-b0b9-bc0e975d8582",
-							version = 2,
-						},
-						inheritedIndex = 2,
 					},
 					
 					{
@@ -626,13 +731,12 @@ local tbl =
 						},
 					},
 				},
-				eventType = 4,
 				mechanicTime = 80.6,
 				name = "sheltron/interven (15)",
 				timeRange = true,
 				timelineIndex = 17,
 				timerStartOffset = -2,
-				uuid = "d3cea0dc-3f8e-7997-b30e-b1468129553b",
+				uuid = "0028a373-b731-5f5b-98b0-517148878e69",
 				version = 2,
 			},
 			inheritedIndex = 4,
