@@ -630,6 +630,220 @@ local tbl =
 			},
 		},
 	}, 
+	[8] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7386,
+							conditions = 
+							{
+								
+								{
+									"611ca405-b04a-1e86-a1f1-aecb345475d2",
+									true,
+								},
+								
+								{
+									"a9891ca9-8fd7-baa2-99ef-f20206b70f14",
+									true,
+								},
+								
+								{
+									"e500c58e-1218-7823-a4ea-7a713f2a7d9a",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "51d350e0-8849-9b6c-a5a4-20276557f896",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16461,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"611ca405-b04a-1e86-a1f1-aecb345475d2",
+									true,
+								},
+								
+								{
+									"a9891ca9-8fd7-baa2-99ef-f20206b70f14",
+									true,
+								},
+								
+								{
+									"14efd85d-29df-39be-baaf-798e68036b5d",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "b0998e47-a8f4-0394-afdc-1dd02f056135",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36926,
+							conditions = 
+							{
+								
+								{
+									"611ca405-b04a-1e86-a1f1-aecb345475d2",
+									true,
+								},
+								
+								{
+									"a9891ca9-8fd7-baa2-99ef-f20206b70f14",
+									true,
+								},
+								
+								{
+									"cb63c005-5c89-4773-bcc4-ad4044afe0dd",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "5ae83202-5dc5-1d00-9b22-e4701e255c86",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36934,
+							conditions = 
+							{
+								
+								{
+									"611ca405-b04a-1e86-a1f1-aecb345475d2",
+									true,
+								},
+								
+								{
+									"a9891ca9-8fd7-baa2-99ef-f20206b70f14",
+									true,
+								},
+								
+								{
+									"528b117e-4fdb-f7ac-a35c-303263e32afb",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "522a2042-0d2f-4a70-9c87-39328d85965d",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							conditionType = 6,
+							inRangeValue = 6,
+							uuid = "611ca405-b04a-1e86-a1f1-aecb345475d2",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							uuid = "a9891ca9-8fd7-baa2-99ef-f20206b70f14",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "WARRIOR",
+							name = "Warrior",
+							uuid = "e500c58e-1218-7823-a4ea-7a713f2a7d9a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "Paladin",
+							uuid = "14efd85d-29df-39be-baaf-798e68036b5d",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "Darkknight",
+							uuid = "cb63c005-5c89-4773-bcc4-ad4044afe0dd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "Gunbreaker",
+							uuid = "528b117e-4fdb-f7ac-a35c-303263e32afb",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 43.3,
+				name = "Instant Dash",
+				timeRange = true,
+				timelineIndex = 8,
+				timerEndOffset = 5,
+				timerStartOffset = 0.5,
+				uuid = "72d74c3d-f070-e2c0-8ddb-1af79a0b1ead",
+				version = 2,
+			},
+		},
+	},
 	[9] = 
 	{
 		
@@ -2756,6 +2970,217 @@ local tbl =
 				version = 2,
 			},
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7386,
+							conditions = 
+							{
+								
+								{
+									"611ca405-b04a-1e86-a1f1-aecb345475d2",
+									true,
+								},
+								
+								{
+									"a9891ca9-8fd7-baa2-99ef-f20206b70f14",
+									true,
+								},
+								
+								{
+									"e500c58e-1218-7823-a4ea-7a713f2a7d9a",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "51d350e0-8849-9b6c-a5a4-20276557f896",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16461,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"611ca405-b04a-1e86-a1f1-aecb345475d2",
+									true,
+								},
+								
+								{
+									"a9891ca9-8fd7-baa2-99ef-f20206b70f14",
+									true,
+								},
+								
+								{
+									"14efd85d-29df-39be-baaf-798e68036b5d",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "b0998e47-a8f4-0394-afdc-1dd02f056135",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36926,
+							conditions = 
+							{
+								
+								{
+									"611ca405-b04a-1e86-a1f1-aecb345475d2",
+									true,
+								},
+								
+								{
+									"a9891ca9-8fd7-baa2-99ef-f20206b70f14",
+									true,
+								},
+								
+								{
+									"cb63c005-5c89-4773-bcc4-ad4044afe0dd",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "5ae83202-5dc5-1d00-9b22-e4701e255c86",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36934,
+							conditions = 
+							{
+								
+								{
+									"611ca405-b04a-1e86-a1f1-aecb345475d2",
+									true,
+								},
+								
+								{
+									"a9891ca9-8fd7-baa2-99ef-f20206b70f14",
+									true,
+								},
+								
+								{
+									"528b117e-4fdb-f7ac-a35c-303263e32afb",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "522a2042-0d2f-4a70-9c87-39328d85965d",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							conditionType = 6,
+							inRangeValue = 6,
+							uuid = "611ca405-b04a-1e86-a1f1-aecb345475d2",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							uuid = "a9891ca9-8fd7-baa2-99ef-f20206b70f14",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "WARRIOR",
+							name = "Warrior",
+							uuid = "e500c58e-1218-7823-a4ea-7a713f2a7d9a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "Paladin",
+							uuid = "14efd85d-29df-39be-baaf-798e68036b5d",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "Darkknight",
+							uuid = "cb63c005-5c89-4773-bcc4-ad4044afe0dd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "Gunbreaker",
+							uuid = "528b117e-4fdb-f7ac-a35c-303263e32afb",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 162.4,
+				name = "Instant Dash",
+				timeRange = true,
+				timelineIndex = 37,
+				timerEndOffset = 5,
+				timerStartOffset = 0.5,
+				uuid = "03386301-0500-ea43-9c9a-deb81ad06f9f",
+				version = 2,
+			},
+		},
 	},
 	[42] = 
 	{
@@ -4015,6 +4440,217 @@ local tbl =
 				timerOffset = -3,
 				timerStartOffset = -2,
 				uuid = "6602724d-8cab-9f9c-b463-eb672c727dba",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7386,
+							conditions = 
+							{
+								
+								{
+									"611ca405-b04a-1e86-a1f1-aecb345475d2",
+									true,
+								},
+								
+								{
+									"a9891ca9-8fd7-baa2-99ef-f20206b70f14",
+									true,
+								},
+								
+								{
+									"e500c58e-1218-7823-a4ea-7a713f2a7d9a",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "51d350e0-8849-9b6c-a5a4-20276557f896",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16461,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"611ca405-b04a-1e86-a1f1-aecb345475d2",
+									true,
+								},
+								
+								{
+									"a9891ca9-8fd7-baa2-99ef-f20206b70f14",
+									true,
+								},
+								
+								{
+									"14efd85d-29df-39be-baaf-798e68036b5d",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "b0998e47-a8f4-0394-afdc-1dd02f056135",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36926,
+							conditions = 
+							{
+								
+								{
+									"611ca405-b04a-1e86-a1f1-aecb345475d2",
+									true,
+								},
+								
+								{
+									"a9891ca9-8fd7-baa2-99ef-f20206b70f14",
+									true,
+								},
+								
+								{
+									"cb63c005-5c89-4773-bcc4-ad4044afe0dd",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "5ae83202-5dc5-1d00-9b22-e4701e255c86",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36934,
+							conditions = 
+							{
+								
+								{
+									"611ca405-b04a-1e86-a1f1-aecb345475d2",
+									true,
+								},
+								
+								{
+									"a9891ca9-8fd7-baa2-99ef-f20206b70f14",
+									true,
+								},
+								
+								{
+									"528b117e-4fdb-f7ac-a35c-303263e32afb",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "522a2042-0d2f-4a70-9c87-39328d85965d",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							conditionType = 6,
+							inRangeValue = 6,
+							uuid = "611ca405-b04a-1e86-a1f1-aecb345475d2",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							uuid = "a9891ca9-8fd7-baa2-99ef-f20206b70f14",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "WARRIOR",
+							name = "Warrior",
+							uuid = "e500c58e-1218-7823-a4ea-7a713f2a7d9a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "Paladin",
+							uuid = "14efd85d-29df-39be-baaf-798e68036b5d",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "Darkknight",
+							uuid = "cb63c005-5c89-4773-bcc4-ad4044afe0dd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "Gunbreaker",
+							uuid = "528b117e-4fdb-f7ac-a35c-303263e32afb",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 365.9,
+				name = "Instant Dash",
+				timeRange = true,
+				timelineIndex = 62,
+				timerEndOffset = 5,
+				timerStartOffset = 0.5,
+				uuid = "182bcec4-276d-9b8a-b5ca-08ae90fb52eb",
 				version = 2,
 			},
 		},
