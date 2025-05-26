@@ -1542,7 +1542,7 @@ local tbl =
 			inheritedIndex = 7,
 		},
 	},
-	[40] = 
+	[44] = 
 	{
 		
 		{
@@ -1555,37 +1555,20 @@ local tbl =
 						data = 
 						{
 							actionID = 25746,
-							atomicPriority = true,
 							conditions = 
 							{
 								
 								{
-									"bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
-									true,
-								},
-								
-								{
-									"c2cb9d3b-196d-fc9d-b9a5-682ed76f4bf6",
-									true,
-								},
-								
-								{
-									"2e1c5b17-a022-c6cb-b575-87d888d23805",
-									true,
-								},
-								
-								{
-									"1f2db2f8-899d-aae2-955c-a816fe474668",
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
 									true,
 								},
 							},
 							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
+							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
-							uuid = "6d10d4e9-7468-c888-85d8-d824b8bd228d",
+							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
 							version = 2.1,
 						},
-						inheritedIndex = 1,
 					},
 				},
 				conditions = 
@@ -1594,72 +1577,27 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Event",
-							eventArgType = 2,
-							eventMarkerID = 23,
-							uuid = "bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Party",
-							conditionType = 10,
-							inGroupTargetType = "Party",
-							partyTargetType = "Event Entity",
-							uuid = "c2cb9d3b-196d-fc9d-b9a5-682ed76f4bf6",
-							version = 2,
-						},
-						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
 							category = "Self",
 							conditionType = 6,
 							gaugeValue = 50,
-							uuid = "2e1c5b17-a022-c6cb-b575-87d888d23805",
+							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
 							version = 2,
 						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffIDList = 
-							{
-								1191,
-								3829,
-								3830,
-								82,
-								2674,
-								2675,
-							},
-							category = "Self",
-							matchAnyBuff = true,
-							uuid = "1f2db2f8-899d-aae2-955c-a816fe474668",
-							version = 2,
-						},
-						inheritedIndex = 4,
 					},
 				},
-				eventType = 4,
-				loop = true,
-				mechanicTime = 174.5,
-				name = "Sheltron when Marked",
+				mechanicTime = 193.8,
+				name = "sheltron (15)",
 				timeRange = true,
-				timelineIndex = 40,
-				timerEndOffset = 70.099998474121,
-				timerStartOffset = 5,
-				uuid = "8ce9dfbb-9218-d0b4-9429-f7c1d1516807",
+				timelineIndex = 44,
+				timerStartOffset = -2,
+				uuid = "24539067-2e6c-7428-921a-c8bf27fa0a93",
 				version = 2,
 			},
 			inheritedIndex = 4,
 		},
+	},
+	[45] = 
+	{
 		
 		{
 			data = 
@@ -1675,22 +1613,7 @@ local tbl =
 							{
 								
 								{
-									"676ca69c-0ac1-a678-ba31-b9fc61a9444a",
-									true,
-								},
-								
-								{
-									"ebb58e98-a59d-afaf-aee7-7e52d8cc8f29",
-									true,
-								},
-								
-								{
 									"aceb9492-b930-0c6d-aaca-9fb9e7c2fb2a",
-									true,
-								},
-								
-								{
-									"6c4553f3-d347-001d-b67f-4c96083644e7",
 									true,
 								},
 							},
@@ -1708,31 +1631,6 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Event",
-							eventArgType = 2,
-							eventMarkerID = 23,
-							uuid = "676ca69c-0ac1-a678-ba31-b9fc61a9444a",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							category = "Party",
-							conditionType = 10,
-							inGroupTargetType = "Party",
-							partyTargetType = "Event Entity",
-							uuid = "ebb58e98-a59d-afaf-aee7-7e52d8cc8f29",
-							version = 2,
-						},
-						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
 							actionID = 36920,
 							category = "Self",
 							comparator = 2,
@@ -1741,39 +1639,20 @@ local tbl =
 							version = 2,
 						},
 					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffIDList = 
-							{
-								1191,
-								3829,
-								3830,
-								82,
-								2674,
-								2675,
-							},
-							category = "Self",
-							matchAnyBuff = true,
-							uuid = "6c4553f3-d347-001d-b67f-4c96083644e7",
-							version = 2,
-						},
-						inheritedIndex = 4,
-					},
 				},
-				eventType = 4,
-				mechanicTime = 174.5,
+				mechanicTime = 207.8,
 				name = "Guardian (40)",
 				timeRange = true,
-				timelineIndex = 40,
-				timerEndOffset = 70.099998474121,
-				uuid = "7887a3f6-dd5b-ee30-b8c4-07e239182d9e",
+				timelineIndex = 45,
+				timerStartOffset = -15,
+				uuid = "3ebc39ff-7297-041f-b24e-abb7bfc0e231",
 				version = 2,
 			},
-			inheritedIndex = 5,
+			inheritedIndex = 2,
 		},
+	},
+	[46] = 
+	{
 		
 		{
 			data = 
@@ -1789,22 +1668,7 @@ local tbl =
 							{
 								
 								{
-									"65c37171-7043-9286-a733-9f014d5432c5",
-									true,
-								},
-								
-								{
-									"fa308e28-6875-2dd7-9d05-64ac27ee17bb",
-									true,
-								},
-								
-								{
 									"1465472a-0137-2f48-b9fc-aa7b9991077a",
-									true,
-								},
-								
-								{
-									"6b074db5-0807-398c-a522-4a3d43eeec7c",
 									true,
 								},
 							},
@@ -1814,36 +1678,10 @@ local tbl =
 							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
 							version = 2.1,
 						},
-						inheritedIndex = 1,
 					},
 				},
 				conditions = 
 				{
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgType = 2,
-							eventMarkerID = 23,
-							uuid = "65c37171-7043-9286-a733-9f014d5432c5",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							category = "Party",
-							conditionType = 10,
-							inGroupTargetType = "Party",
-							partyTargetType = "Event Entity",
-							uuid = "fa308e28-6875-2dd7-9d05-64ac27ee17bb",
-							version = 2,
-						},
-						inheritedIndex = 2,
-					},
 					
 					{
 						data = 
@@ -1856,40 +1694,68 @@ local tbl =
 							version = 2,
 						},
 					},
+				},
+				mechanicTime = 221.8,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 46,
+				timerOffset = -15,
+				timerStartOffset = -15,
+				uuid = "a1d9b906-018e-3a67-874a-ca6f23a7ed4b",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
-							buffIDList = 
+							actionID = 25746,
+							conditions = 
 							{
-								1191,
-								3829,
-								3830,
-								82,
-								2674,
-								2675,
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
 							},
-							category = "Self",
-							matchAnyBuff = true,
-							uuid = "6b074db5-0807-398c-a522-4a3d43eeec7c",
-							version = 2,
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
+							version = 2.1,
 						},
-						inheritedIndex = 4,
 					},
 				},
-				eventType = 4,
-				mechanicTime = 174.5,
-				name = "Rampart (20)",
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 221.8,
+				name = "sheltron (15)",
 				timeRange = true,
-				timelineIndex = 40,
-				timerEndOffset = 70.099998474121,
-				timerOffset = -15,
-				timerStartOffset = 15,
-				uuid = "ef31a207-e698-1a18-800f-780a93545586",
+				timelineIndex = 46,
+				timerStartOffset = -2,
+				uuid = "08c49923-fdfd-7a8f-a7b2-538841864f7b",
 				version = 2,
 			},
-			inheritedIndex = 6,
+			inheritedIndex = 4,
 		},
 	},
 	[62] = 
