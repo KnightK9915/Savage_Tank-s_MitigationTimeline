@@ -2067,341 +2067,6 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 25758,
-							atomicPriority = true,
-							conditions = 
-							{
-								
-								{
-									"bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
-									true,
-								},
-								
-								{
-									"c2cb9d3b-196d-fc9d-b9a5-682ed76f4bf6",
-									true,
-								},
-								
-								{
-									"7d147bca-6f99-13a8-a080-ea5593fd3057",
-									true,
-								},
-								
-								{
-									"9b10b8e4-5200-24d2-b3f1-412b19d0a2bf",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							uuid = "6d10d4e9-7468-c888-85d8-d824b8bd228d",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgType = 2,
-							eventMarkerID = 23,
-							uuid = "bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Party",
-							conditionType = 10,
-							inGroupTargetType = "Party",
-							partyTargetType = "Event Entity",
-							uuid = "c2cb9d3b-196d-fc9d-b9a5-682ed76f4bf6",
-							version = 2,
-						},
-						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							actionID = 25758,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							dequeueIfLuaFalse = true,
-							uuid = "7d147bca-6f99-13a8-a080-ea5593fd3057",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffIDList = 
-							{
-								3838,
-								1832,
-								2683,
-							},
-							category = "Self",
-							uuid = "9b10b8e4-5200-24d2-b3f1-412b19d0a2bf",
-							version = 2,
-						},
-					},
-				},
-				eventType = 4,
-				loop = true,
-				mechanicTime = 174.5,
-				name = "HoC when Marked",
-				timeRange = true,
-				timelineIndex = 40,
-				timerEndOffset = 70.099998474121,
-				timerStartOffset = 5,
-				uuid = "b9973b98-08ba-5768-9caa-f8717203abed",
-				version = 2,
-			},
-			inheritedIndex = 4,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 36935,
-							conditions = 
-							{
-								
-								{
-									"4b910db2-ffc9-a6f3-a300-59699e4f8f77",
-									true,
-								},
-								
-								{
-									"294f80f8-6995-0942-a29c-f06fc0352077",
-									true,
-								},
-								
-								{
-									"30f02147-8e47-399f-99c5-279582aa248d",
-									true,
-								},
-								
-								{
-									"06cbd191-1a38-15eb-a3ef-7b2e4ce1959a",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							uuid = "d00db0ec-8fe2-c41e-8ee5-1c53101aa3bb",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgType = 2,
-							eventMarkerID = 23,
-							uuid = "4b910db2-ffc9-a6f3-a300-59699e4f8f77",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							category = "Party",
-							conditionType = 10,
-							inGroupTargetType = "Party",
-							partyTargetType = "Event Entity",
-							uuid = "294f80f8-6995-0942-a29c-f06fc0352077",
-							version = 2,
-						},
-						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							actionID = 36935,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "30f02147-8e47-399f-99c5-279582aa248d",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffIDList = 
-							{
-								3838,
-								1832,
-								2683,
-								1191,
-							},
-							category = "Self",
-							uuid = "06cbd191-1a38-15eb-a3ef-7b2e4ce1959a",
-							version = 2,
-						},
-					},
-				},
-				eventType = 4,
-				mechanicTime = 174.5,
-				name = "Great Nebula (40)",
-				timeRange = true,
-				timelineIndex = 40,
-				timerEndOffset = 70.099998474121,
-				uuid = "facfe49e-821d-71aa-b162-705d535f61c8",
-				version = 2,
-			},
-			inheritedIndex = 5,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7531,
-							conditions = 
-							{
-								
-								{
-									"65c37171-7043-9286-a733-9f014d5432c5",
-									true,
-								},
-								
-								{
-									"fa308e28-6875-2dd7-9d05-64ac27ee17bb",
-									true,
-								},
-								
-								{
-									"1465472a-0137-2f48-b9fc-aa7b9991077a",
-									true,
-								},
-								
-								{
-									"7e6ab615-239e-a851-a1ec-500d84a2b225",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgType = 2,
-							eventMarkerID = 23,
-							uuid = "65c37171-7043-9286-a733-9f014d5432c5",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							category = "Party",
-							conditionType = 10,
-							inGroupTargetType = "Party",
-							partyTargetType = "Event Entity",
-							uuid = "fa308e28-6875-2dd7-9d05-64ac27ee17bb",
-							version = 2,
-						},
-						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							actionID = 7531,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffIDList = 
-							{
-								3838,
-								1832,
-								2683,
-								1191,
-							},
-							category = "Self",
-							uuid = "7e6ab615-239e-a851-a1ec-500d84a2b225",
-							version = 2,
-						},
-					},
-				},
-				eventType = 4,
-				mechanicTime = 174.5,
-				name = "Rampart (20)",
-				timeRange = true,
-				timelineIndex = 40,
-				timerEndOffset = 70.099998474121,
-				timerOffset = -15,
-				timerStartOffset = 15,
-				uuid = "93e733ce-4c20-e9a0-a065-9633eb96dfec",
-				version = 2,
-			},
-			inheritedIndex = 6,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
 							aType = "ACR",
 							actionID = 16151,
 							conditions = 
@@ -2459,10 +2124,232 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 40,
 				timerEndOffset = 70.099998474121,
-				uuid = "b976a60f-f35c-1aa7-93be-4fa46db9f510",
+				uuid = "522ae44f-3098-9ffe-8dfd-2e7aceb944f9",
 				version = 2,
 			},
 			inheritedIndex = 7,
+		},
+	},
+	[44] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 193.8,
+				name = "HoC (15)",
+				timeRange = true,
+				timelineIndex = 44,
+				timerOffset = -1,
+				timerStartOffset = -2,
+				uuid = "68e8ed1f-0be7-9b40-b188-ed86e6829b39",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+	},
+	[45] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36935,
+							conditions = 
+							{
+								
+								{
+									"30f02147-8e47-399f-99c5-279582aa248d",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "d00db0ec-8fe2-c41e-8ee5-1c53101aa3bb",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36935,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "30f02147-8e47-399f-99c5-279582aa248d",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 207.8,
+				name = "Great Nebula (40)",
+				timeRange = true,
+				timelineIndex = 45,
+				timerStartOffset = -15,
+				uuid = "0ae29aa3-7045-8d88-b916-586bd8e31cd3",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+	},
+	[46] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 221.8,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 46,
+				timerOffset = -15,
+				timerStartOffset = -15,
+				uuid = "cfc8d244-055b-4e99-a4c2-fa3c45850645",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 221.8,
+				name = "HoC (15)",
+				timeRange = true,
+				timelineIndex = 46,
+				timerOffset = -1,
+				timerStartOffset = -2,
+				uuid = "f698fa43-e523-fa4f-9ebf-02e756a4c517",
+				version = 2,
+			},
+			inheritedIndex = 2,
 		},
 	},
 	[62] = 
