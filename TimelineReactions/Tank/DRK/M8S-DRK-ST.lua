@@ -104,7 +104,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 8,
 				timerOffset = -4,
-				timerStartOffset = -2,
+				timerStartOffset = -1.5,
 				uuid = "fc7efb5c-d026-8731-92fa-a8bb30d1fd72",
 				version = 2,
 			},
@@ -815,6 +815,23 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 3,
+		},
+	},
+	[24] = 
+	{
+		
+		{
+			data = 
+			{
+				name = "Reprisal",
+				uuid = "6b12f900-bde2-2c98-a314-7df7a013cad5",
+				version = 2,
+			},
+			inheritedObjectUUID = "660eae51-26a4-ed03-9235-df65b0378954",
+			inheritedOverwrites = 
+			{
+				enabled = false,
+			},
 		},
 	},
 	[25] = 
@@ -1815,7 +1832,7 @@ local tbl =
 			inheritedIndex = 9,
 		},
 	},
-	[40] = 
+	[44] = 
 	{
 		
 		{
@@ -1828,34 +1845,17 @@ local tbl =
 						data = 
 						{
 							actionID = 7393,
-							atomicPriority = true,
 							conditions = 
 							{
 								
 								{
-									"bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
-									true,
-								},
-								
-								{
-									"c2cb9d3b-196d-fc9d-b9a5-682ed76f4bf6",
-									true,
-								},
-								
-								{
-									"620011ee-65aa-f27d-b6a4-f227caea7758",
-									true,
-								},
-								
-								{
-									"650ab3b1-ccf8-aed3-ad24-4eef4e368f25",
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
 									true,
 								},
 							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
+							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
-							uuid = "6d10d4e9-7468-c888-85d8-d824b8bd228d",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
 							version = 2.1,
 						},
 					},
@@ -1866,72 +1866,29 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Event",
-							eventArgType = 2,
-							eventMarkerID = 23,
-							uuid = "bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Party",
-							conditionType = 10,
-							inGroupTargetType = "Party",
-							partyTargetType = "Event Entity",
-							uuid = "c2cb9d3b-196d-fc9d-b9a5-682ed76f4bf6",
-							version = 2,
-						},
-						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
 							category = "Self",
 							conditionType = 3,
 							mpType = 2,
 							mpValue = 3000,
-							uuid = "620011ee-65aa-f27d-b6a4-f227caea7758",
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
 							version = 2,
 						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffIDList = 
-							{
-								2682,
-								1178,
-								746,
-								1191,
-								3835,
-								810,
-							},
-							category = "Self",
-							uuid = "650ab3b1-ccf8-aed3-ad24-4eef4e368f25",
-							version = 2,
-						},
-						inheritedIndex = 4,
 					},
 				},
-				eventType = 4,
-				loop = true,
-				mechanicTime = 174.5,
-				name = "TBN when Marked",
+				mechanicTime = 193.8,
+				name = "TBN (25)",
 				timeRange = true,
-				timelineIndex = 40,
-				timerEndOffset = 70.099998474121,
-				timerStartOffset = 5,
-				uuid = "2accb71a-96c3-22c8-816b-8a317b66f0b6",
+				timelineIndex = 44,
+				timerOffset = -4,
+				timerStartOffset = -2,
+				uuid = "ad4affe5-e7a7-2d3d-99bf-6b20c864ef62",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 1,
 		},
+	},
+	[45] = 
+	{
 		
 		{
 			data = 
@@ -1947,22 +1904,7 @@ local tbl =
 							{
 								
 								{
-									"7579d3a8-e511-96db-85c5-d7639160889d",
-									true,
-								},
-								
-								{
-									"1564c060-c704-2247-905e-3de563fc7549",
-									true,
-								},
-								
-								{
 									"5cf17619-127d-b210-88cb-64658ca76476",
-									true,
-								},
-								
-								{
-									"dce808ac-cda4-977e-9424-9ac4183cb6aa",
 									true,
 								},
 							},
@@ -1979,31 +1921,6 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Event",
-							eventArgType = 2,
-							eventMarkerID = 23,
-							uuid = "7579d3a8-e511-96db-85c5-d7639160889d",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							category = "Party",
-							conditionType = 10,
-							inGroupTargetType = "Party",
-							partyTargetType = "Event Entity",
-							uuid = "1564c060-c704-2247-905e-3de563fc7549",
-							version = 2,
-						},
-						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
 							actionID = 36927,
 							category = "Self",
 							comparator = 2,
@@ -2012,38 +1929,72 @@ local tbl =
 							version = 2,
 						},
 					},
+				},
+				mechanicTime = 207.8,
+				name = "Vigil (40)",
+				timeRange = true,
+				timelineIndex = 45,
+				timerOffset = -5,
+				timerStartOffset = -15,
+				uuid = "d5a0af32-d2b1-d26f-bd9b-25107e66032d",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+	},
+	[46] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
-							buffIDList = 
+							actionID = 7393,
+							conditions = 
 							{
-								2682,
-								1178,
-								746,
-								1191,
-								3835,
-								810,
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
 							},
-							category = "Self",
-							uuid = "dce808ac-cda4-977e-9424-9ac4183cb6aa",
-							version = 2,
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
 						},
-						inheritedIndex = 4,
 					},
 				},
-				eventType = 4,
-				mechanicTime = 174.5,
-				name = "Vigil (40)",
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 221.8,
+				name = "TBN (25)",
 				timeRange = true,
-				timelineIndex = 40,
-				timerEndOffset = 70.099998474121,
-				timerOffset = -5,
-				uuid = "18047e83-166b-a277-920a-437be564f4ee",
+				timelineIndex = 46,
+				timerOffset = -4,
+				timerStartOffset = -2,
+				uuid = "f903bbdd-4fbd-3a1e-ad8c-29e6729dbdd7",
 				version = 2,
 			},
-			inheritedIndex = 5,
+			inheritedIndex = 1,
 		},
 		
 		{
@@ -2060,22 +2011,7 @@ local tbl =
 							{
 								
 								{
-									"65c37171-7043-9286-a733-9f014d5432c5",
-									true,
-								},
-								
-								{
-									"fa308e28-6875-2dd7-9d05-64ac27ee17bb",
-									true,
-								},
-								
-								{
 									"1465472a-0137-2f48-b9fc-aa7b9991077a",
-									true,
-								},
-								
-								{
-									"bee30724-b01a-e4c5-8fb3-db950284acf0",
 									true,
 								},
 							},
@@ -2085,36 +2021,10 @@ local tbl =
 							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
 							version = 2.1,
 						},
-						inheritedIndex = 1,
 					},
 				},
 				conditions = 
 				{
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgType = 2,
-							eventMarkerID = 23,
-							uuid = "65c37171-7043-9286-a733-9f014d5432c5",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							category = "Party",
-							conditionType = 10,
-							inGroupTargetType = "Party",
-							partyTargetType = "Event Entity",
-							uuid = "fa308e28-6875-2dd7-9d05-64ac27ee17bb",
-							version = 2,
-						},
-						inheritedIndex = 2,
-					},
 					
 					{
 						data = 
@@ -2127,137 +2037,17 @@ local tbl =
 							version = 2,
 						},
 					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffIDList = 
-							{
-								2682,
-								1178,
-								746,
-								1191,
-								3835,
-								810,
-							},
-							category = "Self",
-							uuid = "bee30724-b01a-e4c5-8fb3-db950284acf0",
-							version = 2,
-						},
-						inheritedIndex = 4,
-					},
 				},
-				eventType = 4,
-				mechanicTime = 174.5,
+				mechanicTime = 221.8,
 				name = "Rampart (20)",
 				timeRange = true,
-				timelineIndex = 40,
-				timerEndOffset = 70.099998474121,
+				timelineIndex = 46,
 				timerOffset = -15,
-				timerStartOffset = 15,
-				uuid = "98727019-5c4e-5ef9-82d0-93d7ff6e8450",
+				timerStartOffset = -15,
+				uuid = "2ab5dcc8-40a5-4504-9d21-127cf0ea21cd",
 				version = 2,
 			},
-			inheritedIndex = 6,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 25754,
-							conditions = 
-							{
-								
-								{
-									"90d90f80-a4c7-e84f-b50b-18c39b22f4db",
-									true,
-								},
-								
-								{
-									"f7341ccb-b926-c93f-9dc6-4363fd3ecbd2",
-									true,
-								},
-								
-								{
-									"e29d685a-67c8-bc23-866f-ae8935a41bfa",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgType = 2,
-							eventMarkerID = 23,
-							uuid = "90d90f80-a4c7-e84f-b50b-18c39b22f4db",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							category = "Party",
-							conditionType = 10,
-							inGroupTargetType = "Party",
-							partyTargetType = "Event Entity",
-							uuid = "f7341ccb-b926-c93f-9dc6-4363fd3ecbd2",
-							version = 2,
-						},
-						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffIDList = 
-							{
-								2682,
-								1178,
-								746,
-								1191,
-								3835,
-								810,
-							},
-							category = "Self",
-							uuid = "e29d685a-67c8-bc23-866f-ae8935a41bfa",
-							version = 2,
-						},
-						inheritedIndex = 4,
-					},
-				},
-				eventType = 4,
-				mechanicTime = 174.5,
-				name = "Oblation (10)",
-				randomOffset = -1,
-				timeRange = true,
-				timelineIndex = 40,
-				timerEndOffset = 70.099998474121,
-				timerOffset = -3,
-				timerStartOffset = 2,
-				uuid = "d3361d24-28ad-b5eb-a8d9-b14108c7e65e",
-				version = 2,
-			},
-			inheritedIndex = 8,
+			inheritedIndex = 3,
 		},
 	},
 	[62] = 
