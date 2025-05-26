@@ -1129,6 +1129,11 @@ local tbl =
 									"e46b14a4-bf8f-9d29-9dbc-462e98c10374",
 									true,
 								},
+								
+								{
+									"700c3d14-efd2-1847-a853-508656d9a23d",
+									true,
+								},
 							},
 							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
@@ -1169,6 +1174,22 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
 							uuid = "e46b14a4-bf8f-9d29-9dbc-462e98c10374",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								82,
+								1836,
+							},
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "700c3d14-efd2-1847-a853-508656d9a23d",
 							version = 2,
 						},
 					},
@@ -2596,6 +2617,11 @@ local tbl =
 									"da16c5f1-aa36-0fa4-82a0-d4694a4c6218",
 									true,
 								},
+								
+								{
+									"8151f5d7-ebba-89c5-8d1b-745e37e5b1d1",
+									true,
+								},
 							},
 							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
@@ -2636,6 +2662,22 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
 							uuid = "da16c5f1-aa36-0fa4-82a0-d4694a4c6218",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								82,
+								1836,
+							},
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "8151f5d7-ebba-89c5-8d1b-745e37e5b1d1",
 							version = 2,
 						},
 					},
@@ -4192,6 +4234,7 @@ local tbl =
 	},
 	inheritedProfiles = 
 	{
+		"Tank\\M8S-TANKGENERAL-ST",
 		"store\\anyone\\savage5\\r8s\\modules\\core",
 		"store\\anyone\\savage5\\r8s\\modules\\draws",
 		"store\\anyone\\savage5\\r8s\\modules\\optimization",
