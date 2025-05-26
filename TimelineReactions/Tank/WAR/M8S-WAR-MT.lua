@@ -438,74 +438,27 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 25751,
+							aType = "Lua",
+							actionLua = "data.hasGust = true\nself.used=true",
 							conditions = 
 							{
 								
 								{
-									"14ed3b5a-f34d-32e4-b0ca-9b4c7c19d86c",
+									"3f7ab2b5-2abf-8740-b2f7-62ed352a7013",
 									true,
 								},
 								
 								{
-									"9ac22dd2-9d7f-93df-ae22-2151ffa3240a",
-									true,
-								},
-								
-								{
-									"7ff7d550-e7f1-b813-8c61-8d51598a9cff",
-									true,
-								},
-								
-								{
-									"0f8628f3-99de-2bb0-b1ff-1df3c94b2276",
+									"195c3228-4c6e-eb63-875a-e07bfe5ecae4",
 									true,
 								},
 							},
 							endIfUsed = true,
-							gVar = "ACR_RikuWAR3_CD",
-							ignoreWeaveRules = true,
-							uuid = "f128886d-3f9c-d873-b184-840ce732e9d1",
+							gVar = "ACR_TensorWeeb3_CD",
+							name = "Record Gust Marker",
+							uuid = "0478aa81-f7e3-ff56-83e2-39146a8c6059",
 							version = 2.1,
 						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							actionID = 16464,
-							conditions = 
-							{
-								
-								{
-									"14ed3b5a-f34d-32e4-b0ca-9b4c7c19d86c",
-									true,
-								},
-								
-								{
-									"9ac22dd2-9d7f-93df-ae22-2151ffa3240a",
-									true,
-								},
-								
-								{
-									"cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
-									true,
-								},
-								
-								{
-									"4f25e7d2-e5c2-ae81-bd11-727a54c8ac3e",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							targetSubType = "Lowest HP",
-							targetType = "Other Tank",
-							uuid = "9ea7cc5f-8777-744b-b6de-e198fbc4ef27",
-							version = 2.1,
-						},
-						inheritedIndex = 2,
 					},
 				},
 				conditions = 
@@ -515,12 +468,13 @@ local tbl =
 						data = 
 						{
 							category = "Event",
+							dequeueIfLuaFalse = true,
 							eventArgType = 2,
 							eventMarkerID = 376,
-							uuid = "14ed3b5a-f34d-32e4-b0ca-9b4c7c19d86c",
+							name = "Gust Marker",
+							uuid = "195c3228-4c6e-eb63-875a-e07bfe5ecae4",
 							version = 2,
 						},
-						inheritedIndex = 1,
 					},
 					
 					{
@@ -528,77 +482,27 @@ local tbl =
 						{
 							category = "Party",
 							conditionType = 10,
+							dequeueIfLuaFalse = true,
+							eventArgType = 2,
 							inGroupTargetType = "Tank",
+							name = "Has Gust Marker",
 							partyTargetType = "Event Entity",
-							uuid = "9ac22dd2-9d7f-93df-ae22-2151ffa3240a",
-							version = 2,
-						},
-						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							actionID = 25751,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							name = "CD BW",
-							uuid = "7ff7d550-e7f1-b813-8c61-8d51598a9cff",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionID = 16464,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							name = "CD NF",
-							uuid = "cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							conditionType = 4,
-							enmityValue = 100,
-							name = "is MT",
-							uuid = "0f8628f3-99de-2bb0-b1ff-1df3c94b2276",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							comparator = 2,
-							conditionType = 4,
-							enmityValue = 99,
-							name = "is ST",
-							uuid = "4f25e7d2-e5c2-ae81-bd11-727a54c8ac3e",
+							uuid = "3f7ab2b5-2abf-8740-b2f7-62ed352a7013",
 							version = 2,
 						},
 					},
 				},
 				eventType = 4,
 				mechanicTime = 75.6,
-				name = "BW/NF (20)",
+				name = "Check Gust Marker",
 				timeRange = true,
 				timelineIndex = 14,
-				timerStartOffset = -3,
-				uuid = "7d99dceb-c983-a092-b718-aa9c47571513",
+				timerStartOffset = -7,
+				uuid = "4e0db79b-7636-1e08-bf4f-78cf0c5fc3f3",
 				version = 2,
 			},
 			inheritedIndex = 1,
 		},
-	},
-	[17] = 
-	{
 		
 		{
 			data = 
@@ -614,12 +518,7 @@ local tbl =
 							{
 								
 								{
-									"14ed3b5a-f34d-32e4-b0ca-9b4c7c19d86c",
-									true,
-								},
-								
-								{
-									"9ac22dd2-9d7f-93df-ae22-2151ffa3240a",
+									"0d6d2ae4-9447-7978-b3c7-c1f81b427753",
 									true,
 								},
 								
@@ -650,12 +549,7 @@ local tbl =
 							{
 								
 								{
-									"14ed3b5a-f34d-32e4-b0ca-9b4c7c19d86c",
-									true,
-								},
-								
-								{
-									"9ac22dd2-9d7f-93df-ae22-2151ffa3240a",
+									"0d6d2ae4-9447-7978-b3c7-c1f81b427753",
 									true,
 								},
 								
@@ -685,26 +579,14 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Event",
-							eventArgType = 2,
-							eventMarkerID = 376,
-							uuid = "14ed3b5a-f34d-32e4-b0ca-9b4c7c19d86c",
+							category = "Lua",
+							conditionLua = "return data.hasGust",
+							dequeueIfLuaFalse = true,
+							name = "Check Gust Marker",
+							uuid = "0d6d2ae4-9447-7978-b3c7-c1f81b427753",
 							version = 2,
 						},
 						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							category = "Party",
-							conditionType = 10,
-							inGroupTargetType = "Tank",
-							partyTargetType = "Event Entity",
-							uuid = "9ac22dd2-9d7f-93df-ae22-2151ffa3240a",
-							version = 2,
-						},
-						inheritedIndex = 2,
 					},
 					
 					{
@@ -756,16 +638,238 @@ local tbl =
 						},
 					},
 				},
+				mechanicTime = 75.6,
+				name = "BW/NF (20)",
+				timeRange = true,
+				timelineIndex = 14,
+				timerStartOffset = -3,
+				uuid = "4a81df6d-dfb6-53a8-a27c-7457646dffcc",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+	},
+	[17] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.hasGust = true\nself.used=true",
+							conditions = 
+							{
+								
+								{
+									"3f7ab2b5-2abf-8740-b2f7-62ed352a7013",
+									true,
+								},
+								
+								{
+									"195c3228-4c6e-eb63-875a-e07bfe5ecae4",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_TensorWeeb3_CD",
+							name = "Record Gust Marker",
+							uuid = "0478aa81-f7e3-ff56-83e2-39146a8c6059",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							dequeueIfLuaFalse = true,
+							eventArgType = 2,
+							eventMarkerID = 376,
+							name = "Gust Marker",
+							uuid = "195c3228-4c6e-eb63-875a-e07bfe5ecae4",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							dequeueIfLuaFalse = true,
+							eventArgType = 2,
+							inGroupTargetType = "Tank",
+							name = "Has Gust Marker",
+							partyTargetType = "Event Entity",
+							uuid = "3f7ab2b5-2abf-8740-b2f7-62ed352a7013",
+							version = 2,
+						},
+					},
+				},
 				eventType = 4,
+				mechanicTime = 80.6,
+				name = "Check Gust Marker",
+				timeRange = true,
+				timelineIndex = 17,
+				timerStartOffset = -7,
+				uuid = "ff778161-eaff-46c1-9b50-a1c7eaab8ad8",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25751,
+							conditions = 
+							{
+								
+								{
+									"0d6d2ae4-9447-7978-b3c7-c1f81b427753",
+									true,
+								},
+								
+								{
+									"7ff7d550-e7f1-b813-8c61-8d51598a9cff",
+									true,
+								},
+								
+								{
+									"0f8628f3-99de-2bb0-b1ff-1df3c94b2276",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "f128886d-3f9c-d873-b184-840ce732e9d1",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							conditions = 
+							{
+								
+								{
+									"0d6d2ae4-9447-7978-b3c7-c1f81b427753",
+									true,
+								},
+								
+								{
+									"cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
+									true,
+								},
+								
+								{
+									"4f25e7d2-e5c2-ae81-bd11-727a54c8ac3e",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetSubType = "Lowest HP",
+							targetType = "Other Tank",
+							uuid = "9ea7cc5f-8777-744b-b6de-e198fbc4ef27",
+							version = 2.1,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.hasGust",
+							dequeueIfLuaFalse = true,
+							name = "Check Gust Marker",
+							uuid = "0d6d2ae4-9447-7978-b3c7-c1f81b427753",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 25751,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							name = "CD BW",
+							uuid = "7ff7d550-e7f1-b813-8c61-8d51598a9cff",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							name = "CD NF",
+							uuid = "cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 100,
+							name = "is MT",
+							uuid = "0f8628f3-99de-2bb0-b1ff-1df3c94b2276",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99,
+							name = "is ST",
+							uuid = "4f25e7d2-e5c2-ae81-bd11-727a54c8ac3e",
+							version = 2,
+						},
+					},
+				},
 				mechanicTime = 80.6,
 				name = "BW/NF (20)",
 				timeRange = true,
 				timelineIndex = 17,
 				timerStartOffset = -3,
-				uuid = "e9cda19a-5240-cc90-8039-b6ed40ccdd1a",
+				uuid = "d1395685-2823-1b67-a920-1bd0940b3108",
 				version = 2,
 			},
-			inheritedIndex = 1,
+			inheritedIndex = 2,
 		},
 	},
 	[25] = 
