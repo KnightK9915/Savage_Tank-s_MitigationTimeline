@@ -1417,6 +1417,11 @@ local tbl =
 									"e9fd5c91-d423-514a-a8fd-2c932aebcec2",
 									true,
 								},
+								
+								{
+									"35870ce8-48f3-c9f7-91a0-8b445c892e2d",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -1450,6 +1455,22 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
 							uuid = "e9fd5c91-d423-514a-a8fd-2c932aebcec2",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								82,
+								1836,
+							},
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "35870ce8-48f3-c9f7-91a0-8b445c892e2d",
 							version = 2,
 						},
 					},
@@ -3421,6 +3442,11 @@ local tbl =
 									"14d12681-0c32-daf8-9cf1-140f1acdb610",
 									true,
 								},
+								
+								{
+									"09914bfe-8f70-1c2e-ad50-966b2e0ddcfc",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -3454,6 +3480,22 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
 							uuid = "14d12681-0c32-daf8-9cf1-140f1acdb610",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								82,
+								1836,
+							},
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "09914bfe-8f70-1c2e-ad50-966b2e0ddcfc",
 							version = 2,
 						},
 					},
