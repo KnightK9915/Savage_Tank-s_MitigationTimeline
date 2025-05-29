@@ -56,6 +56,43 @@ local tbl =
 			inheritedIndex = 1,
 		},
 	}, 
+	[3] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25754,
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Main Tank",
+							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 26.1,
+				name = "Oblation (10)",
+				randomOffset = -1,
+				timeRange = true,
+				timelineIndex = 3,
+				timerOffset = -3,
+				timerStartOffset = -5,
+				uuid = "640b678b-ce1a-1803-b53e-8821e215cc8c",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+	},
 	[8] = 
 	{
 		
@@ -618,6 +655,11 @@ local tbl =
 									"8691ef64-2e35-ec07-bd26-41ad690fabd9",
 									true,
 								},
+								
+								{
+									"de4d38e5-a0f5-2d28-9eca-f1f46c7c9864",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -651,6 +693,21 @@ local tbl =
 							mpType = 2,
 							mpValue = 3000,
 							uuid = "8691ef64-2e35-ec07-bd26-41ad690fabd9",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								1191,
+							},
+							category = "Party",
+							partyTargetType = "Main Tank",
+							uuid = "de4d38e5-a0f5-2d28-9eca-f1f46c7c9864",
 							version = 2,
 						},
 					},
@@ -767,6 +824,11 @@ local tbl =
 									"8691ef64-2e35-ec07-bd26-41ad690fabd9",
 									true,
 								},
+								
+								{
+									"35d9a72d-f9a6-24ad-9db4-ded53747f5d8",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -800,6 +862,21 @@ local tbl =
 							mpType = 2,
 							mpValue = 3000,
 							uuid = "8691ef64-2e35-ec07-bd26-41ad690fabd9",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								1191,
+							},
+							category = "Party",
+							partyTargetType = "Main Tank",
+							uuid = "35d9a72d-f9a6-24ad-9db4-ded53747f5d8",
 							version = 2,
 						},
 					},
@@ -1355,6 +1432,11 @@ local tbl =
 									"8f591687-4c92-16f5-aacc-9ed99573e369",
 									true,
 								},
+								
+								{
+									"865f27b8-34ad-b79d-a11d-8d51aa6f33bd",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -1390,6 +1472,22 @@ local tbl =
 							category = "Party",
 							partyTargetType = "Other Tank",
 							uuid = "8f591687-4c92-16f5-aacc-9ed99573e369",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 8,
+							jobIDList = 
+							{
+								21,
+								32,
+							},
+							partyTargetType = "Other Tank",
+							uuid = "865f27b8-34ad-b79d-a11d-8d51aa6f33bd",
 							version = 2,
 						},
 					},
@@ -2189,7 +2287,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 50,
 				timerOffset = -4,
-				timerStartOffset = -6.5,
+				timerStartOffset = -1.5,
 				uuid = "6c3ef474-a82a-de9e-a2cc-2446774fa460",
 				version = 2,
 			},
@@ -3161,6 +3259,11 @@ local tbl =
 									"709f6db1-a448-babd-bd51-86bafdc4142c",
 									true,
 								},
+								
+								{
+									"67ce702b-fce5-3faa-9cab-8907c8c0dd5f",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -3196,6 +3299,22 @@ local tbl =
 							category = "Party",
 							partyTargetType = "Other Tank",
 							uuid = "709f6db1-a448-babd-bd51-86bafdc4142c",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 8,
+							jobIDList = 
+							{
+								21,
+								32,
+							},
+							partyTargetType = "Other Tank",
+							uuid = "67ce702b-fce5-3faa-9cab-8907c8c0dd5f",
 							version = 2,
 						},
 					},
@@ -3847,6 +3966,58 @@ local tbl =
 						data = 
 						{
 							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 606.4,
+				name = "TBN (15)",
+				timeRange = true,
+				timelineIndex = 87,
+				timerOffset = -4,
+				timerStartOffset = -1.5,
+				uuid = "3f2afa01-e905-7d61-8e3f-f9d64414430b",
+				version = 2,
+			},
+			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
 							atomicPriority = true,
 							conditions = 
 							{
@@ -4009,6 +4180,7 @@ local tbl =
 						inheritedIndex = 3,
 					},
 				},
+				enabled = false,
 				eventType = 4,
 				mechanicTime = 606.4,
 				name = "TBN on marked",
