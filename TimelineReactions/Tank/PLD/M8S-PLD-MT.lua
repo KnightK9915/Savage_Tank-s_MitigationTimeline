@@ -2997,6 +2997,57 @@ local tbl =
 						data = 
 						{
 							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 606.4,
+				name = "sheltron (15)",
+				timeRange = true,
+				timelineIndex = 87,
+				timerStartOffset = -2,
+				uuid = "e3150997-dbf6-57b3-88ab-0da13419e477",
+				version = 2,
+			},
+			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
 							atomicPriority = true,
 							conditions = 
 							{
@@ -3159,6 +3210,7 @@ local tbl =
 						inheritedIndex = 3,
 					},
 				},
+				enabled = false,
 				eventType = 4,
 				mechanicTime = 606.4,
 				name = "Sheltron on marked",

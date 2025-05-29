@@ -1,5 +1,59 @@
 local tbl = 
 {
+	
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5ed8c1f4-36d8-ad42-9463-1f8154296465",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 11.2,
+				name = "interven ST (15)",
+				timeRange = true,
+				timelineIndex = 1,
+				timerStartOffset = -1.2999999523163,
+				uuid = "d6e7d1a6-e3f2-dfe6-aa7b-b02ab6fa99bb",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	}, 
 	[8] = 
 	{
 		
@@ -2997,6 +3051,57 @@ local tbl =
 						data = 
 						{
 							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 606.4,
+				name = "sheltron (15)",
+				timeRange = true,
+				timelineIndex = 87,
+				timerStartOffset = -2,
+				uuid = "4c6c5841-9820-344c-9b72-5cb589b06d2d",
+				version = 2,
+			},
+			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
 							atomicPriority = true,
 							conditions = 
 							{
@@ -3159,6 +3264,7 @@ local tbl =
 						inheritedIndex = 3,
 					},
 				},
+				enabled = false,
 				eventType = 4,
 				mechanicTime = 606.4,
 				name = "Sheltron on marked",
