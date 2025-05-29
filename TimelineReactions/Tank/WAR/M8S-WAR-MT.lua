@@ -4200,6 +4200,11 @@ local tbl =
 									"7ff7d550-e7f1-b813-8c61-8d51598a9cff",
 									true,
 								},
+								
+								{
+									"0130fa86-1184-29fa-9b4a-f7e8e3d4c2ef",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuWAR3_CD",
@@ -4225,6 +4230,16 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "0130fa86-1184-29fa-9b4a-f7e8e3d4c2ef",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 606.4,
 				name = "BW (20)",
@@ -4235,6 +4250,74 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+								
+								{
+									"5b3c0bc9-49e7-2c7c-96b9-ee3d3e60bd37",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "5b3c0bc9-49e7-2c7c-96b9-ee3d3e60bd37",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 606.4,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 87,
+				timerOffset = -15,
+				timerStartOffset = -10,
+				uuid = "9ad95571-f923-3cd7-a94d-79f56fdc5eaa",
+				version = 2,
+			},
+			inheritedIndex = 7,
 		},
 		
 		{
