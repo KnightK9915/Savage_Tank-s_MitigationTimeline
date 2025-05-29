@@ -3004,6 +3004,11 @@ local tbl =
 									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
 									true,
 								},
+								
+								{
+									"84612ead-b593-20e2-a002-313c7d039e9a",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -3026,6 +3031,16 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "84612ead-b593-20e2-a002-313c7d039e9a",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 606.4,
 				name = "sheltron (15)",
@@ -3036,6 +3051,74 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+								
+								{
+									"5b3c0bc9-49e7-2c7c-96b9-ee3d3e60bd37",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
+							uuid = "5b3c0bc9-49e7-2c7c-96b9-ee3d3e60bd37",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 606.4,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 87,
+				timerOffset = -15,
+				timerStartOffset = -10,
+				uuid = "84344b73-8869-14b3-bbca-87da98496e2a",
+				version = 2,
+			},
+			inheritedIndex = 7,
 		},
 		
 		{
