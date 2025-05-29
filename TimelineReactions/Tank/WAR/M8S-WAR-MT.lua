@@ -4193,6 +4193,60 @@ local tbl =
 						data = 
 						{
 							actionID = 25751,
+							conditions = 
+							{
+								
+								{
+									"7ff7d550-e7f1-b813-8c61-8d51598a9cff",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "f128886d-3f9c-d873-b184-840ce732e9d1",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25751,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							name = "CD BW",
+							uuid = "7ff7d550-e7f1-b813-8c61-8d51598a9cff",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 606.4,
+				name = "BW (20)",
+				timeRange = true,
+				timelineIndex = 87,
+				timerStartOffset = -2,
+				uuid = "593bbc68-e8fd-c261-8359-ed545bc2a9eb",
+				version = 2,
+			},
+			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25751,
 							atomicPriority = true,
 							conditions = 
 							{
@@ -4371,6 +4425,7 @@ local tbl =
 						inheritedIndex = 3,
 					},
 				},
+				enabled = false,
 				eventType = 4,
 				mechanicTime = 606.4,
 				name = "BW on marked",
