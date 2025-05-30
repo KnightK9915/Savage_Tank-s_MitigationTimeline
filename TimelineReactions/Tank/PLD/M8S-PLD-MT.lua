@@ -1,5 +1,59 @@
 local tbl = 
 {
+	
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5ed8c1f4-36d8-ad42-9463-1f8154296465",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 11.2,
+				name = "interven ST (15)",
+				timeRange = true,
+				timelineIndex = 1,
+				timerStartOffset = -1.2999999523163,
+				uuid = "d6e7d1a6-e3f2-dfe6-aa7b-b02ab6fa99bb",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	}, 
 	[8] = 
 	{
 		
@@ -408,7 +462,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 14,
 				timerStartOffset = -7,
-				uuid = "d241b8a7-84b6-4c21-9563-dd3392b00572",
+				uuid = "4912ed28-d04b-3220-ba6a-b92662d85ecf",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -533,7 +587,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 14,
 				timerStartOffset = -2,
-				uuid = "653600d1-f2bd-8f9f-b361-71848d3db5ed",
+				uuid = "25e44b17-83a9-71b2-9295-3797e7439b6c",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -611,7 +665,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 17,
 				timerStartOffset = -7,
-				uuid = "127367c4-df47-53a9-a928-3a10f582e766",
+				uuid = "0860c010-842b-a92d-a195-2411ac7afa93",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -736,7 +790,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 17,
 				timerStartOffset = -2,
-				uuid = "0028a373-b731-5f5b-98b0-517148878e69",
+				uuid = "f8b63e6a-576c-769d-918a-d71553006028",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -1131,7 +1185,7 @@ local tbl =
 								},
 								
 								{
-									"90f5f182-09d7-cac0-b759-d841ff34c5a1",
+									"700c3d14-efd2-1847-a853-508656d9a23d",
 									true,
 								},
 							},
@@ -1188,7 +1242,7 @@ local tbl =
 							},
 							category = "Party",
 							partyTargetType = "Other Tank",
-							uuid = "90f5f182-09d7-cac0-b759-d841ff34c5a1",
+							uuid = "700c3d14-efd2-1847-a853-508656d9a23d",
 							version = 2,
 						},
 					},
@@ -1254,7 +1308,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 37,
 				timerOffset = -15,
-				timerStartOffset = -5,
+				timerStartOffset = -10,
 				uuid = "635c64eb-6063-5ce9-b8d6-d3c0dedf607e",
 				version = 2,
 			},
@@ -1307,7 +1361,7 @@ local tbl =
 				name = "Guardian (40)",
 				timeRange = true,
 				timelineIndex = 37,
-				timerStartOffset = -5,
+				timerStartOffset = -10,
 				uuid = "d03f32a8-517b-e01f-85d2-6194895fb9e3",
 				version = 2,
 			},
@@ -1590,7 +1644,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 44,
 				timerStartOffset = -2,
-				uuid = "1f94130b-9590-5e4f-af44-9641f7366082",
+				uuid = "24539067-2e6c-7428-921a-c8bf27fa0a93",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -1645,7 +1699,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 45,
 				timerStartOffset = -15,
-				uuid = "57c92dbf-a82b-c8f1-b182-2f0223436f02",
+				uuid = "3ebc39ff-7297-041f-b24e-abb7bfc0e231",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -1701,7 +1755,7 @@ local tbl =
 				timelineIndex = 46,
 				timerOffset = -15,
 				timerStartOffset = -15,
-				uuid = "b69ec853-cf84-2076-be79-71c68742b8f8",
+				uuid = "a1d9b906-018e-3a67-874a-ca6f23a7ed4b",
 				version = 2,
 			},
 			inheritedIndex = 3,
@@ -1752,7 +1806,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 46,
 				timerStartOffset = -2,
-				uuid = "2f2ff8fd-2075-0843-b49d-5ece5363d052",
+				uuid = "08c49923-fdfd-7a8f-a7b2-538841864f7b",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -2484,7 +2538,7 @@ local tbl =
 								},
 								
 								{
-									"39137cf2-0398-2c63-95eb-437e60fe7b65",
+									"8151f5d7-ebba-89c5-8d1b-745e37e5b1d1",
 									true,
 								},
 							},
@@ -2541,7 +2595,7 @@ local tbl =
 							},
 							category = "Party",
 							partyTargetType = "Other Tank",
-							uuid = "39137cf2-0398-2c63-95eb-437e60fe7b65",
+							uuid = "8151f5d7-ebba-89c5-8d1b-745e37e5b1d1",
 							version = 2,
 						},
 					},
@@ -2577,11 +2631,6 @@ local tbl =
 									"1465472a-0137-2f48-b9fc-aa7b9991077a",
 									true,
 								},
-								
-								{
-									"4d509d9f-1285-90e8-a272-875b94d73ca3",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -2602,16 +2651,6 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "4d509d9f-1285-90e8-a272-875b94d73ca3",
 							version = 2,
 						},
 					},
@@ -2646,11 +2685,6 @@ local tbl =
 									"aceb9492-b930-0c6d-aaca-9fb9e7c2fb2a",
 									true,
 								},
-								
-								{
-									"489b5d25-9bc4-eefd-aa48-7516ecccd21d",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -2671,16 +2705,6 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "aceb9492-b930-0c6d-aaca-9fb9e7c2fb2a",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "489b5d25-9bc4-eefd-aa48-7516ecccd21d",
 							version = 2,
 						},
 					},
@@ -2713,11 +2737,6 @@ local tbl =
 									"dda24e11-6d3b-8a80-80e0-e75a85a9579a",
 									true,
 								},
-								
-								{
-									"54f34e44-082e-10e1-90a3-7b7e03138bf7",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -2741,16 +2760,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "54f34e44-082e-10e1-90a3-7b7e03138bf7",
-							version = 2,
-						},
 					},
 				},
 				mechanicTime = 553,
@@ -2782,11 +2791,6 @@ local tbl =
 									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
 									true,
 								},
-								
-								{
-									"ba50b961-eafb-72f6-8029-27e27a15c102",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -2806,16 +2810,6 @@ local tbl =
 							conditionType = 6,
 							gaugeValue = 50,
 							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "ba50b961-eafb-72f6-8029-27e27a15c102",
 							version = 2,
 						},
 					},
@@ -2866,11 +2860,6 @@ local tbl =
 									"e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
 									true,
 								},
-								
-								{
-									"f0da14f9-7d04-b4e6-bd09-e8e41c810828",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -2892,16 +2881,6 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "f0da14f9-7d04-b4e6-bd09-e8e41c810828",
 							version = 2,
 						},
 					},
@@ -2935,11 +2914,6 @@ local tbl =
 									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
 									true,
 								},
-								
-								{
-									"65c08f0a-8ac5-ac0b-979f-f43b4a4299a8",
-									true,
-								},
 							},
 							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
@@ -2959,16 +2933,6 @@ local tbl =
 							conditionType = 6,
 							gaugeValue = 50,
 							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "65c08f0a-8ac5-ac0b-979f-f43b4a4299a8",
 							version = 2,
 						},
 					},
@@ -3004,11 +2968,6 @@ local tbl =
 									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
 									true,
 								},
-								
-								{
-									"84612ead-b593-20e2-a002-313c7d039e9a",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -3031,23 +2990,13 @@ local tbl =
 							version = 2,
 						},
 					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "84612ead-b593-20e2-a002-313c7d039e9a",
-							version = 2,
-						},
-					},
 				},
 				mechanicTime = 606.4,
 				name = "sheltron (15)",
 				timeRange = true,
 				timelineIndex = 87,
 				timerStartOffset = -2,
-				uuid = "e3150997-dbf6-57b3-88ab-0da13419e477",
+				uuid = "4c6c5841-9820-344c-9b72-5cb589b06d2d",
 				version = 2,
 			},
 			inheritedIndex = 6,
@@ -3068,11 +3017,6 @@ local tbl =
 								
 								{
 									"1465472a-0137-2f48-b9fc-aa7b9991077a",
-									true,
-								},
-								
-								{
-									"5b3c0bc9-49e7-2c7c-96b9-ee3d3e60bd37",
 									true,
 								},
 							},
@@ -3098,16 +3042,6 @@ local tbl =
 							version = 2,
 						},
 					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "5b3c0bc9-49e7-2c7c-96b9-ee3d3e60bd37",
-							version = 2,
-						},
-					},
 				},
 				mechanicTime = 606.4,
 				name = "Rampart (20)",
@@ -3115,7 +3049,7 @@ local tbl =
 				timelineIndex = 87,
 				timerOffset = -15,
 				timerStartOffset = -10,
-				uuid = "84344b73-8869-14b3-bbca-87da98496e2a",
+				uuid = "9ecbf0b8-4a1c-d611-8ad7-221d62bcca9b",
 				version = 2,
 			},
 			inheritedIndex = 7,
@@ -3154,11 +3088,6 @@ local tbl =
 									"913f79bb-d1bc-ed4f-94ed-ca70544f4716",
 									true,
 								},
-								
-								{
-									"4b550c5a-db1b-03cc-a41f-f7225d4498cd",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -3194,11 +3123,6 @@ local tbl =
 								
 								{
 									"913f79bb-d1bc-ed4f-94ed-ca70544f4716",
-									true,
-								},
-								
-								{
-									"4b550c5a-db1b-03cc-a41f-f7225d4498cd",
 									true,
 								},
 							},
@@ -3281,17 +3205,6 @@ local tbl =
 						},
 						inheritedIndex = 6,
 					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "4b550c5a-db1b-03cc-a41f-f7225d4498cd",
-							version = 2,
-						},
-						inheritedIndex = 3,
-					},
 				},
 				enabled = false,
 				eventType = 4,
@@ -3326,11 +3239,6 @@ local tbl =
 									"1465472a-0137-2f48-b9fc-aa7b9991077a",
 									true,
 								},
-								
-								{
-									"4d509d9f-1285-90e8-a272-875b94d73ca3",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -3351,16 +3259,6 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "4d509d9f-1285-90e8-a272-875b94d73ca3",
 							version = 2,
 						},
 					},
@@ -3395,11 +3293,6 @@ local tbl =
 									"aceb9492-b930-0c6d-aaca-9fb9e7c2fb2a",
 									true,
 								},
-								
-								{
-									"489b5d25-9bc4-eefd-aa48-7516ecccd21d",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -3420,16 +3313,6 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "aceb9492-b930-0c6d-aaca-9fb9e7c2fb2a",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "489b5d25-9bc4-eefd-aa48-7516ecccd21d",
 							version = 2,
 						},
 					},
@@ -3462,11 +3345,6 @@ local tbl =
 									"dda24e11-6d3b-8a80-80e0-e75a85a9579a",
 									true,
 								},
-								
-								{
-									"54f34e44-082e-10e1-90a3-7b7e03138bf7",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -3490,16 +3368,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "54f34e44-082e-10e1-90a3-7b7e03138bf7",
-							version = 2,
-						},
 					},
 				},
 				mechanicTime = 733.9,
@@ -3531,11 +3399,6 @@ local tbl =
 									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
 									true,
 								},
-								
-								{
-									"ba50b961-eafb-72f6-8029-27e27a15c102",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -3555,16 +3418,6 @@ local tbl =
 							conditionType = 6,
 							gaugeValue = 50,
 							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "ba50b961-eafb-72f6-8029-27e27a15c102",
 							version = 2,
 						},
 					},
@@ -3615,11 +3468,6 @@ local tbl =
 									"e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
 									true,
 								},
-								
-								{
-									"f0da14f9-7d04-b4e6-bd09-e8e41c810828",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -3641,16 +3489,6 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "f0da14f9-7d04-b4e6-bd09-e8e41c810828",
 							version = 2,
 						},
 					},
@@ -3684,11 +3522,6 @@ local tbl =
 									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
 									true,
 								},
-								
-								{
-									"65c08f0a-8ac5-ac0b-979f-f43b4a4299a8",
-									true,
-								},
 							},
 							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
@@ -3708,16 +3541,6 @@ local tbl =
 							conditionType = 6,
 							gaugeValue = 50,
 							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "65c08f0a-8ac5-ac0b-979f-f43b4a4299a8",
 							version = 2,
 						},
 					},
@@ -3894,11 +3717,6 @@ local tbl =
 									"1465472a-0137-2f48-b9fc-aa7b9991077a",
 									true,
 								},
-								
-								{
-									"4d509d9f-1285-90e8-a272-875b94d73ca3",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -3919,16 +3737,6 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "4d509d9f-1285-90e8-a272-875b94d73ca3",
 							version = 2,
 						},
 					},
@@ -3962,11 +3770,6 @@ local tbl =
 									"aceb9492-b930-0c6d-aaca-9fb9e7c2fb2a",
 									true,
 								},
-								
-								{
-									"489b5d25-9bc4-eefd-aa48-7516ecccd21d",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -3987,16 +3790,6 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "aceb9492-b930-0c6d-aaca-9fb9e7c2fb2a",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "489b5d25-9bc4-eefd-aa48-7516ecccd21d",
 							version = 2,
 						},
 					},
@@ -4029,11 +3822,6 @@ local tbl =
 									"dda24e11-6d3b-8a80-80e0-e75a85a9579a",
 									true,
 								},
-								
-								{
-									"54f34e44-082e-10e1-90a3-7b7e03138bf7",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -4057,16 +3845,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "54f34e44-082e-10e1-90a3-7b7e03138bf7",
-							version = 2,
-						},
 					},
 				},
 				mechanicTime = 868.2,
@@ -4098,11 +3876,6 @@ local tbl =
 									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
 									true,
 								},
-								
-								{
-									"ba50b961-eafb-72f6-8029-27e27a15c102",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -4122,16 +3895,6 @@ local tbl =
 							conditionType = 6,
 							gaugeValue = 50,
 							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "ba50b961-eafb-72f6-8029-27e27a15c102",
 							version = 2,
 						},
 					},
@@ -4182,11 +3945,6 @@ local tbl =
 									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
 									true,
 								},
-								
-								{
-									"65c08f0a-8ac5-ac0b-979f-f43b4a4299a8",
-									true,
-								},
 							},
 							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
@@ -4206,16 +3964,6 @@ local tbl =
 							conditionType = 6,
 							gaugeValue = 50,
 							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "65c08f0a-8ac5-ac0b-979f-f43b4a4299a8",
 							version = 2,
 						},
 					},
