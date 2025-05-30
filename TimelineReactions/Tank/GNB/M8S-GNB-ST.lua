@@ -2239,7 +2239,7 @@ local tbl =
 				uuid = "0ae29aa3-7045-8d88-b916-586bd8e31cd3",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 6,
 		},
 	},
 	[46] = 
@@ -3479,11 +3479,6 @@ local tbl =
 									"b0a6c0ff-c966-c1fe-bedc-2d9d7afd0ff6",
 									true,
 								},
-								
-								{
-									"45ec7bc9-e105-5cc0-9e2e-d06a1de087d8",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -3504,16 +3499,6 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "b0a6c0ff-c966-c1fe-bedc-2d9d7afd0ff6",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "45ec7bc9-e105-5cc0-9e2e-d06a1de087d8",
 							version = 2,
 						},
 					},
@@ -3548,11 +3533,6 @@ local tbl =
 									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
 									true,
 								},
-								
-								{
-									"09d596ce-e8df-c88b-b68c-01c719a4496f",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -3574,16 +3554,6 @@ local tbl =
 							conditionType = 4,
 							dequeueIfLuaFalse = true,
 							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "09d596ce-e8df-c88b-b68c-01c719a4496f",
 							version = 2,
 						},
 					},
@@ -3617,11 +3587,6 @@ local tbl =
 									"1465472a-0137-2f48-b9fc-aa7b9991077a",
 									true,
 								},
-								
-								{
-									"4e609fd1-e4d8-eb29-a912-210dc453e65e",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -3642,16 +3607,6 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "4e609fd1-e4d8-eb29-a912-210dc453e65e",
 							version = 2,
 						},
 					},
@@ -3686,11 +3641,6 @@ local tbl =
 									"30f02147-8e47-399f-99c5-279582aa248d",
 									true,
 								},
-								
-								{
-									"bfecffc4-775c-4d37-9566-b1a28d1e0101",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -3711,16 +3661,6 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "30f02147-8e47-399f-99c5-279582aa248d",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "bfecffc4-775c-4d37-9566-b1a28d1e0101",
 							version = 2,
 						},
 					},
@@ -3759,11 +3699,6 @@ local tbl =
 									"20ee6c50-934e-7100-920d-3ed7873ff42b",
 									true,
 								},
-								
-								{
-									"cc11f608-9377-4072-a3c2-91f8c753bbda",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_Tankbar_AuroraSelf",
@@ -3797,16 +3732,6 @@ local tbl =
 							buffID = 1835,
 							category = "Self",
 							uuid = "20ee6c50-934e-7100-920d-3ed7873ff42b",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "cc11f608-9377-4072-a3c2-91f8c753bbda",
 							version = 2,
 						},
 					},
@@ -3845,11 +3770,6 @@ local tbl =
 									"b445afdb-5c04-2e5e-9c9f-ab41daded937",
 									true,
 								},
-								
-								{
-									"8d1590bb-2df5-e4f4-be30-df17a969ecd2",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_Tankbar_AuroraOT",
@@ -3885,16 +3805,6 @@ local tbl =
 							category = "Party",
 							partyTargetType = "Other Tank",
 							uuid = "b445afdb-5c04-2e5e-9c9f-ab41daded937",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "8d1590bb-2df5-e4f4-be30-df17a969ecd2",
 							version = 2,
 						},
 					},
@@ -3945,11 +3855,6 @@ local tbl =
 									"7e0d26db-790b-1b75-bfca-ad4daf3ae049",
 									true,
 								},
-								
-								{
-									"b48ff30d-8c31-7a13-8ff0-a262ef45a5d4",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -3970,16 +3875,6 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "7e0d26db-790b-1b75-bfca-ad4daf3ae049",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "b48ff30d-8c31-7a13-8ff0-a262ef45a5d4",
 							version = 2,
 						},
 					},
@@ -4014,11 +3909,6 @@ local tbl =
 									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
 									true,
 								},
-								
-								{
-									"18236b57-e4f1-80b0-b1c6-be31d4f11d26",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -4042,16 +3932,6 @@ local tbl =
 							conditionType = 4,
 							dequeueIfLuaFalse = true,
 							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "18236b57-e4f1-80b0-b1c6-be31d4f11d26",
 							version = 2,
 						},
 					},
@@ -4088,11 +3968,6 @@ local tbl =
 									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
 									true,
 								},
-								
-								{
-									"74a79f33-9b21-a1bd-aa50-24f1ec1ce863",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -4114,16 +3989,6 @@ local tbl =
 							conditionType = 4,
 							dequeueIfLuaFalse = true,
 							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "74a79f33-9b21-a1bd-aa50-24f1ec1ce863",
 							version = 2,
 						},
 					},
@@ -4157,11 +4022,6 @@ local tbl =
 									"1465472a-0137-2f48-b9fc-aa7b9991077a",
 									true,
 								},
-								
-								{
-									"5b3c0bc9-49e7-2c7c-96b9-ee3d3e60bd37",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -4182,16 +4042,6 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "5b3c0bc9-49e7-2c7c-96b9-ee3d3e60bd37",
 							version = 2,
 						},
 					},
@@ -4241,11 +4091,6 @@ local tbl =
 									"7f40b906-2219-b5c3-9148-705569c0dc95",
 									true,
 								},
-								
-								{
-									"4b550c5a-db1b-03cc-a41f-f7225d4498cd",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -4281,11 +4126,6 @@ local tbl =
 								
 								{
 									"7f40b906-2219-b5c3-9148-705569c0dc95",
-									true,
-								},
-								
-								{
-									"4b550c5a-db1b-03cc-a41f-f7225d4498cd",
 									true,
 								},
 							},
@@ -4369,17 +4209,6 @@ local tbl =
 							version = 2,
 						},
 					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "4b550c5a-db1b-03cc-a41f-f7225d4498cd",
-							version = 2,
-						},
-						inheritedIndex = 3,
-					},
 				},
 				enabled = false,
 				eventType = 4,
@@ -4414,11 +4243,6 @@ local tbl =
 									"b0a6c0ff-c966-c1fe-bedc-2d9d7afd0ff6",
 									true,
 								},
-								
-								{
-									"45ec7bc9-e105-5cc0-9e2e-d06a1de087d8",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -4439,16 +4263,6 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "b0a6c0ff-c966-c1fe-bedc-2d9d7afd0ff6",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "45ec7bc9-e105-5cc0-9e2e-d06a1de087d8",
 							version = 2,
 						},
 					},
@@ -4483,11 +4297,6 @@ local tbl =
 									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
 									true,
 								},
-								
-								{
-									"09d596ce-e8df-c88b-b68c-01c719a4496f",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -4509,16 +4318,6 @@ local tbl =
 							conditionType = 4,
 							dequeueIfLuaFalse = true,
 							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "09d596ce-e8df-c88b-b68c-01c719a4496f",
 							version = 2,
 						},
 					},
@@ -4552,11 +4351,6 @@ local tbl =
 									"1465472a-0137-2f48-b9fc-aa7b9991077a",
 									true,
 								},
-								
-								{
-									"4e609fd1-e4d8-eb29-a912-210dc453e65e",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -4577,16 +4371,6 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "4e609fd1-e4d8-eb29-a912-210dc453e65e",
 							version = 2,
 						},
 					},
@@ -4621,11 +4405,6 @@ local tbl =
 									"30f02147-8e47-399f-99c5-279582aa248d",
 									true,
 								},
-								
-								{
-									"bfecffc4-775c-4d37-9566-b1a28d1e0101",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -4646,16 +4425,6 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "30f02147-8e47-399f-99c5-279582aa248d",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "bfecffc4-775c-4d37-9566-b1a28d1e0101",
 							version = 2,
 						},
 					},
@@ -4694,11 +4463,6 @@ local tbl =
 									"20ee6c50-934e-7100-920d-3ed7873ff42b",
 									true,
 								},
-								
-								{
-									"cc11f608-9377-4072-a3c2-91f8c753bbda",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_Tankbar_AuroraSelf",
@@ -4732,16 +4496,6 @@ local tbl =
 							buffID = 1835,
 							category = "Self",
 							uuid = "20ee6c50-934e-7100-920d-3ed7873ff42b",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "cc11f608-9377-4072-a3c2-91f8c753bbda",
 							version = 2,
 						},
 					},
@@ -4780,11 +4534,6 @@ local tbl =
 									"b445afdb-5c04-2e5e-9c9f-ab41daded937",
 									true,
 								},
-								
-								{
-									"8d1590bb-2df5-e4f4-be30-df17a969ecd2",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_Tankbar_AuroraOT",
@@ -4820,16 +4569,6 @@ local tbl =
 							category = "Party",
 							partyTargetType = "Other Tank",
 							uuid = "b445afdb-5c04-2e5e-9c9f-ab41daded937",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "8d1590bb-2df5-e4f4-be30-df17a969ecd2",
 							version = 2,
 						},
 					},
@@ -4880,11 +4619,6 @@ local tbl =
 									"7e0d26db-790b-1b75-bfca-ad4daf3ae049",
 									true,
 								},
-								
-								{
-									"b48ff30d-8c31-7a13-8ff0-a262ef45a5d4",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -4905,16 +4639,6 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "7e0d26db-790b-1b75-bfca-ad4daf3ae049",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "b48ff30d-8c31-7a13-8ff0-a262ef45a5d4",
 							version = 2,
 						},
 					},
@@ -4949,11 +4673,6 @@ local tbl =
 									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
 									true,
 								},
-								
-								{
-									"18236b57-e4f1-80b0-b1c6-be31d4f11d26",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -4977,16 +4696,6 @@ local tbl =
 							conditionType = 4,
 							dequeueIfLuaFalse = true,
 							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "18236b57-e4f1-80b0-b1c6-be31d4f11d26",
 							version = 2,
 						},
 					},
@@ -5028,11 +4737,6 @@ local tbl =
 									"749ffea6-ec19-e872-89c1-f2947c1dfc30",
 									true,
 								},
-								
-								{
-									"448c960b-893b-ebae-8a6c-e7b270d9a40c",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -5063,16 +4767,6 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
 							uuid = "749ffea6-ec19-e872-89c1-f2947c1dfc30",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "448c960b-893b-ebae-8a6c-e7b270d9a40c",
 							version = 2,
 						},
 					},
@@ -5111,11 +4805,6 @@ local tbl =
 									"365438b0-aeea-d758-a399-7b4d4639369f",
 									true,
 								},
-								
-								{
-									"e501ee6a-a532-5f0e-b780-923f446dd492",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -5152,16 +4841,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "e501ee6a-a532-5f0e-b780-923f446dd492",
-							version = 2,
-						},
 					},
 				},
 				mechanicTime = 829.2,
@@ -5202,11 +4881,6 @@ local tbl =
 								
 								{
 									"6c3ff23b-c8f6-2b70-a16f-1378d5c3756d",
-									true,
-								},
-								
-								{
-									"cc11f608-9377-4072-a3c2-91f8c753bbda",
 									true,
 								},
 							},
@@ -5256,16 +4930,6 @@ local tbl =
 						},
 						inheritedIndex = 3,
 					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "cc11f608-9377-4072-a3c2-91f8c753bbda",
-							version = 2,
-						},
-					},
 				},
 				mechanicTime = 829.2,
 				name = "Aurora (regen) self",
@@ -5303,11 +4967,6 @@ local tbl =
 									"79cc5241-a487-6d7b-b6ba-3bba1fe85bfa",
 									true,
 								},
-								
-								{
-									"b48ff30d-8c31-7a13-8ff0-a262ef45a5d4",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -5338,16 +4997,6 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
 							uuid = "79cc5241-a487-6d7b-b6ba-3bba1fe85bfa",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "b48ff30d-8c31-7a13-8ff0-a262ef45a5d4",
 							version = 2,
 						},
 					},
@@ -5386,11 +5035,6 @@ local tbl =
 									"2c8810a3-d9f1-a3b7-af7b-e2040ddeb722",
 									true,
 								},
-								
-								{
-									"18236b57-e4f1-80b0-b1c6-be31d4f11d26",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -5427,16 +5071,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "18236b57-e4f1-80b0-b1c6-be31d4f11d26",
-							version = 2,
-						},
 					},
 				},
 				mechanicTime = 848.7,
@@ -5477,11 +5111,6 @@ local tbl =
 								
 								{
 									"b5d9d4d8-47d5-c52d-bd79-3c5f2e03aae0",
-									true,
-								},
-								
-								{
-									"cc11f608-9377-4072-a3c2-91f8c753bbda",
 									true,
 								},
 							},
@@ -5531,16 +5160,6 @@ local tbl =
 						},
 						inheritedIndex = 3,
 					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "cc11f608-9377-4072-a3c2-91f8c753bbda",
-							version = 2,
-						},
-					},
 				},
 				mechanicTime = 848.7,
 				name = "Aurora (regen) self",
@@ -5573,11 +5192,6 @@ local tbl =
 									"b0a6c0ff-c966-c1fe-bedc-2d9d7afd0ff6",
 									true,
 								},
-								
-								{
-									"71d80b25-b532-0311-88b7-77f8b21f8c49",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -5598,16 +5212,6 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "b0a6c0ff-c966-c1fe-bedc-2d9d7afd0ff6",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "71d80b25-b532-0311-88b7-77f8b21f8c49",
 							version = 2,
 						},
 					},
@@ -5641,11 +5245,6 @@ local tbl =
 									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
 									true,
 								},
-								
-								{
-									"4023f15e-23be-4cf9-b398-9215c9bea278",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -5667,16 +5266,6 @@ local tbl =
 							conditionType = 4,
 							dequeueIfLuaFalse = true,
 							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "4023f15e-23be-4cf9-b398-9215c9bea278",
 							version = 2,
 						},
 					},
@@ -5710,11 +5299,6 @@ local tbl =
 									"1465472a-0137-2f48-b9fc-aa7b9991077a",
 									true,
 								},
-								
-								{
-									"b2e50b39-d067-5f29-a4d5-41cb6140e19b",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -5735,16 +5319,6 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "b2e50b39-d067-5f29-a4d5-41cb6140e19b",
 							version = 2,
 						},
 					},
@@ -5778,11 +5352,6 @@ local tbl =
 									"30f02147-8e47-399f-99c5-279582aa248d",
 									true,
 								},
-								
-								{
-									"00bd2cb8-9612-9dd8-89ea-853528633c5f",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -5803,16 +5372,6 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "30f02147-8e47-399f-99c5-279582aa248d",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "00bd2cb8-9612-9dd8-89ea-853528633c5f",
 							version = 2,
 						},
 					},
@@ -5851,11 +5410,6 @@ local tbl =
 									"20ee6c50-934e-7100-920d-3ed7873ff42b",
 									true,
 								},
-								
-								{
-									"7d9b90f4-12df-4cd2-9fe0-cdf10d290565",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_Tankbar_AuroraSelf",
@@ -5889,16 +5443,6 @@ local tbl =
 							buffID = 1835,
 							category = "Self",
 							uuid = "20ee6c50-934e-7100-920d-3ed7873ff42b",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "7d9b90f4-12df-4cd2-9fe0-cdf10d290565",
 							version = 2,
 						},
 					},
@@ -5937,11 +5481,6 @@ local tbl =
 									"b445afdb-5c04-2e5e-9c9f-ab41daded937",
 									true,
 								},
-								
-								{
-									"55373a9d-1aa4-6d54-828e-893b0226ae1c",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_Tankbar_AuroraOT",
@@ -5977,16 +5516,6 @@ local tbl =
 							category = "Party",
 							partyTargetType = "Other Tank",
 							uuid = "b445afdb-5c04-2e5e-9c9f-ab41daded937",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "55373a9d-1aa4-6d54-828e-893b0226ae1c",
 							version = 2,
 						},
 					},
@@ -6037,11 +5566,6 @@ local tbl =
 									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
 									true,
 								},
-								
-								{
-									"2a9e31d8-c087-8818-8d11-12b2cfca5eef",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -6065,16 +5589,6 @@ local tbl =
 							conditionType = 4,
 							dequeueIfLuaFalse = true,
 							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local time = (Now() - data.megaminx_m8s_time1) / 1000\nreturn  data.megaminx_m8s_time1~=nil and time > 0 and time < 3",
-							uuid = "2a9e31d8-c087-8818-8d11-12b2cfca5eef",
 							version = 2,
 						},
 					},
