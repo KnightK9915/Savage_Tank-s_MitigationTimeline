@@ -2588,7 +2588,7 @@ local tbl =
 				timelineIndex = 23,
 				timerEndOffset = 10,
 				timerOffset = -15,
-				timerStartOffset = -2,
+				timerStartOffset = -6.5,
 				uuid = "d0834e1d-165b-c0f8-a759-84bc106f07c3",
 				version = 2,
 			},
@@ -3110,6 +3110,92 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 8,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7537,
+							conditions = 
+							{
+								
+								{
+									"f0eaecb7-c7fd-4486-a153-e2ff288e57b4",
+									true,
+								},
+								
+								{
+									"06e223a0-2c8e-bbf2-b4b3-9b6f87978bd8",
+									true,
+								},
+								
+								{
+									"72bda47a-f146-29d4-86bf-64852c4ced18",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_Hotbar_ShirkOT",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5081694c-978d-1724-a1f2-f6c6f17dc2bf",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99,
+							uuid = "f0eaecb7-c7fd-4486-a153-e2ff288e57b4",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionCDValue = 1,
+							actionID = 7533,
+							category = "Party",
+							conditionType = 9,
+							partyTargetType = "Other Tank",
+							uuid = "06e223a0-2c8e-bbf2-b4b3-9b6f87978bd8",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
+							uuid = "72bda47a-f146-29d4-86bf-64852c4ced18",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 119.9,
+				name = "Shirk OT",
+				timeRange = true,
+				timelineIndex = 25,
+				timerStartOffset = -20,
+				uuid = "524b9609-f809-5eda-b2e2-b28d8e0b6215",
+				version = 2,
+			},
+			inheritedIndex = 9,
 		},
 	},
 	[37] = 
@@ -4723,6 +4809,276 @@ local tbl =
 				version = 2,
 			},
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+								
+								{
+									"46cb0109-6c3a-2f84-a2c4-31984cecfea2",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+								
+								{
+									"c87032d2-c148-cb6a-9a76-9a849a23a2b1",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+								
+								{
+									"18f1b609-641e-ed19-9e7e-897be06b8984",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+								
+								{
+									"bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							conditions = 
+							{
+								
+								{
+									"8c71da96-ad5e-4e67-be0e-d09d31309942",
+									true,
+								},
+							},
+							filterTargetSubtype = "Lowest HP",
+							filterTargetType = "Party",
+							uuid = "fcd897d9-5fd2-af94-b079-2d99de6abac2",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 50,
+							partyTargetType = "Detection Target",
+							uuid = "8c71da96-ad5e-4e67-be0e-d09d31309942",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1833,
+							category = "Self",
+							name = "GNB Buff",
+							uuid = "46cb0109-6c3a-2f84-a2c4-31984cecfea2",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 79,
+							category = "Self",
+							name = "PLD Buff",
+							uuid = "c87032d2-c148-cb6a-9a76-9a849a23a2b1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							name = "DRK Buff",
+							uuid = "18f1b609-641e-ed19-9e7e-897be06b8984",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 91,
+							name = "WAR Buff",
+							uuid = "bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
+							version = 2,
+						},
+						inheritedIndex = 8,
+					},
+				},
+				mechanicTime = 316.6,
+				name = "Miti LowestHP",
+				timeRange = true,
+				timelineIndex = 50,
+				timerOffset = -15,
+				timerStartOffset = -2,
+				uuid = "b97d30bd-356f-d0ee-8fb3-3ae275f4182e",
+				version = 2,
+			},
+		},
 	},
 	[62] = 
 	{
@@ -5444,11 +5800,184 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 65,
 				timerOffset = -3,
-				timerStartOffset = -10,
+				timerStartOffset = -60,
 				uuid = "0d456e65-a58d-d515-9084-3bb3aefd40cf",
 				version = 2,
 			},
 			inheritedIndex = 8,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7537,
+							conditions = 
+							{
+								
+								{
+									"f0eaecb7-c7fd-4486-a153-e2ff288e57b4",
+									true,
+								},
+								
+								{
+									"06e223a0-2c8e-bbf2-b4b3-9b6f87978bd8",
+									true,
+								},
+								
+								{
+									"e38b2bdf-3122-718b-83ec-c7d3138ef7dd",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_Hotbar_ShirkOT",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5081694c-978d-1724-a1f2-f6c6f17dc2bf",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99,
+							uuid = "f0eaecb7-c7fd-4486-a153-e2ff288e57b4",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionCDValue = 1,
+							actionID = 7533,
+							category = "Party",
+							conditionType = 9,
+							partyTargetType = "Other Tank",
+							uuid = "06e223a0-2c8e-bbf2-b4b3-9b6f87978bd8",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
+							uuid = "e38b2bdf-3122-718b-83ec-c7d3138ef7dd",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				mechanicTime = 379.4,
+				name = "[MT] Shirk OT",
+				timeRange = true,
+				timelineIndex = 65,
+				timerStartOffset = -60,
+				uuid = "4f16b5fb-38a5-ed3e-b967-3a88dae70653",
+				version = 2,
+			},
+			inheritedIndex = 9,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7537,
+							conditions = 
+							{
+								
+								{
+									"f0eaecb7-c7fd-4486-a153-e2ff288e57b4",
+									true,
+								},
+								
+								{
+									"06e223a0-2c8e-bbf2-b4b3-9b6f87978bd8",
+									true,
+								},
+								
+								{
+									"72bda47a-f146-29d4-86bf-64852c4ced18",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_Hotbar_ShirkOT",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5081694c-978d-1724-a1f2-f6c6f17dc2bf",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99,
+							uuid = "f0eaecb7-c7fd-4486-a153-e2ff288e57b4",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionCDValue = 1,
+							actionID = 7533,
+							category = "Party",
+							conditionType = 9,
+							partyTargetType = "Other Tank",
+							uuid = "06e223a0-2c8e-bbf2-b4b3-9b6f87978bd8",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
+							uuid = "72bda47a-f146-29d4-86bf-64852c4ced18",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 379.4,
+				name = "[ST] Shirk OT",
+				timeRange = true,
+				timelineIndex = 65,
+				timerEndOffset = 20,
+				uuid = "7ddc80b1-0967-2ee5-8af4-411148c4d6a3",
+				version = 2,
+			},
+			inheritedIndex = 9,
 		},
 	},
 	[74] = 
