@@ -22,7 +22,7 @@ local tbl =
 								},
 								
 								{
-									"7fed1f02-2780-319d-87c9-af7c78b35382",
+									"98a0d533-f7dd-da78-aef6-6a9b16045f8a",
 									true,
 								},
 							},
@@ -53,14 +53,51 @@ local tbl =
 					{
 						data = 
 						{
+							category = "Filter",
+							conditions = 
+							{
+								
+								{
+									"7fed1f02-2780-319d-87c9-af7c78b35382",
+									true,
+								},
+								
+								{
+									"2ed0440b-26b9-ad8e-b6e3-1363b3368312",
+									true,
+								},
+							},
+							filterTargetType = "Main Tank",
+							uuid = "98a0d533-f7dd-da78-aef6-6a9b16045f8a",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
 							buffCheckType = 5,
 							buffIDList = 
 							{
 								1191,
 							},
 							category = "Party",
-							partyTargetType = "Main Tank",
+							partyTargetType = "Detection Target",
 							uuid = "7fed1f02-2780-319d-87c9-af7c78b35382",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							comparator = 2,
+							conditionType = 6,
+							hpValue = 20,
+							partyTargetType = "Detection Target",
+							uuid = "2ed0440b-26b9-ad8e-b6e3-1363b3368312",
 							version = 2,
 						},
 					},
@@ -689,6 +726,37 @@ local tbl =
 							version = 2.1,
 						},
 					},
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"c88fffaa-23d5-1437-b4a0-83e10d2b9619",
+									true,
+								},
+								
+								{
+									"8691ef64-2e35-ec07-bd26-41ad690fabd9",
+									true,
+								},
+								
+								{
+									"23009a18-b459-68ed-b16a-60b4f143f16f",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetSubType = "Lowest HP",
+							targetType = "Healer",
+							uuid = "81ea65ed-7199-e2a2-9585-059653ea10b6",
+							version = 2.1,
+						},
+					},
 				},
 				conditions = 
 				{
@@ -729,6 +797,21 @@ local tbl =
 							category = "Party",
 							partyTargetType = "Main Tank",
 							uuid = "e0363d07-21bd-2752-b0e0-b890e2630f8c",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 4,
+							buffIDList = 
+							{
+								1191,
+							},
+							category = "Party",
+							partyTargetType = "Main Tank",
+							uuid = "23009a18-b459-68ed-b16a-60b4f143f16f",
 							version = 2,
 						},
 					},
@@ -847,7 +930,7 @@ local tbl =
 								},
 								
 								{
-									"dcd54921-aa87-3a1c-81b0-611cea71cec7",
+									"e0363d07-21bd-2752-b0e0-b890e2630f8c",
 									true,
 								},
 							},
@@ -857,7 +940,37 @@ local tbl =
 							uuid = "c6f13b9f-f2c1-b7a0-bbb5-e78cc7c2c0d8",
 							version = 2.1,
 						},
-						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"c88fffaa-23d5-1437-b4a0-83e10d2b9619",
+									true,
+								},
+								
+								{
+									"8691ef64-2e35-ec07-bd26-41ad690fabd9",
+									true,
+								},
+								
+								{
+									"23009a18-b459-68ed-b16a-60b4f143f16f",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetSubType = "Lowest HP",
+							targetType = "Healer",
+							uuid = "81ea65ed-7199-e2a2-9585-059653ea10b6",
+							version = 2.1,
+						},
 					},
 				},
 				conditions = 
@@ -898,7 +1011,22 @@ local tbl =
 							},
 							category = "Party",
 							partyTargetType = "Main Tank",
-							uuid = "dcd54921-aa87-3a1c-81b0-611cea71cec7",
+							uuid = "e0363d07-21bd-2752-b0e0-b890e2630f8c",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 4,
+							buffIDList = 
+							{
+								1191,
+							},
+							category = "Party",
+							partyTargetType = "Main Tank",
+							uuid = "23009a18-b459-68ed-b16a-60b4f143f16f",
 							version = 2,
 						},
 					},
@@ -909,10 +1037,47 @@ local tbl =
 				timelineIndex = 17,
 				timerOffset = -1,
 				timerStartOffset = -2,
-				uuid = "ab9aebf6-7343-a91d-8762-091c0b7056e8",
+				uuid = "fc48c24e-7808-f1cd-82d4-08a040000582",
 				version = 2,
 			},
 			inheritedIndex = 3,
+		},
+	},
+	[24] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25754,
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 110.9,
+				name = "Oblation ST (10)",
+				randomOffset = 2,
+				timeRange = true,
+				timelineIndex = 24,
+				timerStartOffset = -9.5,
+				uuid = "6cb8274a-e17e-6d69-add9-1ca64b73dba2",
+				version = 2,
+			},
+			inheritedIndex = 8,
 		},
 	},
 	[25] = 
@@ -1520,7 +1685,7 @@ local tbl =
 				randomOffset = 2,
 				timeRange = true,
 				timelineIndex = 25,
-				timerStartOffset = -8,
+				timerStartOffset = -10,
 				uuid = "149a270f-3429-298b-b23a-eec2ce4d1270",
 				version = 2,
 			},
@@ -2240,6 +2405,39 @@ local tbl =
 				uuid = "2ab5dcc8-40a5-4504-9d21-127cf0ea21cd",
 				version = 2,
 			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25754,
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 221.8,
+				name = "Oblation (10)",
+				randomOffset = -1,
+				timeRange = true,
+				timelineIndex = 46,
+				timerEndOffset = 5,
+				timerOffset = -3,
+				uuid = "0f7c703e-925b-d3fe-8d9b-b35b024168e2",
+				version = 2,
+			},
 			inheritedIndex = 3,
 		},
 	},
@@ -2291,7 +2489,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 62,
 				timerOffset = -4,
-				timerStartOffset = -2,
+				timerStartOffset = -5,
 				uuid = "4bfc976b-fe88-4c20-b3ca-966feefcbdf5",
 				version = 2,
 			},
@@ -2424,7 +2622,6 @@ local tbl =
 				conditions = 
 				{
 				},
-				enabled = false,
 				mechanicTime = 365.9,
 				name = "Oblation (10)",
 				randomOffset = -1,
@@ -2601,6 +2798,7 @@ local tbl =
 				conditions = 
 				{
 				},
+				enabled = false,
 				mechanicTime = 365.9,
 				name = "Oblation ST (10)",
 				randomOffset = 2,
@@ -3124,6 +3322,11 @@ local tbl =
 									"84175180-badb-f1ab-9dd5-8b7a7c06f62b",
 									true,
 								},
+								
+								{
+									"2abe7758-c497-4656-a4ec-5ed65494131b",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -3172,6 +3375,24 @@ local tbl =
 							uuid = "84175180-badb-f1ab-9dd5-8b7a7c06f62b",
 							version = 2,
 						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 8,
+							jobIDList = 
+							{
+								32,
+								21,
+							},
+							name = "Other Tank is DRK/WAR",
+							partyTargetType = "Other Tank",
+							uuid = "2abe7758-c497-4656-a4ec-5ed65494131b",
+							version = 2,
+						},
+						inheritedIndex = 3,
 					},
 				},
 				mechanicTime = 379.4,
@@ -3359,7 +3580,6 @@ local tbl =
 						},
 					},
 				},
-				enabled = false,
 				mechanicTime = 379.4,
 				name = "TBN (15)",
 				timeRange = true,
@@ -3421,7 +3641,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 82,
 				timerOffset = -4,
-				timerStartOffset = -2,
+				timerStartOffset = -5,
 				uuid = "894e8703-3b29-1295-a4ad-feb8fafe3c24",
 				version = 2,
 			},
@@ -3527,7 +3747,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 82,
 				timerOffset = -5,
-				timerStartOffset = -5,
+				timerStartOffset = -10,
 				uuid = "48a1787c-e97b-85e9-b5c4-64c9f542f984",
 				version = 2,
 			},
@@ -3613,7 +3833,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 82,
 				timerOffset = -5,
-				timerStartOffset = -4,
+				timerStartOffset = -5,
 				uuid = "99e02cac-7ebc-adc0-a260-492510405996",
 				version = 2,
 			},
@@ -3827,7 +4047,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 87,
 				timerOffset = -4,
-				timerStartOffset = -1.5,
+				timerStartOffset = -5,
 				uuid = "e1a7cee1-e417-f703-8936-a38dbb57ebbc",
 				version = 2,
 			},
@@ -4099,7 +4319,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 105,
 				timerOffset = -4,
-				timerStartOffset = -2,
+				timerStartOffset = -5,
 				uuid = "f9ac7d4b-97b7-eb7b-bfbb-663872b5044c",
 				version = 2,
 			},
@@ -4207,7 +4427,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 105,
 				timerOffset = -5,
-				timerStartOffset = -5,
+				timerStartOffset = -10,
 				uuid = "7edac753-ee83-cc79-9632-68d698bd39b4",
 				version = 2,
 			},
@@ -4294,7 +4514,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 105,
 				timerOffset = -5,
-				timerStartOffset = -4,
+				timerStartOffset = -5,
 				uuid = "2fc08eff-2d78-9e2e-af0c-156897d486e5",
 				version = 2,
 			},
@@ -4471,6 +4691,73 @@ local tbl =
 					{
 						data = 
 						{
+							actionID = 3638,
+							conditions = 
+							{
+								
+								{
+									"e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
+									true,
+								},
+								
+								{
+									"90dc1c7e-e2f5-23f3-b93b-7eeb75a75d45",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "9b1f0885-3a72-1913-ad03-47c71acda8e5",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3638,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
+							uuid = "90dc1c7e-e2f5-23f3-b93b-7eeb75a75d45",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 829.2,
+				name = "Living Dead (Invinsible)",
+				timeRange = true,
+				timelineIndex = 114,
+				timerStartOffset = -4.5,
+				uuid = "c3eae006-8972-43ea-92f7-e02941bb40d3",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 7393,
 							conditions = 
 							{
@@ -4527,8 +4814,11 @@ local tbl =
 				uuid = "a6ed96ff-edb7-4cf0-8e50-ae63d9a037a8",
 				version = 2,
 			},
-			inheritedIndex = 1,
+			inheritedIndex = 2,
 		},
+	},
+	[116] = 
+	{
 		
 		{
 			data = 
@@ -4549,7 +4839,7 @@ local tbl =
 								},
 								
 								{
-									"90dc1c7e-e2f5-23f3-b93b-7eeb75a75d45",
+									"5fa0f760-edd0-39cd-872b-dd90d7fb6ce3",
 									true,
 								},
 							},
@@ -4580,25 +4870,22 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
-							uuid = "90dc1c7e-e2f5-23f3-b93b-7eeb75a75d45",
+							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
+							uuid = "5fa0f760-edd0-39cd-872b-dd90d7fb6ce3",
 							version = 2,
 						},
 					},
 				},
-				mechanicTime = 829.2,
+				mechanicTime = 848.7,
 				name = "Living Dead (Invinsible)",
 				timeRange = true,
-				timelineIndex = 114,
-				timerStartOffset = -2.5,
-				uuid = "c3eae006-8972-43ea-92f7-e02941bb40d3",
+				timelineIndex = 116,
+				timerStartOffset = -4.5,
+				uuid = "c239939d-90a9-af4c-bb51-e2577d5c06f1",
 				version = 2,
 			},
-			inheritedIndex = 7,
+			inheritedIndex = 1,
 		},
-	},
-	[116] = 
-	{
 		
 		{
 			data = 
@@ -4665,74 +4952,7 @@ local tbl =
 				uuid = "72f57400-b1d5-6359-82ba-f2db1f0232ff",
 				version = 2,
 			},
-			inheritedIndex = 1,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 3638,
-							conditions = 
-							{
-								
-								{
-									"e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
-									true,
-								},
-								
-								{
-									"5fa0f760-edd0-39cd-872b-dd90d7fb6ce3",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "9b1f0885-3a72-1913-ad03-47c71acda8e5",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 3638,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
-							uuid = "5fa0f760-edd0-39cd-872b-dd90d7fb6ce3",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 848.7,
-				name = "Living Dead (Invinsible)",
-				timeRange = true,
-				timelineIndex = 116,
-				timerStartOffset = -2.5,
-				uuid = "c239939d-90a9-af4c-bb51-e2577d5c06f1",
-				version = 2,
-			},
-			inheritedIndex = 7,
+			inheritedIndex = 2,
 		},
 	},
 	[118] = 
