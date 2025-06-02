@@ -2254,59 +2254,6 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 7531,
-							conditions = 
-							{
-								
-								{
-									"1465472a-0137-2f48-b9fc-aa7b9991077a",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7531,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 221.8,
-				name = "Rampart (20)",
-				timeRange = true,
-				timelineIndex = 46,
-				timerOffset = -15,
-				timerStartOffset = -15,
-				uuid = "cfc8d244-055b-4e99-a4c2-fa3c45850645",
-				version = 2,
-			},
-			inheritedIndex = 3,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
 							actionID = 25758,
 							conditions = 
 							{
@@ -2350,6 +2297,59 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 221.8,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 46,
+				timerOffset = -15,
+				timerStartOffset = -15,
+				uuid = "cfc8d244-055b-4e99-a4c2-fa3c45850645",
+				version = 2,
+			},
+			inheritedIndex = 3,
 		},
 	},
 	[62] = 
@@ -3563,7 +3563,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 82,
 				timerOffset = -1,
-				timerStartOffset = -2,
+				timerStartOffset = -4,
 				uuid = "23aff53b-eff4-5906-b843-b7408be7091b",
 				version = 2,
 			},
@@ -3669,7 +3669,7 @@ local tbl =
 				name = "Great Nebula (40)",
 				timeRange = true,
 				timelineIndex = 82,
-				timerStartOffset = -5,
+				timerStartOffset = -10,
 				uuid = "d05d0d2d-a175-6f7c-959a-0064c7c8c03e",
 				version = 2,
 			},
@@ -3885,7 +3885,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 82,
 				timerOffset = -1,
-				timerStartOffset = -1.5,
+				timerStartOffset = -2.5,
 				uuid = "6623342b-700c-c457-8239-798aa9153d8a",
 				version = 2,
 			},
@@ -3998,7 +3998,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 87,
 				timerOffset = -1,
-				timerStartOffset = -2,
+				timerStartOffset = -3.5,
 				uuid = "b4472ca9-2532-b047-997c-7e314e8526fa",
 				version = 2,
 			},
@@ -4327,7 +4327,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 105,
 				timerOffset = -1,
-				timerStartOffset = -2,
+				timerStartOffset = -4,
 				uuid = "ab763ce4-6e06-1f74-b31d-01ed35a89836",
 				version = 2,
 			},
@@ -4433,7 +4433,7 @@ local tbl =
 				name = "Great Nebula (40)",
 				timeRange = true,
 				timelineIndex = 105,
-				timerStartOffset = -5,
+				timerStartOffset = -10,
 				uuid = "a3d9b10c-3bb5-0e74-a5e2-8f61503e45ad",
 				version = 2,
 			},
@@ -4649,7 +4649,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 105,
 				timerOffset = -1,
-				timerStartOffset = -1.5,
+				timerStartOffset = -2.5,
 				uuid = "ae48be0e-3466-df62-be4d-d58d0faf8c93",
 				version = 2,
 			},
@@ -4776,7 +4776,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 114,
 				timerOffset = -1,
-				timerStartOffset = -2.5,
+				timerStartOffset = -4.5,
 				uuid = "f294fcf9-ff7c-59ef-8c76-b533e55d7c35",
 				version = 2,
 			},
@@ -5006,7 +5006,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 116,
 				timerOffset = -1,
-				timerStartOffset = -2.5,
+				timerStartOffset = -4.5,
 				uuid = "b09f0c95-db9e-ed30-94cb-bcb7462c3846",
 				version = 2,
 			},
