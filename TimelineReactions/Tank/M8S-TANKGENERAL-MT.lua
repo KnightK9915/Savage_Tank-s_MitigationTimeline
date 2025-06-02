@@ -573,7 +573,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 1,
 				timerOffset = -3,
-				timerStartOffset = -2,
+				timerStartOffset = -8,
 				uuid = "49307426-ebdb-3906-850f-4a54691a697d",
 				version = 2,
 			},
@@ -786,7 +786,7 @@ local tbl =
 				name = "Instant Dash",
 				timeRange = true,
 				timelineIndex = 8,
-				timerEndOffset = 5,
+				timerEndOffset = 10,
 				timerStartOffset = 0.10000000149012,
 				uuid = "72d74c3d-f070-e2c0-8ddb-1af79a0b1ead",
 				version = 2,
@@ -1233,6 +1233,450 @@ local tbl =
 				timerOffset = -3,
 				timerStartOffset = -14.5,
 				uuid = "2f29bb24-8f54-3aa3-8771-3780c29e6d92",
+				version = 2,
+			},
+		},
+	},
+	[12] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3540,
+							conditions = 
+							{
+								
+								{
+									"d509fc50-866e-82e0-a683-7f673386a79e",
+									true,
+								},
+								
+								{
+									"28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
+									true,
+								},
+								
+								{
+									"a787167c-e665-8709-84d0-298a7dbe954a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "208d8d0c-038a-0156-ae05-da413fbdfa98",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3540,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								19,
+							},
+							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 73.8,
+				name = "Veil",
+				timeRange = true,
+				timelineIndex = 12,
+				timerOffset = -10,
+				timerStartOffset = -14.5,
+				uuid = "3e02acbe-557c-426d-bed2-80098d70f930",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16160,
+							conditions = 
+							{
+								
+								{
+									"a810d2af-ef39-5b67-9d5f-95b37d750c7a",
+									true,
+								},
+								
+								{
+									"115eca71-8e25-2c76-be17-c29c66dcf324",
+									true,
+								},
+								
+								{
+									"a6929435-5dcb-3407-8d89-b38a0596d1ac",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_CD",
+							uuid = "dbc99f8f-e1c5-f477-89e0-30fa7efeda14",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16160,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								37,
+							},
+							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1894,
+								1362,
+							},
+							category = "Self",
+							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 73.8,
+				name = "HoL",
+				timeRange = true,
+				timelineIndex = 12,
+				timerStartOffset = -14.5,
+				uuid = "effd3fdf-c4c0-6ff2-b5d5-6006d37fb33c",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16471,
+							conditions = 
+							{
+								
+								{
+									"142e7d5f-3fc7-8773-b581-c9fe1ad51671",
+									true,
+								},
+								
+								{
+									"322dd20f-009d-0bff-941f-f877ce997638",
+									true,
+								},
+								
+								{
+									"e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "32970969-7f85-6bc8-90e1-4f30e8ce8093",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16471,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								32,
+							},
+							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1362,
+								1839,
+							},
+							category = "Self",
+							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 73.8,
+				name = "Dark Missinary",
+				timeRange = true,
+				timelineIndex = 12,
+				timerOffset = -10,
+				timerStartOffset = -14.5,
+				uuid = "b4467160-74c5-c419-971f-6dbba88b8918",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7388,
+							conditions = 
+							{
+								
+								{
+									"c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
+									true,
+								},
+								
+								{
+									"cfdfeb27-fd18-76d8-915e-3d53780d23cf",
+									true,
+								},
+								
+								{
+									"3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "83ae2ac2-4e1e-673e-befc-12d5802ce1cd",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7388,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								21,
+							},
+							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1362,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 73.8,
+				name = "Shake it off",
+				timeRange = true,
+				timelineIndex = 12,
+				timerStartOffset = -14.5,
+				uuid = "ebadb526-f8d1-be73-923c-f95b9e57633a",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7535,
+							conditions = 
+							{
+								
+								{
+									"5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+									true,
+								},
+								
+								{
+									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "c9c9cc18-aa2e-c48a-bebe-6ab6f4e7c114",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1193,
+							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 6,
+							dequeueIfLuaFalse = true,
+							inRangeValue = 5,
+							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				mechanicTime = 73.8,
+				name = "Reprisal",
+				randomOffset = -2,
+				timeRange = true,
+				timelineIndex = 12,
+				timerOffset = -3,
+				timerStartOffset = -14,
+				uuid = "0a9f7a2c-f231-02e0-bc60-c9d115659210",
 				version = 2,
 			},
 		},
@@ -1770,7 +2214,7 @@ local tbl =
 						{
 							category = "Party",
 							comparator = 2,
-							conditionType = 2,
+							conditionType = 6,
 							hpValue = 50,
 							partyTargetType = "Detection Target",
 							uuid = "8c71da96-ad5e-4e67-be0e-d09d31309942",
@@ -2766,9 +3210,158 @@ local tbl =
 				name = "Instant Dash",
 				timeRange = true,
 				timelineIndex = 37,
-				timerEndOffset = 5,
+				timerEndOffset = 10,
 				timerStartOffset = 0.10000000149012,
 				uuid = "03386301-0500-ea43-9c9a-deb81ad06f9f",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"ad752936-4d73-6ee9-9b18-b42e17f4ef36",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "bac81c5a-2c58-66fa-b4d1-16ed6e2eeb8a",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"be849869-2da7-b952-823b-4f483b8e1c55",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "00c32d86-8e27-8f84-8c3f-fd7e26ee8977",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"5e6d5ee0-248a-0944-9c9e-21e2d0a51d4a",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "31183c28-a107-8ef9-bb2c-7ba51cb950f2",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"079862f1-8d36-4683-9c5c-5f9cb41e8326",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "b2b6f566-b642-751c-91e0-af0d2069b4b2",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "ad752936-4d73-6ee9-9b18-b42e17f4ef36",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "be849869-2da7-b952-823b-4f483b8e1c55",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "5e6d5ee0-248a-0944-9c9e-21e2d0a51d4a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "079862f1-8d36-4683-9c5c-5f9cb41e8326",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 162.4,
+				name = "CD OFF",
+				timelineIndex = 37,
+				timerStartOffset = -10,
+				uuid = "d38c92b8-301a-d712-b69f-898d75c245eb",
 				version = 2,
 			},
 		},
@@ -2986,7 +3579,155 @@ local tbl =
 			},
 		},
 	},
-	[42] = 
+	[43] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"75fab7bf-300f-e5c6-b545-a62357f20c4e",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "51815f9f-dc0d-1ed5-9d94-1707584c2fae",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"1c695c8b-2f73-d651-8668-aaef81567f0e",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "1ec1fd4f-3fa4-fd82-bdd8-37dc62b7bfda",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"9a9c2033-a2b8-47bd-839b-63fa858ceea0",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "7bc31b63-73b1-527f-b775-997c9dfc8221",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"26a3b054-9394-c902-a65d-7b86b8150c63",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "bcf78eac-d535-50fa-87e3-c207400be218",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "75fab7bf-300f-e5c6-b545-a62357f20c4e",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "1c695c8b-2f73-d651-8668-aaef81567f0e",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "9a9c2033-a2b8-47bd-839b-63fa858ceea0",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "26a3b054-9394-c902-a65d-7b86b8150c63",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 185.7,
+				name = "CD ON",
+				timelineIndex = 43,
+				timerStartOffset = -10,
+				uuid = "230f7826-890f-23d2-ac9d-d39d9d3b913c",
+				version = 2,
+			},
+		},
+	},
+	[44] = 
 	{
 		
 		{
@@ -3071,13 +3812,13 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 183.7,
+				mechanicTime = 193.8,
 				name = "Veil",
 				timeRange = true,
-				timelineIndex = 42,
+				timelineIndex = 44,
 				timerOffset = -10,
-				timerStartOffset = -5,
-				uuid = "85498bea-a2a2-fefb-a1a5-a35130bec39b",
+				timerStartOffset = -11.5,
+				uuid = "21cc0968-c674-5598-bd20-6066bfbbdc77",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -3164,12 +3905,12 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 183.7,
+				mechanicTime = 193.8,
 				name = "HoL",
 				timeRange = true,
-				timelineIndex = 42,
-				timerStartOffset = -5,
-				uuid = "23428fe1-1bba-d341-b75a-93add11372dd",
+				timelineIndex = 44,
+				timerStartOffset = -11.5,
+				uuid = "f3719a50-e7fc-e093-8884-04898515d855",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -3257,13 +3998,13 @@ local tbl =
 						inheritedIndex = 3,
 					},
 				},
-				mechanicTime = 183.7,
+				mechanicTime = 193.8,
 				name = "Dark Missinary",
 				timeRange = true,
-				timelineIndex = 42,
+				timelineIndex = 44,
 				timerOffset = -10,
-				timerStartOffset = -5,
-				uuid = "61521cd5-8a22-9911-b72b-ac998575e512",
+				timerStartOffset = -11.5,
+				uuid = "bafa6be6-da42-46bc-973d-32e6f909bccb",
 				version = 2,
 			},
 		},
@@ -3350,12 +4091,386 @@ local tbl =
 						inheritedIndex = 3,
 					},
 				},
-				mechanicTime = 183.7,
+				mechanicTime = 193.8,
 				name = "Shake it off",
 				timeRange = true,
-				timelineIndex = 42,
-				timerStartOffset = -5,
-				uuid = "cd2f9873-476c-73c0-8f21-eaefc2cb1abf",
+				timelineIndex = 44,
+				timerStartOffset = -11.5,
+				uuid = "a1eff1f3-b8b8-00cf-95cc-f513d5108201",
+				version = 2,
+			},
+		},
+	},
+	[46] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3540,
+							conditions = 
+							{
+								
+								{
+									"d509fc50-866e-82e0-a683-7f673386a79e",
+									true,
+								},
+								
+								{
+									"28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
+									true,
+								},
+								
+								{
+									"a787167c-e665-8709-84d0-298a7dbe954a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "208d8d0c-038a-0156-ae05-da413fbdfa98",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3540,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								19,
+							},
+							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 221.8,
+				name = "Veil",
+				timeRange = true,
+				timelineIndex = 46,
+				timerOffset = -10,
+				timerStartOffset = -14.5,
+				uuid = "f90c2436-4ca4-746c-aa0c-7a9ddb9f3101",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16160,
+							conditions = 
+							{
+								
+								{
+									"a810d2af-ef39-5b67-9d5f-95b37d750c7a",
+									true,
+								},
+								
+								{
+									"115eca71-8e25-2c76-be17-c29c66dcf324",
+									true,
+								},
+								
+								{
+									"a6929435-5dcb-3407-8d89-b38a0596d1ac",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_CD",
+							uuid = "dbc99f8f-e1c5-f477-89e0-30fa7efeda14",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16160,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								37,
+							},
+							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1894,
+								1362,
+							},
+							category = "Self",
+							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 221.8,
+				name = "HoL",
+				timeRange = true,
+				timelineIndex = 46,
+				timerStartOffset = -14.5,
+				uuid = "b89a526c-2e62-4485-89e4-48d88bea73b4",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16471,
+							conditions = 
+							{
+								
+								{
+									"142e7d5f-3fc7-8773-b581-c9fe1ad51671",
+									true,
+								},
+								
+								{
+									"322dd20f-009d-0bff-941f-f877ce997638",
+									true,
+								},
+								
+								{
+									"e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "32970969-7f85-6bc8-90e1-4f30e8ce8093",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16471,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								32,
+							},
+							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1362,
+								1839,
+							},
+							category = "Self",
+							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 221.8,
+				name = "Dark Missinary",
+				timeRange = true,
+				timelineIndex = 46,
+				timerOffset = -10,
+				timerStartOffset = -14.5,
+				uuid = "f4a357fe-a551-0a75-a447-812ad71765b8",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7388,
+							conditions = 
+							{
+								
+								{
+									"c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
+									true,
+								},
+								
+								{
+									"cfdfeb27-fd18-76d8-915e-3d53780d23cf",
+									true,
+								},
+								
+								{
+									"3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "83ae2ac2-4e1e-673e-befc-12d5802ce1cd",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7388,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								21,
+							},
+							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1362,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 221.8,
+				name = "Shake it off",
+				timeRange = true,
+				timelineIndex = 46,
+				timerStartOffset = -14.5,
+				uuid = "ecf6495e-aca5-6c96-b99d-31d764479b19",
 				version = 2,
 			},
 		},
@@ -3450,7 +4565,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 50,
 				timerOffset = -10,
-				timerStartOffset = -5,
+				timerStartOffset = -10,
 				uuid = "1f262f36-1e0b-16e5-996c-c1059c5aa862",
 				version = 2,
 			},
@@ -3542,7 +4657,7 @@ local tbl =
 				name = "HoL",
 				timeRange = true,
 				timelineIndex = 50,
-				timerStartOffset = -5,
+				timerStartOffset = -10,
 				uuid = "26bd19c6-ed92-eacc-958b-f08f7d3343c4",
 				version = 2,
 			},
@@ -3636,7 +4751,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 50,
 				timerOffset = -10,
-				timerStartOffset = -5,
+				timerStartOffset = -10,
 				uuid = "adf630cb-585b-f862-8e48-82fd97ac1aed",
 				version = 2,
 			},
@@ -3728,7 +4843,7 @@ local tbl =
 				name = "Shake it off",
 				timeRange = true,
 				timelineIndex = 50,
-				timerStartOffset = -5,
+				timerStartOffset = -10,
 				uuid = "710d1d2a-2e5f-75a6-a60a-1f0176c9212b",
 				version = 2,
 			},
@@ -3798,7 +4913,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 50,
 				timerOffset = -3,
-				timerStartOffset = -2,
+				timerStartOffset = -10,
 				uuid = "7cdb18ca-e1d3-4b30-9e6f-aa3a803a50e4",
 				version = 2,
 			},
@@ -4068,7 +5183,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 50,
 				timerOffset = -15,
-				timerStartOffset = -2,
+				timerStartOffset = -5,
 				uuid = "767447f6-ec48-e631-a5ad-07ba9655e4ca",
 				version = 2,
 			},
@@ -4722,7 +5837,7 @@ local tbl =
 				name = "Instant Dash",
 				timeRange = true,
 				timelineIndex = 62,
-				timerEndOffset = 5,
+				timerEndOffset = 10,
 				timerStartOffset = 0.10000000149012,
 				uuid = "182bcec4-276d-9b8a-b5ca-08ae90fb52eb",
 				version = 2,
@@ -4731,6 +5846,174 @@ local tbl =
 	},
 	[65] = 
 	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7533,
+							conditions = 
+							{
+								
+								{
+									"158e3d7c-aed1-3623-ad3e-9ac368bbd03d",
+									true,
+								},
+								
+								{
+									"8d30d151-f070-cead-ac67-cd52ed9774fd",
+									true,
+								},
+								
+								{
+									"ebf8662d-dbc9-106e-a9f3-d31155cb15fd",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_Hotbar_Provoke",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "001b735f-0c3d-3481-8712-978c4ccf1420",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7533,
+							conditions = 
+							{
+								
+								{
+									"158e3d7c-aed1-3623-ad3e-9ac368bbd03d",
+									true,
+								},
+								
+								{
+									"8d30d151-f070-cead-ac67-cd52ed9774fd",
+									true,
+								},
+								
+								{
+									"ed1f60e9-7857-573f-8e7a-380563038c33",
+									true,
+								},
+								
+								{
+									"9b16c419-2d46-7109-a9dd-a7fca41c382d",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_Hotbar_Provoke",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "3c5747b7-b570-2db1-bdf8-d1ae67778691",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99,
+							uuid = "158e3d7c-aed1-3623-ad3e-9ac368bbd03d",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
+							uuid = "8d30d151-f070-cead-ac67-cd52ed9774fd",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 8,
+							jobIDList = 
+							{
+								32,
+								21,
+							},
+							name = "Other Tank is DRK/WAR",
+							partyTargetType = "Other Tank",
+							uuid = "ebf8662d-dbc9-106e-a9f3-d31155cb15fd",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 8,
+							jobIDList = 
+							{
+								19,
+								37,
+							},
+							name = "Other Tank is PLD/GNB",
+							partyTargetType = "Other Tank",
+							uuid = "ed1f60e9-7857-573f-8e7a-380563038c33",
+							version = 2,
+						},
+						inheritedIndex = 4,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffDuration = 2,
+							buffIDList = 
+							{
+								82,
+								1836,
+							},
+							category = "Party",
+							comparator = 2,
+							matchAnyBuff = true,
+							name = "PLD/GNB Invuln Duration < 3",
+							partyTargetType = "Other Tank",
+							uuid = "9b16c419-2d46-7109-a9dd-a7fca41c382d",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 379.4,
+				name = "[MT] Provoke",
+				timeRange = true,
+				timelineIndex = 65,
+				timerEndOffset = 20,
+				timerOffset = -3,
+				uuid = "89edab54-40b0-6b47-9d25-2617957185f8",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
 		
 		{
 			data = 
@@ -4790,7 +6073,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 379.4,
-				name = "Provoke",
+				name = "[ST] Provoke",
 				timeRange = true,
 				timelineIndex = 65,
 				timerOffset = -3,
@@ -4885,7 +6168,7 @@ local tbl =
 				uuid = "2a22169c-c9aa-7356-917a-f2d92721f77f",
 				version = 2,
 			},
-			inheritedIndex = 2,
+			inheritedIndex = 3,
 		},
 		
 		{
@@ -4972,6 +6255,380 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 9,
+		},
+	},
+	[70] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3540,
+							conditions = 
+							{
+								
+								{
+									"d509fc50-866e-82e0-a683-7f673386a79e",
+									true,
+								},
+								
+								{
+									"28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
+									true,
+								},
+								
+								{
+									"a787167c-e665-8709-84d0-298a7dbe954a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "208d8d0c-038a-0156-ae05-da413fbdfa98",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3540,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								19,
+							},
+							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 414.9,
+				name = "Veil",
+				timeRange = true,
+				timelineIndex = 70,
+				timerOffset = -10,
+				timerStartOffset = -9.5,
+				uuid = "9f27c5c2-4aa2-5a63-8175-b65516ba51b9",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16160,
+							conditions = 
+							{
+								
+								{
+									"a810d2af-ef39-5b67-9d5f-95b37d750c7a",
+									true,
+								},
+								
+								{
+									"115eca71-8e25-2c76-be17-c29c66dcf324",
+									true,
+								},
+								
+								{
+									"a6929435-5dcb-3407-8d89-b38a0596d1ac",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_CD",
+							uuid = "dbc99f8f-e1c5-f477-89e0-30fa7efeda14",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16160,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								37,
+							},
+							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1894,
+								1362,
+							},
+							category = "Self",
+							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 414.9,
+				name = "HoL",
+				timeRange = true,
+				timelineIndex = 70,
+				timerStartOffset = -9.5,
+				uuid = "f4c9e7ff-da1f-6fa8-9610-6536541513d5",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16471,
+							conditions = 
+							{
+								
+								{
+									"142e7d5f-3fc7-8773-b581-c9fe1ad51671",
+									true,
+								},
+								
+								{
+									"322dd20f-009d-0bff-941f-f877ce997638",
+									true,
+								},
+								
+								{
+									"e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "32970969-7f85-6bc8-90e1-4f30e8ce8093",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16471,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								32,
+							},
+							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1362,
+								1839,
+							},
+							category = "Self",
+							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 414.9,
+				name = "Dark Missinary",
+				timeRange = true,
+				timelineIndex = 70,
+				timerOffset = -10,
+				timerStartOffset = -9.5,
+				uuid = "fad4ed37-98f8-66b8-b26e-297f3ad6832c",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7388,
+							conditions = 
+							{
+								
+								{
+									"c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
+									true,
+								},
+								
+								{
+									"cfdfeb27-fd18-76d8-915e-3d53780d23cf",
+									true,
+								},
+								
+								{
+									"3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "83ae2ac2-4e1e-673e-befc-12d5802ce1cd",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7388,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								21,
+							},
+							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1362,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 414.9,
+				name = "Shake it off",
+				timeRange = true,
+				timelineIndex = 70,
+				timerStartOffset = -9.5,
+				uuid = "affc630b-f2db-8a0f-b06f-df7264ac5660",
+				version = 2,
+			},
 		},
 	},
 	[74] = 
@@ -5777,6 +7434,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 530,
 				name = "Veil",
 				timeRange = true,
@@ -5870,6 +7528,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 530,
 				name = "HoL",
 				timeRange = true,
@@ -5963,6 +7622,7 @@ local tbl =
 						inheritedIndex = 3,
 					},
 				},
+				enabled = false,
 				mechanicTime = 530,
 				name = "Dark Missinary",
 				timeRange = true,
@@ -6057,6 +7717,7 @@ local tbl =
 						inheritedIndex = 3,
 					},
 				},
+				enabled = false,
 				mechanicTime = 530,
 				name = "Shake it off",
 				timeRange = true,
@@ -6131,8 +7792,278 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 80,
 				timerOffset = -3,
-				timerStartOffset = -2,
+				timerStartOffset = -5,
 				uuid = "1cfcc748-79f8-7aa8-8feb-a9e2cdb9622e",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+								
+								{
+									"46cb0109-6c3a-2f84-a2c4-31984cecfea2",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+								
+								{
+									"c87032d2-c148-cb6a-9a76-9a849a23a2b1",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+								
+								{
+									"18f1b609-641e-ed19-9e7e-897be06b8984",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+								
+								{
+									"bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							conditions = 
+							{
+								
+								{
+									"8c71da96-ad5e-4e67-be0e-d09d31309942",
+									true,
+								},
+							},
+							filterTargetSubtype = "Lowest HP",
+							filterTargetType = "Party",
+							uuid = "fcd897d9-5fd2-af94-b079-2d99de6abac2",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							comparator = 2,
+							conditionType = 6,
+							hpValue = 50,
+							partyTargetType = "Detection Target",
+							uuid = "8c71da96-ad5e-4e67-be0e-d09d31309942",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1833,
+							category = "Self",
+							name = "GNB Buff",
+							uuid = "46cb0109-6c3a-2f84-a2c4-31984cecfea2",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 79,
+							category = "Self",
+							name = "PLD Buff",
+							uuid = "c87032d2-c148-cb6a-9a76-9a849a23a2b1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							name = "DRK Buff",
+							uuid = "18f1b609-641e-ed19-9e7e-897be06b8984",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 91,
+							name = "WAR Buff",
+							uuid = "bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
+							version = 2,
+						},
+						inheritedIndex = 8,
+					},
+				},
+				mechanicTime = 530,
+				name = "Miti LowestHP",
+				timeRange = true,
+				timelineIndex = 80,
+				timerOffset = -15,
+				timerStartOffset = -6.5,
+				uuid = "727d6022-0a42-4893-bbe3-52f5bfb41aaf",
 				version = 2,
 			},
 		},
@@ -6581,6 +8512,276 @@ local tbl =
 				version = 2,
 			},
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+								
+								{
+									"46cb0109-6c3a-2f84-a2c4-31984cecfea2",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+								
+								{
+									"c87032d2-c148-cb6a-9a76-9a849a23a2b1",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+								
+								{
+									"18f1b609-641e-ed19-9e7e-897be06b8984",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+								
+								{
+									"bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							conditions = 
+							{
+								
+								{
+									"8c71da96-ad5e-4e67-be0e-d09d31309942",
+									true,
+								},
+							},
+							filterTargetSubtype = "Lowest HP",
+							filterTargetType = "Party",
+							uuid = "fcd897d9-5fd2-af94-b079-2d99de6abac2",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							comparator = 2,
+							conditionType = 6,
+							hpValue = 50,
+							partyTargetType = "Detection Target",
+							uuid = "8c71da96-ad5e-4e67-be0e-d09d31309942",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1833,
+							category = "Self",
+							name = "GNB Buff",
+							uuid = "46cb0109-6c3a-2f84-a2c4-31984cecfea2",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 79,
+							category = "Self",
+							name = "PLD Buff",
+							uuid = "c87032d2-c148-cb6a-9a76-9a849a23a2b1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							name = "DRK Buff",
+							uuid = "18f1b609-641e-ed19-9e7e-897be06b8984",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 91,
+							name = "WAR Buff",
+							uuid = "bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
+							version = 2,
+						},
+						inheritedIndex = 8,
+					},
+				},
+				mechanicTime = 586.2,
+				name = "Miti LowestHP",
+				timeRange = true,
+				timelineIndex = 85,
+				timerOffset = -15,
+				timerStartOffset = -6.5,
+				uuid = "0a92c1d2-fd48-d2e8-81ae-8a7bf70ad3ad",
+				version = 2,
+			},
+		},
 	},
 	[87] = 
 	{
@@ -6719,13 +8920,12 @@ local tbl =
 					},
 				},
 				eventType = 4,
-				loop = true,
 				mechanicTime = 606.4,
 				name = "Provoke/Shirk on marked",
 				timeRange = true,
 				timelineIndex = 87,
-				timerEndOffset = 5,
-				timerStartOffset = -10,
+				timerEndOffset = 15,
+				timerStartOffset = -15,
 				uuid = "04ed3afa-69fc-b190-8ac2-555a4cb41a30",
 				version = 2,
 			},
@@ -6970,6 +9170,448 @@ local tbl =
 				timelineIndex = 87,
 				timerStartOffset = -5,
 				uuid = "2f573fbd-6cd2-d800-aca7-7beec4f596de",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3540,
+							conditions = 
+							{
+								
+								{
+									"d509fc50-866e-82e0-a683-7f673386a79e",
+									true,
+								},
+								
+								{
+									"28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
+									true,
+								},
+								
+								{
+									"a787167c-e665-8709-84d0-298a7dbe954a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "208d8d0c-038a-0156-ae05-da413fbdfa98",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3540,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								19,
+							},
+							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 606.4,
+				name = "Veil",
+				timeRange = true,
+				timelineIndex = 87,
+				timerOffset = -10,
+				timerStartOffset = -5,
+				uuid = "76389b7a-6ab2-e8e7-8300-a04b22eb67af",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16160,
+							conditions = 
+							{
+								
+								{
+									"a810d2af-ef39-5b67-9d5f-95b37d750c7a",
+									true,
+								},
+								
+								{
+									"115eca71-8e25-2c76-be17-c29c66dcf324",
+									true,
+								},
+								
+								{
+									"a6929435-5dcb-3407-8d89-b38a0596d1ac",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_CD",
+							uuid = "dbc99f8f-e1c5-f477-89e0-30fa7efeda14",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16160,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								37,
+							},
+							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1894,
+								1362,
+							},
+							category = "Self",
+							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 606.4,
+				name = "HoL",
+				timeRange = true,
+				timelineIndex = 87,
+				timerStartOffset = -5,
+				uuid = "eff52b36-27ef-44d4-82bb-1c12d80d13d8",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16471,
+							conditions = 
+							{
+								
+								{
+									"142e7d5f-3fc7-8773-b581-c9fe1ad51671",
+									true,
+								},
+								
+								{
+									"322dd20f-009d-0bff-941f-f877ce997638",
+									true,
+								},
+								
+								{
+									"e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "32970969-7f85-6bc8-90e1-4f30e8ce8093",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16471,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								32,
+							},
+							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1362,
+								1839,
+							},
+							category = "Self",
+							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 606.4,
+				name = "Dark Missinary",
+				timeRange = true,
+				timelineIndex = 87,
+				timerOffset = -10,
+				timerStartOffset = -5,
+				uuid = "2904b2b5-4b83-9c05-be31-6b8cbe5d0b61",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7388,
+							conditions = 
+							{
+								
+								{
+									"c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
+									true,
+								},
+								
+								{
+									"cfdfeb27-fd18-76d8-915e-3d53780d23cf",
+									true,
+								},
+								
+								{
+									"3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "83ae2ac2-4e1e-673e-befc-12d5802ce1cd",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7388,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								21,
+							},
+							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1362,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 606.4,
+				name = "Shake it off",
+				timeRange = true,
+				timelineIndex = 87,
+				timerStartOffset = -5,
+				uuid = "cd2af731-17d5-7d9e-bae5-b68f572170b8",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7535,
+							conditions = 
+							{
+								
+								{
+									"5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+									true,
+								},
+								
+								{
+									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "c9c9cc18-aa2e-c48a-bebe-6ab6f4e7c114",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1193,
+							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 6,
+							dequeueIfLuaFalse = true,
+							inRangeValue = 5,
+							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				mechanicTime = 606.4,
+				name = "Reprisal",
+				randomOffset = -2,
+				timeRange = true,
+				timelineIndex = 87,
+				timerOffset = -3,
+				timerStartOffset = -5,
+				uuid = "02d404ca-0e60-5888-84c8-9374471c16da",
 				version = 2,
 			},
 		},
@@ -8301,8 +10943,278 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 103,
 				timerOffset = -3,
-				timerStartOffset = -2,
+				timerStartOffset = -5,
 				uuid = "fcb08426-a353-8c7f-9914-896f199a380f",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+								
+								{
+									"46cb0109-6c3a-2f84-a2c4-31984cecfea2",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+								
+								{
+									"c87032d2-c148-cb6a-9a76-9a849a23a2b1",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+								
+								{
+									"18f1b609-641e-ed19-9e7e-897be06b8984",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+								
+								{
+									"bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							conditions = 
+							{
+								
+								{
+									"8c71da96-ad5e-4e67-be0e-d09d31309942",
+									true,
+								},
+							},
+							filterTargetSubtype = "Lowest HP",
+							filterTargetType = "Party",
+							uuid = "fcd897d9-5fd2-af94-b079-2d99de6abac2",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							comparator = 2,
+							conditionType = 6,
+							hpValue = 50,
+							partyTargetType = "Detection Target",
+							uuid = "8c71da96-ad5e-4e67-be0e-d09d31309942",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1833,
+							category = "Self",
+							name = "GNB Buff",
+							uuid = "46cb0109-6c3a-2f84-a2c4-31984cecfea2",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 79,
+							category = "Self",
+							name = "PLD Buff",
+							uuid = "c87032d2-c148-cb6a-9a76-9a849a23a2b1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							name = "DRK Buff",
+							uuid = "18f1b609-641e-ed19-9e7e-897be06b8984",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 91,
+							name = "WAR Buff",
+							uuid = "bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
+							version = 2,
+						},
+						inheritedIndex = 8,
+					},
+				},
+				mechanicTime = 708.9,
+				name = "Miti LowestHP",
+				timeRange = true,
+				timelineIndex = 103,
+				timerOffset = -15,
+				timerStartOffset = -6.5,
+				uuid = "78b7833a-db20-b076-b00a-8c27de1a3119",
 				version = 2,
 			},
 		},
@@ -8751,6 +11663,276 @@ local tbl =
 				version = 2,
 			},
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+								
+								{
+									"46cb0109-6c3a-2f84-a2c4-31984cecfea2",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+								
+								{
+									"c87032d2-c148-cb6a-9a76-9a849a23a2b1",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+								
+								{
+									"18f1b609-641e-ed19-9e7e-897be06b8984",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+								
+								{
+									"bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							conditions = 
+							{
+								
+								{
+									"8c71da96-ad5e-4e67-be0e-d09d31309942",
+									true,
+								},
+							},
+							filterTargetSubtype = "Lowest HP",
+							filterTargetType = "Party",
+							uuid = "fcd897d9-5fd2-af94-b079-2d99de6abac2",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							comparator = 2,
+							conditionType = 6,
+							hpValue = 50,
+							partyTargetType = "Detection Target",
+							uuid = "8c71da96-ad5e-4e67-be0e-d09d31309942",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1833,
+							category = "Self",
+							name = "GNB Buff",
+							uuid = "46cb0109-6c3a-2f84-a2c4-31984cecfea2",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 79,
+							category = "Self",
+							name = "PLD Buff",
+							uuid = "c87032d2-c148-cb6a-9a76-9a849a23a2b1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							name = "DRK Buff",
+							uuid = "18f1b609-641e-ed19-9e7e-897be06b8984",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 91,
+							name = "WAR Buff",
+							uuid = "bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
+							version = 2,
+						},
+						inheritedIndex = 8,
+					},
+				},
+				mechanicTime = 809.5,
+				name = "Miti LowestHP",
+				timeRange = true,
+				timelineIndex = 112,
+				timerOffset = -15,
+				timerStartOffset = -6.5,
+				uuid = "6c8f00f3-aceb-a2c5-8ce3-0ddaa7536c42",
+				version = 2,
+			},
+		},
 	},
 	[120] = 
 	{
@@ -9193,6 +12375,276 @@ local tbl =
 				timerOffset = -3,
 				timerStartOffset = -2,
 				uuid = "d155a039-9ff9-9b56-81a7-fd08020a7554",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+								
+								{
+									"46cb0109-6c3a-2f84-a2c4-31984cecfea2",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+								
+								{
+									"c87032d2-c148-cb6a-9a76-9a849a23a2b1",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+								
+								{
+									"18f1b609-641e-ed19-9e7e-897be06b8984",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							conditions = 
+							{
+								
+								{
+									"fcd897d9-5fd2-af94-b079-2d99de6abac2",
+									true,
+								},
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+								
+								{
+									"bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							conditions = 
+							{
+								
+								{
+									"8c71da96-ad5e-4e67-be0e-d09d31309942",
+									true,
+								},
+							},
+							filterTargetSubtype = "Lowest HP",
+							filterTargetType = "Party",
+							uuid = "fcd897d9-5fd2-af94-b079-2d99de6abac2",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							comparator = 2,
+							conditionType = 6,
+							hpValue = 50,
+							partyTargetType = "Detection Target",
+							uuid = "8c71da96-ad5e-4e67-be0e-d09d31309942",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1833,
+							category = "Self",
+							name = "GNB Buff",
+							uuid = "46cb0109-6c3a-2f84-a2c4-31984cecfea2",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 79,
+							category = "Self",
+							name = "PLD Buff",
+							uuid = "c87032d2-c148-cb6a-9a76-9a849a23a2b1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							name = "DRK Buff",
+							uuid = "18f1b609-641e-ed19-9e7e-897be06b8984",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 91,
+							name = "WAR Buff",
+							uuid = "bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
+							version = 2,
+						},
+						inheritedIndex = 8,
+					},
+				},
+				mechanicTime = 887.7,
+				name = "Miti LowestHP",
+				timeRange = true,
+				timelineIndex = 120,
+				timerOffset = -15,
+				timerStartOffset = -6.5,
+				uuid = "dbfdf671-257b-3554-9819-888fd4870f57",
 				version = 2,
 			},
 		},
