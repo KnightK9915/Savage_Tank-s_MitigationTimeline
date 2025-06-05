@@ -716,7 +716,7 @@ local tbl =
 						data = 
 						{
 							conditionType = 6,
-							inRangeValue = 6,
+							inRangeValue = 3,
 							uuid = "611ca405-b04a-1e86-a1f1-aecb345475d2",
 							version = 2,
 						},
@@ -3140,7 +3140,7 @@ local tbl =
 						data = 
 						{
 							conditionType = 6,
-							inRangeValue = 6,
+							inRangeValue = 3,
 							uuid = "611ca405-b04a-1e86-a1f1-aecb345475d2",
 							version = 2,
 						},
@@ -3503,7 +3503,7 @@ local tbl =
 						data = 
 						{
 							conditionType = 6,
-							inRangeValue = 6,
+							inRangeValue = 3,
 							uuid = "611ca405-b04a-1e86-a1f1-aecb345475d2",
 							version = 2,
 						},
@@ -5767,7 +5767,7 @@ local tbl =
 						data = 
 						{
 							conditionType = 6,
-							inRangeValue = 6,
+							inRangeValue = 3,
 							uuid = "611ca405-b04a-1e86-a1f1-aecb345475d2",
 							version = 2,
 						},
@@ -6255,6 +6255,155 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 9,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"fb118629-99cc-f916-8e0f-642c7a2ae56e",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_Potion",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "328836d1-babf-a8a4-be73-44ac1f7a8bdc",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"b865bb6c-ddbf-de7d-99ed-d8e86deae288",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_Potion",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "58d188fd-1980-420c-9e54-54fff80769e3",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"e22bfa65-43d3-ec2f-9492-3aac0629a28e",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_Potion",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "cabb1cdd-09ef-7c22-aade-ac342b374ef6",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"87bac150-66d5-e701-89bb-e0397d6bcf9c",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_Potion",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "c3a9c148-1cce-566b-8fac-74b40cfa943c",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "fb118629-99cc-f916-8e0f-642c7a2ae56e",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "b865bb6c-ddbf-de7d-99ed-d8e86deae288",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "e22bfa65-43d3-ec2f-9492-3aac0629a28e",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "87bac150-66d5-e701-89bb-e0397d6bcf9c",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 379.4,
+				name = "Potion OFF",
+				timelineIndex = 65,
+				timerStartOffset = -10,
+				uuid = "4b958166-561c-e6c4-8a0e-eacd199889c5",
+				version = 2,
+			},
 		},
 	},
 	[70] = 
@@ -6904,6 +7053,155 @@ local tbl =
 				version = 2,
 			},
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"ad752936-4d73-6ee9-9b18-b42e17f4ef36",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "bac81c5a-2c58-66fa-b4d1-16ed6e2eeb8a",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"be849869-2da7-b952-823b-4f483b8e1c55",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "00c32d86-8e27-8f84-8c3f-fd7e26ee8977",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"5e6d5ee0-248a-0944-9c9e-21e2d0a51d4a",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "31183c28-a107-8ef9-bb2c-7ba51cb950f2",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"079862f1-8d36-4683-9c5c-5f9cb41e8326",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "b2b6f566-b642-751c-91e0-af0d2069b4b2",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "ad752936-4d73-6ee9-9b18-b42e17f4ef36",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "be849869-2da7-b952-823b-4f483b8e1c55",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "5e6d5ee0-248a-0944-9c9e-21e2d0a51d4a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "079862f1-8d36-4683-9c5c-5f9cb41e8326",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 433,
+				name = "CD OFF",
+				timelineIndex = 74,
+				timerStartOffset = -10,
+				uuid = "5f7d9f45-8b0d-9e84-863b-36348a46d246",
+				version = 2,
+			},
+		},
 	},
 	[75] = 
 	{
@@ -7345,6 +7643,301 @@ local tbl =
 				timerOffset = -3,
 				timerStartOffset = -14,
 				uuid = "6569443d-ff10-1cc7-b05d-d4b083fa9c37",
+				version = 2,
+			},
+		},
+	},
+	[79] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"fb118629-99cc-f916-8e0f-642c7a2ae56e",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_Potion",
+							ignoreWeaveRules = true,
+							uuid = "328836d1-babf-a8a4-be73-44ac1f7a8bdc",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"b865bb6c-ddbf-de7d-99ed-d8e86deae288",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_Potion",
+							ignoreWeaveRules = true,
+							uuid = "58d188fd-1980-420c-9e54-54fff80769e3",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"e22bfa65-43d3-ec2f-9492-3aac0629a28e",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_Potion",
+							ignoreWeaveRules = true,
+							uuid = "cabb1cdd-09ef-7c22-aade-ac342b374ef6",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"87bac150-66d5-e701-89bb-e0397d6bcf9c",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_Potion",
+							ignoreWeaveRules = true,
+							uuid = "c3a9c148-1cce-566b-8fac-74b40cfa943c",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "fb118629-99cc-f916-8e0f-642c7a2ae56e",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "b865bb6c-ddbf-de7d-99ed-d8e86deae288",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "e22bfa65-43d3-ec2f-9492-3aac0629a28e",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "87bac150-66d5-e701-89bb-e0397d6bcf9c",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 523,
+				name = "Potion ON",
+				timelineIndex = 79,
+				timerOffset = -5,
+				timerStartOffset = -10,
+				uuid = "d958b043-2486-d17f-99c9-f86b237d34f0",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"75fab7bf-300f-e5c6-b545-a62357f20c4e",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "51815f9f-dc0d-1ed5-9d94-1707584c2fae",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"1c695c8b-2f73-d651-8668-aaef81567f0e",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "1ec1fd4f-3fa4-fd82-bdd8-37dc62b7bfda",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"9a9c2033-a2b8-47bd-839b-63fa858ceea0",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "7bc31b63-73b1-527f-b775-997c9dfc8221",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"26a3b054-9394-c902-a65d-7b86b8150c63",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "bcf78eac-d535-50fa-87e3-c207400be218",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "75fab7bf-300f-e5c6-b545-a62357f20c4e",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "1c695c8b-2f73-d651-8668-aaef81567f0e",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "9a9c2033-a2b8-47bd-839b-63fa858ceea0",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "26a3b054-9394-c902-a65d-7b86b8150c63",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 523,
+				name = "CD ON",
+				timelineIndex = 79,
+				timerOffset = -5,
+				timerStartOffset = -10,
+				uuid = "e7232a6f-094b-e097-9025-a27ea554e11c",
 				version = 2,
 			},
 		},
@@ -8669,7 +9262,7 @@ local tbl =
 						{
 							category = "Party",
 							comparator = 2,
-							conditionType = 6,
+							conditionType = 2,
 							hpValue = 50,
 							partyTargetType = "Detection Target",
 							uuid = "8c71da96-ad5e-4e67-be0e-d09d31309942",
@@ -11105,7 +11698,7 @@ local tbl =
 						{
 							category = "Party",
 							comparator = 2,
-							conditionType = 6,
+							conditionType = 2,
 							hpValue = 50,
 							partyTargetType = "Detection Target",
 							uuid = "8c71da96-ad5e-4e67-be0e-d09d31309942",
