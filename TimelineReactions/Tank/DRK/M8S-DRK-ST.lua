@@ -3999,7 +3999,7 @@ local tbl =
 			inheritedIndex = 9,
 		},
 	},
-	[87] = 
+	[88] = 
 	{
 		
 		{
@@ -4042,13 +4042,13 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 606.4,
+				mechanicTime = 610.5,
 				name = "TBN (15)",
 				timeRange = true,
-				timelineIndex = 87,
+				timelineIndex = 88,
 				timerOffset = -4,
-				timerStartOffset = -5,
-				uuid = "e1a7cee1-e417-f703-8936-a38dbb57ebbc",
+				timerStartOffset = -3,
+				uuid = "949508b6-2a0c-cfb5-93b3-fb4fbdb1447d",
 				version = 2,
 			},
 			inheritedIndex = 6,
@@ -4095,180 +4095,16 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 606.4,
+				mechanicTime = 610.5,
 				name = "Rampart (20)",
 				timeRange = true,
-				timelineIndex = 87,
+				timelineIndex = 88,
 				timerOffset = -15,
-				timerStartOffset = -10,
-				uuid = "7e4ff81b-cb97-70d0-9ed1-ce2ce0f6f1f6",
+				timerStartOffset = -5,
+				uuid = "df176b39-ca28-1cc1-86f9-f4a924d0fd48",
 				version = 2,
 			},
 			inheritedIndex = 7,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7393,
-							atomicPriority = true,
-							conditions = 
-							{
-								
-								{
-									"2ba7d2e4-c389-fd61-b35c-5aec45cd04f3",
-									true,
-								},
-								
-								{
-									"b0749ba0-d56d-2d7f-bf44-55f8b1fd0439",
-									true,
-								},
-								
-								{
-									"d7e18023-4fd0-c3f5-97d9-b0d0b47464cf",
-									true,
-								},
-								
-								{
-									"3ab5e8af-321e-1152-8cd2-bee5743aa464",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							targetContentID = 13822,
-							uuid = "abb5b37d-bcdf-3e66-a7f5-fb0f4d2163fe",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionID = 7393,
-							atomicPriority = true,
-							conditions = 
-							{
-								
-								{
-									"2ba7d2e4-c389-fd61-b35c-5aec45cd04f3",
-									true,
-								},
-								
-								{
-									"c0b320b0-34d7-3810-8990-1f84470ef666",
-									true,
-								},
-								
-								{
-									"41a8baf5-e5cd-8aa0-962f-e24a96d875be",
-									true,
-								},
-								
-								{
-									"3ab5e8af-321e-1152-8cd2-bee5743aa464",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Other Tank",
-							uuid = "5c2d56e1-c2f4-d416-b67f-da2405bf5b72",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgType = 2,
-							eventMarkerID = 23,
-							uuid = "2ba7d2e4-c389-fd61-b35c-5aec45cd04f3",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Party",
-							conditionType = 10,
-							inGroupTargetType = "Other Tank",
-							partyTargetType = "Event Entity",
-							uuid = "b0749ba0-d56d-2d7f-bf44-55f8b1fd0439",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Party",
-							conditionType = 10,
-							inGroupTargetType = "Self",
-							partyTargetType = "Event Entity",
-							uuid = "c0b320b0-34d7-3810-8990-1f84470ef666",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							comparator = 2,
-							conditionType = 4,
-							enmityValue = 99.999000549316,
-							uuid = "d7e18023-4fd0-c3f5-97d9-b0d0b47464cf",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							conditionType = 4,
-							enmityValue = 100,
-							uuid = "41a8baf5-e5cd-8aa0-962f-e24a96d875be",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 3,
-							mpType = 2,
-							mpValue = 3000,
-							uuid = "3ab5e8af-321e-1152-8cd2-bee5743aa464",
-							version = 2,
-						},
-					},
-				},
-				enabled = false,
-				eventType = 4,
-				mechanicTime = 606.4,
-				name = "TBN on marked",
-				timeRange = true,
-				timelineIndex = 87,
-				timerEndOffset = 3,
-				timerStartOffset = -3,
-				uuid = "03a5a5be-14ca-d645-99cd-0718ca7b1b10",
-				version = 2,
-			},
 		},
 	},
 	[105] = 
@@ -4742,7 +4578,7 @@ local tbl =
 				name = "Living Dead (Invinsible)",
 				timeRange = true,
 				timelineIndex = 114,
-				timerStartOffset = -4.5,
+				timerStartOffset = -1.5,
 				uuid = "c3eae006-8972-43ea-92f7-e02941bb40d3",
 				version = 2,
 			},
@@ -4809,8 +4645,9 @@ local tbl =
 				name = "TBN (25)",
 				timeRange = true,
 				timelineIndex = 114,
+				timerEndOffset = 10,
 				timerOffset = -4,
-				timerStartOffset = -6.5,
+				timerStartOffset = 0.5,
 				uuid = "a6ed96ff-edb7-4cf0-8e50-ae63d9a037a8",
 				version = 2,
 			},
@@ -4880,7 +4717,7 @@ local tbl =
 				name = "Living Dead (Invinsible)",
 				timeRange = true,
 				timelineIndex = 116,
-				timerStartOffset = -4.5,
+				timerStartOffset = -1.5,
 				uuid = "c239939d-90a9-af4c-bb51-e2577d5c06f1",
 				version = 2,
 			},
@@ -4947,8 +4784,9 @@ local tbl =
 				name = "TBN (25)",
 				timeRange = true,
 				timelineIndex = 116,
+				timerEndOffset = 10,
 				timerOffset = -4,
-				timerStartOffset = -6.5,
+				timerStartOffset = 0.5,
 				uuid = "72f57400-b1d5-6359-82ba-f2db1f0232ff",
 				version = 2,
 			},
@@ -5002,8 +4840,8 @@ local tbl =
 				name = "TBN (25)",
 				timeRange = true,
 				timelineIndex = 118,
+				timerEndOffset = 10,
 				timerOffset = -4,
-				timerStartOffset = -2,
 				uuid = "c4c86ecc-3cee-4246-abe6-fc527aaaea22",
 				version = 2,
 			},
@@ -5057,7 +4895,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 118,
 				timerOffset = -15,
-				timerStartOffset = -10,
+				timerStartOffset = -5,
 				uuid = "36353883-cec7-268e-9bc4-d0c8c43733fe",
 				version = 2,
 			},
@@ -5110,7 +4948,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 118,
 				timerOffset = -5,
-				timerStartOffset = -5,
+				timerStartOffset = -3,
 				uuid = "f1bfaab0-623b-eb8a-8423-f859d8fd8ad9",
 				version = 2,
 			},
@@ -5143,7 +4981,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 118,
 				timerOffset = -3,
-				timerStartOffset = -8,
+				timerStartOffset = -1,
 				uuid = "74b9bc6a-26d9-ec76-beac-939f77100828",
 				version = 2,
 			},
@@ -5320,7 +5158,7 @@ local tbl =
 				randomOffset = 2,
 				timeRange = true,
 				timelineIndex = 118,
-				timerStartOffset = -8,
+				timerStartOffset = -2,
 				uuid = "cd0f3fed-11ea-c6c0-ba16-883504db7f9a",
 				version = 2,
 			},
