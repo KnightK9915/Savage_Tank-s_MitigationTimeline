@@ -4065,7 +4065,7 @@ local tbl =
 			inheritedIndex = 8,
 		},
 	},
-	[87] = 
+	[88] = 
 	{
 		
 		{
@@ -4111,12 +4111,12 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 606.4,
+				mechanicTime = 610.5,
 				name = "BW (20)",
 				timeRange = true,
-				timelineIndex = 87,
+				timelineIndex = 88,
 				timerStartOffset = -3.5,
-				uuid = "5bf41f0e-62e5-f88c-ba20-d1a3c3e532f5",
+				uuid = "b73896d5-08e9-f0aa-a017-9ec5ffe8154a",
 				version = 2,
 			},
 			inheritedIndex = 6,
@@ -4163,196 +4163,16 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 606.4,
+				mechanicTime = 610.5,
 				name = "Rampart (20)",
 				timeRange = true,
-				timelineIndex = 87,
+				timelineIndex = 88,
 				timerOffset = -15,
 				timerStartOffset = -10,
-				uuid = "3f7dab60-9ca2-f341-90d0-7c322ce91d99",
+				uuid = "c3be9659-087b-93dc-b006-306d195ff23d",
 				version = 2,
 			},
 			inheritedIndex = 7,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 25751,
-							atomicPriority = true,
-							conditions = 
-							{
-								
-								{
-									"2ba7d2e4-c389-fd61-b35c-5aec45cd04f3",
-									true,
-								},
-								
-								{
-									"b0749ba0-d56d-2d7f-bf44-55f8b1fd0439",
-									true,
-								},
-								
-								{
-									"d7e18023-4fd0-c3f5-97d9-b0d0b47464cf",
-									true,
-								},
-								
-								{
-									"32991af1-05bb-874d-9ed4-1f1e9bb34929",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							targetContentID = 13822,
-							uuid = "abb5b37d-bcdf-3e66-a7f5-fb0f4d2163fe",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionID = 16464,
-							atomicPriority = true,
-							conditions = 
-							{
-								
-								{
-									"2ba7d2e4-c389-fd61-b35c-5aec45cd04f3",
-									true,
-								},
-								
-								{
-									"c0b320b0-34d7-3810-8990-1f84470ef666",
-									true,
-								},
-								
-								{
-									"41a8baf5-e5cd-8aa0-962f-e24a96d875be",
-									true,
-								},
-								
-								{
-									"e7a0fe40-7a5a-8c2a-900a-88c84a0adb05",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Other Tank",
-							uuid = "5c2d56e1-c2f4-d416-b67f-da2405bf5b72",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgType = 2,
-							eventMarkerID = 23,
-							uuid = "2ba7d2e4-c389-fd61-b35c-5aec45cd04f3",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Party",
-							conditionType = 10,
-							inGroupTargetType = "Other Tank",
-							partyTargetType = "Event Entity",
-							uuid = "b0749ba0-d56d-2d7f-bf44-55f8b1fd0439",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Party",
-							conditionType = 10,
-							inGroupTargetType = "Self",
-							partyTargetType = "Event Entity",
-							uuid = "c0b320b0-34d7-3810-8990-1f84470ef666",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							comparator = 2,
-							conditionType = 4,
-							enmityValue = 99.999000549316,
-							uuid = "d7e18023-4fd0-c3f5-97d9-b0d0b47464cf",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							conditionType = 4,
-							enmityValue = 100,
-							uuid = "41a8baf5-e5cd-8aa0-962f-e24a96d875be",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionID = 25751,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							name = "CD BW",
-							uuid = "32991af1-05bb-874d-9ed4-1f1e9bb34929",
-							version = 2,
-						},
-						inheritedIndex = 6,
-					},
-					
-					{
-						data = 
-						{
-							actionID = 16464,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							name = "CD NF",
-							uuid = "e7a0fe40-7a5a-8c2a-900a-88c84a0adb05",
-							version = 2,
-						},
-						inheritedIndex = 7,
-					},
-				},
-				enabled = false,
-				eventType = 4,
-				mechanicTime = 606.4,
-				name = "BW on marked",
-				timeRange = true,
-				timelineIndex = 87,
-				timerEndOffset = 3,
-				timerStartOffset = -3,
-				uuid = "98d26f83-7b74-ffea-b234-be2b7f467c14",
-				version = 2,
-			},
 		},
 	},
 	[105] = 
@@ -4967,7 +4787,7 @@ local tbl =
 				name = "Holmgang (Invincible)",
 				timeRange = true,
 				timelineIndex = 114,
-				timerStartOffset = -4.5,
+				timerStartOffset = -1.5,
 				uuid = "f71936ad-4a24-ffbe-9865-343b6bbb892a",
 				version = 2,
 			},
@@ -5265,7 +5085,7 @@ local tbl =
 				name = "Holmgang (Invincible)",
 				timeRange = true,
 				timelineIndex = 116,
-				timerStartOffset = -4.5,
+				timerStartOffset = -1.5,
 				uuid = "9320a1a0-0a0b-a506-8581-98e575ddeae9",
 				version = 2,
 			},
@@ -5618,7 +5438,7 @@ local tbl =
 				name = "BW/NF (20)",
 				timeRange = true,
 				timelineIndex = 118,
-				timerStartOffset = -2,
+				timerEndOffset = 5,
 				uuid = "aa6b5527-0df9-9fe9-8b59-2b9e76721765",
 				version = 2,
 			},
@@ -5671,7 +5491,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 118,
 				timerOffset = -15,
-				timerStartOffset = -10,
+				timerStartOffset = -5,
 				uuid = "cebf3423-b127-7930-a937-918d9081c9f3",
 				version = 2,
 			},
@@ -5724,7 +5544,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 118,
 				timerOffset = -5,
-				timerStartOffset = -5,
+				timerStartOffset = -3,
 				uuid = "cad29795-52f6-4e6f-bb5b-00c80280a828",
 				version = 2,
 			},
@@ -5777,7 +5597,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 118,
 				timerOffset = -1,
-				timerStartOffset = -8,
+				timerStartOffset = -1,
 				uuid = "7f153da8-b05b-c8d6-baa7-6de6454fdeff",
 				version = 2,
 			},
