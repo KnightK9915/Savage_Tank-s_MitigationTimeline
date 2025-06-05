@@ -51,7 +51,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 1,
 				timerOffset = -1,
-				timerStartOffset = -1.2999999523163,
+				timerStartOffset = -1.2000000476837,
 				uuid = "f07b0e26-3ebe-62bf-abae-106e3ab75f71",
 				version = 2,
 			},
@@ -788,7 +788,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 14,
 				timerOffset = -1,
-				timerStartOffset = -2,
+				timerStartOffset = -1.5,
 				uuid = "b50087e5-3de5-33bf-a3e5-aa884bbb12a0",
 				version = 2,
 			},
@@ -940,11 +940,92 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 17,
 				timerOffset = -1,
-				timerStartOffset = -2,
+				timerStartOffset = -1.5,
 				uuid = "8da813d2-1b7c-44f8-87c1-d26bc27cfc1c",
 				version = 2,
 			},
 			inheritedIndex = 3,
+		},
+	},
+	[23] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"084faeb3-bd1b-754e-aab2-a4d0a52ed969",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Main Tank",
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 8,
+							jobIDList = 
+							{
+								19,
+								37,
+							},
+							name = "Other Tank is PLD/GNB",
+							partyTargetType = "Main Tank",
+							uuid = "084faeb3-bd1b-754e-aab2-a4d0a52ed969",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 97.3,
+				name = "HoC (15) ST",
+				timeRange = true,
+				timelineIndex = 23,
+				timerOffset = -1,
+				timerStartOffset = -2,
+				uuid = "59b9cf8f-463a-146f-8b71-b429b57a6fba",
+				version = 2,
+			},
+			inheritedIndex = 9,
 		},
 	},
 	[25] = 
@@ -3459,6 +3540,63 @@ local tbl =
 			inheritedIndex = 9,
 		},
 	},
+	[80] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 530,
+				name = "HoC (15)",
+				timeRange = true,
+				timelineIndex = 80,
+				timerOffset = -1,
+				timerStartOffset = -2,
+				uuid = "bf619fcd-fa98-310b-814a-0cb39ecbd9a4",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
 	[82] = 
 	{
 		
@@ -3669,7 +3807,7 @@ local tbl =
 				name = "Great Nebula (40)",
 				timeRange = true,
 				timelineIndex = 82,
-				timerStartOffset = -10,
+				timerStartOffset = -8,
 				uuid = "d05d0d2d-a175-6f7c-959a-0064c7c8c03e",
 				version = 2,
 			},
@@ -3949,6 +4087,63 @@ local tbl =
 			inheritedIndex = 9,
 		},
 	},
+	[85] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 586.2,
+				name = "HoC (15)",
+				timeRange = true,
+				timelineIndex = 85,
+				timerOffset = -1,
+				timerStartOffset = -2,
+				uuid = "1752056a-f27d-80bf-aee6-b5581e2890c2",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+	},
 	[87] = 
 	{
 		
@@ -3999,7 +4194,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 87,
 				timerOffset = -1,
-				timerStartOffset = -3.5,
+				timerStartOffset = -2.5,
 				uuid = "b4472ca9-2532-b047-997c-7e314e8526fa",
 				version = 2,
 			},
@@ -4224,6 +4419,173 @@ local tbl =
 			},
 		},
 	},
+	[88] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 610.5,
+				name = "HoC (15)",
+				timeRange = true,
+				timelineIndex = 88,
+				timerOffset = -1,
+				timerStartOffset = -2.5,
+				uuid = "c2c23158-e22a-2538-ac31-1bcd4ab073b5",
+				version = 2,
+			},
+			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 610.5,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 88,
+				timerOffset = -15,
+				timerStartOffset = -5,
+				uuid = "f732f875-b60c-578f-8cc1-56037efc2bd8",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+	},
+	[103] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 708.9,
+				name = "HoC (15)",
+				timeRange = true,
+				timelineIndex = 103,
+				timerOffset = -1,
+				timerStartOffset = -2,
+				uuid = "b119d0f2-5b11-0002-89dc-e607893c75be",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+	},
 	[105] = 
 	{
 		
@@ -4434,7 +4796,7 @@ local tbl =
 				name = "Great Nebula (40)",
 				timeRange = true,
 				timelineIndex = 105,
-				timerStartOffset = -10,
+				timerStartOffset = -8,
 				uuid = "a3d9b10c-3bb5-0e74-a5e2-8f61503e45ad",
 				version = 2,
 			},
@@ -4778,7 +5140,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 114,
 				timerOffset = -1,
-				timerStartOffset = -4.5,
+				timerStartOffset = -1.5,
 				uuid = "f294fcf9-ff7c-59ef-8c76-b533e55d7c35",
 				version = 2,
 			},
@@ -5008,7 +5370,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 116,
 				timerOffset = -1,
-				timerStartOffset = -4.5,
+				timerStartOffset = -1.5,
 				uuid = "b09f0c95-db9e-ed30-94cb-bcb7462c3846",
 				version = 2,
 			},
@@ -5223,7 +5585,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 118,
 				timerOffset = -10,
-				timerStartOffset = -10,
+				timerStartOffset = -4,
 				uuid = "15bd6385-f136-9aef-aba4-bfe68b40a02c",
 				version = 2,
 			},
@@ -5276,8 +5638,8 @@ local tbl =
 				name = "HoC (15)",
 				timeRange = true,
 				timelineIndex = 118,
+				timerEndOffset = 5,
 				timerOffset = -1,
-				timerStartOffset = -2,
 				uuid = "71d15927-5300-20c4-b842-075c4a3ba33d",
 				version = 2,
 			},
@@ -5330,7 +5692,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 118,
 				timerOffset = -15,
-				timerStartOffset = -10,
+				timerStartOffset = -5,
 				uuid = "c3014209-fe74-50e2-ac55-6251c11954c6",
 				version = 2,
 			},
@@ -5382,7 +5744,7 @@ local tbl =
 				name = "Great Nebula (40)",
 				timeRange = true,
 				timelineIndex = 118,
-				timerStartOffset = -5,
+				timerStartOffset = -3,
 				uuid = "ecdb7b57-2003-7add-9238-f87a587065c6",
 				version = 2,
 			},
