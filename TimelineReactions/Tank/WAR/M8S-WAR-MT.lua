@@ -4065,6 +4065,166 @@ local tbl =
 			inheritedIndex = 8,
 		},
 	},
+	[87] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionID = 7537,
+							actionLua = "data.otherMarked = true\nself.used = true",
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
+									true,
+								},
+								
+								{
+									"c2cb9d3b-196d-fc9d-b9a5-682ed76f4bf6",
+									true,
+								},
+								
+								{
+									"793315f6-95e5-64dd-ad82-b5068ac21c08",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							name = "otherMarked",
+							targetType = "Other Tank",
+							uuid = "08223bfd-5bf6-6938-8c37-b67cddd359ec",
+							version = 2.1,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionID = 7533,
+							actionLua = "data.selfMarked = true\nself.used = true",
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
+									true,
+								},
+								
+								{
+									"d73a437b-daee-5b25-9e29-bfcac45843c2",
+									true,
+								},
+								
+								{
+									"463b432b-49d1-5a42-80c0-43e42e255c1c",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							name = "selfMarked",
+							targetContentID = 13822,
+							targetType = "ContentID",
+							uuid = "a1aed48d-295b-da3e-978a-460aac09e87e",
+							version = 2.1,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 23,
+							uuid = "bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetType = "Other Tank",
+							name = "marker on ST",
+							partyTargetType = "Event Entity",
+							uuid = "c2cb9d3b-196d-fc9d-b9a5-682ed76f4bf6",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetType = "Self",
+							name = "marker on Self",
+							partyTargetType = "Event Entity",
+							uuid = "d73a437b-daee-5b25-9e29-bfcac45843c2",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99.999000549316,
+							name = "don't have aggro",
+							uuid = "793315f6-95e5-64dd-ad82-b5068ac21c08",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 100,
+							name = "have aggro",
+							uuid = "463b432b-49d1-5a42-80c0-43e42e255c1c",
+							version = 2,
+						},
+						inheritedIndex = 5,
+					},
+				},
+				eventType = 4,
+				mechanicTime = 606.4,
+				name = "Record marked",
+				timeRange = true,
+				timelineIndex = 87,
+				timerEndOffset = 15,
+				timerStartOffset = -15,
+				uuid = "70733193-1326-220c-a869-ff475dcecefa",
+				version = 2,
+			},
+		},
+	},
 	[88] = 
 	{
 		
@@ -4083,6 +4243,11 @@ local tbl =
 								
 								{
 									"7ff7d550-e7f1-b813-8c61-8d51598a9cff",
+									true,
+								},
+								
+								{
+									"e6b0e0e3-f3d2-dab4-9315-3ea9b5d50efb",
 									true,
 								},
 							},
@@ -4110,12 +4275,23 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.otherMarked",
+							name = "if other marked",
+							uuid = "e6b0e0e3-f3d2-dab4-9315-3ea9b5d50efb",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 610.5,
 				name = "BW (20)",
 				timeRange = true,
 				timelineIndex = 88,
-				timerStartOffset = -3.5,
+				timerStartOffset = -1.5,
 				uuid = "b73896d5-08e9-f0aa-a017-9ec5ffe8154a",
 				version = 2,
 			},
@@ -4173,6 +4349,79 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 7,
+		},
+	},
+	[89] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25751,
+							conditions = 
+							{
+								
+								{
+									"7ff7d550-e7f1-b813-8c61-8d51598a9cff",
+									true,
+								},
+								
+								{
+									"afd4af87-566a-0c8d-8698-ae980231cf2b",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "f128886d-3f9c-d873-b184-840ce732e9d1",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25751,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							name = "CD BW",
+							uuid = "7ff7d550-e7f1-b813-8c61-8d51598a9cff",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.selfMarked",
+							name = "if self marked",
+							uuid = "afd4af87-566a-0c8d-8698-ae980231cf2b",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 611.5,
+				name = "BW (20)",
+				timeRange = true,
+				timelineIndex = 89,
+				timerStartOffset = -1.5,
+				uuid = "a3cf6a98-8e62-74a7-bab4-62c6bf6d5f7e",
+				version = 2,
+			},
+			inheritedIndex = 6,
 		},
 	},
 	[105] = 
@@ -5015,7 +5264,8 @@ local tbl =
 				name = "BW/NF (for regen)",
 				timeRange = true,
 				timelineIndex = 114,
-				timerStartOffset = -0.5,
+				timerEndOffset = 10,
+				timerStartOffset = 0.5,
 				uuid = "cffc7c50-0590-b27f-9b47-bd05241f8e7e",
 				version = 2,
 			},
@@ -5313,7 +5563,8 @@ local tbl =
 				name = "BW/NF (for regen)",
 				timeRange = true,
 				timelineIndex = 116,
-				timerStartOffset = -0.5,
+				timerEndOffset = 10,
+				timerStartOffset = 0.5,
 				uuid = "ceae406e-8639-3d0e-9b3d-66a622cdccbe",
 				version = 2,
 			},
@@ -5345,6 +5596,11 @@ local tbl =
 									"0f8628f3-99de-2bb0-b1ff-1df3c94b2276",
 									true,
 								},
+								
+								{
+									"48a49d30-407f-2cf2-abc7-32917be28f34",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuWAR3_CD",
@@ -5369,6 +5625,11 @@ local tbl =
 								
 								{
 									"4f25e7d2-e5c2-ae81-bd11-727a54c8ac3e",
+									true,
+								},
+								
+								{
+									"48a49d30-407f-2cf2-abc7-32917be28f34",
 									true,
 								},
 							},
@@ -5433,12 +5694,24 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 70,
+							uuid = "48a49d30-407f-2cf2-abc7-32917be28f34",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 868.2,
 				name = "BW/NF (20)",
 				timeRange = true,
 				timelineIndex = 118,
-				timerEndOffset = 5,
+				timerEndOffset = 10,
 				uuid = "aa6b5527-0df9-9fe9-8b59-2b9e76721765",
 				version = 2,
 			},
