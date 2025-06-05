@@ -47,7 +47,7 @@ local tbl =
 				name = "interven ST (15)",
 				timeRange = true,
 				timelineIndex = 1,
-				timerStartOffset = -1.2999999523163,
+				timerStartOffset = -1.2000000476837,
 				uuid = "d6e7d1a6-e3f2-dfe6-aa7b-b02ab6fa99bb",
 				version = 2,
 			},
@@ -586,7 +586,7 @@ local tbl =
 				name = "sheltron/interven (15)",
 				timeRange = true,
 				timelineIndex = 14,
-				timerStartOffset = -2,
+				timerStartOffset = -1.2000000476837,
 				uuid = "25e44b17-83a9-71b2-9295-3797e7439b6c",
 				version = 2,
 			},
@@ -789,11 +789,99 @@ local tbl =
 				name = "sheltron/interven (15)",
 				timeRange = true,
 				timelineIndex = 17,
-				timerStartOffset = -2,
+				timerStartOffset = -1.2000000476837,
 				uuid = "f8b63e6a-576c-769d-918a-d71553006028",
 				version = 2,
 			},
 			inheritedIndex = 4,
+		},
+	},
+	[23] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5ed8c1f4-36d8-ad42-9463-1f8154296465",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 97.3,
+				name = "interven ST (15)",
+				timeRange = true,
+				timelineIndex = 23,
+				timerStartOffset = -1.2000000476837,
+				uuid = "98e17383-69ba-aac2-a4cd-8ad72ec717fd",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[24] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7385,
+							atomicPriority = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "0b54fc5a-fdd3-64bd-b1d3-6f69baba4032",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 110.9,
+				name = "PoA",
+				timeRange = true,
+				timelineIndex = 24,
+				timerStartOffset = -1.2000000476837,
+				uuid = "720eb510-c179-7acc-9f44-c2d7e2d1faac",
+				version = 2,
+			},
 		},
 	},
 	[25] = 
@@ -1251,7 +1339,8 @@ local tbl =
 				name = "interven ST (15)",
 				timeRange = true,
 				timelineIndex = 25,
-				timerStartOffset = -3,
+				timerEndOffset = 5,
+				timerStartOffset = 0.5,
 				uuid = "52db1da9-c582-d9dc-9461-48d6d5a16980",
 				version = 2,
 			},
@@ -1810,6 +1899,92 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 221.8,
+				name = "sheltron (15)",
+				timeRange = true,
+				timelineIndex = 46,
+				timerEndOffset = 5,
+				timerStartOffset = 1,
+				uuid = "6a3757f0-f2a9-3561-972f-6a3a254a1ab0",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+	},
+	[50] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7385,
+							atomicPriority = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "0b54fc5a-fdd3-64bd-b1d3-6f69baba4032",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 316.6,
+				name = "PoA",
+				timeRange = true,
+				timelineIndex = 50,
+				timerStartOffset = -1.2000000476837,
+				uuid = "da122bca-e71c-5980-ab92-d4b781179d19",
+				version = 2,
+			},
 		},
 	},
 	[62] = 
@@ -2604,11 +2779,46 @@ local tbl =
 				name = "interven ST (15)",
 				timeRange = true,
 				timelineIndex = 65,
-				timerStartOffset = -3,
+				timerEndOffset = 5,
+				timerStartOffset = 0.5,
 				uuid = "fd60c424-2706-ffeb-ba58-59b74a992186",
 				version = 2,
 			},
 			inheritedIndex = 7,
+		},
+	},
+	[74] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7385,
+							atomicPriority = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "0b54fc5a-fdd3-64bd-b1d3-6f69baba4032",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 433,
+				name = "PoA",
+				timeRange = true,
+				timelineIndex = 74,
+				timerStartOffset = -1.2000000476837,
+				uuid = "9916a409-3d48-7aad-ad8e-fb1f414c123f",
+				version = 2,
+			},
 		},
 	},
 	[82] = 
@@ -2713,7 +2923,7 @@ local tbl =
 				name = "Guardian (40)",
 				timeRange = true,
 				timelineIndex = 82,
-				timerStartOffset = -10,
+				timerStartOffset = -8,
 				uuid = "e37ec082-abf2-6b67-9ddd-d266536b1a8d",
 				version = 2,
 			},
@@ -2818,7 +3028,7 @@ local tbl =
 				name = "sheltron (15)",
 				timeRange = true,
 				timelineIndex = 82,
-				timerStartOffset = -2,
+				timerStartOffset = -2.5,
 				uuid = "af00e55a-935a-a9c5-9280-cdc9a611763a",
 				version = 2,
 			},
@@ -2961,6 +3171,7 @@ local tbl =
 						data = 
 						{
 							actionID = 25746,
+							atomicPriority = true,
 							conditions = 
 							{
 								
@@ -3048,7 +3259,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 87,
 				timerOffset = -15,
-				timerStartOffset = -10,
+				timerStartOffset = -5,
 				uuid = "9ecbf0b8-4a1c-d611-8ad7-221d62bcca9b",
 				version = 2,
 			},
@@ -3219,6 +3430,113 @@ local tbl =
 			},
 		},
 	},
+	[88] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 610.5,
+				name = "sheltron (15)",
+				timeRange = true,
+				timelineIndex = 88,
+				timerStartOffset = -2.5,
+				uuid = "6329b813-9ec6-24aa-8903-8a6e744f8769",
+				version = 2,
+			},
+			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 610.5,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 88,
+				timerOffset = -15,
+				timerStartOffset = -5,
+				uuid = "a2044858-d482-d61f-b36d-2b84aeae338c",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+	},
 	[105] = 
 	{
 		
@@ -3321,7 +3639,7 @@ local tbl =
 				name = "Guardian (40)",
 				timeRange = true,
 				timelineIndex = 105,
-				timerStartOffset = -10,
+				timerStartOffset = -8,
 				uuid = "c3a72c8c-e409-a357-9f64-4accd3137b6a",
 				version = 2,
 			},
@@ -3426,7 +3744,7 @@ local tbl =
 				name = "sheltron (15)",
 				timeRange = true,
 				timelineIndex = 105,
-				timerStartOffset = -2,
+				timerStartOffset = -2.5,
 				uuid = "20676615-ac8b-43e1-a29f-6c2c997cb74b",
 				version = 2,
 			},
@@ -3619,7 +3937,7 @@ local tbl =
 				name = "Hollowed Ground (Invinsible)",
 				timeRange = true,
 				timelineIndex = 114,
-				timerStartOffset = -4.5,
+				timerStartOffset = -1.5,
 				uuid = "629266da-5041-6d65-ad25-0c74a6c45efe",
 				version = 2,
 			},
@@ -3690,7 +4008,7 @@ local tbl =
 				name = "Hollowed Ground (Invinsible)",
 				timeRange = true,
 				timelineIndex = 116,
-				timerStartOffset = -4.5,
+				timerStartOffset = -1.5,
 				uuid = "f47be094-b889-671a-a991-c2054847c717",
 				version = 2,
 			},
@@ -3746,7 +4064,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 118,
 				timerOffset = -15,
-				timerStartOffset = -10,
+				timerStartOffset = -5,
 				uuid = "b6daf19e-7d47-a878-b74c-74aefbb12207",
 				version = 2,
 			},
@@ -3798,7 +4116,7 @@ local tbl =
 				name = "Guardian (40)",
 				timeRange = true,
 				timelineIndex = 118,
-				timerStartOffset = -10,
+				timerStartOffset = -3,
 				uuid = "e0d2ce59-0cc9-ae32-ad2f-cb7b61f1bf0e",
 				version = 2,
 			},
@@ -3852,7 +4170,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 118,
 				timerOffset = -8,
-				timerStartOffset = -5,
+				timerStartOffset = -1,
 				uuid = "b35044b5-fadb-a1b7-a8c8-c451b1fe8132",
 				version = 2,
 			},
@@ -3903,7 +4221,7 @@ local tbl =
 				name = "sheltron (15)",
 				timeRange = true,
 				timelineIndex = 118,
-				timerStartOffset = -2,
+				timerEndOffset = 5,
 				uuid = "fb6f9f44-f880-d69f-8e7e-6a7a21f560f2",
 				version = 2,
 			},
@@ -3968,6 +4286,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 868.2,
 				name = "interven ST (15)",
 				timeRange = true,
@@ -3976,7 +4295,7 @@ local tbl =
 				uuid = "1c9ce29d-acd7-4f6d-bae1-88b8b5f7e6cb",
 				version = 2,
 			},
-			inheritedIndex = 7,
+			inheritedIndex = 6,
 		},
 	},
 	inheritedProfiles = 

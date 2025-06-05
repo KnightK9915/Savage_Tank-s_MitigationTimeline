@@ -2818,7 +2818,7 @@ local tbl =
 				name = "sheltron (15)",
 				timeRange = true,
 				timelineIndex = 82,
-				timerStartOffset = -4,
+				timerStartOffset = -2.5,
 				uuid = "af00e55a-935a-a9c5-9280-cdc9a611763a",
 				version = 2,
 			},
@@ -2948,7 +2948,7 @@ local tbl =
 			inheritedIndex = 7,
 		},
 	},
-	[87] = 
+	[88] = 
 	{
 		
 		{
@@ -2991,12 +2991,12 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 606.4,
+				mechanicTime = 610.5,
 				name = "sheltron (15)",
 				timeRange = true,
-				timelineIndex = 87,
-				timerStartOffset = -3.5,
-				uuid = "4c6c5841-9820-344c-9b72-5cb589b06d2d",
+				timelineIndex = 88,
+				timerStartOffset = -2.5,
+				uuid = "7d5a6ec9-1a95-535b-9128-8c9a3742e0e1",
 				version = 2,
 			},
 			inheritedIndex = 6,
@@ -3043,180 +3043,16 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 606.4,
+				mechanicTime = 610.5,
 				name = "Rampart (20)",
 				timeRange = true,
-				timelineIndex = 87,
+				timelineIndex = 88,
 				timerOffset = -15,
-				timerStartOffset = -10,
-				uuid = "9ecbf0b8-4a1c-d611-8ad7-221d62bcca9b",
+				timerStartOffset = -5,
+				uuid = "348f6ae2-0b90-2ce6-8223-729e33c629c1",
 				version = 2,
 			},
 			inheritedIndex = 7,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 25746,
-							atomicPriority = true,
-							conditions = 
-							{
-								
-								{
-									"2ba7d2e4-c389-fd61-b35c-5aec45cd04f3",
-									true,
-								},
-								
-								{
-									"b0749ba0-d56d-2d7f-bf44-55f8b1fd0439",
-									true,
-								},
-								
-								{
-									"d7e18023-4fd0-c3f5-97d9-b0d0b47464cf",
-									true,
-								},
-								
-								{
-									"913f79bb-d1bc-ed4f-94ed-ca70544f4716",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							targetContentID = 13822,
-							uuid = "abb5b37d-bcdf-3e66-a7f5-fb0f4d2163fe",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionID = 7382,
-							atomicPriority = true,
-							conditions = 
-							{
-								
-								{
-									"2ba7d2e4-c389-fd61-b35c-5aec45cd04f3",
-									true,
-								},
-								
-								{
-									"c0b320b0-34d7-3810-8990-1f84470ef666",
-									true,
-								},
-								
-								{
-									"41a8baf5-e5cd-8aa0-962f-e24a96d875be",
-									true,
-								},
-								
-								{
-									"913f79bb-d1bc-ed4f-94ed-ca70544f4716",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Other Tank",
-							uuid = "5c2d56e1-c2f4-d416-b67f-da2405bf5b72",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgType = 2,
-							eventMarkerID = 23,
-							uuid = "2ba7d2e4-c389-fd61-b35c-5aec45cd04f3",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Party",
-							conditionType = 10,
-							inGroupTargetType = "Other Tank",
-							partyTargetType = "Event Entity",
-							uuid = "b0749ba0-d56d-2d7f-bf44-55f8b1fd0439",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Party",
-							conditionType = 10,
-							inGroupTargetType = "Self",
-							partyTargetType = "Event Entity",
-							uuid = "c0b320b0-34d7-3810-8990-1f84470ef666",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							comparator = 2,
-							conditionType = 4,
-							enmityValue = 99.999000549316,
-							uuid = "d7e18023-4fd0-c3f5-97d9-b0d0b47464cf",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							conditionType = 4,
-							enmityValue = 100,
-							uuid = "41a8baf5-e5cd-8aa0-962f-e24a96d875be",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 6,
-							gaugeValue = 50,
-							uuid = "913f79bb-d1bc-ed4f-94ed-ca70544f4716",
-							version = 2,
-						},
-						inheritedIndex = 6,
-					},
-				},
-				enabled = false,
-				eventType = 4,
-				mechanicTime = 606.4,
-				name = "Sheltron on marked",
-				timeRange = true,
-				timelineIndex = 87,
-				timerEndOffset = 3,
-				timerStartOffset = -3,
-				uuid = "63500816-1940-783f-9fe5-89b6dee268b3",
-				version = 2,
-			},
 		},
 	},
 	[105] = 
@@ -3426,7 +3262,7 @@ local tbl =
 				name = "sheltron (15)",
 				timeRange = true,
 				timelineIndex = 105,
-				timerStartOffset = -4,
+				timerStartOffset = -2.5,
 				uuid = "20676615-ac8b-43e1-a29f-6c2c997cb74b",
 				version = 2,
 			},
@@ -3619,7 +3455,7 @@ local tbl =
 				name = "Hollowed Ground (Invinsible)",
 				timeRange = true,
 				timelineIndex = 114,
-				timerStartOffset = -4.5,
+				timerStartOffset = -1.5,
 				uuid = "629266da-5041-6d65-ad25-0c74a6c45efe",
 				version = 2,
 			},
@@ -3690,7 +3526,7 @@ local tbl =
 				name = "Hollowed Ground (Invinsible)",
 				timeRange = true,
 				timelineIndex = 116,
-				timerStartOffset = -4.5,
+				timerStartOffset = -1.5,
 				uuid = "f47be094-b889-671a-a991-c2054847c717",
 				version = 2,
 			},
@@ -3746,7 +3582,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 118,
 				timerOffset = -15,
-				timerStartOffset = -10,
+				timerStartOffset = -5,
 				uuid = "b6daf19e-7d47-a878-b74c-74aefbb12207",
 				version = 2,
 			},
@@ -3798,7 +3634,7 @@ local tbl =
 				name = "Guardian (40)",
 				timeRange = true,
 				timelineIndex = 118,
-				timerStartOffset = -10,
+				timerStartOffset = -3,
 				uuid = "e0d2ce59-0cc9-ae32-ad2f-cb7b61f1bf0e",
 				version = 2,
 			},
@@ -3852,7 +3688,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 118,
 				timerOffset = -8,
-				timerStartOffset = -5,
+				timerStartOffset = -1,
 				uuid = "b35044b5-fadb-a1b7-a8c8-c451b1fe8132",
 				version = 2,
 			},
@@ -3903,7 +3739,7 @@ local tbl =
 				name = "sheltron (15)",
 				timeRange = true,
 				timelineIndex = 118,
-				timerStartOffset = -2,
+				timerEndOffset = 5,
 				uuid = "fb6f9f44-f880-d69f-8e7e-6a7a21f560f2",
 				version = 2,
 			},
