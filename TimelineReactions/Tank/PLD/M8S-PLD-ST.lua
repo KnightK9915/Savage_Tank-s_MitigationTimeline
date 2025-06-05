@@ -3170,180 +3170,74 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 25746,
+							aType = "Lua",
+							actionID = 7537,
+							actionLua = "data.otherMarked = true\nself.used = true",
 							atomicPriority = true,
 							conditions = 
 							{
 								
 								{
-									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 6,
-							gaugeValue = 50,
-							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 606.4,
-				name = "sheltron (15)",
-				timeRange = true,
-				timelineIndex = 87,
-				timerStartOffset = -3.5,
-				uuid = "4c6c5841-9820-344c-9b72-5cb589b06d2d",
-				version = 2,
-			},
-			inheritedIndex = 6,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7531,
-							conditions = 
-							{
-								
-								{
-									"1465472a-0137-2f48-b9fc-aa7b9991077a",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7531,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 606.4,
-				name = "Rampart (20)",
-				timeRange = true,
-				timelineIndex = 87,
-				timerOffset = -15,
-				timerStartOffset = -5,
-				uuid = "9ecbf0b8-4a1c-d611-8ad7-221d62bcca9b",
-				version = 2,
-			},
-			inheritedIndex = 7,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 25746,
-							atomicPriority = true,
-							conditions = 
-							{
-								
-								{
-									"2ba7d2e4-c389-fd61-b35c-5aec45cd04f3",
+									"bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
 									true,
 								},
 								
 								{
-									"b0749ba0-d56d-2d7f-bf44-55f8b1fd0439",
+									"c2cb9d3b-196d-fc9d-b9a5-682ed76f4bf6",
 									true,
 								},
 								
 								{
-									"d7e18023-4fd0-c3f5-97d9-b0d0b47464cf",
-									true,
-								},
-								
-								{
-									"913f79bb-d1bc-ed4f-94ed-ca70544f4716",
+									"793315f6-95e5-64dd-ad82-b5068ac21c08",
 									true,
 								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
 							ignoreWeaveRules = true,
-							targetContentID = 13822,
-							uuid = "abb5b37d-bcdf-3e66-a7f5-fb0f4d2163fe",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionID = 7382,
-							atomicPriority = true,
-							conditions = 
-							{
-								
-								{
-									"2ba7d2e4-c389-fd61-b35c-5aec45cd04f3",
-									true,
-								},
-								
-								{
-									"c0b320b0-34d7-3810-8990-1f84470ef666",
-									true,
-								},
-								
-								{
-									"41a8baf5-e5cd-8aa0-962f-e24a96d875be",
-									true,
-								},
-								
-								{
-									"913f79bb-d1bc-ed4f-94ed-ca70544f4716",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
+							name = "otherMarked",
 							targetType = "Other Tank",
-							uuid = "5c2d56e1-c2f4-d416-b67f-da2405bf5b72",
+							uuid = "08223bfd-5bf6-6938-8c37-b67cddd359ec",
 							version = 2.1,
 						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionID = 7533,
+							actionLua = "data.selfMarked = true\nself.used = true",
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
+									true,
+								},
+								
+								{
+									"d73a437b-daee-5b25-9e29-bfcac45843c2",
+									true,
+								},
+								
+								{
+									"463b432b-49d1-5a42-80c0-43e42e255c1c",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							name = "selfMarked",
+							targetContentID = 13822,
+							targetType = "ContentID",
+							uuid = "a1aed48d-295b-da3e-978a-460aac09e87e",
+							version = 2.1,
+						},
+						inheritedIndex = 2,
 					},
 				},
 				conditions = 
@@ -3355,7 +3249,7 @@ local tbl =
 							category = "Event",
 							eventArgType = 2,
 							eventMarkerID = 23,
-							uuid = "2ba7d2e4-c389-fd61-b35c-5aec45cd04f3",
+							uuid = "bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
 							version = 2,
 						},
 					},
@@ -3366,10 +3260,12 @@ local tbl =
 							category = "Party",
 							conditionType = 10,
 							inGroupTargetType = "Other Tank",
+							name = "marker on ST",
 							partyTargetType = "Event Entity",
-							uuid = "b0749ba0-d56d-2d7f-bf44-55f8b1fd0439",
+							uuid = "c2cb9d3b-196d-fc9d-b9a5-682ed76f4bf6",
 							version = 2,
 						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -3378,10 +3274,12 @@ local tbl =
 							category = "Party",
 							conditionType = 10,
 							inGroupTargetType = "Self",
+							name = "marker on Self",
 							partyTargetType = "Event Entity",
-							uuid = "c0b320b0-34d7-3810-8990-1f84470ef666",
+							uuid = "d73a437b-daee-5b25-9e29-bfcac45843c2",
 							version = 2,
 						},
+						inheritedIndex = 3,
 					},
 					
 					{
@@ -3390,7 +3288,8 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							enmityValue = 99.999000549316,
-							uuid = "d7e18023-4fd0-c3f5-97d9-b0d0b47464cf",
+							name = "don't have aggro",
+							uuid = "793315f6-95e5-64dd-ad82-b5068ac21c08",
 							version = 2,
 						},
 					},
@@ -3400,32 +3299,21 @@ local tbl =
 						{
 							conditionType = 4,
 							enmityValue = 100,
-							uuid = "41a8baf5-e5cd-8aa0-962f-e24a96d875be",
+							name = "have aggro",
+							uuid = "463b432b-49d1-5a42-80c0-43e42e255c1c",
 							version = 2,
 						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 6,
-							gaugeValue = 50,
-							uuid = "913f79bb-d1bc-ed4f-94ed-ca70544f4716",
-							version = 2,
-						},
-						inheritedIndex = 6,
+						inheritedIndex = 5,
 					},
 				},
-				enabled = false,
 				eventType = 4,
 				mechanicTime = 606.4,
-				name = "Sheltron on marked",
+				name = "Record marked",
 				timeRange = true,
 				timelineIndex = 87,
-				timerEndOffset = 3,
-				timerStartOffset = -3,
-				uuid = "63500816-1940-783f-9fe5-89b6dee268b3",
+				timerEndOffset = 15,
+				timerStartOffset = -15,
+				uuid = "e2032331-3907-2c4d-adf1-323c559d10c9",
 				version = 2,
 			},
 		},
@@ -3450,6 +3338,11 @@ local tbl =
 									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
 									true,
 								},
+								
+								{
+									"07bd27a4-e1ab-4460-a112-ce34192a75cf",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -3472,16 +3365,94 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.otherMarked",
+							name = "if other marked",
+							uuid = "07bd27a4-e1ab-4460-a112-ce34192a75cf",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 610.5,
 				name = "sheltron (15)",
 				timeRange = true,
 				timelineIndex = 88,
-				timerStartOffset = -2.5,
+				timerStartOffset = -1.5,
 				uuid = "6329b813-9ec6-24aa-8903-8a6e744f8769",
 				version = 2,
 			},
 			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+								
+								{
+									"35c41ce3-5b79-a460-ab7b-a6be55734c70",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5ed8c1f4-36d8-ad42-9463-1f8154296465",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.selfMarked",
+							name = "if self marked",
+							uuid = "35c41ce3-5b79-a460-ab7b-a6be55734c70",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 610.5,
+				name = "interven ST (15)",
+				timeRange = true,
+				timelineIndex = 88,
+				timerStartOffset = -1.5,
+				uuid = "09600618-9da1-9b8c-b412-934033da26f7",
+				version = 2,
+			},
+			inheritedIndex = 2,
 		},
 		
 		{
@@ -3535,6 +3506,143 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 7,
+		},
+	},
+	[89] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+								
+								{
+									"7d12a7fb-0602-65c4-8acb-a6bad0b780e2",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.selfMarked",
+							name = "if self marked",
+							uuid = "7d12a7fb-0602-65c4-8acb-a6bad0b780e2",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 611.5,
+				name = "sheltron (15)",
+				timeRange = true,
+				timelineIndex = 89,
+				timerStartOffset = -1.5,
+				uuid = "bd4c1db8-f271-e801-b2c6-759e735b9fef",
+				version = 2,
+			},
+			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+								
+								{
+									"470aa23a-e040-149b-9728-928a8530fe9e",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5ed8c1f4-36d8-ad42-9463-1f8154296465",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.otherMarked",
+							name = "if other marked",
+							uuid = "470aa23a-e040-149b-9728-928a8530fe9e",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 611.5,
+				name = "interven ST (15)",
+				timeRange = true,
+				timelineIndex = 89,
+				timerStartOffset = -1.5,
+				uuid = "eab754db-e69b-140d-8f25-d78f41a94967",
+				version = 2,
+			},
+			inheritedIndex = 2,
 		},
 	},
 	[105] = 
@@ -4194,6 +4302,11 @@ local tbl =
 									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
 									true,
 								},
+								
+								{
+									"2a2ec0c2-5754-0113-8717-5c32288e6bfe",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -4213,6 +4326,18 @@ local tbl =
 							conditionType = 6,
 							gaugeValue = 50,
 							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 70,
+							uuid = "2a2ec0c2-5754-0113-8717-5c32288e6bfe",
 							version = 2,
 						},
 					},
