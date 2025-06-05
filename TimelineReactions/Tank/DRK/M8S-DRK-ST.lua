@@ -3999,6 +3999,166 @@ local tbl =
 			inheritedIndex = 9,
 		},
 	},
+	[87] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionID = 7537,
+							actionLua = "data.otherMarked = true\nself.used = true",
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
+									true,
+								},
+								
+								{
+									"c2cb9d3b-196d-fc9d-b9a5-682ed76f4bf6",
+									true,
+								},
+								
+								{
+									"793315f6-95e5-64dd-ad82-b5068ac21c08",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							name = "otherMarked",
+							targetType = "Other Tank",
+							uuid = "08223bfd-5bf6-6938-8c37-b67cddd359ec",
+							version = 2.1,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionID = 7533,
+							actionLua = "data.selfMarked = true\nself.used = true",
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
+									true,
+								},
+								
+								{
+									"d73a437b-daee-5b25-9e29-bfcac45843c2",
+									true,
+								},
+								
+								{
+									"463b432b-49d1-5a42-80c0-43e42e255c1c",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							name = "selfMarked",
+							targetContentID = 13822,
+							targetType = "ContentID",
+							uuid = "a1aed48d-295b-da3e-978a-460aac09e87e",
+							version = 2.1,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 23,
+							uuid = "bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetType = "Other Tank",
+							name = "marker on ST",
+							partyTargetType = "Event Entity",
+							uuid = "c2cb9d3b-196d-fc9d-b9a5-682ed76f4bf6",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetType = "Self",
+							name = "marker on Self",
+							partyTargetType = "Event Entity",
+							uuid = "d73a437b-daee-5b25-9e29-bfcac45843c2",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99.999000549316,
+							name = "don't have aggro",
+							uuid = "793315f6-95e5-64dd-ad82-b5068ac21c08",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 100,
+							name = "have aggro",
+							uuid = "463b432b-49d1-5a42-80c0-43e42e255c1c",
+							version = 2,
+						},
+						inheritedIndex = 5,
+					},
+				},
+				eventType = 4,
+				mechanicTime = 606.4,
+				name = "Record marked",
+				timeRange = true,
+				timelineIndex = 87,
+				timerEndOffset = 15,
+				timerStartOffset = -15,
+				uuid = "75b5dd7c-ae0e-533f-b05d-cf4453235637",
+				version = 2,
+			},
+		},
+	},
 	[88] = 
 	{
 		
@@ -4017,6 +4177,11 @@ local tbl =
 								
 								{
 									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"12f6d9ce-6aaf-bdd1-a667-c6b305fb9aae",
 									true,
 								},
 							},
@@ -4041,13 +4206,24 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.otherMarked",
+							name = "if other marked",
+							uuid = "12f6d9ce-6aaf-bdd1-a667-c6b305fb9aae",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 610.5,
 				name = "TBN (15)",
 				timeRange = true,
 				timelineIndex = 88,
 				timerOffset = -4,
-				timerStartOffset = -3,
+				timerStartOffset = -1.5,
 				uuid = "949508b6-2a0c-cfb5-93b3-fb4fbdb1447d",
 				version = 2,
 			},
@@ -4105,6 +4281,77 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 7,
+		},
+	},
+	[89] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"aa74f5ec-ed4f-4775-8887-63bc3fec7be4",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.selfMarked",
+							name = "if self marked",
+							uuid = "aa74f5ec-ed4f-4775-8887-63bc3fec7be4",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 611.5,
+				name = "TBN (15)",
+				timeRange = true,
+				timelineIndex = 89,
+				timerOffset = -4,
+				timerStartOffset = -1.5,
+				uuid = "c5a3968e-5ff0-45cf-90e5-fd8e3d9dc96e",
+				version = 2,
+			},
+			inheritedIndex = 6,
 		},
 	},
 	[105] = 
@@ -4813,6 +5060,11 @@ local tbl =
 									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
 									true,
 								},
+								
+								{
+									"14051e53-89c9-9e0e-aad1-bd5592f44816",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -4832,6 +5084,18 @@ local tbl =
 							mpType = 2,
 							mpValue = 3000,
 							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 70,
+							uuid = "14051e53-89c9-9e0e-aad1-bd5592f44816",
 							version = 2,
 						},
 					},
