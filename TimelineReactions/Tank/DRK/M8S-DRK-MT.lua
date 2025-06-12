@@ -2403,6 +2403,41 @@ local tbl =
 			inheritedIndex = 3,
 		},
 	},
+	[58] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							gVar = "ACR_RikuDRK3_CD",
+							holdActionDuration = 9.8000001907349,
+							holdActionID = 3639,
+							uuid = "7c344ba2-46c3-0b13-b0f9-c9e3b80d71a3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 358.9,
+				name = "Hold SE",
+				timeRange = true,
+				timelineIndex = 58,
+				timerEndOffset = 10,
+				uuid = "8f7d142e-c318-f15f-9c1a-a6d8fa0f0596",
+				version = 2,
+			},
+		},
+	},
 	[62] = 
 	{
 		
@@ -3710,7 +3745,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 82,
 				timerOffset = -5,
-				timerStartOffset = -10,
+				timerStartOffset = -5,
 				uuid = "48a1787c-e97b-85e9-b5c4-64c9f542f984",
 				version = 2,
 			},
@@ -4473,7 +4508,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 105,
 				timerOffset = -5,
-				timerStartOffset = -10,
+				timerStartOffset = -5,
 				uuid = "7edac753-ee83-cc79-9632-68d698bd39b4",
 				version = 2,
 			},
