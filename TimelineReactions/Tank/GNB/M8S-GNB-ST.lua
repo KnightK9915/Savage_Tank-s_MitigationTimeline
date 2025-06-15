@@ -4174,11 +4174,6 @@ local tbl =
 									"c2cb9d3b-196d-fc9d-b9a5-682ed76f4bf6",
 									true,
 								},
-								
-								{
-									"793315f6-95e5-64dd-ad82-b5068ac21c08",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -4208,11 +4203,6 @@ local tbl =
 								
 								{
 									"d73a437b-daee-5b25-9e29-bfcac45843c2",
-									true,
-								},
-								
-								{
-									"463b432b-49d1-5a42-80c0-43e42e255c1c",
 									true,
 								},
 							},
@@ -4268,30 +4258,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 3,
-					},
-					
-					{
-						data = 
-						{
-							comparator = 2,
-							conditionType = 4,
-							enmityValue = 99.999000549316,
-							name = "don't have aggro",
-							uuid = "793315f6-95e5-64dd-ad82-b5068ac21c08",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							conditionType = 4,
-							enmityValue = 100,
-							name = "have aggro",
-							uuid = "463b432b-49d1-5a42-80c0-43e42e255c1c",
-							version = 2,
-						},
-						inheritedIndex = 5,
 					},
 				},
 				eventType = 4,
@@ -4372,7 +4338,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 88,
 				timerOffset = -1,
-				timerStartOffset = -1.5,
+				timerStartOffset = -3.5,
 				uuid = "c2c23158-e22a-2538-ac31-1bcd4ab073b5",
 				version = 2,
 			},
@@ -4498,7 +4464,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 89,
 				timerOffset = -1,
-				timerStartOffset = -1.5,
+				timerStartOffset = -3.5,
 				uuid = "c302bbbb-6852-cb6c-9cfa-813329293c0d",
 				version = 2,
 			},
@@ -5050,6 +5016,154 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 9,
+		},
+	},
+	[108] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"b3e7e566-84f7-b0f4-9afd-f528fa8d790d",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 70,
+							uuid = "b3e7e566-84f7-b0f4-9afd-f528fa8d790d",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 764.2,
+				name = "HoC (15)",
+				timeRange = true,
+				timelineIndex = 108,
+				timerOffset = -1,
+				timerStartOffset = -1,
+				uuid = "98688d16-7b79-74c8-990f-fe4e0c1901d6",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+	},
+	[111] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"b3e7e566-84f7-b0f4-9afd-f528fa8d790d",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 70,
+							uuid = "b3e7e566-84f7-b0f4-9afd-f528fa8d790d",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 794.5,
+				name = "HoC (15)",
+				timeRange = true,
+				timelineIndex = 111,
+				timerOffset = -1,
+				timerStartOffset = -1,
+				uuid = "74050fa9-75db-c854-b2ce-08d3dc95bd11",
+				version = 2,
+			},
+			inheritedIndex = 2,
 		},
 	},
 	[114] = 
