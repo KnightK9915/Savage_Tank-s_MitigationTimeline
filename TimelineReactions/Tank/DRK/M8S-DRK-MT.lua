@@ -4025,11 +4025,6 @@ local tbl =
 									"c2cb9d3b-196d-fc9d-b9a5-682ed76f4bf6",
 									true,
 								},
-								
-								{
-									"793315f6-95e5-64dd-ad82-b5068ac21c08",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -4059,11 +4054,6 @@ local tbl =
 								
 								{
 									"d73a437b-daee-5b25-9e29-bfcac45843c2",
-									true,
-								},
-								
-								{
-									"463b432b-49d1-5a42-80c0-43e42e255c1c",
 									true,
 								},
 							},
@@ -4119,30 +4109,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 3,
-					},
-					
-					{
-						data = 
-						{
-							comparator = 2,
-							conditionType = 4,
-							enmityValue = 99.999000549316,
-							name = "don't have aggro",
-							uuid = "793315f6-95e5-64dd-ad82-b5068ac21c08",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							conditionType = 4,
-							enmityValue = 100,
-							name = "have aggro",
-							uuid = "463b432b-49d1-5a42-80c0-43e42e255c1c",
-							version = 2,
-						},
-						inheritedIndex = 5,
 					},
 				},
 				eventType = 4,
@@ -4758,6 +4724,150 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 9,
+		},
+	},
+	[108] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25754,
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 764.2,
+				name = "Oblation (10)",
+				randomOffset = -1,
+				timeRange = true,
+				timelineIndex = 108,
+				timerOffset = -3,
+				timerStartOffset = -1,
+				uuid = "4c326c58-33a9-b74e-a3ed-9437a0ecae34",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+	},
+	[109] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"e993e5ba-2176-9916-af29-f8137567c7bc",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 70,
+							uuid = "e993e5ba-2176-9916-af29-f8137567c7bc",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 773,
+				name = "TBN (25)",
+				timeRange = true,
+				timelineIndex = 109,
+				timerOffset = -4,
+				timerStartOffset = -6.5,
+				uuid = "b70c36de-bc7c-3ef8-b73d-e89d53957049",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[111] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25754,
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 794.5,
+				name = "Oblation (10)",
+				randomOffset = -1,
+				timeRange = true,
+				timelineIndex = 111,
+				timerOffset = -3,
+				timerStartOffset = -9.5,
+				uuid = "621dd389-8865-7349-a6df-2d6a7e7ba9f2",
+				version = 2,
+			},
+			inheritedIndex = 1,
 		},
 	},
 	[114] = 
