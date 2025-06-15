@@ -4093,11 +4093,6 @@ local tbl =
 									"c2cb9d3b-196d-fc9d-b9a5-682ed76f4bf6",
 									true,
 								},
-								
-								{
-									"793315f6-95e5-64dd-ad82-b5068ac21c08",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -4127,11 +4122,6 @@ local tbl =
 								
 								{
 									"d73a437b-daee-5b25-9e29-bfcac45843c2",
-									true,
-								},
-								
-								{
-									"463b432b-49d1-5a42-80c0-43e42e255c1c",
 									true,
 								},
 							},
@@ -4187,30 +4177,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 3,
-					},
-					
-					{
-						data = 
-						{
-							comparator = 2,
-							conditionType = 4,
-							enmityValue = 99.999000549316,
-							name = "don't have aggro",
-							uuid = "793315f6-95e5-64dd-ad82-b5068ac21c08",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							conditionType = 4,
-							enmityValue = 100,
-							name = "have aggro",
-							uuid = "463b432b-49d1-5a42-80c0-43e42e255c1c",
-							version = 2,
-						},
-						inheritedIndex = 5,
 					},
 				},
 				eventType = 4,
@@ -4971,6 +4937,120 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 8,
+		},
+	},
+	[108] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25751,
+							conditions = 
+							{
+								
+								{
+									"7ff7d550-e7f1-b813-8c61-8d51598a9cff",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "f128886d-3f9c-d873-b184-840ce732e9d1",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25751,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							name = "CD BW",
+							uuid = "7ff7d550-e7f1-b813-8c61-8d51598a9cff",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 764.2,
+				name = "BW (20)",
+				timeRange = true,
+				timelineIndex = 108,
+				timerStartOffset = -1,
+				uuid = "98726470-3c60-784b-91e0-4965e2e2f4a7",
+				version = 2,
+			},
+			inheritedIndex = 6,
+		},
+	},
+	[111] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25751,
+							conditions = 
+							{
+								
+								{
+									"7ff7d550-e7f1-b813-8c61-8d51598a9cff",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "f128886d-3f9c-d873-b184-840ce732e9d1",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25751,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							name = "CD BW",
+							uuid = "7ff7d550-e7f1-b813-8c61-8d51598a9cff",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 794.5,
+				name = "BW (20)",
+				timeRange = true,
+				timelineIndex = 111,
+				timerStartOffset = -1,
+				uuid = "d12f1155-7214-a23f-b177-a933d3f2482e",
+				version = 2,
+			},
+			inheritedIndex = 6,
 		},
 	},
 	[114] = 
