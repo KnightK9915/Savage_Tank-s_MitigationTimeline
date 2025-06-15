@@ -2976,11 +2976,6 @@ local tbl =
 									"c2cb9d3b-196d-fc9d-b9a5-682ed76f4bf6",
 									true,
 								},
-								
-								{
-									"793315f6-95e5-64dd-ad82-b5068ac21c08",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -3010,11 +3005,6 @@ local tbl =
 								
 								{
 									"d73a437b-daee-5b25-9e29-bfcac45843c2",
-									true,
-								},
-								
-								{
-									"463b432b-49d1-5a42-80c0-43e42e255c1c",
 									true,
 								},
 							},
@@ -3070,30 +3060,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 3,
-					},
-					
-					{
-						data = 
-						{
-							comparator = 2,
-							conditionType = 4,
-							enmityValue = 99.999000549316,
-							name = "don't have aggro",
-							uuid = "793315f6-95e5-64dd-ad82-b5068ac21c08",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							conditionType = 4,
-							enmityValue = 100,
-							name = "have aggro",
-							uuid = "463b432b-49d1-5a42-80c0-43e42e255c1c",
-							version = 2,
-						},
-						inheritedIndex = 5,
 					},
 				},
 				eventType = 4,
@@ -3770,6 +3736,150 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 7,
+		},
+	},
+	[108] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+								
+								{
+									"6943ee47-3d9e-e054-b0f8-769b3c868ebd",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 70,
+							uuid = "6943ee47-3d9e-e054-b0f8-769b3c868ebd",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 764.2,
+				name = "sheltron (15)",
+				timeRange = true,
+				timelineIndex = 108,
+				timerEndOffset = 5,
+				timerStartOffset = -1,
+				uuid = "7fadc2f7-8b93-72b6-9602-6712b7312f8b",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+	},
+	[111] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+								
+								{
+									"6943ee47-3d9e-e054-b0f8-769b3c868ebd",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 70,
+							uuid = "6943ee47-3d9e-e054-b0f8-769b3c868ebd",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 794.5,
+				name = "sheltron (15)",
+				timeRange = true,
+				timelineIndex = 111,
+				timerEndOffset = 5,
+				timerStartOffset = -1,
+				uuid = "f8c7ad0e-8aec-6e8c-8cdd-20197340c541",
+				version = 2,
+			},
+			inheritedIndex = 4,
 		},
 	},
 	[114] = 
