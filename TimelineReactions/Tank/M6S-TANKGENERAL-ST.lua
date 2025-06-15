@@ -7272,11 +7272,6 @@ local tbl =
 							{
 								
 								{
-									"6c544ff2-7f0a-eadb-a06b-f864ca496fa8",
-									true,
-								},
-								
-								{
 									"877de244-ea71-0cb1-a3cf-3f1febd4e668",
 									true,
 								},
@@ -7319,6 +7314,11 @@ local tbl =
 									"f2b157f7-3ea2-a37e-a871-a8fa2ae83fd1",
 									true,
 								},
+								
+								{
+									"42726422-a374-dae9-b83e-5c77d958ea55",
+									true,
+								},
 							},
 							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
@@ -7331,23 +7331,6 @@ local tbl =
 				},
 				conditions = 
 				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 14,
-							jobIDList = 
-							{
-								21,
-								32,
-								37,
-							},
-							name = "is NOT PLD",
-							uuid = "6c544ff2-7f0a-eadb-a06b-f864ca496fa8",
-							version = 2,
-						},
-					},
 					
 					{
 						data = 
@@ -7384,6 +7367,18 @@ local tbl =
 								2,
 							},
 							uuid = "f2b157f7-3ea2-a37e-a871-a8fa2ae83fd1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionCDValue = 1,
+							actionID = 7540,
+							category = "Self",
+							conditionType = 4,
+							uuid = "42726422-a374-dae9-b83e-5c77d958ea55",
 							version = 2,
 						},
 					},

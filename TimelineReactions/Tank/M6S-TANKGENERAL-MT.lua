@@ -5507,6 +5507,7 @@ local tbl =
 						inheritedIndex = 1,
 					},
 				},
+				enabled = false,
 				eventType = 12,
 				mechanicTime = 256.5,
 				name = "SelectRightUp",
@@ -5748,6 +5749,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				eventType = 12,
 				mechanicTime = 256.5,
 				name = "Instant Dash towards Fey",
@@ -6563,11 +6565,6 @@ local tbl =
 							{
 								
 								{
-									"6c544ff2-7f0a-eadb-a06b-f864ca496fa8",
-									true,
-								},
-								
-								{
 									"877de244-ea71-0cb1-a3cf-3f1febd4e668",
 									true,
 								},
@@ -6610,6 +6607,11 @@ local tbl =
 									"f2b157f7-3ea2-a37e-a871-a8fa2ae83fd1",
 									true,
 								},
+								
+								{
+									"42726422-a374-dae9-b83e-5c77d958ea55",
+									true,
+								},
 							},
 							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
@@ -6622,23 +6624,6 @@ local tbl =
 				},
 				conditions = 
 				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 14,
-							jobIDList = 
-							{
-								21,
-								32,
-								37,
-							},
-							name = "is NOT PLD",
-							uuid = "6c544ff2-7f0a-eadb-a06b-f864ca496fa8",
-							version = 2,
-						},
-					},
 					
 					{
 						data = 
@@ -6678,6 +6663,18 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							actionCDValue = 1,
+							actionID = 7540,
+							category = "Self",
+							conditionType = 4,
+							uuid = "42726422-a374-dae9-b83e-5c77d958ea55",
+							version = 2,
+						},
+					},
 				},
 				eventType = 12,
 				loop = true,
@@ -6687,7 +6684,7 @@ local tbl =
 				timelineIndex = 45,
 				timerEndOffset = 15,
 				timerStartOffset = 2,
-				uuid = "837372ff-42d6-00f2-baba-02a0a8322280",
+				uuid = "d22972b5-afeb-f58a-a3b3-2886cc3c180c",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -8201,6 +8198,7 @@ local tbl =
 						inheritedIndex = 1,
 					},
 				},
+				enabled = false,
 				eventType = 12,
 				mechanicTime = 317.7,
 				name = "SelectRightDown",
@@ -8442,6 +8440,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				eventType = 12,
 				mechanicTime = 317.7,
 				name = "Instant Dash towards Fey",
