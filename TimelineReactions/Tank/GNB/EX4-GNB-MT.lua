@@ -238,11 +238,6 @@ local tbl =
 									"30f02147-8e47-399f-99c5-279582aa248d",
 									true,
 								},
-								
-								{
-									"eb8e459a-ecb8-897a-816f-4312202b7e4c",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -263,18 +258,6 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "30f02147-8e47-399f-99c5-279582aa248d",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionCDValue = 10,
-							actionID = 7531,
-							category = "Self",
-							conditionType = 4,
-							uuid = "eb8e459a-ecb8-897a-816f-4312202b7e4c",
 							version = 2,
 						},
 					},
@@ -960,11 +943,6 @@ local tbl =
 									"30f02147-8e47-399f-99c5-279582aa248d",
 									true,
 								},
-								
-								{
-									"eb8e459a-ecb8-897a-816f-4312202b7e4c",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -985,18 +963,6 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "30f02147-8e47-399f-99c5-279582aa248d",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionCDValue = 10,
-							actionID = 7531,
-							category = "Self",
-							conditionType = 4,
-							uuid = "eb8e459a-ecb8-897a-816f-4312202b7e4c",
 							version = 2,
 						},
 					},
@@ -1915,11 +1881,6 @@ local tbl =
 									"30f02147-8e47-399f-99c5-279582aa248d",
 									true,
 								},
-								
-								{
-									"eb8e459a-ecb8-897a-816f-4312202b7e4c",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -1940,18 +1901,6 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "30f02147-8e47-399f-99c5-279582aa248d",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionCDValue = 10,
-							actionID = 7531,
-							category = "Self",
-							conditionType = 4,
-							uuid = "eb8e459a-ecb8-897a-816f-4312202b7e4c",
 							version = 2,
 						},
 					},
@@ -2404,11 +2353,6 @@ local tbl =
 									"30f02147-8e47-399f-99c5-279582aa248d",
 									true,
 								},
-								
-								{
-									"eb8e459a-ecb8-897a-816f-4312202b7e4c",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -2429,18 +2373,6 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "30f02147-8e47-399f-99c5-279582aa248d",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionCDValue = 10,
-							actionID = 7531,
-							category = "Self",
-							conditionType = 4,
-							uuid = "eb8e459a-ecb8-897a-816f-4312202b7e4c",
 							version = 2,
 						},
 					},
