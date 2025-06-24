@@ -203,18 +203,6 @@ local tbl =
 							version = 2,
 						},
 					},
-					
-					{
-						data = 
-						{
-							actionCDValue = 10,
-							actionID = 7531,
-							category = "Self",
-							conditionType = 4,
-							uuid = "e4ce4856-66a7-df12-80c5-f69aa9e99342",
-							version = 2,
-						},
-					},
 				},
 				mechanicTime = 44.7,
 				name = "Vigil (40)",
@@ -690,18 +678,6 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "5cf17619-127d-b210-88cb-64658ca76476",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionCDValue = 10,
-							actionID = 7531,
-							category = "Self",
-							conditionType = 4,
-							uuid = "e4ce4856-66a7-df12-80c5-f69aa9e99342",
 							version = 2,
 						},
 					},
@@ -1327,18 +1303,6 @@ local tbl =
 							version = 2,
 						},
 					},
-					
-					{
-						data = 
-						{
-							actionCDValue = 10,
-							actionID = 7531,
-							category = "Self",
-							conditionType = 4,
-							uuid = "e4ce4856-66a7-df12-80c5-f69aa9e99342",
-							version = 2,
-						},
-					},
 				},
 				mechanicTime = 484.4,
 				name = "Vigil (40)",
@@ -1687,18 +1651,6 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "5cf17619-127d-b210-88cb-64658ca76476",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionCDValue = 10,
-							actionID = 7531,
-							category = "Self",
-							conditionType = 4,
-							uuid = "e4ce4856-66a7-df12-80c5-f69aa9e99342",
 							version = 2,
 						},
 					},
