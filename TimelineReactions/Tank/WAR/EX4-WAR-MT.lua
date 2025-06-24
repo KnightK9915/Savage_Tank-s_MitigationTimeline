@@ -261,6 +261,60 @@ local tbl =
 					{
 						data = 
 						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 44.7,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 6,
+				timerOffset = -15,
+				timerStartOffset = -10,
+				uuid = "c4535d38-2f6f-f9fd-ab40-d95fa385c063",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 36923,
 							conditions = 
 							{
@@ -461,6 +515,11 @@ local tbl =
 								
 								{
 									"aeb29bc7-62f7-4fec-a7f0-e449ceee7e7b",
+									true,
+								},
+								
+								{
+									"d2f8c94a-96bb-dc65-a640-40ad4fddf3fc",
 									true,
 								},
 							},
@@ -1025,6 +1084,60 @@ local tbl =
 					{
 						data = 
 						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 242.3,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 42,
+				timerOffset = -15,
+				timerStartOffset = -10,
+				uuid = "0a4c4345-52b2-b20d-bc06-a8462d0f41f4",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 36923,
 							conditions = 
 							{
@@ -1066,7 +1179,7 @@ local tbl =
 				uuid = "edb0095d-f3cb-5107-afea-5e21551806d7",
 				version = 2,
 			},
-			inheritedIndex = 2,
+			inheritedIndex = 3,
 		},
 		
 		{
@@ -1119,7 +1232,7 @@ local tbl =
 				uuid = "fc3a6531-ed2a-fb74-ac1a-cfb5200d6b6e",
 				version = 2,
 			},
-			inheritedIndex = 3,
+			inheritedIndex = 4,
 		},
 		
 		{
@@ -1189,7 +1302,7 @@ local tbl =
 				uuid = "cde92a13-17c4-4de5-aaca-825b73382735",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 5,
 		},
 		
 		{
@@ -1207,7 +1320,7 @@ local tbl =
 				uuid = "04365d9a-b90a-ce99-b2f3-8b02f70642f5",
 				version = 2,
 			},
-			inheritedIndex = 5,
+			inheritedIndex = 6,
 		},
 		
 		{
@@ -1225,6 +1338,11 @@ local tbl =
 								
 								{
 									"aeb29bc7-62f7-4fec-a7f0-e449ceee7e7b",
+									true,
+								},
+								
+								{
+									"d2f8c94a-96bb-dc65-a640-40ad4fddf3fc",
 									true,
 								},
 							},
@@ -1271,7 +1389,7 @@ local tbl =
 				uuid = "e713e451-2334-f219-853c-55fc1a872839",
 				version = 2,
 			},
-			inheritedIndex = 6,
+			inheritedIndex = 7,
 		},
 	},
 	[51] = 
@@ -2043,6 +2161,60 @@ local tbl =
 					{
 						data = 
 						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 484.4,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 97,
+				timerOffset = -15,
+				timerStartOffset = -10,
+				uuid = "2674fdba-5d08-300e-abc1-a593aeaf2fe1",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 36923,
 							conditions = 
 							{
@@ -2084,7 +2256,7 @@ local tbl =
 				uuid = "e7cf972e-71b5-234f-a8a7-1fc8a6bba1e0",
 				version = 2,
 			},
-			inheritedIndex = 2,
+			inheritedIndex = 3,
 		},
 		
 		{
@@ -2137,7 +2309,7 @@ local tbl =
 				uuid = "3da6a8b3-51ae-75b8-8e7d-0b7f63f28224",
 				version = 2,
 			},
-			inheritedIndex = 3,
+			inheritedIndex = 4,
 		},
 		
 		{
@@ -2207,7 +2379,7 @@ local tbl =
 				uuid = "0629232e-76be-80d7-9eb0-83200366080c",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 5,
 		},
 		
 		{
@@ -2225,7 +2397,7 @@ local tbl =
 				uuid = "4138484b-9df5-34d0-ac21-12750c56f531",
 				version = 2,
 			},
-			inheritedIndex = 5,
+			inheritedIndex = 6,
 		},
 		
 		{
@@ -2243,6 +2415,11 @@ local tbl =
 								
 								{
 									"aeb29bc7-62f7-4fec-a7f0-e449ceee7e7b",
+									true,
+								},
+								
+								{
+									"d2f8c94a-96bb-dc65-a640-40ad4fddf3fc",
 									true,
 								},
 							},
@@ -2289,7 +2466,7 @@ local tbl =
 				uuid = "f82043de-c2cf-6847-b3ba-8003fc954903",
 				version = 2,
 			},
-			inheritedIndex = 6,
+			inheritedIndex = 7,
 		},
 	},
 	[116] = 
@@ -2426,6 +2603,60 @@ local tbl =
 					{
 						data = 
 						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 580.8,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 116,
+				timerOffset = -15,
+				timerStartOffset = -10,
+				uuid = "835223b7-da6a-afb4-9324-e4c4c36f6d97",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 36923,
 							conditions = 
 							{
@@ -2467,7 +2698,7 @@ local tbl =
 				uuid = "c970d296-196d-430c-b7b9-8a769b91b21e",
 				version = 2,
 			},
-			inheritedIndex = 2,
+			inheritedIndex = 3,
 		},
 		
 		{
@@ -2520,7 +2751,7 @@ local tbl =
 				uuid = "9cb32eee-4378-7e61-9ae4-e56a3231f488",
 				version = 2,
 			},
-			inheritedIndex = 3,
+			inheritedIndex = 4,
 		},
 		
 		{
@@ -2590,7 +2821,7 @@ local tbl =
 				uuid = "2135367e-7d60-8d7a-b0c6-3f83fdc2215f",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 5,
 		},
 		
 		{
@@ -2608,7 +2839,7 @@ local tbl =
 				uuid = "c10ed4c0-9d85-09d2-93ea-a0c379e7c8fd",
 				version = 2,
 			},
-			inheritedIndex = 5,
+			inheritedIndex = 6,
 		},
 		
 		{
@@ -2626,6 +2857,11 @@ local tbl =
 								
 								{
 									"aeb29bc7-62f7-4fec-a7f0-e449ceee7e7b",
+									true,
+								},
+								
+								{
+									"d2f8c94a-96bb-dc65-a640-40ad4fddf3fc",
 									true,
 								},
 							},
@@ -2672,7 +2908,7 @@ local tbl =
 				uuid = "d756da9a-e97c-6b61-98d9-210770f83277",
 				version = 2,
 			},
-			inheritedIndex = 6,
+			inheritedIndex = 7,
 		},
 	},
 	[119] = 
