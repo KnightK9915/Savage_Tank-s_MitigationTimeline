@@ -159,27 +159,20 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 3638,
+							actionID = 7393,
 							conditions = 
 							{
 								
 								{
-									"e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
-									true,
-								},
-								
-								{
-									"58ea22ca-90dd-9f24-b202-1b8a0f1f7da4",
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
 									true,
 								},
 							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
+							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
-							uuid = "9b1f0885-3a72-1913-ad03-47c71acda8e5",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
 							version = 2.1,
 						},
-						inheritedIndex = 1,
 					},
 				},
 				conditions = 
@@ -188,36 +181,26 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 3638,
 							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							comparator = 2,
-							conditionType = 2,
-							hpValue = 10,
-							uuid = "58ea22ca-90dd-9f24-b202-1b8a0f1f7da4",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
 							version = 2,
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 44.7,
-				name = "Living Dead (Invinsible)",
+				name = "TBN (25)",
 				timeRange = true,
 				timelineIndex = 6,
-				timerStartOffset = -5,
-				uuid = "8c091d10-3227-5663-a18e-019e8243d5a2",
+				timerOffset = -4,
+				timerStartOffset = -3,
+				uuid = "9919d0fc-6a25-0610-ba18-090a2c69a573",
 				version = 2,
 			},
-			inheritedIndex = 8,
+			inheritedIndex = 1,
 		},
 		
 		{
@@ -261,12 +244,13 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 44.7,
 				name = "Rampart (20)",
 				timeRange = true,
 				timelineIndex = 6,
 				timerOffset = -15,
-				timerStartOffset = -15,
+				timerStartOffset = -10,
 				uuid = "0fabdcb3-95aa-67a6-bfc4-f5833be20df7",
 				version = 2,
 			},
@@ -318,7 +302,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 6,
 				timerOffset = -5,
-				timerStartOffset = -10,
+				timerStartOffset = -5,
 				uuid = "12fd4032-3824-a81c-8d43-b7a206ef0055",
 				version = 2,
 			},
@@ -437,6 +421,76 @@ local tbl =
 					{
 						data = 
 						{
+							actionID = 3638,
+							conditions = 
+							{
+								
+								{
+									"e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
+									true,
+								},
+								
+								{
+									"58ea22ca-90dd-9f24-b202-1b8a0f1f7da4",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "9b1f0885-3a72-1913-ad03-47c71acda8e5",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3638,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 10,
+							uuid = "58ea22ca-90dd-9f24-b202-1b8a0f1f7da4",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 44.7,
+				name = "Living Dead (Invinsible)",
+				timeRange = true,
+				timelineIndex = 6,
+				timerStartOffset = -5,
+				uuid = "8c091d10-3227-5663-a18e-019e8243d5a2",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 7393,
 							conditions = 
 							{
@@ -478,7 +532,7 @@ local tbl =
 				uuid = "75cb156d-bebd-5def-8802-87c35792928d",
 				version = 2,
 			},
-			inheritedIndex = 7,
+			inheritedIndex = 8,
 		},
 	},
 	[13] = 
@@ -869,27 +923,20 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 3638,
+							actionID = 7393,
 							conditions = 
 							{
 								
 								{
-									"e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
-									true,
-								},
-								
-								{
-									"58ea22ca-90dd-9f24-b202-1b8a0f1f7da4",
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
 									true,
 								},
 							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
+							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
-							uuid = "9b1f0885-3a72-1913-ad03-47c71acda8e5",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
 							version = 2.1,
 						},
-						inheritedIndex = 1,
 					},
 				},
 				conditions = 
@@ -898,36 +945,26 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 3638,
 							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							comparator = 2,
-							conditionType = 2,
-							hpValue = 10,
-							uuid = "58ea22ca-90dd-9f24-b202-1b8a0f1f7da4",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
 							version = 2,
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 242.3,
-				name = "Living Dead (Invinsible)",
+				name = "TBN (25)",
 				timeRange = true,
 				timelineIndex = 42,
-				timerStartOffset = -5,
-				uuid = "34e017b7-b606-25a0-9db4-57026d327fd6",
+				timerOffset = -4,
+				timerStartOffset = -3,
+				uuid = "9a90b410-7e37-bdf0-aed0-1b99979331d0",
 				version = 2,
 			},
-			inheritedIndex = 8,
+			inheritedIndex = 1,
 		},
 		
 		{
@@ -971,12 +1008,13 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 242.3,
 				name = "Rampart (20)",
 				timeRange = true,
 				timelineIndex = 42,
 				timerOffset = -15,
-				timerStartOffset = -15,
+				timerStartOffset = -10,
 				uuid = "7eeada69-bd44-bf64-8622-3de4592577ce",
 				version = 2,
 			},
@@ -1028,7 +1066,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 42,
 				timerOffset = -5,
-				timerStartOffset = -10,
+				timerStartOffset = -5,
 				uuid = "d65e7a3d-0228-6519-83f3-37092d95ac69",
 				version = 2,
 			},
@@ -1147,6 +1185,76 @@ local tbl =
 					{
 						data = 
 						{
+							actionID = 3638,
+							conditions = 
+							{
+								
+								{
+									"e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
+									true,
+								},
+								
+								{
+									"58ea22ca-90dd-9f24-b202-1b8a0f1f7da4",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "9b1f0885-3a72-1913-ad03-47c71acda8e5",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3638,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 10,
+							uuid = "58ea22ca-90dd-9f24-b202-1b8a0f1f7da4",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 242.3,
+				name = "Living Dead (Invinsible)",
+				timeRange = true,
+				timelineIndex = 42,
+				timerStartOffset = -5,
+				uuid = "34e017b7-b606-25a0-9db4-57026d327fd6",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 7393,
 							conditions = 
 							{
@@ -1188,7 +1296,7 @@ local tbl =
 				uuid = "b2e47f1a-0710-6e66-b22e-ad2266534156",
 				version = 2,
 			},
-			inheritedIndex = 7,
+			inheritedIndex = 8,
 		},
 	},
 	[51] = 
@@ -1841,27 +1949,20 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 3638,
+							actionID = 7393,
 							conditions = 
 							{
 								
 								{
-									"e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
-									true,
-								},
-								
-								{
-									"58ea22ca-90dd-9f24-b202-1b8a0f1f7da4",
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
 									true,
 								},
 							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
+							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
-							uuid = "9b1f0885-3a72-1913-ad03-47c71acda8e5",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
 							version = 2.1,
 						},
-						inheritedIndex = 1,
 					},
 				},
 				conditions = 
@@ -1870,36 +1971,26 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 3638,
 							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							comparator = 2,
-							conditionType = 2,
-							hpValue = 10,
-							uuid = "58ea22ca-90dd-9f24-b202-1b8a0f1f7da4",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
 							version = 2,
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 484.4,
-				name = "Living Dead (Invinsible)",
+				name = "TBN (25)",
 				timeRange = true,
 				timelineIndex = 97,
-				timerStartOffset = -5,
-				uuid = "b8f86c49-e189-d03b-a9ad-9149d420746d",
+				timerOffset = -4,
+				timerStartOffset = -3,
+				uuid = "9b935912-868b-e4bc-858b-b7c24fbeb094",
 				version = 2,
 			},
-			inheritedIndex = 8,
+			inheritedIndex = 1,
 		},
 		
 		{
@@ -1943,12 +2034,13 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 484.4,
 				name = "Rampart (20)",
 				timeRange = true,
 				timelineIndex = 97,
 				timerOffset = -15,
-				timerStartOffset = -15,
+				timerStartOffset = -10,
 				uuid = "246519ff-6294-83da-8e0b-a1985e23bf21",
 				version = 2,
 			},
@@ -2000,7 +2092,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 97,
 				timerOffset = -5,
-				timerStartOffset = -10,
+				timerStartOffset = -5,
 				uuid = "d9b215b9-0459-94b0-b0fd-ffbe2c8dedcc",
 				version = 2,
 			},
@@ -2119,62 +2211,6 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 7393,
-							conditions = 
-							{
-								
-								{
-									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Other Tank",
-							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 3,
-							mpType = 2,
-							mpValue = 3000,
-							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 484.4,
-				name = "TBN ST (25)",
-				timeRange = true,
-				timelineIndex = 97,
-				timerOffset = -4,
-				timerStartOffset = -3,
-				uuid = "5b302212-1495-6a68-ad4c-ecbf51750622",
-				version = 2,
-			},
-			inheritedIndex = 7,
-		},
-	},
-	[116] = 
-	{
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
 							actionID = 3638,
 							conditions = 
 							{
@@ -2225,15 +2261,124 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 580.8,
+				mechanicTime = 484.4,
 				name = "Living Dead (Invinsible)",
 				timeRange = true,
-				timelineIndex = 116,
+				timelineIndex = 97,
 				timerStartOffset = -5,
-				uuid = "61fa3d4c-0611-d6c6-9d0e-e81f1f0f3904",
+				uuid = "b8f86c49-e189-d03b-a9ad-9149d420746d",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 484.4,
+				name = "TBN ST (25)",
+				timeRange = true,
+				timelineIndex = 97,
+				timerOffset = -4,
+				timerStartOffset = -3,
+				uuid = "5b302212-1495-6a68-ad4c-ecbf51750622",
 				version = 2,
 			},
 			inheritedIndex = 8,
+		},
+	},
+	[116] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 580.8,
+				name = "TBN (25)",
+				timeRange = true,
+				timelineIndex = 116,
+				timerOffset = -4,
+				timerStartOffset = -3,
+				uuid = "ca749a12-d725-21dd-af69-b9e93eed8b27",
+				version = 2,
+			},
+			inheritedIndex = 1,
 		},
 		
 		{
@@ -2277,12 +2422,13 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 580.8,
 				name = "Rampart (20)",
 				timeRange = true,
 				timelineIndex = 116,
 				timerOffset = -15,
-				timerStartOffset = -15,
+				timerStartOffset = -10,
 				uuid = "80cef2fe-958f-daed-ae47-09b80f7baa99",
 				version = 2,
 			},
@@ -2334,7 +2480,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 116,
 				timerOffset = -5,
-				timerStartOffset = -10,
+				timerStartOffset = -5,
 				uuid = "9451162b-6a56-5dc1-b784-60403ba89157",
 				version = 2,
 			},
@@ -2453,6 +2599,76 @@ local tbl =
 					{
 						data = 
 						{
+							actionID = 3638,
+							conditions = 
+							{
+								
+								{
+									"e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
+									true,
+								},
+								
+								{
+									"58ea22ca-90dd-9f24-b202-1b8a0f1f7da4",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "9b1f0885-3a72-1913-ad03-47c71acda8e5",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3638,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 10,
+							uuid = "58ea22ca-90dd-9f24-b202-1b8a0f1f7da4",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 580.8,
+				name = "Living Dead (Invinsible)",
+				timeRange = true,
+				timelineIndex = 116,
+				timerStartOffset = -5,
+				uuid = "61fa3d4c-0611-d6c6-9d0e-e81f1f0f3904",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 7393,
 							conditions = 
 							{
@@ -2494,7 +2710,7 @@ local tbl =
 				uuid = "4b74596a-022b-38c6-b865-23b0150d38f3",
 				version = 2,
 			},
-			inheritedIndex = 7,
+			inheritedIndex = 8,
 		},
 	},
 	[118] = 
