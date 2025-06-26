@@ -742,6 +742,40 @@ local tbl =
 			inheritedIndex = 2,
 		},
 	},
+	[19] = 
+	{
+		
+		{
+			data = 
+			{
+				name = "[Tank] Interrupt Wildwinds",
+				uuid = "a884196a-19bd-7065-b732-3802a86f52c1",
+				version = 2,
+			},
+			inheritedObjectUUID = "25d8f120-4f59-7f3f-bc32-2459e2df24c1",
+			inheritedOverwrites = 
+			{
+				enabled = false,
+			},
+		},
+	},
+	[21] = 
+	{
+		
+		{
+			data = 
+			{
+				name = "[Opti] Find Target",
+				uuid = "a726115c-606d-86df-806a-4c8df4d55dc7",
+				version = 2,
+			},
+			inheritedObjectUUID = "aa7cf95f-d8e6-8ae3-adc2-110fe8dca801",
+			inheritedOverwrites = 
+			{
+				enabled = false,
+			},
+		},
+	},
 	[27] = 
 	{
 		
@@ -1557,6 +1591,115 @@ local tbl =
 			inheritedIndex = 9,
 		},
 	},
+	[65] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"a0c32fff-2645-ca70-a05a-0325df47bc64",
+									true,
+								},
+								
+								{
+									"a1ba213c-6cdd-6cf9-92de-67b3b5a179fe",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "ca8e3c49-672f-7f30-b556-8666222d88cf",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"a0c32fff-2645-ca70-a05a-0325df47bc64",
+									true,
+								},
+								
+								{
+									"f449c362-8e76-346b-a1c5-61af4d71ae15",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "92b93e01-95bb-71d5-9121-52773c65724a",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "a0c32fff-2645-ca70-a05a-0325df47bc64",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99.999000549316,
+							uuid = "a1ba213c-6cdd-6cf9-92de-67b3b5a179fe",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 100,
+							uuid = "f449c362-8e76-346b-a1c5-61af4d71ae15",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 319.1,
+				name = "Sheltron/Interven",
+				timeRange = true,
+				timelineIndex = 65,
+				timerStartOffset = -2,
+				uuid = "39a321ff-034f-6ba1-a722-e492a56a5a60",
+				version = 2,
+			},
+			inheritedIndex = 8,
+		},
+	},
 	[83] = 
 	{
 		
@@ -2353,6 +2496,59 @@ local tbl =
 					{
 						data = 
 						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5ed8c1f4-36d8-ad42-9463-1f8154296465",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+							version = 2,
+						},
+					},
+				},
+				loop = true,
+				mechanicTime = 494.4,
+				name = "interven ST (15)",
+				timeRange = true,
+				timelineIndex = 94,
+				timerEndOffset = 18.299999237061,
+				timerStartOffset = -1,
+				uuid = "ecefaa49-2010-33d5-a9ad-5131f7db1026",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 22,
 							conditions = 
 							{
@@ -2469,59 +2665,6 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 4,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7382,
-							conditions = 
-							{
-								
-								{
-									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
-									true,
-								},
-							},
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Other Tank",
-							uuid = "5ed8c1f4-36d8-ad42-9463-1f8154296465",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 6,
-							gaugeValue = 50,
-							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
-							version = 2,
-						},
-					},
-				},
-				loop = true,
-				mechanicTime = 494.4,
-				name = "interven ST (15)",
-				timeRange = true,
-				timelineIndex = 94,
-				timerEndOffset = 18.299999237061,
-				timerStartOffset = -1,
-				uuid = "ecefaa49-2010-33d5-a9ad-5131f7db1026",
-				version = 2,
-			},
-			inheritedIndex = 7,
 		},
 	},
 	[119] = 

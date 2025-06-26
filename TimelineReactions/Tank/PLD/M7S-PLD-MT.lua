@@ -755,6 +755,40 @@ local tbl =
 			inheritedIndex = 2,
 		},
 	},
+	[19] = 
+	{
+		
+		{
+			data = 
+			{
+				name = "[Tank] Interrupt Wildwinds",
+				uuid = "e9a97e9c-499a-1293-91ec-a9637ea5f3a0",
+				version = 2,
+			},
+			inheritedObjectUUID = "25d8f120-4f59-7f3f-bc32-2459e2df24c1",
+			inheritedOverwrites = 
+			{
+				enabled = false,
+			},
+		},
+	},
+	[21] = 
+	{
+		
+		{
+			data = 
+			{
+				name = "[Opti] Find Target",
+				uuid = "cbaaa3f9-a42c-2f25-8943-23368c16f5a2",
+				version = 2,
+			},
+			inheritedObjectUUID = "aa7cf95f-d8e6-8ae3-adc2-110fe8dca801",
+			inheritedOverwrites = 
+			{
+				enabled = false,
+			},
+		},
+	},
 	[27] = 
 	{
 		
@@ -1568,6 +1602,115 @@ local tbl =
 			},
 		},
 	},
+	[65] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"a0c32fff-2645-ca70-a05a-0325df47bc64",
+									true,
+								},
+								
+								{
+									"a1ba213c-6cdd-6cf9-92de-67b3b5a179fe",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "ca8e3c49-672f-7f30-b556-8666222d88cf",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"a0c32fff-2645-ca70-a05a-0325df47bc64",
+									true,
+								},
+								
+								{
+									"f449c362-8e76-346b-a1c5-61af4d71ae15",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "92b93e01-95bb-71d5-9121-52773c65724a",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "a0c32fff-2645-ca70-a05a-0325df47bc64",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99.999000549316,
+							uuid = "a1ba213c-6cdd-6cf9-92de-67b3b5a179fe",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 100,
+							uuid = "f449c362-8e76-346b-a1c5-61af4d71ae15",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 319.1,
+				name = "Sheltron/Interven",
+				timeRange = true,
+				timelineIndex = 65,
+				timerStartOffset = -2,
+				uuid = "6a3dee5e-24bb-e36f-b6f9-d3db5ee1fea8",
+				version = 2,
+			},
+			inheritedIndex = 8,
+		},
+	},
 	[83] = 
 	{
 		
@@ -2364,60 +2507,6 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 7531,
-							conditions = 
-							{
-								
-								{
-									"1465472a-0137-2f48-b9fc-aa7b9991077a",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7531,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 494.4,
-				name = "Rampart (20)",
-				timeRange = true,
-				timelineIndex = 94,
-				timerEndOffset = 18.299999237061,
-				timerOffset = -15,
-				timerStartOffset = -2,
-				uuid = "3849efa1-ff5d-1b68-8e39-3d9d11fb3c34",
-				version = 2,
-			},
-			inheritedIndex = 4,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
 							actionID = 25746,
 							conditions = 
 							{
@@ -2459,7 +2548,7 @@ local tbl =
 				uuid = "875ad40e-67ea-1a93-881d-3ca1935789c3",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 5,
 		},
 		
 		{
@@ -2533,6 +2622,60 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 494.4,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 94,
+				timerEndOffset = 18.299999237061,
+				timerOffset = -15,
+				timerStartOffset = -2,
+				uuid = "3849efa1-ff5d-1b68-8e39-3d9d11fb3c34",
+				version = 2,
+			},
+			inheritedIndex = 4,
 		},
 	},
 	[119] = 
