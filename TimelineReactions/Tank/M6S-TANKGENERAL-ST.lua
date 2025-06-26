@@ -9684,6 +9684,11 @@ local tbl =
 									"463b432b-49d1-5a42-80c0-43e42e255c1c",
 									true,
 								},
+								
+								{
+									"be926e37-9b25-df0d-aac9-210100a6bf39",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -9752,6 +9757,19 @@ local tbl =
 							conditionType = 4,
 							enmityValue = 100,
 							uuid = "463b432b-49d1-5a42-80c0-43e42e255c1c",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionCDValue = 0.0010000000474975,
+							actionID = 7533,
+							category = "Party",
+							conditionType = 9,
+							partyTargetType = "Other Tank",
+							uuid = "be926e37-9b25-df0d-aac9-210100a6bf39",
 							version = 2,
 						},
 					},
