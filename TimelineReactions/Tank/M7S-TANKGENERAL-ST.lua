@@ -498,6 +498,170 @@ local tbl =
 				version = 2,
 			},
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"5b94e520-196f-41ca-937f-c7de78c87e94",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_Potion",
+							gVarValue = 2,
+							holdActionDuration = 359,
+							holdActionID = 846,
+							ignoreWeaveRules = true,
+							uuid = "4e9201c2-b7d4-f544-ba48-28b7472684c8",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"8aaaa3ea-4f63-b5eb-bef9-10490b2b59df",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_Potion",
+							gVarValue = 2,
+							holdActionDuration = 359,
+							holdActionID = 846,
+							ignoreWeaveRules = true,
+							uuid = "b5c05f68-ae07-c944-aa7d-f3691578a2a8",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"2027b7a7-15ca-9d77-9d50-f115fefe61b5",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_Potion",
+							gVarValue = 2,
+							holdActionDuration = 359,
+							holdActionID = 846,
+							ignoreWeaveRules = true,
+							uuid = "a1153665-18ae-33d4-b0bd-5e11ea9577ca",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"c4cd632c-d2f5-4ac2-822b-247c3c6d7aa2",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_Potion",
+							gVarValue = 2,
+							holdActionDuration = 359,
+							holdActionID = 846,
+							ignoreWeaveRules = true,
+							uuid = "29d80b1e-f265-d97b-9af0-4a64a1e14f6b",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "5b94e520-196f-41ca-937f-c7de78c87e94",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "8aaaa3ea-4f63-b5eb-bef9-10490b2b59df",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "2027b7a7-15ca-9d77-9d50-f115fefe61b5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "c4cd632c-d2f5-4ac2-822b-247c3c6d7aa2",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 10.5,
+				name = "Hold Potion ",
+				timeRange = true,
+				timelineIndex = 1,
+				timerEndOffset = 10,
+				timerOffset = -15,
+				uuid = "cb26c6e9-c56a-4ab8-bc3d-388b559b3e77",
+				version = 2,
+			},
+		},
 	}, 
 	[3] = 
 	{
@@ -721,8 +885,173 @@ local tbl =
 				version = 2,
 			},
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							conditions = 
+							{
+								
+								{
+									"e8a81d45-c30b-9fca-a15f-81943ba2b654",
+									true,
+								},
+								
+								{
+									"a125392c-568e-7a19-89da-f42f6dd6c000",
+									true,
+								},
+								
+								{
+									"3e90355c-c045-40e1-9bdb-08e6a93386b8",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							holdActionDuration = 12,
+							holdActionID = 16461,
+							uuid = "14dbfe84-4b56-c3e7-a273-6a3a8978ce1a",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							conditions = 
+							{
+								
+								{
+									"e8a81d45-c30b-9fca-a15f-81943ba2b654",
+									true,
+								},
+								
+								{
+									"9ff98fd1-dddb-1684-b631-c86611e62355",
+									true,
+								},
+								
+								{
+									"3e90355c-c045-40e1-9bdb-08e6a93386b8",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							holdActionDuration = 12,
+							holdActionID = 7386,
+							uuid = "008b913b-7fff-1b57-8a03-242934933813",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							buffID = 4454,
+							category = "Self",
+							uuid = "e8a81d45-c30b-9fca-a15f-81943ba2b654",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "a125392c-568e-7a19-89da-f42f6dd6c000",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "9ff98fd1-dddb-1684-b631-c86611e62355",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
+							uuid = "3e90355c-c045-40e1-9bdb-08e6a93386b8",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 32,
+				name = "Hold Jump",
+				timeRange = true,
+				timelineIndex = 3,
+				timerStartOffset = -10,
+				uuid = "a9b2dc0e-40e6-7513-b0d4-7766b9fb2128",
+				version = 2,
+			},
+		},
 	},
 	[11] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionID = 7382,
+							actionLua = "local farthest = nil\nlocal maxDist = 0\nlocal radius = 10\nlocal targetList = EntityList(\"type=2,targetable,contentid=541\")\n\nif table.valid(targetList) then\n    for _, ent in pairs(targetList) do\n        if ent.distance <= radius and ent.alive then\n            if ent.distance > maxDist then\n                farthest = ent\n                maxDist = ent.distance\n            end\n        end\n    end\nend\n\nif farthest and (Player:GetTarget() == nil or Player:GetTarget().id ~= farthest.id) then\n    Player:SetTarget(farthest.id)\nend\n",
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							name = "Target Far",
+							targetType = "Other Tank",
+							uuid = "1121272c-a3d7-0d52-988c-199ec2a2a8ad",
+							version = 2.1,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				conditions = 
+				{
+				},
+				eventType = 12,
+				loop = true,
+				mechanicTime = 56,
+				name = "Target Adds",
+				timeRange = true,
+				timelineIndex = 11,
+				timerEndOffset = 9.3999996185303,
+				timerStartOffset = 1,
+				uuid = "c4df74ba-4e02-41c6-9b45-4ddbe6e7aeb4",
+				version = 2,
+			},
+		},
+	},
+	[15] = 
 	{
 		
 		{
@@ -768,51 +1097,13 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 56,
+				mechanicTime = 60.8,
 				name = "Provoke Near Adds",
 				timeRange = true,
-				timelineIndex = 11,
+				timelineIndex = 15,
 				timerEndOffset = 5,
 				timerStartOffset = 0.5,
-				uuid = "8c59837b-1fcf-10c9-8731-b07c77aa637a",
-				version = 2,
-			},
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "Lua",
-							actionID = 7382,
-							actionLua = "local farthest = nil\nlocal maxDist = 0\nlocal radius = 10\nlocal targetList = EntityList(\"type=2,targetable,contentid=541\")\n\nif table.valid(targetList) then\n    for _, ent in pairs(targetList) do\n        if ent.distance <= radius and ent.alive then\n            if ent.distance > maxDist then\n                farthest = ent\n                maxDist = ent.distance\n            end\n        end\n    end\nend\n\nif farthest and (Player:GetTarget() == nil or Player:GetTarget().id ~= farthest.id) then\n    Player:SetTarget(farthest.id)\nend\n",
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							name = "Target Far",
-							targetType = "Other Tank",
-							uuid = "1121272c-a3d7-0d52-988c-199ec2a2a8ad",
-							version = 2.1,
-						},
-						inheritedIndex = 2,
-					},
-				},
-				conditions = 
-				{
-				},
-				eventType = 12,
-				loop = true,
-				mechanicTime = 56,
-				name = "Target Adds",
-				timeRange = true,
-				timelineIndex = 11,
-				timerEndOffset = 9.3999996185303,
-				timerStartOffset = 1,
-				uuid = "c4df74ba-4e02-41c6-9b45-4ddbe6e7aeb4",
+				uuid = "81c10364-5597-cf96-a756-b0df67854ef1",
 				version = 2,
 			},
 		},
@@ -1806,6 +2097,133 @@ local tbl =
 				timerOffset = -3,
 				timerStartOffset = -7,
 				uuid = "3371b002-fa0f-a874-809a-548a9037fd81",
+				version = 2,
+			},
+		},
+	},
+	[27] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							conditions = 
+							{
+								
+								{
+									"e8a81d45-c30b-9fca-a15f-81943ba2b654",
+									true,
+								},
+								
+								{
+									"a125392c-568e-7a19-89da-f42f6dd6c000",
+									true,
+								},
+								
+								{
+									"7f3e2e73-3d3d-5c27-8d47-1b4558777176",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							holdActionDuration = 12,
+							holdActionID = 16461,
+							uuid = "14dbfe84-4b56-c3e7-a273-6a3a8978ce1a",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							conditions = 
+							{
+								
+								{
+									"e8a81d45-c30b-9fca-a15f-81943ba2b654",
+									true,
+								},
+								
+								{
+									"9ff98fd1-dddb-1684-b631-c86611e62355",
+									true,
+								},
+								
+								{
+									"7f3e2e73-3d3d-5c27-8d47-1b4558777176",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							holdActionDuration = 12,
+							holdActionID = 7386,
+							uuid = "008b913b-7fff-1b57-8a03-242934933813",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							buffID = 4454,
+							category = "Self",
+							uuid = "e8a81d45-c30b-9fca-a15f-81943ba2b654",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "a125392c-568e-7a19-89da-f42f6dd6c000",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "9ff98fd1-dddb-1684-b631-c86611e62355",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
+							uuid = "7f3e2e73-3d3d-5c27-8d47-1b4558777176",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 117.5,
+				name = "Hold Jump",
+				timeRange = true,
+				timelineIndex = 27,
+				timerStartOffset = -10,
+				uuid = "b4de5b09-db60-5777-997e-215fd760a7b7",
 				version = 2,
 			},
 		},
@@ -6716,6 +7134,133 @@ local tbl =
 			},
 		},
 	},
+	[83] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							conditions = 
+							{
+								
+								{
+									"e8a81d45-c30b-9fca-a15f-81943ba2b654",
+									true,
+								},
+								
+								{
+									"a125392c-568e-7a19-89da-f42f6dd6c000",
+									true,
+								},
+								
+								{
+									"3e90355c-c045-40e1-9bdb-08e6a93386b8",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							holdActionDuration = 12,
+							holdActionID = 16461,
+							uuid = "14dbfe84-4b56-c3e7-a273-6a3a8978ce1a",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							conditions = 
+							{
+								
+								{
+									"e8a81d45-c30b-9fca-a15f-81943ba2b654",
+									true,
+								},
+								
+								{
+									"9ff98fd1-dddb-1684-b631-c86611e62355",
+									true,
+								},
+								
+								{
+									"3e90355c-c045-40e1-9bdb-08e6a93386b8",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							holdActionDuration = 12,
+							holdActionID = 7386,
+							uuid = "008b913b-7fff-1b57-8a03-242934933813",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							buffID = 4454,
+							category = "Self",
+							uuid = "e8a81d45-c30b-9fca-a15f-81943ba2b654",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "a125392c-568e-7a19-89da-f42f6dd6c000",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "9ff98fd1-dddb-1684-b631-c86611e62355",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
+							uuid = "3e90355c-c045-40e1-9bdb-08e6a93386b8",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 432.3,
+				name = "Hold Jump",
+				timeRange = true,
+				timelineIndex = 83,
+				timerStartOffset = -10,
+				uuid = "3c85d6f4-b950-3c1f-a6c8-db1978fdc45b",
+				version = 2,
+			},
+		},
+	},
 	[84] = 
 	{
 		
@@ -7160,6 +7705,113 @@ local tbl =
 			},
 		},
 	},
+	[86] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							conditions = 
+							{
+								
+								{
+									"e8a81d45-c30b-9fca-a15f-81943ba2b654",
+									true,
+								},
+								
+								{
+									"a125392c-568e-7a19-89da-f42f6dd6c000",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							holdActionDuration = 12,
+							holdActionID = 16461,
+							uuid = "14dbfe84-4b56-c3e7-a273-6a3a8978ce1a",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							conditions = 
+							{
+								
+								{
+									"e8a81d45-c30b-9fca-a15f-81943ba2b654",
+									true,
+								},
+								
+								{
+									"9ff98fd1-dddb-1684-b631-c86611e62355",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							holdActionDuration = 12,
+							holdActionID = 7386,
+							uuid = "008b913b-7fff-1b57-8a03-242934933813",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							buffID = 4454,
+							category = "Self",
+							uuid = "e8a81d45-c30b-9fca-a15f-81943ba2b654",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "a125392c-568e-7a19-89da-f42f6dd6c000",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "9ff98fd1-dddb-1684-b631-c86611e62355",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 463.2,
+				name = "Hold Jump",
+				timeRange = true,
+				timelineIndex = 86,
+				timerStartOffset = -10,
+				uuid = "0de5601a-7ada-8a7f-b838-c4e9d8725a0e",
+				version = 2,
+			},
+		},
+	},
 	[94] = 
 	{
 		
@@ -7587,6 +8239,110 @@ local tbl =
 				timelineIndex = 95,
 				timerStartOffset = -7,
 				uuid = "954e8c1d-b8cf-de61-9bcd-199b1ce6e4b9",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							conditions = 
+							{
+								
+								{
+									"e8a81d45-c30b-9fca-a15f-81943ba2b654",
+									true,
+								},
+								
+								{
+									"a125392c-568e-7a19-89da-f42f6dd6c000",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							holdActionDuration = 12,
+							holdActionID = 16461,
+							uuid = "14dbfe84-4b56-c3e7-a273-6a3a8978ce1a",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							conditions = 
+							{
+								
+								{
+									"e8a81d45-c30b-9fca-a15f-81943ba2b654",
+									true,
+								},
+								
+								{
+									"9ff98fd1-dddb-1684-b631-c86611e62355",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							holdActionDuration = 12,
+							holdActionID = 7386,
+							uuid = "008b913b-7fff-1b57-8a03-242934933813",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							buffID = 4454,
+							category = "Self",
+							uuid = "e8a81d45-c30b-9fca-a15f-81943ba2b654",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "a125392c-568e-7a19-89da-f42f6dd6c000",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "9ff98fd1-dddb-1684-b631-c86611e62355",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 495.7,
+				name = "Hold Jump",
+				timeRange = true,
+				timelineIndex = 95,
+				timerStartOffset = -12,
+				uuid = "077c9d9f-19ae-a8de-888e-9786a0d6a684",
 				version = 2,
 			},
 		},
@@ -8475,6 +9231,240 @@ local tbl =
 				timerOffset = -3,
 				timerStartOffset = -1,
 				uuid = "cb1b57b0-f87b-52a5-8ca4-61ab9b472875",
+				version = 2,
+			},
+		},
+	},
+	[119] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							conditions = 
+							{
+								
+								{
+									"e8a81d45-c30b-9fca-a15f-81943ba2b654",
+									true,
+								},
+								
+								{
+									"a125392c-568e-7a19-89da-f42f6dd6c000",
+									true,
+								},
+								
+								{
+									"7f3e2e73-3d3d-5c27-8d47-1b4558777176",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							holdActionDuration = 12,
+							holdActionID = 16461,
+							uuid = "14dbfe84-4b56-c3e7-a273-6a3a8978ce1a",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							conditions = 
+							{
+								
+								{
+									"e8a81d45-c30b-9fca-a15f-81943ba2b654",
+									true,
+								},
+								
+								{
+									"9ff98fd1-dddb-1684-b631-c86611e62355",
+									true,
+								},
+								
+								{
+									"7f3e2e73-3d3d-5c27-8d47-1b4558777176",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							holdActionDuration = 12,
+							holdActionID = 7386,
+							uuid = "008b913b-7fff-1b57-8a03-242934933813",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							buffID = 4454,
+							category = "Self",
+							uuid = "e8a81d45-c30b-9fca-a15f-81943ba2b654",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "a125392c-568e-7a19-89da-f42f6dd6c000",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "9ff98fd1-dddb-1684-b631-c86611e62355",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
+							uuid = "7f3e2e73-3d3d-5c27-8d47-1b4558777176",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 611.2,
+				name = "Hold Jump",
+				timeRange = true,
+				timelineIndex = 119,
+				timerStartOffset = -10,
+				uuid = "97cbb4b0-bf5c-9069-9c4c-b3e4c6054fb6",
+				version = 2,
+			},
+		},
+	},
+	[121] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							conditions = 
+							{
+								
+								{
+									"e8a81d45-c30b-9fca-a15f-81943ba2b654",
+									true,
+								},
+								
+								{
+									"a125392c-568e-7a19-89da-f42f6dd6c000",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							holdActionDuration = 12,
+							holdActionID = 16461,
+							uuid = "14dbfe84-4b56-c3e7-a273-6a3a8978ce1a",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							conditions = 
+							{
+								
+								{
+									"e8a81d45-c30b-9fca-a15f-81943ba2b654",
+									true,
+								},
+								
+								{
+									"9ff98fd1-dddb-1684-b631-c86611e62355",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							holdActionDuration = 12,
+							holdActionID = 7386,
+							uuid = "008b913b-7fff-1b57-8a03-242934933813",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							buffID = 4454,
+							category = "Self",
+							uuid = "e8a81d45-c30b-9fca-a15f-81943ba2b654",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "a125392c-568e-7a19-89da-f42f6dd6c000",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "9ff98fd1-dddb-1684-b631-c86611e62355",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 626.3,
+				name = "Hold Jump",
+				timeRange = true,
+				timelineIndex = 121,
+				timerStartOffset = -10,
+				uuid = "5ee70ebb-6a17-4607-a209-fc0f51cf483b",
 				version = 2,
 			},
 		},
