@@ -1994,6 +1994,103 @@ local tbl =
 			inheritedIndex = 8,
 		},
 	},
+	[33] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							conditions = 
+							{
+								
+								{
+									"0ab15303-3f22-8646-ab99-147a16cf5fe2",
+									true,
+								},
+								
+								{
+									"cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetSubType = "Lowest HP",
+							targetType = "Detection Target",
+							uuid = "9ea7cc5f-8777-744b-b6de-e198fbc4ef27",
+							version = 2.1,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							conditions = 
+							{
+								
+								{
+									"2e52f0e0-6f57-3bd2-85dc-6ca01c07fa2b",
+									true,
+								},
+							},
+							filterTargetSubtype = "Lowest HP",
+							filterTargetType = "Party",
+							uuid = "0ab15303-3f22-8646-ab99-147a16cf5fe2",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							comparator = 2,
+							conditionType = 6,
+							hpValue = 50,
+							partyTargetSubType = "Lowest HP",
+							uuid = "2e52f0e0-6f57-3bd2-85dc-6ca01c07fa2b",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							name = "CD NF",
+							uuid = "cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 148,
+				name = "BW/NF (20)",
+				timeRange = true,
+				timelineIndex = 33,
+				timerStartOffset = -1.5,
+				uuid = "ea18651a-6431-09a9-8d70-5d73c39402ff",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
 	[44] = 
 	{
 		
@@ -2350,6 +2447,149 @@ local tbl =
 			inheritedIndex = 9,
 		},
 	},
+	[58] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3552,
+							conditions = 
+							{
+								
+								{
+									"765cdb05-b839-9d7e-96f5-d5b01de337bf",
+									true,
+								},
+								
+								{
+									"36dc885b-1f9c-0471-bc08-7a017c15d6e1",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "a53a5321-b7a7-656f-8d8f-34823340d239",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3552,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "765cdb05-b839-9d7e-96f5-d5b01de337bf",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 60,
+							uuid = "36dc885b-1f9c-0471-bc08-7a017c15d6e1",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 298.9,
+				name = "Equilibrium (Regen)",
+				timeRange = true,
+				timelineIndex = 58,
+				timerEndOffset = 25,
+				uuid = "cec3393c-e3da-9192-b98d-2f7775b4838a",
+				version = 2,
+			},
+			inheritedIndex = 8,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 40,
+							conditions = 
+							{
+								
+								{
+									"79d32c05-7ccb-e6a2-9493-167f1c04431a",
+									true,
+								},
+								
+								{
+									"a49be735-90b5-7fd8-ad71-83d1030514ac",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "9123327e-7223-9aa2-9e4b-6b502c61d83d",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 40,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "79d32c05-7ccb-e6a2-9493-167f1c04431a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							uuid = "a49be735-90b5-7fd8-ad71-83d1030514ac",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 298.9,
+				name = "ToB (HP Upscale)",
+				timeRange = true,
+				timelineIndex = 58,
+				timerEndOffset = 25,
+				timerOffset = -1,
+				uuid = "ed93fcab-6049-90fd-a0f8-73d5b6b37938",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+	},
 	[65] = 
 	{
 		
@@ -2470,6 +2710,103 @@ local tbl =
 				timelineIndex = 65,
 				timerStartOffset = -1.5,
 				uuid = "0e7a53cd-975e-50f3-a13c-2013c2f0940a",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[71] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							conditions = 
+							{
+								
+								{
+									"0ab15303-3f22-8646-ab99-147a16cf5fe2",
+									true,
+								},
+								
+								{
+									"cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetSubType = "Lowest HP",
+							targetType = "Detection Target",
+							uuid = "9ea7cc5f-8777-744b-b6de-e198fbc4ef27",
+							version = 2.1,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							conditions = 
+							{
+								
+								{
+									"2e52f0e0-6f57-3bd2-85dc-6ca01c07fa2b",
+									true,
+								},
+							},
+							filterTargetSubtype = "Lowest HP",
+							filterTargetType = "Party",
+							uuid = "0ab15303-3f22-8646-ab99-147a16cf5fe2",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							comparator = 2,
+							conditionType = 6,
+							hpValue = 50,
+							partyTargetSubType = "Lowest HP",
+							uuid = "2e52f0e0-6f57-3bd2-85dc-6ca01c07fa2b",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							name = "CD NF",
+							uuid = "cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 352.1,
+				name = "BW/NF (20)",
+				timeRange = true,
+				timelineIndex = 71,
+				timerStartOffset = -1.5,
+				uuid = "b03d6b72-f9a0-bdf9-b85f-7f5e9b83d140",
 				version = 2,
 			},
 			inheritedIndex = 1,
