@@ -4149,6 +4149,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				eventType = 12,
 				loop = true,
 				mechanicTime = 217.2,

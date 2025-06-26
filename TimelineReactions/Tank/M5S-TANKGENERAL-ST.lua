@@ -176,6 +176,7 @@ local tbl =
 						{
 							buffCheckType = 2,
 							buffID = 743,
+							category = "Self",
 							name = "DRK Buff",
 							uuid = "18f1b609-641e-ed19-9e7e-897be06b8984",
 							version = 2,
@@ -185,7 +186,12 @@ local tbl =
 					{
 						data = 
 						{
-							conditionType = 9,
+							category = "Self",
+							conditionType = 13,
+							jobIDList = 
+							{
+								21,
+							},
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
@@ -198,6 +204,7 @@ local tbl =
 						{
 							buffCheckType = 2,
 							buffID = 91,
+							category = "Self",
 							name = "WAR Buff",
 							uuid = "bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
 							version = 2,
@@ -210,10 +217,11 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 2,
 				timerOffset = -15,
-				timerStartOffset = -10,
-				uuid = "77e48511-c2d8-ad34-a27d-34e4d3857199",
+				timerStartOffset = -5,
+				uuid = "1e476f88-ef54-00b6-89ed-550d9984de52",
 				version = 2,
 			},
+			inheritedIndex = 1,
 		},
 		
 		{
