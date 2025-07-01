@@ -2268,6 +2268,61 @@ local tbl =
 			},
 			inheritedIndex = 7,
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							conditions = 
+							{
+								
+								{
+									"cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Ranged Physical DPS",
+							uuid = "9ea7cc5f-8777-744b-b6de-e198fbc4ef27",
+							version = 2.1,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							name = "CD NF",
+							uuid = "cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 222.5,
+				name = "NF D3 (20)",
+				timeRange = true,
+				timelineIndex = 44,
+				timerStartOffset = -3.5,
+				uuid = "722e18c7-1340-8e78-8e81-a40789219d4f",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
 	},
 	[54] = 
 	{
@@ -2445,6 +2500,61 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 9,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							conditions = 
+							{
+								
+								{
+									"cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Ranged Physical DPS",
+							uuid = "9ea7cc5f-8777-744b-b6de-e198fbc4ef27",
+							version = 2.1,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							name = "CD NF",
+							uuid = "cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 281.1,
+				name = "NF D3 (20)",
+				timeRange = true,
+				timelineIndex = 54,
+				timerStartOffset = -3.5,
+				uuid = "b9a00895-c9ac-7a96-9545-4c201569d8ea",
+				version = 2,
+			},
+			inheritedIndex = 1,
 		},
 	},
 	[58] = 
