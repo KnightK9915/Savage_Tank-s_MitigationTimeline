@@ -1639,6 +1639,93 @@ local tbl =
 			inheritedIndex = 8,
 		},
 	},
+	[33] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"3f760107-58f8-0342-80b8-5be266ca15db",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "c217f58e-d176-d14e-8f69-d8c5da7d209f",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							category = "Self",
+							conditionType = 4,
+							uuid = "3f760107-58f8-0342-80b8-5be266ca15db",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							conditions = 
+							{
+								
+								{
+									"d500decc-dde0-f4f3-b9bf-c3f4bb6924b7",
+									true,
+								},
+							},
+							filterTargetType = "Party",
+							uuid = "7c2a8223-9c06-b6f0-9cd6-91dd273d66d1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							comparator = 2,
+							conditionType = 6,
+							hpValue = 50,
+							uuid = "d500decc-dde0-f4f3-b9bf-c3f4bb6924b7",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 148,
+				name = "HoC",
+				timeRange = true,
+				timelineIndex = 33,
+				timerStartOffset = -3,
+				uuid = "33b7ff7f-1250-ce41-862b-108d004974f4",
+				version = 2,
+			},
+			inheritedIndex = 8,
+		},
+	},
 	[36] = 
 	{
 		
@@ -1823,6 +1910,61 @@ local tbl =
 			},
 			inheritedIndex = 9,
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"3f760107-58f8-0342-80b8-5be266ca15db",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Ranged Physical DPS",
+							uuid = "c217f58e-d176-d14e-8f69-d8c5da7d209f",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							category = "Self",
+							conditionType = 4,
+							uuid = "3f760107-58f8-0342-80b8-5be266ca15db",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				enabled = false,
+				mechanicTime = 222.5,
+				name = "HoC D3 (15)",
+				timeRange = true,
+				timelineIndex = 44,
+				timerStartOffset = -3.5,
+				uuid = "b061b49b-1029-4f53-ad3d-66da6c786d23",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
 	},
 	[54] = 
 	{
@@ -1932,6 +2074,61 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 10,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"3f760107-58f8-0342-80b8-5be266ca15db",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Ranged Physical DPS",
+							uuid = "c217f58e-d176-d14e-8f69-d8c5da7d209f",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							category = "Self",
+							conditionType = 4,
+							uuid = "3f760107-58f8-0342-80b8-5be266ca15db",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				enabled = false,
+				mechanicTime = 281.1,
+				name = "HoC D3 (15)",
+				timeRange = true,
+				timelineIndex = 54,
+				timerStartOffset = -3.5,
+				uuid = "7dda8273-aa93-225b-b921-bec428984ca8",
+				version = 2,
+			},
+			inheritedIndex = 7,
 		},
 	},
 	[65] = 
@@ -2048,6 +2245,93 @@ local tbl =
 			inheritedIndex = 8,
 		},
 	},
+	[71] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"3f760107-58f8-0342-80b8-5be266ca15db",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Detection Target",
+							uuid = "c217f58e-d176-d14e-8f69-d8c5da7d209f",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							category = "Self",
+							conditionType = 4,
+							uuid = "3f760107-58f8-0342-80b8-5be266ca15db",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							conditions = 
+							{
+								
+								{
+									"d500decc-dde0-f4f3-b9bf-c3f4bb6924b7",
+									true,
+								},
+							},
+							filterTargetType = "Party",
+							uuid = "7c2a8223-9c06-b6f0-9cd6-91dd273d66d1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							comparator = 2,
+							conditionType = 6,
+							hpValue = 20,
+							uuid = "d500decc-dde0-f4f3-b9bf-c3f4bb6924b7",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 352.1,
+				name = "HoC",
+				timeRange = true,
+				timelineIndex = 71,
+				timerStartOffset = -3,
+				uuid = "254d6e39-67f5-7559-8887-c0d5bb3bfc4d",
+				version = 2,
+			},
+			inheritedIndex = 8,
+		},
+	},
 	[74] = 
 	{
 		
@@ -2098,7 +2382,7 @@ local tbl =
 				name = "HoC",
 				timeRange = true,
 				timelineIndex = 74,
-				timerStartOffset = -5,
+				timerStartOffset = -2,
 				uuid = "899cb602-a138-08d1-97f2-b1e3e4d3b817",
 				version = 2,
 			},
