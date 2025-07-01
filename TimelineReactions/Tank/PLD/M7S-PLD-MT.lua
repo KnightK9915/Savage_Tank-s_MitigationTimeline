@@ -614,20 +614,6 @@ local tbl =
 			},
 			inheritedIndex = 7,
 		},
-		
-		{
-			data = 
-			{
-				name = "Sheltron/Interv",
-				uuid = "5d62d957-908f-5cdd-9602-6e9b76fe0dda",
-				version = 2,
-			},
-			inheritedObjectUUID = "03d32b5b-9807-fa03-870e-449973320b0a",
-			inheritedOverwrites = 
-			{
-				name = "Sheltron/Interv",
-			},
-		},
 	},
 	[17] = 
 	{
@@ -1440,6 +1426,81 @@ local tbl =
 				version = 2,
 			},
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+								
+								{
+									"6dcc5d44-e96d-0d3e-96e6-04120bf6c6fa",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Ranged Physical DPS",
+							uuid = "7a7985e9-ca5c-1be8-a382-3c656362944e",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 82,
+							buffIDList = 
+							{
+								82,
+								1836,
+							},
+							category = "Party",
+							partyTargetType = "Ranged Physical DPS",
+							uuid = "6dcc5d44-e96d-0d3e-96e6-04120bf6c6fa",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 222.5,
+				name = "interven D3 (15)",
+				timeRange = true,
+				timelineIndex = 44,
+				timerStartOffset = -3.5,
+				uuid = "9dcba566-80ea-9c83-ac5c-c1e21c5d88a0",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
 	},
 	[54] = 
 	{
@@ -1600,6 +1661,81 @@ local tbl =
 				uuid = "7c1eef24-3639-b0fc-bdff-3d622340f8c5",
 				version = 2,
 			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+								
+								{
+									"6dcc5d44-e96d-0d3e-96e6-04120bf6c6fa",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Ranged Physical DPS",
+							uuid = "7a7985e9-ca5c-1be8-a382-3c656362944e",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 82,
+							buffIDList = 
+							{
+								82,
+								1836,
+							},
+							category = "Party",
+							partyTargetType = "Ranged Physical DPS",
+							uuid = "6dcc5d44-e96d-0d3e-96e6-04120bf6c6fa",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 281.1,
+				name = "interven D3 (15)",
+				timeRange = true,
+				timelineIndex = 54,
+				timerStartOffset = -3.5,
+				uuid = "741ea8e6-2e58-23dc-b8e6-d10190968a0f",
+				version = 2,
+			},
+			inheritedIndex = 7,
 		},
 	},
 	[65] = 

@@ -1428,6 +1428,81 @@ local tbl =
 			},
 			inheritedIndex = 8,
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+								
+								{
+									"6dcc5d44-e96d-0d3e-96e6-04120bf6c6fa",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Ranged Physical DPS",
+							uuid = "7a7985e9-ca5c-1be8-a382-3c656362944e",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 82,
+							buffIDList = 
+							{
+								82,
+								1836,
+							},
+							category = "Party",
+							partyTargetType = "Ranged Physical DPS",
+							uuid = "6dcc5d44-e96d-0d3e-96e6-04120bf6c6fa",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 222.5,
+				name = "interven D3 (15)",
+				timeRange = true,
+				timelineIndex = 44,
+				timerStartOffset = -3.5,
+				uuid = "e8028667-e089-e050-843b-c852a78425c8",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
 	},
 	[54] = 
 	{
@@ -1589,6 +1664,81 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 9,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+								
+								{
+									"6dcc5d44-e96d-0d3e-96e6-04120bf6c6fa",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Ranged Physical DPS",
+							uuid = "7a7985e9-ca5c-1be8-a382-3c656362944e",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 82,
+							buffIDList = 
+							{
+								82,
+								1836,
+							},
+							category = "Party",
+							partyTargetType = "Ranged Physical DPS",
+							uuid = "6dcc5d44-e96d-0d3e-96e6-04120bf6c6fa",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 281.1,
+				name = "interven D3 (15)",
+				timeRange = true,
+				timelineIndex = 54,
+				timerStartOffset = -3.5,
+				uuid = "b2334fdc-8e5e-874b-8b3f-9ffee369c2ea",
+				version = 2,
+			},
+			inheritedIndex = 7,
 		},
 	},
 	[65] = 
