@@ -5085,8 +5085,8 @@ local tbl =
 				name = "Stance OFF",
 				timeRange = true,
 				timelineIndex = 39,
+				timerEndOffset = 22,
 				timerOffset = -15,
-				timerStartOffset = -10,
 				uuid = "be6f3191-338f-cdd6-8153-a6618493ea45",
 				version = 2,
 			},
@@ -5584,7 +5584,7 @@ local tbl =
 				uuid = "f552cd85-552d-6f8b-bfc0-5d69ba19c013",
 				version = 2,
 			},
-			inheritedIndex = 2,
+			inheritedIndex = 3,
 		},
 		
 		{
@@ -5759,6 +5759,8 @@ local tbl =
 						data = 
 						{
 							buffCheckType = 2,
+							buffID = 743,
+							category = "Self",
 							name = "DRK Buff",
 							uuid = "18f1b609-641e-ed19-9e7e-897be06b8984",
 							version = 2,
@@ -5768,7 +5770,12 @@ local tbl =
 					{
 						data = 
 						{
-							conditionType = 9,
+							category = "Self",
+							conditionType = 13,
+							jobIDList = 
+							{
+								21,
+							},
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
@@ -5781,6 +5788,7 @@ local tbl =
 						{
 							buffCheckType = 2,
 							buffID = 91,
+							category = "Self",
 							name = "WAR Buff",
 							uuid = "bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
 							version = 2,
@@ -5794,9 +5802,11 @@ local tbl =
 				timelineIndex = 42,
 				timerEndOffset = 5,
 				timerOffset = -15,
-				uuid = "66b2d7b5-f761-6076-96b3-06b7427718db",
+				timerStartOffset = 1,
+				uuid = "65d6775a-669f-900f-ab8b-5ae5d1b07ea1",
 				version = 2,
 			},
+			inheritedIndex = 2,
 		},
 		
 		{
@@ -5948,7 +5958,7 @@ local tbl =
 				uuid = "a778ce97-6ff9-451e-94c6-c566ed62284b",
 				version = 2,
 			},
-			inheritedIndex = 3,
+			inheritedIndex = 4,
 		},
 		
 		{
@@ -6253,7 +6263,7 @@ local tbl =
 				uuid = "a11adf04-bee5-d4a4-b4dd-d98288f08da3",
 				version = 2,
 			},
-			inheritedIndex = 5,
+			inheritedIndex = 6,
 		},
 		
 		{
