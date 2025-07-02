@@ -4873,7 +4873,7 @@ local tbl =
 				uuid = "59223b55-1440-f88a-b422-a090eb418c1c",
 				version = 2,
 			},
-			inheritedIndex = 2,
+			inheritedIndex = 3,
 		},
 		
 		{
@@ -4896,11 +4896,6 @@ local tbl =
 								
 								{
 									"46cb0109-6c3a-2f84-a2c4-31984cecfea2",
-									true,
-								},
-								
-								{
-									"73be0ea8-463a-c7f3-bbe6-2e5cdab7ea86",
 									true,
 								},
 							},
@@ -4928,11 +4923,6 @@ local tbl =
 									"c87032d2-c148-cb6a-9a76-9a849a23a2b1",
 									true,
 								},
-								
-								{
-									"73be0ea8-463a-c7f3-bbe6-2e5cdab7ea86",
-									true,
-								},
 							},
 							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
@@ -4955,11 +4945,6 @@ local tbl =
 								
 								{
 									"18f1b609-641e-ed19-9e7e-897be06b8984",
-									true,
-								},
-								
-								{
-									"73be0ea8-463a-c7f3-bbe6-2e5cdab7ea86",
 									true,
 								},
 							},
@@ -4987,18 +4972,12 @@ local tbl =
 									"bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
 									true,
 								},
-								
-								{
-									"73be0ea8-463a-c7f3-bbe6-2e5cdab7ea86",
-									true,
-								},
 							},
 							gVar = "ACR_RikuWAR3_CD",
 							ignoreWeaveRules = true,
 							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
 							version = 2.1,
 						},
-						inheritedIndex = 4,
 					},
 				},
 				conditions = 
@@ -5066,6 +5045,8 @@ local tbl =
 					{
 						data = 
 						{
+							buffID = 743,
+							category = "Self",
 							name = "DRK Buff",
 							uuid = "18f1b609-641e-ed19-9e7e-897be06b8984",
 							version = 2,
@@ -5075,7 +5056,12 @@ local tbl =
 					{
 						data = 
 						{
-							conditionType = 9,
+							category = "Self",
+							conditionType = 13,
+							jobIDList = 
+							{
+								21,
+							},
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
@@ -5087,33 +5073,24 @@ local tbl =
 						data = 
 						{
 							buffID = 91,
+							category = "Self",
 							name = "WAR Buff",
 							uuid = "bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
 							version = 2,
 						},
 						inheritedIndex = 8,
 					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventEntityContentID = 13832,
-							uuid = "73be0ea8-463a-c7f3-bbe6-2e5cdab7ea86",
-							version = 2,
-						},
-					},
 				},
 				mechanicTime = 253.4,
 				name = "Stance OFF",
 				timeRange = true,
 				timelineIndex = 39,
-				timerEndOffset = 22,
 				timerOffset = -15,
-				uuid = "a417536c-9c1d-f481-8421-e5620317306d",
+				timerStartOffset = -10,
+				uuid = "be6f3191-338f-cdd6-8153-a6618493ea45",
 				version = 2,
 			},
+			inheritedIndex = 2,
 		},
 		
 		{
@@ -5261,7 +5238,7 @@ local tbl =
 				uuid = "90680f75-a7a3-0e72-9164-a0eb3e080d7f",
 				version = 2,
 			},
-			inheritedIndex = 3,
+			inheritedIndex = 4,
 		},
 		
 		{
@@ -5410,7 +5387,7 @@ local tbl =
 				uuid = "84012cd6-0b96-601e-bf83-32d8e05f8097",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 5,
 		},
 		
 		{
@@ -5559,7 +5536,7 @@ local tbl =
 				uuid = "c9bc0415-6a25-b301-b5b9-661b25753f38",
 				version = 2,
 			},
-			inheritedIndex = 5,
+			inheritedIndex = 6,
 		},
 	},
 	[42] = 
