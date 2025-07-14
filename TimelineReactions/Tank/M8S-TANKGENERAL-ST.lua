@@ -799,6 +799,94 @@ local tbl =
 			},
 		},
 	},
+	[4] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							conditions = 
+							{
+								
+								{
+									"08eeb4e7-ca46-f8b5-96c0-ac352ebbd072",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							holdActionDuration = 8,
+							holdActionID = 16461,
+							uuid = "0ee10939-5fb7-f7f2-a37c-578b168991d7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							conditions = 
+							{
+								
+								{
+									"893becd1-b804-b72e-8348-2d0d40054d77",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							holdActionDuration = 8,
+							holdActionID = 7386,
+							uuid = "3d6dbfe9-a74d-8ce1-95a3-5eee6f871452",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "08eeb4e7-ca46-f8b5-96c0-ac352ebbd072",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "893becd1-b804-b72e-8348-2d0d40054d77",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 36.3,
+				name = "Hold Jump",
+				timeRange = true,
+				timelineIndex = 4,
+				timerEndOffset = 5,
+				timerStartOffset = -1,
+				uuid = "4ebea3a5-7e3b-97d9-aa33-069d63ac59ef",
+				version = 2,
+			},
+		},
+	},
 	[8] = 
 	{
 		
@@ -936,7 +1024,7 @@ local tbl =
 						data = 
 						{
 							conditionType = 6,
-							inRangeValue = 3,
+							inRangeValue = 1,
 							uuid = "611ca405-b04a-1e86-a1f1-aecb345475d2",
 							version = 2,
 						},
@@ -1451,7 +1539,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 9,
 				timerOffset = -3,
-				timerStartOffset = -14.5,
+				timerStartOffset = -14.800000190735,
 				uuid = "e0f736fa-0b42-fc4e-ab36-5a1730458a1e",
 				version = 2,
 			},
@@ -2779,6 +2867,94 @@ local tbl =
 			inheritedIndex = 9,
 		},
 	},
+	[33] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							conditions = 
+							{
+								
+								{
+									"08eeb4e7-ca46-f8b5-96c0-ac352ebbd072",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							holdActionDuration = 8,
+							holdActionID = 16461,
+							uuid = "0ee10939-5fb7-f7f2-a37c-578b168991d7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							conditions = 
+							{
+								
+								{
+									"893becd1-b804-b72e-8348-2d0d40054d77",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							holdActionDuration = 8,
+							holdActionID = 7386,
+							uuid = "3d6dbfe9-a74d-8ce1-95a3-5eee6f871452",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "08eeb4e7-ca46-f8b5-96c0-ac352ebbd072",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "893becd1-b804-b72e-8348-2d0d40054d77",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 155.4,
+				name = "Hold Jump",
+				timeRange = true,
+				timelineIndex = 33,
+				timerEndOffset = 5,
+				timerStartOffset = -1,
+				uuid = "9266f5f1-dccd-d7c6-b791-03260ddca31e",
+				version = 2,
+			},
+		},
+	},
 	[37] = 
 	{
 		
@@ -2986,7 +3162,7 @@ local tbl =
 						data = 
 						{
 							conditionType = 6,
-							inRangeValue = 3,
+							inRangeValue = 1,
 							uuid = "611ca405-b04a-1e86-a1f1-aecb345475d2",
 							version = 2,
 						},
@@ -3349,7 +3525,7 @@ local tbl =
 						data = 
 						{
 							conditionType = 6,
-							inRangeValue = 3,
+							inRangeValue = 1,
 							uuid = "611ca405-b04a-1e86-a1f1-aecb345475d2",
 							version = 2,
 						},
@@ -5175,6 +5351,94 @@ local tbl =
 			},
 		},
 	},
+	[58] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							conditions = 
+							{
+								
+								{
+									"08eeb4e7-ca46-f8b5-96c0-ac352ebbd072",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							holdActionDuration = 8,
+							holdActionID = 16461,
+							uuid = "0ee10939-5fb7-f7f2-a37c-578b168991d7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							conditions = 
+							{
+								
+								{
+									"893becd1-b804-b72e-8348-2d0d40054d77",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							holdActionDuration = 8,
+							holdActionID = 7386,
+							uuid = "3d6dbfe9-a74d-8ce1-95a3-5eee6f871452",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "08eeb4e7-ca46-f8b5-96c0-ac352ebbd072",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "893becd1-b804-b72e-8348-2d0d40054d77",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 358.9,
+				name = "Hold Jump",
+				timeRange = true,
+				timelineIndex = 58,
+				timerEndOffset = 5,
+				timerStartOffset = -1,
+				uuid = "bb8251cb-e9c4-901c-9072-0f9fb84e84f0",
+				version = 2,
+			},
+		},
+	},
 	[62] = 
 	{
 		
@@ -5753,7 +6017,7 @@ local tbl =
 						data = 
 						{
 							conditionType = 6,
-							inRangeValue = 3,
+							inRangeValue = 1,
 							uuid = "611ca405-b04a-1e86-a1f1-aecb345475d2",
 							version = 2,
 						},
