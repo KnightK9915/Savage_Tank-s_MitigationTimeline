@@ -876,6 +876,7 @@ local tbl =
 				conditions = 
 				{
 				},
+				enabled = false,
 				eventType = 12,
 				loop = true,
 				mechanicTime = 56,
@@ -2886,13 +2887,14 @@ local tbl =
 						inheritedIndex = 2,
 					},
 				},
+				enabled = false,
 				mechanicTime = 148,
 				name = "Reprisal",
 				randomOffset = -2,
 				timeRange = true,
 				timelineIndex = 33,
 				timerOffset = -3,
-				timerStartOffset = -4,
+				timerStartOffset = -10,
 				uuid = "16719e99-5e2d-3e76-86ac-5a1c66ea0bfa",
 				version = 2,
 			},
