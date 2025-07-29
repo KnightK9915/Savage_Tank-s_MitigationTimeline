@@ -335,6 +335,11 @@ local tbl =
 									"44253413-0a5b-6a78-b366-46b753a2f445",
 									true,
 								},
+								
+								{
+									"0135beaf-9730-1981-b4c1-1a49aaa81ff7",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -355,6 +360,20 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2682,
+							},
+							category = "Self",
+							uuid = "0135beaf-9730-1981-b4c1-1a49aaa81ff7",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 32,
 				name = "Oblation (10)",
@@ -362,7 +381,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 3,
 				timerOffset = -3,
-				timerStartOffset = -8,
+				timerStartOffset = -5,
 				uuid = "bb937125-ce7a-1bb2-9b98-91e60af1f20c",
 				version = 2,
 			},
@@ -557,6 +576,11 @@ local tbl =
 									"afa33b33-df15-2fd4-a696-6e828c7aceaa",
 									true,
 								},
+								
+								{
+									"ee5b6611-a250-f8ee-82c0-cc0e6c40631f",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -579,13 +603,28 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2682,
+							},
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "ee5b6611-a250-f8ee-82c0-cc0e6c40631f",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 32,
 				name = "Oblation ST (10)",
 				randomOffset = 2,
 				timeRange = true,
 				timelineIndex = 3,
-				timerStartOffset = -8,
+				timerStartOffset = -5,
 				uuid = "a8b947bc-ee4f-c400-a743-b3febc367847",
 				version = 2,
 			},
@@ -1338,6 +1377,11 @@ local tbl =
 									"3746d62a-2741-fbc8-ac1f-123680dde965",
 									true,
 								},
+								
+								{
+									"72ef10a3-453c-e3ba-ba38-dce076436d88",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -1358,6 +1402,20 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2682,
+							},
+							category = "Self",
+							uuid = "72ef10a3-453c-e3ba-ba38-dce076436d88",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 117.5,
 				name = "Oblation (10)",
@@ -1365,7 +1423,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 27,
 				timerOffset = -3,
-				timerStartOffset = -8,
+				timerStartOffset = -5,
 				uuid = "c00770fb-8120-cf4a-8aed-09b22b6c77db",
 				version = 2,
 			},
@@ -1561,6 +1619,11 @@ local tbl =
 									"1f9cc15c-02a5-2ed3-aea6-244a207d147a",
 									true,
 								},
+								
+								{
+									"06d8b075-5970-f995-9d7f-9ae0b7ff90b2",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -1583,13 +1646,28 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2682,
+							},
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "06d8b075-5970-f995-9d7f-9ae0b7ff90b2",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 117.5,
 				name = "Oblation ST (10)",
 				randomOffset = 2,
 				timeRange = true,
 				timelineIndex = 27,
-				timerStartOffset = -8,
+				timerStartOffset = -5,
 				uuid = "6b746d2f-26cb-ebf2-bb0e-8376ec9448df",
 				version = 2,
 			},
@@ -2033,82 +2111,6 @@ local tbl =
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
-							targetType = "Off Tank",
-							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 3,
-							mpType = 2,
-							mpValue = 3000,
-							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffID = 1178,
-							buffIDList = 
-							{
-								1178,
-							},
-							category = "Party",
-							partyTargetType = "Off Tank",
-							uuid = "b1eaa207-d018-5733-8e86-0dab32e19c28",
-							version = 2,
-						},
-					},
-				},
-				loop = true,
-				mechanicTime = 222.5,
-				name = "TBN (25)",
-				timeRange = true,
-				timelineIndex = 44,
-				timerOffset = -4,
-				timerStartOffset = -2,
-				uuid = "5880277f-f4b3-43f7-89c7-1b61aab51a93",
-				version = 2,
-			},
-			inheritedIndex = 9,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7393,
-							atomicPriority = true,
-							conditions = 
-							{
-								
-								{
-									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
-									true,
-								},
-								
-								{
-									"b1eaa207-d018-5733-8e86-0dab32e19c28",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
 							targetType = "Ranged Physical DPS",
 							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
 							version = 2.1,
@@ -2158,6 +2160,82 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 10,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"b1eaa207-d018-5733-8e86-0dab32e19c28",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Off Tank",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1178,
+							buffIDList = 
+							{
+								1178,
+							},
+							category = "Party",
+							partyTargetType = "Off Tank",
+							uuid = "b1eaa207-d018-5733-8e86-0dab32e19c28",
+							version = 2,
+						},
+					},
+				},
+				loop = true,
+				mechanicTime = 222.5,
+				name = "TBN (25)",
+				timeRange = true,
+				timelineIndex = 44,
+				timerOffset = -4,
+				timerStartOffset = -2,
+				uuid = "5880277f-f4b3-43f7-89c7-1b61aab51a93",
+				version = 2,
+			},
+			inheritedIndex = 9,
 		},
 	},
 	[52] = 
@@ -2444,7 +2522,7 @@ local tbl =
 				uuid = "b39768aa-bffd-887a-af35-e35e5afd4b92",
 				version = 2,
 			},
-			inheritedIndex = 9,
+			inheritedIndex = 10,
 		},
 	},
 	[65] = 
@@ -3016,6 +3094,11 @@ local tbl =
 									"44253413-0a5b-6a78-b366-46b753a2f445",
 									true,
 								},
+								
+								{
+									"c2802c3b-960b-d12b-9384-fe31c37122a3",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -3036,6 +3119,20 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2682,
+							},
+							category = "Self",
+							uuid = "c2802c3b-960b-d12b-9384-fe31c37122a3",
+							version = 2,
+						},
+					},
 				},
 				enabled = false,
 				mechanicTime = 432.3,
@@ -3044,7 +3141,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 83,
 				timerOffset = -3,
-				timerStartOffset = -8,
+				timerStartOffset = -5,
 				uuid = "5adb9178-6341-a760-b6ab-aa228df46819",
 				version = 2,
 			},
@@ -3238,6 +3335,11 @@ local tbl =
 									"afa33b33-df15-2fd4-a696-6e828c7aceaa",
 									true,
 								},
+								
+								{
+									"43151f0d-1e40-d4bf-b4ca-7390f8033c8d",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -3260,13 +3362,28 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2682,
+							},
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "43151f0d-1e40-d4bf-b4ca-7390f8033c8d",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 432.3,
 				name = "Oblation ST (10)",
 				randomOffset = 2,
 				timeRange = true,
 				timelineIndex = 83,
-				timerStartOffset = -8,
+				timerStartOffset = -5,
 				uuid = "04b0a04d-9420-a3d5-9460-ef4bfb5d1678",
 				version = 2,
 			},
@@ -3612,6 +3729,14 @@ local tbl =
 						data = 
 						{
 							actionID = 25754,
+							conditions = 
+							{
+								
+								{
+									"e86d5564-4eb9-19e9-8663-f9ae98925f4e",
+									true,
+								},
+							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
 							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
@@ -3621,6 +3746,20 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2682,
+							},
+							category = "Self",
+							uuid = "e86d5564-4eb9-19e9-8663-f9ae98925f4e",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 463.2,
 				name = "Oblation (10)",
@@ -3628,7 +3767,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 86,
 				timerOffset = -3,
-				timerStartOffset = -8,
+				timerStartOffset = -5,
 				uuid = "4c00a114-6bc5-538c-956a-40e09b710754",
 				version = 2,
 			},
@@ -3787,6 +3926,14 @@ local tbl =
 						data = 
 						{
 							actionID = 25754,
+							conditions = 
+							{
+								
+								{
+									"72de2eec-13ac-e6b0-8e8c-7d5e41aa7083",
+									true,
+								},
+							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
 							targetType = "Other Tank",
@@ -3798,13 +3945,28 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2682,
+							},
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "72de2eec-13ac-e6b0-8e8c-7d5e41aa7083",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 463.2,
 				name = "Oblation ST (10)",
 				randomOffset = 2,
 				timeRange = true,
 				timelineIndex = 86,
-				timerStartOffset = -8,
+				timerStartOffset = -5,
 				uuid = "ba6e2c25-01f3-cf80-b82c-2345c536fe9a",
 				version = 2,
 			},
@@ -4546,6 +4708,11 @@ local tbl =
 									"3746d62a-2741-fbc8-ac1f-123680dde965",
 									true,
 								},
+								
+								{
+									"0c009802-ff22-c146-9430-bb5862c1bc18",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -4566,6 +4733,20 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2682,
+							},
+							category = "Self",
+							uuid = "0c009802-ff22-c146-9430-bb5862c1bc18",
+							version = 2,
+						},
+					},
 				},
 				enabled = false,
 				mechanicTime = 611.2,
@@ -4574,7 +4755,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 119,
 				timerOffset = -3,
-				timerStartOffset = -8,
+				timerStartOffset = -5,
 				uuid = "0257a2e3-1150-adfd-b531-089a0b8ed5af",
 				version = 2,
 			},
@@ -4769,6 +4950,11 @@ local tbl =
 									"1f9cc15c-02a5-2ed3-aea6-244a207d147a",
 									true,
 								},
+								
+								{
+									"c63f0f16-03bf-bd88-b043-0acd6cdc8b34",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -4791,13 +4977,28 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2682,
+							},
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "c63f0f16-03bf-bd88-b043-0acd6cdc8b34",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 611.2,
 				name = "Oblation ST (10)",
 				randomOffset = 2,
 				timeRange = true,
 				timelineIndex = 119,
-				timerStartOffset = -8,
+				timerStartOffset = -5,
 				uuid = "dd5c7a82-2bef-2fd0-9a0d-07b1d5bdb307",
 				version = 2,
 			},
@@ -5065,6 +5266,14 @@ local tbl =
 						data = 
 						{
 							actionID = 25754,
+							conditions = 
+							{
+								
+								{
+									"2cad86fd-9072-abf3-9c2c-bb5408068c12",
+									true,
+								},
+							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
 							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
@@ -5074,6 +5283,20 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2682,
+							},
+							category = "Self",
+							uuid = "2cad86fd-9072-abf3-9c2c-bb5408068c12",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 626.3,
 				name = "Oblation (10)",
@@ -5081,7 +5304,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 121,
 				timerOffset = -3,
-				timerStartOffset = -8,
+				timerStartOffset = -5,
 				uuid = "ff2e8264-07a4-4cf8-9125-deaaf396c9c2",
 				version = 2,
 			},
@@ -5240,6 +5463,14 @@ local tbl =
 						data = 
 						{
 							actionID = 25754,
+							conditions = 
+							{
+								
+								{
+									"7d31eb1c-1fd0-955b-b68a-e3332c2fe176",
+									true,
+								},
+							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
 							targetType = "Other Tank",
@@ -5251,13 +5482,28 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2682,
+							},
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "7d31eb1c-1fd0-955b-b68a-e3332c2fe176",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 626.3,
 				name = "Oblation ST (10)",
 				randomOffset = 2,
 				timeRange = true,
 				timelineIndex = 121,
-				timerStartOffset = -8,
+				timerStartOffset = -5,
 				uuid = "5cb19a53-0a4f-beec-802b-f6a3fa92ba77",
 				version = 2,
 			},
