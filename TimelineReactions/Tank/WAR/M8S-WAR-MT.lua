@@ -899,7 +899,7 @@ local tbl =
 								},
 								
 								{
-									"96045346-329e-be24-b03d-be8b974ced4e",
+									"c39c44d6-ac26-d085-a18e-9a3cb168ffe5",
 									true,
 								},
 							},
@@ -930,7 +930,7 @@ local tbl =
 								},
 								
 								{
-									"96045346-329e-be24-b03d-be8b974ced4e",
+									"c39c44d6-ac26-d085-a18e-9a3cb168ffe5",
 									true,
 								},
 							},
@@ -1000,10 +1000,12 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"正攻法\"].bool\n",
-							uuid = "96045346-329e-be24-b03d-be8b974ced4e",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"Manual\")) or false\n",
+							name = "RoleMit Manual",
+							uuid = "c39c44d6-ac26-d085-a18e-9a3cb168ffe5",
 							version = 2,
 						},
+						inheritedIndex = 5,
 					},
 				},
 				mechanicTime = 119.9,
@@ -1036,7 +1038,7 @@ local tbl =
 								},
 								
 								{
-									"488e1bb6-627b-d1e6-91b7-1b3c9137d26a",
+									"d6d27272-3ee5-fef1-a73f-890bb2f39935",
 									true,
 								},
 							},
@@ -1067,10 +1069,12 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"正攻法\"].bool\n",
-							uuid = "488e1bb6-627b-d1e6-91b7-1b3c9137d26a",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"Manual\")) or false\n",
+							name = "RoleMit Manual",
+							uuid = "d6d27272-3ee5-fef1-a73f-890bb2f39935",
 							version = 2,
 						},
+						inheritedIndex = 5,
 					},
 				},
 				enabled = false,
@@ -1105,7 +1109,7 @@ local tbl =
 								},
 								
 								{
-									"b8f7d758-cb72-7955-afd4-12b4c4c29592",
+									"ff1f0a5c-195c-7c2d-8552-7fddcf634652",
 									true,
 								},
 							},
@@ -1136,10 +1140,12 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"正攻法\"].bool\n",
-							uuid = "b8f7d758-cb72-7955-afd4-12b4c4c29592",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"Manual\")) or false\n",
+							name = "RoleMit Manual",
+							uuid = "ff1f0a5c-195c-7c2d-8552-7fddcf634652",
 							version = 2,
 						},
+						inheritedIndex = 5,
 					},
 				},
 				mechanicTime = 119.9,
@@ -1173,7 +1179,7 @@ local tbl =
 								},
 								
 								{
-									"97584cbc-7fae-2bed-ba3e-ff5fa7144b99",
+									"00b76304-90e2-ba46-b2d4-c28a27005629",
 									true,
 								},
 							},
@@ -1204,10 +1210,12 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"正攻法\"].bool\n",
-							uuid = "97584cbc-7fae-2bed-ba3e-ff5fa7144b99",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"Manual\")) or false\n",
+							name = "RoleMit Manual",
+							uuid = "00b76304-90e2-ba46-b2d4-c28a27005629",
 							version = 2,
 						},
+						inheritedIndex = 5,
 					},
 				},
 				enabled = false,
@@ -1260,7 +1268,7 @@ local tbl =
 								},
 								
 								{
-									"ce03c986-88f4-9862-8322-921a13375367",
+									"e1b4dcbf-5567-2cf1-a785-7f70ef2e2dec",
 									true,
 								},
 							},
@@ -1291,8 +1299,9 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
-							uuid = "ce03c986-88f4-9862-8322-921a13375367",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "e1b4dcbf-5567-2cf1-a785-7f70ef2e2dec",
 							version = 2,
 						},
 					},
@@ -1332,7 +1341,7 @@ local tbl =
 								},
 								
 								{
-									"4c5c107d-4818-e1a6-8104-037478ecbc05",
+									"4e12bfe5-7c18-cbf1-974b-8b1835922283",
 									true,
 								},
 							},
@@ -1363,7 +1372,7 @@ local tbl =
 								},
 								
 								{
-									"b2724a7f-85d0-8270-897b-4f0f1da3ee39",
+									"4042cb30-7bb1-1554-b48b-6ff455ed4be2",
 									true,
 								},
 								
@@ -1438,18 +1447,21 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
-							uuid = "4c5c107d-4818-e1a6-8104-037478ecbc05",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "4e12bfe5-7c18-cbf1-974b-8b1835922283",
 							version = 2,
 						},
+						inheritedIndex = 5,
 					},
 					
 					{
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
-							uuid = "b2724a7f-85d0-8270-897b-4f0f1da3ee39",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "4042cb30-7bb1-1554-b48b-6ff455ed4be2",
 							version = 2,
 						},
 						inheritedIndex = 6,
@@ -2864,7 +2876,7 @@ local tbl =
 								},
 								
 								{
-									"96045346-329e-be24-b03d-be8b974ced4e",
+									"dbc8045d-4326-1e43-b535-438eb2609aab",
 									true,
 								},
 							},
@@ -2895,7 +2907,7 @@ local tbl =
 								},
 								
 								{
-									"96045346-329e-be24-b03d-be8b974ced4e",
+									"dbc8045d-4326-1e43-b535-438eb2609aab",
 									true,
 								},
 							},
@@ -2965,10 +2977,12 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"正攻法\"].bool\n",
-							uuid = "96045346-329e-be24-b03d-be8b974ced4e",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"Manual\")) or false\n",
+							name = "RoleMit Manual",
+							uuid = "dbc8045d-4326-1e43-b535-438eb2609aab",
 							version = 2,
 						},
+						inheritedIndex = 5,
 					},
 				},
 				mechanicTime = 379.4,
@@ -3001,7 +3015,7 @@ local tbl =
 								},
 								
 								{
-									"488e1bb6-627b-d1e6-91b7-1b3c9137d26a",
+									"8bf4b055-2402-6d35-9e1a-c5ce893ab4cb",
 									true,
 								},
 							},
@@ -3032,10 +3046,12 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"正攻法\"].bool\n",
-							uuid = "488e1bb6-627b-d1e6-91b7-1b3c9137d26a",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"Manual\")) or false\n",
+							name = "RoleMit Manual",
+							uuid = "8bf4b055-2402-6d35-9e1a-c5ce893ab4cb",
 							version = 2,
 						},
+						inheritedIndex = 5,
 					},
 				},
 				enabled = false,
@@ -3070,7 +3086,7 @@ local tbl =
 								},
 								
 								{
-									"b8f7d758-cb72-7955-afd4-12b4c4c29592",
+									"98dbc95f-a9b7-beea-8371-f15c0cab4435",
 									true,
 								},
 							},
@@ -3101,10 +3117,12 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"正攻法\"].bool\n",
-							uuid = "b8f7d758-cb72-7955-afd4-12b4c4c29592",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"Manual\")) or false\n",
+							name = "RoleMit Manual",
+							uuid = "98dbc95f-a9b7-beea-8371-f15c0cab4435",
 							version = 2,
 						},
+						inheritedIndex = 5,
 					},
 				},
 				mechanicTime = 379.4,
@@ -3138,7 +3156,7 @@ local tbl =
 								},
 								
 								{
-									"97584cbc-7fae-2bed-ba3e-ff5fa7144b99",
+									"fd00f0cb-b1a2-2035-a004-68d485eece88",
 									true,
 								},
 							},
@@ -3169,10 +3187,12 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"正攻法\"].bool\n",
-							uuid = "97584cbc-7fae-2bed-ba3e-ff5fa7144b99",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"Manual\")) or false\n",
+							name = "RoleMit Manual",
+							uuid = "fd00f0cb-b1a2-2035-a004-68d485eece88",
 							version = 2,
 						},
+						inheritedIndex = 5,
 					},
 				},
 				enabled = false,
@@ -3225,7 +3245,7 @@ local tbl =
 								},
 								
 								{
-									"7eb72010-0905-a668-be0d-940e400a200d",
+									"c0009a66-c61f-655d-8061-00eff3af28ca",
 									true,
 								},
 							},
@@ -3256,10 +3276,12 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
-							uuid = "7eb72010-0905-a668-be0d-940e400a200d",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "c0009a66-c61f-655d-8061-00eff3af28ca",
 							version = 2,
 						},
+						inheritedIndex = 6,
 					},
 				},
 				mechanicTime = 379.4,
@@ -3292,12 +3314,12 @@ local tbl =
 								},
 								
 								{
-									"0f8628f3-99de-2bb0-b1ff-1df3c94b2276",
+									"f01b349b-986a-9e84-b086-b6a02d3f7885",
 									true,
 								},
 								
 								{
-									"b220c1ca-a6ab-9e05-b37b-b46909668ad1",
+									"0f8628f3-99de-2bb0-b1ff-1df3c94b2276",
 									true,
 								},
 							},
@@ -3328,7 +3350,7 @@ local tbl =
 								},
 								
 								{
-									"637bc307-1ea9-6ff6-859a-983fa23327cd",
+									"8381ed65-74b1-f1d5-98fa-e604852aac3e",
 									true,
 								},
 								
@@ -3403,18 +3425,21 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
-							uuid = "b220c1ca-a6ab-9e05-b37b-b46909668ad1",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "f01b349b-986a-9e84-b086-b6a02d3f7885",
 							version = 2,
 						},
+						inheritedIndex = 5,
 					},
 					
 					{
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
-							uuid = "637bc307-1ea9-6ff6-859a-983fa23327cd",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "8381ed65-74b1-f1d5-98fa-e604852aac3e",
 							version = 2,
 						},
 						inheritedIndex = 6,
@@ -5075,7 +5100,7 @@ local tbl =
 								},
 								
 								{
-									"ce03c986-88f4-9862-8322-921a13375367",
+									"e56d9c83-184b-649c-bf14-38f49aaaa0b3",
 									true,
 								},
 							},
@@ -5106,10 +5131,12 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
-							uuid = "ce03c986-88f4-9862-8322-921a13375367",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "e56d9c83-184b-649c-bf14-38f49aaaa0b3",
 							version = 2,
 						},
+						inheritedIndex = 5,
 					},
 				},
 				mechanicTime = 829.2,
@@ -5147,7 +5174,7 @@ local tbl =
 								},
 								
 								{
-									"2e2c710c-1bf1-bc81-ba4e-71c0cd004031",
+									"5f0193a5-c8a3-e62e-936b-3d72ed9a0f2b",
 									true,
 								},
 							},
@@ -5190,11 +5217,12 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
-							uuid = "2e2c710c-1bf1-bc81-ba4e-71c0cd004031",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "5f0193a5-c8a3-e62e-936b-3d72ed9a0f2b",
 							version = 2,
 						},
-						inheritedIndex = 3,
+						inheritedIndex = 5,
 					},
 				},
 				mechanicTime = 829.2,
@@ -5233,7 +5261,7 @@ local tbl =
 								},
 								
 								{
-									"4c5c107d-4818-e1a6-8104-037478ecbc05",
+									"2a7217b1-cb81-21fe-a21a-68a72df5e7a4",
 									true,
 								},
 							},
@@ -5264,7 +5292,7 @@ local tbl =
 								},
 								
 								{
-									"4c5c107d-4818-e1a6-8104-037478ecbc05",
+									"2a7217b1-cb81-21fe-a21a-68a72df5e7a4",
 									true,
 								},
 							},
@@ -5334,10 +5362,12 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
-							uuid = "4c5c107d-4818-e1a6-8104-037478ecbc05",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "2a7217b1-cb81-21fe-a21a-68a72df5e7a4",
 							version = 2,
 						},
+						inheritedIndex = 5,
 					},
 				},
 				mechanicTime = 829.2,
@@ -5374,7 +5404,7 @@ local tbl =
 								},
 								
 								{
-									"7eb72010-0905-a668-be0d-940e400a200d",
+									"3e3cebfc-8879-e0c6-b547-6de63c2abae8",
 									true,
 								},
 							},
@@ -5405,10 +5435,12 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
-							uuid = "7eb72010-0905-a668-be0d-940e400a200d",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "3e3cebfc-8879-e0c6-b547-6de63c2abae8",
 							version = 2,
 						},
+						inheritedIndex = 6,
 					},
 				},
 				mechanicTime = 848.7,
@@ -5446,7 +5478,7 @@ local tbl =
 								},
 								
 								{
-									"91a2ca70-0ec5-9f06-857c-b37b5b6ec53a",
+									"d3add08d-9138-1a2f-8313-311b911715c8",
 									true,
 								},
 							},
@@ -5489,11 +5521,12 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
-							uuid = "91a2ca70-0ec5-9f06-857c-b37b5b6ec53a",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "d3add08d-9138-1a2f-8313-311b911715c8",
 							version = 2,
 						},
-						inheritedIndex = 3,
+						inheritedIndex = 6,
 					},
 				},
 				mechanicTime = 848.7,
@@ -5532,7 +5565,7 @@ local tbl =
 								},
 								
 								{
-									"b220c1ca-a6ab-9e05-b37b-b46909668ad1",
+									"b1b6bbb4-d65b-d48d-90f9-986e1ece9902",
 									true,
 								},
 							},
@@ -5563,7 +5596,7 @@ local tbl =
 								},
 								
 								{
-									"b220c1ca-a6ab-9e05-b37b-b46909668ad1",
+									"b1b6bbb4-d65b-d48d-90f9-986e1ece9902",
 									true,
 								},
 							},
@@ -5633,10 +5666,12 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
-							uuid = "b220c1ca-a6ab-9e05-b37b-b46909668ad1",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "b1b6bbb4-d65b-d48d-90f9-986e1ece9902",
 							version = 2,
 						},
+						inheritedIndex = 6,
 					},
 				},
 				mechanicTime = 848.7,
