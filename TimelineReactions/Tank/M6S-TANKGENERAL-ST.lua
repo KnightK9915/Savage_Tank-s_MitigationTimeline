@@ -3908,6 +3908,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				eventType = 12,
 				loop = true,
 				mechanicTime = 217.2,
@@ -3960,6 +3961,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				eventType = 13,
 				mechanicTime = 217.2,
 				name = "Autotarget Control",
@@ -3970,6 +3972,70 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "-- M6S Auto Selector - UI OnDraw (fixed)\n\nlocal SAVE_REL = [[TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\M6SAutoSelector.lua]]\n\nlocal function _save(tbl)\n  local base = GetLuaModsPath()\n  local dir  = base .. [[TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\]]\n  if not FolderExists(dir) then FolderCreate(dir) end\n  FileSave(base .. SAVE_REL, tbl)\nend\n\nlocal function _load()\n  local path = GetLuaModsPath() .. SAVE_REL\n  if FileExists(path) then\n    local t = FileLoad(path)\n    if type(t)==\"table\" then return t end\n  end\n  return nil\nend\n\ndata._m6s = data._m6s or _load() or { enabled=true, role=\"MT\", range=6.0, win={x=200,y=300} }\nlocal cfg = data._m6s\n\ndata._m6s_ui = data._m6s_ui or { menu=false, dragging=false, drag_dx=0, drag_dy=0 }\nlocal ui = data._m6s_ui\n\n-- 预设位置（每帧生效：允许外部修改也能收敛）\nGUI:SetNextWindowPos(cfg.win.x or 200, cfg.win.y or 300, GUI.SetCond_Always)\nlocal flags = GUI.WindowFlags_NoTitleBar | GUI.WindowFlags_AlwaysAutoResize | GUI.WindowFlags_NoScrollbar\nlocal visible, open = GUI:Begin(\"M6S AutoSelector##m6s_ui\", true, flags)\nif visible then\n  -- ON/OFF 着色（三态：常态/悬停/按下）\n  local on = cfg.enabled\n  if on then\n    GUI:PushStyleColor(GUI.Col_Button,        0.20, 0.70, 0.20, 1.00)\n    GUI:PushStyleColor(GUI.Col_ButtonHovered, 0.25, 0.85, 0.25, 1.00)\n    GUI:PushStyleColor(GUI.Col_ButtonActive,  0.15, 0.60, 0.15, 1.00)\n  else\n    GUI:PushStyleColor(GUI.Col_Button,        0.70, 0.20, 0.20, 1.00)\n    GUI:PushStyleColor(GUI.Col_ButtonHovered, 0.85, 0.25, 0.25, 1.00)\n    GUI:PushStyleColor(GUI.Col_ButtonActive,  0.60, 0.15, 0.15, 1.00)\n  end\n  if GUI:Button(on and \"ON##m6s\" or \"OFF##m6s\", 56, 24) then\n    cfg.enabled = not cfg.enabled\n    _save(cfg)\n  end\n  GUI:PopStyleColor(3)\n\n  GUI:SameLine(0,8)\n  if GUI:Button(\"+##m6s_menu\", 24, 24) then\n    ui.menu = not ui.menu\n  end\n\n  if ui.menu then\n    GUI:Separator()\n    -- 角色配置：MT / ST\n    GUI:Text(\"Role:\")\n    GUI:SameLine(0,8)\n    local items = {\"MT\",\"ST\"}\n    local curIdx = (cfg.role == \"ST\") and 2 or 1\n    local newIdx, changed = GUI:Combo(\"##m6s_role\", curIdx, items, #items)\n    if changed then\n      local newRole = (newIdx == 2) and \"ST\" or \"MT\"\n      if newRole ~= cfg.role then\n        cfg.role = newRole\n        _save(cfg)\n      end\n    end\n\n    -- 范围滑条\n    GUI:Text(\"Range (m):\")\n    GUI:SameLine(0,8)\n    local newR, rChanged = GUI:SliderFloat(\"##m6s_range\", cfg.range or 6.0, 1.0, 15.0)\n    if rChanged then\n      cfg.range = newR\n      _save(cfg)\n    end\n\n    -- 重置为默认（不改 enabled）\n    if GUI:Button(\"Reset Defaults##m6s\", 160, 22) then\n      cfg.role  = \"MT\"\n      cfg.range = 6.0\n      -- cfg.enabled 保持原样\n      _save(cfg)\n    end\n  end\n\n  -- 右键拖动：按下记录偏移，按住移动，松开停止\n  local wx, wy = GUI:GetWindowPos()\n  if GUI:IsWindowHovered() then\n    if GUI:IsMouseClicked(1) then\n      local mx, my = GUI:GetMousePos()\n      ui.dragging = true\n      ui.drag_dx = mx - wx\n      ui.drag_dy = my - wy\n    end\n  end\n  if ui.dragging then\n    if GUI:IsMouseDown(1) then\n      local mx, my = GUI:GetMousePos()\n      local nx, ny = mx - ui.drag_dx, my - ui.drag_dy\n      GUI:SetWindowPos(nx, ny, GUI.SetCond_Always)\n      if nx ~= cfg.win.x or ny ~= cfg.win.y then\n        cfg.win.x, cfg.win.y = nx, ny\n        _save(cfg)\n      end\n    else\n      ui.dragging = false\n    end\n  else\n    -- 非拖拽时同步一次位置（防止抖动）\n    if wx ~= cfg.win.x or wy ~= cfg.win.y then\n      cfg.win.x, cfg.win.y = wx, wy\n      _save(cfg)\n    end\n  end\nend\nGUI:End()\n\nreturn false\n",
+							gVar = "ACR_RikuPLD3_CD",
+							uuid = "a8081848-685a-c1a8-8236-b6fe6aec9778",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				eventType = 13,
+				mechanicTime = 217.2,
+				name = "Rikuduo's_Auto_Selector UI",
+				timeRange = true,
+				timelineIndex = 34,
+				timerEndOffset = 999,
+				timerStartOffset = -218,
+				uuid = "4539eda2-bcef-ee86-8a96-f841646aa8ea",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "-- M6S Auto Selector - Core (aggressive & snappy)\n-- 变化点：\n-- 1) 去掉“当前目标还在范围内就不切”的黏滞逻辑 -> 始终选当下最优。\n-- 2) 排序：优先级(小->大) -> HP% (小->大) -> 距离(近->远)；并列更稳定。\n-- 3) 仍遵循：若仇恨列表里没有优先清单(或都死) -> 选 13822（不限距离，取HP%最低）。\n\nlocal SAVE_REL = [[TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\M6SAutoSelector.lua]]\nlocal function _save(tbl)\n  local base = GetLuaModsPath()\n  if not FolderExists(base .. [[TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\]]) then\n    FolderCreate(base .. [[TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\]])\n  end\n  FileSave(base .. SAVE_REL, tbl)\nend\n\nlocal function _load()\n  local path = GetLuaModsPath() .. SAVE_REL\n  if FileExists(path) then\n    local t = FileLoad(path)\n    if type(t) == \"table\" then return t end\n  end\n  return nil\nend\n\n-- 读档/初始化（与UI共享）\ndata._m6s = data._m6s or _load() or {\n  enabled = true,\n  role = \"MT\",\n  range = 6.0,\n  win = { x = 200, y = 300 }\n}\nlocal cfg = data._m6s\n\nif not cfg.enabled then return false end\n\n-- 优先级表\nlocal PRIORITY = {\n  MT = {13833,13834,13835,13831,13832},\n  ST = {13833,13835,13834,13832,13831},\n}\nlocal prio_list = PRIORITY[cfg.role] or PRIORITY.MT\nlocal prio_rank = {}\nfor i,cid in ipairs(prio_list) do prio_rank[cid] = i end\n\n-- 收集范围内候选\nlocal filter = (\"alive,attackable,maxdistance=%g,contentid=%s\"):format(\n  cfg.range, table.concat(prio_list, \";\")\n)\nlocal elist = EntityList(filter)\n\n-- 直接选“当前帧最优”：优先级 -> HP% -> 距离\nlocal best, bestRank, bestHP, bestDist = nil, 999, 101, 9999\nif elist then\n  for _,e in pairs(elist) do\n    local r = prio_rank[e.contentid]\n    if r and e.hp and e.hp.percent and e.distance2d then\n      if (r < bestRank)\n      or (r == bestRank and e.hp.percent < bestHP)\n      or (r == bestRank and e.hp.percent == bestHP and e.distance2d < bestDist) then\n        best, bestRank, bestHP, bestDist = e, r, e.hp.percent, e.distance2d\n      end\n    end\n  end\nend\n\n-- 若找到范围内最优目标，则无条件切过去（提高“灵敏度/抢占性”）\nif best and best.id then\n  local cur = Player:GetTarget()\n  if not cur or cur.id ~= best.id then\n    Player:SetTarget(best.id)\n  end\n  return false\nend\n\n-- 若范围内无优先清单：检查仇恨表里是否还有这些CID存活\nlocal wantAggro = EntityList(\"aggro,alive,attackable,contentid=\" .. table.concat(prio_list,\";\"))\nlocal hasAggroTargets = (wantAggro and next(wantAggro) ~= nil)\n\n-- 仇恨表里没它们(或都死) -> 选 13822（不限距离，HP%最低）\nif not hasAggroTargets then\n  local adds = EntityList(\"alive,attackable,contentid=13822\")\n  local pick, php = nil, 101\n  if adds then\n    for _,e in pairs(adds) do\n      if e.hp and e.hp.percent and e.hp.percent < php then\n        pick, php = e, e.hp.percent\n      end\n    end\n  end\n  if pick and pick.id then\n    local cur = Player:GetTarget()\n    if not cur or cur.id ~= pick.id then\n      Player:SetTarget(pick.id)\n    end\n  end\nend\n\nreturn false\n",
+							gVar = "ACR_RikuPLD3_CD",
+							uuid = "d0e983b3-74b5-b936-9264-64580d8a002f",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				eventType = 12,
+				mechanicTime = 217.2,
+				name = "Rikuduo's_Auto_Selector Logic",
+				timeRange = true,
+				timelineIndex = 34,
+				timerEndOffset = 200,
+				timerStartOffset = -10,
+				uuid = "5b2f097c-c3a7-7dea-8dcb-1d270f063a47",
+				version = 2,
+			},
 		},
 	},
 	[35] = 
@@ -4547,6 +4613,7 @@ local tbl =
 						inheritedIndex = 2,
 					},
 				},
+				enabled = false,
 				eventType = 12,
 				mechanicTime = 224.3,
 				name = "AutoTarget:Cat",
@@ -7367,7 +7434,7 @@ local tbl =
 					{
 						data = 
 						{
-							actionCDValue = 1,
+							actionCDValue = 2,
 							actionID = 7540,
 							category = "Self",
 							conditionType = 4,
