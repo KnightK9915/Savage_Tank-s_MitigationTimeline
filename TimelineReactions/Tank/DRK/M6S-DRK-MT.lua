@@ -937,7 +937,7 @@ local tbl =
 				timerEndOffset = 34,
 				timerOffset = -4,
 				timerStartOffset = 1,
-				uuid = "4d9c153d-996f-10f9-a988-fee34d06536e",
+				uuid = "25412f99-6b30-09db-87f9-00d10c69f301",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -1012,7 +1012,7 @@ local tbl =
 				timerEndOffset = 25,
 				timerOffset = -4,
 				timerStartOffset = 1,
-				uuid = "479767bc-aee8-0631-b1ac-242f4f23939d",
+				uuid = "bf269702-95e5-ee94-a52f-91eaeac6b42d",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -1445,7 +1445,7 @@ local tbl =
 			inheritedIndex = 9,
 		},
 	},
-	[37] = 
+	[36] = 
 	{
 		
 		{
@@ -1457,23 +1457,24 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 3634,
+							actionID = 7531,
 							conditions = 
 							{
 								
 								{
-									"85632b1d-acad-d58b-b26f-ede352e4c489",
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
 									true,
 								},
 								
 								{
-									"332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
+									"a9e847de-9035-bb54-846f-a93a173a05e3",
 									true,
 								},
 							},
-							gVar = "ACR_RikuDRK3_CD",
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
-							uuid = "85c81a2a-1fc1-bba8-a315-e5438e54b390",
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
 							version = 2.1,
 						},
 					},
@@ -1484,39 +1485,38 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Event",
-							eventArgOptionType = 2,
-							eventArgType = 2,
-							eventSpellName = "ディープカット",
-							uuid = "85632b1d-acad-d58b-b26f-ede352e4c489",
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
 							version = 2,
 						},
-						inheritedIndex = 1,
 					},
 					
 					{
 						data = 
 						{
-							actionID = 3634,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "a9e847de-9035-bb54-846f-a93a173a05e3",
 							version = 2,
 						},
+						inheritedIndex = 3,
 					},
 				},
 				mechanicTime = 227.4,
-				name = "1.Dark Mind (M20)",
+				name = "[ST] 1.Rampart (20)",
 				timeRange = true,
-				timelineIndex = 37,
-				timerEndOffset = 10,
-				timerOffset = -5,
+				timelineIndex = 36,
+				timerEndOffset = 20,
+				timerOffset = -15,
 				timerStartOffset = 0.5,
-				uuid = "67713b9a-3d18-1ca0-816c-23b40a9059a3",
+				uuid = "66eda306-e2d9-6d69-be7f-5e00c4c83205",
 				version = 2,
 			},
-			inheritedIndex = 1,
+			inheritedIndex = 2,
 		},
 		
 		{
@@ -1539,6 +1539,11 @@ local tbl =
 								
 								{
 									"10c34ac9-fc81-51e9-b4d2-bf171b53c11b",
+									true,
+								},
+								
+								{
+									"4e3b3173-26c7-24d9-8b41-fbb2b450922b",
 									true,
 								},
 							},
@@ -1584,19 +1589,31 @@ local tbl =
 						},
 						inheritedIndex = 1,
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "4e3b3173-26c7-24d9-8b41-fbb2b450922b",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
 				},
 				loop = true,
 				mechanicTime = 227.4,
-				name = "TBN (25)",
+				name = "[ST] TBN (25)",
 				timeRange = true,
-				timelineIndex = 37,
+				timelineIndex = 36,
 				timerEndOffset = 29,
 				timerOffset = -4,
 				timerStartOffset = 5,
-				uuid = "cae8564b-7382-c50c-bc15-a6af00e9ccfd",
+				uuid = "4e06db59-184e-75a2-a381-483bc7c58785",
 				version = 2,
 			},
-			inheritedIndex = 2,
+			inheritedIndex = 3,
 		},
 		
 		{
@@ -1614,6 +1631,11 @@ local tbl =
 								
 								{
 									"def7b2d7-911a-f611-8d72-c3b3a504b4e7",
+									true,
+								},
+								
+								{
+									"89d5c4b7-c63b-610a-8b34-842b38c18a1d",
 									true,
 								},
 							},
@@ -1646,20 +1668,389 @@ local tbl =
 						},
 						inheritedIndex = 1,
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "89d5c4b7-c63b-610a-8b34-842b38c18a1d",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
 				},
 				loop = true,
 				mechanicTime = 227.4,
-				name = "Oblation (10)",
+				name = "[ST] Oblation (10)",
+				randomOffset = -1,
+				timeRange = true,
+				timelineIndex = 36,
+				timerEndOffset = 29,
+				timerOffset = -3,
+				timerStartOffset = 5,
+				uuid = "42c12c8f-75a9-a623-97ac-eb623557de9b",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+	},
+	[37] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3634,
+							conditions = 
+							{
+								
+								{
+									"85632b1d-acad-d58b-b26f-ede352e4c489",
+									true,
+								},
+								
+								{
+									"332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
+									true,
+								},
+								
+								{
+									"91ff454a-1f64-e889-b266-990af3504136",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "85c81a2a-1fc1-bba8-a315-e5438e54b390",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgOptionType = 2,
+							eventArgType = 2,
+							eventSpellName = "ディープカット",
+							uuid = "85632b1d-acad-d58b-b26f-ede352e4c489",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 3634,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "91ff454a-1f64-e889-b266-990af3504136",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 227.4,
+				name = "[MT] 1.Dark Mind (M20)",
+				timeRange = true,
+				timelineIndex = 37,
+				timerEndOffset = 10,
+				timerOffset = -5,
+				timerStartOffset = 0.5,
+				uuid = "62f3fc4f-3bf4-9007-b9c1-fa713dd83fe3",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"10c34ac9-fc81-51e9-b4d2-bf171b53c11b",
+									true,
+								},
+								
+								{
+									"d5b23126-151e-ab7f-9755-38cf1431627e",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2682,
+								1178,
+								746,
+								1191,
+								3835,
+								810,
+							},
+							category = "Self",
+							uuid = "10c34ac9-fc81-51e9-b4d2-bf171b53c11b",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "d5b23126-151e-ab7f-9755-38cf1431627e",
+							version = 2,
+						},
+					},
+				},
+				loop = true,
+				mechanicTime = 227.4,
+				name = "[MT] TBN (25)",
+				timeRange = true,
+				timelineIndex = 37,
+				timerEndOffset = 29,
+				timerOffset = -4,
+				timerStartOffset = 5,
+				uuid = "1e9e1f80-fd7e-ed8f-92b7-cf8ac1797fc3",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25754,
+							conditions = 
+							{
+								
+								{
+									"def7b2d7-911a-f611-8d72-c3b3a504b4e7",
+									true,
+								},
+								
+								{
+									"02a26bc8-5f65-3922-b64b-013f6fc31a15",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2682,
+								1178,
+								746,
+								1191,
+								3835,
+								810,
+							},
+							category = "Self",
+							uuid = "def7b2d7-911a-f611-8d72-c3b3a504b4e7",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "02a26bc8-5f65-3922-b64b-013f6fc31a15",
+							version = 2,
+						},
+					},
+				},
+				loop = true,
+				mechanicTime = 227.4,
+				name = "[MT] Oblation (10)",
 				randomOffset = -1,
 				timeRange = true,
 				timelineIndex = 37,
 				timerEndOffset = 29,
 				timerOffset = -3,
 				timerStartOffset = 5,
-				uuid = "d5713e22-13be-c9d8-86de-1fc0e3b88132",
+				uuid = "cc41170e-c048-8fed-9b23-844cc26cbdbf",
 				version = 2,
 			},
 			inheritedIndex = 4,
+		},
+	},
+	[40] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"c2291187-ffba-a3cd-a057-8668e3af8db2",
+									true,
+								},
+								
+								{
+									"18ef646d-aa29-26e2-a884-98c2fc6ef286",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 90,
+							partyTargetType = "Other Tank",
+							uuid = "c2291187-ffba-a3cd-a057-8668e3af8db2",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "18ef646d-aa29-26e2-a884-98c2fc6ef286",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 256.5,
+				name = "[ST] TBN ST (25)",
+				timeRange = true,
+				timelineIndex = 40,
+				timerEndOffset = 5,
+				timerOffset = -4,
+				timerStartOffset = 0.5,
+				uuid = "234821ec-1b95-c932-9331-768cd55cd341",
+				version = 2,
+			},
+			inheritedIndex = 9,
 		},
 	},
 	[41] = 
@@ -1685,6 +2076,11 @@ local tbl =
 								
 								{
 									"609c47a8-433e-5507-875b-bf0152d4151a",
+									true,
+								},
+								
+								{
+									"1e1af266-15a2-67b3-8e49-da32e66e215e",
 									true,
 								},
 							},
@@ -1723,14 +2119,25 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "1e1af266-15a2-67b3-8e49-da32e66e215e",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 256.5,
-				name = "1.Living Dead (Invinsible)",
+				name = "[MT] 1.Living Dead (Invinsible)",
 				timeRange = true,
 				timelineIndex = 41,
 				timerEndOffset = 22,
 				timerStartOffset = 0.5,
-				uuid = "898693e5-3206-040b-ac8a-816a92410162",
+				uuid = "d6fd5d0d-9108-971e-9d95-0f0130e784d9",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -1761,6 +2168,11 @@ local tbl =
 								
 								{
 									"a7f16d80-4d77-0c8c-855a-1912c9ae01cd",
+									true,
+								},
+								
+								{
+									"23578549-de8f-7066-a7a0-7f54c029a7a0",
 									true,
 								},
 							},
@@ -1814,15 +2226,26 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "23578549-de8f-7066-a7a0-7f54c029a7a0",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 256.5,
-				name = "2.Rampart (20)",
+				name = "[MT] 2.Rampart (20)",
 				timeRange = true,
 				timelineIndex = 41,
 				timerEndOffset = 22,
 				timerOffset = -15,
 				timerStartOffset = 10,
-				uuid = "1e051d32-1a89-9d9f-b275-cef36c023ab3",
+				uuid = "80f6554c-95a1-5948-bb0d-ed37e4b169cb",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -1848,6 +2271,11 @@ local tbl =
 								
 								{
 									"10c34ac9-fc81-51e9-b4d2-bf171b53c11b",
+									true,
+								},
+								
+								{
+									"9f6baf91-2673-2fef-932c-a39ac55f856e",
 									true,
 								},
 							},
@@ -1893,16 +2321,27 @@ local tbl =
 						},
 						inheritedIndex = 1,
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "9f6baf91-2673-2fef-932c-a39ac55f856e",
+							version = 2,
+						},
+					},
 				},
 				loop = true,
 				mechanicTime = 256.5,
-				name = "TBN (25)",
+				name = "[MT] TBN (25)",
 				timeRange = true,
 				timelineIndex = 41,
 				timerEndOffset = 22,
 				timerOffset = -4,
 				timerStartOffset = 5,
-				uuid = "467ec19f-4f92-82a7-b92f-bb1979878860",
+				uuid = "79e7fc64-4bbd-bfc8-9755-8fb2d6fdccb2",
 				version = 2,
 			},
 			inheritedIndex = 3,
@@ -1923,6 +2362,11 @@ local tbl =
 								
 								{
 									"def7b2d7-911a-f611-8d72-c3b3a504b4e7",
+									true,
+								},
+								
+								{
+									"717360d1-8bbc-87ea-9888-c0bf0b36b21f",
 									true,
 								},
 							},
@@ -1955,17 +2399,28 @@ local tbl =
 						},
 						inheritedIndex = 1,
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "717360d1-8bbc-87ea-9888-c0bf0b36b21f",
+							version = 2,
+						},
+					},
 				},
 				loop = true,
 				mechanicTime = 256.5,
-				name = "Oblation (10)",
+				name = "[MT] Oblation (10)",
 				randomOffset = -1,
 				timeRange = true,
 				timelineIndex = 41,
 				timerEndOffset = 22,
 				timerOffset = -3,
 				timerStartOffset = 5,
-				uuid = "4dcff0a5-ad41-9317-99e7-cb690b6e5ef0",
+				uuid = "b9bb3d1e-e494-4523-97d5-aba17b0cc22c",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -1996,6 +2451,11 @@ local tbl =
 									"10c34ac9-fc81-51e9-b4d2-bf171b53c11b",
 									true,
 								},
+								
+								{
+									"edffb6f6-36cb-1dcf-9fe1-ffc48ba6a1a0",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -2039,16 +2499,27 @@ local tbl =
 						},
 						inheritedIndex = 1,
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "edffb6f6-36cb-1dcf-9fe1-ffc48ba6a1a0",
+							version = 2,
+						},
+					},
 				},
 				loop = true,
 				mechanicTime = 275.5,
-				name = "TBN (25)",
+				name = "[MT] TBN (25)",
 				timeRange = true,
 				timelineIndex = 42,
 				timerEndOffset = 39,
 				timerOffset = -4,
 				timerStartOffset = 1,
-				uuid = "d7b0aeb5-582a-40b1-9141-1504e64c7c0a",
+				uuid = "fb950b77-5e5f-0881-8b45-9b7559be060a",
 				version = 2,
 			},
 			inheritedIndex = 3,
@@ -2069,6 +2540,11 @@ local tbl =
 								
 								{
 									"def7b2d7-911a-f611-8d72-c3b3a504b4e7",
+									true,
+								},
+								
+								{
+									"69eeab0a-093a-1c21-8030-3a6b28504925",
 									true,
 								},
 							},
@@ -2101,23 +2577,34 @@ local tbl =
 						},
 						inheritedIndex = 1,
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "69eeab0a-093a-1c21-8030-3a6b28504925",
+							version = 2,
+						},
+					},
 				},
 				loop = true,
 				mechanicTime = 275.5,
-				name = "Oblation (10)",
+				name = "[MT] Oblation (10)",
 				randomOffset = -1,
 				timeRange = true,
 				timelineIndex = 42,
 				timerEndOffset = 39,
 				timerOffset = -3,
-				timerStartOffset = 1,
-				uuid = "be139a4b-98ea-e2ab-af4c-6d2d4dc0a949",
+				timerStartOffset = 2,
+				uuid = "d1952b0c-8091-c754-a1da-554aeb189c90",
 				version = 2,
 			},
 			inheritedIndex = 5,
 		},
 	},
-	[50] = 
+	[43] = 
 	{
 		
 		{
@@ -2140,6 +2627,11 @@ local tbl =
 								
 								{
 									"332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
+									true,
+								},
+								
+								{
+									"27a9ba89-8f06-94bc-a4ad-8c272bb8a79a",
 									true,
 								},
 							},
@@ -2177,71 +2669,30 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "27a9ba89-8f06-94bc-a4ad-8c272bb8a79a",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
 				},
-				mechanicTime = 317.7,
-				name = "1.Dark Mind (M20)",
+				mechanicTime = 278.6,
+				name = "[ST] 1.Dark Mind (M20)",
 				timeRange = true,
-				timelineIndex = 50,
+				timelineIndex = 43,
 				timerEndOffset = 10,
 				timerOffset = -5,
 				timerStartOffset = 0.5,
-				uuid = "37228d05-e110-8257-a644-33608436fdd7",
+				uuid = "158b433b-cf2a-5e82-982f-d7c671efaf7d",
 				version = 2,
 			},
-			inheritedIndex = 1,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 36927,
-							conditions = 
-							{
-								
-								{
-									"5cf17619-127d-b210-88cb-64658ca76476",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							uuid = "10a88836-1aee-2730-ae23-3306adfd5729",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 36927,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "5cf17619-127d-b210-88cb-64658ca76476",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 317.7,
-				name = "2.Vigil (40)",
-				timeRange = true,
-				timelineIndex = 50,
-				timerEndOffset = 25,
-				timerOffset = -5,
-				timerStartOffset = 10,
-				uuid = "c824c306-6820-50f8-8149-95954c46f0fc",
-				version = 2,
-			},
-			inheritedIndex = 2,
+			inheritedIndex = 5,
 		},
 		
 		{
@@ -2264,6 +2715,11 @@ local tbl =
 								
 								{
 									"10c34ac9-fc81-51e9-b4d2-bf171b53c11b",
+									true,
+								},
+								
+								{
+									"bf0075ab-2fe7-5f8d-a213-0e84ce068453",
 									true,
 								},
 							},
@@ -2309,16 +2765,28 @@ local tbl =
 						},
 						inheritedIndex = 1,
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "bf0075ab-2fe7-5f8d-a213-0e84ce068453",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
 				},
 				loop = true,
-				mechanicTime = 317.7,
-				name = "TBN (25)",
+				mechanicTime = 278.6,
+				name = "[ST] TBN (25)",
 				timeRange = true,
-				timelineIndex = 50,
-				timerEndOffset = 71,
+				timelineIndex = 43,
+				timerEndOffset = 39,
 				timerOffset = -4,
 				timerStartOffset = 5,
-				uuid = "20426888-4915-10e8-b695-71f76d3fd81a",
+				uuid = "b11ff487-05ca-1064-af57-9b68f9362be5",
 				version = 2,
 			},
 			inheritedIndex = 3,
@@ -2339,6 +2807,11 @@ local tbl =
 								
 								{
 									"def7b2d7-911a-f611-8d72-c3b3a504b4e7",
+									true,
+								},
+								
+								{
+									"4b5ceed9-5ec4-66fa-b4b7-6e3ff9394b6d",
 									true,
 								},
 							},
@@ -2371,17 +2844,925 @@ local tbl =
 						},
 						inheritedIndex = 1,
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "4b5ceed9-5ec4-66fa-b4b7-6e3ff9394b6d",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				loop = true,
+				mechanicTime = 278.6,
+				name = "[ST] Oblation (10)",
+				randomOffset = -1,
+				timeRange = true,
+				timelineIndex = 43,
+				timerEndOffset = 39,
+				timerOffset = -3,
+				timerStartOffset = 5,
+				uuid = "566b5c79-90c9-ee11-a43c-897823767635",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+	},
+	[48] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+								
+								{
+									"e6473834-8ee7-3aeb-a37b-f66c49ee748a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "e6473834-8ee7-3aeb-a37b-f66c49ee748a",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 317.7,
+				name = "[ST] 1.Rampart (20)",
+				timeRange = true,
+				timelineIndex = 48,
+				timerEndOffset = 71,
+				timerOffset = -15,
+				timerStartOffset = 0.5,
+				uuid = "f8dbaf10-1ed3-cbfb-a891-bd264b648b51",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3638,
+							conditions = 
+							{
+								
+								{
+									"e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
+									true,
+								},
+								
+								{
+									"d7728407-e25a-0c05-82ea-92a74ccb2b61",
+									true,
+								},
+								
+								{
+									"c227cfcc-1d9f-cc5a-b495-8bab69b6a0ba",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "9b1f0885-3a72-1913-ad03-47c71acda8e5",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3638,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 50,
+							uuid = "d7728407-e25a-0c05-82ea-92a74ccb2b61",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "c227cfcc-1d9f-cc5a-b495-8bab69b6a0ba",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 317.7,
+				name = "[ST] 2.Living Dead (Invinsible)",
+				timeRange = true,
+				timelineIndex = 48,
+				timerEndOffset = 71,
+				timerStartOffset = 20,
+				uuid = "fd2a7fe7-3122-82db-b25b-a90fd960c094",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36927,
+							conditions = 
+							{
+								
+								{
+									"5cf17619-127d-b210-88cb-64658ca76476",
+									true,
+								},
+								
+								{
+									"bdd35840-314a-0506-9ba0-42a5c1e316d9",
+									true,
+								},
+								
+								{
+									"b92299a3-319f-50ef-b244-2d124cdff95c",
+									true,
+								},
+								
+								{
+									"3f3f0216-a3a5-2584-a353-544e6cab720f",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "10a88836-1aee-2730-ae23-3306adfd5729",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36927,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "5cf17619-127d-b210-88cb-64658ca76476",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionCDValue = 1,
+							actionID = 3638,
+							category = "Self",
+							conditionType = 4,
+							uuid = "bdd35840-314a-0506-9ba0-42a5c1e316d9",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 810,
+							category = "Self",
+							uuid = "b92299a3-319f-50ef-b244-2d124cdff95c",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "3f3f0216-a3a5-2584-a353-544e6cab720f",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 317.7,
+				name = "[ST] 3.Vigil (40)",
+				timeRange = true,
+				timelineIndex = 48,
+				timerEndOffset = 71,
+				timerOffset = -5,
+				timerStartOffset = 30,
+				uuid = "0f9e6513-2daa-7601-a54f-63e01e3ee519",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3634,
+							conditions = 
+							{
+								
+								{
+									"85632b1d-acad-d58b-b26f-ede352e4c489",
+									true,
+								},
+								
+								{
+									"332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
+									true,
+								},
+								
+								{
+									"2babe3fe-74ba-badb-95fc-c1b23de1fa36",
+									true,
+								},
+								
+								{
+									"af40a47b-9db2-19c7-ae22-8c97b6fb6865",
+									true,
+								},
+								
+								{
+									"94d9ff90-2a78-d36b-b997-97fbe708f7c2",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "85c81a2a-1fc1-bba8-a315-e5438e54b390",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgOptionType = 2,
+							eventArgType = 2,
+							eventSpellName = "ディープカット",
+							uuid = "85632b1d-acad-d58b-b26f-ede352e4c489",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 3634,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionCDValue = 1,
+							actionID = 36927,
+							category = "Self",
+							conditionType = 4,
+							uuid = "2babe3fe-74ba-badb-95fc-c1b23de1fa36",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 3835,
+							category = "Self",
+							uuid = "af40a47b-9db2-19c7-ae22-8c97b6fb6865",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "94d9ff90-2a78-d36b-b997-97fbe708f7c2",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 317.7,
+				name = "[ST] 4.Dark Mind (M20)",
+				timeRange = true,
+				timelineIndex = 48,
+				timerEndOffset = 71,
+				timerOffset = -5,
+				timerStartOffset = 45,
+				uuid = "d7f4134b-8dde-65ed-a923-351c296761fe",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"10c34ac9-fc81-51e9-b4d2-bf171b53c11b",
+									true,
+								},
+								
+								{
+									"11a2ffa1-a7cd-3c38-ab94-ef1d1773c04c",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2682,
+								1178,
+								746,
+								1191,
+								3835,
+								810,
+							},
+							category = "Self",
+							uuid = "10c34ac9-fc81-51e9-b4d2-bf171b53c11b",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "11a2ffa1-a7cd-3c38-ab94-ef1d1773c04c",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
 				},
 				loop = true,
 				mechanicTime = 317.7,
-				name = "Oblation (10)",
+				name = "[ST] TBN (25)",
+				timeRange = true,
+				timelineIndex = 48,
+				timerEndOffset = 71,
+				timerOffset = -4,
+				timerStartOffset = 5,
+				uuid = "4ffc56c6-1e09-1fe3-9256-3e345a71154d",
+				version = 2,
+			},
+			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25754,
+							conditions = 
+							{
+								
+								{
+									"def7b2d7-911a-f611-8d72-c3b3a504b4e7",
+									true,
+								},
+								
+								{
+									"9d41da57-ac33-91a1-94f7-b49f4074395e",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2682,
+								1178,
+								746,
+								1191,
+								3835,
+								810,
+							},
+							category = "Self",
+							uuid = "def7b2d7-911a-f611-8d72-c3b3a504b4e7",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "9d41da57-ac33-91a1-94f7-b49f4074395e",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				loop = true,
+				mechanicTime = 317.7,
+				name = "[ST] Oblation (10)",
+				randomOffset = -1,
+				timeRange = true,
+				timelineIndex = 48,
+				timerEndOffset = 71,
+				timerOffset = -3,
+				timerStartOffset = 5,
+				uuid = "c9035780-f09b-19c3-b6d1-a5acfed17ec0",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+	},
+	[50] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3634,
+							conditions = 
+							{
+								
+								{
+									"85632b1d-acad-d58b-b26f-ede352e4c489",
+									true,
+								},
+								
+								{
+									"332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
+									true,
+								},
+								
+								{
+									"8f97d47c-fad1-c0a2-b658-583640eb6998",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "85c81a2a-1fc1-bba8-a315-e5438e54b390",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgOptionType = 2,
+							eventArgType = 2,
+							eventSpellName = "ディープカット",
+							uuid = "85632b1d-acad-d58b-b26f-ede352e4c489",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 3634,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "332ed95f-a1e3-3bcd-b2c8-ffea09569c69",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "8f97d47c-fad1-c0a2-b658-583640eb6998",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 317.7,
+				name = "[MT] 1.Dark Mind (M20)",
+				timeRange = true,
+				timelineIndex = 50,
+				timerEndOffset = 10,
+				timerOffset = -5,
+				timerStartOffset = 0.5,
+				uuid = "23588646-0067-1836-ab0f-bd462868511d",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36927,
+							conditions = 
+							{
+								
+								{
+									"5cf17619-127d-b210-88cb-64658ca76476",
+									true,
+								},
+								
+								{
+									"d47665a1-ebe0-b813-9ef1-d4510403bb66",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "10a88836-1aee-2730-ae23-3306adfd5729",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36927,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "5cf17619-127d-b210-88cb-64658ca76476",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "d47665a1-ebe0-b813-9ef1-d4510403bb66",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 317.7,
+				name = "[MT] 2.Vigil (40)",
+				timeRange = true,
+				timelineIndex = 50,
+				timerEndOffset = 25,
+				timerOffset = -5,
+				timerStartOffset = 10,
+				uuid = "eb1f8507-3515-3593-8b85-6f1da64a5b1a",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"10c34ac9-fc81-51e9-b4d2-bf171b53c11b",
+									true,
+								},
+								
+								{
+									"ec7246cc-a766-52fb-b4d8-948acac89f56",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2682,
+								1178,
+								746,
+								1191,
+								3835,
+								810,
+							},
+							category = "Self",
+							uuid = "10c34ac9-fc81-51e9-b4d2-bf171b53c11b",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "ec7246cc-a766-52fb-b4d8-948acac89f56",
+							version = 2,
+						},
+					},
+				},
+				loop = true,
+				mechanicTime = 317.7,
+				name = "[MT] TBN (25)",
+				timeRange = true,
+				timelineIndex = 50,
+				timerEndOffset = 71,
+				timerOffset = -4,
+				timerStartOffset = 5,
+				uuid = "28069b25-56dd-fe6d-a412-aba8540748a9",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25754,
+							conditions = 
+							{
+								
+								{
+									"def7b2d7-911a-f611-8d72-c3b3a504b4e7",
+									true,
+								},
+								
+								{
+									"a06d5432-6f1a-2ba5-9cd5-87d79eee0756",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2682,
+								1178,
+								746,
+								1191,
+								3835,
+								810,
+							},
+							category = "Self",
+							uuid = "def7b2d7-911a-f611-8d72-c3b3a504b4e7",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "a06d5432-6f1a-2ba5-9cd5-87d79eee0756",
+							version = 2,
+						},
+					},
+				},
+				loop = true,
+				mechanicTime = 317.7,
+				name = "[MT] Oblation (10)",
 				randomOffset = -1,
 				timeRange = true,
 				timelineIndex = 50,
 				timerEndOffset = 71,
 				timerOffset = -3,
 				timerStartOffset = 5,
-				uuid = "9cf900c3-1398-24ed-a1f1-fd7f64653dd0",
+				uuid = "cbf8d4b4-fa4e-7a2b-bc84-282331293023",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -2569,6 +3950,7 @@ local tbl =
 				conditions = 
 				{
 				},
+				enabled = false,
 				mechanicTime = 410.9,
 				name = "Oblation (10)",
 				randomOffset = -1,
@@ -2908,7 +4290,6 @@ local tbl =
 						},
 					},
 				},
-				enabled = false,
 				mechanicTime = 618.6,
 				name = "Rampart (20)",
 				timeRange = true,
@@ -2961,6 +4342,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 618.6,
 				name = "Vigil (40)",
 				timeRange = true,
@@ -2993,6 +4375,7 @@ local tbl =
 				conditions = 
 				{
 				},
+				enabled = false,
 				mechanicTime = 618.6,
 				name = "Oblation (10)",
 				randomOffset = -1,
@@ -3238,10 +4621,10 @@ local tbl =
 	inheritedProfiles = 
 	{
 		"Tank\\M6S-TANKGENERAL-MT",
-		"M6S-DiscordShared",
 		"store\\anyone\\savage5\\r6s\\modules\\core",
 		"store\\anyone\\savage5\\r6s\\modules\\draws",
 		"store\\anyone\\savage5\\r6s\\modules\\optimization",
+		"M6S-DiscordShared",
 		"TTK\\M6S-Draw",
 	},
 	mapID = 1259,
