@@ -8532,6 +8532,162 @@ local tbl =
 			},
 		},
 	},
+	[91] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"fd408249-279a-06e7-9ec9-600c67534742",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "19263072-96a9-d5a0-b9f9-6a413a48a5c2",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"17e59593-9621-0fe0-a959-938c586dd042",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "ef67a3b6-86f7-87b2-a228-ce89234dd3c8",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"bca8c973-761a-33e7-876a-ee749dc57fcb",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_CD",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "aad43c0c-b72b-749d-ba52-cb378a84b60e",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"9306e913-74e7-c6fa-8cd5-00af0e59db1c",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "eadb2f9a-920a-6a5b-b7e7-7b281e59e82a",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "fd408249-279a-06e7-9ec9-600c67534742",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "17e59593-9621-0fe0-a959-938c586dd042",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "bca8c973-761a-33e7-876a-ee749dc57fcb",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "9306e913-74e7-c6fa-8cd5-00af0e59db1c",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 483.7,
+				name = "CD OFF",
+				timelineIndex = 91,
+				timerStartOffset = -10,
+				uuid = "f9161886-3913-7c9c-97d0-c60f6c162926",
+				version = 2,
+			},
+		},
+	},
 	[94] = 
 	{
 		
@@ -9063,6 +9219,158 @@ local tbl =
 				timelineIndex = 95,
 				timerStartOffset = -12,
 				uuid = "077c9d9f-19ae-a8de-888e-9786a0d6a684",
+				version = 2,
+			},
+		},
+	},
+	[97] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"d59360e3-7746-10bd-8e0a-a42cc5cc5bb3",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "9c738d3c-2342-4b07-a253-2e40847b2c1d",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"d1dcff66-bf9c-fd52-b45a-dbefd8cf85d4",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "97763d48-2fa7-5c09-8952-7383f9050854",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"addcad35-8c7c-8be0-b91f-5963e9386d1f",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "5889cc81-3355-6e00-a125-e2d97710f5d6",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"0b26f7ab-cf5b-a15a-b939-25bd6901efb4",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "9755e5f6-5eab-0e76-9325-e9af3676ab8d",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "d59360e3-7746-10bd-8e0a-a42cc5cc5bb3",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "d1dcff66-bf9c-fd52-b45a-dbefd8cf85d4",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "addcad35-8c7c-8be0-b91f-5963e9386d1f",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "0b26f7ab-cf5b-a15a-b939-25bd6901efb4",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 512.7,
+				name = "CD ON",
+				timelineIndex = 97,
+				timerStartOffset = -10,
+				uuid = "c41802d8-c243-44c8-a9da-9a4632f9fcca",
 				version = 2,
 			},
 		},
