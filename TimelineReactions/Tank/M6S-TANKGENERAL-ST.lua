@@ -1022,6 +1022,11 @@ local tbl =
 									"46cb0109-6c3a-2f84-a2c4-31984cecfea2",
 									true,
 								},
+								
+								{
+									"42c04f0e-3efd-343a-ace6-4c31d84fa947",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -1045,6 +1050,11 @@ local tbl =
 								
 								{
 									"c87032d2-c148-cb6a-9a76-9a849a23a2b1",
+									true,
+								},
+								
+								{
+									"42c04f0e-3efd-343a-ace6-4c31d84fa947",
 									true,
 								},
 							},
@@ -1071,6 +1081,11 @@ local tbl =
 									"18f1b609-641e-ed19-9e7e-897be06b8984",
 									true,
 								},
+								
+								{
+									"42c04f0e-3efd-343a-ace6-4c31d84fa947",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -1094,6 +1109,11 @@ local tbl =
 								
 								{
 									"bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
+									true,
+								},
+								
+								{
+									"42c04f0e-3efd-343a-ace6-4c31d84fa947",
 									true,
 								},
 							},
@@ -1208,9 +1228,20 @@ local tbl =
 						},
 						inheritedIndex = 8,
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "42c04f0e-3efd-343a-ace6-4c31d84fa947",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 22.4,
-				name = "Stance ON",
+				name = "[ST] Stance ON",
 				timeRange = true,
 				timelineIndex = 2,
 				timerOffset = -15,
@@ -2825,6 +2856,93 @@ local tbl =
 				version = 2,
 			},
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7533,
+							conditions = 
+							{
+								
+								{
+									"158e3d7c-aed1-3623-ad3e-9ac368bbd03d",
+									true,
+								},
+								
+								{
+									"6d495a4e-8155-eb89-8b8a-98d8b04bc546",
+									true,
+								},
+								
+								{
+									"81e77c9e-c8ec-b0ca-819d-ad50d338f319",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_Hotbar_Provoke",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "001b735f-0c3d-3481-8712-978c4ccf1420",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99.999000549316,
+							uuid = "158e3d7c-aed1-3623-ad3e-9ac368bbd03d",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 4454,
+							category = "Self",
+							uuid = "6d495a4e-8155-eb89-8b8a-98d8b04bc546",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "81e77c9e-c8ec-b0ca-819d-ad50d338f319",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 142.4,
+				name = "[MT] Provoke",
+				timeRange = true,
+				timelineIndex = 20,
+				timerEndOffset = 15,
+				timerOffset = -3,
+				timerStartOffset = 7.5,
+				uuid = "d86930aa-b687-3690-a07a-b6b6e591fe3e",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
 	},
 	[28] = 
 	{
@@ -3984,38 +4102,6 @@ local tbl =
 						data = 
 						{
 							aType = "Lua",
-							actionLua = "-- M6S Auto Selector - UI OnDraw (fixed)\n\nlocal SAVE_REL = [[TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\M6SAutoSelector.lua]]\n\nlocal function _save(tbl)\n  local base = GetLuaModsPath()\n  local dir  = base .. [[TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\]]\n  if not FolderExists(dir) then FolderCreate(dir) end\n  FileSave(base .. SAVE_REL, tbl)\nend\n\nlocal function _load()\n  local path = GetLuaModsPath() .. SAVE_REL\n  if FileExists(path) then\n    local t = FileLoad(path)\n    if type(t)==\"table\" then return t end\n  end\n  return nil\nend\n\ndata._m6s = data._m6s or _load() or { enabled=true, role=\"MT\", range=6.0, win={x=200,y=300} }\nlocal cfg = data._m6s\n\ndata._m6s_ui = data._m6s_ui or { menu=false, dragging=false, drag_dx=0, drag_dy=0 }\nlocal ui = data._m6s_ui\n\n-- 预设位置（每帧生效：允许外部修改也能收敛）\nGUI:SetNextWindowPos(cfg.win.x or 200, cfg.win.y or 300, GUI.SetCond_Always)\nlocal flags = GUI.WindowFlags_NoTitleBar | GUI.WindowFlags_AlwaysAutoResize | GUI.WindowFlags_NoScrollbar\nlocal visible, open = GUI:Begin(\"M6S AutoSelector##m6s_ui\", true, flags)\nif visible then\n  -- ON/OFF 着色（三态：常态/悬停/按下）\n  local on = cfg.enabled\n  if on then\n    GUI:PushStyleColor(GUI.Col_Button,        0.20, 0.70, 0.20, 1.00)\n    GUI:PushStyleColor(GUI.Col_ButtonHovered, 0.25, 0.85, 0.25, 1.00)\n    GUI:PushStyleColor(GUI.Col_ButtonActive,  0.15, 0.60, 0.15, 1.00)\n  else\n    GUI:PushStyleColor(GUI.Col_Button,        0.70, 0.20, 0.20, 1.00)\n    GUI:PushStyleColor(GUI.Col_ButtonHovered, 0.85, 0.25, 0.25, 1.00)\n    GUI:PushStyleColor(GUI.Col_ButtonActive,  0.60, 0.15, 0.15, 1.00)\n  end\n  if GUI:Button(on and \"ON##m6s\" or \"OFF##m6s\", 56, 24) then\n    cfg.enabled = not cfg.enabled\n    _save(cfg)\n  end\n  GUI:PopStyleColor(3)\n\n  GUI:SameLine(0,8)\n  if GUI:Button(\"+##m6s_menu\", 24, 24) then\n    ui.menu = not ui.menu\n  end\n\n  if ui.menu then\n    GUI:Separator()\n    -- 角色配置：MT / ST\n    GUI:Text(\"Role:\")\n    GUI:SameLine(0,8)\n    local items = {\"MT\",\"ST\"}\n    local curIdx = (cfg.role == \"ST\") and 2 or 1\n    local newIdx, changed = GUI:Combo(\"##m6s_role\", curIdx, items, #items)\n    if changed then\n      local newRole = (newIdx == 2) and \"ST\" or \"MT\"\n      if newRole ~= cfg.role then\n        cfg.role = newRole\n        _save(cfg)\n      end\n    end\n\n    -- 范围滑条\n    GUI:Text(\"Range (m):\")\n    GUI:SameLine(0,8)\n    local newR, rChanged = GUI:SliderFloat(\"##m6s_range\", cfg.range or 6.0, 1.0, 15.0)\n    if rChanged then\n      cfg.range = newR\n      _save(cfg)\n    end\n\n    -- 重置为默认（不改 enabled）\n    if GUI:Button(\"Reset Defaults##m6s\", 160, 22) then\n      cfg.role  = \"MT\"\n      cfg.range = 6.0\n      -- cfg.enabled 保持原样\n      _save(cfg)\n    end\n  end\n\n  -- 右键拖动：按下记录偏移，按住移动，松开停止\n  local wx, wy = GUI:GetWindowPos()\n  if GUI:IsWindowHovered() then\n    if GUI:IsMouseClicked(1) then\n      local mx, my = GUI:GetMousePos()\n      ui.dragging = true\n      ui.drag_dx = mx - wx\n      ui.drag_dy = my - wy\n    end\n  end\n  if ui.dragging then\n    if GUI:IsMouseDown(1) then\n      local mx, my = GUI:GetMousePos()\n      local nx, ny = mx - ui.drag_dx, my - ui.drag_dy\n      GUI:SetWindowPos(nx, ny, GUI.SetCond_Always)\n      if nx ~= cfg.win.x or ny ~= cfg.win.y then\n        cfg.win.x, cfg.win.y = nx, ny\n        _save(cfg)\n      end\n    else\n      ui.dragging = false\n    end\n  else\n    -- 非拖拽时同步一次位置（防止抖动）\n    if wx ~= cfg.win.x or wy ~= cfg.win.y then\n      cfg.win.x, cfg.win.y = wx, wy\n      _save(cfg)\n    end\n  end\nend\nGUI:End()\n\nreturn false\n",
-							gVar = "ACR_RikuPLD3_CD",
-							uuid = "a8081848-685a-c1a8-8236-b6fe6aec9778",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-				},
-				eventType = 13,
-				mechanicTime = 217.2,
-				name = "Rikuduo's_Auto_Selector UI",
-				timeRange = true,
-				timelineIndex = 34,
-				timerEndOffset = 999,
-				timerStartOffset = -218,
-				uuid = "4539eda2-bcef-ee86-8a96-f841646aa8ea",
-				version = 2,
-			},
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "Lua",
 							actionLua = "-- M6S Auto Selector - Core (aggressive & snappy)\n-- 变化点：\n-- 1) 去掉“当前目标还在范围内就不切”的黏滞逻辑 -> 始终选当下最优。\n-- 2) 排序：优先级(小->大) -> HP% (小->大) -> 距离(近->远)；并列更稳定。\n-- 3) 仍遵循：若仇恨列表里没有优先清单(或都死) -> 选 13822（不限距离，取HP%最低）。\n\nlocal SAVE_REL = [[TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\M6SAutoSelector.lua]]\nlocal function _save(tbl)\n  local base = GetLuaModsPath()\n  if not FolderExists(base .. [[TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\]]) then\n    FolderCreate(base .. [[TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\]])\n  end\n  FileSave(base .. SAVE_REL, tbl)\nend\n\nlocal function _load()\n  local path = GetLuaModsPath() .. SAVE_REL\n  if FileExists(path) then\n    local t = FileLoad(path)\n    if type(t) == \"table\" then return t end\n  end\n  return nil\nend\n\n-- 读档/初始化（与UI共享）\ndata._m6s = data._m6s or _load() or {\n  enabled = true,\n  role = \"MT\",\n  range = 6.0,\n  win = { x = 200, y = 300 }\n}\nlocal cfg = data._m6s\n\nif not cfg.enabled then return false end\n\n-- 优先级表\nlocal PRIORITY = {\n  MT = {13833,13834,13835,13831,13832},\n  ST = {13833,13835,13834,13832,13831},\n}\nlocal prio_list = PRIORITY[cfg.role] or PRIORITY.MT\nlocal prio_rank = {}\nfor i,cid in ipairs(prio_list) do prio_rank[cid] = i end\n\n-- 收集范围内候选\nlocal filter = (\"alive,attackable,maxdistance=%g,contentid=%s\"):format(\n  cfg.range, table.concat(prio_list, \";\")\n)\nlocal elist = EntityList(filter)\n\n-- 直接选“当前帧最优”：优先级 -> HP% -> 距离\nlocal best, bestRank, bestHP, bestDist = nil, 999, 101, 9999\nif elist then\n  for _,e in pairs(elist) do\n    local r = prio_rank[e.contentid]\n    if r and e.hp and e.hp.percent and e.distance2d then\n      if (r < bestRank)\n      or (r == bestRank and e.hp.percent < bestHP)\n      or (r == bestRank and e.hp.percent == bestHP and e.distance2d < bestDist) then\n        best, bestRank, bestHP, bestDist = e, r, e.hp.percent, e.distance2d\n      end\n    end\n  end\nend\n\n-- 若找到范围内最优目标，则无条件切过去（提高“灵敏度/抢占性”）\nif best and best.id then\n  local cur = Player:GetTarget()\n  if not cur or cur.id ~= best.id then\n    Player:SetTarget(best.id)\n  end\n  return false\nend\n\n-- 若范围内无优先清单：检查仇恨表里是否还有这些CID存活\nlocal wantAggro = EntityList(\"aggro,alive,attackable,contentid=\" .. table.concat(prio_list,\";\"))\nlocal hasAggroTargets = (wantAggro and next(wantAggro) ~= nil)\n\n-- 仇恨表里没它们(或都死) -> 选 13822（不限距离，HP%最低）\nif not hasAggroTargets then\n  local adds = EntityList(\"alive,attackable,contentid=13822\")\n  local pick, php = nil, 101\n  if adds then\n    for _,e in pairs(adds) do\n      if e.hp and e.hp.percent and e.hp.percent < php then\n        pick, php = e, e.hp.percent\n      end\n    end\n  end\n  if pick and pick.id then\n    local cur = Player:GetTarget()\n    if not cur or cur.id ~= pick.id then\n      Player:SetTarget(pick.id)\n    end\n  end\nend\n\nreturn false\n",
 							gVar = "ACR_RikuPLD3_CD",
 							uuid = "d0e983b3-74b5-b936-9264-64580d8a002f",
@@ -4028,7 +4114,7 @@ local tbl =
 				},
 				eventType = 12,
 				mechanicTime = 217.2,
-				name = "Rikuduo's_Auto_Selector Logic",
+				name = "AutoSelector Logic",
 				timeRange = true,
 				timelineIndex = 34,
 				timerEndOffset = 200,
@@ -4055,6 +4141,14 @@ local tbl =
 							alertScale = 2,
 							alertTTS = true,
 							alertText = "Wave 1",
+							conditions = 
+							{
+								
+								{
+									"afa66b64-5b4f-22b9-b0d5-2520bf0d0bf7",
+									true,
+								},
+							},
 							gVar = "ACR_RikuGNB3_CD",
 							uuid = "5b6abe02-a682-7696-9234-78ffebec1e87",
 							version = 2.1,
@@ -4067,325 +4161,40 @@ local tbl =
 						{
 							aType = "Lua",
 							actionLua = "SendTextCommand(\"/e Wave1: ST担当:西ヤーン(AA素受け8万ダメージ) <se.1>\")\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"afa66b64-5b4f-22b9-b0d5-2520bf0d0bf7",
+									true,
+								},
+							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
 							uuid = "a2d6ae9b-4802-0a35-81d5-8f91f078e785",
 							version = 2.1,
 						},
+						inheritedIndex = 2,
 					},
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "afa66b64-5b4f-22b9-b0d5-2520bf0d0bf7",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 224.3,
-				name = "ST-Step-Reminder W1",
+				name = "[ST] ST-Step-Reminder W1",
 				timelineIndex = 35,
 				uuid = "6386d8fd-79bc-b785-ac6b-b4db7bf8977b",
-				version = 2,
-			},
-			inheritedIndex = 2,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "ACR",
-							actionID = 16142,
-							conditions = 
-							{
-								
-								{
-									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_AOE",
-							gVarValue = 2,
-							ignoreWeaveRules = true,
-							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							aType = "ACR",
-							actionID = 28,
-							conditions = 
-							{
-								
-								{
-									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-									true,
-								},
-							},
-							gVar = "ACR_RikuPLD3_AOE",
-							gVarValue = 2,
-							ignoreWeaveRules = true,
-							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							aType = "ACR",
-							actionID = 3629,
-							conditions = 
-							{
-								
-								{
-									"231b6a98-9a2f-8a76-bdab-236bd5622569",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_AOE",
-							gVarValue = 2,
-							ignoreWeaveRules = true,
-							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
-							version = 2.1,
-						},
-						inheritedIndex = 3,
-					},
-					
-					{
-						data = 
-						{
-							aType = "ACR",
-							actionID = 48,
-							conditions = 
-							{
-								
-								{
-									"bc680113-345f-6d33-add6-1f151475b614",
-									true,
-								},
-							},
-							gVar = "ACR_RikuWAR3_AOE",
-							gVarValue = 2,
-							ignoreWeaveRules = true,
-							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 13,
-							jobValue = "GUNBREAKER",
-							name = "GNB Job",
-							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 13,
-							jobValue = "PALADIN",
-							name = "PLD Job",
-							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 13,
-							jobValue = "DARKKNIGHT",
-							name = "DRK Job",
-							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							conditionType = 9,
-							jobValue = "WARRIOR",
-							name = "WAR Job",
-							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 224.3,
-				name = "AoE OFF",
-				timelineIndex = 35,
-				timerStartOffset = -10,
-				uuid = "4df7a6c1-9404-6494-914d-e0a55ad01ee8",
-				version = 2,
-			},
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "ACR",
-							actionID = 16142,
-							conditions = 
-							{
-								
-								{
-									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_AOE",
-							gVarValue = 2,
-							ignoreWeaveRules = true,
-							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							aType = "ACR",
-							actionID = 28,
-							conditions = 
-							{
-								
-								{
-									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-									true,
-								},
-							},
-							gVar = "ACR_RikuPLD3_SmartAOE",
-							gVarValue = 2,
-							ignoreWeaveRules = true,
-							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							aType = "ACR",
-							actionID = 3629,
-							conditions = 
-							{
-								
-								{
-									"231b6a98-9a2f-8a76-bdab-236bd5622569",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_SmartAOE",
-							gVarValue = 2,
-							ignoreWeaveRules = true,
-							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
-							version = 2.1,
-						},
-						inheritedIndex = 3,
-					},
-					
-					{
-						data = 
-						{
-							aType = "ACR",
-							actionID = 48,
-							conditions = 
-							{
-								
-								{
-									"bc680113-345f-6d33-add6-1f151475b614",
-									true,
-								},
-							},
-							gVar = "ACR_RikuWAR3_SmartAOE",
-							gVarValue = 2,
-							ignoreWeaveRules = true,
-							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 13,
-							jobValue = "GUNBREAKER",
-							name = "GNB Job",
-							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 13,
-							jobValue = "PALADIN",
-							name = "PLD Job",
-							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 13,
-							jobValue = "DARKKNIGHT",
-							name = "DRK Job",
-							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							conditionType = 9,
-							jobValue = "WARRIOR",
-							name = "WAR Job",
-							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 224.3,
-				name = "Smart AoE OFF",
-				timelineIndex = 35,
-				timerStartOffset = -10,
-				uuid = "dfed6072-7c12-ae49-9a32-795233eb4c7b",
 				version = 2,
 			},
 			inheritedIndex = 3,
@@ -4409,7 +4218,13 @@ local tbl =
 									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
 									true,
 								},
+								
+								{
+									"eeb0f52c-a7e9-eb2b-bd48-5b1cfb4dc032",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
 							gVarValue = 2,
 							ignoreWeaveRules = true,
@@ -4430,7 +4245,13 @@ local tbl =
 									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
 									true,
 								},
+								
+								{
+									"eeb0f52c-a7e9-eb2b-bd48-5b1cfb4dc032",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
 							gVarValue = 2,
 							ignoreWeaveRules = true,
@@ -4451,7 +4272,13 @@ local tbl =
 									"231b6a98-9a2f-8a76-bdab-236bd5622569",
 									true,
 								},
+								
+								{
+									"eeb0f52c-a7e9-eb2b-bd48-5b1cfb4dc032",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuDRK3_CD",
 							gVarValue = 2,
 							ignoreWeaveRules = true,
@@ -4473,7 +4300,13 @@ local tbl =
 									"bc680113-345f-6d33-add6-1f151475b614",
 									true,
 								},
+								
+								{
+									"eeb0f52c-a7e9-eb2b-bd48-5b1cfb4dc032",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuWAR3_CD",
 							gVarValue = 2,
 							ignoreWeaveRules = true,
@@ -4532,14 +4365,399 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "eeb0f52c-a7e9-eb2b-bd48-5b1cfb4dc032",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 224.3,
-				name = "CD OFF",
+				name = "[ST] CD OFF",
 				timelineIndex = 35,
 				timerStartOffset = -10,
 				uuid = "db0016a2-6f33-5d88-b455-3756e49edc0c",
 				version = 2,
 			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+								
+								{
+									"0e6720b3-7c86-6b1b-bc4f-bc65e07f8616",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_AOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+								
+								{
+									"0e6720b3-7c86-6b1b-bc4f-bc65e07f8616",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_AOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+								
+								{
+									"0e6720b3-7c86-6b1b-bc4f-bc65e07f8616",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_AOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+								
+								{
+									"0e6720b3-7c86-6b1b-bc4f-bc65e07f8616",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_AOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "0e6720b3-7c86-6b1b-bc4f-bc65e07f8616",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 224.3,
+				name = "[ST] AoE OFF",
+				timelineIndex = 35,
+				timerStartOffset = -10,
+				uuid = "4df7a6c1-9404-6494-914d-e0a55ad01ee8",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+								
+								{
+									"00298d51-2dda-f2d9-9421-b5f78495b2e5",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_AOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+								
+								{
+									"00298d51-2dda-f2d9-9421-b5f78495b2e5",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_SmartAOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+								
+								{
+									"00298d51-2dda-f2d9-9421-b5f78495b2e5",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_SmartAOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+								
+								{
+									"00298d51-2dda-f2d9-9421-b5f78495b2e5",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_SmartAOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "00298d51-2dda-f2d9-9421-b5f78495b2e5",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 224.3,
+				name = "[ST] Smart AoE OFF",
+				timelineIndex = 35,
+				timerStartOffset = -10,
+				uuid = "dfed6072-7c12-ae49-9a32-795233eb4c7b",
+				version = 2,
+			},
+			inheritedIndex = 4,
 		},
 		
 		{
@@ -4560,6 +4778,11 @@ local tbl =
 									"3b44759c-dbcc-c14e-8c61-0cc978b17661",
 									true,
 								},
+								
+								{
+									"0fa965f2-2ab1-15ed-a5b3-7901dd0570e3",
+									true,
+								},
 							},
 							gVar = "ACR_RikuGNB3_CD",
 							uuid = "d4e986a4-89f3-e61e-8255-375231273b52",
@@ -4578,6 +4801,11 @@ local tbl =
 								
 								{
 									"8e6e476c-c6ec-33b8-b8f1-40b51c68e6f3",
+									true,
+								},
+								
+								{
+									"0fa965f2-2ab1-15ed-a5b3-7901dd0570e3",
 									true,
 								},
 							},
@@ -4612,15 +4840,764 @@ local tbl =
 						},
 						inheritedIndex = 2,
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "0fa965f2-2ab1-15ed-a5b3-7901dd0570e3",
+							version = 2,
+						},
+					},
 				},
 				enabled = false,
 				eventType = 12,
 				mechanicTime = 224.3,
-				name = "AutoTarget:Cat",
+				name = "[ST] AutoTarget:Cat",
 				timeRange = true,
 				timelineIndex = 35,
 				timerEndOffset = 186.60000610352,
 				uuid = "4307c8a1-868c-5ad2-be22-137cbe1cfbe2",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Alert",
+							alertDuration = 29000,
+							alertScale = 2,
+							alertTTS = true,
+							alertText = "Wave 1",
+							conditions = 
+							{
+								
+								{
+									"9ca93d46-be3f-e94c-9524-2831e4dab17b",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "5b6abe02-a682-7696-9234-78ffebec1e87",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "SendTextCommand(\"/e Wave1: MTは同時に出現するムーを南東あたりに持っていく <se.1>\")\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"9ca93d46-be3f-e94c-9524-2831e4dab17b",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "a2d6ae9b-4802-0a35-81d5-8f91f078e785",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "9ca93d46-be3f-e94c-9524-2831e4dab17b",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 224.3,
+				name = "[MT] MT-Step-Reminder W1",
+				timelineIndex = 35,
+				uuid = "9efdefcb-3305-8e7a-af28-aa6d714ab65f",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+								
+								{
+									"9d0faaed-36c7-e682-a769-6a652f90ec70",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+								
+								{
+									"9d0faaed-36c7-e682-a769-6a652f90ec70",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+								
+								{
+									"9d0faaed-36c7-e682-a769-6a652f90ec70",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_CD",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+								
+								{
+									"9d0faaed-36c7-e682-a769-6a652f90ec70",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "9d0faaed-36c7-e682-a769-6a652f90ec70",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 224.3,
+				name = "[MT] CD OFF",
+				timelineIndex = 35,
+				timerEndOffset = 5,
+				uuid = "c77009e4-6348-e3af-9296-87c499ebeeb7",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+								
+								{
+									"77ae49a2-c266-245a-b704-6c336ba6977f",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_AOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+								
+								{
+									"77ae49a2-c266-245a-b704-6c336ba6977f",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_AOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+								
+								{
+									"77ae49a2-c266-245a-b704-6c336ba6977f",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_AOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+								
+								{
+									"77ae49a2-c266-245a-b704-6c336ba6977f",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_AOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "77ae49a2-c266-245a-b704-6c336ba6977f",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 224.3,
+				name = "[MT] AoE OFF",
+				timelineIndex = 35,
+				timerOffset = 5,
+				timerStartOffset = -10,
+				uuid = "a1d9c9ff-7c9b-be98-b313-c51bdef4cb3e",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+								
+								{
+									"0c8e2598-8077-7c7e-aff7-9c4c462eca3d",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_AOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+								
+								{
+									"0c8e2598-8077-7c7e-aff7-9c4c462eca3d",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_SmartAOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+								
+								{
+									"0c8e2598-8077-7c7e-aff7-9c4c462eca3d",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_SmartAOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+								
+								{
+									"0c8e2598-8077-7c7e-aff7-9c4c462eca3d",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_SmartAOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "0c8e2598-8077-7c7e-aff7-9c4c462eca3d",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 224.3,
+				name = "[MT] Smart AoE OFF",
+				timelineIndex = 35,
+				timerStartOffset = -10,
+				uuid = "d26e3502-0326-4756-a6fd-233e53499626",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "local range = 7.5\nlocal fallbackID = 13822\nlocal priorityList = {13833, 13835, 13834, 13831, 13832}\nlocal currentTarget = Player:GetTarget()\n\nlocal function isValidInRange(entity)\n    return entity.alive and entity.targetable and entity.distance <= range\nend\n\nlocal function anyAlive(cid)\n    local list = EntityList(\"type=2,targetable,contentid=\" .. cid)\n    if table.valid(list) then\n        for _, v in pairs(list) do\n            if v.alive then\n                return true\n            end\n        end\n    end\n    return false\nend\n\nfor _, cid in ipairs(priorityList) do\n    local candidates = EntityList(\"type=2,targetable,contentid=\" .. cid)\n    if table.valid(candidates) then\n        for _, entity in pairs(candidates) do\n            if isValidInRange(entity) then\n                if currentTarget == nil or currentTarget.id ~= entity.id then\n                    Player:SetTarget(entity.id)\n                end\n                return\n            end\n        end\n    end\nend\n\nlocal fallbackList = EntityList(\"type=2,targetable,contentid=\" .. fallbackID)\nif table.valid(fallbackList) then\n    for _, entity in pairs(fallbackList) do\n        if entity.alive then\n            if currentTarget == nil or currentTarget.id ~= entity.id then\n                Player:SetTarget(entity.id)\n            end\n            return\n        end\n    end\nend",
+							conditions = 
+							{
+								
+								{
+									"3b44759c-dbcc-c14e-8c61-0cc978b17661",
+									true,
+								},
+								
+								{
+									"3bfa16c2-c57c-04e9-8bef-2b3d52c7e1ec",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "b24c16e7-dd34-a612-9fce-c907f6e8c5ce",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "local lowestHP = nil\nlocal minHPPercent = 101\nlocal range = 7.5\nlocal mainID = 13831\nlocal fallbackID = 18322\n\nlocal mainList = EntityList(\"type=2,targetable,contentid=\" .. mainID)\nif table.valid(mainList) then\n    for _, entity in pairs(mainList) do\n        if entity.alive and entity.distance <= range and entity.hp.percent < minHPPercent then\n            lowestHP = entity\n            minHPPercent = entity.hp.percent\n        end\n    end\nend\n\nif lowestHP then\n    if Player:GetTarget() == nil or Player:GetTarget().id ~= lowestHP.id then\n        Player:SetTarget(lowestHP.id)\n    end\n    return\nend\n\nlocal fallbackList = EntityList(\"type=2,targetable,contentid=\" .. fallbackID)\nif table.valid(fallbackList) then\n    for _, v in pairs(fallbackList) do\n        if v.alive then\n            if Player:GetTarget() == nil or Player:GetTarget().id ~= v.id then\n                Player:SetTarget(v.id)\n            end\n            return\n        end\n    end\nend",
+							conditions = 
+							{
+								
+								{
+									"8e6e476c-c6ec-33b8-b8f1-40b51c68e6f3",
+									true,
+								},
+								
+								{
+									"3bfa16c2-c57c-04e9-8bef-2b3d52c7e1ec",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "7fe609f5-2b2f-e487-ad80-fbd15aceb16a",
+							version = 2.1,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"Prioritize Cat\"].bool\n",
+							uuid = "3b44759c-dbcc-c14e-8c61-0cc978b17661",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.string_SelectionDR[\"LowestHP Mu\"].bool\n",
+							uuid = "8e6e476c-c6ec-33b8-b8f1-40b51c68e6f3",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "3bfa16c2-c57c-04e9-8bef-2b3d52c7e1ec",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				eventType = 12,
+				mechanicTime = 224.3,
+				name = "[MT] AutoTarget:Cat",
+				timeRange = true,
+				timelineIndex = 35,
+				timerEndOffset = 186.60000610352,
+				uuid = "4c5542b0-a68d-eeec-a4e9-cb188233fed8",
 				version = 2,
 			},
 			inheritedIndex = 3,
@@ -4639,6 +5616,14 @@ local tbl =
 						data = 
 						{
 							aType = "Misc",
+							conditions = 
+							{
+								
+								{
+									"01dbd163-d6f5-aebe-894d-9af20d9caaef",
+									true,
+								},
+							},
 							gVar = "ACR_RikuGNB3_CD",
 							setTarget = true,
 							targetContentID = 13832,
@@ -4655,6 +5640,14 @@ local tbl =
 						{
 							actionID = 7533,
 							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"01dbd163-d6f5-aebe-894d-9af20d9caaef",
+									true,
+								},
+							},
 							gVar = "ACR_RikuGNB3_CD",
 							ignoreWeaveRules = true,
 							targetContentID = 13832,
@@ -4668,9 +5661,20 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "01dbd163-d6f5-aebe-894d-9af20d9caaef",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 227.4,
-				name = "Target Yan",
+				name = "[ST] Target Yan",
 				timeRange = true,
 				timelineIndex = 36,
 				timerEndOffset = 3,
@@ -4703,6 +5707,11 @@ local tbl =
 									"46cb0109-6c3a-2f84-a2c4-31984cecfea2",
 									true,
 								},
+								
+								{
+									"ad7592d4-d75b-7b88-9781-572497fff810",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -4726,6 +5735,11 @@ local tbl =
 								
 								{
 									"c87032d2-c148-cb6a-9a76-9a849a23a2b1",
+									true,
+								},
+								
+								{
+									"ad7592d4-d75b-7b88-9781-572497fff810",
 									true,
 								},
 							},
@@ -4752,6 +5766,11 @@ local tbl =
 									"18f1b609-641e-ed19-9e7e-897be06b8984",
 									true,
 								},
+								
+								{
+									"ad7592d4-d75b-7b88-9781-572497fff810",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
@@ -4775,6 +5794,11 @@ local tbl =
 								
 								{
 									"bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
+									true,
+								},
+								
+								{
+									"ad7592d4-d75b-7b88-9781-572497fff810",
 									true,
 								},
 							},
@@ -4882,9 +5906,20 @@ local tbl =
 						},
 						inheritedIndex = 8,
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "ad7592d4-d75b-7b88-9781-572497fff810",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 227.4,
-				name = "Stance ON",
+				name = "[ST] Stance ON",
 				timeRange = true,
 				timelineIndex = 36,
 				timerOffset = -15,
@@ -4893,6 +5928,206 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 1,
+		},
+	},
+	[37] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16141,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+								
+								{
+									"a8ae1c03-9765-6092-abb1-e69f6c42a6a8",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_AOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							targetContentID = 13831,
+							targetSubType = "Highest HP",
+							targetType = "ContentID",
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7381,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+								
+								{
+									"a8ae1c03-9765-6092-abb1-e69f6c42a6a8",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_SmartAOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							targetContentID = 13831,
+							targetSubType = "Highest HP",
+							targetType = "ContentID",
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 3621,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+								
+								{
+									"a8ae1c03-9765-6092-abb1-e69f6c42a6a8",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_SmartAOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							targetContentID = 13831,
+							targetSubType = "Highest HP",
+							targetType = "ContentID",
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 41,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+								
+								{
+									"a8ae1c03-9765-6092-abb1-e69f6c42a6a8",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_SmartAOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							targetContentID = 13831,
+							targetSubType = "Highest HP",
+							targetType = "ContentID",
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "a8ae1c03-9765-6092-abb1-e69f6c42a6a8",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 227.4,
+				name = "[MT] AoE Mu",
+				timeRange = true,
+				timelineIndex = 37,
+				timerEndOffset = 5,
+				timerStartOffset = 1,
+				uuid = "dfc860bf-00d8-30d6-aafb-291a22f7e322",
+				version = 2,
+			},
 		},
 	},
 	[39] = 
@@ -4912,6 +6147,14 @@ local tbl =
 							alertScale = 2,
 							alertTTS = true,
 							alertText = "Wave 2",
+							conditions = 
+							{
+								
+								{
+									"6c7cef47-413b-96ff-8456-65bec4876dae",
+									true,
+								},
+							},
 							gVar = "ACR_RikuGNB3_CD",
 							uuid = "5b6abe02-a682-7696-9234-78ffebec1e87",
 							version = 2.1,
@@ -4924,6 +6167,14 @@ local tbl =
 						{
 							aType = "Lua",
 							actionLua = "SendTextCommand(\"/e Wave2: MTと合流して範囲攻撃に参加します <se.1>\")\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"6c7cef47-413b-96ff-8456-65bec4876dae",
+									true,
+								},
+							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
 							uuid = "a2d6ae9b-4802-0a35-81d5-8f91f078e785",
@@ -4933,9 +6184,20 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "6c7cef47-413b-96ff-8456-65bec4876dae",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 253.4,
-				name = "ST-Step-Reminder W2",
+				name = "[ST] ST-Step-Reminder W2",
 				timelineIndex = 39,
 				uuid = "59223b55-1440-f88a-b422-a090eb418c1c",
 				version = 2,
@@ -4965,6 +6227,11 @@ local tbl =
 									"46cb0109-6c3a-2f84-a2c4-31984cecfea2",
 									true,
 								},
+								
+								{
+									"3c16aa15-ec6b-fb90-b731-d52895cb9f91",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -4990,7 +6257,13 @@ local tbl =
 									"c87032d2-c148-cb6a-9a76-9a849a23a2b1",
 									true,
 								},
+								
+								{
+									"3c16aa15-ec6b-fb90-b731-d52895cb9f91",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
 							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
@@ -5014,7 +6287,13 @@ local tbl =
 									"18f1b609-641e-ed19-9e7e-897be06b8984",
 									true,
 								},
+								
+								{
+									"3c16aa15-ec6b-fb90-b731-d52895cb9f91",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
 							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
@@ -5039,7 +6318,13 @@ local tbl =
 									"bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
 									true,
 								},
+								
+								{
+									"3c16aa15-ec6b-fb90-b731-d52895cb9f91",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuWAR3_CD",
 							ignoreWeaveRules = true,
 							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
@@ -5147,9 +6432,20 @@ local tbl =
 						},
 						inheritedIndex = 8,
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "3c16aa15-ec6b-fb90-b731-d52895cb9f91",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 253.4,
-				name = "Stance OFF",
+				name = "[ST] Stance OFF",
 				timeRange = true,
 				timelineIndex = 39,
 				timerEndOffset = 22,
@@ -5178,7 +6474,13 @@ local tbl =
 									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
 									true,
 								},
+								
+								{
+									"58e96a9a-1115-d40e-a473-da54fa435a34",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
 							ignoreWeaveRules = true,
 							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
@@ -5198,7 +6500,13 @@ local tbl =
 									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
 									true,
 								},
+								
+								{
+									"58e96a9a-1115-d40e-a473-da54fa435a34",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
 							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
@@ -5218,7 +6526,13 @@ local tbl =
 									"231b6a98-9a2f-8a76-bdab-236bd5622569",
 									true,
 								},
+								
+								{
+									"58e96a9a-1115-d40e-a473-da54fa435a34",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
 							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
@@ -5239,7 +6553,13 @@ local tbl =
 									"bc680113-345f-6d33-add6-1f151475b614",
 									true,
 								},
+								
+								{
+									"58e96a9a-1115-d40e-a473-da54fa435a34",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuWAR3_CD",
 							ignoreWeaveRules = true,
 							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
@@ -5297,9 +6617,20 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "58e96a9a-1115-d40e-a473-da54fa435a34",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 253.4,
-				name = "CD ON",
+				name = "[ST] CD ON",
 				timelineIndex = 39,
 				timerStartOffset = -10,
 				uuid = "90680f75-a7a3-0e72-9164-a0eb3e080d7f",
@@ -5326,6 +6657,11 @@ local tbl =
 									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
 									true,
 								},
+								
+								{
+									"d193b55e-c765-e7e7-be16-e07346566678",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_AOE",
@@ -5347,7 +6683,13 @@ local tbl =
 									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
 									true,
 								},
+								
+								{
+									"d193b55e-c765-e7e7-be16-e07346566678",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_AOE",
 							ignoreWeaveRules = true,
 							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
@@ -5367,7 +6709,13 @@ local tbl =
 									"231b6a98-9a2f-8a76-bdab-236bd5622569",
 									true,
 								},
+								
+								{
+									"d193b55e-c765-e7e7-be16-e07346566678",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuDRK3_AOE",
 							ignoreWeaveRules = true,
 							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
@@ -5388,7 +6736,13 @@ local tbl =
 									"bc680113-345f-6d33-add6-1f151475b614",
 									true,
 								},
+								
+								{
+									"d193b55e-c765-e7e7-be16-e07346566678",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuWAR3_AOE",
 							ignoreWeaveRules = true,
 							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
@@ -5446,9 +6800,20 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "d193b55e-c765-e7e7-be16-e07346566678",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 253.4,
-				name = "AoE ON",
+				name = "[ST] AoE ON",
 				timelineIndex = 39,
 				timerEndOffset = 5,
 				uuid = "84012cd6-0b96-601e-bf83-32d8e05f8097",
@@ -5475,6 +6840,11 @@ local tbl =
 									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
 									true,
 								},
+								
+								{
+									"f838153d-ef76-2901-a260-5b2e40d46ee6",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_AOE",
@@ -5496,7 +6866,13 @@ local tbl =
 									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
 									true,
 								},
+								
+								{
+									"f838153d-ef76-2901-a260-5b2e40d46ee6",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_SmartAOE",
 							ignoreWeaveRules = true,
 							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
@@ -5516,7 +6892,13 @@ local tbl =
 									"231b6a98-9a2f-8a76-bdab-236bd5622569",
 									true,
 								},
+								
+								{
+									"f838153d-ef76-2901-a260-5b2e40d46ee6",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuDRK3_SmartAOE",
 							ignoreWeaveRules = true,
 							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
@@ -5537,7 +6919,13 @@ local tbl =
 									"bc680113-345f-6d33-add6-1f151475b614",
 									true,
 								},
+								
+								{
+									"f838153d-ef76-2901-a260-5b2e40d46ee6",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuWAR3_SmartAOE",
 							ignoreWeaveRules = true,
 							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
@@ -5595,15 +6983,1324 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "f838153d-ef76-2901-a260-5b2e40d46ee6",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 253.4,
-				name = "Smart AoE ON",
+				name = "[ST] Smart AoE ON",
 				timelineIndex = 39,
 				timerStartOffset = -10,
 				uuid = "c9bc0415-6a25-b301-b5b9-661b25753f38",
 				version = 2,
 			},
 			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Alert",
+							alertDuration = 22000,
+							alertScale = 2,
+							alertTTS = true,
+							alertText = "Wave 2",
+							conditions = 
+							{
+								
+								{
+									"d23845a7-1e0e-ef24-a1c4-80c572e4603f",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "5b6abe02-a682-7696-9234-78ffebec1e87",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "SendTextCommand(\"/e Wave2: MTは速やかに東フェザーにムー集団を連れて行き/ 東フェザーを倒したら西フェザーへ <se.1>\")\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"d23845a7-1e0e-ef24-a1c4-80c572e4603f",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "a2d6ae9b-4802-0a35-81d5-8f91f078e785",
+							version = 2.1,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "d23845a7-1e0e-ef24-a1c4-80c572e4603f",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 253.4,
+				name = "[MT] MT-Step-Reminder W2",
+				timelineIndex = 39,
+				uuid = "fd669ec6-71d0-bb83-876c-4abc88266649",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+								
+								{
+									"c797d4d9-a05b-5299-bf91-a3b878ceb2c6",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+								
+								{
+									"c797d4d9-a05b-5299-bf91-a3b878ceb2c6",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+								
+								{
+									"c797d4d9-a05b-5299-bf91-a3b878ceb2c6",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+								
+								{
+									"c797d4d9-a05b-5299-bf91-a3b878ceb2c6",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "c797d4d9-a05b-5299-bf91-a3b878ceb2c6",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 253.4,
+				name = "[MT] CD ON",
+				timelineIndex = 39,
+				timerStartOffset = -10,
+				uuid = "2d83b91d-e2ec-5ed8-bb0e-95b33b89f806",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+								
+								{
+									"0839f8e4-3eb4-d2a3-9f8e-360f7a05276b",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_AOE",
+							ignoreWeaveRules = true,
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+								
+								{
+									"0839f8e4-3eb4-d2a3-9f8e-360f7a05276b",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_AOE",
+							ignoreWeaveRules = true,
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+								
+								{
+									"0839f8e4-3eb4-d2a3-9f8e-360f7a05276b",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_AOE",
+							ignoreWeaveRules = true,
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+								
+								{
+									"0839f8e4-3eb4-d2a3-9f8e-360f7a05276b",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_AOE",
+							ignoreWeaveRules = true,
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "0839f8e4-3eb4-d2a3-9f8e-360f7a05276b",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 253.4,
+				name = "[MT] AoE ON",
+				timelineIndex = 39,
+				timerEndOffset = 5,
+				uuid = "e9266adf-aeb2-4f36-b102-fc8454e72ae8",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+								
+								{
+									"6db0de0e-7e44-eb1f-832d-5ff486f66069",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_AOE",
+							ignoreWeaveRules = true,
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+								
+								{
+									"6db0de0e-7e44-eb1f-832d-5ff486f66069",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_SmartAOE",
+							ignoreWeaveRules = true,
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+								
+								{
+									"6db0de0e-7e44-eb1f-832d-5ff486f66069",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_SmartAOE",
+							ignoreWeaveRules = true,
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+								
+								{
+									"6db0de0e-7e44-eb1f-832d-5ff486f66069",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_SmartAOE",
+							ignoreWeaveRules = true,
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "6db0de0e-7e44-eb1f-832d-5ff486f66069",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 253.4,
+				name = "[MT] Smart AoE ON",
+				timelineIndex = 39,
+				timerStartOffset = -10,
+				uuid = "a27f32f8-e110-d4f5-8560-edc1fd9c4a70",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+	},
+	[40] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "Player:SetTarget(data.M6SFeatherRaysLineRightUp)\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"169020c1-793f-cf51-88e3-47ed73e813d2",
+									true,
+								},
+								
+								{
+									"b9bd580c-9576-e496-a6a0-b0d3545dc9bc",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "43c338fb-1916-c79b-b31d-f92f2d2c6060",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.M6SFeatherRaysLineRightUp ~= nil",
+							uuid = "169020c1-793f-cf51-88e3-47ed73e813d2",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "b9bd580c-9576-e496-a6a0-b0d3545dc9bc",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				eventType = 12,
+				mechanicTime = 256.5,
+				name = "[MT] SelectRightUp",
+				timeRange = true,
+				timelineIndex = 40,
+				timerEndOffset = 22,
+				timerStartOffset = 4,
+				uuid = "9db740e2-e720-d33a-955a-b5a52b8393e7",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "local target  = Player:GetTarget()\nd(target.id)\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
+									true,
+								},
+								
+								{
+									"78e27cb3-1096-80c0-afc1-6607f56bd845",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "2dadaa15-8812-5e00-a9b1-744f4254d37e",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7386,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
+									true,
+								},
+								
+								{
+									"d65d00ec-0105-268d-ace7-2d367b431eea",
+									true,
+								},
+								
+								{
+									"1b564b35-638f-3e37-8800-9fb551bfe6d2",
+									true,
+								},
+								
+								{
+									"78e27cb3-1096-80c0-afc1-6607f56bd845",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "2d012730-d487-9fb8-81b6-66af39a29bba",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16461,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
+									true,
+								},
+								
+								{
+									"141bab94-d7aa-79e7-9987-f20285c48bb1",
+									true,
+								},
+								
+								{
+									"1b564b35-638f-3e37-8800-9fb551bfe6d2",
+									true,
+								},
+								
+								{
+									"78e27cb3-1096-80c0-afc1-6607f56bd845",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "4ba76f6c-741d-feab-b500-b08ad7b97c5b",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36926,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
+									true,
+								},
+								
+								{
+									"058998a0-28fc-7f7e-b215-5d374c803274",
+									true,
+								},
+								
+								{
+									"1b564b35-638f-3e37-8800-9fb551bfe6d2",
+									true,
+								},
+								
+								{
+									"78e27cb3-1096-80c0-afc1-6607f56bd845",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "c7be4aad-5362-c644-8cd3-e1700a519ae1",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36934,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
+									true,
+								},
+								
+								{
+									"d9dbed19-25f5-7a0e-b7fa-ec367904db22",
+									true,
+								},
+								
+								{
+									"1b564b35-638f-3e37-8800-9fb551bfe6d2",
+									true,
+								},
+								
+								{
+									"78e27cb3-1096-80c0-afc1-6607f56bd845",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "cf600fc3-8a2b-2639-ae39-fdaa4595eb7f",
+							version = 2.1,
+						},
+						inheritedIndex = 4,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.M6SFeatherRaysLineRightUp ~= nil and Player:GetTarget().id == data.M6SFeatherRaysLineRightUp",
+							name = "Ckeck if target is (RightUpFey)",
+							uuid = "8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "WARRIOR",
+							name = "Warrior",
+							uuid = "d65d00ec-0105-268d-ace7-2d367b431eea",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "Paladin",
+							uuid = "141bab94-d7aa-79e7-9987-f20285c48bb1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "Darkknight",
+							uuid = "058998a0-28fc-7f7e-b215-5d374c803274",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "Gunbreaker",
+							uuid = "d9dbed19-25f5-7a0e-b7fa-ec367904db22",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 2,
+							contentid = 13834,
+							uuid = "1b564b35-638f-3e37-8800-9fb551bfe6d2",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "78e27cb3-1096-80c0-afc1-6607f56bd845",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				eventType = 12,
+				mechanicTime = 256.5,
+				name = "[MT] Instant Dash towards Fey",
+				timeRange = true,
+				timelineIndex = 40,
+				timerEndOffset = 22,
+				timerStartOffset = 5.5,
+				uuid = "70fd24a7-b211-9920-8adf-9344eca8727f",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							conditions = 
+							{
+								
+								{
+									"4032ed2a-58f3-b158-9a6e-5dbaeba022dc",
+									true,
+								},
+								
+								{
+									"01d39de9-2218-25a2-b698-da0fd8fa34b0",
+									true,
+								},
+								
+								{
+									"62a35967-982c-3cf7-b71f-ff01da529bf8",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							holdActionDuration = 30,
+							holdActionID = 16461,
+							uuid = "a4990b20-49d1-3d77-bf22-79fefd186146",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							conditions = 
+							{
+								
+								{
+									"4032ed2a-58f3-b158-9a6e-5dbaeba022dc",
+									true,
+								},
+								
+								{
+									"8e350aa5-d6e2-514f-a42f-efc991a52a09",
+									true,
+								},
+								
+								{
+									"62a35967-982c-3cf7-b71f-ff01da529bf8",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							holdActionDuration = 30,
+							holdActionID = 7386,
+							uuid = "fe652ec0-fe5d-622d-87df-0e1431d2be6b",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							buffID = 4454,
+							category = "Self",
+							uuid = "4032ed2a-58f3-b158-9a6e-5dbaeba022dc",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "01d39de9-2218-25a2-b698-da0fd8fa34b0",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "8e350aa5-d6e2-514f-a42f-efc991a52a09",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "62a35967-982c-3cf7-b71f-ff01da529bf8",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 256.5,
+				name = "[MT] Hold Jump",
+				timeRange = true,
+				timelineIndex = 40,
+				timerStartOffset = -30,
+				uuid = "08bd55cb-4149-e9fb-8558-b3dfda933d5e",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[41] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16141,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+								
+								{
+									"1666dd93-6008-9426-8303-7835d08b1b2e",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_AOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							targetContentID = 13831,
+							targetSubType = "Highest HP",
+							targetType = "ContentID",
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7381,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+								
+								{
+									"1666dd93-6008-9426-8303-7835d08b1b2e",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_SmartAOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							targetContentID = 13831,
+							targetSubType = "Highest HP",
+							targetType = "ContentID",
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 3621,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+								
+								{
+									"1666dd93-6008-9426-8303-7835d08b1b2e",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_SmartAOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							targetContentID = 13831,
+							targetSubType = "Highest HP",
+							targetType = "ContentID",
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 41,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+								
+								{
+									"1666dd93-6008-9426-8303-7835d08b1b2e",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_SmartAOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							targetContentID = 13831,
+							targetSubType = "Highest HP",
+							targetType = "ContentID",
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "1666dd93-6008-9426-8303-7835d08b1b2e",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 256.5,
+				name = "[MT] AoE Mu",
+				timeRange = true,
+				timelineIndex = 41,
+				timerEndOffset = 5,
+				timerStartOffset = 1,
+				uuid = "17bef7f7-898c-15cf-b4e1-d52e195e76b0",
+				version = 2,
+			},
 		},
 	},
 	[42] = 
@@ -5623,6 +8320,14 @@ local tbl =
 							alertScale = 2,
 							alertTTS = true,
 							alertText = "Wave 3",
+							conditions = 
+							{
+								
+								{
+									"621559cd-2d92-7275-8f96-45987a6dbb50",
+									true,
+								},
+							},
 							gVar = "ACR_RikuGNB3_CD",
 							uuid = "5b6abe02-a682-7696-9234-78ffebec1e87",
 							version = 2.1,
@@ -5635,6 +8340,14 @@ local tbl =
 						{
 							aType = "Lua",
 							actionLua = "SendTextCommand(\"/e Wave3: ST担当:北ヤーン(AA素受け8万ダメージ) <se.1>\")\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"621559cd-2d92-7275-8f96-45987a6dbb50",
+									true,
+								},
+							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
 							uuid = "a2d6ae9b-4802-0a35-81d5-8f91f078e785",
@@ -5644,9 +8357,20 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "621559cd-2d92-7275-8f96-45987a6dbb50",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 275.5,
-				name = "ST-Step-Reminder W3",
+				name = "[ST] ST-Step-Reminder W3",
 				timelineIndex = 42,
 				uuid = "f552cd85-552d-6f8b-bfc0-5d69ba19c013",
 				version = 2,
@@ -5676,6 +8400,11 @@ local tbl =
 									"46cb0109-6c3a-2f84-a2c4-31984cecfea2",
 									true,
 								},
+								
+								{
+									"fababb3e-c91b-d5bf-893e-945e70f83f69",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -5701,7 +8430,13 @@ local tbl =
 									"c87032d2-c148-cb6a-9a76-9a849a23a2b1",
 									true,
 								},
+								
+								{
+									"fababb3e-c91b-d5bf-893e-945e70f83f69",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
 							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
@@ -5725,7 +8460,13 @@ local tbl =
 									"18f1b609-641e-ed19-9e7e-897be06b8984",
 									true,
 								},
+								
+								{
+									"fababb3e-c91b-d5bf-893e-945e70f83f69",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
 							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
@@ -5750,7 +8491,13 @@ local tbl =
 									"bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
 									true,
 								},
+								
+								{
+									"fababb3e-c91b-d5bf-893e-945e70f83f69",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuWAR3_CD",
 							ignoreWeaveRules = true,
 							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
@@ -5862,9 +8609,20 @@ local tbl =
 						},
 						inheritedIndex = 8,
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "fababb3e-c91b-d5bf-893e-945e70f83f69",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 275.5,
-				name = "Stance ON",
+				name = "[ST] Stance ON",
 				timeRange = true,
 				timelineIndex = 42,
 				timerEndOffset = 5,
@@ -5894,7 +8652,13 @@ local tbl =
 									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
 									true,
 								},
+								
+								{
+									"d8eb9a36-53bd-a7ff-b7b6-42a0a7d90ff4",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
 							gVarValue = 2,
 							ignoreWeaveRules = true,
@@ -5915,7 +8679,13 @@ local tbl =
 									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
 									true,
 								},
+								
+								{
+									"d8eb9a36-53bd-a7ff-b7b6-42a0a7d90ff4",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
 							gVarValue = 2,
 							ignoreWeaveRules = true,
@@ -5936,7 +8706,13 @@ local tbl =
 									"231b6a98-9a2f-8a76-bdab-236bd5622569",
 									true,
 								},
+								
+								{
+									"d8eb9a36-53bd-a7ff-b7b6-42a0a7d90ff4",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuDRK3_CD",
 							gVarValue = 2,
 							ignoreWeaveRules = true,
@@ -5958,7 +8734,13 @@ local tbl =
 									"bc680113-345f-6d33-add6-1f151475b614",
 									true,
 								},
+								
+								{
+									"d8eb9a36-53bd-a7ff-b7b6-42a0a7d90ff4",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuWAR3_CD",
 							gVarValue = 2,
 							ignoreWeaveRules = true,
@@ -6017,9 +8799,20 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "d8eb9a36-53bd-a7ff-b7b6-42a0a7d90ff4",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 275.5,
-				name = "CD OFF",
+				name = "[ST] CD OFF",
 				timelineIndex = 42,
 				timerStartOffset = -10,
 				uuid = "a778ce97-6ff9-451e-94c6-c566ed62284b",
@@ -6046,6 +8839,11 @@ local tbl =
 									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
 									true,
 								},
+								
+								{
+									"96b6c49c-5f4b-e963-9663-55c305b81e6f",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_AOE",
@@ -6068,7 +8866,13 @@ local tbl =
 									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
 									true,
 								},
+								
+								{
+									"96b6c49c-5f4b-e963-9663-55c305b81e6f",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_AOE",
 							gVarValue = 2,
 							ignoreWeaveRules = true,
@@ -6089,7 +8893,13 @@ local tbl =
 									"231b6a98-9a2f-8a76-bdab-236bd5622569",
 									true,
 								},
+								
+								{
+									"96b6c49c-5f4b-e963-9663-55c305b81e6f",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuDRK3_AOE",
 							gVarValue = 2,
 							ignoreWeaveRules = true,
@@ -6111,7 +8921,13 @@ local tbl =
 									"bc680113-345f-6d33-add6-1f151475b614",
 									true,
 								},
+								
+								{
+									"96b6c49c-5f4b-e963-9663-55c305b81e6f",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuWAR3_AOE",
 							gVarValue = 2,
 							ignoreWeaveRules = true,
@@ -6170,9 +8986,20 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "96b6c49c-5f4b-e963-9663-55c305b81e6f",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 275.5,
-				name = "AoE OFF",
+				name = "[ST] AoE OFF",
 				timelineIndex = 42,
 				timerStartOffset = -10,
 				uuid = "1fe0e194-0e0d-2a5e-b219-b7f8790647fe",
@@ -6198,6 +9025,11 @@ local tbl =
 									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
 									true,
 								},
+								
+								{
+									"2bced2b5-019a-b529-bb5a-fea417fe81ca",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_AOE",
@@ -6220,7 +9052,13 @@ local tbl =
 									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
 									true,
 								},
+								
+								{
+									"2bced2b5-019a-b529-bb5a-fea417fe81ca",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_SmartAOE",
 							gVarValue = 2,
 							ignoreWeaveRules = true,
@@ -6241,7 +9079,13 @@ local tbl =
 									"231b6a98-9a2f-8a76-bdab-236bd5622569",
 									true,
 								},
+								
+								{
+									"2bced2b5-019a-b529-bb5a-fea417fe81ca",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuDRK3_SmartAOE",
 							gVarValue = 2,
 							ignoreWeaveRules = true,
@@ -6263,7 +9107,13 @@ local tbl =
 									"bc680113-345f-6d33-add6-1f151475b614",
 									true,
 								},
+								
+								{
+									"2bced2b5-019a-b529-bb5a-fea417fe81ca",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuWAR3_SmartAOE",
 							gVarValue = 2,
 							ignoreWeaveRules = true,
@@ -6322,9 +9172,20 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "2bced2b5-019a-b529-bb5a-fea417fe81ca",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 275.5,
-				name = "Smart AoE OFF",
+				name = "[ST] Smart AoE OFF",
 				timelineIndex = 42,
 				timerStartOffset = -10,
 				uuid = "a11adf04-bee5-d4a4-b4dd-d98288f08da3",
@@ -6343,6 +9204,14 @@ local tbl =
 						data = 
 						{
 							actionID = 7537,
+							conditions = 
+							{
+								
+								{
+									"53bdd55d-86da-d1c3-95ac-3711665df07d",
+									true,
+								},
+							},
 							gVar = "ACR_RikuPLD3_Hotbar_ShirkOT",
 							ignoreWeaveRules = true,
 							targetType = "Other Tank",
@@ -6354,9 +9223,20 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "53bdd55d-86da-d1c3-95ac-3711665df07d",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 275.5,
-				name = "Shirk OT",
+				name = "[ST] Shirk OT",
 				timeRange = true,
 				timelineIndex = 42,
 				timerEndOffset = 2,
@@ -6377,6 +9257,14 @@ local tbl =
 						data = 
 						{
 							aType = "Misc",
+							conditions = 
+							{
+								
+								{
+									"2cc2471b-4442-0c57-95f4-64bfe5617fb4",
+									true,
+								},
+							},
 							gVar = "ACR_RikuPLD3_CD",
 							untarget = true,
 							uuid = "e10d64ca-4f50-9708-beb5-8aef1eea180f",
@@ -6386,9 +9274,20 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "2cc2471b-4442-0c57-95f4-64bfe5617fb4",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 275.5,
-				name = "Target OFF",
+				name = "[ST] Target OFF",
 				timeRange = true,
 				timelineIndex = 42,
 				timerEndOffset = 1,
@@ -6396,6 +9295,641 @@ local tbl =
 				uuid = "17f4fde8-89f5-91df-b2f1-462ad4b96f21",
 				version = 2,
 			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Alert",
+							alertDuration = 39000,
+							alertScale = 2,
+							alertTTS = true,
+							alertText = "Wave 3",
+							conditions = 
+							{
+								
+								{
+									"b08429e0-4d05-ad69-a0fd-70c6c85c86f8",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "5b6abe02-a682-7696-9234-78ffebec1e87",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "SendTextCommand(\"/e Wave3: MTはジャバの進行に合わせてムーを引き連れて範囲焼きできるようにする <se.1>\")\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"b08429e0-4d05-ad69-a0fd-70c6c85c86f8",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "a2d6ae9b-4802-0a35-81d5-8f91f078e785",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "b08429e0-4d05-ad69-a0fd-70c6c85c86f8",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 275.5,
+				name = "[MT] MT-Step-Reminder W3",
+				timelineIndex = 42,
+				uuid = "5be0b0d2-9dad-2ae7-a651-52fc383dafc4",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+								
+								{
+									"8c04d1e6-194b-3171-9b70-0f3d59d3cd6e",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+								
+								{
+									"8c04d1e6-194b-3171-9b70-0f3d59d3cd6e",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+								
+								{
+									"8c04d1e6-194b-3171-9b70-0f3d59d3cd6e",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_CD",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+								
+								{
+									"8c04d1e6-194b-3171-9b70-0f3d59d3cd6e",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "8c04d1e6-194b-3171-9b70-0f3d59d3cd6e",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 275.5,
+				name = "[MT] CD OFF",
+				timelineIndex = 42,
+				timerStartOffset = -10,
+				uuid = "8c3a3e7d-4522-ee3b-9daa-67e57ce6a1d8",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+								
+								{
+									"95405c64-0923-1f69-96f1-6203745b9330",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_AOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+								
+								{
+									"95405c64-0923-1f69-96f1-6203745b9330",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_AOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+								
+								{
+									"95405c64-0923-1f69-96f1-6203745b9330",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_AOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+								
+								{
+									"95405c64-0923-1f69-96f1-6203745b9330",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_AOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "95405c64-0923-1f69-96f1-6203745b9330",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 275.5,
+				name = "[MT] AoE OFF",
+				timelineIndex = 42,
+				timerOffset = 12,
+				timerStartOffset = -10,
+				uuid = "45a1eab3-cd5d-7568-a3ff-87b89e4ce378",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+								
+								{
+									"35190014-0c8b-8bfc-9f69-f34ac297c795",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_AOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+								
+								{
+									"35190014-0c8b-8bfc-9f69-f34ac297c795",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_SmartAOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+								
+								{
+									"35190014-0c8b-8bfc-9f69-f34ac297c795",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_SmartAOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+								
+								{
+									"35190014-0c8b-8bfc-9f69-f34ac297c795",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_SmartAOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "35190014-0c8b-8bfc-9f69-f34ac297c795",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 275.5,
+				name = "[MT] Smart AoE OFF",
+				timelineIndex = 42,
+				timerOffset = 12,
+				timerStartOffset = -10,
+				uuid = "c282850f-23f5-8d5f-af0e-32dcf0fab278",
+				version = 2,
+			},
+			inheritedIndex = 5,
 		},
 	},
 	[43] = 
@@ -6411,6 +9945,14 @@ local tbl =
 						data = 
 						{
 							aType = "Misc",
+							conditions = 
+							{
+								
+								{
+									"e2453a46-d830-5e1b-8873-ce514ecfeedb",
+									true,
+								},
+							},
 							gVar = "ACR_RikuGNB3_CD",
 							setTarget = true,
 							targetContentID = 13832,
@@ -6427,6 +9969,14 @@ local tbl =
 						{
 							actionID = 7533,
 							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"e2453a46-d830-5e1b-8873-ce514ecfeedb",
+									true,
+								},
+							},
 							gVar = "ACR_RikuGNB3_CD",
 							ignoreWeaveRules = true,
 							targetContentID = 13832,
@@ -6441,9 +9991,20 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "e2453a46-d830-5e1b-8873-ce514ecfeedb",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 278.6,
-				name = "Target Yan",
+				name = "[ST] Target Yan",
 				timeRange = true,
 				timelineIndex = 43,
 				timerEndOffset = 3,
@@ -6451,6 +10012,260 @@ local tbl =
 				uuid = "e0f4e3d1-ca07-f78a-938b-a5fe8dce10f9",
 				version = 2,
 			},
+		},
+	},
+	[45] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7540,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"877de244-ea71-0cb1-a3cf-3f1febd4e668",
+									true,
+								},
+								
+								{
+									"f2b157f7-3ea2-a37e-a871-a8fa2ae83fd1",
+									true,
+								},
+								
+								{
+									"51e93b0b-939c-59cd-881f-f26f006bbac0",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 13833,
+							targetName = "ジャバウォック",
+							targetType = "ContentID",
+							uuid = "15c15134-7142-d2d9-8705-5804d86f777d",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"de384013-3bbf-f463-96a3-16c956198004",
+									true,
+								},
+								
+								{
+									"877de244-ea71-0cb1-a3cf-3f1febd4e668",
+									true,
+								},
+								
+								{
+									"f2b157f7-3ea2-a37e-a871-a8fa2ae83fd1",
+									true,
+								},
+								
+								{
+									"42726422-a374-dae9-b83e-5c77d958ea55",
+									true,
+								},
+								
+								{
+									"51e93b0b-939c-59cd-881f-f26f006bbac0",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 13833,
+							targetType = "ContentID",
+							uuid = "da4d9478-385c-de11-8dd0-d296b8882dd1",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								19,
+							},
+							name = "is PLD",
+							uuid = "de384013-3bbf-f463-96a3-16c956198004",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 2,
+							contentid = 13833,
+							uuid = "877de244-ea71-0cb1-a3cf-3f1febd4e668",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2,
+							},
+							uuid = "f2b157f7-3ea2-a37e-a871-a8fa2ae83fd1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionCDValue = 1,
+							actionID = 7540,
+							category = "Self",
+							conditionType = 4,
+							uuid = "42726422-a374-dae9-b83e-5c77d958ea55",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "51e93b0b-939c-59cd-881f-f26f006bbac0",
+							version = 2,
+						},
+					},
+				},
+				eventType = 12,
+				loop = true,
+				mechanicTime = 286.6,
+				name = "[MT] Stun Jabberwock",
+				timeRange = true,
+				timelineIndex = 45,
+				timerEndOffset = 20,
+				timerStartOffset = 2,
+				uuid = "bbc426c0-313c-3fe5-a26e-dfc8a9d74288",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7535,
+							conditions = 
+							{
+								
+								{
+									"5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+									true,
+								},
+								
+								{
+									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									true,
+								},
+								
+								{
+									"2c91acca-d550-f2ab-921f-7fec3aa11a92",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "c9c9cc18-aa2e-c48a-bebe-6ab6f4e7c114",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1193,
+							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 6,
+							dequeueIfLuaFalse = true,
+							inRangeValue = 5,
+							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "2c91acca-d550-f2ab-921f-7fec3aa11a92",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 286.6,
+				name = "[MT] Reprisal",
+				randomOffset = -2,
+				timeRange = true,
+				timelineIndex = 45,
+				timerEndOffset = 39,
+				timerOffset = -3,
+				timerStartOffset = 5,
+				uuid = "e9745896-9c25-51a9-a3fe-ddd9b93ec3c8",
+				version = 2,
+			},
+			inheritedIndex = 3,
 		},
 	},
 	[46] = 
@@ -6915,6 +10730,14 @@ local tbl =
 							alertScale = 2,
 							alertTTS = true,
 							alertText = "Wave 4",
+							conditions = 
+							{
+								
+								{
+									"3df9f216-799e-7527-a0a2-f1b9360e07e8",
+									true,
+								},
+							},
 							gVar = "ACR_RikuGNB3_CD",
 							uuid = "5b6abe02-a682-7696-9234-78ffebec1e87",
 							version = 2.1,
@@ -6927,6 +10750,14 @@ local tbl =
 						{
 							aType = "Lua",
 							actionLua = "SendTextCommand(\"/e Wave4: ST担当:Wave3残ヤーン+北.新ヤーン /ジャバのスタンはST→D1→D2 <se.1>\")\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"3df9f216-799e-7527-a0a2-f1b9360e07e8",
+									true,
+								},
+							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
 							uuid = "a2d6ae9b-4802-0a35-81d5-8f91f078e785",
@@ -6936,9 +10767,20 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "3df9f216-799e-7527-a0a2-f1b9360e07e8",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 314.6,
-				name = "ST-Step-Reminder W4",
+				name = "[ST] ST-Step-Reminder W4",
 				timelineIndex = 47,
 				uuid = "00f16cae-43ad-e2d4-a5cc-47098d91ff48",
 				version = 2,
@@ -6964,7 +10806,13 @@ local tbl =
 									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
 									true,
 								},
+								
+								{
+									"b216f492-a281-a8ac-8f34-38bc723e55e0",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
 							ignoreWeaveRules = true,
 							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
@@ -6984,7 +10832,13 @@ local tbl =
 									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
 									true,
 								},
+								
+								{
+									"b216f492-a281-a8ac-8f34-38bc723e55e0",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
 							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
@@ -7004,7 +10858,13 @@ local tbl =
 									"231b6a98-9a2f-8a76-bdab-236bd5622569",
 									true,
 								},
+								
+								{
+									"b216f492-a281-a8ac-8f34-38bc723e55e0",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
 							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
@@ -7025,7 +10885,13 @@ local tbl =
 									"bc680113-345f-6d33-add6-1f151475b614",
 									true,
 								},
+								
+								{
+									"b216f492-a281-a8ac-8f34-38bc723e55e0",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuWAR3_CD",
 							ignoreWeaveRules = true,
 							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
@@ -7083,9 +10949,20 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "b216f492-a281-a8ac-8f34-38bc723e55e0",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 314.6,
-				name = "CD ON",
+				name = "[ST] CD ON",
 				timelineIndex = 47,
 				timerStartOffset = -10,
 				uuid = "02565f2d-f51f-578c-bf4c-5bb841021807",
@@ -7111,7 +10988,13 @@ local tbl =
 									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
 									true,
 								},
+								
+								{
+									"06523473-e30f-904d-8142-3f9b0b30d5f6",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_Potion",
 							ignoreWeaveRules = true,
 							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
@@ -7131,7 +11014,13 @@ local tbl =
 									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
 									true,
 								},
+								
+								{
+									"06523473-e30f-904d-8142-3f9b0b30d5f6",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_Potion",
 							ignoreWeaveRules = true,
 							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
@@ -7151,7 +11040,13 @@ local tbl =
 									"231b6a98-9a2f-8a76-bdab-236bd5622569",
 									true,
 								},
+								
+								{
+									"06523473-e30f-904d-8142-3f9b0b30d5f6",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuDRK3_Potion",
 							ignoreWeaveRules = true,
 							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
@@ -7172,7 +11067,13 @@ local tbl =
 									"bc680113-345f-6d33-add6-1f151475b614",
 									true,
 								},
+								
+								{
+									"06523473-e30f-904d-8142-3f9b0b30d5f6",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuWAR3_Potion",
 							ignoreWeaveRules = true,
 							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
@@ -7230,12 +11131,1203 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "06523473-e30f-904d-8142-3f9b0b30d5f6",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 314.6,
-				name = "Potion ON",
+				name = "[ST] Potion ON",
 				timelineIndex = 47,
 				timerStartOffset = -10,
 				uuid = "7c52282d-7b8e-a4d5-8705-5755c0eaa3d6",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Alert",
+							alertDuration = 104000,
+							alertScale = 2,
+							alertTTS = true,
+							alertText = "Wave 4",
+							conditions = 
+							{
+								
+								{
+									"71a5a703-eec1-478d-927c-ac0ded23b1b0",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "5b6abe02-a682-7696-9234-78ffebec1e87",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "SendTextCommand(\"/e Wave4: ジャバ即殺後、東西のフェザーサークルを倒す <se.1>\")\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"71a5a703-eec1-478d-927c-ac0ded23b1b0",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "a2d6ae9b-4802-0a35-81d5-8f91f078e785",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "71a5a703-eec1-478d-927c-ac0ded23b1b0",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 314.6,
+				name = "[MT] MT-Step-Reminder W4",
+				timelineIndex = 47,
+				uuid = "5a3d45a9-174c-64c1-b0d4-23ed46eac321",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+								
+								{
+									"6758ab6a-2fbc-038c-8b4c-b42f57e206cd",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+								
+								{
+									"6758ab6a-2fbc-038c-8b4c-b42f57e206cd",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+								
+								{
+									"6758ab6a-2fbc-038c-8b4c-b42f57e206cd",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+								
+								{
+									"6758ab6a-2fbc-038c-8b4c-b42f57e206cd",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "6758ab6a-2fbc-038c-8b4c-b42f57e206cd",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 314.6,
+				name = "[MT] CD ON",
+				timelineIndex = 47,
+				timerStartOffset = -10,
+				uuid = "e8d2d585-7d8c-1f1f-8640-67c11ae75bcf",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+								
+								{
+									"d2249e5e-8215-b977-b583-c95a90672a7e",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_AOE",
+							ignoreWeaveRules = true,
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+								
+								{
+									"d2249e5e-8215-b977-b583-c95a90672a7e",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_AOE",
+							ignoreWeaveRules = true,
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+								
+								{
+									"d2249e5e-8215-b977-b583-c95a90672a7e",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_AOE",
+							ignoreWeaveRules = true,
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+								
+								{
+									"d2249e5e-8215-b977-b583-c95a90672a7e",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_AOE",
+							ignoreWeaveRules = true,
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+						inheritedIndex = 4,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "d2249e5e-8215-b977-b583-c95a90672a7e",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 314.6,
+				name = "[MT] AoE ON",
+				timelineIndex = 47,
+				timerEndOffset = 5,
+				uuid = "f6d545c5-d31a-99d2-970c-4ace5bc3e855",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+								
+								{
+									"90140104-2264-69df-b685-9113d5f1a480",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_AOE",
+							ignoreWeaveRules = true,
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+								
+								{
+									"90140104-2264-69df-b685-9113d5f1a480",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_SmartAOE",
+							ignoreWeaveRules = true,
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+								
+								{
+									"90140104-2264-69df-b685-9113d5f1a480",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_SmartAOE",
+							ignoreWeaveRules = true,
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+								
+								{
+									"90140104-2264-69df-b685-9113d5f1a480",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_SmartAOE",
+							ignoreWeaveRules = true,
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "90140104-2264-69df-b685-9113d5f1a480",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 314.6,
+				name = "[MT] Smart AoE ON",
+				timelineIndex = 47,
+				timerStartOffset = -10,
+				uuid = "67bdfdc5-4f02-f1de-83c6-09b381871882",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+								
+								{
+									"17c7952a-c96f-1efa-b645-b418bfc76b69",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_AOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+								
+								{
+									"17c7952a-c96f-1efa-b645-b418bfc76b69",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_AOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+								
+								{
+									"17c7952a-c96f-1efa-b645-b418bfc76b69",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_AOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+								
+								{
+									"17c7952a-c96f-1efa-b645-b418bfc76b69",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_AOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "17c7952a-c96f-1efa-b645-b418bfc76b69",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 314.6,
+				name = "[MT] AoE OFF",
+				timelineIndex = 47,
+				timerOffset = 12,
+				timerStartOffset = -10,
+				uuid = "4497b659-c674-ae55-bd70-64aab18e1e1a",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+								
+								{
+									"22476102-0515-00ba-acd7-88bf6d0123cf",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_AOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+								
+								{
+									"22476102-0515-00ba-acd7-88bf6d0123cf",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_SmartAOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+								
+								{
+									"22476102-0515-00ba-acd7-88bf6d0123cf",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_SmartAOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+								
+								{
+									"22476102-0515-00ba-acd7-88bf6d0123cf",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_SmartAOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "22476102-0515-00ba-acd7-88bf6d0123cf",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 314.6,
+				name = "[MT] Smart AoE OFF",
+				timelineIndex = 47,
+				timerOffset = 12,
+				timerStartOffset = -10,
+				uuid = "7c5b7c58-31bd-238d-90b9-54120e1dd6ea",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+								
+								{
+									"722a1f60-621d-88b7-8eb2-ba044edc3cda",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_Potion",
+							ignoreWeaveRules = true,
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+								
+								{
+									"722a1f60-621d-88b7-8eb2-ba044edc3cda",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_Potion",
+							ignoreWeaveRules = true,
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+								
+								{
+									"722a1f60-621d-88b7-8eb2-ba044edc3cda",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_Potion",
+							ignoreWeaveRules = true,
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+								
+								{
+									"722a1f60-621d-88b7-8eb2-ba044edc3cda",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_Potion",
+							ignoreWeaveRules = true,
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "722a1f60-621d-88b7-8eb2-ba044edc3cda",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 314.6,
+				name = "[MT] Potion ON",
+				timelineIndex = 47,
+				timerStartOffset = -10,
+				uuid = "e96aa03b-0645-41bf-88ed-3fe58bf94959",
 				version = 2,
 			},
 		},
@@ -7254,6 +12346,14 @@ local tbl =
 						{
 							actionID = 7533,
 							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"0bdc53c0-561d-8090-98e9-da371506a50a",
+									true,
+								},
+							},
 							gVar = "ACR_RikuGNB3_CD",
 							ignoreWeaveRules = true,
 							targetContentID = 13832,
@@ -7267,9 +12367,20 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "0bdc53c0-561d-8090-98e9-da371506a50a",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 317.7,
-				name = "Target Yan",
+				name = "[ST] Target Yan",
 				timeRange = true,
 				timelineIndex = 48,
 				timerEndOffset = 5,
@@ -7289,6 +12400,14 @@ local tbl =
 						data = 
 						{
 							aType = "Misc",
+							conditions = 
+							{
+								
+								{
+									"5e02370b-89f9-a6e1-81eb-bfe30b552f1b",
+									true,
+								},
+							},
 							gVar = "ACR_RikuGNB3_CD",
 							ignoreWeaveRules = true,
 							potType = 4,
@@ -7301,14 +12420,702 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "5e02370b-89f9-a6e1-81eb-bfe30b552f1b",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 317.7,
-				name = "Potion",
+				name = "[ST] Potion",
 				timeRange = true,
 				timelineIndex = 48,
 				timerEndOffset = 5,
 				timerStartOffset = 2,
 				uuid = "d31c8b8c-434c-c250-87d7-fd3890bcf8bd",
+				version = 2,
+			},
+		},
+	},
+	[49] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "Player:SetTarget(data.M6SFeatherRaysLineRightUp)\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"169020c1-793f-cf51-88e3-47ed73e813d2",
+									true,
+								},
+								
+								{
+									"b9bd580c-9576-e496-a6a0-b0d3545dc9bc",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "43c338fb-1916-c79b-b31d-f92f2d2c6060",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.M6SFeatherRaysLineRightUp ~= nil",
+							uuid = "169020c1-793f-cf51-88e3-47ed73e813d2",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "b9bd580c-9576-e496-a6a0-b0d3545dc9bc",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				eventType = 12,
+				mechanicTime = 317.7,
+				name = "[MT] SelectRightUp",
+				timeRange = true,
+				timelineIndex = 49,
+				timerEndOffset = 22,
+				timerStartOffset = 4,
+				uuid = "be90150e-5297-6b28-b02f-a16762ab8457",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "local target  = Player:GetTarget()\nd(target.id)\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
+									true,
+								},
+								
+								{
+									"78e27cb3-1096-80c0-afc1-6607f56bd845",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "2dadaa15-8812-5e00-a9b1-744f4254d37e",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7386,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
+									true,
+								},
+								
+								{
+									"d65d00ec-0105-268d-ace7-2d367b431eea",
+									true,
+								},
+								
+								{
+									"1b564b35-638f-3e37-8800-9fb551bfe6d2",
+									true,
+								},
+								
+								{
+									"78e27cb3-1096-80c0-afc1-6607f56bd845",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "2d012730-d487-9fb8-81b6-66af39a29bba",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16461,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
+									true,
+								},
+								
+								{
+									"141bab94-d7aa-79e7-9987-f20285c48bb1",
+									true,
+								},
+								
+								{
+									"1b564b35-638f-3e37-8800-9fb551bfe6d2",
+									true,
+								},
+								
+								{
+									"78e27cb3-1096-80c0-afc1-6607f56bd845",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "4ba76f6c-741d-feab-b500-b08ad7b97c5b",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36926,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
+									true,
+								},
+								
+								{
+									"058998a0-28fc-7f7e-b215-5d374c803274",
+									true,
+								},
+								
+								{
+									"1b564b35-638f-3e37-8800-9fb551bfe6d2",
+									true,
+								},
+								
+								{
+									"78e27cb3-1096-80c0-afc1-6607f56bd845",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "c7be4aad-5362-c644-8cd3-e1700a519ae1",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36934,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
+									true,
+								},
+								
+								{
+									"d9dbed19-25f5-7a0e-b7fa-ec367904db22",
+									true,
+								},
+								
+								{
+									"1b564b35-638f-3e37-8800-9fb551bfe6d2",
+									true,
+								},
+								
+								{
+									"78e27cb3-1096-80c0-afc1-6607f56bd845",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "cf600fc3-8a2b-2639-ae39-fdaa4595eb7f",
+							version = 2.1,
+						},
+						inheritedIndex = 4,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.M6SFeatherRaysLineRightUp ~= nil and Player:GetTarget().id == data.M6SFeatherRaysLineRightUp",
+							name = "Ckeck if target is (RightUpFey)",
+							uuid = "8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "WARRIOR",
+							name = "Warrior",
+							uuid = "d65d00ec-0105-268d-ace7-2d367b431eea",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "Paladin",
+							uuid = "141bab94-d7aa-79e7-9987-f20285c48bb1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "Darkknight",
+							uuid = "058998a0-28fc-7f7e-b215-5d374c803274",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "Gunbreaker",
+							uuid = "d9dbed19-25f5-7a0e-b7fa-ec367904db22",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 2,
+							contentid = 13834,
+							uuid = "1b564b35-638f-3e37-8800-9fb551bfe6d2",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "78e27cb3-1096-80c0-afc1-6607f56bd845",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				eventType = 12,
+				mechanicTime = 317.7,
+				name = "[MT] Instant Dash towards Fey",
+				timeRange = true,
+				timelineIndex = 49,
+				timerEndOffset = 22,
+				timerStartOffset = 5.5,
+				uuid = "8bc674b8-d990-ee7a-9715-5f75cc40515e",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							conditions = 
+							{
+								
+								{
+									"4032ed2a-58f3-b158-9a6e-5dbaeba022dc",
+									true,
+								},
+								
+								{
+									"01d39de9-2218-25a2-b698-da0fd8fa34b0",
+									true,
+								},
+								
+								{
+									"62a35967-982c-3cf7-b71f-ff01da529bf8",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							holdActionDuration = 30,
+							holdActionID = 16461,
+							uuid = "a4990b20-49d1-3d77-bf22-79fefd186146",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							conditions = 
+							{
+								
+								{
+									"4032ed2a-58f3-b158-9a6e-5dbaeba022dc",
+									true,
+								},
+								
+								{
+									"8e350aa5-d6e2-514f-a42f-efc991a52a09",
+									true,
+								},
+								
+								{
+									"62a35967-982c-3cf7-b71f-ff01da529bf8",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							holdActionDuration = 30,
+							holdActionID = 7386,
+							uuid = "fe652ec0-fe5d-622d-87df-0e1431d2be6b",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							buffID = 4454,
+							category = "Self",
+							uuid = "4032ed2a-58f3-b158-9a6e-5dbaeba022dc",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "01d39de9-2218-25a2-b698-da0fd8fa34b0",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "8e350aa5-d6e2-514f-a42f-efc991a52a09",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "62a35967-982c-3cf7-b71f-ff01da529bf8",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 317.7,
+				name = "[MT] Hold Jump",
+				timeRange = true,
+				timelineIndex = 49,
+				timerStartOffset = -30,
+				uuid = "504dc3c9-c0b2-03a3-8c4d-8e69dd084671",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[50] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16141,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+									true,
+								},
+								
+								{
+									"8ba874ee-ca69-1909-887c-e5c0bf99334b",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_AOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							targetContentID = 13831,
+							targetSubType = "Highest HP",
+							targetType = "ContentID",
+							uuid = "834ffe62-a24a-c99d-a9b4-506439136125",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7381,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+								
+								{
+									"8ba874ee-ca69-1909-887c-e5c0bf99334b",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_SmartAOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							targetContentID = 13831,
+							targetSubType = "Highest HP",
+							targetType = "ContentID",
+							uuid = "55a4a24f-43e3-f1d7-8fa3-11b0499575f7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 3621,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"231b6a98-9a2f-8a76-bdab-236bd5622569",
+									true,
+								},
+								
+								{
+									"8ba874ee-ca69-1909-887c-e5c0bf99334b",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_SmartAOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							targetContentID = 13831,
+							targetSubType = "Highest HP",
+							targetType = "ContentID",
+							uuid = "5d680dd7-cd37-efa2-a548-be62cbd29b69",
+							version = 2.1,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 41,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+								
+								{
+									"8ba874ee-ca69-1909-887c-e5c0bf99334b",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_SmartAOE",
+							gVarValue = 2,
+							ignoreWeaveRules = true,
+							targetContentID = 13831,
+							targetSubType = "Highest HP",
+							targetType = "ContentID",
+							uuid = "4c1dbb9d-e716-2992-b5b6-d37cce030e16",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 9,
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc680113-345f-6d33-add6-1f151475b614",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "8ba874ee-ca69-1909-887c-e5c0bf99334b",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 317.7,
+				name = "[MT] AoE Mu",
+				timeRange = true,
+				timelineIndex = 50,
+				timerEndOffset = 5,
+				timerStartOffset = 1,
+				uuid = "51acc17e-227f-eb79-ac5f-8fa672d832a3",
 				version = 2,
 			},
 		},
@@ -7338,6 +13145,11 @@ local tbl =
 								
 								{
 									"f2b157f7-3ea2-a37e-a871-a8fa2ae83fd1",
+									true,
+								},
+								
+								{
+									"88b147ca-5458-4071-8047-e56640af6a14",
 									true,
 								},
 							},
@@ -7377,6 +13189,11 @@ local tbl =
 								
 								{
 									"42726422-a374-dae9-b83e-5c77d958ea55",
+									true,
+								},
+								
+								{
+									"88b147ca-5458-4071-8047-e56640af6a14",
 									true,
 								},
 							},
@@ -7442,11 +13259,22 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "88b147ca-5458-4071-8047-e56640af6a14",
+							version = 2,
+						},
+					},
 				},
 				eventType = 12,
 				loop = true,
 				mechanicTime = 325.7,
-				name = "Stun Jabberwock",
+				name = "[ST] Stun Jabberwock",
 				timeRange = true,
 				timelineIndex = 52,
 				timerEndOffset = 15,
@@ -7477,6 +13305,11 @@ local tbl =
 								
 								{
 									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									true,
+								},
+								
+								{
+									"a7992048-f796-84bf-9eb2-6ac0b9962db4",
 									true,
 								},
 							},
@@ -7514,9 +13347,20 @@ local tbl =
 						},
 						inheritedIndex = 2,
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "a7992048-f796-84bf-9eb2-6ac0b9962db4",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 325.7,
-				name = "Reprisal",
+				name = "[ST] Reprisal",
 				randomOffset = -2,
 				timeRange = true,
 				timelineIndex = 52,
@@ -7992,6 +13836,11 @@ local tbl =
 									"e7cd7de2-db26-53a7-b6a0-86996ef443d1",
 									true,
 								},
+								
+								{
+									"3d7b614a-c435-ea7a-9df8-36396a5a3ed3",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_AOE",
@@ -8011,6 +13860,11 @@ local tbl =
 								
 								{
 									"3a2858d5-a3c7-b675-b541-ba378b3eeccd",
+									true,
+								},
+								
+								{
+									"3d7b614a-c435-ea7a-9df8-36396a5a3ed3",
 									true,
 								},
 							},
@@ -8033,6 +13887,11 @@ local tbl =
 									"231b6a98-9a2f-8a76-bdab-236bd5622569",
 									true,
 								},
+								
+								{
+									"3d7b614a-c435-ea7a-9df8-36396a5a3ed3",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_AOE",
 							ignoreWeaveRules = true,
@@ -8052,6 +13911,11 @@ local tbl =
 								
 								{
 									"bc680113-345f-6d33-add6-1f151475b614",
+									true,
+								},
+								
+								{
+									"3d7b614a-c435-ea7a-9df8-36396a5a3ed3",
 									true,
 								},
 							},
@@ -8112,9 +13976,20 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "3d7b614a-c435-ea7a-9df8-36396a5a3ed3",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 388.7,
-				name = "AoE ON",
+				name = "[ST] AoE ON",
 				timelineIndex = 53,
 				timerEndOffset = 5,
 				uuid = "a609f459-7201-682d-86d9-a9ebc7712b52",
