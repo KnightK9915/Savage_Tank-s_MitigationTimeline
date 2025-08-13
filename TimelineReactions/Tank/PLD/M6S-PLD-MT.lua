@@ -44,6 +44,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 22.4,
 				name = "Rampart (20)",
 				timeRange = true,
@@ -97,7 +98,6 @@ local tbl =
 						},
 					},
 				},
-				enabled = false,
 				mechanicTime = 22.4,
 				name = "Guardian (40)",
 				timeRange = true,
@@ -151,6 +151,7 @@ local tbl =
 						inheritedIndex = 1,
 					},
 				},
+				enabled = false,
 				mechanicTime = 22.4,
 				name = "Bulwalk (Block)",
 				timeRange = true,
@@ -207,7 +208,7 @@ local tbl =
 				name = "sheltron (15)",
 				timeRange = true,
 				timelineIndex = 2,
-				timerEndOffset = 1,
+				timerEndOffset = 2,
 				timerStartOffset = 0.5,
 				uuid = "19d16c98-c444-af2d-97df-dde83dc5f2ac",
 				version = 2,
@@ -326,6 +327,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 22.4,
 				name = "interven ST (15)",
 				timeRange = true,
@@ -435,7 +437,6 @@ local tbl =
 						},
 					},
 				},
-				enabled = false,
 				mechanicTime = 81.9,
 				name = "Rampart (20)",
 				timeRange = true,
@@ -489,6 +490,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 81.9,
 				name = "Guardian (40)",
 				timeRange = true,
@@ -598,7 +600,7 @@ local tbl =
 				name = "sheltron (15)",
 				timeRange = true,
 				timelineIndex = 13,
-				timerEndOffset = 1,
+				timerEndOffset = 2,
 				timerStartOffset = 0.5,
 				uuid = "4e09efb8-7772-e17a-8761-bff4398df1f6",
 				version = 2,
@@ -717,6 +719,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 81.9,
 				name = "interven ST (15)",
 				timeRange = true,
@@ -760,7 +763,7 @@ local tbl =
 								},
 								
 								{
-									"ad56b97b-4eaa-c822-bc32-d42b4532b959",
+									"a94cd6c8-a745-e6ff-bf92-a325fd926aba",
 									true,
 								},
 							},
@@ -814,7 +817,7 @@ local tbl =
 						{
 							conditionType = 4,
 							enmityValue = 99.999000549316,
-							uuid = "ad56b97b-4eaa-c822-bc32-d42b4532b959",
+							uuid = "a94cd6c8-a745-e6ff-bf92-a325fd926aba",
 							version = 2,
 						},
 					},
@@ -826,10 +829,10 @@ local tbl =
 				timelineIndex = 17,
 				timerEndOffset = 34,
 				timerStartOffset = 1,
-				uuid = "0fc3075e-0bfa-2abb-b098-1bd42c1765df",
+				uuid = "18064425-7e5b-8db9-949b-61051afadc43",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 6,
 		},
 		
 		{
@@ -861,7 +864,7 @@ local tbl =
 								},
 								
 								{
-									"6dc915f3-4913-f71f-b34b-cfbd02faa659",
+									"ca0f200a-ae72-6864-a217-af68bd780447",
 									true,
 								},
 							},
@@ -918,7 +921,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							enmityValue = 99.999000549316,
-							uuid = "6dc915f3-4913-f71f-b34b-cfbd02faa659",
+							uuid = "ca0f200a-ae72-6864-a217-af68bd780447",
 							version = 2,
 						},
 					},
@@ -930,10 +933,10 @@ local tbl =
 				timelineIndex = 17,
 				timerEndOffset = 34,
 				timerStartOffset = 1,
-				uuid = "64a07723-b71c-c8e8-9717-e3de0e9582b4",
+				uuid = "7da07f40-8e96-1809-9088-f6a351c50f44",
 				version = 2,
 			},
-			inheritedIndex = 6,
+			inheritedIndex = 5,
 		},
 	},
 	[22] = 
@@ -987,7 +990,7 @@ local tbl =
 				uuid = "96a29b82-ac8f-a6d9-895d-059dd24661f9",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 6,
 		},
 	},
 	[24] = 
@@ -1017,7 +1020,7 @@ local tbl =
 								},
 								
 								{
-									"ad56b97b-4eaa-c822-bc32-d42b4532b959",
+									"a94cd6c8-a745-e6ff-bf92-a325fd926aba",
 									true,
 								},
 							},
@@ -1060,7 +1063,7 @@ local tbl =
 						{
 							conditionType = 4,
 							enmityValue = 100,
-							uuid = "ad56b97b-4eaa-c822-bc32-d42b4532b959",
+							uuid = "a94cd6c8-a745-e6ff-bf92-a325fd926aba",
 							version = 2,
 						},
 					},
@@ -1071,7 +1074,7 @@ local tbl =
 				timelineIndex = 24,
 				timerEndOffset = 25,
 				timerStartOffset = 1,
-				uuid = "e33f672b-08c2-6bc3-a5e9-468256610120",
+				uuid = "968f3bd5-5f02-92b6-964a-95c31954cc15",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -1157,7 +1160,7 @@ local tbl =
 				timelineIndex = 24,
 				timerEndOffset = 25,
 				timerStartOffset = 1,
-				uuid = "13a18e0c-c117-91ac-9e7a-84b9aa551f63",
+				uuid = "826667fb-06e1-b43a-98fc-d470397a6cb1",
 				version = 2,
 			},
 			inheritedIndex = 6,
@@ -1265,7 +1268,7 @@ local tbl =
 				name = "Guardian (40)",
 				timeRange = true,
 				timelineIndex = 32,
-				timerStartOffset = -13.5,
+				timerStartOffset = -10,
 				uuid = "6ded2dc3-e9ae-07ac-b0c6-17760c8779ab",
 				version = 2,
 			},
@@ -1371,7 +1374,7 @@ local tbl =
 				name = "sheltron (15)",
 				timeRange = true,
 				timelineIndex = 32,
-				timerEndOffset = 1,
+				timerEndOffset = 2,
 				timerStartOffset = 0.5,
 				uuid = "b6ac90e2-c646-99ca-ba88-42f219dbf94b",
 				version = 2,
@@ -1531,9 +1534,174 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 35,
 				timerEndOffset = 186.60000610352,
-				uuid = "dfd34d6d-2d07-f8de-b5fa-14f749694a54",
+				uuid = "d505e31e-4fc4-9377-8506-8ef9f101f3cf",
 				version = 2,
 			},
+		},
+	},
+	[36] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+								
+								{
+									"60225630-33a3-bbbf-ac98-25cecae51013",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "60225630-33a3-bbbf-ac98-25cecae51013",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 227.4,
+				name = "[ST] 1.Rampart (20)",
+				timeRange = true,
+				timelineIndex = 36,
+				timerEndOffset = 5,
+				timerOffset = -15,
+				timerStartOffset = 0.5,
+				uuid = "d93e86e0-4d26-447e-8555-f8b67d1760b9",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+								
+								{
+									"b887eff6-066e-10cd-b26c-8396776cc1b2",
+									true,
+								},
+								
+								{
+									"118660eb-94ed-19b9-8162-076fe81a92ee",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2674,
+								2675,
+								1191,
+							},
+							category = "Self",
+							uuid = "b887eff6-066e-10cd-b26c-8396776cc1b2",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "118660eb-94ed-19b9-8162-076fe81a92ee",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				loop = true,
+				mechanicTime = 227.4,
+				name = "[ST] sheltron (15)",
+				timeRange = true,
+				timelineIndex = 36,
+				timerEndOffset = 29,
+				timerStartOffset = 5,
+				uuid = "c2571231-1f68-966e-b5bf-ca67c52dd443",
+				version = 2,
+			},
+			inheritedIndex = 3,
 		},
 	},
 	[37] = 
@@ -1554,6 +1722,11 @@ local tbl =
 								
 								{
 									"dda24e11-6d3b-8a80-80e0-e75a85a9579a",
+									true,
+								},
+								
+								{
+									"364a2822-d4bf-0614-a44e-cf951b0f8d14",
 									true,
 								},
 							},
@@ -1580,15 +1753,26 @@ local tbl =
 						},
 						inheritedIndex = 1,
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "364a2822-d4bf-0614-a44e-cf951b0f8d14",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 227.4,
-				name = "1.Bulwalk (Block)",
+				name = "[MT] 1.Bulwalk (Block)",
 				timeRange = true,
 				timelineIndex = 37,
 				timerEndOffset = 29,
 				timerOffset = -8,
 				timerStartOffset = 0.5,
-				uuid = "13f0edad-9748-c30e-ab2a-410340941e35",
+				uuid = "1344753f-e15c-0778-98c9-518cee366135",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -1614,6 +1798,11 @@ local tbl =
 								
 								{
 									"b887eff6-066e-10cd-b26c-8396776cc1b2",
+									true,
+								},
+								
+								{
+									"a52045c7-2827-e34d-85c0-ad3c28310e4f",
 									true,
 								},
 							},
@@ -1653,15 +1842,26 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "a52045c7-2827-e34d-85c0-ad3c28310e4f",
+							version = 2,
+						},
+					},
 				},
 				loop = true,
 				mechanicTime = 227.4,
-				name = "sheltron (15)",
+				name = "[MT] sheltron (15)",
 				timeRange = true,
 				timelineIndex = 37,
 				timerEndOffset = 29,
 				timerStartOffset = 5,
-				uuid = "b50e08f6-e7cc-0f72-9dd9-892fc703e4a8",
+				uuid = "36b02f09-db07-b380-8242-7082521ce83c",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -1690,6 +1890,11 @@ local tbl =
 								
 								{
 									"de92f306-5250-77b4-b8df-4cbae0e6ea88",
+									true,
+								},
+								
+								{
+									"10852cdc-ac52-ffd5-898e-9ac509aaa96c",
 									true,
 								},
 							},
@@ -1727,14 +1932,25 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "10852cdc-ac52-ffd5-898e-9ac509aaa96c",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 256.5,
-				name = "1.Hollowed Ground (Invinsible)",
+				name = "[MT] 1.Hollowed Ground (Invinsible)",
 				timeRange = true,
 				timelineIndex = 41,
 				timerEndOffset = 22,
 				timerStartOffset = 0.5,
-				uuid = "57f4d9af-a268-5f46-927a-ebac9c0c8b2e",
+				uuid = "11aed641-7348-e6c3-b655-9cdfd3f6144e",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -1765,6 +1981,11 @@ local tbl =
 								
 								{
 									"a7f16d80-4d77-0c8c-855a-1912c9ae01cd",
+									true,
+								},
+								
+								{
+									"933ad2fb-ec4f-ad12-903c-05d31e953d20",
 									true,
 								},
 							},
@@ -1818,15 +2039,26 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "933ad2fb-ec4f-ad12-903c-05d31e953d20",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 256.5,
-				name = "2.Rampart (20)",
+				name = "[MT] 2.Rampart (20)",
 				timeRange = true,
 				timelineIndex = 41,
 				timerEndOffset = 22,
 				timerOffset = -15,
 				timerStartOffset = 10,
-				uuid = "86a391f1-da94-d854-8cf8-722ea8bb2b49",
+				uuid = "430c43e4-f468-de82-81e7-1c372544132e",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -1852,6 +2084,11 @@ local tbl =
 								
 								{
 									"b887eff6-066e-10cd-b26c-8396776cc1b2",
+									true,
+								},
+								
+								{
+									"135ddf7d-17aa-0036-9df4-8a007a1ef8ea",
 									true,
 								},
 							},
@@ -1893,15 +2130,26 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "135ddf7d-17aa-0036-9df4-8a007a1ef8ea",
+							version = 2,
+						},
+					},
 				},
 				loop = true,
 				mechanicTime = 256.5,
-				name = "sheltron (15)",
+				name = "[MT] sheltron (15)",
 				timeRange = true,
 				timelineIndex = 41,
 				timerEndOffset = 22,
 				timerStartOffset = 5,
-				uuid = "9f0abec5-8b51-c65c-add0-3ad0657bd2ef",
+				uuid = "737d7e07-3cea-0a45-8775-3467e37a1904",
 				version = 2,
 			},
 			inheritedIndex = 3,
@@ -1930,6 +2178,11 @@ local tbl =
 								
 								{
 									"b887eff6-066e-10cd-b26c-8396776cc1b2",
+									true,
+								},
+								
+								{
+									"2daeab79-9557-d78a-9381-cbb04b9dc2d9",
 									true,
 								},
 							},
@@ -1969,20 +2222,31 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "2daeab79-9557-d78a-9381-cbb04b9dc2d9",
+							version = 2,
+						},
+					},
 				},
 				loop = true,
 				mechanicTime = 275.5,
-				name = "sheltron (15)",
+				name = "[MT] sheltron (15)",
 				timeRange = true,
 				timelineIndex = 42,
 				timerEndOffset = 39,
-				uuid = "e387eb9c-9411-b86a-b4ce-b3fd0203bc63",
+				uuid = "948b749e-f7e1-549a-93f7-9191ecf9a7b6",
 				version = 2,
 			},
 			inheritedIndex = 4,
 		},
 	},
-	[50] = 
+	[43] = 
 	{
 		
 		{
@@ -2000,6 +2264,11 @@ local tbl =
 								
 								{
 									"dda24e11-6d3b-8a80-80e0-e75a85a9579a",
+									true,
+								},
+								
+								{
+									"5f47ccf5-4657-8b96-ace9-ba8ae31c0a08",
 									true,
 								},
 							},
@@ -2026,15 +2295,678 @@ local tbl =
 						},
 						inheritedIndex = 1,
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "5f47ccf5-4657-8b96-ace9-ba8ae31c0a08",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 278.6,
+				name = "[ST] 1.Bulwalk (Block)",
+				timeRange = true,
+				timelineIndex = 43,
+				timerEndOffset = 39,
+				timerOffset = -8,
+				timerStartOffset = 0.5,
+				uuid = "d1b5b0a0-7b1f-92fe-b4d4-f9610aac32e9",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+								
+								{
+									"72214ba6-3fc7-c39d-8796-67d46d277775",
+									true,
+								},
+								
+								{
+									"d8aefb57-b4ef-a13b-a3f4-a10030429946",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2674,
+								2675,
+							},
+							category = "Self",
+							uuid = "72214ba6-3fc7-c39d-8796-67d46d277775",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "d8aefb57-b4ef-a13b-a3f4-a10030429946",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				loop = true,
+				mechanicTime = 278.6,
+				name = "[ST] sheltron (15)",
+				timeRange = true,
+				timelineIndex = 43,
+				timerEndOffset = 39,
+				timerStartOffset = 5,
+				uuid = "15fe60b3-d11a-8a9a-bb5f-3e271f628320",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+	},
+	[48] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+								
+								{
+									"d2d7eb64-d43a-7343-859d-53bdd813ef94",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "d2d7eb64-d43a-7343-859d-53bdd813ef94",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
 				},
 				mechanicTime = 317.7,
-				name = "1.Bulwalk (Block)",
+				name = "[ST] 1.Rampart (20)",
+				timeRange = true,
+				timelineIndex = 48,
+				timerEndOffset = 71,
+				timerOffset = -15,
+				timerStartOffset = 0.5,
+				uuid = "bc6f6801-b0f6-ba79-beb6-ea95e263ba9e",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 30,
+							conditions = 
+							{
+								
+								{
+									"e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
+									true,
+								},
+								
+								{
+									"f5c616ca-7192-cd29-b9c3-6403768e888a",
+									true,
+								},
+								
+								{
+									"b96bb095-8d3b-88bf-a60c-21773cfa34c2",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "9b1f0885-3a72-1913-ad03-47c71acda8e5",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 30,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 50,
+							uuid = "f5c616ca-7192-cd29-b9c3-6403768e888a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "b96bb095-8d3b-88bf-a60c-21773cfa34c2",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 317.7,
+				name = "[ST] 2.Hollowed Ground (Invinsible)",
+				timeRange = true,
+				timelineIndex = 48,
+				timerEndOffset = 71,
+				timerStartOffset = 20,
+				uuid = "c47655b7-98f6-553c-90f8-8ef16009b523",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36920,
+							conditions = 
+							{
+								
+								{
+									"aceb9492-b930-0c6d-aaca-9fb9e7c2fb2a",
+									true,
+								},
+								
+								{
+									"39980eaa-8359-8a24-b2f0-ff1edb790301",
+									true,
+								},
+								
+								{
+									"2eaeff09-b9fd-05ec-b135-351a109a16d1",
+									true,
+								},
+								
+								{
+									"21666991-15ca-3866-8852-0bf318b129a3",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "1ff7ecf5-69f2-0d51-9683-ee0ea48d1ed1",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36920,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "aceb9492-b930-0c6d-aaca-9fb9e7c2fb2a",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionCDValue = 1,
+							actionID = 30,
+							category = "Self",
+							conditionType = 4,
+							uuid = "39980eaa-8359-8a24-b2f0-ff1edb790301",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 82,
+							category = "Self",
+							uuid = "2eaeff09-b9fd-05ec-b135-351a109a16d1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "21666991-15ca-3866-8852-0bf318b129a3",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 317.7,
+				name = "[ST] 3.Guardian (40)",
+				timeRange = true,
+				timelineIndex = 48,
+				timerEndOffset = 71,
+				timerStartOffset = 30,
+				uuid = "9158efed-682e-708f-8bf6-9c13c49de84d",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 22,
+							conditions = 
+							{
+								
+								{
+									"dda24e11-6d3b-8a80-80e0-e75a85a9579a",
+									true,
+								},
+								
+								{
+									"ef81fc90-bdb2-692a-bea8-3779590871e5",
+									true,
+								},
+								
+								{
+									"58d8e1cc-0b10-cbb2-9c70-1eb64786524c",
+									true,
+								},
+								
+								{
+									"0169e0d6-88c4-0bc0-9da7-ad4269f5b3a5",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "cd802a09-49f8-cce6-9c5c-b944183b020a",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 22,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "dda24e11-6d3b-8a80-80e0-e75a85a9579a",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionCDValue = 1,
+							actionID = 36920,
+							category = "Self",
+							conditionType = 4,
+							uuid = "ef81fc90-bdb2-692a-bea8-3779590871e5",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								3829,
+							},
+							category = "Self",
+							uuid = "58d8e1cc-0b10-cbb2-9c70-1eb64786524c",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "0169e0d6-88c4-0bc0-9da7-ad4269f5b3a5",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 317.7,
+				name = "[ST] 4.Bulwalk (Block)",
+				timeRange = true,
+				timelineIndex = 48,
+				timerEndOffset = 71,
+				timerOffset = -8,
+				timerStartOffset = 45,
+				uuid = "28f3ad75-0767-e443-8940-9fc939d44a2e",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+								
+								{
+									"227bcb27-f8a2-9d27-ab86-51d62ff0020c",
+									true,
+								},
+								
+								{
+									"89f5dc28-f1ca-ea62-a94b-529d499b6a79",
+									true,
+								},
+								
+								{
+									"e51b8664-6232-9400-8851-f24a3da4f6d8",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								1191,
+								3829,
+								3830,
+								82,
+							},
+							category = "Self",
+							matchAnyBuff = true,
+							uuid = "227bcb27-f8a2-9d27-ab86-51d62ff0020c",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2674,
+								2675,
+							},
+							category = "Self",
+							uuid = "89f5dc28-f1ca-ea62-a94b-529d499b6a79",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "e51b8664-6232-9400-8851-f24a3da4f6d8",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				loop = true,
+				mechanicTime = 317.7,
+				name = "[ST] sheltron (15)",
+				timeRange = true,
+				timelineIndex = 48,
+				timerEndOffset = 71,
+				timerStartOffset = 5,
+				uuid = "f38c6bc8-59eb-5235-bafd-3a20ed426839",
+				version = 2,
+			},
+			inheritedIndex = 6,
+		},
+	},
+	[50] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 22,
+							conditions = 
+							{
+								
+								{
+									"dda24e11-6d3b-8a80-80e0-e75a85a9579a",
+									true,
+								},
+								
+								{
+									"b8aea0b0-7d65-1d67-b6fc-2dd20998022e",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "cd802a09-49f8-cce6-9c5c-b944183b020a",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 22,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "dda24e11-6d3b-8a80-80e0-e75a85a9579a",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "b8aea0b0-7d65-1d67-b6fc-2dd20998022e",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 317.7,
+				name = "[MT] 1.Bulwalk (Block)",
 				timeRange = true,
 				timelineIndex = 50,
 				timerEndOffset = 10,
 				timerOffset = -8,
 				timerStartOffset = 0.5,
-				uuid = "14862127-0ed4-65ad-ac31-ad506db256bb",
+				uuid = "ed2a401a-04de-fb8f-a98d-642ee186ea94",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -2065,6 +2997,11 @@ local tbl =
 								
 								{
 									"2eaeff09-b9fd-05ec-b135-351a109a16d1",
+									true,
+								},
+								
+								{
+									"263bc2cf-ab0b-0b08-992a-2d563695f3d6",
 									true,
 								},
 							},
@@ -2113,14 +3050,25 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "263bc2cf-ab0b-0b08-992a-2d563695f3d6",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 317.7,
-				name = "2.Guardian (40)",
+				name = "[MT] 2.Guardian (40)",
 				timeRange = true,
 				timelineIndex = 50,
 				timerEndOffset = 25,
 				timerStartOffset = 10,
-				uuid = "594d8611-ec57-4d38-a36f-b42af6c7af30",
+				uuid = "8474d9dd-a953-f47f-9f07-cd8fd13503b5",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -2151,6 +3099,11 @@ local tbl =
 								
 								{
 									"89f5dc28-f1ca-ea62-a94b-529d499b6a79",
+									true,
+								},
+								
+								{
+									"1003aa3d-45e3-d2a3-a927-cbb5953c3ff6",
 									true,
 								},
 							},
@@ -2210,15 +3163,26 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "1003aa3d-45e3-d2a3-a927-cbb5953c3ff6",
+							version = 2,
+						},
+					},
 				},
 				loop = true,
 				mechanicTime = 317.7,
-				name = "sheltron (15)",
+				name = "[MT] sheltron (15)",
 				timeRange = true,
 				timelineIndex = 50,
 				timerEndOffset = 71,
 				timerStartOffset = 5,
-				uuid = "2ac9915d-4070-2935-8124-acdba8a49ca7",
+				uuid = "fc74255c-1930-854c-8c16-f3dfa5c8d44c",
 				version = 2,
 			},
 			inheritedIndex = 3,
@@ -2432,7 +3396,7 @@ local tbl =
 				name = "sheltron (15)",
 				timeRange = true,
 				timelineIndex = 56,
-				timerEndOffset = 1,
+				timerEndOffset = 2,
 				timerStartOffset = 0.5,
 				uuid = "33c823d4-bf3a-55ab-b8b4-2dc81c9be1f6",
 				version = 2,
@@ -2769,7 +3733,7 @@ local tbl =
 				name = "sheltron (15)",
 				timeRange = true,
 				timelineIndex = 92,
-				timerEndOffset = 1,
+				timerEndOffset = 2,
 				timerStartOffset = 0.5,
 				uuid = "c6210545-bd71-0b70-894b-feb7e0d3c072",
 				version = 2,
@@ -2902,10 +3866,10 @@ local tbl =
 	inheritedProfiles = 
 	{
 		"Tank\\M6S-TANKGENERAL-MT",
-		"M6S-DiscordShared",
 		"store\\anyone\\savage5\\r6s\\modules\\core",
 		"store\\anyone\\savage5\\r6s\\modules\\draws",
 		"store\\anyone\\savage5\\r6s\\modules\\optimization",
+		"M6S-DiscordShared",
 		"TTK\\M6S-Draw",
 	},
 	mapID = 1259,
