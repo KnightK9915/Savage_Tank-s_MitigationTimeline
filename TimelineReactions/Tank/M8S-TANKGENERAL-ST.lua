@@ -876,6 +876,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 36.3,
 				name = "Hold Jump",
 				timeRange = true,
@@ -2729,7 +2730,7 @@ local tbl =
 								},
 								
 								{
-									"8d30d151-f070-cead-ac67-cd52ed9774fd",
+									"a65dca1e-446d-19a1-a805-4f6d3d03fe0e",
 									true,
 								},
 							},
@@ -2761,11 +2762,11 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
-							uuid = "8d30d151-f070-cead-ac67-cd52ed9774fd",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "a65dca1e-446d-19a1-a805-4f6d3d03fe0e",
 							version = 2,
 						},
-						inheritedIndex = 2,
 					},
 				},
 				mechanicTime = 119.9,
@@ -2805,7 +2806,7 @@ local tbl =
 								},
 								
 								{
-									"72bda47a-f146-29d4-86bf-64852c4ced18",
+									"56905d61-e19f-17a4-8f61-2fbeee72226a",
 									true,
 								},
 							},
@@ -2850,10 +2851,12 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
-							uuid = "72bda47a-f146-29d4-86bf-64852c4ced18",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "56905d61-e19f-17a4-8f61-2fbeee72226a",
 							version = 2,
 						},
+						inheritedIndex = 2,
 					},
 				},
 				mechanicTime = 119.9,
@@ -2944,6 +2947,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 155.4,
 				name = "Hold Jump",
 				timeRange = true,
@@ -5428,6 +5432,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 358.9,
 				name = "Hold Jump",
 				timeRange = true,
@@ -6116,7 +6121,7 @@ local tbl =
 								},
 								
 								{
-									"8d30d151-f070-cead-ac67-cd52ed9774fd",
+									"df0cf1d9-8d17-f510-9c49-63c58a6ca16d",
 									true,
 								},
 								
@@ -6148,7 +6153,7 @@ local tbl =
 								},
 								
 								{
-									"8d30d151-f070-cead-ac67-cd52ed9774fd",
+									"df0cf1d9-8d17-f510-9c49-63c58a6ca16d",
 									true,
 								},
 								
@@ -6190,8 +6195,9 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
-							uuid = "8d30d151-f070-cead-ac67-cd52ed9774fd",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "df0cf1d9-8d17-f510-9c49-63c58a6ca16d",
 							version = 2,
 						},
 						inheritedIndex = 2,
@@ -6237,7 +6243,7 @@ local tbl =
 						data = 
 						{
 							buffCheckType = 6,
-							buffDuration = 3,
+							buffDuration = 2,
 							buffIDList = 
 							{
 								82,
@@ -6259,7 +6265,7 @@ local tbl =
 				timelineIndex = 65,
 				timerEndOffset = 20,
 				timerOffset = -3,
-				uuid = "468b0d5e-003c-12b1-a6a7-3ad36e99d9eb",
+				uuid = "c1820a10-dd6a-355a-8008-4ad904a33cc7",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -6284,7 +6290,7 @@ local tbl =
 								},
 								
 								{
-									"5bb85940-5a26-e0cd-aa4f-e1ba7d4b6493",
+									"ea32a8c3-6705-d066-9edc-95162819ddec",
 									true,
 								},
 							},
@@ -6316,10 +6322,12 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
-							uuid = "5bb85940-5a26-e0cd-aa4f-e1ba7d4b6493",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "ea32a8c3-6705-d066-9edc-95162819ddec",
 							version = 2,
 						},
+						inheritedIndex = 2,
 					},
 				},
 				mechanicTime = 379.4,
@@ -6328,7 +6336,7 @@ local tbl =
 				timelineIndex = 65,
 				timerOffset = -3,
 				timerStartOffset = -60,
-				uuid = "066698ad-d595-fb6b-864c-f1a81393d9f1",
+				uuid = "de3afbdd-a9b2-a873-8950-c85f6cdcec19",
 				version = 2,
 			},
 			inheritedIndex = 8,
@@ -6358,7 +6366,7 @@ local tbl =
 								},
 								
 								{
-									"e38b2bdf-3122-718b-83ec-c7d3138ef7dd",
+									"208a111f-8da8-070f-9472-a7dbee8b8c1b",
 									true,
 								},
 							},
@@ -6403,8 +6411,9 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"1/3無敵\"].bool\n",
-							uuid = "e38b2bdf-3122-718b-83ec-c7d3138ef7dd",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "208a111f-8da8-070f-9472-a7dbee8b8c1b",
 							version = 2,
 						},
 						inheritedIndex = 2,
@@ -6415,7 +6424,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 65,
 				timerStartOffset = -60,
-				uuid = "16fc9dea-bd85-18fb-8183-5a1f69000e66",
+				uuid = "0f6c3739-c974-d3e6-b0ae-1f4a3fc5db5b",
 				version = 2,
 			},
 			inheritedIndex = 3,
@@ -6445,7 +6454,7 @@ local tbl =
 								},
 								
 								{
-									"72bda47a-f146-29d4-86bf-64852c4ced18",
+									"4dd6fd94-64b2-1bf0-83e2-533ad7b21ac1",
 									true,
 								},
 							},
@@ -6490,10 +6499,12 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"2/4無敵\"].bool\n",
-							uuid = "72bda47a-f146-29d4-86bf-64852c4ced18",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "4dd6fd94-64b2-1bf0-83e2-533ad7b21ac1",
 							version = 2,
 						},
+						inheritedIndex = 2,
 					},
 				},
 				mechanicTime = 379.4,
@@ -6501,7 +6512,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 65,
 				timerEndOffset = 20,
-				uuid = "aa1ffaac-8e16-806a-adf6-0c88fae37c6c",
+				uuid = "a7526c1d-8f59-8b20-8f70-c96abea37fc9",
 				version = 2,
 			},
 			inheritedIndex = 9,
@@ -6651,7 +6662,7 @@ local tbl =
 				name = "Potion OFF",
 				timelineIndex = 65,
 				timerStartOffset = -10,
-				uuid = "6b1d4485-752e-5b8d-aaba-80081a549a3c",
+				uuid = "ed8496bc-a58f-606c-b176-0d02b41a2212",
 				version = 2,
 			},
 		},
