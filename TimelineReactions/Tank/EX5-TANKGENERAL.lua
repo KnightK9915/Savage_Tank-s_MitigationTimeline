@@ -4531,7 +4531,8 @@ local tbl =
 					{
 						data = 
 						{
-							conditionType = 9,
+							category = "Self",
+							conditionType = 13,
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "d8a81b5a-31f4-9918-bb57-d9e9fd25cf28",
@@ -5472,7 +5473,8 @@ local tbl =
 					{
 						data = 
 						{
-							conditionType = 9,
+							category = "Self",
+							conditionType = 13,
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "97c5d3d3-5828-926f-8003-27f2d31dbe1c",
