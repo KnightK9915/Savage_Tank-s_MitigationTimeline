@@ -25,6 +25,11 @@ local tbl =
 									"de94c739-9790-9f85-b372-5e79615ae8f4",
 									true,
 								},
+								
+								{
+									"f80915bc-4dd4-7d36-857a-32529900e23e",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_Hotbar_Provoke",
@@ -62,14 +67,32 @@ local tbl =
 						},
 						inheritedIndex = 2,
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								409,
+								82,
+								810,
+								1836,
+							},
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "f80915bc-4dd4-7d36-857a-32529900e23e",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
 				},
 				mechanicTime = 14.8,
 				name = "Provoke",
 				timeRange = true,
 				timelineIndex = 2,
-				timerEndOffset = 5,
 				timerOffset = -3,
-				timerStartOffset = -3,
+				timerStartOffset = -2.5,
 				uuid = "341a8cb4-f80b-25a2-8a8f-07bd7d940476",
 				version = 2,
 			},
@@ -156,6 +179,7 @@ local tbl =
 				name = "Shirk OT",
 				timeRange = true,
 				timelineIndex = 2,
+				timerEndOffset = 2,
 				timerStartOffset = -20,
 				uuid = "a058a8d7-e5c5-97a0-a4a0-5415b52fd4fc",
 				version = 2,
@@ -2445,9 +2469,8 @@ local tbl =
 				name = "Provoke",
 				timeRange = true,
 				timelineIndex = 22,
-				timerEndOffset = 5,
 				timerOffset = -3,
-				timerStartOffset = -3,
+				timerStartOffset = -2.5,
 				uuid = "76c79683-a4a5-eacd-9ee4-2daa0ae17cba",
 				version = 2,
 			},
@@ -2534,7 +2557,7 @@ local tbl =
 				name = "Shirk OT",
 				timeRange = true,
 				timelineIndex = 22,
-				timerEndOffset = 10,
+				timerEndOffset = 2,
 				timerStartOffset = -20,
 				uuid = "72df0633-3a2f-bdb6-b114-085dd0b35713",
 				version = 2,
@@ -4216,6 +4239,159 @@ local tbl =
 			},
 		},
 	},
+	[47] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7533,
+							conditions = 
+							{
+								
+								{
+									"8609c495-07f0-6cb8-9cdf-4cc755fc55f9",
+									true,
+								},
+								
+								{
+									"080684cd-4bd9-4d41-8d52-4ffae1a9feb4",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_Hotbar_Provoke",
+							ignoreWeaveRules = true,
+							targetContentID = 14096,
+							targetType = "ContentID",
+							uuid = "001b735f-0c3d-3481-8712-978c4ccf1420",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local mobs = TensorCore.entityList(\"alive,attackable,contentid=14096\")\n\nreturn table.size(mobs) > 0\n\n",
+							conditionType = 2,
+							contentid = 14096,
+							uuid = "8609c495-07f0-6cb8-9cdf-4cc755fc55f9",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "080684cd-4bd9-4d41-8d52-4ffae1a9feb4",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 210.7,
+				name = "Provoke",
+				timeRange = true,
+				timelineIndex = 47,
+				timerOffset = -3,
+				timerStartOffset = -30,
+				uuid = "24d4313d-6655-ff73-85e5-7b06135cab8d",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[49] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7533,
+							conditions = 
+							{
+								
+								{
+									"9dfa5c8b-eca9-fe1e-8cf4-c06cc07addf7",
+									true,
+								},
+								
+								{
+									"de94c739-9790-9f85-b372-5e79615ae8f4",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_Hotbar_Provoke",
+							ignoreWeaveRules = true,
+							targetContentID = 14096,
+							targetType = "ContentID",
+							uuid = "001b735f-0c3d-3481-8712-978c4ccf1420",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local mobs = TensorCore.entityList(\"alive,attackable,contentid=14096\")\n\nreturn table.size(mobs) > 0\n",
+							conditionType = 2,
+							contentid = 14096,
+							uuid = "9dfa5c8b-eca9-fe1e-8cf4-c06cc07addf7",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "de94c739-9790-9f85-b372-5e79615ae8f4",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				mechanicTime = 221.2,
+				name = "Provoke",
+				timeRange = true,
+				timelineIndex = 49,
+				timerOffset = -3,
+				timerStartOffset = -11,
+				uuid = "e8fdfe4a-5430-00c9-a6c3-b941a3486a3f",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
 	[50] = 
 	{
 		
@@ -5247,6 +5423,8 @@ local tbl =
 					{
 						data = 
 						{
+							category = "Lua",
+							conditionLua = "local mobs = TensorCore.entityList(\"alive,attackable,contentid=14093\")\n\nreturn table.size(mobs) > 0\n",
 							conditionType = 2,
 							contentid = 14093,
 							uuid = "8a857c30-526e-0da0-bbd6-699dc355783b",
@@ -5307,10 +5485,82 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 56,
 				timerOffset = -30,
-				timerStartOffset = -30,
+				timerStartOffset = -50,
 				uuid = "1a850c2c-e9c3-5bbf-a251-0b0a5106a565",
 				version = 2,
 			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Misc",
+							conditions = 
+							{
+								
+								{
+									"45c7f86c-86e6-2027-acd6-01efc6e69dee",
+									true,
+								},
+								
+								{
+									"2658f2a4-18b8-d77c-bc39-d8601e38fab4",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							setTarget = true,
+							targetContentID = 14093,
+							targetType = "ContentID",
+							uuid = "e28aacc8-d928-3055-91c3-9e8ddf082c60",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local mobs = TensorCore.entityList(\"alive,attackable,contentid=14093\")\n\nreturn table.size(mobs) > 0\n",
+							conditionType = 2,
+							contentid = 14093,
+							uuid = "45c7f86c-86e6-2027-acd6-01efc6e69dee",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "2658f2a4-18b8-d77c-bc39-d8601e38fab4",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 321,
+				name = "Target",
+				timeRange = true,
+				timelineIndex = 56,
+				timerStartOffset = -50,
+				uuid = "f879fa14-430a-8b1a-850b-671bdd612a84",
+				version = 2,
+			},
+			inheritedIndex = 2,
 		},
 		
 		{
@@ -5327,7 +5577,7 @@ local tbl =
 							{
 								
 								{
-									"158e3d7c-aed1-3623-ad3e-9ac368bbd03d",
+									"8560efa1-b5f5-b602-aae9-a8c2f2768b9b",
 									true,
 								},
 								
@@ -5353,12 +5603,14 @@ local tbl =
 					{
 						data = 
 						{
-							comparator = 2,
-							conditionType = 4,
-							enmityValue = 99.999000549316,
-							uuid = "158e3d7c-aed1-3623-ad3e-9ac368bbd03d",
+							category = "Lua",
+							conditionLua = "local mobs = TensorCore.entityList(\"alive,attackable,contentid=14093\")\n\nreturn table.size(mobs) > 0\n",
+							conditionType = 2,
+							contentid = 14093,
+							uuid = "8560efa1-b5f5-b602-aae9-a8c2f2768b9b",
 							version = 2,
 						},
+						inheritedIndex = 1,
 					},
 					
 					{
@@ -5378,7 +5630,7 @@ local tbl =
 				timelineIndex = 56,
 				timerEndOffset = 10,
 				timerOffset = -3,
-				timerStartOffset = -30,
+				timerStartOffset = -50,
 				uuid = "571ecc77-fa8c-3ef7-833c-765f132bada5",
 				version = 2,
 			},
@@ -7717,9 +7969,8 @@ local tbl =
 				name = "Provoke",
 				timeRange = true,
 				timelineIndex = 83,
-				timerEndOffset = 5,
 				timerOffset = -3,
-				timerStartOffset = -3,
+				timerStartOffset = -2.5,
 				uuid = "8ecab969-ae7b-00bd-a8a5-653c56dbd349",
 				version = 2,
 			},
@@ -7806,7 +8057,7 @@ local tbl =
 				name = "Shirk OT",
 				timeRange = true,
 				timelineIndex = 83,
-				timerEndOffset = 10,
+				timerEndOffset = 2,
 				timerStartOffset = -20,
 				uuid = "ad1b938a-7358-6c56-97ed-f3264703b9ba",
 				version = 2,
