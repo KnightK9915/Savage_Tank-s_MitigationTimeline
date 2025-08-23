@@ -4238,6 +4238,70 @@ local tbl =
 				version = 2,
 			},
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "-- Auto Target Switcher UI (OnDraw) - auto-resize & no resize grip\n\ndata._ats = data._ats or {\n  enabled = false,\n  stick_14094_id = nil,\n  current_label = \"—\",\n  dropdown = false,\n}\n\nlocal win_title = \"Auto Target Switcher\"\nlocal flags = GUI.WindowFlags_AlwaysAutoResize\n           + GUI.WindowFlags_NoResize\n           + GUI.WindowFlags_NoScrollbar\n           + GUI.WindowFlags_NoCollapse\n\nif GUI:Begin(win_title, true, flags) then\n  local on = data._ats.enabled\n  local label = on and \"ON\" or \"OFF\"\n  local col = on and {0.20, 0.70, 0.20, 1.0} or {0.80, 0.20, 0.20, 1.0}\n\n  GUI:PushStyleColor(GUI.Col_Button,        col[1], col[2], col[3], col[4])\n  GUI:PushStyleColor(GUI.Col_ButtonHovered, col[1], col[2], col[3], 0.85)\n  GUI:PushStyleColor(GUI.Col_ButtonActive,  col[1], col[2], col[3], 0.70)\n\n  if GUI:Button(label, 60, 24) then\n    data._ats.enabled = not data._ats.enabled\n  end\n\n  GUI:PopStyleColor(3)\n\n  GUI:SameLine()\n  if GUI:Button(\"+\", 24, 24) then\n    data._ats.dropdown = not data._ats.dropdown\n  end\n\n  if data._ats.dropdown then\n    GUI:Separator()\n    GUI:Text(\"当前选择的目标： \" .. (data._ats.current_label or \"—\"))\n  end\nend\nGUI:End()\n",
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "074d949b-457d-1e61-971b-e0f8b4f40aa8",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				eventType = 13,
+				mechanicTime = 186.8,
+				name = "AutoSelector UI",
+				timeRange = true,
+				timelineIndex = 43,
+				timerEndOffset = 64,
+				timerStartOffset = -10,
+				uuid = "36b504b6-bb48-cd84-815a-2914285a4f68",
+				version = 2,
+			},
+			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "-- Auto Target Switcher (OnFrame)\n-- 优先级：14096(大手) > 14094(小手-保持锁定，死了再换HP最低) > 14093(Boss)\n\ndata._ats = data._ats or {\n  enabled = false,\n  stick_14094_id = nil,\n  current_label = \"—\",\n  dropdown = false,\n}\n\nlocal function entity_by_id(id)\n  if not id then return nil end\n  local list = TensorCore.entityList(\"alive,attackable\")\n  for _, e in pairs(list) do\n    if e.id == id then return e end\n  end\n  return nil\nend\n\nlocal function pick_closest(contentid)\n  local list = TensorCore.entityList(string.format(\"alive,attackable,contentid=%d\", contentid))\n  local best, bestd = nil, math.huge\n  for _, e in pairs(list) do\n    local d = e.distance2d or 9999\n    if d < bestd then bestd, best = d, e end\n  end\n  return best\nend\n\nlocal function pick_lowest_hp(contentid)\n  local list = TensorCore.entityList(string.format(\"alive,attackable,contentid=%d\", contentid))\n  local best, hpmin = nil, math.huge\n  for _, e in pairs(list) do\n    local hp = (e.hp and e.hp.percent) or 100\n    if hp < hpmin then hpmin, best = hp, e end\n  end\n  return best\nend\n\nlocal function set_target_and_label(ent)\n  if not ent then return end\n  local label = (ent.contentid == 14096 and \"大手\")\n            or (ent.contentid == 14094 and \"小手\")\n            or (ent.contentid == 14093 and \"Boss\")\n            or \"—\"\n  data._ats.current_label = label\n  -- 只有当目标不同才切换，避免无谓调用\n  local cur = Player:GetTarget()\n  if not cur or cur.id ~= ent.id then\n    Player:SetTarget(ent.id)\n  end\nend\n\n-- 如果没有开启，就只更新一下当前显示（不操作目标）\nif not data._ats.enabled then\n  local cur = Player:GetTarget()\n  if cur then\n    data._ats.current_label =\n      (cur.contentid == 14096 and \"大手\")\n      or (cur.contentid == 14094 and \"小手\")\n      or (cur.contentid == 14093 and \"Boss\")\n      or \"—\"\n  else\n    data._ats.current_label = \"—\"\n  end\n  return\nend\n\n-- ① 优先：大手 14096\ndo\n  local big = pick_closest(14096)\n  if big then\n    data._ats.stick_14094_id = nil\n    set_target_and_label(big)\n    return\n  end\nend\n\n-- ② 其次：小手 14094（保持锁定，死了再挑HP最低）\ndo\n  local locked = entity_by_id(data._ats.stick_14094_id)\n  if locked and locked.contentid == 14094 then\n    -- 仍然活着可攻：保持现状\n    set_target_and_label(locked)\n    return\n  end\n  -- 原锁定失效：挑一只HP最低的小手并锁定\n  local low = pick_lowest_hp(14094)\n  if low then\n    data._ats.stick_14094_id = low.id\n    set_target_and_label(low)\n    return\n  end\nend\n\n-- ③ 最后：Boss 14093\ndo\n  local boss = pick_closest(14093)\n  if boss then\n    data._ats.stick_14094_id = nil\n    set_target_and_label(boss)\n    return\n  end\nend\n\n-- 都没有\ndata._ats.current_label = \"—\"\nreturn\n",
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "acda19f0-e400-7be6-9f1e-5aa565e50d89",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				eventType = 12,
+				mechanicTime = 186.8,
+				name = "AutoSelector Logic",
+				timeRange = true,
+				timelineIndex = 43,
+				timerEndOffset = 64,
+				uuid = "9c3ca07f-2f75-cb85-b982-53b155193f54",
+				version = 2,
+			},
+		},
 	},
 	[47] = 
 	{
@@ -4545,7 +4609,7 @@ local tbl =
 				timelineIndex = 50,
 				timerOffset = -15,
 				timerStartOffset = -10,
-				uuid = "e299fb99-dc92-c796-a3ca-1cf1cb702710",
+				uuid = "f24e0052-cfb8-9ad6-8a1a-94e095350ee7",
 				version = 2,
 			},
 		},
