@@ -2612,85 +2612,6 @@ local tbl =
 					{
 						data = 
 						{
-							aType = "Lua",
-							actionID = 7533,
-							actionLua = "data.selfMarked = true\nself.used = true",
-							atomicPriority = true,
-							conditions = 
-							{
-								
-								{
-									"bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
-									true,
-								},
-								
-								{
-									"d73a437b-daee-5b25-9e29-bfcac45843c2",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							name = "selfMarked",
-							targetContentID = 13822,
-							targetType = "ContentID",
-							uuid = "a1aed48d-295b-da3e-978a-460aac09e87e",
-							version = 2.1,
-						},
-						inheritedIndex = 2,
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgType = 2,
-							eventMarkerID = 218,
-							uuid = "bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Party",
-							conditionType = 10,
-							inGroupTargetType = "Self",
-							name = "marker on Self",
-							partyTargetType = "Event Entity",
-							uuid = "d73a437b-daee-5b25-9e29-bfcac45843c2",
-							version = 2,
-						},
-						inheritedIndex = 3,
-					},
-				},
-				eventType = 4,
-				mechanicTime = 279,
-				name = "Record marked",
-				timeRange = true,
-				timelineIndex = 53,
-				timerEndOffset = 5,
-				timerStartOffset = -15,
-				uuid = "78110398-7f8e-8962-a1c3-c1d5eba23588",
-				version = 2,
-			},
-			inheritedIndex = 1,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
 							actionID = 25751,
 							conditions = 
 							{
@@ -2701,7 +2622,7 @@ local tbl =
 								},
 								
 								{
-									"d7d8570a-60e1-1925-b54c-243c52015173",
+									"75a9813d-3b65-8992-bfdf-3cd1248103d2",
 									true,
 								},
 							},
@@ -2733,27 +2654,25 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Lua",
-							conditionLua = "return data.selfMarked",
-							name = "if self marked",
-							uuid = "d7d8570a-60e1-1925-b54c-243c52015173",
+							channelCheckSpellID = 44587,
+							conditionType = 7,
+							uuid = "75a9813d-3b65-8992-bfdf-3cd1248103d2",
 							version = 2,
 						},
+						inheritedIndex = 2,
 					},
 				},
 				mechanicTime = 279,
 				name = "BW/NF (20)",
 				timeRange = true,
 				timelineIndex = 53,
-				timerStartOffset = -2,
+				timerEndOffset = 20,
+				timerStartOffset = -3,
 				uuid = "8d6a75a7-d1a4-f25a-9069-56dd6beff553",
 				version = 2,
 			},
 			inheritedIndex = 2,
 		},
-	},
-	[55] = 
-	{
 		
 		{
 			data = 
@@ -2770,6 +2689,11 @@ local tbl =
 								
 								{
 									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+								
+								{
+									"c79f3e33-1b66-2d91-8a8e-c4f6a5bc2506",
 									true,
 								},
 							},
@@ -2795,17 +2719,28 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							channelCheckSpellID = 44587,
+							conditionType = 7,
+							uuid = "c79f3e33-1b66-2d91-8a8e-c4f6a5bc2506",
+							version = 2,
+						},
+					},
 				},
-				mechanicTime = 289.3,
+				mechanicTime = 279,
 				name = "Rampart (20)",
 				timeRange = true,
-				timelineIndex = 55,
+				timelineIndex = 53,
+				timerEndOffset = 20,
 				timerOffset = -15,
-				timerStartOffset = -15,
-				uuid = "ad4c2eb2-d14c-4190-bb2f-e1c025922812",
+				timerStartOffset = -10,
+				uuid = "814e37c3-b387-ec03-a921-8da42055f26d",
 				version = 2,
 			},
-			inheritedIndex = 2,
+			inheritedIndex = 3,
 		},
 	},
 	[68] = 
