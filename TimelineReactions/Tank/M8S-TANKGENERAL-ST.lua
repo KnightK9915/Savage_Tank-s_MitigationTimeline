@@ -7864,6 +7864,11 @@ local tbl =
 									"293daf40-34c7-3d12-ac20-7b597e340bdc",
 									true,
 								},
+								
+								{
+									"3cfdcf7c-3630-2cda-996f-95c1511c15df",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -7898,6 +7903,16 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 3,
+							hpValue = 8,
+							uuid = "3cfdcf7c-3630-2cda-996f-95c1511c15df",
+							version = 2,
+						},
 					},
 				},
 				mechanicTime = 446.6,
