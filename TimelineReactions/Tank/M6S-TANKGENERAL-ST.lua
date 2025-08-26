@@ -1492,6 +1492,7 @@ local tbl =
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
 							uuid = "dbc99f8f-e1c5-f477-89e0-30fa7efeda14",
 							version = 2.1,
 						},
@@ -4049,60 +4050,7 @@ local tbl =
 						data = 
 						{
 							aType = "Lua",
-							actionLua = "local function drawQT(name, info)\n    GUI:Begin(\"Selection Damage Reduction GUI\", true,\n        GUI.WindowFlags_NoTitleBar +\n        GUI.WindowFlags_NoScrollbar +\n        GUI.WindowFlags_NoScrollWithMouse +\n        GUI.WindowFlags_NoCollapse +\n        GUI.WindowFlags_AlwaysAutoResize\n    )\n\n    local ChildColor = info.bool and \n        {r=0, g=1, b=0, a=0.5} or\n        {r=1, g=0.07, b=0, a=0.5}\n\n    GUI:PushStyleVar(GUI.StyleVar_ChildWindowRounding, 5)\n    GUI:PushStyleVar(GUI.StyleVar_ItemSpacing, 3, 3)\n    GUI:PushStyleColor(GUI.Col_ChildWindowBg, ChildColor.r, ChildColor.g, ChildColor.b, ChildColor.a)\n\n    local text_width = GUI:CalcTextSize(name)\n    GUI:BeginChild(name, 105, 30, false, GUI.WindowFlags_AlwaysAutoResize)\n    GUI:SetCursorPosX((105 - text_width) * 0.5)\n    GUI:SetCursorPosY((30 - GUI:GetTextLineHeightWithSpacing()) * 0.5)\n    GUI:Text(name)\n    GUI:EndChild()\n\n    if GUI:IsItemHovered() and GUI:IsMouseClicked(0) then\n        for otherName, otherInfo in pairs(data.string_SelectionDR) do\n            otherInfo.bool = (otherName == name)\n        end\n    end\n\n    GUI:PopStyleColor()\n    GUI:PopStyleVar(2)\n    GUI:End()\nend\n\n-- 初始化状态表\nif data.string_SelectionDR == nil then\n    data.string_SelectionDR = {\n        [\"Prioritize Cat\"] = {bool = true},\n        [\"LowestHP Yan\"] = {bool = false},\n        [\"Manual\"] = {bool = false},\n    }\nend\n\n-- 初始化显示顺序\nif data.string_SelectionDR_Order == nil then\n    data.string_SelectionDR_Order = {\n        \"Prioritize Cat\",\n        \"LowestHP Yan\",\n        \"Manual\",\n    }\nend\n\n-- 按指定顺序渲染按钮\nfor _, btnName in ipairs(data.string_SelectionDR_Order) do\n    local config = data.string_SelectionDR[btnName]\n    if config then\n        drawQT(btnName, config)\n    end\nend\n\nself.used = true\n",
-							conditions = 
-							{
-								
-								{
-									"e9a325a0-d643-1580-8308-9722fd95d6af",
-									true,
-								},
-							},
-							gVar = "ACR_RikuGNB3_CD",
-							uuid = "fad63cca-adcc-7c20-aaf8-35fc211851de",
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 8,
-							localmapid = 1259,
-							uuid = "e9a325a0-d643-1580-8308-9722fd95d6af",
-							version = 2,
-						},
-					},
-				},
-				enabled = false,
-				eventType = 13,
-				mechanicTime = 217.2,
-				name = "Autotarget Control",
-				timeRange = true,
-				timelineIndex = 34,
-				timerEndOffset = 193.69999694824,
-				uuid = "2a259676-0646-bed3-a485-403ec7fddc9b",
-				version = 2,
-			},
-			inheritedIndex = 2,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "Lua",
-							actionLua = "-- M6S Auto Selector - Core (aggressive & snappy)\n-- 变化点：\n-- 1) 去掉“当前目标还在范围内就不切”的黏滞逻辑 -> 始终选当下最优。\n-- 2) 排序：优先级(小->大) -> HP% (小->大) -> 距离(近->远)；并列更稳定。\n-- 3) 仍遵循：若仇恨列表里没有优先清单(或都死) -> 选 13822（不限距离，取HP%最低）。\n\nlocal SAVE_REL = [[TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\M6SAutoSelector.lua]]\nlocal function _save(tbl)\n  local base = GetLuaModsPath()\n  if not FolderExists(base .. [[TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\]]) then\n    FolderCreate(base .. [[TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\]])\n  end\n  FileSave(base .. SAVE_REL, tbl)\nend\n\nlocal function _load()\n  local path = GetLuaModsPath() .. SAVE_REL\n  if FileExists(path) then\n    local t = FileLoad(path)\n    if type(t) == \"table\" then return t end\n  end\n  return nil\nend\n\n-- 读档/初始化（与UI共享）\ndata._m6s = data._m6s or _load() or {\n  enabled = true,\n  role = \"MT\",\n  range = 6.0,\n  win = { x = 200, y = 300 }\n}\nlocal cfg = data._m6s\n\nif not cfg.enabled then return false end\n\n-- 优先级表\nlocal PRIORITY = {\n  MT = {13833,13834,13835,13831,13832},\n  ST = {13833,13835,13834,13832,13831},\n}\nlocal prio_list = PRIORITY[cfg.role] or PRIORITY.MT\nlocal prio_rank = {}\nfor i,cid in ipairs(prio_list) do prio_rank[cid] = i end\n\n-- 收集范围内候选\nlocal filter = (\"alive,attackable,maxdistance=%g,contentid=%s\"):format(\n  cfg.range, table.concat(prio_list, \";\")\n)\nlocal elist = EntityList(filter)\n\n-- 直接选“当前帧最优”：优先级 -> HP% -> 距离\nlocal best, bestRank, bestHP, bestDist = nil, 999, 101, 9999\nif elist then\n  for _,e in pairs(elist) do\n    local r = prio_rank[e.contentid]\n    if r and e.hp and e.hp.percent and e.distance2d then\n      if (r < bestRank)\n      or (r == bestRank and e.hp.percent < bestHP)\n      or (r == bestRank and e.hp.percent == bestHP and e.distance2d < bestDist) then\n        best, bestRank, bestHP, bestDist = e, r, e.hp.percent, e.distance2d\n      end\n    end\n  end\nend\n\n-- 若找到范围内最优目标，则无条件切过去（提高“灵敏度/抢占性”）\nif best and best.id then\n  local cur = Player:GetTarget()\n  if not cur or cur.id ~= best.id then\n    Player:SetTarget(best.id)\n  end\n  return false\nend\n\n-- 若范围内无优先清单：检查仇恨表里是否还有这些CID存活\nlocal wantAggro = EntityList(\"aggro,alive,attackable,contentid=\" .. table.concat(prio_list,\";\"))\nlocal hasAggroTargets = (wantAggro and next(wantAggro) ~= nil)\n\n-- 仇恨表里没它们(或都死) -> 选 13822（不限距离，HP%最低）\nif not hasAggroTargets then\n  local adds = EntityList(\"alive,attackable,contentid=13822\")\n  local pick, php = nil, 101\n  if adds then\n    for _,e in pairs(adds) do\n      if e.hp and e.hp.percent and e.hp.percent < php then\n        pick, php = e, e.hp.percent\n      end\n    end\n  end\n  if pick and pick.id then\n    local cur = Player:GetTarget()\n    if not cur or cur.id ~= pick.id then\n      Player:SetTarget(pick.id)\n    end\n  end\nend\n\nreturn false\n",
+							actionLua = "-- M6S Auto Selector - Core (aggressive with MT-13831 & ST-13832 special)\n-- 每帧选最优：优先级 -> (特殊偏好) -> HP% -> 距离\n-- 特殊偏好：\n--   - MT 且 CID=13831：优先选仇恨不在自己身上的 13831；\n--   - ST 且 CID=13832：优先选仇恨不在自己身上的 13832；\n-- 若仇恨列表里没有优先清单(或都死) -> 选 13822（不限距离，HP%最低）。\n\nlocal SAVE_REL = [[TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\M6SAutoSelector.lua]]\nlocal function _save(tbl)\n  local base = GetLuaModsPath()\n  if not FolderExists(base .. [[TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\]]) then\n    FolderCreate(base .. [[TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\]])\n  end\n  FileSave(base .. SAVE_REL, tbl)\nend\n\nlocal function _load()\n  local path = GetLuaModsPath() .. SAVE_REL\n  if FileExists(path) then\n    local t = FileLoad(path)\n    if type(t) == \"table\" then return t end\n  end\n  return nil\nend\n\n-- 读档/初始化（与UI共享）\ndata._m6s = data._m6s or _load() or {\n  enabled = true,\n  role = \"MT\",\n  range = 6.0,\n  win = { x = 200, y = 300 }\n}\nlocal cfg = data._m6s\n\nif not cfg.enabled then return false end\n\n-- 优先级表\nlocal PRIORITY = {\n  MT = {13833,13834,13835,13831,13832},\n  ST = {13833,13835,13834,13832,13831},\n}\nlocal prio_list = PRIORITY[cfg.role] or PRIORITY.MT\nlocal prio_rank = {}\nfor i,cid in ipairs(prio_list) do prio_rank[cid] = i end\n\nlocal myID = Player.id or 0\nlocal rank13831 = prio_rank[13831] or 999\nlocal rank13832 = prio_rank[13832] or 999\n\n-- 收集范围内候选\nlocal filter = (\"alive,attackable,maxdistance=%g,contentid=%s\"):format(\n  cfg.range, table.concat(prio_list, \";\")\n)\nlocal elist = EntityList(filter)\n\n-- 选“当前帧最优”\n-- 排序： r(小好) -> pref(小好) -> hp%(小好) -> dist(小好)\n-- pref = 0 表示命中“仇恨不在我身上”的特殊优先，默认为 1\nlocal best, bestR, bestPref, bestHP, bestDist = nil, 999, 1, 101, 9999\nif elist then\n  for _, e in pairs(elist) do\n    local r = prio_rank[e.contentid]\n    if r and e.hp and e.hp.percent and e.distance2d then\n      local pref = 1\n      -- MT: 13831 优先“仇恨不在我身上”\n      if cfg.role == \"MT\" and r == rank13831 then\n        if e.targetid and e.targetid ~= myID then\n          pref = 0\n        end\n      end\n      -- ST: 13832 优先“仇恨不在我身上”\n      if cfg.role == \"ST\" and r == rank13832 then\n        if e.targetid and e.targetid ~= myID then\n          pref = 0\n        end\n      end\n\n      if (r < bestR)\n      or (r == bestR and pref < bestPref)\n      or (r == bestR and pref == bestPref and e.hp.percent < bestHP)\n      or (r == bestR and pref == bestPref and e.hp.percent == bestHP and e.distance2d < bestDist) then\n        best, bestR, bestPref, bestHP, bestDist = e, r, pref, e.hp.percent, e.distance2d\n      end\n    end\n  end\nend\n\n-- 若找到范围内最优，立即切过去\nif best and best.id then\n  local cur = Player:GetTarget()\n  if not cur or cur.id ~= best.id then\n    Player:SetTarget(best.id)\n  end\n  return false\nend\n\n-- 若范围内无优先清单：检查仇恨表里是否还有这些CID存活\nlocal wantAggro = EntityList(\"aggro,alive,attackable,contentid=\" .. table.concat(prio_list,\";\"))\nlocal hasAggroTargets = (wantAggro and next(wantAggro) ~= nil)\n\n-- 仇恨表里没它们(或都死) -> 选 13822（不限距离，HP%最低，距离兜底）\nif not hasAggroTargets then\n  local adds = EntityList(\"alive,attackable,contentid=13822\")\n  local pick, php, pdist = nil, 101, 9999\n  if adds then\n    for _, e in pairs(adds) do\n      local hpv = (e.hp and e.hp.percent) or 999\n      local dist = e.distance2d or 9999\n      if (hpv < php) or (hpv == php and dist < pdist) then\n        pick, php, pdist = e, hpv, dist\n      end\n    end\n  end\n  if pick and pick.id then\n    local cur = Player:GetTarget()\n    if not cur or cur.id ~= pick.id then\n      Player:SetTarget(pick.id)\n    end\n  end\nend",
 							gVar = "ACR_RikuPLD3_CD",
 							uuid = "d0e983b3-74b5-b936-9264-64580d8a002f",
 							version = 2.1,
@@ -4119,9 +4067,10 @@ local tbl =
 				timelineIndex = 34,
 				timerEndOffset = 200,
 				timerStartOffset = -10,
-				uuid = "5b2f097c-c3a7-7dea-8dcb-1d270f063a47",
+				uuid = "01c2efde-3928-1c04-9ad0-17b91f9473ed",
 				version = 2,
 			},
+			inheritedIndex = 3,
 		},
 	},
 	[35] = 
@@ -4769,111 +4718,6 @@ local tbl =
 					{
 						data = 
 						{
-							aType = "Lua",
-							actionLua = "local range = 7.5\nlocal fallbackID = 13822\nlocal priorityList = {13833, 13835, 13834, 13832, 13831}\nlocal currentTarget = Player:GetTarget()\n\nlocal function isValidInRange(entity)\n    return entity.alive and entity.targetable and entity.distance <= range\nend\n\nlocal function anyAlive(cid)\n    local list = EntityList(\"type=2,targetable,contentid=\" .. cid)\n    if table.valid(list) then\n        for _, v in pairs(list) do\n            if v.alive then\n                return true\n            end\n        end\n    end\n    return false\nend\n\nfor _, cid in ipairs(priorityList) do\n    local candidates = EntityList(\"type=2,targetable,contentid=\" .. cid)\n    if table.valid(candidates) then\n        for _, entity in pairs(candidates) do\n            if isValidInRange(entity) then\n                if currentTarget == nil or currentTarget.id ~= entity.id then\n                    Player:SetTarget(entity.id)\n                end\n                return\n            end\n        end\n    end\nend\n\nlocal fallbackList = EntityList(\"type=2,targetable,contentid=\" .. fallbackID)\nif table.valid(fallbackList) then\n    for _, entity in pairs(fallbackList) do\n        if entity.alive then\n            if currentTarget == nil or currentTarget.id ~= entity.id then\n                Player:SetTarget(entity.id)\n            end\n            return\n        end\n    end\nend",
-							conditions = 
-							{
-								
-								{
-									"3b44759c-dbcc-c14e-8c61-0cc978b17661",
-									true,
-								},
-								
-								{
-									"0fa965f2-2ab1-15ed-a5b3-7901dd0570e3",
-									true,
-								},
-							},
-							gVar = "ACR_RikuGNB3_CD",
-							uuid = "d4e986a4-89f3-e61e-8255-375231273b52",
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							aType = "Lua",
-							actionLua = "local lowestHP = nil\nlocal minHPPercent = 101\nlocal range = 7.5\nlocal mainID = 13832\nlocal fallbackID = 18322\n\nlocal mainList = EntityList(\"type=2,targetable,contentid=\" .. mainID)\nif table.valid(mainList) then\n    for _, entity in pairs(mainList) do\n        if entity.alive and entity.distance <= range and entity.hp.percent < minHPPercent then\n            lowestHP = entity\n            minHPPercent = entity.hp.percent\n        end\n    end\nend\n\nif lowestHP then\n    if Player:GetTarget() == nil or Player:GetTarget().id ~= lowestHP.id then\n        Player:SetTarget(lowestHP.id)\n    end\n    return\nend\n\nlocal fallbackList = EntityList(\"type=2,targetable,contentid=\" .. fallbackID)\nif table.valid(fallbackList) then\n    for _, v in pairs(fallbackList) do\n        if v.alive then\n            if Player:GetTarget() == nil or Player:GetTarget().id ~= v.id then\n                Player:SetTarget(v.id)\n            end\n            return\n        end\n    end\nend",
-							conditions = 
-							{
-								
-								{
-									"8e6e476c-c6ec-33b8-b8f1-40b51c68e6f3",
-									true,
-								},
-								
-								{
-									"0fa965f2-2ab1-15ed-a5b3-7901dd0570e3",
-									true,
-								},
-							},
-							gVar = "ACR_RikuGNB3_CD",
-							uuid = "c9bd53f0-ccf7-9cd2-aeb5-dbc183a35f8f",
-							version = 2.1,
-						},
-						inheritedIndex = 2,
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"Prioritize Cat\"].bool\n",
-							uuid = "3b44759c-dbcc-c14e-8c61-0cc978b17661",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"LowestHP Yan\"].bool\n",
-							uuid = "8e6e476c-c6ec-33b8-b8f1-40b51c68e6f3",
-							version = 2,
-						},
-						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
-							name = "GroupMit ST",
-							uuid = "0fa965f2-2ab1-15ed-a5b3-7901dd0570e3",
-							version = 2,
-						},
-					},
-				},
-				enabled = false,
-				eventType = 12,
-				mechanicTime = 224.3,
-				name = "[ST] AutoTarget:Cat",
-				timeRange = true,
-				timelineIndex = 35,
-				timerEndOffset = 186.60000610352,
-				uuid = "4307c8a1-868c-5ad2-be22-137cbe1cfbe2",
-				version = 2,
-			},
-			inheritedIndex = 4,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
 							aType = "Alert",
 							alertDuration = 29000,
 							alertScale = 2,
@@ -5497,111 +5341,6 @@ local tbl =
 				version = 2,
 			},
 		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "Lua",
-							actionLua = "local range = 7.5\nlocal fallbackID = 13822\nlocal priorityList = {13833, 13835, 13834, 13831, 13832}\nlocal currentTarget = Player:GetTarget()\n\nlocal function isValidInRange(entity)\n    return entity.alive and entity.targetable and entity.distance <= range\nend\n\nlocal function anyAlive(cid)\n    local list = EntityList(\"type=2,targetable,contentid=\" .. cid)\n    if table.valid(list) then\n        for _, v in pairs(list) do\n            if v.alive then\n                return true\n            end\n        end\n    end\n    return false\nend\n\nfor _, cid in ipairs(priorityList) do\n    local candidates = EntityList(\"type=2,targetable,contentid=\" .. cid)\n    if table.valid(candidates) then\n        for _, entity in pairs(candidates) do\n            if isValidInRange(entity) then\n                if currentTarget == nil or currentTarget.id ~= entity.id then\n                    Player:SetTarget(entity.id)\n                end\n                return\n            end\n        end\n    end\nend\n\nlocal fallbackList = EntityList(\"type=2,targetable,contentid=\" .. fallbackID)\nif table.valid(fallbackList) then\n    for _, entity in pairs(fallbackList) do\n        if entity.alive then\n            if currentTarget == nil or currentTarget.id ~= entity.id then\n                Player:SetTarget(entity.id)\n            end\n            return\n        end\n    end\nend",
-							conditions = 
-							{
-								
-								{
-									"3b44759c-dbcc-c14e-8c61-0cc978b17661",
-									true,
-								},
-								
-								{
-									"3bfa16c2-c57c-04e9-8bef-2b3d52c7e1ec",
-									true,
-								},
-							},
-							gVar = "ACR_RikuGNB3_CD",
-							uuid = "b24c16e7-dd34-a612-9fce-c907f6e8c5ce",
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							aType = "Lua",
-							actionLua = "local lowestHP = nil\nlocal minHPPercent = 101\nlocal range = 7.5\nlocal mainID = 13831\nlocal fallbackID = 18322\n\nlocal mainList = EntityList(\"type=2,targetable,contentid=\" .. mainID)\nif table.valid(mainList) then\n    for _, entity in pairs(mainList) do\n        if entity.alive and entity.distance <= range and entity.hp.percent < minHPPercent then\n            lowestHP = entity\n            minHPPercent = entity.hp.percent\n        end\n    end\nend\n\nif lowestHP then\n    if Player:GetTarget() == nil or Player:GetTarget().id ~= lowestHP.id then\n        Player:SetTarget(lowestHP.id)\n    end\n    return\nend\n\nlocal fallbackList = EntityList(\"type=2,targetable,contentid=\" .. fallbackID)\nif table.valid(fallbackList) then\n    for _, v in pairs(fallbackList) do\n        if v.alive then\n            if Player:GetTarget() == nil or Player:GetTarget().id ~= v.id then\n                Player:SetTarget(v.id)\n            end\n            return\n        end\n    end\nend",
-							conditions = 
-							{
-								
-								{
-									"8e6e476c-c6ec-33b8-b8f1-40b51c68e6f3",
-									true,
-								},
-								
-								{
-									"3bfa16c2-c57c-04e9-8bef-2b3d52c7e1ec",
-									true,
-								},
-							},
-							gVar = "ACR_RikuGNB3_CD",
-							uuid = "7fe609f5-2b2f-e487-ad80-fbd15aceb16a",
-							version = 2.1,
-						},
-						inheritedIndex = 2,
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"Prioritize Cat\"].bool\n",
-							uuid = "3b44759c-dbcc-c14e-8c61-0cc978b17661",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"LowestHP Mu\"].bool\n",
-							uuid = "8e6e476c-c6ec-33b8-b8f1-40b51c68e6f3",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
-							name = "GroupMit MT",
-							uuid = "3bfa16c2-c57c-04e9-8bef-2b3d52c7e1ec",
-							version = 2,
-						},
-					},
-				},
-				enabled = false,
-				eventType = 12,
-				mechanicTime = 224.3,
-				name = "[MT] AutoTarget:Cat",
-				timeRange = true,
-				timelineIndex = 35,
-				timerEndOffset = 186.60000610352,
-				uuid = "4c5542b0-a68d-eeec-a4e9-cb188233fed8",
-				version = 2,
-			},
-			inheritedIndex = 3,
-		},
 	},
 	[36] = 
 	{
@@ -5956,6 +5695,11 @@ local tbl =
 									"a8ae1c03-9765-6092-abb1-e69f6c42a6a8",
 									true,
 								},
+								
+								{
+									"94ddea11-1bc4-c448-be6a-36c435afc95a",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_AOE",
@@ -5986,7 +5730,13 @@ local tbl =
 									"a8ae1c03-9765-6092-abb1-e69f6c42a6a8",
 									true,
 								},
+								
+								{
+									"94ddea11-1bc4-c448-be6a-36c435afc95a",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_SmartAOE",
 							gVarValue = 2,
 							ignoreWeaveRules = true,
@@ -6015,7 +5765,13 @@ local tbl =
 									"a8ae1c03-9765-6092-abb1-e69f6c42a6a8",
 									true,
 								},
+								
+								{
+									"94ddea11-1bc4-c448-be6a-36c435afc95a",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuDRK3_SmartAOE",
 							gVarValue = 2,
 							ignoreWeaveRules = true,
@@ -6045,7 +5801,13 @@ local tbl =
 									"a8ae1c03-9765-6092-abb1-e69f6c42a6a8",
 									true,
 								},
+								
+								{
+									"94ddea11-1bc4-c448-be6a-36c435afc95a",
+									true,
+								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuWAR3_SmartAOE",
 							gVarValue = 2,
 							ignoreWeaveRules = true,
@@ -6118,6 +5880,17 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return table.size(TensorCore.entityList(\"alive,attackable,contentid=13831\")) > 0\n",
+							name = "is Mu alive",
+							uuid = "94ddea11-1bc4-c448-be6a-36c435afc95a",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 227.4,
 				name = "[MT] AoE Mu",
@@ -6125,7 +5898,7 @@ local tbl =
 				timelineIndex = 37,
 				timerEndOffset = 5,
 				timerStartOffset = 1,
-				uuid = "dfc860bf-00d8-30d6-aafb-291a22f7e322",
+				uuid = "d43f8562-809b-ff96-8f9f-c5d9a90f1613",
 				version = 2,
 			},
 		},
@@ -8126,7 +7899,12 @@ local tbl =
 								},
 								
 								{
-									"1666dd93-6008-9426-8303-7835d08b1b2e",
+									"a8ae1c03-9765-6092-abb1-e69f6c42a6a8",
+									true,
+								},
+								
+								{
+									"94ddea11-1bc4-c448-be6a-36c435afc95a",
 									true,
 								},
 							},
@@ -8156,10 +7934,16 @@ local tbl =
 								},
 								
 								{
-									"1666dd93-6008-9426-8303-7835d08b1b2e",
+									"a8ae1c03-9765-6092-abb1-e69f6c42a6a8",
+									true,
+								},
+								
+								{
+									"94ddea11-1bc4-c448-be6a-36c435afc95a",
 									true,
 								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_SmartAOE",
 							gVarValue = 2,
 							ignoreWeaveRules = true,
@@ -8185,10 +7969,16 @@ local tbl =
 								},
 								
 								{
-									"1666dd93-6008-9426-8303-7835d08b1b2e",
+									"a8ae1c03-9765-6092-abb1-e69f6c42a6a8",
+									true,
+								},
+								
+								{
+									"94ddea11-1bc4-c448-be6a-36c435afc95a",
 									true,
 								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuDRK3_SmartAOE",
 							gVarValue = 2,
 							ignoreWeaveRules = true,
@@ -8215,10 +8005,16 @@ local tbl =
 								},
 								
 								{
-									"1666dd93-6008-9426-8303-7835d08b1b2e",
+									"a8ae1c03-9765-6092-abb1-e69f6c42a6a8",
+									true,
+								},
+								
+								{
+									"94ddea11-1bc4-c448-be6a-36c435afc95a",
 									true,
 								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuWAR3_SmartAOE",
 							gVarValue = 2,
 							ignoreWeaveRules = true,
@@ -8287,7 +8083,18 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
-							uuid = "1666dd93-6008-9426-8303-7835d08b1b2e",
+							uuid = "a8ae1c03-9765-6092-abb1-e69f6c42a6a8",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return table.size(TensorCore.entityList(\"alive,attackable,contentid=13831\")) > 0\n",
+							name = "is Mu alive",
+							uuid = "94ddea11-1bc4-c448-be6a-36c435afc95a",
 							version = 2,
 						},
 					},
@@ -8298,7 +8105,7 @@ local tbl =
 				timelineIndex = 41,
 				timerEndOffset = 5,
 				timerStartOffset = 1,
-				uuid = "17bef7f7-898c-15cf-b4e1-d52e195e76b0",
+				uuid = "5b1af5a0-ee41-bdf5-96b8-1454f759e9a7",
 				version = 2,
 			},
 		},
@@ -10145,7 +9952,7 @@ local tbl =
 					{
 						data = 
 						{
-							actionCDValue = 1,
+							actionCDValue = 0.0010000000474975,
 							actionID = 7540,
 							category = "Self",
 							conditionType = 4,
@@ -10158,8 +9965,8 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
-							name = "GroupMit MT",
+							conditionLua = "-- MTgroup 或 STgroup\nreturn (RikuduoGadget \n        and (RikuduoGadget.group_is(\"MTgroup\") or RikuduoGadget.group_is(\"STgroup\"))) \n       or false\n",
+							name = "GroupMit MT/ST",
 							uuid = "51e93b0b-939c-59cd-881f-f26f006bbac0",
 							version = 2,
 						},
@@ -10168,10 +9975,10 @@ local tbl =
 				eventType = 12,
 				loop = true,
 				mechanicTime = 286.6,
-				name = "[MT] Stun Jabberwock",
+				name = "[MT/ST] Stun Jabberwock",
 				timeRange = true,
 				timelineIndex = 45,
-				timerEndOffset = 20,
+				timerEndOffset = 30,
 				timerStartOffset = 2,
 				uuid = "bbc426c0-313c-3fe5-a26e-dfc8a9d74288",
 				version = 2,
@@ -12943,7 +12750,12 @@ local tbl =
 								},
 								
 								{
-									"8ba874ee-ca69-1909-887c-e5c0bf99334b",
+									"a8ae1c03-9765-6092-abb1-e69f6c42a6a8",
+									true,
+								},
+								
+								{
+									"94ddea11-1bc4-c448-be6a-36c435afc95a",
 									true,
 								},
 							},
@@ -12973,10 +12785,16 @@ local tbl =
 								},
 								
 								{
-									"8ba874ee-ca69-1909-887c-e5c0bf99334b",
+									"a8ae1c03-9765-6092-abb1-e69f6c42a6a8",
+									true,
+								},
+								
+								{
+									"94ddea11-1bc4-c448-be6a-36c435afc95a",
 									true,
 								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_SmartAOE",
 							gVarValue = 2,
 							ignoreWeaveRules = true,
@@ -13002,10 +12820,16 @@ local tbl =
 								},
 								
 								{
-									"8ba874ee-ca69-1909-887c-e5c0bf99334b",
+									"a8ae1c03-9765-6092-abb1-e69f6c42a6a8",
+									true,
+								},
+								
+								{
+									"94ddea11-1bc4-c448-be6a-36c435afc95a",
 									true,
 								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuDRK3_SmartAOE",
 							gVarValue = 2,
 							ignoreWeaveRules = true,
@@ -13032,10 +12856,16 @@ local tbl =
 								},
 								
 								{
-									"8ba874ee-ca69-1909-887c-e5c0bf99334b",
+									"a8ae1c03-9765-6092-abb1-e69f6c42a6a8",
+									true,
+								},
+								
+								{
+									"94ddea11-1bc4-c448-be6a-36c435afc95a",
 									true,
 								},
 							},
+							endIfUsed = true,
 							gVar = "ACR_RikuWAR3_SmartAOE",
 							gVarValue = 2,
 							ignoreWeaveRules = true,
@@ -13104,7 +12934,18 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
-							uuid = "8ba874ee-ca69-1909-887c-e5c0bf99334b",
+							uuid = "a8ae1c03-9765-6092-abb1-e69f6c42a6a8",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return table.size(TensorCore.entityList(\"alive,attackable,contentid=13831\")) > 0\n",
+							name = "is Mu alive",
+							uuid = "94ddea11-1bc4-c448-be6a-36c435afc95a",
 							version = 2,
 						},
 					},
@@ -13115,7 +12956,7 @@ local tbl =
 				timelineIndex = 50,
 				timerEndOffset = 5,
 				timerStartOffset = 1,
-				uuid = "51acc17e-227f-eb79-ac5f-8fa672d832a3",
+				uuid = "26b76f79-d41d-e48c-9d02-5453f4b03a9f",
 				version = 2,
 			},
 		},
@@ -13149,7 +12990,7 @@ local tbl =
 								},
 								
 								{
-									"88b147ca-5458-4071-8047-e56640af6a14",
+									"51e93b0b-939c-59cd-881f-f26f006bbac0",
 									true,
 								},
 							},
@@ -13193,7 +13034,7 @@ local tbl =
 								},
 								
 								{
-									"88b147ca-5458-4071-8047-e56640af6a14",
+									"51e93b0b-939c-59cd-881f-f26f006bbac0",
 									true,
 								},
 							},
@@ -13251,7 +13092,7 @@ local tbl =
 					{
 						data = 
 						{
-							actionCDValue = 2,
+							actionCDValue = 0.0010000000474975,
 							actionID = 7540,
 							category = "Self",
 							conditionType = 4,
@@ -13264,9 +13105,9 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
-							name = "GroupMit ST",
-							uuid = "88b147ca-5458-4071-8047-e56640af6a14",
+							conditionLua = "-- MTgroup 或 STgroup\nreturn (RikuduoGadget \n        and (RikuduoGadget.group_is(\"MTgroup\") or RikuduoGadget.group_is(\"STgroup\"))) \n       or false\n",
+							name = "GroupMit MT/ST",
+							uuid = "51e93b0b-939c-59cd-881f-f26f006bbac0",
 							version = 2,
 						},
 					},
@@ -13274,12 +13115,12 @@ local tbl =
 				eventType = 12,
 				loop = true,
 				mechanicTime = 325.7,
-				name = "[ST] Stun Jabberwock",
+				name = "[MT/ST] Stun Jabberwock",
 				timeRange = true,
 				timelineIndex = 52,
-				timerEndOffset = 15,
+				timerEndOffset = 30,
 				timerStartOffset = 2,
-				uuid = "7f67c400-6402-e67f-af87-a1f733ed92d2",
+				uuid = "879db745-a38b-e169-a3be-0a39868b9ab3",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -13370,7 +13211,7 @@ local tbl =
 				uuid = "b06ec228-d0fc-56b7-8d52-10d2c98ae151",
 				version = 2,
 			},
-			inheritedIndex = 2,
+			inheritedIndex = 3,
 		},
 	},
 	[53] = 
