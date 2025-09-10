@@ -25,11 +25,6 @@ local tbl =
 									"de94c739-9790-9f85-b372-5e79615ae8f4",
 									true,
 								},
-								
-								{
-									"f80915bc-4dd4-7d36-857a-32529900e23e",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_Hotbar_Provoke",
@@ -66,25 +61,6 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffIDList = 
-							{
-								409,
-								82,
-								810,
-								1836,
-							},
-							category = "Party",
-							partyTargetType = "Other Tank",
-							uuid = "f80915bc-4dd4-7d36-857a-32529900e23e",
-							version = 2,
-						},
-						inheritedIndex = 3,
 					},
 				},
 				mechanicTime = 14.8,
@@ -4993,7 +4969,7 @@ local tbl =
 						data = 
 						{
 							aType = "Lua",
-							actionLua = "-- Auto Target Switcher UI (OnDraw) - auto-resize & no resize grip\n\ndata._ats = data._ats or {\n  enabled = false,\n  stick_14094_id = nil,\n  current_label = \"—\",\n  dropdown = false,\n}\n\nlocal win_title = \"AutoTarget\"\nlocal flags = GUI.WindowFlags_AlwaysAutoResize\n           + GUI.WindowFlags_NoResize\n           + GUI.WindowFlags_NoScrollbar\n           + GUI.WindowFlags_NoCollapse\n\nif GUI:Begin(win_title, true, flags) then\n  local on = data._ats.enabled\n  local label = on and \"ON\" or \"OFF\"\n  local col = on and {0.20, 0.70, 0.20, 1.0} or {0.80, 0.20, 0.20, 1.0}\n\n  GUI:PushStyleColor(GUI.Col_Button,        col[1], col[2], col[3], col[4])\n  GUI:PushStyleColor(GUI.Col_ButtonHovered, col[1], col[2], col[3], 0.85)\n  GUI:PushStyleColor(GUI.Col_ButtonActive,  col[1], col[2], col[3], 0.70)\n\n  if GUI:Button(label, 60, 24) then\n    data._ats.enabled = not data._ats.enabled\n  end\n\n  GUI:PopStyleColor(3)\n\n  GUI:SameLine()\n  if GUI:Button(\"+\", 24, 24) then\n    data._ats.dropdown = not data._ats.dropdown\n  end\n\n  if data._ats.dropdown then\n    GUI:Separator()\n    GUI:Text(\"当前选择的目标： \" .. (data._ats.current_label or \"—\"))\n  end\nend\nGUI:End()\n",
+							actionLua = "-- Auto Target Switcher UI (OnDraw) - auto-resize & no resize grip\n\ndata._ats = data._ats or {\n  enabled = true,\n  stick_14094_id = nil,\n  current_label = \"—\",\n  dropdown = false,\n}\n\nlocal win_title = \"AutoTarget\"\nlocal flags = GUI.WindowFlags_AlwaysAutoResize\n           + GUI.WindowFlags_NoResize\n           + GUI.WindowFlags_NoScrollbar\n           + GUI.WindowFlags_NoCollapse\n\nif GUI:Begin(win_title, true, flags) then\n  local on = data._ats.enabled\n  local label = on and \"ON\" or \"OFF\"\n  local col = on and {0.20, 0.70, 0.20, 1.0} or {0.80, 0.20, 0.20, 1.0}\n\n  GUI:PushStyleColor(GUI.Col_Button,        col[1], col[2], col[3], col[4])\n  GUI:PushStyleColor(GUI.Col_ButtonHovered, col[1], col[2], col[3], 0.85)\n  GUI:PushStyleColor(GUI.Col_ButtonActive,  col[1], col[2], col[3], 0.70)\n\n  if GUI:Button(label, 60, 24) then\n    data._ats.enabled = not data._ats.enabled\n  end\n\n  GUI:PopStyleColor(3)\n\n  GUI:SameLine()\n  if GUI:Button(\"+\", 24, 24) then\n    data._ats.dropdown = not data._ats.dropdown\n  end\n\n  if data._ats.dropdown then\n    GUI:Separator()\n    GUI:Text(\"当前选择的目标： \" .. (data._ats.current_label or \"—\"))\n  end\nend\nGUI:End()\n",
 							gVar = "ACR_RikuGNB3_CD",
 							uuid = "074d949b-457d-1e61-971b-e0f8b4f40aa8",
 							version = 2.1,
@@ -5026,7 +5002,7 @@ local tbl =
 						data = 
 						{
 							aType = "Lua",
-							actionLua = "-- Auto Target Switcher (OnFrame) - v2\n-- 更新点：\n-- ① 14096：当前选中的14096死后才选择下一只（存活时不来回切换）\n-- ② 14094：优先在10m内选HP最低；若10m无小手则选就近的一只；维持“死了再换”的粘性\n\ndata._ats = data._ats or {\n  enabled = false,\n  stick_14096_id = nil,   -- 当前粘着的大手\n  stick_14094_id = nil,   -- 当前粘着的小手\n  current_label = \"—\",\n  dropdown = false,\n}\n\n-- ========== 工具函数 ==========\nlocal function get_entity_by_id(id)\n  if not id then return nil end\n  local list = TensorCore.entityList(\"alive,attackable\")\n  for _, e in pairs(list) do\n    if e.id == id then return e end\n  end\n  return nil\nend\n\nlocal function list_by_cid(cid)\n  return TensorCore.entityList(string.format(\"alive,attackable,contentid=%d\", cid))\nend\n\nlocal function pick_closest(cid)\n  local list = list_by_cid(cid)\n  local best, bestd = nil, math.huge\n  for _, e in pairs(list) do\n    local d = e.distance2d or 9999\n    if d < bestd then bestd, best = d, e end\n  end\n  return best\nend\n\nlocal function pick_lowest_hp_within_radius(cid, radius_m)\n  local list = list_by_cid(cid)\n  local best, besthp = nil, math.huge\n  for _, e in pairs(list) do\n    local d = e.distance2d or 9999\n    if d <= radius_m then\n      local hp = (e.hp and e.hp.percent) or 100\n      if hp < besthp then besthp, best = hp, e end\n    end\n  end\n  return best\nend\n\nlocal function set_target_and_label(ent)\n  if not ent then return end\n  data._ats.current_label =\n      (ent.contentid == 14096 and \"大手\")\n   or (ent.contentid == 14094 and \"小手\")\n   or (ent.contentid == 14093 and \"Boss\")\n   or \"—\"\n\n  local cur = Player:GetTarget()\n  if not cur or cur.id ~= ent.id then\n    Player:SetTarget(ent.id)\n  end\nend\n\n-- 未开启：只更新显示并退出\nif not data._ats.enabled then\n  local cur = Player:GetTarget()\n  if cur then\n    data._ats.current_label =\n        (cur.contentid == 14096 and \"大手\")\n     or (cur.contentid == 14094 and \"小手\")\n     or (cur.contentid == 14093 and \"Boss\")\n     or \"—\"\n  else\n    data._ats.current_label = \"—\"\n  end\n  return\nend\n\n-- ========== 优先级 ①：14096 大手（粘着，死了才换） ==========\ndo\n  -- 若场上有大手\n  local any_big = pick_closest(14096)\n  if any_big then\n    -- 若已经粘了一只大手且它还活着，就继续粘着（不来回切换）\n    local stuck = get_entity_by_id(data._ats.stick_14096_id)\n    if stuck and stuck.contentid == 14096 then\n      set_target_and_label(stuck)\n      return\n    end\n\n    -- 没有粘，或原粘的大手已死/失效：\n    -- 如果当前目标就是某只活着的大手，则将其作为新的“粘着对象”\n    local cur = Player:GetTarget()\n    if cur and cur.contentid == 14096 then\n      data._ats.stick_14096_id = cur.id\n      set_target_and_label(cur)\n      return\n    end\n\n    -- 否则，选一只（用就近）并开始粘着\n    data._ats.stick_14096_id = any_big.id\n    set_target_and_label(any_big)\n    return\n  else\n    -- 场上没有大手，清掉粘大手\n    data._ats.stick_14096_id = nil\n  end\nend\n\n-- ========== 优先级 ②：14094 小手（粘性仅在≤10m内生效；10m外允许换） ==========\ndo\n  -- 若已粘着某只小手，且仍存活可攻，且距离≤10m，则保持粘性\n  local stuck_s = get_entity_by_id(data._ats.stick_14094_id)\n  if stuck_s and stuck_s.contentid == 14094 then\n    local d = stuck_s.distance2d or 9999\n    if d <= 10.0 then\n      set_target_and_label(stuck_s)\n      return\n    end\n    -- 距离>10m：允许换目标，继续走下面的重选逻辑\n  end\n\n  -- 重选：优先在10m内挑HP最低；若10m内没有，则选就近\n  local in10m_lowhp = pick_lowest_hp_within_radius(14094, 10.0)\n  local pick = in10m_lowhp or pick_closest(14094)\n  if pick then\n    data._ats.stick_14094_id = pick.id\n    set_target_and_label(pick)\n    return\n  else\n    data._ats.stick_14094_id = nil\n  end\nend\n\n-- ========== 优先级 ③：14093 Boss ==========\ndo\n  local boss = pick_closest(14093)\n  if boss then\n    set_target_and_label(boss)\n    return\n  end\nend\n\n-- 都没有\ndata._ats.current_label = \"—\"\nreturn",
+							actionLua = "-- Auto Target Switcher (OnFrame) - v2\n-- 更新点：\n-- ① 14096：当前选中的14096死后才选择下一只（存活时不来回切换）\n-- ② 14094：优先在10m内选HP最低；若10m无小手则选就近的一只；维持“死了再换”的粘性\n\ndata._ats = data._ats or {\n  enabled = true,\n  stick_14096_id = nil,   -- 当前粘着的大手\n  stick_14094_id = nil,   -- 当前粘着的小手\n  current_label = \"—\",\n  dropdown = false,\n}\n\n-- ========== 工具函数 ==========\nlocal function get_entity_by_id(id)\n  if not id then return nil end\n  local list = TensorCore.entityList(\"alive,attackable\")\n  for _, e in pairs(list) do\n    if e.id == id then return e end\n  end\n  return nil\nend\n\nlocal function list_by_cid(cid)\n  return TensorCore.entityList(string.format(\"alive,attackable,contentid=%d\", cid))\nend\n\nlocal function pick_closest(cid)\n  local list = list_by_cid(cid)\n  local best, bestd = nil, math.huge\n  for _, e in pairs(list) do\n    local d = e.distance2d or 9999\n    if d < bestd then bestd, best = d, e end\n  end\n  return best\nend\n\nlocal function pick_lowest_hp_within_radius(cid, radius_m)\n  local list = list_by_cid(cid)\n  local best, besthp = nil, math.huge\n  for _, e in pairs(list) do\n    local d = e.distance2d or 9999\n    if d <= radius_m then\n      local hp = (e.hp and e.hp.percent) or 100\n      if hp < besthp then besthp, best = hp, e end\n    end\n  end\n  return best\nend\n\nlocal function set_target_and_label(ent)\n  if not ent then return end\n  data._ats.current_label =\n      (ent.contentid == 14096 and \"大手\")\n   or (ent.contentid == 14094 and \"小手\")\n   or (ent.contentid == 14093 and \"Boss\")\n   or \"—\"\n\n  local cur = Player:GetTarget()\n  if not cur or cur.id ~= ent.id then\n    Player:SetTarget(ent.id)\n  end\nend\n\n-- 未开启：只更新显示并退出\nif not data._ats.enabled then\n  local cur = Player:GetTarget()\n  if cur then\n    data._ats.current_label =\n        (cur.contentid == 14096 and \"大手\")\n     or (cur.contentid == 14094 and \"小手\")\n     or (cur.contentid == 14093 and \"Boss\")\n     or \"—\"\n  else\n    data._ats.current_label = \"—\"\n  end\n  return\nend\n\n-- ========== 优先级 ①：14096 大手（粘着，死了才换） ==========\ndo\n  -- 若场上有大手\n  local any_big = pick_closest(14096)\n  if any_big then\n    -- 若已经粘了一只大手且它还活着，就继续粘着（不来回切换）\n    local stuck = get_entity_by_id(data._ats.stick_14096_id)\n    if stuck and stuck.contentid == 14096 then\n      set_target_and_label(stuck)\n      return\n    end\n\n    -- 没有粘，或原粘的大手已死/失效：\n    -- 如果当前目标就是某只活着的大手，则将其作为新的“粘着对象”\n    local cur = Player:GetTarget()\n    if cur and cur.contentid == 14096 then\n      data._ats.stick_14096_id = cur.id\n      set_target_and_label(cur)\n      return\n    end\n\n    -- 否则，选一只（用就近）并开始粘着\n    data._ats.stick_14096_id = any_big.id\n    set_target_and_label(any_big)\n    return\n  else\n    -- 场上没有大手，清掉粘大手\n    data._ats.stick_14096_id = nil\n  end\nend\n\n-- ========== 优先级 ②：14094 小手（粘性仅在≤10m内生效；10m外允许换） ==========\ndo\n  -- 若已粘着某只小手，且仍存活可攻，且距离≤10m，则保持粘性\n  local stuck_s = get_entity_by_id(data._ats.stick_14094_id)\n  if stuck_s and stuck_s.contentid == 14094 then\n    local d = stuck_s.distance2d or 9999\n    if d <= 10.0 then\n      set_target_and_label(stuck_s)\n      return\n    end\n    -- 距离>10m：允许换目标，继续走下面的重选逻辑\n  end\n\n  -- 重选：优先在10m内挑HP最低；若10m内没有，则选就近\n  local in10m_lowhp = pick_lowest_hp_within_radius(14094, 10.0)\n  local pick = in10m_lowhp or pick_closest(14094)\n  if pick then\n    data._ats.stick_14094_id = pick.id\n    set_target_and_label(pick)\n    return\n  else\n    data._ats.stick_14094_id = nil\n  end\nend\n\n-- ========== 优先级 ③：14093 Boss ==========\ndo\n  local boss = pick_closest(14093)\n  if boss then\n    set_target_and_label(boss)\n    return\n  end\nend\n\n-- 都没有\ndata._ats.current_label = \"—\"\nreturn",
 							gVar = "ACR_RikuGNB3_CD",
 							uuid = "acda19f0-e400-7be6-9f1e-5aa565e50d89",
 							version = 2.1,
@@ -5295,9 +5271,6 @@ local tbl =
 				version = 2,
 			},
 		},
-	},
-	[47] = 
-	{
 		
 		{
 			data = 
@@ -5308,7 +5281,9 @@ local tbl =
 					{
 						data = 
 						{
+							aType = "Lua",
 							actionID = 7533,
+							actionLua = "-- Provoke the 1st-spawned 14096 (≥0.5s on field), window 70s, ignore weave\nlocal now = Now and Now() or (os.clock()*1000)\nlocal WINDOW_MS   = 70000\nlocal MIN_AGE_MS  = 1000\n\ndata._spawn14096 = data._spawn14096 or {\n  firstSeen = {},\n  seq       = {},\n  counter   = 0,\n  lastSeenAnyMs = now,\n}\n\nlocal S = data._spawn14096\nlocal list = TensorCore and TensorCore.entityList(\"alive,attackable,contentid=14096\") or {}\nlocal cnt  = table.size(list)\n\nif cnt == 0 then\n  local silentMs = now - (S.lastSeenAnyMs or now)\n  if silentMs > WINDOW_MS then\n    S.firstSeen, S.seq, S.counter = {}, {}, 0\n  end\n  return nil\nend\n\nS.lastSeenAnyMs = now\n\nlocal present = {}\nfor _, e in pairs(list) do present[e.id] = true end\n\nfor id, t0 in pairs(S.firstSeen) do\n  if not present[id] and (now - t0) > WINDOW_MS then\n    S.firstSeen[id], S.seq[id] = nil, nil\n  end\nend\n\nfor _, e in pairs(list) do\n  if e and e.id and not S.firstSeen[e.id] then\n    S.counter = S.counter + 1\n    S.firstSeen[e.id] = now\n    S.seq[e.id]       = S.counter\n  end\nend\n\n-- 找“第一只”且在场时间 ≥ 0.5s\nlocal target = nil\nfor _, e in pairs(list) do\n  if S.seq[e.id] == 1 then\n    local age = now - (S.firstSeen[e.id] or now)\n    if age >= MIN_AGE_MS then\n      target = e\n    end\n    break\n  end\nend\n\nif not target then return nil end\n\nlocal provoke = ActionList and ActionList:Get(1, 7533)\nif not provoke then return nil end\n\nreturn provoke, target.id, true, true\n",
 							conditions = 
 							{
 								
@@ -5325,6 +5300,8 @@ local tbl =
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_Hotbar_Provoke",
 							ignoreWeaveRules = true,
+							luaNeedsWeaveWindow = true,
+							luaReturnsAction = true,
 							targetContentID = 14096,
 							targetType = "ContentID",
 							uuid = "001b735f-0c3d-3481-8712-978c4ccf1420",
@@ -5360,20 +5337,17 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 210.7,
-				name = "Provoke",
+				mechanicTime = 186.8,
+				name = "[MT] Provoke",
 				timeRange = true,
-				timelineIndex = 47,
+				timelineIndex = 43,
+				timerEndOffset = 70,
 				timerOffset = -3,
-				timerStartOffset = -30,
-				uuid = "24d4313d-6655-ff73-85e5-7b06135cab8d",
+				uuid = "c65eba18-bb12-c4ca-bf94-67c1b8127de8",
 				version = 2,
 			},
-			inheritedIndex = 1,
+			inheritedIndex = 9,
 		},
-	},
-	[49] = 
-	{
 		
 		{
 			data = 
@@ -5384,23 +5358,14 @@ local tbl =
 					{
 						data = 
 						{
+							aType = "Lua",
 							actionID = 7533,
-							conditions = 
-							{
-								
-								{
-									"9dfa5c8b-eca9-fe1e-8cf4-c06cc07addf7",
-									true,
-								},
-								
-								{
-									"de94c739-9790-9f85-b372-5e79615ae8f4",
-									true,
-								},
-							},
+							actionLua = "-- Provoke the 2nd-spawned 14096 (≥0.5s on field), window 70s, ignore weave\nlocal now = Now and Now() or (os.clock()*1000)\nlocal WINDOW_MS   = 70000\nlocal MIN_AGE_MS  = 1000\n\ndata._spawn14096 = data._spawn14096 or {\n  firstSeen = {},  -- [entityID] = firstSeenMs\n  seq       = {},  -- [entityID] = 1,2,3,...\n  counter   = 0,\n  lastSeenAnyMs = now,\n}\n\nlocal S = data._spawn14096\nlocal list = TensorCore and TensorCore.entityList(\"alive,attackable,contentid=14096\") or {}\nlocal cnt  = table.size(list)\n\n-- 无目标：看静默时长决定是否重置\nif cnt == 0 then\n  local silentMs = now - (S.lastSeenAnyMs or now)\n  if silentMs > WINDOW_MS then\n    S.firstSeen, S.seq, S.counter = {}, {}, 0\n  end\n  return nil\nend\n\nS.lastSeenAnyMs = now\n\n-- 记录当前在场 id，用于清理\nlocal present = {}\nfor _, e in pairs(list) do present[e.id] = true end\n\n-- 清理过窗且已不在场的记录\nfor id, t0 in pairs(S.firstSeen) do\n  if not present[id] and (now - t0) > WINDOW_MS then\n    S.firstSeen[id], S.seq[id] = nil, nil\n  end\nend\n\n-- 给新出现的实体编号 & 首次见到时间\nfor _, e in pairs(list) do\n  if e and e.id and not S.firstSeen[e.id] then\n    S.counter = S.counter + 1\n    S.firstSeen[e.id] = now\n    S.seq[e.id]       = S.counter\n  end\nend\n\n-- 找“第二只”且在场时间 ≥ 0.5s\nlocal target = nil\nfor _, e in pairs(list) do\n  if S.seq[e.id] == 2 then\n    local age = now - (S.firstSeen[e.id] or now)\n    if age >= MIN_AGE_MS then\n      target = e\n    end\n    break\n  end\nend\n\nif not target then return nil end\n\nlocal provoke = ActionList and ActionList:Get(1, 7533)\nif not provoke then return nil end\n\nreturn provoke, target.id, true, true",
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_Hotbar_Provoke",
 							ignoreWeaveRules = true,
+							luaNeedsWeaveWindow = true,
+							luaReturnsAction = true,
 							targetContentID = 14096,
 							targetType = "ContentID",
 							uuid = "001b735f-0c3d-3481-8712-978c4ccf1420",
@@ -5437,16 +5402,16 @@ local tbl =
 						inheritedIndex = 2,
 					},
 				},
-				mechanicTime = 221.2,
-				name = "Provoke",
+				mechanicTime = 186.8,
+				name = "[ST] Provoke",
 				timeRange = true,
-				timelineIndex = 49,
+				timelineIndex = 43,
+				timerEndOffset = 70,
 				timerOffset = -3,
-				timerStartOffset = -11,
-				uuid = "e8fdfe4a-5430-00c9-a6c3-b941a3486a3f",
+				uuid = "788e9ec2-a6b0-3374-b8d7-57cb93b37e65",
 				version = 2,
 			},
-			inheritedIndex = 1,
+			inheritedIndex = 10,
 		},
 	},
 	[50] = 
