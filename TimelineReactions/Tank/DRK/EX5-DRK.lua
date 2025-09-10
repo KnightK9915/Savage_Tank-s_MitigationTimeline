@@ -2334,7 +2334,7 @@ local tbl =
 			inheritedIndex = 9,
 		},
 	},
-	[47] = 
+	[44] = 
 	{
 		
 		{
@@ -2363,7 +2363,6 @@ local tbl =
 									true,
 								},
 							},
-							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
 							ignoreWeaveRules = true,
 							name = "selfMarked",
@@ -2404,13 +2403,14 @@ local tbl =
 					},
 				},
 				eventType = 4,
-				mechanicTime = 210.7,
+				loop = true,
+				mechanicTime = 199.5,
 				name = "Record marked",
 				timeRange = true,
-				timelineIndex = 47,
-				timerEndOffset = 5,
-				timerStartOffset = -15,
-				uuid = "0b319c95-7e13-70bc-a80e-319e51b5cbcb",
+				timelineIndex = 44,
+				timerEndOffset = 57.700000762939,
+				timerStartOffset = -5,
+				uuid = "83c8481d-2509-172b-bd6e-1dce50734a7e",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -2473,164 +2473,15 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 210.7,
+				loop = true,
+				mechanicTime = 199.5,
 				name = "TBN (25)",
 				timeRange = true,
-				timelineIndex = 47,
+				timelineIndex = 44,
+				timerEndOffset = 57.700000762939,
 				timerOffset = -4,
-				timerStartOffset = -3,
-				uuid = "e4198ef9-fa6a-3a33-946c-5fca33f536ed",
-				version = 2,
-			},
-			inheritedIndex = 2,
-		},
-	},
-	[49] = 
-	{
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "Lua",
-							actionID = 7533,
-							actionLua = "data.selfMarked = true\nself.used = true",
-							atomicPriority = true,
-							conditions = 
-							{
-								
-								{
-									"bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
-									true,
-								},
-								
-								{
-									"d73a437b-daee-5b25-9e29-bfcac45843c2",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							name = "selfMarked",
-							targetContentID = 13822,
-							targetType = "ContentID",
-							uuid = "a1aed48d-295b-da3e-978a-460aac09e87e",
-							version = 2.1,
-						},
-						inheritedIndex = 2,
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgType = 2,
-							eventMarkerID = 381,
-							uuid = "bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Party",
-							conditionType = 10,
-							inGroupTargetType = "Self",
-							name = "marker on Self",
-							partyTargetType = "Event Entity",
-							uuid = "d73a437b-daee-5b25-9e29-bfcac45843c2",
-							version = 2,
-						},
-						inheritedIndex = 3,
-					},
-				},
-				eventType = 4,
-				mechanicTime = 221.2,
-				name = "Record marked",
-				timeRange = true,
-				timelineIndex = 49,
-				timerEndOffset = 5,
-				timerStartOffset = -10.5,
-				uuid = "8e4e4ef0-c2d6-29b0-ba5c-bc94bbd6740b",
-				version = 2,
-			},
-			inheritedIndex = 1,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7393,
-							conditions = 
-							{
-								
-								{
-									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
-									true,
-								},
-								
-								{
-									"0a1408dc-5cbb-2986-898c-35463d5ec10a",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 3,
-							mpType = 2,
-							mpValue = 3000,
-							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return data.selfMarked",
-							name = "if self marked",
-							uuid = "0a1408dc-5cbb-2986-898c-35463d5ec10a",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 221.2,
-				name = "TBN (25)",
-				timeRange = true,
-				timelineIndex = 49,
-				timerOffset = -4,
-				timerStartOffset = -3,
-				uuid = "10cb3fe0-bbd8-e0f4-b3d2-4af5935ae858",
+				timerStartOffset = -5,
+				uuid = "eaf6839f-bffa-1bbe-bb52-df500079e96c",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -2638,6 +2489,75 @@ local tbl =
 	},
 	[53] = 
 	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+								
+								{
+									"c79f3e33-1b66-2d91-8a8e-c4f6a5bc2506",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							channelCheckSpellID = 44587,
+							conditionType = 7,
+							uuid = "c79f3e33-1b66-2d91-8a8e-c4f6a5bc2506",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 279,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 53,
+				timerEndOffset = 20,
+				timerOffset = -15,
+				timerStartOffset = -10,
+				uuid = "1e89e47a-567b-8494-9923-77e0f8d28934",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
 		
 		{
 			data = 
@@ -2707,6 +2627,9 @@ local tbl =
 			},
 			inheritedIndex = 2,
 		},
+	},
+	[54] = 
+	{
 		
 		{
 			data = 
@@ -2717,24 +2640,23 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 7531,
+							actionID = 36927,
 							conditions = 
 							{
 								
 								{
-									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									"5cf17619-127d-b210-88cb-64658ca76476",
 									true,
 								},
 								
 								{
-									"c79f3e33-1b66-2d91-8a8e-c4f6a5bc2506",
+									"d3a9b452-b9bd-ecd4-ab33-db52a890426d",
 									true,
 								},
 							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
+							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
-							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							uuid = "10a88836-1aee-2730-ae23-3306adfd5729",
 							version = 2.1,
 						},
 					},
@@ -2745,11 +2667,11 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 7531,
+							actionID = 36927,
 							category = "Self",
 							comparator = 2,
 							conditionType = 4,
-							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							uuid = "5cf17619-127d-b210-88cb-64658ca76476",
 							version = 2,
 						},
 					},
@@ -2759,19 +2681,160 @@ local tbl =
 						{
 							channelCheckSpellID = 44587,
 							conditionType = 7,
-							uuid = "c79f3e33-1b66-2d91-8a8e-c4f6a5bc2506",
+							uuid = "d3a9b452-b9bd-ecd4-ab33-db52a890426d",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				mechanicTime = 284.1,
+				name = "Vigil (40)",
+				timeRange = true,
+				timelineIndex = 54,
+				timerOffset = -5,
+				timerStartOffset = -5,
+				uuid = "8352e62b-72ef-ddf9-9f3b-1a97f84898ef",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"0d121ce4-4b8b-e14b-9895-b01f646a76e7",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							channelCheckSpellID = 44587,
+							conditionType = 7,
+							uuid = "0d121ce4-4b8b-e14b-9895-b01f646a76e7",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
 				},
-				mechanicTime = 279,
-				name = "Rampart (20)",
+				mechanicTime = 284.1,
+				name = "TBN (25)",
 				timeRange = true,
-				timelineIndex = 53,
-				timerEndOffset = 20,
-				timerOffset = -15,
-				timerStartOffset = -10,
-				uuid = "1e89e47a-567b-8494-9923-77e0f8d28934",
+				timelineIndex = 54,
+				timerOffset = -4,
+				timerStartOffset = -3,
+				uuid = "84ef75b8-45df-11a0-b017-5ebc0077fb8e",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+	},
+	[55] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"0d121ce4-4b8b-e14b-9895-b01f646a76e7",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							channelCheckSpellID = 44587,
+							conditionType = 7,
+							uuid = "0d121ce4-4b8b-e14b-9895-b01f646a76e7",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				mechanicTime = 289.3,
+				name = "TBN (25)",
+				timeRange = true,
+				timelineIndex = 55,
+				timerOffset = -4,
+				timerStartOffset = -3,
+				uuid = "f9e9b25b-ca48-2484-8085-5d7eb1285bfb",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -3948,6 +4011,8 @@ local tbl =
 	inheritedProfiles = 
 	{
 		"Tank\\EX5-TANKGENERAL",
+		"store\\anyone\\extremes\\necron\\modules\\core",
+		"store\\anyone\\extremes\\necron\\modules\\draws",
 	},
 	mapID = 1296,
 	version = 1,
