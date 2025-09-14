@@ -995,9 +995,10 @@ local tbl =
 				timelineIndex = 2,
 				timerEndOffset = 5,
 				timerStartOffset = 1,
-				uuid = "20b4e684-20a7-52fc-a763-9c37de9a61c6",
+				uuid = "40e7ba13-6d27-710e-befc-222399d145a1",
 				version = 2,
 			},
+			inheritedIndex = 1,
 		},
 		
 		{
@@ -1930,7 +1931,7 @@ local tbl =
 							{
 								
 								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									"fc423281-e58d-8fae-89c8-b8098bacba54",
 									true,
 								},
 								
@@ -1956,7 +1957,7 @@ local tbl =
 							{
 								
 								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									"fc423281-e58d-8fae-89c8-b8098bacba54",
 									true,
 								},
 								
@@ -1981,7 +1982,7 @@ local tbl =
 							{
 								
 								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									"fc423281-e58d-8fae-89c8-b8098bacba54",
 									true,
 								},
 								
@@ -2006,7 +2007,7 @@ local tbl =
 							{
 								
 								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									"fc423281-e58d-8fae-89c8-b8098bacba54",
 									true,
 								},
 								
@@ -2030,9 +2031,9 @@ local tbl =
 					{
 						data = 
 						{
-							conditionType = 6,
-							inRangeValue = 6,
-							uuid = "aae77abe-fb05-50a4-9346-c8aa68b5e213",
+							category = "Lua",
+							conditionLua = "-- === Outside-Of-Hitbox Check (for Link Action) ===\n-- Return: boolean (true 当自己位于目标半径外缘之外)\n\n-- 取玩家与目标（优先 eventArgs 指定，否则用当前选中目标）\nlocal me = Player\nif not me then return false end\n\nlocal targetID = (eventArgs and (eventArgs.targetID or eventArgs.detectionTargetID)) or me.targetid\nlocal t = (targetID and TensorCore.mGetEntity and TensorCore.mGetEntity(targetID)) or (me.GetTarget and me:GetTarget())\nif not t or not t.alive or not t.attackable then\n    return false\nend\n\n-- 优先使用实体自带的 distance2d（该值为“边缘到边缘”的水平距离，已扣除了双方半径）\n-- 语义：distance2d > 0 => 我在目标圆环“外”；distance2d <= 0 => 我在目标圆环“内或贴边”\nlocal gap = t.distance2d\n\n-- 容错：若 distance2d 不可用，则手动用“中心到中心 2D 距离 - (双方半径)”来估算\nif gap == nil then\n    local mypos, tpos = me.pos, t.pos\n    if not (mypos and tpos) then return false end\n    local dx, dz = (mypos.x - tpos.x), (mypos.z - tpos.z)\n    local center2d = math.sqrt(dx*dx + dz*dz)\n    local myR = (me.radius or 0.5)              -- 玩家半径，缺省按 0.5 yalms 估算\n    local tR  = (t.radius or t.hitradius or 0)  -- 目标半径，尽量兼容不同字段\n    gap = center2d - (myR + tR)\nend\n\n-- 条件成立：仅当自己在目标“最外圈之外”\nreturn gap > 0",
+							uuid = "fc423281-e58d-8fae-89c8-b8098bacba54",
 							version = 2,
 						},
 						inheritedIndex = 1,
@@ -2691,7 +2692,7 @@ local tbl =
 							{
 								
 								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									"5234a49c-2dbb-3fac-a82c-e223ea2bd1b4",
 									true,
 								},
 								
@@ -2717,7 +2718,7 @@ local tbl =
 							{
 								
 								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									"5234a49c-2dbb-3fac-a82c-e223ea2bd1b4",
 									true,
 								},
 								
@@ -2742,7 +2743,7 @@ local tbl =
 							{
 								
 								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									"5234a49c-2dbb-3fac-a82c-e223ea2bd1b4",
 									true,
 								},
 								
@@ -2767,7 +2768,7 @@ local tbl =
 							{
 								
 								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									"5234a49c-2dbb-3fac-a82c-e223ea2bd1b4",
 									true,
 								},
 								
@@ -2791,9 +2792,9 @@ local tbl =
 					{
 						data = 
 						{
-							conditionType = 6,
-							inRangeValue = 6,
-							uuid = "aae77abe-fb05-50a4-9346-c8aa68b5e213",
+							category = "Lua",
+							conditionLua = "-- === Outside-Of-Hitbox Check (for Link Action) ===\n-- Return: boolean (true 当自己位于目标半径外缘之外)\n\n-- 取玩家与目标（优先 eventArgs 指定，否则用当前选中目标）\nlocal me = Player\nif not me then return false end\n\nlocal targetID = (eventArgs and (eventArgs.targetID or eventArgs.detectionTargetID)) or me.targetid\nlocal t = (targetID and TensorCore.mGetEntity and TensorCore.mGetEntity(targetID)) or (me.GetTarget and me:GetTarget())\nif not t or not t.alive or not t.attackable then\n    return false\nend\n\n-- 优先使用实体自带的 distance2d（该值为“边缘到边缘”的水平距离，已扣除了双方半径）\n-- 语义：distance2d > 0 => 我在目标圆环“外”；distance2d <= 0 => 我在目标圆环“内或贴边”\nlocal gap = t.distance2d\n\n-- 容错：若 distance2d 不可用，则手动用“中心到中心 2D 距离 - (双方半径)”来估算\nif gap == nil then\n    local mypos, tpos = me.pos, t.pos\n    if not (mypos and tpos) then return false end\n    local dx, dz = (mypos.x - tpos.x), (mypos.z - tpos.z)\n    local center2d = math.sqrt(dx*dx + dz*dz)\n    local myR = (me.radius or 0.5)              -- 玩家半径，缺省按 0.5 yalms 估算\n    local tR  = (t.radius or t.hitradius or 0)  -- 目标半径，尽量兼容不同字段\n    gap = center2d - (myR + tR)\nend\n\n-- 条件成立：仅当自己在目标“最外圈之外”\nreturn gap > 0",
+							uuid = "5234a49c-2dbb-3fac-a82c-e223ea2bd1b4",
 							version = 2,
 						},
 						inheritedIndex = 1,
@@ -2852,7 +2853,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 20,
 				timerEndOffset = 5,
-				timerStartOffset = 0.5,
+				timerStartOffset = 0.20000000298023,
 				uuid = "421ef53f-337a-b706-aa53-dc72f47f6dd2",
 				version = 2,
 			},
@@ -2943,6 +2944,90 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7537,
+							conditions = 
+							{
+								
+								{
+									"f0eaecb7-c7fd-4486-a153-e2ff288e57b4",
+									true,
+								},
+								
+								{
+									"aad96c63-1de9-85f6-8a56-b431c00818b6",
+									true,
+								},
+								
+								{
+									"07fcd772-5fe0-4c45-a672-a6a7570f0619",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_Hotbar_ShirkOT",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5081694c-978d-1724-a1f2-f6c6f17dc2bf",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99.999000549316,
+							uuid = "f0eaecb7-c7fd-4486-a153-e2ff288e57b4",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffID = 4454,
+							category = "Self",
+							uuid = "aad96c63-1de9-85f6-8a56-b431c00818b6",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "07fcd772-5fe0-4c45-a672-a6a7570f0619",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 142.4,
+				name = "[ST] Shirk OT",
+				timeRange = true,
+				timelineIndex = 20,
+				timerEndOffset = 15,
+				uuid = "5895eb5e-3ace-4563-af94-9bc04e2c7f30",
+				version = 2,
+			},
+			inheritedIndex = 11,
 		},
 	},
 	[28] = 
@@ -3068,7 +3153,7 @@ local tbl =
 							{
 								
 								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									"5234a49c-2dbb-3fac-a82c-e223ea2bd1b4",
 									true,
 								},
 								
@@ -3094,7 +3179,7 @@ local tbl =
 							{
 								
 								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									"5234a49c-2dbb-3fac-a82c-e223ea2bd1b4",
 									true,
 								},
 								
@@ -3119,7 +3204,7 @@ local tbl =
 							{
 								
 								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									"5234a49c-2dbb-3fac-a82c-e223ea2bd1b4",
 									true,
 								},
 								
@@ -3144,7 +3229,7 @@ local tbl =
 							{
 								
 								{
-									"aae77abe-fb05-50a4-9346-c8aa68b5e213",
+									"5234a49c-2dbb-3fac-a82c-e223ea2bd1b4",
 									true,
 								},
 								
@@ -3168,9 +3253,9 @@ local tbl =
 					{
 						data = 
 						{
-							conditionType = 6,
-							inRangeValue = 6,
-							uuid = "aae77abe-fb05-50a4-9346-c8aa68b5e213",
+							category = "Lua",
+							conditionLua = "-- === Outside-Of-Hitbox Check (for Link Action) ===\n-- Return: boolean (true 当自己位于目标半径外缘之外)\n\n-- 取玩家与目标（优先 eventArgs 指定，否则用当前选中目标）\nlocal me = Player\nif not me then return false end\n\nlocal targetID = (eventArgs and (eventArgs.targetID or eventArgs.detectionTargetID)) or me.targetid\nlocal t = (targetID and TensorCore.mGetEntity and TensorCore.mGetEntity(targetID)) or (me.GetTarget and me:GetTarget())\nif not t or not t.alive or not t.attackable then\n    return false\nend\n\n-- 优先使用实体自带的 distance2d（该值为“边缘到边缘”的水平距离，已扣除了双方半径）\n-- 语义：distance2d > 0 => 我在目标圆环“外”；distance2d <= 0 => 我在目标圆环“内或贴边”\nlocal gap = t.distance2d\n\n-- 容错：若 distance2d 不可用，则手动用“中心到中心 2D 距离 - (双方半径)”来估算\nif gap == nil then\n    local mypos, tpos = me.pos, t.pos\n    if not (mypos and tpos) then return false end\n    local dx, dz = (mypos.x - tpos.x), (mypos.z - tpos.z)\n    local center2d = math.sqrt(dx*dx + dz*dz)\n    local myR = (me.radius or 0.5)              -- 玩家半径，缺省按 0.5 yalms 估算\n    local tR  = (t.radius or t.hitradius or 0)  -- 目标半径，尽量兼容不同字段\n    gap = center2d - (myR + tR)\nend\n\n-- 条件成立：仅当自己在目标“最外圈之外”\nreturn gap > 0",
+							uuid = "5234a49c-2dbb-3fac-a82c-e223ea2bd1b4",
 							version = 2,
 						},
 						inheritedIndex = 1,
@@ -3229,8 +3314,8 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 28,
 				timerEndOffset = 5,
-				timerStartOffset = 0.5,
-				uuid = "e7496d0a-0dbd-69b7-a892-f85610e98a05",
+				timerStartOffset = 0.20000000298023,
+				uuid = "2745bff5-be32-b54f-b624-f04326269ce3",
 				version = 2,
 			},
 		},
@@ -3981,7 +4066,7 @@ local tbl =
 				timelineIndex = 32,
 				timerEndOffset = 5,
 				timerStartOffset = 1,
-				uuid = "dedc0730-86d3-521a-bf97-45ca358befda",
+				uuid = "5aeea994-d605-a141-afff-ef51e1577f69",
 				version = 2,
 			},
 		},

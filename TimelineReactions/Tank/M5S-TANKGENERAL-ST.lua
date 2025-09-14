@@ -4050,13 +4050,11 @@ local tbl =
 						data = 
 						{
 							actionID = 7386,
-							allowInterrupt = true,
-							atomicPriority = true,
 							conditions = 
 							{
 								
 								{
-									"8b38baf1-6a4b-49e0-8452-58b78025433e",
+									"a707df3c-5ba2-f4c7-9f1b-6ce22671d343",
 									true,
 								},
 								
@@ -4066,7 +4064,7 @@ local tbl =
 								},
 								
 								{
-									"b435e663-0ec3-13f5-ae4c-7b5b1afb4a0c",
+									"dd58817f-03cb-031d-a66e-d03457a257cb",
 									true,
 								},
 							},
@@ -4082,13 +4080,12 @@ local tbl =
 						data = 
 						{
 							actionID = 16461,
-							allowInterrupt = true,
 							atomicPriority = true,
 							conditions = 
 							{
 								
 								{
-									"8b38baf1-6a4b-49e0-8452-58b78025433e",
+									"a707df3c-5ba2-f4c7-9f1b-6ce22671d343",
 									true,
 								},
 								
@@ -4098,7 +4095,7 @@ local tbl =
 								},
 								
 								{
-									"b435e663-0ec3-13f5-ae4c-7b5b1afb4a0c",
+									"dd58817f-03cb-031d-a66e-d03457a257cb",
 									true,
 								},
 							},
@@ -4114,13 +4111,11 @@ local tbl =
 						data = 
 						{
 							actionID = 36926,
-							allowInterrupt = true,
-							atomicPriority = true,
 							conditions = 
 							{
 								
 								{
-									"8b38baf1-6a4b-49e0-8452-58b78025433e",
+									"a707df3c-5ba2-f4c7-9f1b-6ce22671d343",
 									true,
 								},
 								
@@ -4130,7 +4125,7 @@ local tbl =
 								},
 								
 								{
-									"b435e663-0ec3-13f5-ae4c-7b5b1afb4a0c",
+									"dd58817f-03cb-031d-a66e-d03457a257cb",
 									true,
 								},
 							},
@@ -4146,13 +4141,11 @@ local tbl =
 						data = 
 						{
 							actionID = 36934,
-							allowInterrupt = true,
-							atomicPriority = true,
 							conditions = 
 							{
 								
 								{
-									"8b38baf1-6a4b-49e0-8452-58b78025433e",
+									"a707df3c-5ba2-f4c7-9f1b-6ce22671d343",
 									true,
 								},
 								
@@ -4162,7 +4155,7 @@ local tbl =
 								},
 								
 								{
-									"b435e663-0ec3-13f5-ae4c-7b5b1afb4a0c",
+									"dd58817f-03cb-031d-a66e-d03457a257cb",
 									true,
 								},
 							},
@@ -4172,6 +4165,7 @@ local tbl =
 							uuid = "cf600fc3-8a2b-2639-ae39-fdaa4595eb7f",
 							version = 2.1,
 						},
+						inheritedIndex = 4,
 					},
 				},
 				conditions = 
@@ -4180,9 +4174,9 @@ local tbl =
 					{
 						data = 
 						{
-							conditionType = 6,
-							inRangeValue = 6,
-							uuid = "8b38baf1-6a4b-49e0-8452-58b78025433e",
+							category = "Lua",
+							conditionLua = "-- === Outside-Of-Hitbox Check (for Link Action) ===\n-- Return: boolean (true 当自己位于目标半径外缘之外)\n\n-- 取玩家与目标（优先 eventArgs 指定，否则用当前选中目标）\nlocal me = Player\nif not me then return false end\n\nlocal targetID = (eventArgs and (eventArgs.targetID or eventArgs.detectionTargetID)) or me.targetid\nlocal t = (targetID and TensorCore.mGetEntity and TensorCore.mGetEntity(targetID)) or (me.GetTarget and me:GetTarget())\nif not t or not t.alive or not t.attackable then\n    return false\nend\n\n-- 优先使用实体自带的 distance2d（该值为“边缘到边缘”的水平距离，已扣除了双方半径）\n-- 语义：distance2d > 0 => 我在目标圆环“外”；distance2d <= 0 => 我在目标圆环“内或贴边”\nlocal gap = t.distance2d\n\n-- 容错：若 distance2d 不可用，则手动用“中心到中心 2D 距离 - (双方半径)”来估算\nif gap == nil then\n    local mypos, tpos = me.pos, t.pos\n    if not (mypos and tpos) then return false end\n    local dx, dz = (mypos.x - tpos.x), (mypos.z - tpos.z)\n    local center2d = math.sqrt(dx*dx + dz*dz)\n    local myR = (me.radius or 0.5)              -- 玩家半径，缺省按 0.5 yalms 估算\n    local tR  = (t.radius or t.hitradius or 0)  -- 目标半径，尽量兼容不同字段\n    gap = center2d - (myR + tR)\nend\n\n-- 条件成立：仅当自己在目标“最外圈之外”\nreturn gap > 0",
+							uuid = "a707df3c-5ba2-f4c7-9f1b-6ce22671d343",
 							version = 2,
 						},
 						inheritedIndex = 1,
@@ -4242,7 +4236,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 4461,
 							category = "Self",
-							uuid = "b435e663-0ec3-13f5-ae4c-7b5b1afb4a0c",
+							uuid = "dd58817f-03cb-031d-a66e-d03457a257cb",
 							version = 2,
 						},
 						inheritedIndex = 6,
@@ -4255,7 +4249,7 @@ local tbl =
 				timelineIndex = 76,
 				timerEndOffset = 3,
 				timerStartOffset = 0.5,
-				uuid = "206aa844-b92e-3350-8667-387df2faae90",
+				uuid = "e360ea07-1479-b9c8-8831-e44c93738f24",
 				version = 2,
 			},
 		},
@@ -4273,10 +4267,13 @@ local tbl =
 						data = 
 						{
 							actionID = 7386,
-							allowInterrupt = true,
-							atomicPriority = true,
 							conditions = 
 							{
+								
+								{
+									"a707df3c-5ba2-f4c7-9f1b-6ce22671d343",
+									true,
+								},
 								
 								{
 									"d65d00ec-0105-268d-ace7-2d367b431eea",
@@ -4284,7 +4281,7 @@ local tbl =
 								},
 								
 								{
-									"8b38baf1-6a4b-49e0-8452-58b78025433e",
+									"dd58817f-03cb-031d-a66e-d03457a257cb",
 									true,
 								},
 							},
@@ -4300,10 +4297,14 @@ local tbl =
 						data = 
 						{
 							actionID = 16461,
-							allowInterrupt = true,
 							atomicPriority = true,
 							conditions = 
 							{
+								
+								{
+									"a707df3c-5ba2-f4c7-9f1b-6ce22671d343",
+									true,
+								},
 								
 								{
 									"141bab94-d7aa-79e7-9987-f20285c48bb1",
@@ -4311,7 +4312,7 @@ local tbl =
 								},
 								
 								{
-									"8b38baf1-6a4b-49e0-8452-58b78025433e",
+									"dd58817f-03cb-031d-a66e-d03457a257cb",
 									true,
 								},
 							},
@@ -4327,10 +4328,13 @@ local tbl =
 						data = 
 						{
 							actionID = 36926,
-							allowInterrupt = true,
-							atomicPriority = true,
 							conditions = 
 							{
+								
+								{
+									"a707df3c-5ba2-f4c7-9f1b-6ce22671d343",
+									true,
+								},
 								
 								{
 									"058998a0-28fc-7f7e-b215-5d374c803274",
@@ -4338,7 +4342,7 @@ local tbl =
 								},
 								
 								{
-									"8b38baf1-6a4b-49e0-8452-58b78025433e",
+									"dd58817f-03cb-031d-a66e-d03457a257cb",
 									true,
 								},
 							},
@@ -4354,10 +4358,13 @@ local tbl =
 						data = 
 						{
 							actionID = 36934,
-							allowInterrupt = true,
-							atomicPriority = true,
 							conditions = 
 							{
+								
+								{
+									"a707df3c-5ba2-f4c7-9f1b-6ce22671d343",
+									true,
+								},
 								
 								{
 									"d9dbed19-25f5-7a0e-b7fa-ec367904db22",
@@ -4365,7 +4372,7 @@ local tbl =
 								},
 								
 								{
-									"8b38baf1-6a4b-49e0-8452-58b78025433e",
+									"dd58817f-03cb-031d-a66e-d03457a257cb",
 									true,
 								},
 							},
@@ -4375,10 +4382,22 @@ local tbl =
 							uuid = "cf600fc3-8a2b-2639-ae39-fdaa4595eb7f",
 							version = 2.1,
 						},
+						inheritedIndex = 4,
 					},
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "-- === Outside-Of-Hitbox Check (for Link Action) ===\n-- Return: boolean (true 当自己位于目标半径外缘之外)\n\n-- 取玩家与目标（优先 eventArgs 指定，否则用当前选中目标）\nlocal me = Player\nif not me then return false end\n\nlocal targetID = (eventArgs and (eventArgs.targetID or eventArgs.detectionTargetID)) or me.targetid\nlocal t = (targetID and TensorCore.mGetEntity and TensorCore.mGetEntity(targetID)) or (me.GetTarget and me:GetTarget())\nif not t or not t.alive or not t.attackable then\n    return false\nend\n\n-- 优先使用实体自带的 distance2d（该值为“边缘到边缘”的水平距离，已扣除了双方半径）\n-- 语义：distance2d > 0 => 我在目标圆环“外”；distance2d <= 0 => 我在目标圆环“内或贴边”\nlocal gap = t.distance2d\n\n-- 容错：若 distance2d 不可用，则手动用“中心到中心 2D 距离 - (双方半径)”来估算\nif gap == nil then\n    local mypos, tpos = me.pos, t.pos\n    if not (mypos and tpos) then return false end\n    local dx, dz = (mypos.x - tpos.x), (mypos.z - tpos.z)\n    local center2d = math.sqrt(dx*dx + dz*dz)\n    local myR = (me.radius or 0.5)              -- 玩家半径，缺省按 0.5 yalms 估算\n    local tR  = (t.radius or t.hitradius or 0)  -- 目标半径，尽量兼容不同字段\n    gap = center2d - (myR + tR)\nend\n\n-- 条件成立：仅当自己在目标“最外圈之外”\nreturn gap > 0",
+							uuid = "a707df3c-5ba2-f4c7-9f1b-6ce22671d343",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
 					
 					{
 						data = 
@@ -4431,12 +4450,13 @@ local tbl =
 					{
 						data = 
 						{
-							conditionType = 6,
-							inRangeValue = 6,
-							uuid = "8b38baf1-6a4b-49e0-8452-58b78025433e",
+							buffCheckType = 2,
+							buffID = 4461,
+							category = "Self",
+							uuid = "dd58817f-03cb-031d-a66e-d03457a257cb",
 							version = 2,
 						},
-						inheritedIndex = 5,
+						inheritedIndex = 6,
 					},
 				},
 				eventType = 2,
@@ -4446,7 +4466,7 @@ local tbl =
 				timelineIndex = 78,
 				timerEndOffset = 3,
 				timerStartOffset = 0.5,
-				uuid = "91eb59f1-924d-a55e-9410-aa56997aa537",
+				uuid = "68bb0bb8-bcc3-36fe-8961-2dd5b9ee0aa1",
 				version = 2,
 			},
 		},
