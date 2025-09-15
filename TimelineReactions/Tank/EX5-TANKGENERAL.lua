@@ -9751,6 +9751,254 @@ local tbl =
 			},
 			inheritedIndex = 9,
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"c1c74d83-c5f9-ea74-8cb7-b19e1b6f8a69",
+									true,
+								},
+								
+								{
+									"95d0f528-4ca3-1284-9cc9-062edd9fb984",
+									true,
+								},
+								
+								{
+									"9e5b6cca-6558-48b7-9a93-f2c5de59e839",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "9824b56c-a6ef-1520-904d-fb506edc7b2e",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"a57aeaed-5cf4-12c0-84a2-e7e875a11814",
+									true,
+								},
+								
+								{
+									"b0bb6779-3768-9418-841f-c4060c300c3a",
+									true,
+								},
+								
+								{
+									"9e5b6cca-6558-48b7-9a93-f2c5de59e839",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "8a40b671-1cd7-1d80-8d3b-df459cdf4811",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"24504577-df10-5412-9092-b1a5cc6e463f",
+									true,
+								},
+								
+								{
+									"34bf6816-e50c-d30e-8d53-b439709ae3b2",
+									true,
+								},
+								
+								{
+									"9e5b6cca-6558-48b7-9a93-f2c5de59e839",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "3ae89508-9b91-44eb-a03c-88dbd1364837",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"bc930ac0-4774-a39f-be77-a5a1442bb609",
+									true,
+								},
+								
+								{
+									"70dc22c9-b9e4-39fe-ad22-e94de4a21af7",
+									true,
+								},
+								
+								{
+									"9e5b6cca-6558-48b7-9a93-f2c5de59e839",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "4e612d85-f9a7-9207-9984-5ad1d76fb3fc",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "c1c74d83-c5f9-ea74-8cb7-b19e1b6f8a69",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffID = 1833,
+							category = "Self",
+							name = "GNB Buff",
+							uuid = "95d0f528-4ca3-1284-9cc9-062edd9fb984",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "a57aeaed-5cf4-12c0-84a2-e7e875a11814",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffID = 79,
+							category = "Self",
+							name = "PLD Buff",
+							uuid = "b0bb6779-3768-9418-841f-c4060c300c3a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "24504577-df10-5412-9092-b1a5cc6e463f",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffID = 743,
+							category = "Self",
+							name = "DRK Buff",
+							uuid = "34bf6816-e50c-d30e-8d53-b439709ae3b2",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobIDList = 
+							{
+								21,
+							},
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "bc930ac0-4774-a39f-be77-a5a1442bb609",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffID = 91,
+							category = "Self",
+							name = "WAR Buff",
+							uuid = "70dc22c9-b9e4-39fe-ad22-e94de4a21af7",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "9e5b6cca-6558-48b7-9a93-f2c5de59e839",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 469.9,
+				name = "[ST] Stance OFF",
+				timeRange = true,
+				timelineIndex = 84,
+				timerEndOffset = 22,
+				timerOffset = -15,
+				timerStartOffset = 1,
+				uuid = "a24a42e5-5461-4d7c-8f7c-fdff4562ff06",
+				version = 2,
+			},
+		},
 	},
 	[94] = 
 	{
