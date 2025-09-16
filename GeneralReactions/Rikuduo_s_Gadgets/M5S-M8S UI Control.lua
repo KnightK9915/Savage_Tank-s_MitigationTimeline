@@ -405,9 +405,38 @@ local tbl =
 			conditions = 
 			{
 			},
+			enabled = false,
 			eventType = 12,
 			name = "[ForCasual] TargetSelector Logic",
 			uuid = "34e60919-06b3-dd30-82b9-ab499abfd3a9",
+			version = 2,
+		},
+		inheritedIndex = 9,
+	},
+	
+	{
+		data = 
+		{
+			actions = 
+			{
+				
+				{
+					data = 
+					{
+						aType = "Lua",
+						actionLua = "-- =========================\n-- Casual Auto Selector - OnFrame (use absolute HP, skip mobs held by other tanks)\n-- =========================\n\n-- ===== storage (与 UI 一致) =====\nlocal SAVE_REL = [[TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\Settings\\CasualSelector.lua]]\n\nlocal function _save(tbl)\n  local base = GetLuaModsPath()\n  local dir  = base .. [[TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\Settings\\]]\n  if not FolderExists(dir) then FolderCreate(dir) end\n  FileSave(base .. SAVE_REL, tbl)\nend\n\nlocal function _load()\n  local path = GetLuaModsPath() .. SAVE_REL\n  if FileExists(path) then\n    local t = FileLoad(path)\n    if type(t)==\"table\" then return t end\n  end\n  return nil\nend\n\n-- 缓存配置\ndata._casual = data._casual or _load() or {\n  enabled = true,\n  scene   = \"Tank\",\n  radius  = 10,\n  win     = {x=200,y=300},\n}\nlocal cfg = data._casual\n\n-- 自动迁移旧配置结构\nif cfg.ui then\n  local ui = cfg.ui\n  data._casual = {\n    enabled = (ui.on ~= false),\n    scene   = ui.scene or \"Tank\",\n    radius  = tonumber(ui.radius_m) or 10,\n    win     = ui.win or {x=200,y=300},\n  }\n  cfg = data._casual\n  _save(cfg)\nend\n\n-- ===== early outs =====\nif not cfg.enabled then return end\nif not Player or not Player.id then return end\n\n-- ===== helpers =====\nlocal function tsize(t) local c=0; for _ in pairs(t or {}) do c=c+1 end; return c end\n\n-- 实际HP数值\nlocal function getHpValue(e)\n  if not e then return math.huge end\n  if e.hp and e.hp.current then return e.hp.current end\n  if e.hp then return e.hp end\n  return math.huge\nend\n\n-- 怪物当前仇恨目标ID\nlocal function getEntityTargetId(e)\n  return (e and (e.targetid or e.targetID)) or 0\nend\n\n-- 范围内实体\nlocal function getEntitiesInRange(radius)\n  radius = math.max(0, math.min(60, math.floor(radius or 10)))\n  local filter = string.format(\"alive,attackable,selectable,maxdistance=%d\", radius)\n  return (TensorCore and TensorCore.entityList and TensorCore.entityList(filter)) or {}\nend\n\n-- 坦克职业ID\nlocal TANK_JOBS = { [19]=true, [21]=true, [32]=true, [37]=true }\n\n-- 按ID取实体\nlocal function getEntityById(id)\n  if not id or id == 0 then return nil end\n  if EntityList and EntityList.Get then\n    return EntityList:Get(id)\n  elseif EntityList and EntityList.GetEntity then\n    return EntityList:GetEntity(id)\n  end\n  if TensorCore and TensorCore.entityList then\n    local t = TensorCore.entityList(\"id=\" .. tostring(id))\n    if t and next(t) then\n      for _, v in pairs(t) do return v end\n    end\n  end\n  return nil\nend\n\n-- 获取队伍/联盟/友方中的坦克ID\nlocal function getPartyTankIds()\n  local tankIds = {}\n  local function mergeFrom(list)\n    for _,m in pairs(list or {}) do\n      local job = m.job or m.jobID or m.class\n      if job and TANK_JOBS[job] and m.id then\n        tankIds[m.id] = true\n      end\n    end\n  end\n  if TensorCore and TensorCore.entityList then\n    mergeFrom(TensorCore.entityList(\"myparty,player\"))\n    if tsize(tankIds)==0 then mergeFrom(TensorCore.entityList(\"party,player\")) end\n    if tsize(tankIds)==0 then mergeFrom(TensorCore.entityList(\"alliance,player\")) end\n    if tsize(tankIds)==0 then mergeFrom(TensorCore.entityList(\"friendly,player,maxdistance=60\")) end\n  end\n  local myjob = Player.job or Player.jobID or Player.class\n  if myjob and TANK_JOBS[myjob] then tankIds[Player.id] = true end\n  return tankIds\nend\n\n-- ===== main =====\nlocal myId   = Player.id\nlocal elist  = getEntitiesInRange(cfg.radius or 10)\nif tsize(elist) == 0 then return end\n\nif cfg.scene == \"Tank\" then\n  -- Tank 场景\n  local notOnMe, onMe = {}, {}\n  for _, e in pairs(elist) do\n    local tid = getEntityTargetId(e)\n    if tid ~= myId then\n      table.insert(notOnMe, e)\n    else\n      table.insert(onMe, e)\n    end\n  end\n\n  local selectId\n  if #notOnMe > 0 then\n    local best, bestDist = nil, 1e9\n    for _, e in pairs(notOnMe) do\n      local skip = false\n      local holderId = getEntityTargetId(e)\n      if holderId ~= 0 and holderId ~= myId then\n        local holder = getEntityById(holderId)\n        if holder then\n          local job = holder.job or holder.jobID or holder.class\n          if job and TANK_JOBS[job] then\n            skip = true -- 这只怪被其他坦克拿住，跳过\n          end\n        end\n      end\n      if not skip then\n        local d = e.distance2d or e.distance or 0\n        if d < bestDist then bestDist = d; best = e end\n      end\n    end\n    if best then selectId = best.id end\n  end\n\n  if not selectId then\n    -- 没有合适目标 → 从自己仇恨里的怪选 HP 最低（实际HP）\n    local best, bestHp = nil, math.huge\n    for _, e in pairs(onMe) do\n      local hp = getHpValue(e)\n      if hp < bestHp then bestHp = hp; best = e end\n    end\n    if best then selectId = best.id end\n  end\n\n  if selectId and Player.targetid ~= selectId then\n    Player:SetTarget(selectId)\n  end\n  return\n\nelseif cfg.scene == \"Other\" then\n  -- Other 场景\n  local tankIds = getPartyTankIds()\n  if tsize(tankIds) == 0 then return end\n\n  local best, bestHp = nil, math.huge\n  for _, e in pairs(elist) do\n    local tid = getEntityTargetId(e)\n    if tankIds[tid] then\n      local hp = getHpValue(e)\n      if hp < bestHp then bestHp = hp; best = e end\n    end\n  end\n\n  if best and Player.targetid ~= best.id then\n    Player:SetTarget(best.id)\n  end\n  return\nend\n\n-- 其他场景：无操作\nreturn",
+						gVar = "ACR_RikuGNB3_CD",
+						uuid = "3430ddff-9dbf-437a-a420-298309de8c8f",
+						version = 2.1,
+					},
+				},
+			},
+			conditions = 
+			{
+			},
+			eventType = 12,
+			name = "[ForCasual] TargetSelector Logic",
+			uuid = "17c18e0b-b631-de33-853f-a30608db8540",
 			version = 2,
 		},
 		inheritedIndex = 9,
