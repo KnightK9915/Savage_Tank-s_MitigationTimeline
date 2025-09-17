@@ -3791,6 +3791,11 @@ local tbl =
 									"d65d00ec-0105-268d-ace7-2d367b431eea",
 									true,
 								},
+								
+								{
+									"311b3402-78eb-3a5d-a20f-eb508f7399b3",
+									true,
+								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -3811,6 +3816,11 @@ local tbl =
 								
 								{
 									"141bab94-d7aa-79e7-9987-f20285c48bb1",
+									true,
+								},
+								
+								{
+									"311b3402-78eb-3a5d-a20f-eb508f7399b3",
 									true,
 								},
 							},
@@ -3835,6 +3845,11 @@ local tbl =
 									"058998a0-28fc-7f7e-b215-5d374c803274",
 									true,
 								},
+								
+								{
+									"311b3402-78eb-3a5d-a20f-eb508f7399b3",
+									true,
+								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -3857,6 +3872,11 @@ local tbl =
 									"d9dbed19-25f5-7a0e-b7fa-ec367904db22",
 									true,
 								},
+								
+								{
+									"311b3402-78eb-3a5d-a20f-eb508f7399b3",
+									true,
+								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -3864,6 +3884,7 @@ local tbl =
 							uuid = "cf600fc3-8a2b-2639-ae39-fdaa4595eb7f",
 							version = 2.1,
 						},
+						inheritedIndex = 4,
 					},
 				},
 				conditions = 
@@ -3914,6 +3935,19 @@ local tbl =
 							name = "Gunbreaker",
 							uuid = "d9dbed19-25f5-7a0e-b7fa-ec367904db22",
 							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "-- === Outside-Of-Hitbox Check (for Link Action) ===\n-- Return: boolean (true 当自己位于目标半径外缘之外)\n\n-- 取玩家与目标（优先 eventArgs 指定，否则用当前选中目标）\nlocal me = Player\nif not me then return false end\n\nlocal targetID = (eventArgs and (eventArgs.targetID or eventArgs.detectionTargetID)) or me.targetid\nlocal t = (targetID and TensorCore.mGetEntity and TensorCore.mGetEntity(targetID)) or (me.GetTarget and me:GetTarget())\nif not t or not t.alive or not t.attackable then\n    return false\nend\n\n-- 优先使用实体自带的 distance2d（该值为“边缘到边缘”的水平距离，已扣除了双方半径）\n-- 语义：distance2d > 0 => 我在目标圆环“外”；distance2d <= 0 => 我在目标圆环“内或贴边”\nlocal gap = t.distance2d\n\n-- 容错：若 distance2d 不可用，则手动用“中心到中心 2D 距离 - (双方半径)”来估算\nif gap == nil then\n    local mypos, tpos = me.pos, t.pos\n    if not (mypos and tpos) then return false end\n    local dx, dz = (mypos.x - tpos.x), (mypos.z - tpos.z)\n    local center2d = math.sqrt(dx*dx + dz*dz)\n    local myR = (me.radius or 0.5)              -- 玩家半径，缺省按 0.5 yalms 估算\n    local tR  = (t.radius or t.hitradius or 0)  -- 目标半径，尽量兼容不同字段\n    gap = center2d - (myR + tR)\nend\n\n-- 条件成立：仅当自己在目标“最外圈之外”\nreturn gap > 0",
+							uuid = "311b3402-78eb-3a5d-a20f-eb508f7399b3",
+							version = 2,
+						},
+						inheritedOverwrites = 
+						{
 						},
 					},
 				},
