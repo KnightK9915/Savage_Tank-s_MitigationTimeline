@@ -1931,12 +1931,17 @@ local tbl =
 							{
 								
 								{
-									"fc423281-e58d-8fae-89c8-b8098bacba54",
+									"d9f79096-673c-c5a8-894d-e20a6022ae55",
 									true,
 								},
 								
 								{
 									"d65d00ec-0105-268d-ace7-2d367b431eea",
+									true,
+								},
+								
+								{
+									"1b2dda64-5f54-6eb4-abdf-aa64049b706b",
 									true,
 								},
 							},
@@ -1946,6 +1951,7 @@ local tbl =
 							uuid = "2d012730-d487-9fb8-81b6-66af39a29bba",
 							version = 2.1,
 						},
+						inheritedIndex = 1,
 					},
 					
 					{
@@ -1957,12 +1963,17 @@ local tbl =
 							{
 								
 								{
-									"fc423281-e58d-8fae-89c8-b8098bacba54",
+									"d9f79096-673c-c5a8-894d-e20a6022ae55",
 									true,
 								},
 								
 								{
 									"141bab94-d7aa-79e7-9987-f20285c48bb1",
+									true,
+								},
+								
+								{
+									"1b2dda64-5f54-6eb4-abdf-aa64049b706b",
 									true,
 								},
 							},
@@ -1982,12 +1993,17 @@ local tbl =
 							{
 								
 								{
-									"fc423281-e58d-8fae-89c8-b8098bacba54",
+									"d9f79096-673c-c5a8-894d-e20a6022ae55",
 									true,
 								},
 								
 								{
 									"058998a0-28fc-7f7e-b215-5d374c803274",
+									true,
+								},
+								
+								{
+									"1b2dda64-5f54-6eb4-abdf-aa64049b706b",
 									true,
 								},
 							},
@@ -2007,12 +2023,17 @@ local tbl =
 							{
 								
 								{
-									"fc423281-e58d-8fae-89c8-b8098bacba54",
+									"d9f79096-673c-c5a8-894d-e20a6022ae55",
 									true,
 								},
 								
 								{
 									"d9dbed19-25f5-7a0e-b7fa-ec367904db22",
+									true,
+								},
+								
+								{
+									"1b2dda64-5f54-6eb4-abdf-aa64049b706b",
 									true,
 								},
 							},
@@ -2032,8 +2053,8 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "-- === Outside-Of-Hitbox Check (for Link Action) ===\n-- Return: boolean (true 当自己位于目标半径外缘之外)\n\n-- 取玩家与目标（优先 eventArgs 指定，否则用当前选中目标）\nlocal me = Player\nif not me then return false end\n\nlocal targetID = (eventArgs and (eventArgs.targetID or eventArgs.detectionTargetID)) or me.targetid\nlocal t = (targetID and TensorCore.mGetEntity and TensorCore.mGetEntity(targetID)) or (me.GetTarget and me:GetTarget())\nif not t or not t.alive or not t.attackable then\n    return false\nend\n\n-- 优先使用实体自带的 distance2d（该值为“边缘到边缘”的水平距离，已扣除了双方半径）\n-- 语义：distance2d > 0 => 我在目标圆环“外”；distance2d <= 0 => 我在目标圆环“内或贴边”\nlocal gap = t.distance2d\n\n-- 容错：若 distance2d 不可用，则手动用“中心到中心 2D 距离 - (双方半径)”来估算\nif gap == nil then\n    local mypos, tpos = me.pos, t.pos\n    if not (mypos and tpos) then return false end\n    local dx, dz = (mypos.x - tpos.x), (mypos.z - tpos.z)\n    local center2d = math.sqrt(dx*dx + dz*dz)\n    local myR = (me.radius or 0.5)              -- 玩家半径，缺省按 0.5 yalms 估算\n    local tR  = (t.radius or t.hitradius or 0)  -- 目标半径，尽量兼容不同字段\n    gap = center2d - (myR + tR)\nend\n\n-- 条件成立：仅当自己在目标“最外圈之外”\nreturn gap > 0",
-							uuid = "fc423281-e58d-8fae-89c8-b8098bacba54",
+							conditionLua = "-- Custom Condition: Player outside target's hit radius\nlocal target = Player:GetTarget()\nif target and target.alive and target.attackable then\n    local dist = target.distance2d or 0\n    local hr   = target.hitboxradius or target.hitradius or 0\n    return dist > hr\nend\n\n-- 没有目标时直接返回 false\nreturn false\n",
+							uuid = "d9f79096-673c-c5a8-894d-e20a6022ae55",
 							version = 2,
 						},
 						inheritedIndex = 1,
@@ -2083,6 +2104,18 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "Gunbreaker",
 							uuid = "d9dbed19-25f5-7a0e-b7fa-ec367904db22",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 99.999000549316,
+							uuid = "1b2dda64-5f54-6eb4-abdf-aa64049b706b",
 							version = 2,
 						},
 					},
@@ -2692,7 +2725,7 @@ local tbl =
 							{
 								
 								{
-									"5234a49c-2dbb-3fac-a82c-e223ea2bd1b4",
+									"0b9246a3-366a-eb7a-8992-0292f2e1f822",
 									true,
 								},
 								
@@ -2718,7 +2751,7 @@ local tbl =
 							{
 								
 								{
-									"5234a49c-2dbb-3fac-a82c-e223ea2bd1b4",
+									"0b9246a3-366a-eb7a-8992-0292f2e1f822",
 									true,
 								},
 								
@@ -2743,7 +2776,7 @@ local tbl =
 							{
 								
 								{
-									"5234a49c-2dbb-3fac-a82c-e223ea2bd1b4",
+									"0b9246a3-366a-eb7a-8992-0292f2e1f822",
 									true,
 								},
 								
@@ -2768,7 +2801,7 @@ local tbl =
 							{
 								
 								{
-									"5234a49c-2dbb-3fac-a82c-e223ea2bd1b4",
+									"0b9246a3-366a-eb7a-8992-0292f2e1f822",
 									true,
 								},
 								
@@ -2793,8 +2826,8 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "-- === Outside-Of-Hitbox Check (for Link Action) ===\n-- Return: boolean (true 当自己位于目标半径外缘之外)\n\n-- 取玩家与目标（优先 eventArgs 指定，否则用当前选中目标）\nlocal me = Player\nif not me then return false end\n\nlocal targetID = (eventArgs and (eventArgs.targetID or eventArgs.detectionTargetID)) or me.targetid\nlocal t = (targetID and TensorCore.mGetEntity and TensorCore.mGetEntity(targetID)) or (me.GetTarget and me:GetTarget())\nif not t or not t.alive or not t.attackable then\n    return false\nend\n\n-- 优先使用实体自带的 distance2d（该值为“边缘到边缘”的水平距离，已扣除了双方半径）\n-- 语义：distance2d > 0 => 我在目标圆环“外”；distance2d <= 0 => 我在目标圆环“内或贴边”\nlocal gap = t.distance2d\n\n-- 容错：若 distance2d 不可用，则手动用“中心到中心 2D 距离 - (双方半径)”来估算\nif gap == nil then\n    local mypos, tpos = me.pos, t.pos\n    if not (mypos and tpos) then return false end\n    local dx, dz = (mypos.x - tpos.x), (mypos.z - tpos.z)\n    local center2d = math.sqrt(dx*dx + dz*dz)\n    local myR = (me.radius or 0.5)              -- 玩家半径，缺省按 0.5 yalms 估算\n    local tR  = (t.radius or t.hitradius or 0)  -- 目标半径，尽量兼容不同字段\n    gap = center2d - (myR + tR)\nend\n\n-- 条件成立：仅当自己在目标“最外圈之外”\nreturn gap > 0",
-							uuid = "5234a49c-2dbb-3fac-a82c-e223ea2bd1b4",
+							conditionLua = "-- Custom Condition: Player outside target's hit radius\nlocal target = Player:GetTarget()\nif target and target.alive and target.attackable then\n    local dist = target.distance2d or 0\n    local hr   = target.hitboxradius or target.hitradius or 0\n    return dist > hr\nend\n\n-- 没有目标时直接返回 false\nreturn false\n",
+							uuid = "0b9246a3-366a-eb7a-8992-0292f2e1f822",
 							version = 2,
 						},
 						inheritedIndex = 1,
@@ -3153,7 +3186,7 @@ local tbl =
 							{
 								
 								{
-									"5234a49c-2dbb-3fac-a82c-e223ea2bd1b4",
+									"0b9246a3-366a-eb7a-8992-0292f2e1f822",
 									true,
 								},
 								
@@ -3179,7 +3212,7 @@ local tbl =
 							{
 								
 								{
-									"5234a49c-2dbb-3fac-a82c-e223ea2bd1b4",
+									"0b9246a3-366a-eb7a-8992-0292f2e1f822",
 									true,
 								},
 								
@@ -3204,7 +3237,7 @@ local tbl =
 							{
 								
 								{
-									"5234a49c-2dbb-3fac-a82c-e223ea2bd1b4",
+									"0b9246a3-366a-eb7a-8992-0292f2e1f822",
 									true,
 								},
 								
@@ -3229,7 +3262,7 @@ local tbl =
 							{
 								
 								{
-									"5234a49c-2dbb-3fac-a82c-e223ea2bd1b4",
+									"0b9246a3-366a-eb7a-8992-0292f2e1f822",
 									true,
 								},
 								
@@ -3254,8 +3287,8 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "-- === Outside-Of-Hitbox Check (for Link Action) ===\n-- Return: boolean (true 当自己位于目标半径外缘之外)\n\n-- 取玩家与目标（优先 eventArgs 指定，否则用当前选中目标）\nlocal me = Player\nif not me then return false end\n\nlocal targetID = (eventArgs and (eventArgs.targetID or eventArgs.detectionTargetID)) or me.targetid\nlocal t = (targetID and TensorCore.mGetEntity and TensorCore.mGetEntity(targetID)) or (me.GetTarget and me:GetTarget())\nif not t or not t.alive or not t.attackable then\n    return false\nend\n\n-- 优先使用实体自带的 distance2d（该值为“边缘到边缘”的水平距离，已扣除了双方半径）\n-- 语义：distance2d > 0 => 我在目标圆环“外”；distance2d <= 0 => 我在目标圆环“内或贴边”\nlocal gap = t.distance2d\n\n-- 容错：若 distance2d 不可用，则手动用“中心到中心 2D 距离 - (双方半径)”来估算\nif gap == nil then\n    local mypos, tpos = me.pos, t.pos\n    if not (mypos and tpos) then return false end\n    local dx, dz = (mypos.x - tpos.x), (mypos.z - tpos.z)\n    local center2d = math.sqrt(dx*dx + dz*dz)\n    local myR = (me.radius or 0.5)              -- 玩家半径，缺省按 0.5 yalms 估算\n    local tR  = (t.radius or t.hitradius or 0)  -- 目标半径，尽量兼容不同字段\n    gap = center2d - (myR + tR)\nend\n\n-- 条件成立：仅当自己在目标“最外圈之外”\nreturn gap > 0",
-							uuid = "5234a49c-2dbb-3fac-a82c-e223ea2bd1b4",
+							conditionLua = "-- Custom Condition: Player outside target's hit radius\nlocal target = Player:GetTarget()\nif target and target.alive and target.attackable then\n    local dist = target.distance2d or 0\n    local hr   = target.hitboxradius or target.hitradius or 0\n    return dist > hr\nend\n\n-- 没有目标时直接返回 false\nreturn false\n",
+							uuid = "0b9246a3-366a-eb7a-8992-0292f2e1f822",
 							version = 2,
 						},
 						inheritedIndex = 1,
@@ -3315,7 +3348,7 @@ local tbl =
 				timelineIndex = 28,
 				timerEndOffset = 5,
 				timerStartOffset = 0.20000000298023,
-				uuid = "2745bff5-be32-b54f-b624-f04326269ce3",
+				uuid = "6bedaac7-f705-e1bc-b423-f432eae3c731",
 				version = 2,
 			},
 		},

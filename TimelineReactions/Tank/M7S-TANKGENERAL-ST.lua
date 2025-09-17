@@ -999,7 +999,7 @@ local tbl =
 						data = 
 						{
 							aType = "Lua",
-							actionLua = "-- === Provoke 13755 (x<100 min-x else z<100 min-z), wait ≥1s after spawn ===\nlocal now = Now and Now() or (os.clock()*1000)\nlocal MIN_AGE_MS = 1000\n\ndata._seen13755 = data._seen13755 or {}\nlocal seen = data._seen13755\n\nlocal function isTank(ent)\n    if not ent or not ent.job then return false end\n    return ent.job==19 or ent.job==21 or ent.job==32 or ent.job==37\nend\n\nlocal function getEntityByID(id)\n    if not id or id==0 then return nil end\n    return (EntityList and EntityList:Get(id))\n        or (TensorCore and TensorCore.findEntityByID and TensorCore.findEntityByID(id))\n        or nil\nend\n\nlocal list = TensorCore and TensorCore.entityList(\"alive,attackable,contentid=13755\") or {}\nif table.size(list)==0 then return nil end\n\nlocal candA, minX = nil, math.huge\nlocal candB, minZ = nil, math.huge\n\nfor _, e in pairs(list) do\n    if e and e.pos then\n        if not seen[e.id] then seen[e.id] = now end\n        local x, z = e.pos.x or 0, e.pos.z or 0\n        if x<100 and x<minX then minX, candA = x, e end\n        if z<100 and z<minZ then minZ, candB = z, e end\n    end\nend\n\nlocal finalTarget = candA or candB\nif candA then\n    local me, tgt = Player, getEntityByID(candA.targetid)\n    local aggroOnOtherTank = (tgt and me and tgt.id~=me.id and isTank(tgt))\n    if aggroOnOtherTank then finalTarget = candB end\nend\nif not finalTarget then return nil end\n\n-- 出现时长不足1s就不挑衅\nif (now - (seen[finalTarget.id] or now)) < MIN_AGE_MS then return nil end\n\nlocal provoke = ActionList and ActionList:Get(1,7533)\nif not provoke then return nil end\nreturn provoke, finalTarget.id, true, true",
+							actionLua = "-- 在 x < 100 的区域里，对 x 最小的 13755 使用“挑衅”，并忽略织法（ignore weave）\n\n-- 取目标列表\nlocal list = TensorCore.entityList(\"alive,attackable,contentid=13755\")\n\n-- 选出 x 最小的实体（且 x < 100）\nlocal best, bestX = nil, math.huge\nfor _, ent in pairs(list) do\n    local p = ent.pos\n    if p and p.x and p.x < 100 then\n        if p.x < bestX then\n            bestX = p.x\n            best = ent\n        end\n    end\nend\n\n-- 如果找到了目标，就返回动作覆写\nif best then\n    -- Provoke / 挑衅：动作ID 7533\n    local provoke = ActionList:Get(1, 7533)\n    -- 返回：(table)action, (number)targetID, (bool)ignoreWeaveRules, (bool)allowInterrupt\n    return provoke, best.id, true, false\nend\n\n-- 没目标就什么也不做",
 							conditions = 
 							{
 								
@@ -1071,7 +1071,7 @@ local tbl =
 						data = 
 						{
 							aType = "Lua",
-							actionLua = "-- === Provoke 13755 (x>100 max-x else z>100 max-z), wait ≥1s after spawn ===\nlocal now = Now and Now() or (os.clock()*1000)\nlocal MIN_AGE_MS = 1000\n\ndata._seen13755 = data._seen13755 or {}\nlocal seen = data._seen13755\n\nlocal function isTank(ent)\n    if not ent or not ent.job then return false end\n    return ent.job==19 or ent.job==21 or ent.job==32 or ent.job==37\nend\n\nlocal function getEntityByID(id)\n    if not id or id==0 then return nil end\n    return (EntityList and EntityList:Get(id))\n        or (TensorCore and TensorCore.findEntityByID and TensorCore.findEntityByID(id))\n        or nil\nend\n\nlocal list = TensorCore and TensorCore.entityList(\"alive,attackable,contentid=13755\") or {}\nif table.size(list)==0 then return nil end\n\nlocal candA, maxX = nil, -math.huge\nlocal candB, maxZ = nil, -math.huge\n\nfor _, e in pairs(list) do\n    if e and e.pos then\n        if not seen[e.id] then seen[e.id] = now end\n        local x, z = e.pos.x or 0, e.pos.z or 0\n        if x>100 and x>maxX then maxX, candA = x, e end\n        if z>100 and z>maxZ then maxZ, candB = z, e end\n    end\nend\n\nlocal finalTarget = candA or candB\nif candA then\n    local me, tgt = Player, getEntityByID(candA.targetid)\n    local aggroOnOtherTank = (tgt and me and tgt.id~=me.id and isTank(tgt))\n    if aggroOnOtherTank then finalTarget = candB end\nend\nif not finalTarget then return nil end\n\n-- 出现时长不足1s就不挑衅\nif (now - (seen[finalTarget.id] or now)) < MIN_AGE_MS then return nil end\n\nlocal provoke = ActionList and ActionList:Get(1,7533)\nif not provoke then return nil end\nreturn provoke, finalTarget.id, true, true",
+							actionLua = "-- 在 x > 100 的区域里，对 x 最大的 13755 使用“挑衅”，并忽略织法（ignore weave）\n\n-- 取目标列表\nlocal list = TensorCore.entityList(\"alive,attackable,contentid=13755\")\n\n-- 选出 x 最大的实体（且 x > 100）\nlocal best, bestX = nil, -math.huge\nfor _, ent in pairs(list) do\n    local p = ent.pos\n    if p and p.x and p.x > 100 then\n        if p.x > bestX then\n            bestX = p.x\n            best = ent\n        end\n    end\nend\n\n-- 如果找到了目标，就返回动作覆写（ACR override）\nif best then\n    -- Provoke / 挑衅：动作ID 7533（Tank通用）\n    local provoke = ActionList:Get(1, 7533)\n    -- 返回：(table)action, (number)targetID, (bool)ignoreWeaveRules, (bool)allowInterrupt\n    return provoke, best.id, true, false\nend\n\n-- 没目标就什么也不做（不返回覆写）",
 							conditions = 
 							{
 								
@@ -1190,6 +1190,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				eventType = 12,
 				mechanicTime = 56,
 				name = "[MT] AutoTarget",
@@ -1241,6 +1242,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				eventType = 12,
 				mechanicTime = 56,
 				name = "[ST] AutoTarget",
@@ -8830,6 +8832,7 @@ local tbl =
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
 							luaReturnsAction = true,
 							targetContentID = 13755,
 							targetType = "ContentID",
@@ -8904,6 +8907,7 @@ local tbl =
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
 							luaReturnsAction = true,
 							targetContentID = 13755,
 							targetType = "ContentID",
