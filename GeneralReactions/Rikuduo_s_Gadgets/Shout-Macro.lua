@@ -11,7 +11,7 @@ local tbl =
 					data = 
 					{
 						aType = "Lua",
-						actionLua = "local COOLDOWN_MS = 800\n\nlocal me = Player\nif not me or not eventArgs then return end\n\nif eventArgs.spellID == 7533 and eventArgs.entityID == me.id then\n    data._lastProvokeSay = data._lastProvokeSay or 0\n    if TimeSince(data._lastProvokeSay) >= COOLDOWN_MS then\n        SendTextCommand('/p <t>を挑発しました！ <se.3>')   -- message to send\n        data._lastProvokeSay = Now()\n    end\n    self.used = true\nend\n",
+						actionLua = "local COOLDOWN_MS = 800\n\nlocal me = Player\nif not me or not eventArgs then return end\n\nif eventArgs.spellID == 7533 and eventArgs.entityID == me.id then\n    data._lastProvokeSay = data._lastProvokeSay or 0\n    if TimeSince(data._lastProvokeSay) >= COOLDOWN_MS then\n        SendTextCommand('/p <t>を挑発しました！ <se.3>')   -- edit message to send\n        data._lastProvokeSay = Now()\n    end\n    self.used = true\nend\n",
 						gVar = "ACR_RikuPLD3_CD",
 						uuid = "6eaaef65-88bd-2ef6-a4db-7e3308f7f347",
 						version = 2.1,
@@ -22,7 +22,7 @@ local tbl =
 					data = 
 					{
 						aType = "Lua",
-						actionLua = "local COOLDOWN_MS = 800\n\nlocal me = Player\nif not me or not eventArgs then return end\n\nif eventArgs.spellID == 7537 and eventArgs.entityID == me.id then\n\n    local target = nil\n    if eventArgs.targetID and eventArgs.targetID ~= 0 then\n        target = (EntityList and EntityList:Get(eventArgs.targetID))\n              or (TensorCore and TensorCore.findEntityByID and TensorCore.findEntityByID(eventArgs.targetID))\n    end\n    \n    local tName = target and target.name or \"???\"\n    \n    data._lastSharkSay = data._lastSharkSay or 0\n    if TimeSince(data._lastSharkSay) >= COOLDOWN_MS then\n        SendTextCommand(\"/p \" .. tName .. \"にシャークしました <se.3>\") -- message to send\n    end\n    \n    self.used = true\nend\n",
+						actionLua = "local COOLDOWN_MS = 800\n\nlocal me = Player\nif not me or not eventArgs then return end\n\nif eventArgs.spellID == 7537 and eventArgs.entityID == me.id then\n\n    local target = nil\n    if eventArgs.targetID and eventArgs.targetID ~= 0 then\n        target = (EntityList and EntityList:Get(eventArgs.targetID))\n              or (TensorCore and TensorCore.findEntityByID and TensorCore.findEntityByID(eventArgs.targetID))\n    end\n    \n    local tName = target and target.name or \"???\"\n    \n    data._lastSharkSay = data._lastSharkSay or 0\n    if TimeSince(data._lastSharkSay) >= COOLDOWN_MS then\n        SendTextCommand(\"/p \" .. tName .. \"にシャークしました <se.3>\") -- edit message to send\n    end\n    \n    self.used = true\nend\n",
 						gVar = "ACR_RikuPLD3_CD",
 						uuid = "e910b2f1-a382-3fb2-bf2a-61e830fbcc88",
 						version = 2.1,
@@ -50,7 +50,7 @@ local tbl =
 					data = 
 					{
 						aType = "Lua",
-						actionLua = "local INVULN_IDS = {\n  [30]    = true,  -- Hallowed Ground\n  [43]    = true,  -- Holmgang\n  [3638]  = true,  -- Living Dead\n  [16152] = true,  -- Superbolide\n}\n\nlocal me = Player\nif not me or not eventArgs then return end\n\nif eventArgs.entityID == me.id and INVULN_IDS[eventArgs.spellID] then\n\n  data._invuln = data._invuln or {}\n  local s = data._invuln\n  s.start_ms   = Now()                   \n  s.duration_ms= 10000              \n  s.next_tick  = 10                      \n  s.active     = true\n  s.channel    = \"/p\"                       -- channel\n  s.prefix9    = \"無敵終了まであと\"           -- Invuln ends in ◯◯ seconds    \n  s.suffix     = \"秒 <se.4>\"                -- ◯◯ seconds\n  s.msgStart   = \"無敵を発動しました <se.9>\"      -- invuln used\n  s.msgEnd     = \"無敵効果が終わりました <se.11>\"  -- invuln ended\n\n  SendTextCommand(s.channel .. \" \" .. s.msgStart)\n\n  self.used = true\nend\n",
+						actionLua = "local INVULN_IDS = {\n  [30]    = true,  -- Hallowed Ground\n  [43]    = true,  -- Holmgang\n  [3638]  = true,  -- Living Dead\n  [16152] = true,  -- Superbolide\n}\n\nlocal me = Player\nif not me or not eventArgs then return end\n\nif eventArgs.entityID == me.id and INVULN_IDS[eventArgs.spellID] then\n\n  data._invuln = data._invuln or {}\n  local s = data._invuln\n  s.start_ms   = Now()                   \n  s.duration_ms= 10000              \n  s.next_tick  = 10                      \n  s.active     = true\n  s.channel    = \"/p\"                       -- channel\n  s.prefix9    = \"無敵終了まであと\"           -- Invuln ends in ◯◯ seconds    \n  s.suffix     = \"秒 <se.12>\"                -- ◯◯ seconds\n  s.msgStart   = \"無敵を発動しました <se.9>\"      -- invuln used\n  s.msgEnd     = \"無敵効果が終わりました <se.11>\"  -- invuln ended\n\n  SendTextCommand(s.channel .. \" \" .. s.msgStart)\n\n  self.used = true\nend\n",
 						gVar = "ACR_RikuGNB3_CD",
 						uuid = "67089b36-3b55-c6f1-97b8-352e113727a1",
 						version = 2.1,
@@ -105,9 +105,9 @@ local tbl =
 					data = 
 					{
 						aType = "Lua",
-						actionLua = "-- Cover Announce Starter (OnEntityCast)\n-- 自己对目标放出 27(かばう) 时：/p これから<目标名>をかばいます <se.3>，并启动12秒计时\n\nlocal COVER_ID = 27\nlocal DURATION_MS = 12000\nlocal COOLDOWN_MS = 500 -- 防抖\n\nlocal me = Player\nif not me or not eventArgs then return end\n\nif eventArgs.entityID == me.id and eventArgs.spellID == COVER_ID then\n  -- 目标名\n  local target = nil\n  if eventArgs.targetID and eventArgs.targetID ~= 0 then\n    target = (EntityList and EntityList:Get(eventArgs.targetID))\n          or (TensorCore and TensorCore.findEntityByID and TensorCore.findEntityByID(eventArgs.targetID))\n  end\n  local tName = (target and target.name) or \"???\"\n\n  -- 防抖，避免极端情况下重复进入\n  data._cover = data._cover or {}\n  data._cover._lastFire = data._cover._lastFire or 0\n  if TimeSince(data._cover._lastFire) < COOLDOWN_MS then return end\n  data._cover._lastFire = Now()\n\n  -- 立即发送开始提示\n  SendTextCommand(\"/p これから\" .. tName .. \"のダメージを代わりに受けましょう！ <se.3>\")\n\n  -- 启动计时（若已有计时，直接覆盖为新的 12 秒）\n  data._cover.start_ms    = Now()\n  data._cover.duration_ms = DURATION_MS\n  data._cover.active      = true\n  data._cover.end_sent    = false\n\n  self.used = true\nend\n",
-						gVar = "ACR_RikuPLD3_CD",
-						uuid = "58c4be3f-0acf-2229-9da1-85e26b152d74",
+						actionLua = "local SKILL_NAMES = {\n  [7382]  = \"インターベンション\", -- Intvn\n  [16464] = \"原初の猛り\", -- Nascent flash\n  [7393]  = \"ブラックナイト\", -- TBN\n  [25754] = \"オブレーション\", -- Oblation\n  [25758] = \"ハート・オブ・コランダム\", -- HoC\n  [16151] = \"オーロラ\", -- Aurora\n}\n\nlocal COOLDOWN_MS = 800\n\nlocal me = Player\nif not me or not eventArgs then return end\n\nlocal spell = eventArgs.spellID\nif eventArgs.entityID ~= me.id or not SKILL_NAMES[spell] then return end\n\nlocal target\nif eventArgs.targetID and eventArgs.targetID ~= 0 then\n  target = (EntityList and EntityList:Get(eventArgs.targetID))\n        or (TensorCore and TensorCore.findEntityByID and TensorCore.findEntityByID(eventArgs.targetID))\nend\nlocal tName = (target and target.name) or \"???\"\n\ndata._mitiAnnounce = data._mitiAnnounce or { last = {} }\nlocal last = data._mitiAnnounce.last\nlast[spell] = last[spell] or 0\nif TimeSince(last[spell]) < COOLDOWN_MS then return end\nlast[spell] = Now()\n\nlocal msg = \"/p \" .. tName .. \"に\" .. SKILL_NAMES[spell] .. \"を入れました <se.5>\" -- edit message to send\nSendTextCommand(msg)\n\nself.used = true\n",
+						gVar = "ACR_RikuGNB3_CD",
+						uuid = "42667292-280a-0690-811c-662b87afefc2",
 						version = 2.1,
 					},
 				},
@@ -116,8 +116,8 @@ local tbl =
 			{
 			},
 			eventType = 2,
-			name = "[Tank] Cover",
-			uuid = "307b63da-994d-22f4-9a75-e27b208048fd",
+			name = "[Tank] Co-Miti",
+			uuid = "a1efe846-1d41-6be9-b4f9-8a7b659f3edd",
 			version = 2,
 		},
 		inheritedIndex = 4,
@@ -133,20 +133,19 @@ local tbl =
 					data = 
 					{
 						aType = "Lua",
-						actionLua = "-- Cover Announce Ticker (OnFrame)\n-- 检查 12 秒是否到达，到达即发送：/p かばう効果が終了しました\n\nlocal s = data._cover\nif not s or not s.active then return end\n\nlocal elapsed = TimeSince(s.start_ms or 0)\nlocal duration = s.duration_ms or 12000\n\nif not s.end_sent and elapsed >= duration then\n  SendTextCommand(\"/p かばえるのはここまでのようです <se.11>\")\n  s.end_sent = true\n  s.active   = false\n  self.used  = true\nend\n",
+						actionLua = "local COVER_ID = 27\nlocal DURATION_MS = 12000\nlocal COOLDOWN_MS = 500 -- 防抖\n\nlocal me = Player\nif not me or not eventArgs then return end\n\nif eventArgs.entityID == me.id and eventArgs.spellID == COVER_ID then\n\n  local target = nil\n  if eventArgs.targetID and eventArgs.targetID ~= 0 then\n    target = (EntityList and EntityList:Get(eventArgs.targetID))\n          or (TensorCore and TensorCore.findEntityByID and TensorCore.findEntityByID(eventArgs.targetID))\n  end\n  local tName = (target and target.name) or \"???\"\n\n  data._cover = data._cover or {}\n  data._cover._lastFire = data._cover._lastFire or 0\n  if TimeSince(data._cover._lastFire) < COOLDOWN_MS then return end\n  data._cover._lastFire = Now()\n\n  SendTextCommand(\"/p これから\" .. tName .. \"のダメージを代わりに受けましょう！ <se.3>\") -- edit message to send\n\n  data._cover.start_ms    = Now()\n  data._cover.duration_ms = DURATION_MS\n  data._cover.active      = true\n  data._cover.end_sent    = false\n\n  self.used = true\nend\n",
 						gVar = "ACR_RikuPLD3_CD",
-						uuid = "d443a2ff-f6d5-a127-9ce0-29135ac07621",
+						uuid = "58c4be3f-0acf-2229-9da1-85e26b152d74",
 						version = 2.1,
 					},
-					inheritedIndex = 1,
 				},
 			},
 			conditions = 
 			{
 			},
-			eventType = 12,
-			name = "[Tank] Cover Ends",
-			uuid = "8ded2f66-ffb4-e41f-b588-3d24882d2dda",
+			eventType = 2,
+			name = "[Tank][PLD] Cover",
+			uuid = "307b63da-994d-22f4-9a75-e27b208048fd",
 			version = 2,
 		},
 		inheritedIndex = 5,
@@ -162,19 +161,20 @@ local tbl =
 					data = 
 					{
 						aType = "Lua",
-						actionLua = "local SKILL_NAMES = {\n  [7382]  = \"インターベンション\",\n  [16464] = \"原初の猛り\",\n  [7393]  = \"ブラックナイト\",\n  [25754] = \"オブレーション\",\n  [25758] = \"ハート・オブ・コランダム\",\n  [16151] = \"オーロラ\",\n}\n\nlocal COOLDOWN_MS = 800 -- 防重发\n\nlocal me = Player\nif not me or not eventArgs then return end\n\n-- 只处理“我释放”的、且在表内的技能\nlocal spell = eventArgs.spellID\nif eventArgs.entityID ~= me.id or not SKILL_NAMES[spell] then return end\n\n-- 取目标实体与名字\nlocal target\nif eventArgs.targetID and eventArgs.targetID ~= 0 then\n  target = (EntityList and EntityList:Get(eventArgs.targetID))\n        or (TensorCore and TensorCore.findEntityByID and TensorCore.findEntityByID(eventArgs.targetID))\nend\nlocal tName = (target and target.name) or \"???\"\n\n-- 简单节流（按技能分别节流）\ndata._mitiAnnounce = data._mitiAnnounce or { last = {} }\nlocal last = data._mitiAnnounce.last\nlast[spell] = last[spell] or 0\nif TimeSince(last[spell]) < COOLDOWN_MS then return end\nlast[spell] = Now()\n\n-- 发送\nlocal msg = \"/p \" .. tName .. \"に\" .. SKILL_NAMES[spell] .. \"を入れました\"\nSendTextCommand(msg)\n\nself.used = true\n",
-						gVar = "ACR_RikuGNB3_CD",
-						uuid = "42667292-280a-0690-811c-662b87afefc2",
+						actionLua = "local s = data._cover\nif not s or not s.active then return end\n\nlocal elapsed = TimeSince(s.start_ms or 0)\nlocal duration = s.duration_ms or 12000\n\nif not s.end_sent and elapsed >= duration then\n  SendTextCommand(\"/p かばえるのはここまでのようです <se.11>\") -- edit message to send\n  s.end_sent = true\n  s.active   = false\n  self.used  = true\nend\n",
+						gVar = "ACR_RikuPLD3_CD",
+						uuid = "d443a2ff-f6d5-a127-9ce0-29135ac07621",
 						version = 2.1,
 					},
+					inheritedIndex = 1,
 				},
 			},
 			conditions = 
 			{
 			},
-			eventType = 2,
-			name = "[Tank] Co-Miti",
-			uuid = "a1efe846-1d41-6be9-b4f9-8a7b659f3edd",
+			eventType = 12,
+			name = "[Tank][PLD] Cover Ends",
+			uuid = "8ded2f66-ffb4-e41f-b588-3d24882d2dda",
 			version = 2,
 		},
 		inheritedIndex = 6,
@@ -190,7 +190,7 @@ local tbl =
 					data = 
 					{
 						aType = "Lua",
-						actionLua = "local RAISE_IDS = {\n  [125]   = true,\n  [173]   = true,\n  [3603]  = true,\n  [24287] = true,\n}\n\nlocal COOLDOWN_MS = 800\n\nlocal me = Player\nif not me or not eventArgs then return end\n\nif eventArgs.entityID == me.id and RAISE_IDS[eventArgs.spellID] then\n\n    local target\n    if eventArgs.targetID and eventArgs.targetID ~= 0 then\n        target = (EntityList and EntityList:Get(eventArgs.targetID))\n              or (TensorCore and TensorCore.findEntityByID and TensorCore.findEntityByID(eventArgs.targetID))\n    end\n    local tName = (target and target.name) or \"???\"\n\n    data._lastRaiseSay = data._lastRaiseSay or 0\n    if TimeSince(data._lastRaiseSay) >= COOLDOWN_MS then\n        SendTextCommand(\"/p \" .. tName .. \"を復活した <se.3>\")\n        data._lastRaiseSay = Now()\n    end\n\n    self.used = true\nend\n",
+						actionLua = "local RAISE_IDS = {\n  [125]   = true,\n  [173]   = true,\n  [3603]  = true,\n  [24287] = true,\n}\n\nlocal COOLDOWN_MS = 800\n\nlocal me = Player\nif not me or not eventArgs then return end\n\nif eventArgs.entityID == me.id and RAISE_IDS[eventArgs.spellID] then\n\n    local target\n    if eventArgs.targetID and eventArgs.targetID ~= 0 then\n        target = (EntityList and EntityList:Get(eventArgs.targetID))\n              or (TensorCore and TensorCore.findEntityByID and TensorCore.findEntityByID(eventArgs.targetID))\n    end\n    local tName = (target and target.name) or \"???\"\n\n    data._lastRaiseSay = data._lastRaiseSay or 0\n    if TimeSince(data._lastRaiseSay) >= COOLDOWN_MS then\n        SendTextCommand(\"/p \" .. tName .. \"を復活しました <se.3>\") -- edit message to send\n        data._lastRaiseSay = Now()\n    end\n\n    self.used = true\nend\n",
 						gVar = "ACR_RikuSCH3_CD",
 						uuid = "e22332fd-7554-3d0c-b61c-e231acf949e0",
 						version = 2.1,
