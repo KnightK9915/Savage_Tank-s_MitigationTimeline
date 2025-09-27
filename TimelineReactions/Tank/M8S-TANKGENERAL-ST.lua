@@ -131,7 +131,7 @@ local tbl =
 				uuid = "2b998330-a490-ae4c-a9eb-ae0d55f5aa2d",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 5,
 		},
 		
 		{
@@ -225,7 +225,7 @@ local tbl =
 				uuid = "5fdfe09b-46dd-7371-9b88-a939b8f21435",
 				version = 2,
 			},
-			inheritedIndex = 5,
+			inheritedIndex = 6,
 		},
 		
 		{
@@ -317,7 +317,7 @@ local tbl =
 				uuid = "b22a35f8-12a3-4b2d-b70b-59d6e935ed5e",
 				version = 2,
 			},
-			inheritedIndex = 8,
+			inheritedIndex = 9,
 		},
 		
 		{
@@ -2400,6 +2400,100 @@ local tbl =
 					{
 						data = 
 						{
+							actionID = 7385,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"3203a517-01cd-43e3-8eef-9b129964cefd",
+									true,
+								},
+								
+								{
+									"e0d201a2-ae43-1010-ba96-4101b0a66bb1",
+									true,
+								},
+								
+								{
+									"8e4fabaa-5ea6-6908-9c6e-3b1dacf37ce0",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "b7941e84-fda2-2cbf-b98c-16d46cd1e366",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								19,
+							},
+							uuid = "3203a517-01cd-43e3-8eef-9b129964cefd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7385,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "e0d201a2-ae43-1010-ba96-4101b0a66bb1",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "8e4fabaa-5ea6-6908-9c6e-3b1dacf37ce0",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 110.9,
+				name = "PoA",
+				timeRange = true,
+				timelineIndex = 24,
+				timerStartOffset = -1.5,
+				uuid = "28f7ed5f-8adf-c2ac-b7d5-c992ffcd4b86",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 16160,
 							conditions = 
 							{
@@ -2480,7 +2574,7 @@ local tbl =
 				uuid = "46cdbef8-0baf-55be-8eb6-744f47a4fbbd",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 5,
 		},
 		
 		{
@@ -4739,6 +4833,100 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7385,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"3203a517-01cd-43e3-8eef-9b129964cefd",
+									true,
+								},
+								
+								{
+									"e0d201a2-ae43-1010-ba96-4101b0a66bb1",
+									true,
+								},
+								
+								{
+									"8e4fabaa-5ea6-6908-9c6e-3b1dacf37ce0",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "b7941e84-fda2-2cbf-b98c-16d46cd1e366",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								19,
+							},
+							uuid = "3203a517-01cd-43e3-8eef-9b129964cefd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7385,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "e0d201a2-ae43-1010-ba96-4101b0a66bb1",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "8e4fabaa-5ea6-6908-9c6e-3b1dacf37ce0",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 316.6,
+				name = "PoA",
+				timeRange = true,
+				timelineIndex = 50,
+				timerStartOffset = -1.5,
+				uuid = "f99f1ee8-dad3-cff9-b34f-a8239b8a3ee4",
+				version = 2,
+			},
+			inheritedIndex = 2,
 		},
 		
 		{
@@ -8333,6 +8521,100 @@ local tbl =
 					{
 						data = 
 						{
+							actionID = 7385,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"3203a517-01cd-43e3-8eef-9b129964cefd",
+									true,
+								},
+								
+								{
+									"e0d201a2-ae43-1010-ba96-4101b0a66bb1",
+									true,
+								},
+								
+								{
+									"8e4fabaa-5ea6-6908-9c6e-3b1dacf37ce0",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "b7941e84-fda2-2cbf-b98c-16d46cd1e366",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								19,
+							},
+							uuid = "3203a517-01cd-43e3-8eef-9b129964cefd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7385,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "e0d201a2-ae43-1010-ba96-4101b0a66bb1",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "8e4fabaa-5ea6-6908-9c6e-3b1dacf37ce0",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 530,
+				name = "PoA",
+				timeRange = true,
+				timelineIndex = 80,
+				timerStartOffset = -1.5,
+				uuid = "652fcd1b-84e9-3306-b472-5ef6163380c6",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 16160,
 							conditions = 
 							{
@@ -8413,7 +8695,7 @@ local tbl =
 				uuid = "0b7a793c-4085-2ba5-9e40-fecb88bbbb01",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 5,
 		},
 		
 		{
@@ -8779,6 +9061,100 @@ local tbl =
 					{
 						data = 
 						{
+							actionID = 7385,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"3203a517-01cd-43e3-8eef-9b129964cefd",
+									true,
+								},
+								
+								{
+									"e0d201a2-ae43-1010-ba96-4101b0a66bb1",
+									true,
+								},
+								
+								{
+									"8e4fabaa-5ea6-6908-9c6e-3b1dacf37ce0",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "b7941e84-fda2-2cbf-b98c-16d46cd1e366",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								19,
+							},
+							uuid = "3203a517-01cd-43e3-8eef-9b129964cefd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7385,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "e0d201a2-ae43-1010-ba96-4101b0a66bb1",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "8e4fabaa-5ea6-6908-9c6e-3b1dacf37ce0",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 586.2,
+				name = "PoA",
+				timeRange = true,
+				timelineIndex = 85,
+				timerStartOffset = -1.5,
+				uuid = "f8c18295-8da9-2bdc-913b-c095c0ea3fd4",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 16160,
 							conditions = 
 							{
@@ -8859,7 +9235,7 @@ local tbl =
 				uuid = "09c5f4a7-18bb-4a59-a28c-e421ad4c8a32",
 				version = 2,
 			},
-			inheritedIndex = 2,
+			inheritedIndex = 3,
 		},
 		
 		{
@@ -10972,6 +11348,100 @@ local tbl =
 					{
 						data = 
 						{
+							actionID = 7385,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"3203a517-01cd-43e3-8eef-9b129964cefd",
+									true,
+								},
+								
+								{
+									"e0d201a2-ae43-1010-ba96-4101b0a66bb1",
+									true,
+								},
+								
+								{
+									"8e4fabaa-5ea6-6908-9c6e-3b1dacf37ce0",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "b7941e84-fda2-2cbf-b98c-16d46cd1e366",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								19,
+							},
+							uuid = "3203a517-01cd-43e3-8eef-9b129964cefd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7385,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "e0d201a2-ae43-1010-ba96-4101b0a66bb1",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "8e4fabaa-5ea6-6908-9c6e-3b1dacf37ce0",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 708.9,
+				name = "PoA",
+				timeRange = true,
+				timelineIndex = 103,
+				timerStartOffset = -1.5,
+				uuid = "12326a46-588b-d77f-ad0a-2f1e082b59ea",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 16160,
 							conditions = 
 							{
@@ -11052,7 +11522,7 @@ local tbl =
 				uuid = "6aa69fe1-0099-bb90-b39e-3c5933b34609",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 5,
 		},
 		
 		{
@@ -11761,6 +12231,100 @@ local tbl =
 					{
 						data = 
 						{
+							actionID = 7385,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"3203a517-01cd-43e3-8eef-9b129964cefd",
+									true,
+								},
+								
+								{
+									"e0d201a2-ae43-1010-ba96-4101b0a66bb1",
+									true,
+								},
+								
+								{
+									"8e4fabaa-5ea6-6908-9c6e-3b1dacf37ce0",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "b7941e84-fda2-2cbf-b98c-16d46cd1e366",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								19,
+							},
+							uuid = "3203a517-01cd-43e3-8eef-9b129964cefd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7385,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "e0d201a2-ae43-1010-ba96-4101b0a66bb1",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "8e4fabaa-5ea6-6908-9c6e-3b1dacf37ce0",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 809.5,
+				name = "PoA",
+				timeRange = true,
+				timelineIndex = 112,
+				timerStartOffset = -1.5,
+				uuid = "eff470b9-0393-7953-8745-44d4cdfbfe4a",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 16160,
 							conditions = 
 							{
@@ -11841,7 +12405,7 @@ local tbl =
 				uuid = "9ae4eb9e-426d-48d1-a64a-1cd0dacb5b07",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 5,
 		},
 		
 		{
@@ -12477,6 +13041,100 @@ local tbl =
 					{
 						data = 
 						{
+							actionID = 7385,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"3203a517-01cd-43e3-8eef-9b129964cefd",
+									true,
+								},
+								
+								{
+									"e0d201a2-ae43-1010-ba96-4101b0a66bb1",
+									true,
+								},
+								
+								{
+									"8e4fabaa-5ea6-6908-9c6e-3b1dacf37ce0",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "b7941e84-fda2-2cbf-b98c-16d46cd1e366",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								19,
+							},
+							uuid = "3203a517-01cd-43e3-8eef-9b129964cefd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7385,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "e0d201a2-ae43-1010-ba96-4101b0a66bb1",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "8e4fabaa-5ea6-6908-9c6e-3b1dacf37ce0",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 887.7,
+				name = "PoA",
+				timeRange = true,
+				timelineIndex = 120,
+				timerStartOffset = -1.5,
+				uuid = "3083c9b3-8293-f59e-aa8b-53c2c36488af",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 16160,
 							conditions = 
 							{
@@ -12557,7 +13215,7 @@ local tbl =
 				uuid = "9bf9e56d-1edc-0b23-945e-6813638e8c20",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 5,
 		},
 		
 		{

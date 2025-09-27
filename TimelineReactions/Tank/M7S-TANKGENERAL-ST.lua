@@ -999,168 +999,6 @@ local tbl =
 						data = 
 						{
 							aType = "Lua",
-							actionLua = "-- 在 x < 100 的区域里，对 x 最小的 13755 使用“挑衅”，并忽略织法（ignore weave）\n\n-- 取目标列表\nlocal list = TensorCore.entityList(\"alive,attackable,contentid=13755\")\n\n-- 选出 x 最小的实体（且 x < 100）\nlocal best, bestX = nil, math.huge\nfor _, ent in pairs(list) do\n    local p = ent.pos\n    if p and p.x and p.x < 100 then\n        if p.x < bestX then\n            bestX = p.x\n            best = ent\n        end\n    end\nend\n\n-- 如果找到了目标，就返回动作覆写\nif best then\n    -- Provoke / 挑衅：动作ID 7533\n    local provoke = ActionList:Get(1, 7533)\n    -- 返回：(table)action, (number)targetID, (bool)ignoreWeaveRules, (bool)allowInterrupt\n    return provoke, best.id, true, false\nend\n\n-- 没目标就什么也不做",
-							conditions = 
-							{
-								
-								{
-									"3ce82625-a320-661c-bbba-1c26f97aa90a",
-									true,
-								},
-								
-								{
-									"883bf62e-7590-77a9-b9d9-2dd4f0f8496c",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							luaReturnsAction = true,
-							uuid = "6b36f321-6949-3925-b06b-121e3e82c080",
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7533,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "3ce82625-a320-661c-bbba-1c26f97aa90a",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
-							name = "GroupMit MT",
-							uuid = "883bf62e-7590-77a9-b9d9-2dd4f0f8496c",
-							version = 2,
-						},
-					},
-				},
-				eventType = 12,
-				mechanicTime = 56,
-				name = "[MT] Provoke Near Adds",
-				timeRange = true,
-				timelineIndex = 11,
-				timerEndOffset = 7,
-				timerStartOffset = 0.10000000149012,
-				uuid = "eb6c051b-bc5a-fff4-bca4-dd914f00ec46",
-				version = 2,
-			},
-			inheritedIndex = 1,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "Lua",
-							actionLua = "-- 在 x > 100 的区域里，对 x 最大的 13755 使用“挑衅”，并忽略织法（ignore weave）\n\n-- 取目标列表\nlocal list = TensorCore.entityList(\"alive,attackable,contentid=13755\")\n\n-- 选出 x 最大的实体（且 x > 100）\nlocal best, bestX = nil, -math.huge\nfor _, ent in pairs(list) do\n    local p = ent.pos\n    if p and p.x and p.x > 100 then\n        if p.x > bestX then\n            bestX = p.x\n            best = ent\n        end\n    end\nend\n\n-- 如果找到了目标，就返回动作覆写（ACR override）\nif best then\n    -- Provoke / 挑衅：动作ID 7533（Tank通用）\n    local provoke = ActionList:Get(1, 7533)\n    -- 返回：(table)action, (number)targetID, (bool)ignoreWeaveRules, (bool)allowInterrupt\n    return provoke, best.id, true, false\nend\n\n-- 没目标就什么也不做（不返回覆写）",
-							conditions = 
-							{
-								
-								{
-									"3ce82625-a320-661c-bbba-1c26f97aa90a",
-									true,
-								},
-								
-								{
-									"94a8c2e7-024d-ce5d-ae5e-117c10793d7b",
-									true,
-								},
-								
-								{
-									"4535308f-b7cc-a89e-954f-841ac32bb706",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							luaReturnsAction = true,
-							uuid = "6200c53f-3f27-1474-a29e-11c8d3e1719c",
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7533,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "3ce82625-a320-661c-bbba-1c26f97aa90a",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
-							name = "GroupMit ST",
-							uuid = "94a8c2e7-024d-ce5d-ae5e-117c10793d7b",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionCDValue = 0.10000000149012,
-							actionID = 7533,
-							category = "Party",
-							conditionType = 9,
-							partyTargetType = "Other Tank",
-							uuid = "4535308f-b7cc-a89e-954f-841ac32bb706",
-							version = 2,
-						},
-					},
-				},
-				eventType = 12,
-				mechanicTime = 56,
-				name = "[ST] Provoke Near Adds",
-				timeRange = true,
-				timelineIndex = 11,
-				timerEndOffset = 7,
-				timerStartOffset = 0.10000000149012,
-				uuid = "1d881183-160d-945a-96ec-801b8e552c03",
-				version = 2,
-			},
-			inheritedIndex = 2,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "Lua",
 							actionLua = "-- === Auto Target Switcher for 13755 in x<100 (OnFrame) ===\n-- 规则：\n-- - 仅在 x<100 的范围内寻找 contentid=13755\n-- - 只选择“仇恨不在自己身上”的那只作为目标\n-- - 如果范围内所有 13755 的仇恨都在自己身上 -> 不做任何改动\n-- - 若当前目标已符合条件，则保持不动\n\nlocal me = Player\nif not me then return end\n\n-- 获取实体（兼容常见接口）\nlocal function getEntityByID(id)\n    if not id or id == 0 then return nil end\n    return (EntityList and EntityList:Get(id))\n        or (TensorCore and TensorCore.findEntityByID and TensorCore.findEntityByID(id))\n        or nil\nend\n\n-- 判断实体是否符合“x<100 且 13755 且仇恨不在我身上”\nlocal function qualifies(e)\n    if not e or not e.pos then return false end\n    if e.contentid ~= 13755 then return false end\n    if not e.attackable or not e.alive then return false end\n    local x = e.pos.x or 0\n    if x >= 100 then return false end\n    local tgt = getEntityByID(e.targetid)\n    return (tgt == nil) or (tgt.id ~= me.id)\nend\n\n-- 如果当前目标已符合条件，就保持不动\ndo\n    local cur = getEntityByID(me.targetid)\n    if qualifies(cur) then\n        return\n    end\nend\n\n-- 搜索候选：x<100 & 13755 & 仇恨不在我身上，优先就近\nlocal list = TensorCore and TensorCore.entityList(\"alive,attackable,contentid=13755\") or {}\nif table.size(list) == 0 then return end\n\nlocal best, bestDist = nil, math.huge\nlocal anyInRangeButOnMe = false\n\nfor _, e in pairs(list) do\n    if e and e.pos and (e.pos.x or 0) < 100 then\n        local tgt = getEntityByID(e.targetid)\n        if tgt and tgt.id == me.id then\n            anyInRangeButOnMe = true\n        else\n            local d = e.distance2d or e.distance or math.huge\n            if d < bestDist then\n                bestDist, best = d, e\n            end\n        end\n    end\nend\n\n-- 若找到合格候选 -> 选中；否则不干涉\nif best then\n    if me.targetid ~= best.id then\n        Player:SetTarget(best.id)\n    end\nelse\n    -- 范围内要么没有 13755，要么它们都在打我 -> 不干涉\n    return\nend",
 							conditions = 
 							{
@@ -1190,14 +1028,14 @@ local tbl =
 						},
 					},
 				},
-				enabled = false,
 				eventType = 12,
 				mechanicTime = 56,
 				name = "[MT] AutoTarget",
 				timeRange = true,
 				timelineIndex = 11,
 				timerEndOffset = 7,
-				uuid = "4f70c567-41a4-051e-84e7-21846d078588",
+				timerStartOffset = -5,
+				uuid = "2b63f409-d316-a2c2-8c04-07a83b60c36c",
 				version = 2,
 			},
 		},
@@ -1242,16 +1080,196 @@ local tbl =
 						},
 					},
 				},
-				enabled = false,
 				eventType = 12,
 				mechanicTime = 56,
 				name = "[ST] AutoTarget",
 				timeRange = true,
 				timelineIndex = 11,
 				timerEndOffset = 7,
-				uuid = "9ee94d80-3471-4d69-a839-45a3d7396681",
+				timerStartOffset = -5,
+				uuid = "dd6bc4c0-17b5-6fff-b532-bde09258944b",
 				version = 2,
 			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7533,
+							actionLua = "-- === Provoke on 13755 with spatial + aggro rules (ignore weave) ===\n-- 规则：\n-- 1) 选择 x<100 中 x 最小的 13755（候选A）\n-- 2) 若候选A的仇恨在“其他坦克”身上（且不是我），改为 z>100 中 z 最大的 13755（候选B）\n-- 3) 释放：挑衅 7533（ActionType=1），忽略编织：第三返回 true\n\nlocal function isTank(entity)\n    if not entity or not entity.job then return false end\n    -- FFXIV 坦克职业：PLD=19, WAR=21, DRK=32, GNB=37\n    return entity.job == 19 or entity.job == 21 or entity.job == 32 or entity.job == 37\nend\n\nlocal function getEntityByID(id)\n    if not id or id == 0 then return nil end\n    -- 兼容两种常见访问方式\n    local ent = (EntityList and EntityList:Get(id)) or (TensorCore and TensorCore.findEntityByID and TensorCore.findEntityByID(id)) or nil\n    return ent\nend\n\n-- 拉取 13755 清单\nlocal list = TensorCore and TensorCore.entityList(\"alive,attackable,contentid=13755\") or {}\nif table.size(list) == 0 then return nil end\n\n-- 候选A：x<100 里的 x 最小\nlocal candA, minX = nil, math.huge\n-- 候选B：z>100 里的 z 最大\nlocal candB, maxZ = nil, -math.huge\n\nfor _, e in pairs(list) do\n    if e and e.pos then\n        local x, z = (e.pos.x or 0), (e.pos.z or 0)\n        if x < 100 and x < minX then\n            minX = x\n            candA = e\n        end\n        if z > 100 and z > maxZ then\n            maxZ = z\n            candB = e\n        end\n    end\nend\n\n-- 两个候选都没有则不动作\nif not candA and not candB then return nil end\n\n-- 如果 A 存在，检查它是否在打其他坦克（且不是我）\nlocal finalTarget = candA or candB\nif candA then\n    local me = Player\n    local tgtOfA = getEntityByID(candA.targetid)\n    local aggroOnOtherTank =\n        (tgtOfA ~= nil) and (me ~= nil) and\n        (tgtOfA.id ~= me.id) and isTank(tgtOfA)\n\n    if aggroOnOtherTank then\n        -- 改用 B（z>100 且 z 最大）\n        finalTarget = candB\n    end\nend\n\nif not finalTarget then return nil end\n\n-- 挑衅 7533（ActionType=1）\nlocal provoke = ActionList and ActionList:Get(1, 7533)\nif not provoke then return nil end\n\n-- 返回：(table)action, (number)targetID, (bool)ignoreWeaveRules, (bool)allowInterrupt\n-- 需要 ignore weave -> 第三个返回 true\nreturn provoke, finalTarget.id, true, true",
+							conditions = 
+							{
+								
+								{
+									"3ce82625-a320-661c-bbba-1c26f97aa90a",
+									true,
+								},
+								
+								{
+									"883bf62e-7590-77a9-b9d9-2dd4f0f8496c",
+									true,
+								},
+								
+								{
+									"69d5fe0f-b7d6-5a9b-bbff-af70bfe311ff",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							luaReturnsAction = true,
+							targetContentID = 13755,
+							targetType = "Current Target",
+							uuid = "6b36f321-6949-3925-b06b-121e3e82c080",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7533,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "3ce82625-a320-661c-bbba-1c26f97aa90a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "883bf62e-7590-77a9-b9d9-2dd4f0f8496c",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 2,
+							contentid = 13755,
+							uuid = "69d5fe0f-b7d6-5a9b-bbff-af70bfe311ff",
+							version = 2,
+						},
+					},
+				},
+				eventType = 12,
+				mechanicTime = 56,
+				name = "[MT] Provoke Best Adds",
+				timeRange = true,
+				timelineIndex = 11,
+				timerEndOffset = 7.5,
+				timerStartOffset = 6.5,
+				uuid = "24ae9476-2b2c-6faf-862b-b0d2fb59462f",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7533,
+							actionLua = "-- === Provoke on 13755 with spatial + aggro rules (ignore weave) ===\n-- 规则：\n-- 1) 选择 x<100 中 x 最小的 13755（候选A）\n-- 2) 若候选A的仇恨在“其他坦克”身上（且不是我），改为 z>100 中 z 最大的 13755（候选B）\n-- 3) 释放：挑衅 7533（ActionType=1），忽略编织：第三返回 true\n\nlocal function isTank(entity)\n    if not entity or not entity.job then return false end\n    -- FFXIV 坦克职业：PLD=19, WAR=21, DRK=32, GNB=37\n    return entity.job == 19 or entity.job == 21 or entity.job == 32 or entity.job == 37\nend\n\nlocal function getEntityByID(id)\n    if not id or id == 0 then return nil end\n    -- 兼容两种常见访问方式\n    local ent = (EntityList and EntityList:Get(id)) or (TensorCore and TensorCore.findEntityByID and TensorCore.findEntityByID(id)) or nil\n    return ent\nend\n\n-- 拉取 13755 清单\nlocal list = TensorCore and TensorCore.entityList(\"alive,attackable,contentid=13755\") or {}\nif table.size(list) == 0 then return nil end\n\n-- 候选A：x<100 里的 x 最小\nlocal candA, minX = nil, math.huge\n-- 候选B：z>100 里的 z 最大\nlocal candB, maxZ = nil, -math.huge\n\nfor _, e in pairs(list) do\n    if e and e.pos then\n        local x, z = (e.pos.x or 0), (e.pos.z or 0)\n        if x < 100 and x < minX then\n            minX = x\n            candA = e\n        end\n        if z > 100 and z > maxZ then\n            maxZ = z\n            candB = e\n        end\n    end\nend\n\n-- 两个候选都没有则不动作\nif not candA and not candB then return nil end\n\n-- 如果 A 存在，检查它是否在打其他坦克（且不是我）\nlocal finalTarget = candA or candB\nif candA then\n    local me = Player\n    local tgtOfA = getEntityByID(candA.targetid)\n    local aggroOnOtherTank =\n        (tgtOfA ~= nil) and (me ~= nil) and\n        (tgtOfA.id ~= me.id) and isTank(tgtOfA)\n\n    if aggroOnOtherTank then\n        -- 改用 B（z>100 且 z 最大）\n        finalTarget = candB\n    end\nend\n\nif not finalTarget then return nil end\n\n-- 挑衅 7533（ActionType=1）\nlocal provoke = ActionList and ActionList:Get(1, 7533)\nif not provoke then return nil end\n\n-- 返回：(table)action, (number)targetID, (bool)ignoreWeaveRules, (bool)allowInterrupt\n-- 需要 ignore weave -> 第三个返回 true\nreturn provoke, finalTarget.id, true, true",
+							conditions = 
+							{
+								
+								{
+									"3ce82625-a320-661c-bbba-1c26f97aa90a",
+									true,
+								},
+								
+								{
+									"94a8c2e7-024d-ce5d-ae5e-117c10793d7b",
+									true,
+								},
+								
+								{
+									"b860732b-c706-7403-af95-240f080f70df",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							luaReturnsAction = true,
+							targetContentID = 13755,
+							targetType = "Current Target",
+							uuid = "28656d4f-eba6-516f-a631-d27ab37f6fd6",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7533,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "3ce82625-a320-661c-bbba-1c26f97aa90a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "94a8c2e7-024d-ce5d-ae5e-117c10793d7b",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 2,
+							contentid = 13755,
+							uuid = "b860732b-c706-7403-af95-240f080f70df",
+							version = 2,
+						},
+					},
+				},
+				eventType = 12,
+				mechanicTime = 56,
+				name = "[ST] Provoke Best Adds",
+				timeRange = true,
+				timelineIndex = 11,
+				timerEndOffset = 7.5,
+				timerStartOffset = 6.5,
+				uuid = "f71a2a14-7142-a992-828d-fd99b0a256ac",
+				version = 2,
+			},
+			inheritedIndex = 2,
 		},
 	},
 	[17] = 
