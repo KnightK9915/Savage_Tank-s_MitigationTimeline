@@ -103,7 +103,7 @@ local tbl =
 				name = "Sheltron/Interven",
 				timeRange = true,
 				timelineIndex = 1,
-				timerStartOffset = -1.5,
+				timerStartOffset = -0.5,
 				uuid = "ba371814-3896-5a5e-b160-00fb6c305446",
 				version = 2,
 			},
