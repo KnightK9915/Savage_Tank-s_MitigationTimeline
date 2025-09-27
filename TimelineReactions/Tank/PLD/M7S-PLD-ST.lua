@@ -3015,59 +3015,6 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 7382,
-							conditions = 
-							{
-								
-								{
-									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
-									true,
-								},
-							},
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Other Tank",
-							uuid = "5ed8c1f4-36d8-ad42-9463-1f8154296465",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 6,
-							gaugeValue = 50,
-							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
-							version = 2,
-						},
-					},
-				},
-				loop = true,
-				mechanicTime = 494.4,
-				name = "interven ST (15)",
-				timeRange = true,
-				timelineIndex = 94,
-				timerEndOffset = 18.299999237061,
-				timerStartOffset = -1,
-				uuid = "ecefaa49-2010-33d5-a9ad-5131f7db1026",
-				version = 2,
-			},
-			inheritedIndex = 7,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
 							actionID = 22,
 							conditions = 
 							{
@@ -3184,6 +3131,59 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5ed8c1f4-36d8-ad42-9463-1f8154296465",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+							version = 2,
+						},
+					},
+				},
+				loop = true,
+				mechanicTime = 494.4,
+				name = "interven ST (15)",
+				timeRange = true,
+				timelineIndex = 94,
+				timerEndOffset = 18.299999237061,
+				timerStartOffset = -1,
+				uuid = "ecefaa49-2010-33d5-a9ad-5131f7db1026",
+				version = 2,
+			},
+			inheritedIndex = 7,
 		},
 	},
 	[108] = 

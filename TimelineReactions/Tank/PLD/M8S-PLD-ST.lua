@@ -12,21 +12,55 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 7382,
+							actionID = 25746,
+							atomicPriority = true,
 							conditions = 
 							{
 								
 								{
-									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									"a0c32fff-2645-ca70-a05a-0325df47bc64",
+									true,
+								},
+								
+								{
+									"f449c362-8e76-346b-a1c5-61af4d71ae15",
 									true,
 								},
 							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "ca8e3c49-672f-7f30-b556-8666222d88cf",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"a0c32fff-2645-ca70-a05a-0325df47bc64",
+									true,
+								},
+								
+								{
+									"a1ba213c-6cdd-6cf9-92de-67b3b5a179fe",
+									true,
+								},
+							},
+							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
 							targetType = "Other Tank",
-							uuid = "5ed8c1f4-36d8-ad42-9463-1f8154296465",
+							uuid = "92b93e01-95bb-71d5-9121-52773c65724a",
 							version = 2.1,
 						},
+						inheritedIndex = 1,
 					},
 				},
 				conditions = 
@@ -38,17 +72,39 @@ local tbl =
 							category = "Self",
 							conditionType = 6,
 							gaugeValue = 50,
-							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+							uuid = "a0c32fff-2645-ca70-a05a-0325df47bc64",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 100,
+							uuid = "f449c362-8e76-346b-a1c5-61af4d71ae15",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99.999000549316,
+							uuid = "a1ba213c-6cdd-6cf9-92de-67b3b5a179fe",
 							version = 2,
 						},
 					},
 				},
 				mechanicTime = 11.2,
-				name = "interven ST (15)",
+				name = "Sheltron/Interven",
 				timeRange = true,
 				timelineIndex = 1,
-				timerStartOffset = -1.2000000476837,
-				uuid = "d6e7d1a6-e3f2-dfe6-aa7b-b02ab6fa99bb",
+				timerStartOffset = -0.5,
+				uuid = "969ae419-a820-dd8b-92b2-a1baccb8b85b",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -848,40 +904,6 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 1,
-		},
-	},
-	[24] = 
-	{
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7385,
-							atomicPriority = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "0b54fc5a-fdd3-64bd-b1d3-6f69baba4032",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 110.9,
-				name = "PoA",
-				timeRange = true,
-				timelineIndex = 24,
-				timerStartOffset = -1.2000000476837,
-				uuid = "720eb510-c179-7acc-9f44-c2d7e2d1faac",
-				version = 2,
-			},
 		},
 	},
 	[25] = 
@@ -1962,40 +1984,6 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 5,
-		},
-	},
-	[50] = 
-	{
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7385,
-							atomicPriority = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "0b54fc5a-fdd3-64bd-b1d3-6f69baba4032",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 316.6,
-				name = "PoA",
-				timeRange = true,
-				timelineIndex = 50,
-				timerStartOffset = -1.2000000476837,
-				uuid = "da122bca-e71c-5980-ab92-d4b781179d19",
-				version = 2,
-			},
 		},
 	},
 	[62] = 
