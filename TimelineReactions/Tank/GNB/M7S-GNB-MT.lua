@@ -678,7 +678,7 @@ local tbl =
 				uuid = "a9bb9fda-be1d-0870-9ff8-bca5c799e27f",
 				version = 2,
 			},
-			inheritedIndex = 6,
+			inheritedIndex = 1,
 		},
 	},
 	[17] = 
@@ -847,11 +847,6 @@ local tbl =
 									"1465472a-0137-2f48-b9fc-aa7b9991077a",
 									true,
 								},
-								
-								{
-									"8f08a063-2187-aa1f-bb63-0ee7134df534",
-									true,
-								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -872,16 +867,6 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return data.string_SelectionDR[\"正攻法\"].bool\n",
-							uuid = "8f08a063-2187-aa1f-bb63-0ee7134df534",
 							version = 2,
 						},
 					},
@@ -1708,6 +1693,11 @@ local tbl =
 									"b445afdb-5c04-2e5e-9c9f-ab41daded937",
 									true,
 								},
+								
+								{
+									"0cc492a2-2d8e-61cb-adcb-541379cf22fd",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_Tankbar_AuroraOT",
@@ -1746,6 +1736,25 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 4,
+							buffIDList = 
+							{
+								4499,
+								4500,
+								4501,
+								4502,
+							},
+							category = "Party",
+							matchAnyBuff = true,
+							partyTargetType = "Main Tank",
+							uuid = "0cc492a2-2d8e-61cb-adcb-541379cf22fd",
+							version = 2,
+						},
+					},
 				},
 				loop = true,
 				mechanicTime = 163.3,
@@ -1753,10 +1762,10 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 36,
 				timerEndOffset = 188,
-				uuid = "814ea636-c454-0f85-81c7-58058d56eaf1",
+				uuid = "2215df91-4eba-0564-9e11-1f4fac0f5e82",
 				version = 2,
 			},
-			inheritedIndex = 6,
+			inheritedIndex = 1,
 		},
 		
 		{
@@ -1779,6 +1788,11 @@ local tbl =
 								
 								{
 									"3efa0a46-918d-e3b0-9709-67337f3b9b0a",
+									true,
+								},
+								
+								{
+									"0258cd48-98c1-3335-b3d6-2c163a21858f",
 									true,
 								},
 							},
@@ -1819,6 +1833,25 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 4,
+							buffIDList = 
+							{
+								4499,
+								4500,
+								4501,
+								4502,
+							},
+							category = "Party",
+							matchAnyBuff = true,
+							partyTargetType = "Main Tank",
+							uuid = "0258cd48-98c1-3335-b3d6-2c163a21858f",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 163.3,
 				name = "HoC (15)",
@@ -1829,7 +1862,7 @@ local tbl =
 				uuid = "ba622a14-0d31-cb05-ba85-1c13cf0d9dbc",
 				version = 2,
 			},
-			inheritedIndex = 2,
+			inheritedIndex = 3,
 		},
 	},
 	[44] = 
@@ -3668,6 +3701,59 @@ local tbl =
 					{
 						data = 
 						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 494.4,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 94,
+				timerEndOffset = 5,
+				timerOffset = -15,
+				uuid = "6f762874-129d-41a0-9cd7-06ffb207d435",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 16151,
 							atomicPriority = true,
 							conditions = 
@@ -3732,59 +3818,6 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 6,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7531,
-							conditions = 
-							{
-								
-								{
-									"1465472a-0137-2f48-b9fc-aa7b9991077a",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7531,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 494.4,
-				name = "Rampart (20)",
-				timeRange = true,
-				timelineIndex = 94,
-				timerEndOffset = 5,
-				timerOffset = -15,
-				uuid = "6f762874-129d-41a0-9cd7-06ffb207d435",
-				version = 2,
-			},
-			inheritedIndex = 5,
 		},
 	},
 	[108] = 
