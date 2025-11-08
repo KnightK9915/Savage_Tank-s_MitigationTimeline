@@ -493,7 +493,6 @@ local tbl =
 					{
 						data = 
 						{
-							aType = "ACR",
 							actionID = 16151,
 							conditions = 
 							{
@@ -781,7 +780,6 @@ local tbl =
 					{
 						data = 
 						{
-							aType = "ACR",
 							actionID = 16151,
 							conditions = 
 							{
@@ -804,7 +802,7 @@ local tbl =
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_Tankbar_AuroraOT",
 							ignoreWeaveRules = true,
-							targetType = "Main Tank",
+							targetType = "Other Tank",
 							uuid = "6416a938-cb0c-be7b-bba2-31cd8d471cd4",
 							variableTogglesType = 3,
 							version = 2.1,
@@ -860,6 +858,25 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 10,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				enabled = false,
+				mechanicTime = 24.2,
+				name = "---------------",
+				timelineIndex = 7,
+				uuid = "3a1af7cc-4cf0-98d7-b746-0a5eb32b3c13",
+				version = 2,
+			},
+			inheritedIndex = 11,
 		},
 		
 		{
@@ -948,7 +965,7 @@ local tbl =
 				uuid = "0e9e269c-6560-8a65-b999-1a7e9ba0ddc4",
 				version = 2,
 			},
-			inheritedIndex = 11,
+			inheritedIndex = 12,
 		},
 		
 		{
@@ -1036,7 +1053,7 @@ local tbl =
 				uuid = "8af27d79-2760-fada-9fc7-f2b04d1fc15f",
 				version = 2,
 			},
-			inheritedIndex = 12,
+			inheritedIndex = 13,
 		},
 	},
 	[11] = 
@@ -2169,7 +2186,6 @@ local tbl =
 					{
 						data = 
 						{
-							aType = "ACR",
 							actionID = 16151,
 							conditions = 
 							{
@@ -2472,7 +2488,6 @@ local tbl =
 					{
 						data = 
 						{
-							aType = "ACR",
 							actionID = 16151,
 							conditions = 
 							{
@@ -2495,7 +2510,7 @@ local tbl =
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_Tankbar_AuroraOT",
 							ignoreWeaveRules = true,
-							targetType = "Main Tank",
+							targetType = "Other Tank",
 							uuid = "6416a938-cb0c-be7b-bba2-31cd8d471cd4",
 							variableTogglesType = 3,
 							version = 2.1,
@@ -2757,6 +2772,59 @@ local tbl =
 			{
 				actions = 
 				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 145.6,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 35,
+				timerOffset = -15,
+				timerStartOffset = -10,
+				uuid = "0b64d3c2-f01f-403e-885c-2748e7f11abb",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
 				},
 				conditions = 
 				{
@@ -2768,7 +2836,184 @@ local tbl =
 				uuid = "e1befa41-17a8-bf90-b7db-378718518ae8",
 				version = 2,
 			},
-			inheritedIndex = 1,
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16140,
+							conditions = 
+							{
+								
+								{
+									"8feef8e5-e187-7eae-a3fd-67686a7ced49",
+									true,
+								},
+								
+								{
+									"b0a6c0ff-c966-c1fe-bedc-2d9d7afd0ff6",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "8e2ebaff-1382-38db-a880-5b374c35c9fd",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return MuAiGuide.Config.FruMitigation.Tank.P1_Death2 == 2 or MuAiGuide.Config.FruMitigation.Tank.P1_Death2 == 3 or MuAiGuide.Config.FruMitigation.Tank.P1_Death2 == 4",
+							name = "p1-2非全减",
+							uuid = "8feef8e5-e187-7eae-a3fd-67686a7ced49",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16140,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "b0a6c0ff-c966-c1fe-bedc-2d9d7afd0ff6",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 145.6,
+				name = "Camou (10)",
+				timeRange = true,
+				timelineIndex = 35,
+				timerOffset = -10,
+				timerStartOffset = -10,
+				uuid = "323bf37c-9d2b-3a33-b3a1-36176f6dce46",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36935,
+							conditions = 
+							{
+								
+								{
+									"5955fb08-a58d-2b8e-9ed4-9db40b5d13fd",
+									true,
+								},
+								
+								{
+									"30f02147-8e47-399f-99c5-279582aa248d",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "d00db0ec-8fe2-c41e-8ee5-1c53101aa3bb",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return MuAiGuide.Config.FruMitigation.Tank.P1_Death2 == 2 or MuAiGuide.Config.FruMitigation.Tank.P1_Death2 == 3 or MuAiGuide.Config.FruMitigation.Tank.P1_Death2 == 4",
+							name = "p1-2非全减",
+							uuid = "5955fb08-a58d-2b8e-9ed4-9db40b5d13fd",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36935,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "30f02147-8e47-399f-99c5-279582aa248d",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 145.6,
+				name = "Great Nebula (40)",
+				timeRange = true,
+				timelineIndex = 35,
+				timerStartOffset = -5,
+				uuid = "0f987a10-6109-e0de-be4e-b4c75d495302",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				enabled = false,
+				mechanicTime = 145.6,
+				name = "---------------",
+				timelineIndex = 35,
+				uuid = "4b49dcbd-2d49-0b9a-aad9-32fa24e85c1d",
+				version = 2,
+			},
+			inheritedIndex = 11,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				enabled = false,
+				mechanicTime = 145.6,
+				name = "--自己无敌吃--",
+				timelineIndex = 35,
+				uuid = "64d499e3-b94c-5b6d-8b4f-96af6df3af50",
+				version = 2,
+			},
+			inheritedIndex = 12,
 		},
 		
 		{
@@ -2839,7 +3084,7 @@ local tbl =
 				uuid = "1a811d19-31ce-fca1-b9a9-cb550e7832dd",
 				version = 2,
 			},
-			inheritedIndex = 2,
+			inheritedIndex = 7,
 		},
 		
 		{
@@ -2855,221 +3100,10 @@ local tbl =
 				mechanicTime = 145.6,
 				name = "---------------",
 				timelineIndex = 35,
-				uuid = "4b49dcbd-2d49-0b9a-aad9-32fa24e85c1d",
+				uuid = "3d24ee81-9886-4374-8726-f1da4a9d7fc0",
 				version = 2,
 			},
-			inheritedIndex = 11,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7531,
-							conditions = 
-							{
-								
-								{
-									"1465472a-0137-2f48-b9fc-aa7b9991077a",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7531,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 145.6,
-				name = "Rampart (20)",
-				timeRange = true,
-				timelineIndex = 35,
-				timerOffset = -15,
-				timerStartOffset = -10,
-				uuid = "0b64d3c2-f01f-403e-885c-2748e7f11abb",
-				version = 2,
-			},
-			inheritedIndex = 4,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16140,
-							conditions = 
-							{
-								
-								{
-									"8feef8e5-e187-7eae-a3fd-67686a7ced49",
-									true,
-								},
-								
-								{
-									"b0a6c0ff-c966-c1fe-bedc-2d9d7afd0ff6",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							uuid = "8e2ebaff-1382-38db-a880-5b374c35c9fd",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return MuAiGuide.Config.FruMitigation.Tank.P1_Death2 == 2 or MuAiGuide.Config.FruMitigation.Tank.P1_Death2 == 3 or MuAiGuide.Config.FruMitigation.Tank.P1_Death2 == 4",
-							name = "p1-2非全减",
-							uuid = "8feef8e5-e187-7eae-a3fd-67686a7ced49",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							actionID = 16140,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "b0a6c0ff-c966-c1fe-bedc-2d9d7afd0ff6",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 145.6,
-				name = "Camou (10)",
-				timeRange = true,
-				timelineIndex = 35,
-				timerOffset = -10,
-				timerStartOffset = -10,
-				uuid = "323bf37c-9d2b-3a33-b3a1-36176f6dce46",
-				version = 2,
-			},
-			inheritedIndex = 5,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-				},
-				conditions = 
-				{
-				},
-				enabled = false,
-				mechanicTime = 145.6,
-				name = "--自己无敌吃--",
-				timelineIndex = 35,
-				uuid = "64d499e3-b94c-5b6d-8b4f-96af6df3af50",
-				version = 2,
-			},
-			inheritedIndex = 12,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 36935,
-							conditions = 
-							{
-								
-								{
-									"5955fb08-a58d-2b8e-9ed4-9db40b5d13fd",
-									true,
-								},
-								
-								{
-									"30f02147-8e47-399f-99c5-279582aa248d",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							uuid = "d00db0ec-8fe2-c41e-8ee5-1c53101aa3bb",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return MuAiGuide.Config.FruMitigation.Tank.P1_Death2 == 2 or MuAiGuide.Config.FruMitigation.Tank.P1_Death2 == 3 or MuAiGuide.Config.FruMitigation.Tank.P1_Death2 == 4",
-							name = "p1-2非全减",
-							uuid = "5955fb08-a58d-2b8e-9ed4-9db40b5d13fd",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							actionID = 36935,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "30f02147-8e47-399f-99c5-279582aa248d",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 145.6,
-				name = "Great Nebula (40)",
-				timeRange = true,
-				timelineIndex = 35,
-				timerStartOffset = -5,
-				uuid = "0f987a10-6109-e0de-be4e-b4c75d495302",
-				version = 2,
-			},
-			inheritedIndex = 7,
+			inheritedIndex = 17,
 		},
 		
 		{
@@ -3142,7 +3176,7 @@ local tbl =
 				uuid = "8e47607c-9363-643a-9eba-224131877809",
 				version = 2,
 			},
-			inheritedIndex = 8,
+			inheritedIndex = 9,
 		},
 		
 		{
@@ -3154,7 +3188,6 @@ local tbl =
 					{
 						data = 
 						{
-							aType = "ACR",
 							actionID = 16151,
 							conditions = 
 							{
@@ -3177,7 +3210,7 @@ local tbl =
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_Tankbar_AuroraOT",
 							ignoreWeaveRules = true,
-							targetType = "Main Tank",
+							targetType = "Other Tank",
 							uuid = "6416a938-cb0c-be7b-bba2-31cd8d471cd4",
 							variableTogglesType = 3,
 							version = 2.1,
@@ -3206,7 +3239,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 2,
 							hpValue = 70,
-							partyTargetType = "Main Tank",
+							partyTargetType = "Other Tank",
 							uuid = "7ea95bcb-8a32-aac2-883a-7834a0254830",
 							version = 2,
 						},
@@ -3232,26 +3265,7 @@ local tbl =
 				uuid = "d5ddc156-8124-28d2-9289-84cad7797d46",
 				version = 2,
 			},
-			inheritedIndex = 9,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-				},
-				conditions = 
-				{
-				},
-				enabled = false,
-				mechanicTime = 145.6,
-				name = "---------------",
-				timelineIndex = 35,
-				uuid = "3d24ee81-9886-4374-8726-f1da4a9d7fc0",
-				version = 2,
-			},
-			inheritedIndex = 17,
+			inheritedIndex = 10,
 		},
 	},
 	[39] = 
@@ -5843,7 +5857,6 @@ local tbl =
 					{
 						data = 
 						{
-							aType = "ACR",
 							actionID = 16151,
 							conditions = 
 							{
@@ -6128,7 +6141,6 @@ local tbl =
 					{
 						data = 
 						{
-							aType = "ACR",
 							actionID = 16151,
 							conditions = 
 							{
@@ -6151,7 +6163,7 @@ local tbl =
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_Tankbar_AuroraOT",
 							ignoreWeaveRules = true,
-							targetType = "Main Tank",
+							targetType = "Other Tank",
 							uuid = "6416a938-cb0c-be7b-bba2-31cd8d471cd4",
 							variableTogglesType = 3,
 							version = 2.1,
@@ -6622,7 +6634,6 @@ local tbl =
 					{
 						data = 
 						{
-							aType = "ACR",
 							actionID = 16151,
 							conditions = 
 							{
@@ -6907,7 +6918,6 @@ local tbl =
 					{
 						data = 
 						{
-							aType = "ACR",
 							actionID = 16151,
 							conditions = 
 							{
@@ -6930,7 +6940,7 @@ local tbl =
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_Tankbar_AuroraOT",
 							ignoreWeaveRules = true,
-							targetType = "Main Tank",
+							targetType = "Other Tank",
 							uuid = "6416a938-cb0c-be7b-bba2-31cd8d471cd4",
 							variableTogglesType = 3,
 							version = 2.1,
@@ -7563,7 +7573,6 @@ local tbl =
 					{
 						data = 
 						{
-							aType = "ACR",
 							actionID = 16151,
 							conditions = 
 							{
@@ -8744,7 +8753,6 @@ local tbl =
 					{
 						data = 
 						{
-							aType = "ACR",
 							actionID = 16151,
 							conditions = 
 							{
@@ -10149,7 +10157,6 @@ local tbl =
 					{
 						data = 
 						{
-							aType = "ACR",
 							actionID = 16151,
 							conditions = 
 							{
@@ -11213,7 +11220,6 @@ local tbl =
 					{
 						data = 
 						{
-							aType = "ACR",
 							actionID = 16151,
 							conditions = 
 							{
