@@ -244,8 +244,8 @@ local tbl =
 				name = "[ST] Stance ON",
 				timeRange = true,
 				timelineIndex = 3,
+				timerEndOffset = 5,
 				timerOffset = -15,
-				timerStartOffset = -10,
 				uuid = "edc4ac68-65ad-3dfe-b7bd-eb12d96be728",
 				version = 2,
 			},
@@ -1089,11 +1089,117 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 11,
 				timerOffset = -1,
-				timerStartOffset = -2,
+				timerStartOffset = -4,
 				uuid = "0bb4937d-2f1c-0b3c-bbd5-e38fe5524da3",
 				version = 2,
 			},
 			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 40.3,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 11,
+				timerOffset = -15,
+				timerStartOffset = -15,
+				uuid = "fa4edc33-e55f-8390-8a47-1ee4068c86d6",
+				version = 2,
+			},
+			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16140,
+							conditions = 
+							{
+								
+								{
+									"b0a6c0ff-c966-c1fe-bedc-2d9d7afd0ff6",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "8e2ebaff-1382-38db-a880-5b374c35c9fd",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16140,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "b0a6c0ff-c966-c1fe-bedc-2d9d7afd0ff6",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 40.3,
+				name = "Camou (10)",
+				timeRange = true,
+				timelineIndex = 11,
+				timerOffset = -10,
+				timerStartOffset = -10,
+				uuid = "148cf3a1-09e8-034f-9650-8f312e358063",
+				version = 2,
+			},
+			inheritedIndex = 7,
 		},
 		
 		{
@@ -1336,119 +1442,13 @@ local tbl =
 				name = "[ST] Stance OFF",
 				timeRange = true,
 				timelineIndex = 11,
-				timerEndOffset = 22,
+				timerEndOffset = 5,
 				timerOffset = -15,
-				timerStartOffset = 1,
+				timerStartOffset = -5,
 				uuid = "b351ce1f-4daf-0ed9-9784-a5513437be8d",
 				version = 2,
 			},
-			inheritedIndex = 2,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7531,
-							conditions = 
-							{
-								
-								{
-									"1465472a-0137-2f48-b9fc-aa7b9991077a",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7531,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 40.3,
-				name = "Rampart (20)",
-				timeRange = true,
-				timelineIndex = 11,
-				timerOffset = -15,
-				timerStartOffset = -10,
-				uuid = "fa4edc33-e55f-8390-8a47-1ee4068c86d6",
-				version = 2,
-			},
-			inheritedIndex = 6,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16140,
-							conditions = 
-							{
-								
-								{
-									"b0a6c0ff-c966-c1fe-bedc-2d9d7afd0ff6",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							uuid = "8e2ebaff-1382-38db-a880-5b374c35c9fd",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16140,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "b0a6c0ff-c966-c1fe-bedc-2d9d7afd0ff6",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 40.3,
-				name = "Camou (10)",
-				timeRange = true,
-				timelineIndex = 11,
-				timerOffset = -10,
-				timerStartOffset = -10,
-				uuid = "148cf3a1-09e8-034f-9650-8f312e358063",
-				version = 2,
-			},
-			inheritedIndex = 7,
+			inheritedIndex = 4,
 		},
 	},
 	[21] = 
@@ -1785,8 +1785,8 @@ local tbl =
 				name = "[ST] Stance ON",
 				timeRange = true,
 				timelineIndex = 28,
+				timerEndOffset = 5,
 				timerOffset = -15,
-				timerStartOffset = -10,
 				uuid = "d42bf55f-91d3-058b-a1c0-8320765fe39b",
 				version = 2,
 			},
@@ -2558,87 +2558,18 @@ local tbl =
 			{
 				actions = 
 				{
-					
-					{
-						data = 
-						{
-							actionID = 7537,
-							conditions = 
-							{
-								
-								{
-									"3010f231-beb1-897b-860c-f7872b17f2b4",
-									true,
-								},
-								
-								{
-									"39cf2d0f-d0fd-8ae9-a20d-6d11918583c1",
-									true,
-								},
-								
-								{
-									"b55ddca7-6b1f-e082-acc5-6328ff078dd3",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_Hotbar_ShirkOT",
-							ignoreWeaveRules = true,
-							targetType = "Other Tank",
-							uuid = "d8f3dd65-5086-2554-9f1c-928a7e116523",
-							variableTogglesType = 2,
-							version = 2.1,
-						},
-					},
 				},
 				conditions = 
 				{
-					
-					{
-						data = 
-						{
-							comparator = 2,
-							conditionType = 4,
-							enmityValue = 99,
-							uuid = "3010f231-beb1-897b-860c-f7872b17f2b4",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionCDValue = 1,
-							actionID = 7533,
-							category = "Party",
-							conditionType = 9,
-							partyTargetType = "Other Tank",
-							uuid = "39cf2d0f-d0fd-8ae9-a20d-6d11918583c1",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return MuAiGuide.Config.FruMitigation.Tank.P1_Death2 == 1 or MuAiGuide.Config.FruMitigation.Tank.P1_Death2 == 2",
-							name = "p1-2全减/无敌",
-							uuid = "b55ddca7-6b1f-e082-acc5-6328ff078dd3",
-							version = 2,
-						},
-					},
 				},
+				enabled = false,
 				mechanicTime = 129.5,
-				name = "Shirk OT",
-				timeRange = true,
+				name = "---------------",
 				timelineIndex = 30,
-				timerEndOffset = 5,
-				timerStartOffset = -1,
-				uuid = "5c6ffa43-117e-9775-949d-5987b8732e82",
+				uuid = "af57b2ae-1a59-a7ad-ab6d-900a34f76015",
 				version = 2,
 			},
-			inheritedIndex = 13,
+			inheritedIndex = 11,
 		},
 		
 		{
@@ -2728,6 +2659,94 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 12,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7537,
+							conditions = 
+							{
+								
+								{
+									"3010f231-beb1-897b-860c-f7872b17f2b4",
+									true,
+								},
+								
+								{
+									"39cf2d0f-d0fd-8ae9-a20d-6d11918583c1",
+									true,
+								},
+								
+								{
+									"b55ddca7-6b1f-e082-acc5-6328ff078dd3",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_Hotbar_ShirkOT",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "d8f3dd65-5086-2554-9f1c-928a7e116523",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99,
+							uuid = "3010f231-beb1-897b-860c-f7872b17f2b4",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionCDValue = 1,
+							actionID = 7533,
+							category = "Party",
+							conditionType = 9,
+							partyTargetType = "Other Tank",
+							uuid = "39cf2d0f-d0fd-8ae9-a20d-6d11918583c1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return MuAiGuide.Config.FruMitigation.Tank.P1_Death2 == 1 or MuAiGuide.Config.FruMitigation.Tank.P1_Death2 == 2",
+							name = "p1-2全减/无敌",
+							uuid = "b55ddca7-6b1f-e082-acc5-6328ff078dd3",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 129.5,
+				name = "Shirk OT",
+				timeRange = true,
+				timelineIndex = 30,
+				timerEndOffset = 5,
+				timerStartOffset = -1,
+				uuid = "5c6ffa43-117e-9775-949d-5987b8732e82",
+				version = 2,
+			},
+			inheritedIndex = 14,
 		},
 	},
 	[35] = 
@@ -3956,7 +3975,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 40,
 				timerOffset = -15,
-				timerStartOffset = -10,
+				timerStartOffset = -5,
 				uuid = "21b38665-c51f-80e8-afa7-6f83a3b79a70",
 				version = 2,
 			},
@@ -4316,8 +4335,8 @@ local tbl =
 				name = "[MT] Stance ON",
 				timeRange = true,
 				timelineIndex = 49,
+				timerEndOffset = 5,
 				timerOffset = -15,
-				timerStartOffset = -10,
 				uuid = "42f045b6-e3f3-bd78-a271-5b65fb126f50",
 				version = 2,
 			},
@@ -4564,9 +4583,9 @@ local tbl =
 				name = "[ST] Stance OFF",
 				timeRange = true,
 				timelineIndex = 49,
-				timerEndOffset = 22,
+				timerEndOffset = 5,
 				timerOffset = -15,
-				timerStartOffset = 1,
+				timerStartOffset = -5,
 				uuid = "6c07df90-0e76-f00c-8fa9-727a3015c2ee",
 				version = 2,
 			},
@@ -5509,8 +5528,8 @@ local tbl =
 				name = "Stance ON",
 				timeRange = true,
 				timelineIndex = 130,
+				timerEndOffset = 5,
 				timerOffset = -15,
-				timerStartOffset = -5,
 				uuid = "722adb88-c3ff-ebda-80e5-d0e0576f4e15",
 				version = 2,
 			},
