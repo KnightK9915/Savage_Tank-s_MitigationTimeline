@@ -350,25 +350,6 @@ local tbl =
 			{
 				actions = 
 				{
-				},
-				conditions = 
-				{
-				},
-				enabled = false,
-				mechanicTime = 24.2,
-				name = "--搭档减伤吃--",
-				timelineIndex = 7,
-				uuid = "6d17dc1a-b3e7-5858-b67b-2a708d2d6030",
-				version = 2,
-			},
-			inheritedIndex = 23,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
 					
 					{
 						data = 
@@ -427,11 +408,11 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 7,
 				timerOffset = -10,
-				timerStartOffset = -10,
+				timerStartOffset = -8,
 				uuid = "f585a176-fed9-b5ef-af63-15c94d98075c",
 				version = 2,
 			},
-			inheritedIndex = 4,
+			inheritedIndex = 3,
 		},
 		
 		{
@@ -443,110 +424,24 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 7537,
+							actionID = 36935,
 							conditions = 
 							{
 								
 								{
-									"3010f231-beb1-897b-860c-f7872b17f2b4",
+									"4b0cef46-20a5-598c-aaba-51ad7f4dc558",
 									true,
 								},
 								
 								{
-									"39cf2d0f-d0fd-8ae9-a20d-6d11918583c1",
-									true,
-								},
-								
-								{
-									"353cf463-39a5-8deb-a1f1-37b3c9bf0546",
+									"30f02147-8e47-399f-99c5-279582aa248d",
 									true,
 								},
 							},
 							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_Hotbar_ShirkOT",
+							gVar = "ACR_RikuGNB3_CD",
 							ignoreWeaveRules = true,
-							targetType = "Other Tank",
-							uuid = "d8f3dd65-5086-2554-9f1c-928a7e116523",
-							variableTogglesType = 2,
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							comparator = 2,
-							conditionType = 4,
-							enmityValue = 99,
-							uuid = "3010f231-beb1-897b-860c-f7872b17f2b4",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionCDValue = 1,
-							actionID = 7533,
-							category = "Party",
-							conditionType = 9,
-							partyTargetType = "Other Tank",
-							uuid = "39cf2d0f-d0fd-8ae9-a20d-6d11918583c1",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return MuAiGuide.Config.FruMitigation.Tank.P1_Death1 == 1 or MuAiGuide.Config.FruMitigation.Tank.P1_Death1 == 2",
-							name = "p1自己吃",
-							uuid = "353cf463-39a5-8deb-a1f1-37b3c9bf0546",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 24.2,
-				name = "Shirk OT",
-				timeRange = true,
-				timelineIndex = 7,
-				timerStartOffset = -60,
-				uuid = "8af27d79-2760-fada-9fc7-f2b04d1fc15f",
-				version = 2,
-			},
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7531,
-							conditions = 
-							{
-								
-								{
-									"c2f1970c-561e-2e40-822a-feee283efcfb",
-									true,
-								},
-								
-								{
-									"1465472a-0137-2f48-b9fc-aa7b9991077a",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							uuid = "d00db0ec-8fe2-c41e-8ee5-1c53101aa3bb",
 							version = 2.1,
 						},
 					},
@@ -560,7 +455,7 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return MuAiGuide.Config.FruMitigation.Tank.P1_Death1 == 1",
 							name = "p1-1全减",
-							uuid = "c2f1970c-561e-2e40-822a-feee283efcfb",
+							uuid = "4b0cef46-20a5-598c-aaba-51ad7f4dc558",
 							version = 2,
 						},
 						inheritedIndex = 1,
@@ -569,25 +464,24 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 7531,
+							actionID = 36935,
 							category = "Self",
 							comparator = 2,
 							conditionType = 4,
-							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							uuid = "30f02147-8e47-399f-99c5-279582aa248d",
 							version = 2,
 						},
 					},
 				},
 				mechanicTime = 24.2,
-				name = "Rampart (20)",
+				name = "Great Nebula (40)",
 				timeRange = true,
 				timelineIndex = 7,
-				timerOffset = -15,
 				timerStartOffset = -10,
-				uuid = "fda2ff07-6613-5008-b830-e97130730e37",
+				uuid = "8e359e78-5b1f-0a37-9d39-21af5933e2d0",
 				version = 2,
 			},
-			inheritedIndex = 6,
+			inheritedIndex = 4,
 		},
 		
 		{
@@ -675,7 +569,7 @@ local tbl =
 				uuid = "c36abee0-9e99-6899-8574-c5313ac0ecf1",
 				version = 2,
 			},
-			inheritedIndex = 7,
+			inheritedIndex = 5,
 		},
 		
 		{
@@ -694,149 +588,7 @@ local tbl =
 				uuid = "51f422a3-c791-c04c-8292-122c6d7fddfa",
 				version = 2,
 			},
-			inheritedIndex = 8,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 36935,
-							conditions = 
-							{
-								
-								{
-									"4b0cef46-20a5-598c-aaba-51ad7f4dc558",
-									true,
-								},
-								
-								{
-									"30f02147-8e47-399f-99c5-279582aa248d",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							uuid = "d00db0ec-8fe2-c41e-8ee5-1c53101aa3bb",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return MuAiGuide.Config.FruMitigation.Tank.P1_Death1 == 1",
-							name = "p1-1全减",
-							uuid = "4b0cef46-20a5-598c-aaba-51ad7f4dc558",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							actionID = 36935,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "30f02147-8e47-399f-99c5-279582aa248d",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 24.2,
-				name = "Great Nebula (40)",
-				timeRange = true,
-				timelineIndex = 7,
-				timerStartOffset = -5,
-				uuid = "8e359e78-5b1f-0a37-9d39-21af5933e2d0",
-				version = 2,
-			},
-			inheritedIndex = 9,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 25758,
-							conditions = 
-							{
-								
-								{
-									"bee1d438-2054-b0ae-b904-b633ae3b79a4",
-									true,
-								},
-								
-								{
-									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Other Tank",
-							uuid = "94511374-01bd-2218-adca-8213e488a837",
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return MuAiGuide.Config.FruMitigation.Tank.P1_Death1 == 3",
-							name = "搭档减伤吃",
-							uuid = "bee1d438-2054-b0ae-b904-b633ae3b79a4",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							actionID = 25758,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							dequeueIfLuaFalse = true,
-							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 24.2,
-				name = "HoC (15) ST",
-				timeRange = true,
-				timelineIndex = 7,
-				timerOffset = -1,
-				timerStartOffset = -2,
-				uuid = "93641bc6-bb25-a611-8835-8f51b8cc8e6d",
-				version = 2,
-			},
-			inheritedIndex = 10,
+			inheritedIndex = 6,
 		},
 		
 		{
@@ -921,11 +673,103 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 7,
 				timerOffset = -1,
-				timerStartOffset = -1.5,
+				timerStartOffset = -4.5,
 				uuid = "2306fb76-e6dd-41b0-8475-14aafecc652e",
 				version = 2,
 			},
-			inheritedIndex = 11,
+			inheritedIndex = 7,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				enabled = false,
+				mechanicTime = 24.2,
+				name = "--搭档减伤吃--",
+				timelineIndex = 7,
+				uuid = "6d17dc1a-b3e7-5858-b67b-2a708d2d6030",
+				version = 2,
+			},
+			inheritedIndex = 8,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"bee1d438-2054-b0ae-b904-b633ae3b79a4",
+									true,
+								},
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return MuAiGuide.Config.FruMitigation.Tank.P1_Death1 == 3",
+							name = "搭档减伤吃",
+							uuid = "bee1d438-2054-b0ae-b904-b633ae3b79a4",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 24.2,
+				name = "HoC (15) ST",
+				timeRange = true,
+				timelineIndex = 7,
+				timerOffset = -1,
+				timerStartOffset = -2,
+				uuid = "93641bc6-bb25-a611-8835-8f51b8cc8e6d",
+				version = 2,
+			},
+			inheritedIndex = 9,
 		},
 		
 		{
@@ -1015,7 +859,7 @@ local tbl =
 				uuid = "190630a7-50ac-fc1d-b6f3-c6cbc726ddd7",
 				version = 2,
 			},
-			inheritedIndex = 12,
+			inheritedIndex = 10,
 		},
 		
 		{
@@ -1049,8 +893,8 @@ local tbl =
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_Hotbar_Provoke",
 							ignoreWeaveRules = true,
-							targetContentID = 9832,
-							targetType = "Current Target",
+							targetContentID = 9707,
+							targetType = "ContentID",
 							uuid = "77571afd-a4b6-f355-8dc2-f3644c51131c",
 							variableTogglesType = 2,
 							version = 2.1,
@@ -1098,12 +942,101 @@ local tbl =
 				name = "Provoke",
 				timeRange = true,
 				timelineIndex = 7,
-				timerEndOffset = 20,
+				timerEndOffset = 5,
 				timerOffset = -3,
+				timerStartOffset = -4,
 				uuid = "0e9e269c-6560-8a65-b999-1a7e9ba0ddc4",
 				version = 2,
 			},
-			inheritedIndex = 13,
+			inheritedIndex = 11,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7537,
+							conditions = 
+							{
+								
+								{
+									"3010f231-beb1-897b-860c-f7872b17f2b4",
+									true,
+								},
+								
+								{
+									"39cf2d0f-d0fd-8ae9-a20d-6d11918583c1",
+									true,
+								},
+								
+								{
+									"353cf463-39a5-8deb-a1f1-37b3c9bf0546",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_Hotbar_ShirkOT",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "d8f3dd65-5086-2554-9f1c-928a7e116523",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99,
+							uuid = "3010f231-beb1-897b-860c-f7872b17f2b4",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionCDValue = 1,
+							actionID = 7533,
+							category = "Party",
+							conditionType = 9,
+							partyTargetType = "Other Tank",
+							uuid = "39cf2d0f-d0fd-8ae9-a20d-6d11918583c1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return MuAiGuide.Config.FruMitigation.Tank.P1_Death1 == 1 or MuAiGuide.Config.FruMitigation.Tank.P1_Death1 == 2",
+							name = "p1自己吃",
+							uuid = "353cf463-39a5-8deb-a1f1-37b3c9bf0546",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 24.2,
+				name = "Shirk OT",
+				timeRange = true,
+				timelineIndex = 7,
+				timerEndOffset = 5,
+				timerStartOffset = -1,
+				uuid = "8af27d79-2760-fada-9fc7-f2b04d1fc15f",
+				version = 2,
+			},
+			inheritedIndex = 12,
 		},
 	},
 	[11] = 
@@ -1552,7 +1485,8 @@ local tbl =
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_Hotbar_Provoke",
 							ignoreWeaveRules = true,
-							targetType = "Current Target",
+							targetContentID = 9707,
+							targetType = "ContentID",
 							uuid = "77571afd-a4b6-f355-8dc2-f3644c51131c",
 							variableTogglesType = 2,
 							version = 2.1,
@@ -1599,9 +1533,9 @@ local tbl =
 				name = "Provoke",
 				timeRange = true,
 				timelineIndex = 21,
-				timerEndOffset = 20,
+				timerEndOffset = 5,
 				timerOffset = -3,
-				timerStartOffset = -10,
+				timerStartOffset = 2,
 				uuid = "59c1ecfe-3ff5-427d-9367-5e1d0b5d65a0",
 				version = 2,
 			},
@@ -1941,9 +1875,9 @@ local tbl =
 				name = "Provoke",
 				timeRange = true,
 				timelineIndex = 29,
-				timerEndOffset = 20,
+				timerEndOffset = 6,
 				timerOffset = -3,
-				timerStartOffset = -10,
+				timerStartOffset = 2,
 				uuid = "c3d46a63-283b-3088-a646-7e999d2ae5cf",
 				version = 2,
 			},
@@ -2066,94 +2000,6 @@ local tbl =
 					{
 						data = 
 						{
-							aType = "ACR",
-							actionID = 16151,
-							conditions = 
-							{
-								
-								{
-									"7d024a90-8e2c-e5b1-8094-dbd28e4e672d",
-									true,
-								},
-								
-								{
-									"306b76dc-ee6e-e3dc-a1e0-8c60894dc919",
-									true,
-								},
-								
-								{
-									"20ee6c50-934e-7100-920d-3ed7873ff42b",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_Tankbar_AuroraSelf",
-							ignoreWeaveRules = true,
-							uuid = "6416a938-cb0c-be7b-bba2-31cd8d471cd4",
-							variableTogglesType = 3,
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return MuAiGuide.Config.FruMitigation.Tank.P1_Death2 == 1",
-							name = "p1-2全减",
-							uuid = "7d024a90-8e2c-e5b1-8094-dbd28e4e672d",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							comparator = 2,
-							conditionType = 2,
-							hpValue = 90,
-							uuid = "306b76dc-ee6e-e3dc-a1e0-8c60894dc919",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 2,
-							buffID = 1835,
-							category = "Self",
-							uuid = "20ee6c50-934e-7100-920d-3ed7873ff42b",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 129.5,
-				name = "Aurora (regen) self",
-				timeRange = true,
-				timelineIndex = 30,
-				timerEndOffset = 10,
-				uuid = "05979e6f-a790-bd48-a064-5dbbdeff0326",
-				version = 2,
-			},
-			inheritedIndex = 20,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
 							actionID = 16140,
 							conditions = 
 							{
@@ -2223,96 +2069,11 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 30,
 				timerOffset = -10,
-				timerStartOffset = -10,
+				timerStartOffset = -8,
 				uuid = "2b6a7a68-4a25-e107-a607-d699bca5e0ca",
 				version = 2,
 			},
-			inheritedIndex = 4,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7531,
-							conditions = 
-							{
-								
-								{
-									"2c5ef1c7-112b-ad95-93c9-9a84fa222507",
-									true,
-								},
-								
-								{
-									"1465472a-0137-2f48-b9fc-aa7b9991077a",
-									true,
-								},
-								
-								{
-									"07a3600a-2c32-8ccf-9f24-df0f02d1326b",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return MuAiGuide.Config.FruMitigation.Tank.P1_Death2 == 1",
-							name = "p1-2全减",
-							uuid = "2c5ef1c7-112b-ad95-93c9-9a84fa222507",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							actionID = 7531,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							conditionType = 4,
-							enmityValue = 100,
-							uuid = "07a3600a-2c32-8ccf-9f24-df0f02d1326b",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 129.5,
-				name = "Rampart (20)",
-				timeRange = true,
-				timelineIndex = 30,
-				timerOffset = -15,
-				timerStartOffset = -10,
-				uuid = "27f7e3b0-5ec1-c8e9-b990-21f3053665ba",
-				version = 2,
-			},
-			inheritedIndex = 5,
+			inheritedIndex = 3,
 		},
 		
 		{
@@ -2392,11 +2153,99 @@ local tbl =
 				name = "Great Nebula (40)",
 				timeRange = true,
 				timelineIndex = 30,
-				timerStartOffset = -5,
+				timerStartOffset = -10,
 				uuid = "d4f52ef3-19b9-e7c7-a1f0-1aed816154aa",
 				version = 2,
 			},
-			inheritedIndex = 6,
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16151,
+							conditions = 
+							{
+								
+								{
+									"7d024a90-8e2c-e5b1-8094-dbd28e4e672d",
+									true,
+								},
+								
+								{
+									"306b76dc-ee6e-e3dc-a1e0-8c60894dc919",
+									true,
+								},
+								
+								{
+									"20ee6c50-934e-7100-920d-3ed7873ff42b",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_Tankbar_AuroraSelf",
+							ignoreWeaveRules = true,
+							uuid = "6416a938-cb0c-be7b-bba2-31cd8d471cd4",
+							variableTogglesType = 3,
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return MuAiGuide.Config.FruMitigation.Tank.P1_Death2 == 1",
+							name = "p1-2全减",
+							uuid = "7d024a90-8e2c-e5b1-8094-dbd28e4e672d",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 90,
+							uuid = "306b76dc-ee6e-e3dc-a1e0-8c60894dc919",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1835,
+							category = "Self",
+							uuid = "20ee6c50-934e-7100-920d-3ed7873ff42b",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 129.5,
+				name = "Aurora (regen) self",
+				timeRange = true,
+				timelineIndex = 30,
+				timerEndOffset = 10,
+				uuid = "05979e6f-a790-bd48-a064-5dbbdeff0326",
+				version = 2,
+			},
+			inheritedIndex = 20,
 		},
 		
 		{
@@ -2515,11 +2364,11 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 30,
 				timerOffset = -1,
-				timerStartOffset = -1.5,
+				timerStartOffset = -4.5,
 				uuid = "16b2d7e8-62f1-2ebf-9cb7-f8ae561ccc32",
 				version = 2,
 			},
-			inheritedIndex = 8,
+			inheritedIndex = 7,
 		},
 		
 		{
@@ -2702,6 +2551,183 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 25,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7537,
+							conditions = 
+							{
+								
+								{
+									"3010f231-beb1-897b-860c-f7872b17f2b4",
+									true,
+								},
+								
+								{
+									"39cf2d0f-d0fd-8ae9-a20d-6d11918583c1",
+									true,
+								},
+								
+								{
+									"b55ddca7-6b1f-e082-acc5-6328ff078dd3",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_Hotbar_ShirkOT",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "d8f3dd65-5086-2554-9f1c-928a7e116523",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99,
+							uuid = "3010f231-beb1-897b-860c-f7872b17f2b4",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionCDValue = 1,
+							actionID = 7533,
+							category = "Party",
+							conditionType = 9,
+							partyTargetType = "Other Tank",
+							uuid = "39cf2d0f-d0fd-8ae9-a20d-6d11918583c1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return MuAiGuide.Config.FruMitigation.Tank.P1_Death2 == 1 or MuAiGuide.Config.FruMitigation.Tank.P1_Death2 == 2",
+							name = "p1-2全减/无敌",
+							uuid = "b55ddca7-6b1f-e082-acc5-6328ff078dd3",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 129.5,
+				name = "Shirk OT",
+				timeRange = true,
+				timelineIndex = 30,
+				timerEndOffset = 5,
+				timerStartOffset = -1,
+				uuid = "5c6ffa43-117e-9775-949d-5987b8732e82",
+				version = 2,
+			},
+			inheritedIndex = 13,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7533,
+							conditions = 
+							{
+								
+								{
+									"75215b5b-71a5-3191-8ce3-6b0199a3cae8",
+									true,
+								},
+								
+								{
+									"f1b033be-8725-0a44-b6e3-cdfbab46fec7",
+									true,
+								},
+								
+								{
+									"13314d45-f5c6-a32d-b977-38a70b17097f",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_Hotbar_Provoke",
+							ignoreWeaveRules = true,
+							targetContentID = 9832,
+							targetType = "Current Target",
+							uuid = "77571afd-a4b6-f355-8dc2-f3644c51131c",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99,
+							uuid = "75215b5b-71a5-3191-8ce3-6b0199a3cae8",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffID = 1833,
+							category = "Self",
+							uuid = "f1b033be-8725-0a44-b6e3-cdfbab46fec7",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return MuAiGuide.Config.FruMitigation.Tank.P1_Death2 == 3 or MuAiGuide.Config.FruMitigation.Tank.P1_Death2 == 4",
+							name = "p1-2不吃",
+							uuid = "13314d45-f5c6-a32d-b977-38a70b17097f",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 129.5,
+				name = "Provoke",
+				timeRange = true,
+				timelineIndex = 30,
+				timerEndOffset = 5,
+				timerOffset = -3,
+				timerStartOffset = -4,
+				uuid = "7060d942-d66b-70c7-93cc-31d909b2203c",
+				version = 2,
+			},
+			inheritedIndex = 12,
 		},
 	},
 	[35] = 
@@ -3290,9 +3316,8 @@ local tbl =
 				name = "Provoke",
 				timeRange = true,
 				timelineIndex = 39,
-				timerEndOffset = 20,
+				timerEndOffset = 6,
 				timerOffset = -3,
-				timerStartOffset = -10,
 				uuid = "13307cdc-75a5-b8fa-bd0b-c88e422707f5",
 				version = 2,
 			},
@@ -3538,9 +3563,9 @@ local tbl =
 				name = "[ST] Stance OFF",
 				timeRange = true,
 				timelineIndex = 39,
-				timerEndOffset = 22,
+				timerEndOffset = 5,
 				timerOffset = -15,
-				timerStartOffset = 1,
+				timerStartOffset = -5,
 				uuid = "bf67d056-0e7b-4073-9b54-166d1dde61e3",
 				version = 2,
 			},
@@ -4039,9 +4064,8 @@ local tbl =
 				name = "Provoke",
 				timeRange = true,
 				timelineIndex = 41,
-				timerEndOffset = 20,
+				timerEndOffset = 6,
 				timerOffset = -3,
-				timerStartOffset = -10,
 				uuid = "2b46d071-5478-96da-a013-e3b1f4c16715",
 				version = 2,
 			},
@@ -5647,7 +5671,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 140,
 				timerOffset = -10,
-				timerStartOffset = -10,
+				timerStartOffset = -8,
 				uuid = "26a75185-e37b-134a-9a4a-1b7713e7460a",
 				version = 2,
 			},
@@ -5784,7 +5808,7 @@ local tbl =
 				name = "Great Nebula (40)",
 				timeRange = true,
 				timelineIndex = 140,
-				timerStartOffset = -5,
+				timerStartOffset = -10,
 				uuid = "2e1d9b80-b3ed-02ee-b4ee-333f82c0c1bc",
 				version = 2,
 			},
@@ -6263,9 +6287,9 @@ local tbl =
 				name = "Provoke",
 				timeRange = true,
 				timelineIndex = 140,
-				timerEndOffset = 20,
+				timerEndOffset = 5,
 				timerOffset = -3,
-				timerStartOffset = -10,
+				timerStartOffset = -4,
 				uuid = "23314e07-c784-afdc-ab62-1a9d5ee81bb5",
 				version = 2,
 			},
@@ -7026,9 +7050,8 @@ local tbl =
 				name = "[MT] Provoke",
 				timeRange = true,
 				timelineIndex = 156,
-				timerEndOffset = 20,
+				timerEndOffset = 5,
 				timerOffset = -3,
-				timerStartOffset = -10,
 				uuid = "31145978-9a8e-1f0a-bda6-33e3e786a639",
 				version = 2,
 			},
@@ -7118,7 +7141,7 @@ local tbl =
 				name = "[MT] Provoke",
 				timeRange = true,
 				timelineIndex = 162,
-				timerEndOffset = 20,
+				timerEndOffset = 5,
 				timerOffset = -3,
 				uuid = "2f5d5579-4d31-0ec5-977c-cc97d1f20937",
 				version = 2,
@@ -7206,7 +7229,7 @@ local tbl =
 				name = "[ST] Provoke",
 				timeRange = true,
 				timelineIndex = 162,
-				timerEndOffset = 20,
+				timerEndOffset = 5,
 				timerOffset = -3,
 				uuid = "5cbf1095-538c-6d5b-b098-a52e6ec717ae",
 				version = 2,
@@ -8350,9 +8373,8 @@ local tbl =
 				name = "[MT] Provoke",
 				timeRange = true,
 				timelineIndex = 175,
-				timerEndOffset = 20,
+				timerEndOffset = 5,
 				timerOffset = -3,
-				timerStartOffset = -10,
 				uuid = "877cf17a-633a-689b-bd2c-e54209618459",
 				version = 2,
 			},
@@ -8439,9 +8461,8 @@ local tbl =
 				name = "[ST] Provoke",
 				timeRange = true,
 				timelineIndex = 175,
-				timerEndOffset = 20,
+				timerEndOffset = 5,
 				timerOffset = -3,
-				timerStartOffset = -10,
 				uuid = "d9fde630-cbd9-c11a-a4b6-1dd49624553b",
 				version = 2,
 			},
@@ -8450,129 +8471,6 @@ local tbl =
 	},
 	[198] = 
 	{
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 36935,
-							conditions = 
-							{
-								
-								{
-									"30f02147-8e47-399f-99c5-279582aa248d",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							uuid = "d00db0ec-8fe2-c41e-8ee5-1c53101aa3bb",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 36935,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "30f02147-8e47-399f-99c5-279582aa248d",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 845.7,
-				name = "Great Nebula (40)",
-				timeRange = true,
-				timelineIndex = 198,
-				timerStartOffset = -14,
-				uuid = "17e77acd-b95b-f9d5-9991-ae036455c491",
-				version = 2,
-			},
-			inheritedIndex = 6,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "ACR",
-							actionID = 16151,
-							conditions = 
-							{
-								
-								{
-									"306b76dc-ee6e-e3dc-a1e0-8c60894dc919",
-									true,
-								},
-								
-								{
-									"20ee6c50-934e-7100-920d-3ed7873ff42b",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_Tankbar_AuroraSelf",
-							ignoreWeaveRules = true,
-							uuid = "6416a938-cb0c-be7b-bba2-31cd8d471cd4",
-							variableTogglesType = 3,
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							comparator = 2,
-							conditionType = 2,
-							hpValue = 90,
-							uuid = "306b76dc-ee6e-e3dc-a1e0-8c60894dc919",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 2,
-							buffID = 1835,
-							category = "Self",
-							uuid = "20ee6c50-934e-7100-920d-3ed7873ff42b",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 845.7,
-				name = "Aurora (regen) self",
-				timeRange = true,
-				timelineIndex = 198,
-				timerEndOffset = 10,
-				uuid = "cc925794-189b-27f7-aede-7cbb7a06997e",
-				version = 2,
-			},
-			inheritedIndex = 7,
-		},
 		
 		{
 			data = 
@@ -8764,6 +8662,129 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36935,
+							conditions = 
+							{
+								
+								{
+									"30f02147-8e47-399f-99c5-279582aa248d",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "d00db0ec-8fe2-c41e-8ee5-1c53101aa3bb",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36935,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "30f02147-8e47-399f-99c5-279582aa248d",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 845.7,
+				name = "Great Nebula (40)",
+				timeRange = true,
+				timelineIndex = 198,
+				timerStartOffset = -14,
+				uuid = "17e77acd-b95b-f9d5-9991-ae036455c491",
+				version = 2,
+			},
+			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16151,
+							conditions = 
+							{
+								
+								{
+									"306b76dc-ee6e-e3dc-a1e0-8c60894dc919",
+									true,
+								},
+								
+								{
+									"20ee6c50-934e-7100-920d-3ed7873ff42b",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_Tankbar_AuroraSelf",
+							ignoreWeaveRules = true,
+							uuid = "6416a938-cb0c-be7b-bba2-31cd8d471cd4",
+							variableTogglesType = 3,
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 90,
+							uuid = "306b76dc-ee6e-e3dc-a1e0-8c60894dc919",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1835,
+							category = "Self",
+							uuid = "20ee6c50-934e-7100-920d-3ed7873ff42b",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 845.7,
+				name = "Aurora (regen) self",
+				timeRange = true,
+				timelineIndex = 198,
+				timerEndOffset = 10,
+				uuid = "cc925794-189b-27f7-aede-7cbb7a06997e",
+				version = 2,
+			},
+			inheritedIndex = 7,
 		},
 	},
 	[202] = 
@@ -9410,7 +9431,7 @@ local tbl =
 				name = "[MT] Provoke",
 				timeRange = true,
 				timelineIndex = 202,
-				timerEndOffset = 20,
+				timerEndOffset = 5,
 				timerOffset = -3,
 				uuid = "385c6d0f-7e57-2e0c-949b-989076a45d50",
 				version = 2,
@@ -9498,7 +9519,7 @@ local tbl =
 				name = "[ST] Provoke",
 				timeRange = true,
 				timelineIndex = 202,
-				timerEndOffset = 20,
+				timerEndOffset = 5,
 				timerOffset = -3,
 				uuid = "2e4f08ea-0cb7-86c2-b393-f770caed2c78",
 				version = 2,
@@ -9732,8 +9753,8 @@ local tbl =
 				name = "[ST] Provoke",
 				timeRange = true,
 				timelineIndex = 218,
-				timerEndOffset = 20,
 				timerOffset = -3,
+				timerStartOffset = -5,
 				uuid = "5013d505-5195-567a-aaf3-d5feba745fab",
 				version = 2,
 			},
@@ -9820,7 +9841,7 @@ local tbl =
 				name = "[MT] Shirk OT",
 				timeRange = true,
 				timelineIndex = 218,
-				timerStartOffset = -60,
+				timerStartOffset = -5,
 				uuid = "c22160a3-66cd-8b6b-a5dd-f530c0866a0a",
 				version = 2,
 			},
@@ -9828,329 +9849,6 @@ local tbl =
 	},
 	[222] = 
 	{
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7531,
-							conditions = 
-							{
-								
-								{
-									"1465472a-0137-2f48-b9fc-aa7b9991077a",
-									true,
-								},
-								
-								{
-									"07a3600a-2c32-8ccf-9f24-df0f02d1326b",
-									true,
-								},
-								
-								{
-									"c7252ce4-c6a4-d687-89ab-be34442c8f20",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7531,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							conditionType = 4,
-							enmityValue = 100,
-							uuid = "07a3600a-2c32-8ccf-9f24-df0f02d1326b",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return MuAiGuide.Config.FruMitigation.Tank.P5_Death1 == 1",
-							name = "p5",
-							uuid = "c7252ce4-c6a4-d687-89ab-be34442c8f20",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 1033.6,
-				name = "Rampart (20)",
-				timeRange = true,
-				timelineIndex = 222,
-				timerOffset = -15,
-				timerStartOffset = -19,
-				uuid = "db200403-e042-3c70-b81e-f7062a9d5fa0",
-				version = 2,
-			},
-			inheritedIndex = 2,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 36935,
-							conditions = 
-							{
-								
-								{
-									"30f02147-8e47-399f-99c5-279582aa248d",
-									true,
-								},
-								
-								{
-									"8dfb0319-3d50-7284-858d-0318fa649e69",
-									true,
-								},
-								
-								{
-									"ddd123d6-be6e-1a26-97fa-6e7f8f64b975",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							uuid = "d00db0ec-8fe2-c41e-8ee5-1c53101aa3bb",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 36935,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "30f02147-8e47-399f-99c5-279582aa248d",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							conditionType = 4,
-							enmityValue = 100,
-							uuid = "8dfb0319-3d50-7284-858d-0318fa649e69",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return MuAiGuide.Config.FruMitigation.Tank.P5_Death1 == 1",
-							name = "p5",
-							uuid = "ddd123d6-be6e-1a26-97fa-6e7f8f64b975",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 1033.6,
-				name = "Great Nebula (40)",
-				timeRange = true,
-				timelineIndex = 222,
-				timerStartOffset = -14,
-				uuid = "1c9af454-d5a8-3512-971e-b00fe478990d",
-				version = 2,
-			},
-			inheritedIndex = 3,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 25758,
-							conditions = 
-							{
-								
-								{
-									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
-									true,
-								},
-								
-								{
-									"a3ddc844-292b-d7e1-b958-8a40b19d1c22",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Other Tank",
-							uuid = "94511374-01bd-2218-adca-8213e488a837",
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 25758,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							dequeueIfLuaFalse = true,
-							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return MuAiGuide.Config.FruMitigation.Tank.P5_Death1 == 2",
-							name = "p5",
-							uuid = "a3ddc844-292b-d7e1-b958-8a40b19d1c22",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 1033.6,
-				name = "HoC (15) ST",
-				timeRange = true,
-				timelineIndex = 222,
-				timerOffset = -1,
-				timerStartOffset = -8,
-				uuid = "be8d1762-bed9-61b9-85e7-32b0c6e7833b",
-				version = 2,
-			},
-			inheritedIndex = 6,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16152,
-							conditions = 
-							{
-								
-								{
-									"7e0d26db-790b-1b75-bfca-ad4daf3ae049",
-									true,
-								},
-								
-								{
-									"4458dd42-5109-c872-9eb5-eaa3b3be123f",
-									true,
-								},
-								
-								{
-									"27828221-87f8-e0ac-9d68-110d31057ce1",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							uuid = "9d1ae46d-0ea3-1bda-a34f-fbeb02011fe0",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16152,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "7e0d26db-790b-1b75-bfca-ad4daf3ae049",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							conditionType = 4,
-							enmityValue = 100,
-							uuid = "4458dd42-5109-c872-9eb5-eaa3b3be123f",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return MuAiGuide.Config.FruMitigation.Tank.P5_Death1 == 2",
-							name = "p5",
-							uuid = "27828221-87f8-e0ac-9d68-110d31057ce1",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 1033.6,
-				name = "Superbolide (Invinsible)",
-				timeRange = true,
-				timelineIndex = 222,
-				timerOffset = -1,
-				timerStartOffset = -8,
-				uuid = "f5e16fce-68d2-d3b5-ba88-835a72b0f90d",
-				version = 2,
-			},
-			inheritedIndex = 7,
-		},
 		
 		{
 			data = 
@@ -10168,7 +9866,7 @@ local tbl =
 				uuid = "a41fb93f-4c02-d3f4-920e-37dcf5d6370b",
 				version = 2,
 			},
-			inheritedIndex = 17,
+			inheritedIndex = 4,
 		},
 		
 		{
@@ -10253,26 +9951,7 @@ local tbl =
 				uuid = "c7bab070-9a5e-25e0-a5ae-c61ccba91738",
 				version = 2,
 			},
-			inheritedIndex = 18,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-				},
-				conditions = 
-				{
-				},
-				enabled = false,
-				mechanicTime = 1033.6,
-				name = "---------------",
-				timelineIndex = 222,
-				uuid = "fdea7abf-ecef-9e6e-b38c-50786fd5dc7c",
-				version = 2,
-			},
-			inheritedIndex = 10,
+			inheritedIndex = 5,
 		},
 		
 		{
@@ -10284,35 +9963,31 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 7533,
+							actionID = 7531,
 							conditions = 
 							{
 								
 								{
-									"75215b5b-71a5-3191-8ce3-6b0199a3cae8",
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
 									true,
 								},
 								
 								{
-									"f1b033be-8725-0a44-b6e3-cdfbab46fec7",
+									"07a3600a-2c32-8ccf-9f24-df0f02d1326b",
 									true,
 								},
 								
 								{
-									"826ad0c8-0e1b-5e06-be2f-9fef71307f6f",
+									"c7252ce4-c6a4-d687-89ab-be34442c8f20",
 									true,
 								},
 							},
 							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_Hotbar_Provoke",
+							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
-							targetContentID = 9832,
-							targetType = "Current Target",
-							uuid = "77571afd-a4b6-f355-8dc2-f3644c51131c",
-							variableTogglesType = 2,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
 							version = 2.1,
 						},
-						inheritedIndex = 1,
 					},
 				},
 				conditions = 
@@ -10321,46 +9996,46 @@ local tbl =
 					{
 						data = 
 						{
-							comparator = 2,
-							conditionType = 4,
-							enmityValue = 99,
-							uuid = "75215b5b-71a5-3191-8ce3-6b0199a3cae8",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffID = 1833,
+							actionID = 7531,
 							category = "Self",
-							uuid = "f1b033be-8725-0a44-b6e3-cdfbab46fec7",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
 							version = 2,
 						},
-						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 100,
+							uuid = "07a3600a-2c32-8ccf-9f24-df0f02d1326b",
+							version = 2,
+						},
 					},
 					
 					{
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
-							name = "RoleMit MT",
-							uuid = "826ad0c8-0e1b-5e06-be2f-9fef71307f6f",
+							conditionLua = "return MuAiGuide.Config.FruMitigation.Tank.P5_Death1 == 1",
+							name = "p5",
+							uuid = "c7252ce4-c6a4-d687-89ab-be34442c8f20",
 							version = 2,
 						},
 					},
 				},
 				mechanicTime = 1033.6,
-				name = "[MT] Provoke",
+				name = "Rampart (20)",
 				timeRange = true,
 				timelineIndex = 222,
-				timerEndOffset = 20,
-				timerOffset = -3,
-				uuid = "657d136b-efa0-b408-b6bb-c8ebf8e036f4",
+				timerOffset = -15,
+				timerStartOffset = -19,
+				uuid = "db200403-e042-3c70-b81e-f7062a9d5fa0",
 				version = 2,
 			},
-			inheritedIndex = 11,
+			inheritedIndex = 6,
 		},
 		
 		{
@@ -10372,31 +10047,29 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 7537,
+							actionID = 36935,
 							conditions = 
 							{
 								
 								{
-									"3010f231-beb1-897b-860c-f7872b17f2b4",
+									"30f02147-8e47-399f-99c5-279582aa248d",
 									true,
 								},
 								
 								{
-									"39cf2d0f-d0fd-8ae9-a20d-6d11918583c1",
+									"8dfb0319-3d50-7284-858d-0318fa649e69",
 									true,
 								},
 								
 								{
-									"0c033720-1be3-8dc2-93a1-7cac9091a1ab",
+									"ddd123d6-be6e-1a26-97fa-6e7f8f64b975",
 									true,
 								},
 							},
 							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_Hotbar_ShirkOT",
+							gVar = "ACR_RikuGNB3_CD",
 							ignoreWeaveRules = true,
-							targetType = "Other Tank",
-							uuid = "d8f3dd65-5086-2554-9f1c-928a7e116523",
-							variableTogglesType = 2,
+							uuid = "d00db0ec-8fe2-c41e-8ee5-1c53101aa3bb",
 							version = 2.1,
 						},
 					},
@@ -10407,10 +10080,11 @@ local tbl =
 					{
 						data = 
 						{
+							actionID = 36935,
+							category = "Self",
 							comparator = 2,
 							conditionType = 4,
-							enmityValue = 99,
-							uuid = "3010f231-beb1-897b-860c-f7872b17f2b4",
+							uuid = "30f02147-8e47-399f-99c5-279582aa248d",
 							version = 2,
 						},
 					},
@@ -10418,12 +10092,9 @@ local tbl =
 					{
 						data = 
 						{
-							actionCDValue = 1,
-							actionID = 7533,
-							category = "Party",
-							conditionType = 9,
-							partyTargetType = "Other Tank",
-							uuid = "39cf2d0f-d0fd-8ae9-a20d-6d11918583c1",
+							conditionType = 4,
+							enmityValue = 100,
+							uuid = "8dfb0319-3d50-7284-858d-0318fa649e69",
 							version = 2,
 						},
 					},
@@ -10432,22 +10103,22 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
-							name = "RoleMit ST",
-							uuid = "0c033720-1be3-8dc2-93a1-7cac9091a1ab",
+							conditionLua = "return MuAiGuide.Config.FruMitigation.Tank.P5_Death1 == 1",
+							name = "p5",
+							uuid = "ddd123d6-be6e-1a26-97fa-6e7f8f64b975",
 							version = 2,
 						},
 					},
 				},
 				mechanicTime = 1033.6,
-				name = "[ST] Shirk OT",
+				name = "Great Nebula (40)",
 				timeRange = true,
 				timelineIndex = 222,
-				timerStartOffset = -60,
-				uuid = "5adb5425-650d-f05f-9b8b-5be6060edeb2",
+				timerStartOffset = -14,
+				uuid = "1c9af454-d5a8-3512-971e-b00fe478990d",
 				version = 2,
 			},
-			inheritedIndex = 12,
+			inheritedIndex = 7,
 		},
 		
 		{
@@ -10535,7 +10206,7 @@ local tbl =
 				uuid = "5df35815-2e72-c129-8562-8382f73e834c",
 				version = 2,
 			},
-			inheritedIndex = 22,
+			inheritedIndex = 8,
 		},
 		
 		{
@@ -10554,7 +10225,357 @@ local tbl =
 				uuid = "653fc59a-659d-4c9a-9e04-5f539fe6f974",
 				version = 2,
 			},
-			inheritedIndex = 22,
+			inheritedIndex = 9,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16152,
+							conditions = 
+							{
+								
+								{
+									"7e0d26db-790b-1b75-bfca-ad4daf3ae049",
+									true,
+								},
+								
+								{
+									"4458dd42-5109-c872-9eb5-eaa3b3be123f",
+									true,
+								},
+								
+								{
+									"27828221-87f8-e0ac-9d68-110d31057ce1",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "9d1ae46d-0ea3-1bda-a34f-fbeb02011fe0",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16152,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "7e0d26db-790b-1b75-bfca-ad4daf3ae049",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 100,
+							uuid = "4458dd42-5109-c872-9eb5-eaa3b3be123f",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return MuAiGuide.Config.FruMitigation.Tank.P5_Death1 == 2",
+							name = "p5",
+							uuid = "27828221-87f8-e0ac-9d68-110d31057ce1",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 1033.6,
+				name = "Superbolide (Invinsible)",
+				timeRange = true,
+				timelineIndex = 222,
+				timerOffset = -1,
+				timerStartOffset = -8,
+				uuid = "f5e16fce-68d2-d3b5-ba88-835a72b0f90d",
+				version = 2,
+			},
+			inheritedIndex = 10,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"a3ddc844-292b-d7e1-b958-8a40b19d1c22",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return MuAiGuide.Config.FruMitigation.Tank.P5_Death1 == 2",
+							name = "p5",
+							uuid = "a3ddc844-292b-d7e1-b958-8a40b19d1c22",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 1033.6,
+				name = "HoC (15) ST",
+				timeRange = true,
+				timelineIndex = 222,
+				timerOffset = -1,
+				timerStartOffset = -8,
+				uuid = "be8d1762-bed9-61b9-85e7-32b0c6e7833b",
+				version = 2,
+			},
+			inheritedIndex = 11,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				enabled = false,
+				mechanicTime = 1033.6,
+				name = "---------------",
+				timelineIndex = 222,
+				uuid = "fdea7abf-ecef-9e6e-b38c-50786fd5dc7c",
+				version = 2,
+			},
+			inheritedIndex = 12,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7533,
+							conditions = 
+							{
+								
+								{
+									"75215b5b-71a5-3191-8ce3-6b0199a3cae8",
+									true,
+								},
+								
+								{
+									"f1b033be-8725-0a44-b6e3-cdfbab46fec7",
+									true,
+								},
+								
+								{
+									"826ad0c8-0e1b-5e06-be2f-9fef71307f6f",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_Hotbar_Provoke",
+							ignoreWeaveRules = true,
+							targetContentID = 9832,
+							targetType = "Current Target",
+							uuid = "77571afd-a4b6-f355-8dc2-f3644c51131c",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99,
+							uuid = "75215b5b-71a5-3191-8ce3-6b0199a3cae8",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffID = 1833,
+							category = "Self",
+							uuid = "f1b033be-8725-0a44-b6e3-cdfbab46fec7",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "826ad0c8-0e1b-5e06-be2f-9fef71307f6f",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 1033.6,
+				name = "[MT] Provoke",
+				timeRange = true,
+				timelineIndex = 222,
+				timerEndOffset = 5,
+				timerOffset = -3,
+				uuid = "657d136b-efa0-b408-b6bb-c8ebf8e036f4",
+				version = 2,
+			},
+			inheritedIndex = 13,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7537,
+							conditions = 
+							{
+								
+								{
+									"3010f231-beb1-897b-860c-f7872b17f2b4",
+									true,
+								},
+								
+								{
+									"39cf2d0f-d0fd-8ae9-a20d-6d11918583c1",
+									true,
+								},
+								
+								{
+									"0c033720-1be3-8dc2-93a1-7cac9091a1ab",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_Hotbar_ShirkOT",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "d8f3dd65-5086-2554-9f1c-928a7e116523",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99,
+							uuid = "3010f231-beb1-897b-860c-f7872b17f2b4",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionCDValue = 1,
+							actionID = 7533,
+							category = "Party",
+							conditionType = 9,
+							partyTargetType = "Other Tank",
+							uuid = "39cf2d0f-d0fd-8ae9-a20d-6d11918583c1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "0c033720-1be3-8dc2-93a1-7cac9091a1ab",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 1033.6,
+				name = "[ST] Shirk OT",
+				timeRange = true,
+				timelineIndex = 222,
+				timerEndOffset = 5,
+				uuid = "5adb5425-650d-f05f-9b8b-5be6060edeb2",
+				version = 2,
+			},
+			inheritedIndex = 14,
 		},
 	},
 	[237] = 
@@ -10712,8 +10733,8 @@ local tbl =
 				name = "[ST] Provoke",
 				timeRange = true,
 				timelineIndex = 247,
-				timerEndOffset = 20,
 				timerOffset = -3,
+				timerStartOffset = -5,
 				uuid = "b1f68b10-7eec-b44d-b9aa-cfb54449c2df",
 				version = 2,
 			},
@@ -10800,7 +10821,7 @@ local tbl =
 				name = "[MT] Shirk OT",
 				timeRange = true,
 				timelineIndex = 247,
-				timerStartOffset = -60,
+				timerStartOffset = -5,
 				uuid = "bcb478d8-ac22-9d09-b577-d68737cda333",
 				version = 2,
 			},
@@ -10814,39 +10835,54 @@ local tbl =
 			{
 				actions = 
 				{
+				},
+				conditions = 
+				{
+				},
+				enabled = false,
+				mechanicTime = 1150.3,
+				name = "--自己全减吃--",
+				timelineIndex = 251,
+				uuid = "58ed2491-535c-6c51-816e-78765d45476a",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
 					
 					{
 						data = 
 						{
-							actionID = 7533,
+							actionID = 25758,
 							conditions = 
 							{
 								
 								{
-									"75215b5b-71a5-3191-8ce3-6b0199a3cae8",
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
 									true,
 								},
 								
 								{
-									"f1b033be-8725-0a44-b6e3-cdfbab46fec7",
+									"de15c898-642b-f7ab-93c4-25b7b69e6c03",
 									true,
 								},
 								
 								{
-									"826ad0c8-0e1b-5e06-be2f-9fef71307f6f",
+									"a3bebace-abe3-7873-8cf2-ed3a92f16e73",
 									true,
 								},
 							},
 							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_Hotbar_Provoke",
+							gVar = "ACR_RikuGNB3_CD",
 							ignoreWeaveRules = true,
-							targetContentID = 9832,
-							targetType = "Current Target",
-							uuid = "77571afd-a4b6-f355-8dc2-f3644c51131c",
-							variableTogglesType = 2,
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
 							version = 2.1,
 						},
-						inheritedIndex = 1,
 					},
 				},
 				conditions = 
@@ -10855,10 +10891,12 @@ local tbl =
 					{
 						data = 
 						{
+							actionID = 25758,
+							category = "Self",
 							comparator = 2,
 							conditionType = 4,
-							enmityValue = 99,
-							uuid = "75215b5b-71a5-3191-8ce3-6b0199a3cae8",
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
 							version = 2,
 						},
 					},
@@ -10866,35 +10904,34 @@ local tbl =
 					{
 						data = 
 						{
-							buffID = 1833,
-							category = "Self",
-							uuid = "f1b033be-8725-0a44-b6e3-cdfbab46fec7",
+							conditionType = 4,
+							enmityValue = 100,
+							uuid = "de15c898-642b-f7ab-93c4-25b7b69e6c03",
 							version = 2,
 						},
-						inheritedIndex = 2,
 					},
 					
 					{
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
-							name = "RoleMit MT",
-							uuid = "826ad0c8-0e1b-5e06-be2f-9fef71307f6f",
+							conditionLua = "return MuAiGuide.Config.FruMitigation.Tank.P5_Death2 == 1",
+							name = "p5",
+							uuid = "a3bebace-abe3-7873-8cf2-ed3a92f16e73",
 							version = 2,
 						},
 					},
 				},
 				mechanicTime = 1150.3,
-				name = "[MT] Provoke",
+				name = "HoC (15)",
 				timeRange = true,
 				timelineIndex = 251,
-				timerEndOffset = 20,
-				timerOffset = -3,
-				uuid = "9cf81112-9bcb-1dcd-beaa-17fc68623b0c",
+				timerOffset = -1,
+				timerStartOffset = -2,
+				uuid = "05f5bb14-005c-1da3-8b71-156f3e81308f",
 				version = 2,
 			},
-			inheritedIndex = 13,
+			inheritedIndex = 2,
 		},
 		
 		{
@@ -10978,93 +11015,7 @@ local tbl =
 				uuid = "1d3f4422-38bf-9137-847f-ff0d197f2333",
 				version = 2,
 			},
-			inheritedIndex = 2,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7537,
-							conditions = 
-							{
-								
-								{
-									"3010f231-beb1-897b-860c-f7872b17f2b4",
-									true,
-								},
-								
-								{
-									"39cf2d0f-d0fd-8ae9-a20d-6d11918583c1",
-									true,
-								},
-								
-								{
-									"0c033720-1be3-8dc2-93a1-7cac9091a1ab",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_Hotbar_ShirkOT",
-							ignoreWeaveRules = true,
-							targetType = "Other Tank",
-							uuid = "d8f3dd65-5086-2554-9f1c-928a7e116523",
-							variableTogglesType = 2,
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							comparator = 2,
-							conditionType = 4,
-							enmityValue = 99,
-							uuid = "3010f231-beb1-897b-860c-f7872b17f2b4",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionCDValue = 1,
-							actionID = 7533,
-							category = "Party",
-							conditionType = 9,
-							partyTargetType = "Other Tank",
-							uuid = "39cf2d0f-d0fd-8ae9-a20d-6d11918583c1",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
-							name = "RoleMit ST",
-							uuid = "0c033720-1be3-8dc2-93a1-7cac9091a1ab",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 1150.3,
-				name = "[ST] Shirk OT",
-				timeRange = true,
-				timelineIndex = 251,
-				timerStartOffset = -60,
-				uuid = "214f5b49-79a7-e9fb-a220-00731984cc3f",
-				version = 2,
-			},
+			inheritedIndex = 3,
 		},
 		
 		{
@@ -11239,66 +11190,35 @@ local tbl =
 			{
 				actions = 
 				{
-				},
-				conditions = 
-				{
-				},
-				enabled = false,
-				mechanicTime = 1150.3,
-				name = "---------------",
-				timelineIndex = 251,
-				uuid = "3a93de6d-577b-6774-ba5d-ad3d5fa9a7ee",
-				version = 2,
-			},
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-				},
-				conditions = 
-				{
-				},
-				enabled = false,
-				mechanicTime = 1150.3,
-				name = "--自己全减吃--",
-				timelineIndex = 251,
-				uuid = "58ed2491-535c-6c51-816e-78765d45476a",
-				version = 2,
-			},
-			inheritedIndex = 17,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
 					
 					{
 						data = 
 						{
-							actionID = 25758,
+							aType = "ACR",
+							actionID = 16151,
 							conditions = 
 							{
 								
 								{
-									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									"306b76dc-ee6e-e3dc-a1e0-8c60894dc919",
 									true,
 								},
 								
 								{
-									"31af69d1-7485-a23d-9f3f-ced5f3411297",
+									"20ee6c50-934e-7100-920d-3ed7873ff42b",
+									true,
+								},
+								
+								{
+									"75dc2000-3adb-335b-ae36-fa70a2bb478d",
 									true,
 								},
 							},
 							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
+							gVar = "ACR_RikuGNB3_Tankbar_AuroraSelf",
 							ignoreWeaveRules = true,
-							targetType = "Other Tank",
-							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							uuid = "6416a938-cb0c-be7b-bba2-31cd8d471cd4",
+							variableTogglesType = 3,
 							version = 2.1,
 						},
 						inheritedIndex = 1,
@@ -11310,12 +11230,22 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 25758,
 							category = "Self",
 							comparator = 2,
-							conditionType = 4,
-							dequeueIfLuaFalse = true,
-							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							conditionType = 2,
+							hpValue = 90,
+							uuid = "306b76dc-ee6e-e3dc-a1e0-8c60894dc919",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1835,
+							category = "Self",
+							uuid = "20ee6c50-934e-7100-920d-3ed7873ff42b",
 							version = 2,
 						},
 					},
@@ -11324,23 +11254,42 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return MuAiGuide.Config.FruMitigation.Tank.P5_Death2 == 2",
+							conditionLua = "return MuAiGuide.Config.FruMitigation.Tank.P5_Death2 == 1",
 							name = "p5",
-							uuid = "31af69d1-7485-a23d-9f3f-ced5f3411297",
+							uuid = "75dc2000-3adb-335b-ae36-fa70a2bb478d",
 							version = 2,
 						},
 					},
 				},
 				mechanicTime = 1150.3,
-				name = "HoC (15) ST",
+				name = "Aurora (regen) self",
 				timeRange = true,
 				timelineIndex = 251,
-				timerOffset = -1,
-				timerStartOffset = -8,
-				uuid = "900369f8-758a-71a9-9efb-5f5bdcdd7ec0",
+				timerEndOffset = 10,
+				timerStartOffset = -9,
+				uuid = "9ab9795c-4c85-5c12-8e90-72049d6d4c45",
 				version = 2,
 			},
-			inheritedIndex = 8,
+			inheritedIndex = 6,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				enabled = false,
+				mechanicTime = 1150.3,
+				name = "--自己无敌吃--",
+				timelineIndex = 251,
+				uuid = "74d1897e-daee-e392-95d1-8342ceada69d",
+				version = 2,
+			},
+			inheritedIndex = 22,
 		},
 		
 		{
@@ -11424,7 +11373,7 @@ local tbl =
 				uuid = "afffbcb8-d6ac-0594-bdfd-52c0124f09b7",
 				version = 2,
 			},
-			inheritedIndex = 9,
+			inheritedIndex = 8,
 		},
 		
 		{
@@ -11446,21 +11395,18 @@ local tbl =
 								},
 								
 								{
-									"de15c898-642b-f7ab-93c4-25b7b69e6c03",
-									true,
-								},
-								
-								{
-									"a3bebace-abe3-7873-8cf2-ed3a92f16e73",
+									"31af69d1-7485-a23d-9f3f-ced5f3411297",
 									true,
 								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
 							ignoreWeaveRules = true,
+							targetType = "Other Tank",
 							uuid = "94511374-01bd-2218-adca-8213e488a837",
 							version = 2.1,
 						},
+						inheritedIndex = 1,
 					},
 				},
 				conditions = 
@@ -11482,122 +11428,24 @@ local tbl =
 					{
 						data = 
 						{
-							conditionType = 4,
-							enmityValue = 100,
-							uuid = "de15c898-642b-f7ab-93c4-25b7b69e6c03",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
 							category = "Lua",
-							conditionLua = "return MuAiGuide.Config.FruMitigation.Tank.P5_Death2 == 1",
+							conditionLua = "return MuAiGuide.Config.FruMitigation.Tank.P5_Death2 == 2",
 							name = "p5",
-							uuid = "a3bebace-abe3-7873-8cf2-ed3a92f16e73",
+							uuid = "31af69d1-7485-a23d-9f3f-ced5f3411297",
 							version = 2,
 						},
 					},
 				},
 				mechanicTime = 1150.3,
-				name = "HoC (15)",
+				name = "HoC (15) ST",
 				timeRange = true,
 				timelineIndex = 251,
 				timerOffset = -1,
-				timerStartOffset = -2,
-				uuid = "05f5bb14-005c-1da3-8b71-156f3e81308f",
+				timerStartOffset = -8,
+				uuid = "900369f8-758a-71a9-9efb-5f5bdcdd7ec0",
 				version = 2,
 			},
-			inheritedIndex = 18,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "ACR",
-							actionID = 16151,
-							conditions = 
-							{
-								
-								{
-									"306b76dc-ee6e-e3dc-a1e0-8c60894dc919",
-									true,
-								},
-								
-								{
-									"20ee6c50-934e-7100-920d-3ed7873ff42b",
-									true,
-								},
-								
-								{
-									"75dc2000-3adb-335b-ae36-fa70a2bb478d",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_Tankbar_AuroraSelf",
-							ignoreWeaveRules = true,
-							uuid = "6416a938-cb0c-be7b-bba2-31cd8d471cd4",
-							variableTogglesType = 3,
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							comparator = 2,
-							conditionType = 2,
-							hpValue = 90,
-							uuid = "306b76dc-ee6e-e3dc-a1e0-8c60894dc919",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 2,
-							buffID = 1835,
-							category = "Self",
-							uuid = "20ee6c50-934e-7100-920d-3ed7873ff42b",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return MuAiGuide.Config.FruMitigation.Tank.P5_Death2 == 1",
-							name = "p5",
-							uuid = "75dc2000-3adb-335b-ae36-fa70a2bb478d",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 1150.3,
-				name = "Aurora (regen) self",
-				timeRange = true,
-				timelineIndex = 251,
-				timerEndOffset = 10,
-				timerStartOffset = -9,
-				uuid = "9ab9795c-4c85-5c12-8e90-72049d6d4c45",
-				version = 2,
-			},
-			inheritedIndex = 22,
+			inheritedIndex = 9,
 		},
 		
 		{
@@ -11611,12 +11459,187 @@ local tbl =
 				},
 				enabled = false,
 				mechanicTime = 1150.3,
-				name = "--自己无敌吃--",
+				name = "---------------",
 				timelineIndex = 251,
-				uuid = "74d1897e-daee-e392-95d1-8342ceada69d",
+				uuid = "3a93de6d-577b-6774-ba5d-ad3d5fa9a7ee",
 				version = 2,
 			},
-			inheritedIndex = 22,
+			inheritedIndex = 10,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7533,
+							conditions = 
+							{
+								
+								{
+									"75215b5b-71a5-3191-8ce3-6b0199a3cae8",
+									true,
+								},
+								
+								{
+									"f1b033be-8725-0a44-b6e3-cdfbab46fec7",
+									true,
+								},
+								
+								{
+									"826ad0c8-0e1b-5e06-be2f-9fef71307f6f",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_Hotbar_Provoke",
+							ignoreWeaveRules = true,
+							targetContentID = 9832,
+							targetType = "Current Target",
+							uuid = "77571afd-a4b6-f355-8dc2-f3644c51131c",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99,
+							uuid = "75215b5b-71a5-3191-8ce3-6b0199a3cae8",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffID = 1833,
+							category = "Self",
+							uuid = "f1b033be-8725-0a44-b6e3-cdfbab46fec7",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "826ad0c8-0e1b-5e06-be2f-9fef71307f6f",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 1150.3,
+				name = "[MT] Provoke",
+				timeRange = true,
+				timelineIndex = 251,
+				timerEndOffset = 5,
+				timerOffset = -3,
+				uuid = "9cf81112-9bcb-1dcd-beaa-17fc68623b0c",
+				version = 2,
+			},
+			inheritedIndex = 11,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7537,
+							conditions = 
+							{
+								
+								{
+									"3010f231-beb1-897b-860c-f7872b17f2b4",
+									true,
+								},
+								
+								{
+									"39cf2d0f-d0fd-8ae9-a20d-6d11918583c1",
+									true,
+								},
+								
+								{
+									"0c033720-1be3-8dc2-93a1-7cac9091a1ab",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_Hotbar_ShirkOT",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "d8f3dd65-5086-2554-9f1c-928a7e116523",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99,
+							uuid = "3010f231-beb1-897b-860c-f7872b17f2b4",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionCDValue = 1,
+							actionID = 7533,
+							category = "Party",
+							conditionType = 9,
+							partyTargetType = "Other Tank",
+							uuid = "39cf2d0f-d0fd-8ae9-a20d-6d11918583c1",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "0c033720-1be3-8dc2-93a1-7cac9091a1ab",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 1150.3,
+				name = "[ST] Shirk OT",
+				timeRange = true,
+				timelineIndex = 251,
+				timerEndOffset = 5,
+				uuid = "214f5b49-79a7-e9fb-a220-00731984cc3f",
+				version = 2,
+			},
+			inheritedIndex = 12,
 		},
 	},
 	[262] = 
