@@ -526,6 +526,43 @@ local tbl =
 			},
 		},
 	},
+	[21] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Misc",
+							gVar = "ACR_RikuGNB3_CD",
+							setTarget = true,
+							targetContentID = 9707,
+							targetType = "ContentID",
+							uuid = "b6839e01-e52a-06a5-a291-f215d88918f7",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 80,
+				name = "Set Target",
+				timeRange = true,
+				timelineIndex = 21,
+				timerEndOffset = 5,
+				timerStartOffset = -1,
+				uuid = "ad77eed2-f2bc-2395-8bc2-f7ade1d38f7f",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
 	[22] = 
 	{
 		
