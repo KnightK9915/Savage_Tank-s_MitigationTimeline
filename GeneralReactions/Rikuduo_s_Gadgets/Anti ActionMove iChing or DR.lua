@@ -121,6 +121,62 @@ local tbl =
 			version = 2,
 		},
 		inheritedIndex = 5,
+	},
+	
+	{
+		data = 
+		{
+			actions = 
+			{
+				
+				{
+					data = 
+					{
+						aType = "Lua",
+						actionLua = "-- =========================================================\n-- [I-Ching Commander] UI Toggle & Config (OnDraw)\n-- 默认速度 = 0.02，窗口自动缩放，无拖拽三角\n-- =========================================================\n\nRikuIchingCmd = RikuIchingCmd or {}\nlocal mod = RikuIchingCmd\n\nlocal function iching_init()\n    if mod.initialized then return end\n\n    mod.settings_path = mod.settings_path or (\n        GetStartupPath() ..\n        [[\\LuaMods\\TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\Settings\\iching_speed.lua]]\n    )\n\n    local defaults = {\n        enabled    = false,\n        speed      = 0.02,   -- 默认速度 0.02\n        vk         = 0,\n        useShift   = false,\n        useCtrl    = false,\n        useAlt     = false,\n        menu_open  = false,\n    }\n\n    local loaded\n    if persistence and persistence.load then\n        local ok, res = pcall(persistence.load, mod.settings_path)\n        if ok and type(res) == \"table\" then loaded = res end\n    end\n\n    mod.cfg = mod.cfg or {}\n\n    for k, v in pairs(defaults) do\n        if loaded and loaded[k] ~= nil then\n            mod.cfg[k] = loaded[k]\n        elseif mod.cfg[k] == nil then\n            mod.cfg[k] = v\n        end\n    end\n\n    -- 这些状态 OnFrame 会用，这里只保证字段存在\n    mod.need_send         = mod.need_send or false\n    mod.last_sent_enabled = mod.last_sent_enabled\n    mod.last_sent_speed   = mod.last_sent_speed\n\n    mod.initialized = true\nend\n\nlocal function iching_save()\n    if persistence and persistence.store then\n        pcall(persistence.store, mod.settings_path, mod.cfg)\n    end\nend\n\niching_init()\nlocal cfg = mod.cfg\n\nlocal visible = GUI:Begin(\"I-Ching SpeedHack##iching_cmd\", true, GUI.WindowFlags_AlwaysAutoResize)\nif visible then\n    GUI:Spacing()\n\n    local on = cfg.enabled\n\n    local r,g,b   = 0.4,0.1,0.1\n    local rh,gh,bh = 0.7,0.2,0.2\n    if on then\n        r,g,b     = 0.1,0.5,0.1\n        rh,gh,bh  = 0.2,0.8,0.2\n    end\n\n    GUI:PushStyleColor(GUI.Col_Button,        r,g,b,1)\n    GUI:PushStyleColor(GUI.Col_ButtonHovered, rh,gh,bh,1)\n    GUI:PushStyleColor(GUI.Col_ButtonActive,  rh,gh,bh,1)\n\n    if GUI:Button(on and \"ON\" or \"OFF\", 60, 0) then\n        cfg.enabled   = not cfg.enabled\n        mod.need_send = true      -- 状态改变 → 让 OnFrame 发一次\n        iching_save()\n    end\n\n    GUI:PopStyleColor(3)\n\n    GUI:SameLine()\n    if GUI:Button(cfg.menu_open and \"-\" or \"+\", 25, 0) then\n        cfg.menu_open = not cfg.menu_open\n        iching_save()\n    end\n\n    if cfg.menu_open then\n        GUI:Spacing()\n        GUI:Separator()\n\n        -- === Speed：两位小数 ===\n        GUI:Text(\"Speed\")\n        GUI:SameLine()\n\n        local speed = tonumber(cfg.speed) or 0.02\n        local newSpeed = GUI:InputFloat(\"##iching_speed\", speed, 0.01, 0.10, 2)\n\n        if newSpeed ~= speed then\n            if newSpeed < 0 then newSpeed = 0 end\n            cfg.speed = tonumber(string.format(\"%.2f\", newSpeed))\n            iching_save()\n            if cfg.enabled then\n                mod.need_send = true  -- 数值改变 & 当前是 ON → 让 OnFrame 发一次\n            end\n        end\n\n        GUI:Spacing()\n        GUI:Text(\"Hotkey (VK + Modifiers)\")\n\n        GUI:Text(\"VK Code\")\n        GUI:SameLine()\n        local vk = cfg.vk or 0\n        local newVK = GUI:InputInt(\"##iching_vk\", vk, 1, 10)\n        if newVK ~= vk then\n            if newVK < 0 then newVK = 0 end\n            cfg.vk = newVK\n            iching_save()\n        end\n\n        local newShift = GUI:Checkbox(\"Shift\", cfg.useShift)\n        if newShift ~= cfg.useShift then\n            cfg.useShift = newShift\n            iching_save()\n        end\n        GUI:SameLine()\n\n        local newCtrl = GUI:Checkbox(\"Ctrl\", cfg.useCtrl)\n        if newCtrl ~= cfg.useCtrl then\n            cfg.useCtrl = newCtrl\n            iching_save()\n        end\n        GUI:SameLine()\n\n        local newAlt = GUI:Checkbox(\"Alt\", cfg.useAlt)\n        if newAlt ~= cfg.useAlt then\n            cfg.useAlt = newAlt\n            iching_save()\n        end\n\n        GUI:Spacing()\n        GUI:Separator()\n\n        if GUI:Button(\"Reset to default\", 140, 0) then\n            cfg.enabled   = false\n            cfg.speed     = 0.02\n            cfg.vk        = 0\n            cfg.useShift  = false\n            cfg.useCtrl   = false\n            cfg.useAlt    = false\n            iching_save()\n            mod.need_send = true     -- 让 OnFrame 发一次 OFF（0.00）\n        end\n\n        GUI:Spacing()\n        GUI:TextWrapped(\"Hint: VK uses decimal codes.\\nShift=16, Ctrl=17, Alt=18.\")\n    end\nend\n\nGUI:End()\n\nreturn nil, 0, false, false\n",
+						gVar = "ACR_RikuGNB3_CD",
+						uuid = "07742a0f-18b8-e7a8-ac62-05e7c7853b28",
+						version = 2.1,
+					},
+				},
+			},
+			conditions = 
+			{
+			},
+			eventType = 13,
+			name = "SpeedHackUI",
+			uuid = "65951314-8235-c537-899e-67c38d23c692",
+			version = 2,
+		},
+		inheritedIndex = 9,
+	},
+	
+	{
+		data = 
+		{
+			actions = 
+			{
+				
+				{
+					data = 
+					{
+						aType = "Lua",
+						actionLua = "-- =========================================================\n-- [I-Ching Commander] Speed Toggle & Hotkey (OnFrame / OnUpdate)\n-- 只在状态/数值变化时发送一次指令，默认速度 0.02\n-- =========================================================\n\nRikuIchingCmd = RikuIchingCmd or {}\nlocal mod = RikuIchingCmd\n\n-- -----------------------------\n-- 初始化 & 设置读写\n-- -----------------------------\nlocal function iching_init()\n    if mod.initialized then return end\n\n    mod.settings_path = mod.settings_path or (\n        GetStartupPath() ..\n        [[\\LuaMods\\TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\Settings\\iching_speed.lua]]\n    )\n\n    local defaults = {\n        enabled    = false, -- 开关 ON/OFF\n        speed      = 0.02,  -- 默认速度 0.02，支持小数\n        vk         = 0,     -- VK code（十进制，0 = 未绑定）\n        useShift   = false,\n        useCtrl    = false,\n        useAlt     = false,\n        menu_open  = false, -- 仅 UI 用\n    }\n\n    local loaded\n    if persistence and persistence.load then\n        local ok, res = pcall(persistence.load, mod.settings_path)\n        if ok and type(res) == \"table\" then\n            loaded = res\n        end\n    end\n\n    mod.cfg = mod.cfg or {}\n    for k, v in pairs(defaults) do\n        if loaded and loaded[k] ~= nil then\n            mod.cfg[k] = loaded[k]\n        elseif mod.cfg[k] == nil then\n            mod.cfg[k] = v\n        end\n    end\n\n    -- 运行时状态\n    mod.need_send         = mod.need_send or false\n    mod.last_sent_enabled = mod.last_sent_enabled -- 可以为 nil，表示还没发过\n    mod.last_sent_speed   = mod.last_sent_speed   -- 同上\n\n    mod.initialized = true\nend\n\nlocal function iching_save()\n    if persistence and persistence.store then\n        pcall(persistence.store, mod.settings_path, mod.cfg)\n    end\nend\n\n-- -----------------------------\n-- 工具：检查某个 VK 是否“按住”\n-- -----------------------------\nlocal function is_vk_down(vk)\n    if not vk or vk == 0 then return false end\n    if not GUI then return false end\n\n    if GUI.IsKeyDown then \n        return GUI:IsKeyDown(vk)\n    elseif GUI.IsKeyPressed then\n        -- 退一步，当成重复按下\n        return GUI:IsKeyPressed(vk, true)\n    end\n    return false\nend\n\n-- -----------------------------\n-- 工具：这一帧热键是否触发（边缘）\n-- 主键：IsKeyPressed(false)\n-- 修饰：IsKeyDown\n-- -----------------------------\nlocal function hotkey_fired(cfg)\n    if not GUI or not GUI.IsKeyPressed then return false end\n    if not cfg or not cfg.vk or cfg.vk == 0 then return false end\n\n    -- 主键：这一帧被按下（不含 repeat）\n    if not GUI:IsKeyPressed(cfg.vk, false) then\n        return false\n    end\n\n    -- 修饰键：Shift = 0x10, Ctrl = 0x11, Alt = 0x12\n    if cfg.useShift and not is_vk_down(0x10) then return false end\n    if cfg.useCtrl  and not is_vk_down(0x11) then return false end\n    if cfg.useAlt   and not is_vk_down(0x12) then return false end\n\n    return true\nend\n\n-- -----------------------------\n-- 工具：发送 speed 指令（带去重）\n-- 开：speed > 0（两位小数）\n-- 关：speed = 0.00\n-- 若与上次发送完全一致，则不再发送\n-- -----------------------------\nlocal function send_speed_command()\n    local cfg = mod.cfg\n    if not cfg then return end\n\n    -- 规范化当前目标状态\n    local enabled = cfg.enabled and true or false\n    local speed_val\n\n    if enabled then\n        local s = tonumber(cfg.speed) or 0.02\n        if s < 0 then s = 0 end\n        s = tonumber(string.format(\"%.2f\", s))\n        if s <= 0 then s = 0.01 end -- 保证 >0\n        speed_val = s\n    else\n        speed_val = 0.00\n    end\n\n    -- 去重：若状态和 speed 都没变，就不再发送\n    if mod.last_sent_enabled ~= nil \n       and mod.last_sent_speed   ~= nil\n       and mod.last_sent_enabled == enabled\n       and mod.last_sent_speed   == speed_val then\n        return\n    end\n\n    local cmd = string.format(\"/i-ching-commander speed %.2f\", speed_val)\n    if SendTextCommand then\n        SendTextCommand(cmd)\n    end\n\n    -- 记录这次已发送的状态\n    mod.last_sent_enabled = enabled\n    mod.last_sent_speed   = speed_val\nend\n\n-- -----------------------------\n-- 主逻辑：OnUpdate\n-- -----------------------------\niching_init()\nlocal cfg = mod.cfg\n\n-- 1) 热键边缘触发 -> 切换 enabled\nif hotkey_fired(cfg) then\n    cfg.enabled   = not cfg.enabled\n    mod.need_send = true         -- 状态改变：标记需要发一次\n    iching_save()\nend\n\n-- 2) 若有变化（来自热键或 UI），发一次指令\nif mod.need_send then\n    send_speed_command()\n    mod.need_send = false\nend\n\n-- 不干扰 ACR / SkillManager\nreturn nil, 0, false, false\n",
+						gVar = "ACR_RikuGNB3_CD",
+						uuid = "d4c5e45f-0199-6b7c-be86-b22602279c3a",
+						version = 2.1,
+					},
+					inheritedIndex = 1,
+				},
+			},
+			conditions = 
+			{
+			},
+			eventType = 12,
+			name = "SpeedHackLogic",
+			uuid = "2cd2443d-84c7-a500-a98f-b2884cbb489a",
+			version = 2,
+		},
 	}, 
 	inheritedProfiles = 
 	{
