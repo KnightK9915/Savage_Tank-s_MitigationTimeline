@@ -149,7 +149,7 @@ local tbl =
 			uuid = "1cd708e6-73f0-ca7c-b25b-2a7191525a03",
 			version = 2,
 		},
-		inheritedIndex = 9,
+		inheritedIndex = 10,
 	},
 	
 	{
@@ -260,6 +260,150 @@ local tbl =
 			eventType = 12,
 			name = "SpeedHack ON Notification",
 			uuid = "a29bc6ee-1e95-affb-b2f4-2a09c91b9a42",
+			version = 2,
+		},
+	},
+	
+	{
+		data = 
+		{
+			actions = 
+			{
+				
+				{
+					data = 
+					{
+						aType = "Lua",
+						actionLua = "-- =========================================================\n-- [I-Ching SetSpeed] UI (OnDraw)\n-- speed 两位小数，同时控制 forward/back/strafe\n-- /e 开关 cfg.notify + TTS 开关 cfg.tts\n-- =========================================================\n\nRikuIchingSetSpeed = RikuIchingSetSpeed or {}\nlocal mod = RikuIchingSetSpeed\n\nlocal function init()\n    if mod.initialized then return end\n\n    mod.settings_path = mod.settings_path or (\n        GetStartupPath() ..\n        [[\\LuaMods\\TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\Settings\\iching_setspeed.lua]]\n    )\n\n    local defaults = {\n        enabled      = false,\n        speed        = 6.00,\n        vk           = 0,\n        useShift     = false,\n        useCtrl      = false,\n        useAlt       = false,\n        menu_open    = false,\n\n        notify       = true,\n        tts          = true,\n\n        toggle_seq   = 0,\n        toggle_state = false,\n        tts_seen_seq = 0,\n    }\n\n    local loaded\n    if persistence and persistence.load then\n        local ok, res = pcall(persistence.load, mod.settings_path)\n        if ok and type(res) == \"table\" then loaded = res end\n    end\n\n    mod.cfg = mod.cfg or {}\n    for k, v in pairs(defaults) do\n        if loaded and loaded[k] ~= nil then\n            mod.cfg[k] = loaded[k]\n        elseif mod.cfg[k] == nil then\n            mod.cfg[k] = v\n        end\n    end\n\n    mod.need_apply = mod.need_apply or false\n    mod.initialized = true\nend\n\nlocal function save()\n    if persistence and persistence.store and mod.settings_path and mod.cfg then\n        pcall(persistence.store, mod.settings_path, mod.cfg)\n    end\nend\n\ninit()\nlocal cfg = mod.cfg\n\nlocal visible = GUI:Begin(\"Minion SpeedHack##iching_setspeed\", true, GUI.WindowFlags_AlwaysAutoResize)\nif visible then\n\n    GUI:Spacing()\n\n    local on = cfg.enabled and true or false\n\n    local r,g,b = 0.4,0.1,0.1\n    local rh,gh,bh = 0.7,0.2,0.2\n    if on then\n        r,g,b = 0.1,0.5,0.1\n        rh,gh,bh = 0.2,0.8,0.2\n    end\n\n    GUI:PushStyleColor(GUI.Col_Button, r,g,b,1)\n    GUI:PushStyleColor(GUI.Col_ButtonHovered, rh,gh,bh,1)\n    GUI:PushStyleColor(GUI.Col_ButtonActive, rh,gh,bh,1)\n\n    if GUI:Button(on and \"ON\" or \"OFF\", 60, 0) then\n        cfg.enabled = not cfg.enabled\n        mod.need_apply = true\n        save()\n    end\n\n    GUI:PopStyleColor(3)\n\n    GUI:SameLine()\n    if GUI:Button(cfg.menu_open and \"-\" or \"+\", 25, 0) then\n        cfg.menu_open = not cfg.menu_open\n        save()\n    end\n\n    if cfg.menu_open then\n        GUI:Spacing()\n        GUI:Separator()\n\n        GUI:Text(\"Speed (fwd/back/strafe)\")\n        GUI:SameLine()\n        local speed = tonumber(cfg.speed) or 0.02\n        local newSpeed = GUI:InputFloat(\"##setspeed_speed\", speed, 0.01, 0.10, 2)\n        if newSpeed ~= speed then\n            if newSpeed < 0 then newSpeed = 0 end\n            cfg.speed = tonumber(string.format(\"%.2f\", newSpeed))\n            save()\n            if cfg.enabled then\n                mod.need_apply = true\n            end\n        end\n\n        GUI:Spacing()\n        GUI:Text(\"Hotkey (VK + Modifiers)\")\n\n        GUI:Text(\"VK Code\")\n        GUI:SameLine()\n        local vk = tonumber(cfg.vk) or 0\n        local newVK = GUI:InputInt(\"##setspeed_vk\", vk, 1, 10)\n        if newVK ~= vk then\n            if newVK < 0 then newVK = 0 end\n            cfg.vk = newVK\n            save()\n        end\n\n        local ns = GUI:Checkbox(\"Shift\", cfg.useShift)\n        if ns ~= cfg.useShift then cfg.useShift = ns; save() end\n        GUI:SameLine()\n        local nc = GUI:Checkbox(\"Ctrl\", cfg.useCtrl)\n        if nc ~= cfg.useCtrl then cfg.useCtrl = nc; save() end\n        GUI:SameLine()\n        local na = GUI:Checkbox(\"Alt\", cfg.useAlt)\n        if na ~= cfg.useAlt then cfg.useAlt = na; save() end\n\n        GUI:Spacing()\n        GUI:Separator()\n\n        local newNotify = GUI:Checkbox(\"Echo (/e)\", cfg.notify ~= false)\n        if newNotify ~= (cfg.notify ~= false) then\n            cfg.notify = newNotify and true or false\n            save()\n        end\n\n        local newTTS = GUI:Checkbox(\"TTS\", cfg.tts ~= false)\n        if newTTS ~= (cfg.tts ~= false) then\n            cfg.tts = newTTS and true or false\n            save()\n        end\n\n        GUI:Spacing()\n        GUI:Separator()\n\n        if GUI:Button(\"Reset to default\", 140, 0) then\n            cfg.enabled      = false\n            cfg.speed        = 0.02\n            cfg.vk           = 0\n            cfg.useShift     = false\n            cfg.useCtrl      = false\n            cfg.useAlt       = false\n            cfg.notify       = true\n            cfg.tts          = true\n\n            cfg.toggle_seq   = 0\n            cfg.toggle_state = false\n            cfg.tts_seen_seq = 0\n\n            save()\n            mod.need_apply = true  -- 让 OnFrame 执行 ResetSpeed(1)\n        end\n\n        GUI:Spacing()\n\n    end\nend\nGUI:End()\n\nreturn nil, 0, false, false\n",
+						gVar = "ACR_RikuGNB3_CD",
+						uuid = "07742a0f-18b8-e7a8-ac62-05e7c7853b28",
+						version = 2.1,
+					},
+					inheritedIndex = 1,
+				},
+			},
+			conditions = 
+			{
+			},
+			enabled = false,
+			eventType = 13,
+			name = "[Minion] SpeedHackUI",
+			uuid = "f446986c-5d0a-87fe-909f-74050f4ceca0",
+			version = 2,
+		},
+		inheritedIndex = 7,
+	},
+	
+	{
+		data = 
+		{
+			actions = 
+			{
+				
+				{
+					data = 
+					{
+						aType = "Lua",
+						actionLua = "-- =========================================================\n-- [I-Ching SetSpeed] (OnFrame / OnUpdate)\n-- ON : Player:SetSpeed(1, speed, speed, speed)\n-- OFF: Player:ResetSpeed(1)\n-- /e：仅在切换时发送（cfg.notify）\n-- TTS：通过 settings 的 toggle_seq/tts_seen_seq 触发（cfg.tts）\n-- 去重：同状态/同速度不重复 Set/Reset\n-- =========================================================\n\nRikuIchingSetSpeed = RikuIchingSetSpeed or {}\nlocal mod = RikuIchingSetSpeed\n\nlocal function init()\n    if mod.initialized then return end\n\n    mod.settings_path = mod.settings_path or (\n        GetStartupPath() ..\n        [[\\LuaMods\\TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\Settings\\iching_setspeed.lua]]\n    )\n\n    local defaults = {\n        enabled      = false,\n        speed        = 6.00,  -- 两位小数\n        vk           = 0,\n        useShift     = false,\n        useCtrl      = false,\n        useAlt       = false,\n        menu_open    = false,\n\n        notify       = true,  -- /e 开关\n        tts          = true,  -- TTS 开关（供 TTS Reaction 判断）\n\n        -- 跨切图/重载防重复播报\n        toggle_seq   = 0,      -- 每次 ON<->OFF 生效时 +1\n        toggle_state = false,  -- 本次切换后的状态（true=ON false=OFF）\n        tts_seen_seq = 0,      -- 已播报到的 seq（由 TTS Reaction 写回）\n    }\n\n    local loaded\n    if persistence and persistence.load then\n        local ok, res = pcall(persistence.load, mod.settings_path)\n        if ok and type(res) == \"table\" then loaded = res end\n    end\n\n    mod.cfg = mod.cfg or {}\n    for k, v in pairs(defaults) do\n        if loaded and loaded[k] ~= nil then\n            mod.cfg[k] = loaded[k]\n        elseif mod.cfg[k] == nil then\n            mod.cfg[k] = v\n        end\n    end\n\n    mod.need_apply = mod.need_apply or false\n    mod.last_applied_enabled = mod.last_applied_enabled -- true/false/nil\n    mod.last_applied_speed   = mod.last_applied_speed   -- number/nil\n\n    mod.initialized = true\nend\n\nlocal function save()\n    if persistence and persistence.store and mod.settings_path and mod.cfg then\n        pcall(persistence.store, mod.settings_path, mod.cfg)\n    end\nend\n\nlocal function is_vk_down(vk)\n    if not vk or vk == 0 then return false end\n    if not GUI then return false end\n    if GUI.IsKeyDown then\n        return GUI:IsKeyDown(vk)\n    elseif GUI.IsKeyPressed then\n        return GUI:IsKeyPressed(vk, true)\n    end\n    return false\nend\n\nlocal function hotkey_fired(cfg)\n    if not GUI or not GUI.IsKeyPressed then return false end\n    if not cfg or not cfg.vk or cfg.vk == 0 then return false end\n\n    if not GUI:IsKeyPressed(cfg.vk, false) then return false end\n    if cfg.useShift and not is_vk_down(0x10) then return false end\n    if cfg.useCtrl  and not is_vk_down(0x11) then return false end\n    if cfg.useAlt   and not is_vk_down(0x12) then return false end\n    return true\nend\n\nlocal function player_has_speed_api()\n    return (Player and Player.SetSpeed and Player.ResetSpeed)\nend\n\nlocal function apply_speed()\n    local cfg = mod.cfg\n    if not (cfg and player_has_speed_api()) then return end\n\n    local enabled = cfg.enabled and true or false\n\n    local speed = tonumber(cfg.speed) or 0.02\n    if speed < 0 then speed = 0 end\n    speed = tonumber(string.format(\"%.2f\", speed))\n\n    -- 去重：同状态/同速度不重复操作\n    if mod.last_applied_enabled ~= nil then\n        if enabled == mod.last_applied_enabled then\n            if enabled == false then\n                return -- 一直 OFF 不重复 Reset\n            else\n                if mod.last_applied_speed ~= nil and speed == mod.last_applied_speed then\n                    return -- 一直 ON 且 speed 不变，不重复 Set\n                end\n            end\n        end\n    end\n\n    local state_changed = (mod.last_applied_enabled == nil or mod.last_applied_enabled ~= enabled)\n\n    if enabled then\n        pcall(Player.SetSpeed, Player, 1, speed, speed, speed)\n        mod.last_applied_enabled = true\n        mod.last_applied_speed   = speed\n    else\n        pcall(Player.ResetSpeed, Player, 1)\n        mod.last_applied_enabled = false\n        mod.last_applied_speed   = nil\n    end\n\n    -- 切换事件：写入 settings，用于 /e 与 TTS（跨切图防重复）\n    if state_changed then\n        cfg.toggle_seq   = (tonumber(cfg.toggle_seq) or 0) + 1\n        cfg.toggle_state = enabled\n        save()\n\n        -- /e 通知：仅在切换时\n        if SendTextCommand and cfg.notify ~= false then\n            if enabled then\n                SendTextCommand('/e SetSpeed ON <se.1>')\n            else\n                SendTextCommand('/e SetSpeed OFF <se.11>')\n            end\n        end\n    end\nend\n\n-- ---- Main ----\ninit()\nlocal cfg = mod.cfg\n\nif hotkey_fired(cfg) then\n    cfg.enabled = not cfg.enabled\n    mod.need_apply = true\n    save()\nend\n\nif mod.need_apply then\n    apply_speed()\n    mod.need_apply = false\nend\n\nreturn nil, 0, false, false\n",
+						gVar = "ACR_RikuGNB3_CD",
+						uuid = "d4c5e45f-0199-6b7c-be86-b22602279c3a",
+						version = 2.1,
+					},
+					inheritedIndex = 1,
+				},
+			},
+			conditions = 
+			{
+			},
+			enabled = false,
+			eventType = 12,
+			name = "[Minion] SpeedHackLogic",
+			uuid = "5fbbafcc-683f-5009-96f8-db22d0b2faa4",
+			version = 2,
+		},
+	},
+	
+	{
+		data = 
+		{
+			actions = 
+			{
+				
+				{
+					data = 
+					{
+						aType = "Alert",
+						alertColor = 16724991,
+						alertDuration = 1000,
+						alertPriority = 4,
+						alertTTS = true,
+						alertText = "Speed Hack ON",
+						conditions = 
+						{
+							
+							{
+								"fe097e60-b2d1-f7ac-a30b-c9eec0bd1936",
+								true,
+							},
+						},
+						gVar = "ACR_RikuWAR3_CD",
+						uuid = "401ef24a-e1c2-1b1c-92af-7787ad33ddc0",
+						version = 2.1,
+					},
+					inheritedIndex = 1,
+				},
+				
+				{
+					data = 
+					{
+						aType = "Alert",
+						alertColor = -16252673,
+						alertDuration = 1000,
+						alertPriority = 4,
+						alertTTS = true,
+						alertText = "Speed Hack OFF",
+						conditions = 
+						{
+							
+							{
+								"4d306eb3-c17d-cb51-915e-2d27cf7bd165",
+								true,
+							},
+						},
+						gVar = "ACR_RikuWAR3_CD",
+						uuid = "2693e212-1276-4745-a3b2-9554c02cef1b",
+						version = 2.1,
+					},
+					inheritedIndex = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					data = 
+					{
+						category = "Lua",
+						conditionLua = "-- [I-Ching SetSpeed] TTS ON - Condition\n-- 通过 settings 的 toggle_seq/toggle_state/tts_seen_seq 防重播\n-- 仅在切换到 ON 时触发一次\n\nlocal mod = RikuIchingSetSpeed\nlocal cfg = mod and mod.cfg\nif not (cfg and cfg.tts ~= false) then return false end\n\nlocal seq  = tonumber(cfg.toggle_seq) or 0\nlocal seen = tonumber(cfg.tts_seen_seq) or 0\nlocal state = (cfg.toggle_state == true)\n\nif seq <= 0 or seen >= seq then\n    return false\nend\n\nif state == true then\n    cfg.tts_seen_seq = seq\n    if persistence and persistence.store and mod.settings_path then\n        pcall(persistence.store, mod.settings_path, cfg)\n    end\n    return true\nend\n\nreturn false\n",
+						uuid = "fe097e60-b2d1-f7ac-a30b-c9eec0bd1936",
+						version = 2,
+					},
+				},
+				
+				{
+					data = 
+					{
+						category = "Lua",
+						conditionLua = "-- [I-Ching SetSpeed] TTS OFF - Condition\n-- 仅在切换到 OFF 时触发一次\n\nlocal mod = RikuIchingSetSpeed\nlocal cfg = mod and mod.cfg\nif not (cfg and cfg.tts ~= false) then return false end\n\nlocal seq  = tonumber(cfg.toggle_seq) or 0\nlocal seen = tonumber(cfg.tts_seen_seq) or 0\nlocal state = (cfg.toggle_state == true)\n\nif seq <= 0 or seen >= seq then\n    return false\nend\n\nif state == false then\n    cfg.tts_seen_seq = seq\n    if persistence and persistence.store and mod.settings_path then\n        pcall(persistence.store, mod.settings_path, cfg)\n    end\n    return true\nend\n\nreturn false\n",
+						uuid = "4d306eb3-c17d-cb51-915e-2d27cf7bd165",
+						version = 2,
+					},
+				},
+			},
+			enabled = false,
+			eventType = 12,
+			name = "[Minion] SpeedHack ON Notification",
+			uuid = "bb7ee453-8fca-9d51-934c-f0c3ab90ce4f",
 			version = 2,
 		},
 	}, 
