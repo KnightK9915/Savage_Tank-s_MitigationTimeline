@@ -5816,6 +5816,9 @@ local tbl =
 	inheritedProfiles = 
 	{
 		"Tank\\EX6-TANKGENERAL",
+		"store\\anyone\\extremes\\doomtrain\\modules\\core",
+		"store\\anyone\\extremes\\doomtrain\\modules\\draws",
+		"store\\anyone\\extremes\\doomtrain\\modules\\optimization",
 	},
 	mapID = 1308,
 	version = 1,
