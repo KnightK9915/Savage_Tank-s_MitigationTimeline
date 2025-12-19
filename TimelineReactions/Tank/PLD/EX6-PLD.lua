@@ -1315,6 +1315,1201 @@ local tbl =
 			inheritedIndex = 7,
 		},
 	},
+	[37] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+								
+								{
+									"35a1b1f0-9bdc-3684-b272-3868034e0aae",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+								
+								{
+									"67d10d27-7cc7-3942-b06d-850f234ecaf7",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "395c750c-23c2-816e-bc8e-251c74fd1a9c",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "35a1b1f0-9bdc-3684-b272-3868034e0aae",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "67d10d27-7cc7-3942-b06d-850f234ecaf7",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 175.9,
+				name = "sheltron (15)",
+				timeRange = true,
+				timelineIndex = 37,
+				timerStartOffset = -2,
+				uuid = "924be63b-dc88-e3ee-8e8f-dff775d5a39f",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+								
+								{
+									"952bfc34-0459-d2e8-aeae-5dac2b7c313b",
+									true,
+								},
+								
+								{
+									"700c3d14-efd2-1847-a853-508656d9a23d",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "4e50ac07-ca83-58bf-b762-75a3a8e01b28",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+								
+								{
+									"9d917f8c-8e76-6886-97b9-2daf19cfa24d",
+									true,
+								},
+								
+								{
+									"700c3d14-efd2-1847-a853-508656d9a23d",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5ed8c1f4-36d8-ad42-9463-1f8154296465",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "952bfc34-0459-d2e8-aeae-5dac2b7c313b",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "9d917f8c-8e76-6886-97b9-2daf19cfa24d",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								82,
+							},
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "700c3d14-efd2-1847-a853-508656d9a23d",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 175.9,
+				name = "interven ST (15)",
+				timeRange = true,
+				timelineIndex = 37,
+				timerEndOffset = 5,
+				timerStartOffset = -1.5,
+				uuid = "b3f92ed6-5286-9a18-bd0d-a6e1d95f6d8d",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+	},
+	[40] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+								
+								{
+									"35a1b1f0-9bdc-3684-b272-3868034e0aae",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+								
+								{
+									"67d10d27-7cc7-3942-b06d-850f234ecaf7",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "395c750c-23c2-816e-bc8e-251c74fd1a9c",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "35a1b1f0-9bdc-3684-b272-3868034e0aae",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "67d10d27-7cc7-3942-b06d-850f234ecaf7",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 190.7,
+				name = "sheltron (15)",
+				timeRange = true,
+				timelineIndex = 40,
+				timerStartOffset = -2,
+				uuid = "b99c034a-f9d6-5f9e-953a-bda5de8b37b3",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+								
+								{
+									"952bfc34-0459-d2e8-aeae-5dac2b7c313b",
+									true,
+								},
+								
+								{
+									"700c3d14-efd2-1847-a853-508656d9a23d",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "4e50ac07-ca83-58bf-b762-75a3a8e01b28",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+								
+								{
+									"9d917f8c-8e76-6886-97b9-2daf19cfa24d",
+									true,
+								},
+								
+								{
+									"700c3d14-efd2-1847-a853-508656d9a23d",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5ed8c1f4-36d8-ad42-9463-1f8154296465",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "952bfc34-0459-d2e8-aeae-5dac2b7c313b",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "9d917f8c-8e76-6886-97b9-2daf19cfa24d",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								82,
+							},
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "700c3d14-efd2-1847-a853-508656d9a23d",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 190.7,
+				name = "interven ST (15)",
+				timeRange = true,
+				timelineIndex = 40,
+				timerEndOffset = 5,
+				timerStartOffset = -1.5,
+				uuid = "52166d83-d333-6ba2-a7f1-4415b1544401",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+	},
+	[43] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+								
+								{
+									"35a1b1f0-9bdc-3684-b272-3868034e0aae",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+								
+								{
+									"67d10d27-7cc7-3942-b06d-850f234ecaf7",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "395c750c-23c2-816e-bc8e-251c74fd1a9c",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "35a1b1f0-9bdc-3684-b272-3868034e0aae",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "67d10d27-7cc7-3942-b06d-850f234ecaf7",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 206.8,
+				name = "sheltron (15)",
+				timeRange = true,
+				timelineIndex = 43,
+				timerStartOffset = -2,
+				uuid = "2d43d181-b694-27fc-9454-9d6d0cca2112",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+								
+								{
+									"952bfc34-0459-d2e8-aeae-5dac2b7c313b",
+									true,
+								},
+								
+								{
+									"700c3d14-efd2-1847-a853-508656d9a23d",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "4e50ac07-ca83-58bf-b762-75a3a8e01b28",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+								
+								{
+									"9d917f8c-8e76-6886-97b9-2daf19cfa24d",
+									true,
+								},
+								
+								{
+									"700c3d14-efd2-1847-a853-508656d9a23d",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5ed8c1f4-36d8-ad42-9463-1f8154296465",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "952bfc34-0459-d2e8-aeae-5dac2b7c313b",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "9d917f8c-8e76-6886-97b9-2daf19cfa24d",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								82,
+							},
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "700c3d14-efd2-1847-a853-508656d9a23d",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 206.8,
+				name = "interven ST (15)",
+				timeRange = true,
+				timelineIndex = 43,
+				timerEndOffset = 5,
+				timerStartOffset = -1.5,
+				uuid = "fda2379d-ec29-b8cf-b230-c9e4061c9552",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+	},
+	[46] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+								
+								{
+									"35a1b1f0-9bdc-3684-b272-3868034e0aae",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+								
+								{
+									"67d10d27-7cc7-3942-b06d-850f234ecaf7",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "395c750c-23c2-816e-bc8e-251c74fd1a9c",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "35a1b1f0-9bdc-3684-b272-3868034e0aae",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "67d10d27-7cc7-3942-b06d-850f234ecaf7",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 222.7,
+				name = "sheltron (15)",
+				timeRange = true,
+				timelineIndex = 46,
+				timerStartOffset = -2,
+				uuid = "8be19913-a99d-9c22-b0e3-e70285cc50b2",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+								
+								{
+									"952bfc34-0459-d2e8-aeae-5dac2b7c313b",
+									true,
+								},
+								
+								{
+									"700c3d14-efd2-1847-a853-508656d9a23d",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "4e50ac07-ca83-58bf-b762-75a3a8e01b28",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+								
+								{
+									"9d917f8c-8e76-6886-97b9-2daf19cfa24d",
+									true,
+								},
+								
+								{
+									"700c3d14-efd2-1847-a853-508656d9a23d",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5ed8c1f4-36d8-ad42-9463-1f8154296465",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "952bfc34-0459-d2e8-aeae-5dac2b7c313b",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "9d917f8c-8e76-6886-97b9-2daf19cfa24d",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								82,
+							},
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "700c3d14-efd2-1847-a853-508656d9a23d",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 222.7,
+				name = "interven ST (15)",
+				timeRange = true,
+				timelineIndex = 46,
+				timerEndOffset = 5,
+				timerStartOffset = -1.5,
+				uuid = "4d258a70-8fc7-8d39-80ad-5702e9492f6b",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+	},
+	[49] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+								
+								{
+									"35a1b1f0-9bdc-3684-b272-3868034e0aae",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+								
+								{
+									"67d10d27-7cc7-3942-b06d-850f234ecaf7",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "395c750c-23c2-816e-bc8e-251c74fd1a9c",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "35a1b1f0-9bdc-3684-b272-3868034e0aae",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "67d10d27-7cc7-3942-b06d-850f234ecaf7",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 238.6,
+				name = "sheltron (15)",
+				timeRange = true,
+				timelineIndex = 49,
+				timerStartOffset = -2,
+				uuid = "7f048b24-1fc9-9a2a-8e27-984b4249270c",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+								
+								{
+									"952bfc34-0459-d2e8-aeae-5dac2b7c313b",
+									true,
+								},
+								
+								{
+									"700c3d14-efd2-1847-a853-508656d9a23d",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "4e50ac07-ca83-58bf-b762-75a3a8e01b28",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							conditions = 
+							{
+								
+								{
+									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+									true,
+								},
+								
+								{
+									"9d917f8c-8e76-6886-97b9-2daf19cfa24d",
+									true,
+								},
+								
+								{
+									"700c3d14-efd2-1847-a853-508656d9a23d",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5ed8c1f4-36d8-ad42-9463-1f8154296465",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "952bfc34-0459-d2e8-aeae-5dac2b7c313b",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "9d917f8c-8e76-6886-97b9-2daf19cfa24d",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								82,
+							},
+							category = "Party",
+							partyTargetType = "Other Tank",
+							uuid = "700c3d14-efd2-1847-a853-508656d9a23d",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 238.6,
+				name = "interven ST (15)",
+				timeRange = true,
+				timelineIndex = 49,
+				timerEndOffset = 5,
+				timerStartOffset = -1.5,
+				uuid = "12941660-bfcd-e52d-976a-2d842fb96a70",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+	},
 	[54] = 
 	{
 		
