@@ -1101,6 +1101,7 @@ local tbl =
 						inheritedIndex = 2,
 					},
 				},
+				enabled = false,
 				mechanicTime = 136.5,
 				name = "Rampart (20)",
 				timeRange = true,
@@ -1350,6 +1351,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 136.5,
 				name = "Aurora (regen) ST",
 				timeRange = true,
@@ -1789,16 +1791,123 @@ local tbl =
 						inheritedIndex = 2,
 					},
 				},
+				enabled = false,
 				mechanicTime = 190.7,
 				name = "HoC (15)",
 				timeRange = true,
 				timelineIndex = 40,
 				timerOffset = -1,
 				timerStartOffset = -2,
-				uuid = "b4e9a9e7-edc3-7f77-9b0d-0e0297ad7b43",
+				uuid = "598ff942-69d7-ea85-99e4-c60467c1482b",
 				version = 2,
 			},
 			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+								
+								{
+									"c126c18a-5ef1-ca16-b6a3-7843a540a0e3",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+								
+								{
+									"af877f18-bc99-0b88-acc5-4be623604890",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "4ddd74fb-3ef4-3898-ad02-3709125898ae",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "c126c18a-5ef1-ca16-b6a3-7843a540a0e3",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "af877f18-bc99-0b88-acc5-4be623604890",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				mechanicTime = 190.7,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 40,
+				timerOffset = -15,
+				timerStartOffset = -2,
+				uuid = "f8bfb5a6-0059-4f9b-9a0d-a56d22b0f595",
+				version = 2,
+			},
+			inheritedIndex = 4,
 		},
 	},
 	[43] = 
@@ -1899,13 +2008,14 @@ local tbl =
 						inheritedIndex = 2,
 					},
 				},
+				enabled = false,
 				mechanicTime = 206.8,
 				name = "HoC (15)",
 				timeRange = true,
 				timelineIndex = 43,
 				timerOffset = -1,
 				timerStartOffset = -2,
-				uuid = "1d4cffb1-ff80-0e23-8982-03e328985649",
+				uuid = "ed5b634c-4f26-5433-a9d8-058542358ba6",
 				version = 2,
 			},
 			inheritedIndex = 2,
