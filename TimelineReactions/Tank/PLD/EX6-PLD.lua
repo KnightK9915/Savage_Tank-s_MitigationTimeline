@@ -859,6 +859,7 @@ local tbl =
 						inheritedIndex = 3,
 					},
 				},
+				enabled = false,
 				mechanicTime = 136.5,
 				name = "Rampart (20)",
 				timeRange = true,
@@ -1303,6 +1304,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 136.5,
 				name = "interven ST (15)",
 				timeRange = true,
@@ -1542,6 +1544,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 175.9,
 				name = "interven ST (15)",
 				timeRange = true,
@@ -1650,6 +1653,7 @@ local tbl =
 						inheritedIndex = 3,
 					},
 				},
+				enabled = false,
 				mechanicTime = 190.7,
 				name = "sheltron (15)",
 				timeRange = true,
@@ -1781,6 +1785,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 190.7,
 				name = "interven ST (15)",
 				timeRange = true,
@@ -1791,6 +1796,135 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 7,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+								
+								{
+									"8ba76715-05c3-e348-998f-92065ec795da",
+									true,
+								},
+								
+								{
+									"86ff93c7-f1b2-8712-8979-c8eec98a0815",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+								
+								{
+									"8ba76715-05c3-e348-998f-92065ec795da",
+									true,
+								},
+								
+								{
+									"61a489a9-94cb-0c08-acd5-08b30eff4ec3",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "670c7bae-eb51-894d-a344-c459170f4d55",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 6,
+							gaugeValue = 49.999000549316,
+							uuid = "8ba76715-05c3-e348-998f-92065ec795da",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "86ff93c7-f1b2-8712-8979-c8eec98a0815",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "61a489a9-94cb-0c08-acd5-08b30eff4ec3",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 190.7,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 40,
+				timerOffset = -15,
+				timerStartOffset = -2.5,
+				uuid = "cd91a560-0a2b-b805-b23f-af6f4b2519fb",
+				version = 2,
+			},
+			inheritedIndex = 2,
 		},
 	},
 	[43] = 
@@ -1889,6 +2023,7 @@ local tbl =
 						inheritedIndex = 3,
 					},
 				},
+				enabled = false,
 				mechanicTime = 206.8,
 				name = "sheltron (15)",
 				timeRange = true,
@@ -2020,6 +2155,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 206.8,
 				name = "interven ST (15)",
 				timeRange = true,
@@ -2259,6 +2395,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 222.7,
 				name = "interven ST (15)",
 				timeRange = true,
