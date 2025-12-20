@@ -104,7 +104,7 @@ local tbl =
 				name = "BW (20)",
 				timeRange = true,
 				timelineIndex = 21,
-				timerStartOffset = -1.5,
+				timerStartOffset = -2.5,
 				uuid = "f332f7ef-84e0-7f5a-8b74-94be41078856",
 				version = 2,
 			},
@@ -981,7 +981,7 @@ local tbl =
 				name = "BW (20)",
 				timeRange = true,
 				timelineIndex = 30,
-				timerStartOffset = -1.5,
+				timerStartOffset = -2.5,
 				uuid = "8d5d3052-4a5f-83be-a992-c88efd5fb5c9",
 				version = 2,
 			},
@@ -1082,6 +1082,7 @@ local tbl =
 						inheritedIndex = 3,
 					},
 				},
+				enabled = false,
 				mechanicTime = 136.5,
 				name = "Rampart (20)",
 				timeRange = true,
@@ -1857,7 +1858,7 @@ local tbl =
 				name = "BW (20)",
 				timeRange = true,
 				timelineIndex = 37,
-				timerStartOffset = -1.5,
+				timerStartOffset = -2.5,
 				uuid = "d64b3da1-5813-59ed-a8c5-55b5bbf224bf",
 				version = 2,
 			},
@@ -1964,15 +1965,122 @@ local tbl =
 						inheritedIndex = 3,
 					},
 				},
+				enabled = false,
 				mechanicTime = 190.7,
 				name = "BW (20)",
 				timeRange = true,
 				timelineIndex = 40,
-				timerStartOffset = -1.5,
-				uuid = "4734adf5-9633-a9c1-9260-7bd47b69446d",
+				timerStartOffset = -2.5,
+				uuid = "b644b5c6-ef38-caf9-b09f-9c5a82954287",
 				version = 2,
 			},
-			inheritedIndex = 1,
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+								
+								{
+									"c67d7e3b-c60a-37e1-b685-7c52e499bf4a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+								
+								{
+									"e7ca6393-a4d7-67cc-bbeb-c42c0ce0b6ff",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "3f3a8461-cf1c-c082-9e67-39842dec0f94",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "c67d7e3b-c60a-37e1-b685-7c52e499bf4a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "e7ca6393-a4d7-67cc-bbeb-c42c0ce0b6ff",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 190.7,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 40,
+				timerOffset = -15,
+				timerStartOffset = -2.5,
+				uuid = "5bc7faa1-d4a4-152a-b3b3-40d58eba4522",
+				version = 2,
+			},
+			inheritedIndex = 3,
 		},
 	},
 	[43] = 
@@ -2075,15 +2183,16 @@ local tbl =
 						inheritedIndex = 3,
 					},
 				},
+				enabled = false,
 				mechanicTime = 206.8,
 				name = "BW (20)",
 				timeRange = true,
 				timelineIndex = 43,
-				timerStartOffset = -1.5,
-				uuid = "3021c11e-6087-3bc9-8b53-b2453515cf82",
+				timerStartOffset = -2.5,
+				uuid = "23ec0890-0d27-4f4d-862a-c79eb473477f",
 				version = 2,
 			},
-			inheritedIndex = 1,
+			inheritedIndex = 2,
 		},
 	},
 	[46] = 
@@ -2412,7 +2521,7 @@ local tbl =
 				name = "BW (20)",
 				timeRange = true,
 				timelineIndex = 54,
-				timerStartOffset = -1.5,
+				timerStartOffset = -2.5,
 				uuid = "cf16565e-00af-a79d-801b-d8e001b47e21",
 				version = 2,
 			},
@@ -3289,7 +3398,7 @@ local tbl =
 				name = "BW (20)",
 				timeRange = true,
 				timelineIndex = 73,
-				timerStartOffset = -1.5,
+				timerStartOffset = -2.5,
 				uuid = "dcc4517d-5dfc-69af-965a-ff109cc609b7",
 				version = 2,
 			},
@@ -5030,7 +5139,7 @@ local tbl =
 				name = "BW (20)",
 				timeRange = true,
 				timelineIndex = 83,
-				timerStartOffset = -1.5,
+				timerStartOffset = -2.5,
 				uuid = "b636c645-9ae4-0f38-935b-ac6bb49d7186",
 				version = 2,
 			},
@@ -6773,7 +6882,7 @@ local tbl =
 				name = "BW (20)",
 				timeRange = true,
 				timelineIndex = 105,
-				timerStartOffset = -1.5,
+				timerStartOffset = -2.5,
 				uuid = "a180237b-b97c-d5a7-8d9c-c4b4a38e2873",
 				version = 2,
 			},
@@ -7649,7 +7758,7 @@ local tbl =
 				name = "BW (20)",
 				timeRange = true,
 				timelineIndex = 119,
-				timerStartOffset = -1.5,
+				timerStartOffset = -2.5,
 				uuid = "54aa1b3a-02d6-4ff9-a2e4-a92a129bf06a",
 				version = 2,
 			},
