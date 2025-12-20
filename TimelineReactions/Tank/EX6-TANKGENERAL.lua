@@ -3070,6 +3070,11 @@ local tbl =
 									"a787167c-e665-8709-84d0-298a7dbe954a",
 									true,
 								},
+								
+								{
+									"fe9d14d5-610f-4042-801e-76d693903568",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -3124,14 +3129,25 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "fe9d14d5-610f-4042-801e-76d693903568",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 862,
 				name = "Veil",
 				timeRange = true,
 				timelineIndex = 109,
 				timerOffset = -10,
-				timerStartOffset = -6.5,
-				uuid = "7bd666e0-22a0-b40d-86a4-35b73f1462e1",
+				timerStartOffset = -2.5,
+				uuid = "5d41acc1-70f6-0184-8ba8-36fc74959699",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -3162,6 +3178,11 @@ local tbl =
 								
 								{
 									"a6929435-5dcb-3407-8d89-b38a0596d1ac",
+									true,
+								},
+								
+								{
+									"36f592c9-8cdc-0f47-b369-1b8e813fc6f5",
 									true,
 								},
 							},
@@ -3218,13 +3239,24 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "36f592c9-8cdc-0f47-b369-1b8e813fc6f5",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 862,
 				name = "HoL",
 				timeRange = true,
 				timelineIndex = 109,
-				timerStartOffset = -6.5,
-				uuid = "d91b54ee-3c16-242c-85ff-d8902504740a",
+				timerStartOffset = -2.5,
+				uuid = "114f2334-c3df-e3ce-b48d-bc5028fc5b67",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -3255,6 +3287,11 @@ local tbl =
 								
 								{
 									"e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+									true,
+								},
+								
+								{
+									"77d0034f-3331-0d75-ab99-2ebfcaa0fdba",
 									true,
 								},
 							},
@@ -3311,14 +3348,25 @@ local tbl =
 						},
 						inheritedIndex = 3,
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "77d0034f-3331-0d75-ab99-2ebfcaa0fdba",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 862,
 				name = "Dark Missinary",
 				timeRange = true,
 				timelineIndex = 109,
 				timerOffset = -10,
-				timerStartOffset = -5.5,
-				uuid = "25e74fbd-a8f5-59e1-9e23-38e83230271d",
+				timerStartOffset = -2.5,
+				uuid = "80b1ec31-051f-ffee-9656-f09ec9d6265a",
 				version = 2,
 			},
 		},
@@ -3348,6 +3396,11 @@ local tbl =
 								
 								{
 									"3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+									true,
+								},
+								
+								{
+									"4703d63f-1d9a-dc64-b876-1dd78bb9b7c8",
 									true,
 								},
 							},
@@ -3404,13 +3457,24 @@ local tbl =
 						},
 						inheritedIndex = 3,
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "4703d63f-1d9a-dc64-b876-1dd78bb9b7c8",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 862,
 				name = "Shake it off",
 				timeRange = true,
 				timelineIndex = 109,
-				timerStartOffset = -6.5,
-				uuid = "b6abb5b5-e73b-5e31-8865-d744b9f1448f",
+				timerStartOffset = -2.5,
+				uuid = "aa07639e-a2d4-6c3e-80fb-966b3bd4d002",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -3436,6 +3500,11 @@ local tbl =
 								
 								{
 									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									true,
+								},
+								
+								{
+									"0a03e4a6-9793-cc80-88c7-9e3d941f565f",
 									true,
 								},
 							},
@@ -3473,6 +3542,17 @@ local tbl =
 						},
 						inheritedIndex = 2,
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "0a03e4a6-9793-cc80-88c7-9e3d941f565f",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 862,
 				name = "Reprisal",
@@ -3480,8 +3560,8 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 109,
 				timerOffset = -3,
-				timerStartOffset = -4.5,
-				uuid = "115f1ecd-1cd1-39fc-a3ea-5646fe2b2894",
+				timerStartOffset = -1.5,
+				uuid = "5e5381e7-3a9b-b499-8c48-cebcdf4f5b3a",
 				version = 2,
 			},
 		},
@@ -3499,6 +3579,7 @@ local tbl =
 						data = 
 						{
 							actionID = 3540,
+							atomicPriority = true,
 							conditions = 
 							{
 								
@@ -3514,6 +3595,11 @@ local tbl =
 								
 								{
 									"a787167c-e665-8709-84d0-298a7dbe954a",
+									true,
+								},
+								
+								{
+									"61dc0255-6fdc-5492-94d4-ad0a99c468fe",
 									true,
 								},
 							},
@@ -3570,14 +3656,25 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "61dc0255-6fdc-5492-94d4-ad0a99c468fe",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 873,
 				name = "Veil",
 				timeRange = true,
 				timelineIndex = 111,
 				timerOffset = -10,
-				timerStartOffset = -6.5,
-				uuid = "3b2af139-43f0-8b39-9ca5-1e9c0a3e44bd",
+				timerStartOffset = -2.5,
+				uuid = "4742aeac-2439-a0c8-8841-c9152476c476",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -3608,6 +3705,11 @@ local tbl =
 								
 								{
 									"a6929435-5dcb-3407-8d89-b38a0596d1ac",
+									true,
+								},
+								
+								{
+									"3e97a91a-41dc-23ef-b713-ff17113b522b",
 									true,
 								},
 							},
@@ -3664,13 +3766,24 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "3e97a91a-41dc-23ef-b713-ff17113b522b",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 873,
 				name = "HoL",
 				timeRange = true,
 				timelineIndex = 111,
-				timerStartOffset = -6.5,
-				uuid = "078debc5-5604-b9f0-895c-0b2a74319b81",
+				timerStartOffset = -2.5,
+				uuid = "2216a83c-301a-3ac1-bf2c-3a0645e2fa45",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -3701,6 +3814,11 @@ local tbl =
 								
 								{
 									"e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+									true,
+								},
+								
+								{
+									"dc9b5774-de30-3222-94bf-b9c78bef27f4",
 									true,
 								},
 							},
@@ -3757,14 +3875,25 @@ local tbl =
 						},
 						inheritedIndex = 3,
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "dc9b5774-de30-3222-94bf-b9c78bef27f4",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 873,
 				name = "Dark Missinary",
 				timeRange = true,
 				timelineIndex = 111,
 				timerOffset = -10,
-				timerStartOffset = -5.5,
-				uuid = "4a4debc1-e7c4-2017-bd09-6db1fdb4124e",
+				timerStartOffset = -2.5,
+				uuid = "d09e20f1-b336-0f98-90d1-6e3830f9ef86",
 				version = 2,
 			},
 		},
@@ -3794,6 +3923,11 @@ local tbl =
 								
 								{
 									"3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+									true,
+								},
+								
+								{
+									"ba76c676-ab5b-698a-b170-aa16cfdef928",
 									true,
 								},
 							},
@@ -3850,13 +3984,24 @@ local tbl =
 						},
 						inheritedIndex = 3,
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "ba76c676-ab5b-698a-b170-aa16cfdef928",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 873,
 				name = "Shake it off",
 				timeRange = true,
 				timelineIndex = 111,
-				timerStartOffset = -6.5,
-				uuid = "b3b2e92a-0e2b-9815-94a1-f71e83b19ca1",
+				timerStartOffset = -2.5,
+				uuid = "6e5149e1-3b55-333e-b02b-8dd5fab382c9",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -3882,6 +4027,11 @@ local tbl =
 								
 								{
 									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									true,
+								},
+								
+								{
+									"599dcfa2-d21f-4c86-ae30-14e580588481",
 									true,
 								},
 							},
@@ -3919,6 +4069,17 @@ local tbl =
 						},
 						inheritedIndex = 2,
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "GroupMit ST",
+							uuid = "599dcfa2-d21f-4c86-ae30-14e580588481",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 873,
 				name = "Reprisal",
@@ -3926,8 +4087,8 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 111,
 				timerOffset = -3,
-				timerStartOffset = -4.5,
-				uuid = "1320aa2f-5442-8e39-b630-54dbf1fb5e36",
+				timerStartOffset = -1.5,
+				uuid = "f718bb00-0fa5-7280-83e0-952c7acf19bc",
 				version = 2,
 			},
 		},
