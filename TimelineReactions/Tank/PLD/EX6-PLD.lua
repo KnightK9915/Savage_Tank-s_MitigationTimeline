@@ -1,5 +1,38 @@
 local tbl = 
 {
+	
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							gVar = "ACR_RikuPLD3_Gauge",
+							uuid = "5734d59a-e752-e065-aaf8-b8cd9611c3a1",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 12.4,
+				name = "Gauge ON",
+				timeRange = true,
+				timelineIndex = 1,
+				timerEndOffset = 5,
+				timerStartOffset = -12,
+				uuid = "8ff33079-1576-7b48-bf0e-ac3336f50c75",
+				version = 2,
+			},
+		},
+	}, 
 	[21] = 
 	{
 		
@@ -656,6 +689,68 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 7,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							gVar = "ACR_RikuPLD3_Gauge",
+							uuid = "5734d59a-e752-e065-aaf8-b8cd9611c3a1",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 98.1,
+				name = "Gauge ON",
+				timeRange = true,
+				timelineIndex = 21,
+				timerEndOffset = 5,
+				timerStartOffset = 1,
+				uuid = "59fbccab-9894-67ee-a10f-68fc4e193f05",
+				version = 2,
+			},
+			inheritedIndex = 8,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							gVar = "ACR_RikuPLD3_Gauge",
+							gVarValue = 2,
+							uuid = "5734d59a-e752-e065-aaf8-b8cd9611c3a1",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 98.1,
+				name = "Gauge OFF",
+				timeRange = true,
+				timelineIndex = 21,
+				timerEndOffset = 5,
+				timerStartOffset = -30,
+				uuid = "e4818c50-e303-1c8e-8995-e2d61ea9c491",
+				version = 2,
+			},
 		},
 	},
 	[30] = 
@@ -1316,6 +1411,37 @@ local tbl =
 			},
 			inheritedIndex = 7,
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							gVar = "ACR_RikuPLD3_Gauge",
+							gVarValue = 2,
+							uuid = "5734d59a-e752-e065-aaf8-b8cd9611c3a1",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 136.5,
+				name = "Gauge OFF",
+				timeRange = true,
+				timelineIndex = 30,
+				timerEndOffset = 5,
+				timerStartOffset = -30,
+				uuid = "7d2daa57-d080-dbd8-ba19-6ebc183293e1",
+				version = 2,
+			},
+		},
 	},
 	[37] = 
 	{
@@ -1417,7 +1543,7 @@ local tbl =
 				name = "sheltron (15)",
 				timeRange = true,
 				timelineIndex = 37,
-				timerStartOffset = -2,
+				timerStartOffset = -3,
 				uuid = "924be63b-dc88-e3ee-8e8f-dff775d5a39f",
 				version = 2,
 			},
@@ -1674,6 +1800,112 @@ local tbl =
 					{
 						data = 
 						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+								
+								{
+									"86ff93c7-f1b2-8712-8979-c8eec98a0815",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+								
+								{
+									"61a489a9-94cb-0c08-acd5-08b30eff4ec3",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "670c7bae-eb51-894d-a344-c459170f4d55",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "86ff93c7-f1b2-8712-8979-c8eec98a0815",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "61a489a9-94cb-0c08-acd5-08b30eff4ec3",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 190.7,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 40,
+				timerOffset = -15,
+				timerStartOffset = -2.5,
+				uuid = "cd91a560-0a2b-b805-b23f-af6f4b2519fb",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 7382,
 							conditions = 
 							{
@@ -1797,135 +2029,6 @@ local tbl =
 			},
 			inheritedIndex = 7,
 		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7531,
-							conditions = 
-							{
-								
-								{
-									"1465472a-0137-2f48-b9fc-aa7b9991077a",
-									true,
-								},
-								
-								{
-									"8ba76715-05c3-e348-998f-92065ec795da",
-									true,
-								},
-								
-								{
-									"86ff93c7-f1b2-8712-8979-c8eec98a0815",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionID = 7531,
-							conditions = 
-							{
-								
-								{
-									"1465472a-0137-2f48-b9fc-aa7b9991077a",
-									true,
-								},
-								
-								{
-									"8ba76715-05c3-e348-998f-92065ec795da",
-									true,
-								},
-								
-								{
-									"61a489a9-94cb-0c08-acd5-08b30eff4ec3",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "670c7bae-eb51-894d-a344-c459170f4d55",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7531,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							comparator = 2,
-							conditionType = 6,
-							gaugeValue = 49.999000549316,
-							uuid = "8ba76715-05c3-e348-998f-92065ec795da",
-							version = 2,
-						},
-						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
-							name = "RoleMit MT",
-							uuid = "86ff93c7-f1b2-8712-8979-c8eec98a0815",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
-							name = "RoleMit ST",
-							uuid = "61a489a9-94cb-0c08-acd5-08b30eff4ec3",
-							version = 2,
-						},
-						inheritedIndex = 3,
-					},
-				},
-				mechanicTime = 190.7,
-				name = "Rampart (20)",
-				timeRange = true,
-				timelineIndex = 40,
-				timerOffset = -15,
-				timerStartOffset = -2.5,
-				uuid = "cd91a560-0a2b-b805-b23f-af6f4b2519fb",
-				version = 2,
-			},
-			inheritedIndex = 2,
-		},
 	},
 	[43] = 
 	{
@@ -2033,6 +2136,20 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				name = "Instant Dash",
+				uuid = "cf75b497-bfc2-ad12-93df-76a9185b243b",
+				version = 2,
+			},
+			inheritedObjectUUID = "1f5140a4-8bc9-2edd-b6b2-d1b4a7184434",
+			inheritedOverwrites = 
+			{
+				timerStartOffset = 0.20000000298023,
+			},
 		},
 		
 		{
@@ -2278,6 +2395,20 @@ local tbl =
 		{
 			data = 
 			{
+				name = "Instant Dash",
+				uuid = "3d0e6bda-3751-d214-8084-acb611102955",
+				version = 2,
+			},
+			inheritedObjectUUID = "c845ca1f-7bb4-1e08-8a55-a4fa62f8066a",
+			inheritedOverwrites = 
+			{
+				timerStartOffset = 0.20000000298023,
+			},
+		},
+		
+		{
+			data = 
+			{
 				actions = 
 				{
 					
@@ -2513,6 +2644,20 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				name = "Instant Dash",
+				uuid = "93386dae-2c67-2c27-b1dc-46eac9764bb2",
+				version = 2,
+			},
+			inheritedObjectUUID = "93a77474-b5d7-4827-bf92-09d111780ebe",
+			inheritedOverwrites = 
+			{
+				timerStartOffset = 0.20000000298023,
+			},
 		},
 		
 		{
@@ -3305,6 +3450,221 @@ local tbl =
 			inheritedIndex = 7,
 		},
 	},
+	[64] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36920,
+							conditions = 
+							{
+								
+								{
+									"aceb9492-b930-0c6d-aaca-9fb9e7c2fb2a",
+									true,
+								},
+								
+								{
+									"0e35af4d-6a68-c664-afc7-591fde06b2ea",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "1ff7ecf5-69f2-0d51-9683-ee0ea48d1ed1",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36920,
+							conditions = 
+							{
+								
+								{
+									"aceb9492-b930-0c6d-aaca-9fb9e7c2fb2a",
+									true,
+								},
+								
+								{
+									"c8f12501-d004-5bb7-b879-4e0e59e35764",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "983542e1-afb6-5fdb-852b-3365796800cd",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36920,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "aceb9492-b930-0c6d-aaca-9fb9e7c2fb2a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "0e35af4d-6a68-c664-afc7-591fde06b2ea",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "c8f12501-d004-5bb7-b879-4e0e59e35764",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 604.5,
+				name = "Guardian (40)",
+				timeRange = true,
+				timelineIndex = 64,
+				timerStartOffset = -5,
+				uuid = "dafa6776-3e41-6009-9433-206e6db1f7cd",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+	},
+	[66] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+								
+								{
+									"35a1b1f0-9bdc-3684-b272-3868034e0aae",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+								
+								{
+									"67d10d27-7cc7-3942-b06d-850f234ecaf7",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "395c750c-23c2-816e-bc8e-251c74fd1a9c",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "35a1b1f0-9bdc-3684-b272-3868034e0aae",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "67d10d27-7cc7-3942-b06d-850f234ecaf7",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 618.4,
+				name = "sheltron (15)",
+				timeRange = true,
+				timelineIndex = 66,
+				timerStartOffset = -2,
+				uuid = "7e7c7606-ec18-fd55-8308-a1f983702021",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
 	[73] = 
 	{
 		
@@ -3960,6 +4320,68 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 7,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							gVar = "ACR_RikuPLD3_Gauge",
+							uuid = "5734d59a-e752-e065-aaf8-b8cd9611c3a1",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 662.4,
+				name = "Gauge ON",
+				timeRange = true,
+				timelineIndex = 73,
+				timerEndOffset = 5,
+				timerStartOffset = 1,
+				uuid = "5349533d-0c0d-2241-8013-0407d393d611",
+				version = 2,
+			},
+			inheritedIndex = 8,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							gVar = "ACR_RikuPLD3_Gauge",
+							gVarValue = 2,
+							uuid = "5734d59a-e752-e065-aaf8-b8cd9611c3a1",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 662.4,
+				name = "Gauge OFF",
+				timeRange = true,
+				timelineIndex = 73,
+				timerEndOffset = 5,
+				timerStartOffset = -30,
+				uuid = "f3237cea-3f3f-7b62-b3e4-ff18da00b729",
+				version = 2,
+			},
 		},
 	},
 	[74] = 
@@ -5222,6 +5644,68 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 7,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							gVar = "ACR_RikuPLD3_Gauge",
+							uuid = "5734d59a-e752-e065-aaf8-b8cd9611c3a1",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 722.9,
+				name = "Gauge ON",
+				timeRange = true,
+				timelineIndex = 83,
+				timerEndOffset = 5,
+				timerStartOffset = 1,
+				uuid = "b5f6cbff-2e99-cea9-bf6a-285d05b15db6",
+				version = 2,
+			},
+			inheritedIndex = 8,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							gVar = "ACR_RikuPLD3_Gauge",
+							gVarValue = 2,
+							uuid = "5734d59a-e752-e065-aaf8-b8cd9611c3a1",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 722.9,
+				name = "Gauge OFF",
+				timeRange = true,
+				timelineIndex = 83,
+				timerEndOffset = 5,
+				timerStartOffset = -30,
+				uuid = "6e53bec6-3184-f1a5-90de-7a2f85a11840",
+				version = 2,
+			},
 		},
 	},
 	[88] = 
@@ -6486,6 +6970,68 @@ local tbl =
 			},
 			inheritedIndex = 7,
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							gVar = "ACR_RikuPLD3_Gauge",
+							uuid = "5734d59a-e752-e065-aaf8-b8cd9611c3a1",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 835.9,
+				name = "Gauge ON",
+				timeRange = true,
+				timelineIndex = 105,
+				timerEndOffset = 5,
+				timerStartOffset = 1,
+				uuid = "4f391688-1092-36a5-8259-bc956ac06ac9",
+				version = 2,
+			},
+			inheritedIndex = 8,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							gVar = "ACR_RikuPLD3_Gauge",
+							gVarValue = 2,
+							uuid = "5734d59a-e752-e065-aaf8-b8cd9611c3a1",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 835.9,
+				name = "Gauge OFF",
+				timeRange = true,
+				timelineIndex = 105,
+				timerEndOffset = 5,
+				timerStartOffset = -30,
+				uuid = "2d9ec043-b1c5-1394-8f6f-c88e4075b829",
+				version = 2,
+			},
+		},
 	},
 	[119] = 
 	{
@@ -7143,6 +7689,68 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 7,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							gVar = "ACR_RikuPLD3_Gauge",
+							uuid = "5734d59a-e752-e065-aaf8-b8cd9611c3a1",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 914.8,
+				name = "Gauge ON",
+				timeRange = true,
+				timelineIndex = 119,
+				timerEndOffset = 5,
+				timerStartOffset = 1,
+				uuid = "d76a1974-7245-476a-888a-509fab89961b",
+				version = 2,
+			},
+			inheritedIndex = 8,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							gVar = "ACR_RikuPLD3_Gauge",
+							gVarValue = 2,
+							uuid = "5734d59a-e752-e065-aaf8-b8cd9611c3a1",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 914.8,
+				name = "Gauge OFF",
+				timeRange = true,
+				timelineIndex = 119,
+				timerEndOffset = 5,
+				timerStartOffset = -30,
+				uuid = "ab5a0e26-f50e-0d6f-83ae-3b039cf06243",
+				version = 2,
+			},
 		},
 	},
 	inheritedProfiles = 
