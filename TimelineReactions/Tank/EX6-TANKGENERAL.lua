@@ -377,12 +377,7 @@ local tbl =
 							{
 								
 								{
-									"40ced84e-11d8-64f5-8a2d-69fb24a8de3f",
-									true,
-								},
-								
-								{
-									"36cadf0d-9af5-389b-ba40-a20097d71447",
+									"e81bbadb-036c-b60d-869c-d47c7b2408c9",
 									true,
 								},
 							},
@@ -398,36 +393,44 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Event",
-							eventArgType = 2,
-							eventSpellID = 45670,
-							uuid = "40ced84e-11d8-64f5-8a2d-69fb24a8de3f",
+							category = "Filter",
+							conditions = 
+							{
+								
+								{
+									"80edfb75-c2c8-5b97-90b0-3f1d65947cf9",
+									true,
+								},
+							},
+							filterTargetType = "ContentID",
+							partyTargetContentID = 14284,
+							uuid = "e81bbadb-036c-b60d-869c-d47c7b2408c9",
 							version = 2,
 						},
+						inheritedIndex = 1,
 					},
 					
 					{
 						data = 
 						{
 							category = "Party",
-							conditionType = 10,
-							inGroupTargetContentID = 14284,
-							inGroupTargetType = "ContentID",
-							partyTargetType = "Event Entity",
-							uuid = "36cadf0d-9af5-389b-ba40-a20097d71447",
+							channelCheckSpellID = 45670,
+							conditionType = 5,
+							partyTargetType = "Detection Target",
+							uuid = "80edfb75-c2c8-5b97-90b0-3f1d65947cf9",
 							version = 2,
 						},
 					},
 				},
-				eventType = 3,
 				mechanicTime = 20.4,
 				name = "Record Knockback",
 				timeRange = true,
 				timelineIndex = 2,
-				timerStartOffset = -15,
-				uuid = "a9b75f55-8bc9-f0da-94c2-92c33de53098",
+				timerStartOffset = -30,
+				uuid = "1d068daa-01b0-6c50-a567-710682352e26",
 				version = 2,
 			},
+			inheritedIndex = 3,
 		},
 		
 		{
@@ -779,12 +782,7 @@ local tbl =
 							{
 								
 								{
-									"40ced84e-11d8-64f5-8a2d-69fb24a8de3f",
-									true,
-								},
-								
-								{
-									"36cadf0d-9af5-389b-ba40-a20097d71447",
+									"e81bbadb-036c-b60d-869c-d47c7b2408c9",
 									true,
 								},
 							},
@@ -800,36 +798,44 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Event",
-							eventArgType = 2,
-							eventSpellID = 45670,
-							uuid = "40ced84e-11d8-64f5-8a2d-69fb24a8de3f",
+							category = "Filter",
+							conditions = 
+							{
+								
+								{
+									"80edfb75-c2c8-5b97-90b0-3f1d65947cf9",
+									true,
+								},
+							},
+							filterTargetType = "ContentID",
+							partyTargetContentID = 14284,
+							uuid = "e81bbadb-036c-b60d-869c-d47c7b2408c9",
 							version = 2,
 						},
+						inheritedIndex = 1,
 					},
 					
 					{
 						data = 
 						{
 							category = "Party",
-							conditionType = 10,
-							inGroupTargetContentID = 14284,
-							inGroupTargetType = "ContentID",
-							partyTargetType = "Event Entity",
-							uuid = "36cadf0d-9af5-389b-ba40-a20097d71447",
+							channelCheckSpellID = 45670,
+							conditionType = 5,
+							partyTargetType = "Detection Target",
+							uuid = "80edfb75-c2c8-5b97-90b0-3f1d65947cf9",
 							version = 2,
 						},
 					},
 				},
-				eventType = 3,
 				mechanicTime = 39.4,
 				name = "Record Knockback",
 				timeRange = true,
 				timelineIndex = 6,
-				timerStartOffset = -15,
-				uuid = "2b1bafda-1965-ccba-8aaa-170d8d403e1d",
+				timerStartOffset = -30,
+				uuid = "4211f57f-5238-4815-a125-d38e925ddcab",
 				version = 2,
 			},
+			inheritedIndex = 2,
 		},
 		
 		{
@@ -1645,6 +1651,7 @@ local tbl =
 				uuid = "6014d483-e06b-dd02-8fe8-df75252a9089",
 				version = 2,
 			},
+			inheritedIndex = 1,
 		},
 		
 		{
@@ -1662,12 +1669,7 @@ local tbl =
 							{
 								
 								{
-									"40ced84e-11d8-64f5-8a2d-69fb24a8de3f",
-									true,
-								},
-								
-								{
-									"36cadf0d-9af5-389b-ba40-a20097d71447",
+									"e81bbadb-036c-b60d-869c-d47c7b2408c9",
 									true,
 								},
 							},
@@ -1683,36 +1685,44 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Event",
-							eventArgType = 2,
-							eventSpellID = 45670,
-							uuid = "40ced84e-11d8-64f5-8a2d-69fb24a8de3f",
+							category = "Filter",
+							conditions = 
+							{
+								
+								{
+									"80edfb75-c2c8-5b97-90b0-3f1d65947cf9",
+									true,
+								},
+							},
+							filterTargetType = "ContentID",
+							partyTargetContentID = 14284,
+							uuid = "e81bbadb-036c-b60d-869c-d47c7b2408c9",
 							version = 2,
 						},
+						inheritedIndex = 1,
 					},
 					
 					{
 						data = 
 						{
 							category = "Party",
-							conditionType = 10,
-							inGroupTargetContentID = 14284,
-							inGroupTargetType = "ContentID",
-							partyTargetType = "Event Entity",
-							uuid = "36cadf0d-9af5-389b-ba40-a20097d71447",
+							channelCheckSpellID = 45670,
+							conditionType = 5,
+							partyTargetType = "Detection Target",
+							uuid = "80edfb75-c2c8-5b97-90b0-3f1d65947cf9",
 							version = 2,
 						},
 					},
 				},
-				eventType = 3,
 				mechanicTime = 79.5,
 				name = "Record Knockback",
 				timeRange = true,
 				timelineIndex = 16,
-				timerStartOffset = -15,
-				uuid = "139550ac-e1c7-c466-b1b2-90582b11bc5c",
+				timerStartOffset = -30,
+				uuid = "e4253ffa-7d58-9af0-a4da-1e56fe4f9117",
 				version = 2,
 			},
+			inheritedIndex = 2,
 		},
 		
 		{
@@ -2095,6 +2105,7 @@ local tbl =
 				uuid = "d70c1a78-1850-9812-b9a0-62cdc65d4caf",
 				version = 2,
 			},
+			inheritedIndex = 1,
 		},
 		
 		{
@@ -2112,12 +2123,7 @@ local tbl =
 							{
 								
 								{
-									"40ced84e-11d8-64f5-8a2d-69fb24a8de3f",
-									true,
-								},
-								
-								{
-									"36cadf0d-9af5-389b-ba40-a20097d71447",
+									"e81bbadb-036c-b60d-869c-d47c7b2408c9",
 									true,
 								},
 							},
@@ -2133,36 +2139,44 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Event",
-							eventArgType = 2,
-							eventSpellID = 45670,
-							uuid = "40ced84e-11d8-64f5-8a2d-69fb24a8de3f",
+							category = "Filter",
+							conditions = 
+							{
+								
+								{
+									"80edfb75-c2c8-5b97-90b0-3f1d65947cf9",
+									true,
+								},
+							},
+							filterTargetType = "ContentID",
+							partyTargetContentID = 14284,
+							uuid = "e81bbadb-036c-b60d-869c-d47c7b2408c9",
 							version = 2,
 						},
+						inheritedIndex = 1,
 					},
 					
 					{
 						data = 
 						{
 							category = "Party",
-							conditionType = 10,
-							inGroupTargetContentID = 14284,
-							inGroupTargetType = "ContentID",
-							partyTargetType = "Event Entity",
-							uuid = "36cadf0d-9af5-389b-ba40-a20097d71447",
+							channelCheckSpellID = 45670,
+							conditionType = 5,
+							partyTargetType = "Detection Target",
+							uuid = "80edfb75-c2c8-5b97-90b0-3f1d65947cf9",
 							version = 2,
 						},
 					},
 				},
-				eventType = 3,
 				mechanicTime = 107.7,
 				name = "Record Knockback",
 				timeRange = true,
 				timelineIndex = 23,
-				timerStartOffset = -15,
-				uuid = "73e1a44a-31d2-e278-a44f-6ad3fd867b14",
+				timerStartOffset = -30,
+				uuid = "0fac08e9-ea1d-ce9b-b356-13b3e038472f",
 				version = 2,
 			},
+			inheritedIndex = 2,
 		},
 		
 		{
@@ -6885,6 +6899,7 @@ local tbl =
 				uuid = "72c97320-55b6-98db-a8ac-bd1bc2fefb21",
 				version = 2,
 			},
+			inheritedIndex = 1,
 		},
 		
 		{
@@ -6902,12 +6917,7 @@ local tbl =
 							{
 								
 								{
-									"40ced84e-11d8-64f5-8a2d-69fb24a8de3f",
-									true,
-								},
-								
-								{
-									"36cadf0d-9af5-389b-ba40-a20097d71447",
+									"e81bbadb-036c-b60d-869c-d47c7b2408c9",
 									true,
 								},
 							},
@@ -6923,36 +6933,44 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Event",
-							eventArgType = 2,
-							eventSpellID = 45670,
-							uuid = "40ced84e-11d8-64f5-8a2d-69fb24a8de3f",
+							category = "Filter",
+							conditions = 
+							{
+								
+								{
+									"80edfb75-c2c8-5b97-90b0-3f1d65947cf9",
+									true,
+								},
+							},
+							filterTargetType = "ContentID",
+							partyTargetContentID = 14284,
+							uuid = "e81bbadb-036c-b60d-869c-d47c7b2408c9",
 							version = 2,
 						},
+						inheritedIndex = 1,
 					},
 					
 					{
 						data = 
 						{
 							category = "Party",
-							conditionType = 10,
-							inGroupTargetContentID = 14284,
-							inGroupTargetType = "ContentID",
-							partyTargetType = "Event Entity",
-							uuid = "36cadf0d-9af5-389b-ba40-a20097d71447",
+							channelCheckSpellID = 45670,
+							conditionType = 5,
+							partyTargetType = "Detection Target",
+							uuid = "80edfb75-c2c8-5b97-90b0-3f1d65947cf9",
 							version = 2,
 						},
 					},
 				},
-				eventType = 3,
 				mechanicTime = 823.4,
 				name = "Record Knockback",
 				timeRange = true,
 				timelineIndex = 102,
-				timerStartOffset = -15,
-				uuid = "76f3cb3c-df67-60b2-a299-226cc4beadb3",
+				timerStartOffset = -30,
+				uuid = "09c0d767-6f32-5d94-a168-ac091a7c2635",
 				version = 2,
 			},
+			inheritedIndex = 2,
 		},
 		
 		{
@@ -8388,6 +8406,7 @@ local tbl =
 				uuid = "47138881-d8bc-8b07-b9af-de4500ab722d",
 				version = 2,
 			},
+			inheritedIndex = 1,
 		},
 		
 		{
@@ -8405,12 +8424,7 @@ local tbl =
 							{
 								
 								{
-									"40ced84e-11d8-64f5-8a2d-69fb24a8de3f",
-									true,
-								},
-								
-								{
-									"36cadf0d-9af5-389b-ba40-a20097d71447",
+									"e81bbadb-036c-b60d-869c-d47c7b2408c9",
 									true,
 								},
 							},
@@ -8426,36 +8440,44 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Event",
-							eventArgType = 2,
-							eventSpellID = 45670,
-							uuid = "40ced84e-11d8-64f5-8a2d-69fb24a8de3f",
+							category = "Filter",
+							conditions = 
+							{
+								
+								{
+									"80edfb75-c2c8-5b97-90b0-3f1d65947cf9",
+									true,
+								},
+							},
+							filterTargetType = "ContentID",
+							partyTargetContentID = 14284,
+							uuid = "e81bbadb-036c-b60d-869c-d47c7b2408c9",
 							version = 2,
 						},
+						inheritedIndex = 1,
 					},
 					
 					{
 						data = 
 						{
 							category = "Party",
-							conditionType = 10,
-							inGroupTargetContentID = 14284,
-							inGroupTargetType = "ContentID",
-							partyTargetType = "Event Entity",
-							uuid = "36cadf0d-9af5-389b-ba40-a20097d71447",
+							channelCheckSpellID = 45670,
+							conditionType = 5,
+							partyTargetType = "Detection Target",
+							uuid = "80edfb75-c2c8-5b97-90b0-3f1d65947cf9",
 							version = 2,
 						},
 					},
 				},
-				eventType = 3,
 				mechanicTime = 889.3,
 				name = "Record Knockback",
 				timeRange = true,
 				timelineIndex = 114,
-				timerStartOffset = -15,
-				uuid = "e93218e6-9ca4-5c99-8c87-3660db1ef96f",
+				timerStartOffset = -30,
+				uuid = "3eb7d7db-efdd-487e-a05c-31314e7ad556",
 				version = 2,
 			},
+			inheritedIndex = 2,
 		},
 		
 		{
