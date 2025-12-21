@@ -1935,6 +1935,55 @@ local tbl =
 				version = 2,
 			},
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3,
+							conditions = 
+							{
+								
+								{
+									"efb35646-8896-f00b-8906-a2c30bb91d13",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "497c75e0-2e3d-ff3d-9905-2453c7555224",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.iscastingknockback == true\n",
+							uuid = "efb35646-8896-f00b-8906-a2c30bb91d13",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 79.5,
+				name = "Sprint",
+				timeRange = true,
+				timelineIndex = 16,
+				timerEndOffset = 5,
+				timerStartOffset = -0.89999961853027,
+				uuid = "5602bb9c-6f09-fcd2-8797-296d5ec5eb65",
+				version = 2,
+			},
+		},
 	},
 	[23] = 
 	{
@@ -2333,6 +2382,55 @@ local tbl =
 				timerEndOffset = 5,
 				timerStartOffset = 0.5,
 				uuid = "adc947c2-2d47-c046-b30f-382b93c562c4",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3,
+							conditions = 
+							{
+								
+								{
+									"efb35646-8896-f00b-8906-a2c30bb91d13",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "497c75e0-2e3d-ff3d-9905-2453c7555224",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.iscastingknockback == true\n",
+							uuid = "efb35646-8896-f00b-8906-a2c30bb91d13",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 107.7,
+				name = "Sprint",
+				timeRange = true,
+				timelineIndex = 23,
+				timerEndOffset = 5,
+				timerStartOffset = -0.89999961853027,
+				uuid = "aa58959f-c002-92f3-81ff-7cfee7c5a72c",
 				version = 2,
 			},
 		},
@@ -3889,7 +3987,7 @@ local tbl =
 				timelineIndex = 52,
 				timerEndOffset = 10,
 				timerOffset = -3,
-				timerStartOffset = -2,
+				timerStartOffset = 1,
 				uuid = "9810cd15-60dc-85d1-8c7b-e4f0ace703bc",
 				version = 2,
 			},
@@ -3976,7 +4074,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 52,
 				timerEndOffset = 10,
-				timerStartOffset = -2,
+				timerStartOffset = 1,
 				uuid = "1bc59f5b-08e0-7202-bcb0-3021d9353504",
 				version = 2,
 			},
@@ -5019,7 +5117,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 64,
 				timerOffset = -10,
-				timerStartOffset = -2.5,
+				timerStartOffset = -5.5,
 				uuid = "47c43dd5-c36b-7159-a7b0-f24c19a696d8",
 				version = 2,
 			},
@@ -5128,7 +5226,7 @@ local tbl =
 				name = "HoL",
 				timeRange = true,
 				timelineIndex = 64,
-				timerStartOffset = -2.5,
+				timerStartOffset = -5.5,
 				uuid = "cf38e664-d4ef-96bc-a905-332369839264",
 				version = 2,
 			},
@@ -5238,7 +5336,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 64,
 				timerOffset = -10,
-				timerStartOffset = -2.5,
+				timerStartOffset = -5.5,
 				uuid = "8b385ed8-a4fa-c45c-9864-5ef05f173c44",
 				version = 2,
 			},
@@ -5346,7 +5444,7 @@ local tbl =
 				name = "Shake it off",
 				timeRange = true,
 				timelineIndex = 64,
-				timerStartOffset = -2.5,
+				timerStartOffset = -5.5,
 				uuid = "9200a664-663f-ddb7-886c-2f5f5b36e1c8",
 				version = 2,
 			},
@@ -5433,7 +5531,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 64,
 				timerOffset = -3,
-				timerStartOffset = -1.5,
+				timerStartOffset = -5.5,
 				uuid = "cb29d1c1-a500-c328-a1f2-6d686a75ebd3",
 				version = 2,
 			},
@@ -5546,7 +5644,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 66,
 				timerOffset = -10,
-				timerStartOffset = -2.5,
+				timerStartOffset = -5.5,
 				uuid = "e86a5513-2408-f62b-982b-f2407151904a",
 				version = 2,
 			},
@@ -5655,7 +5753,7 @@ local tbl =
 				name = "HoL",
 				timeRange = true,
 				timelineIndex = 66,
-				timerStartOffset = -2.5,
+				timerStartOffset = -5.5,
 				uuid = "1aae00d1-390c-fcf9-b439-6f6ecb34dd85",
 				version = 2,
 			},
@@ -5765,7 +5863,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 66,
 				timerOffset = -10,
-				timerStartOffset = -2.5,
+				timerStartOffset = -5.5,
 				uuid = "3cdce25a-9f90-e2c6-939b-af43f4570f18",
 				version = 2,
 			},
@@ -5873,7 +5971,7 @@ local tbl =
 				name = "Shake it off",
 				timeRange = true,
 				timelineIndex = 66,
-				timerStartOffset = -2.5,
+				timerStartOffset = -5.5,
 				uuid = "17165e3f-dbcf-70f0-933d-cf7f908a8db7",
 				version = 2,
 			},
@@ -5960,7 +6058,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 66,
 				timerOffset = -3,
-				timerStartOffset = -1.5,
+				timerStartOffset = -5.5,
 				uuid = "437326a6-a287-7149-bdc3-c744701e2fd6",
 				version = 2,
 			},
@@ -6483,6 +6581,55 @@ local tbl =
 				timerEndOffset = 5,
 				timerStartOffset = 0.5,
 				uuid = "15563702-5799-5b53-9dee-08c61515d670",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3,
+							conditions = 
+							{
+								
+								{
+									"efb35646-8896-f00b-8906-a2c30bb91d13",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "497c75e0-2e3d-ff3d-9905-2453c7555224",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.iscastingknockback == true\n",
+							uuid = "efb35646-8896-f00b-8906-a2c30bb91d13",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 823.4,
+				name = "Sprint",
+				timeRange = true,
+				timelineIndex = 102,
+				timerEndOffset = 5,
+				timerStartOffset = -0.89999961853027,
+				uuid = "7ea7cf42-a327-687a-ac2a-93f6879cb046",
 				version = 2,
 			},
 		},
@@ -7937,6 +8084,55 @@ local tbl =
 				timerEndOffset = 5,
 				timerStartOffset = 0.5,
 				uuid = "bc41d01f-8f85-fc01-922b-0344073f8f08",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3,
+							conditions = 
+							{
+								
+								{
+									"efb35646-8896-f00b-8906-a2c30bb91d13",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "497c75e0-2e3d-ff3d-9905-2453c7555224",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.iscastingknockback == true\n",
+							uuid = "efb35646-8896-f00b-8906-a2c30bb91d13",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 889.3,
+				name = "Sprint",
+				timeRange = true,
+				timelineIndex = 114,
+				timerEndOffset = 5,
+				timerStartOffset = -0.89999961853027,
+				uuid = "a2f3ec6b-d0d1-6c9d-83f0-eae6fdec47e1",
 				version = 2,
 			},
 		},
