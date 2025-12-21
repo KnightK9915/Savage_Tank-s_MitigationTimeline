@@ -3462,114 +3462,6 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 36920,
-							conditions = 
-							{
-								
-								{
-									"aceb9492-b930-0c6d-aaca-9fb9e7c2fb2a",
-									true,
-								},
-								
-								{
-									"0e35af4d-6a68-c664-afc7-591fde06b2ea",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "1ff7ecf5-69f2-0d51-9683-ee0ea48d1ed1",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionID = 36920,
-							conditions = 
-							{
-								
-								{
-									"aceb9492-b930-0c6d-aaca-9fb9e7c2fb2a",
-									true,
-								},
-								
-								{
-									"c8f12501-d004-5bb7-b879-4e0e59e35764",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "983542e1-afb6-5fdb-852b-3365796800cd",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 36920,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "aceb9492-b930-0c6d-aaca-9fb9e7c2fb2a",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
-							name = "RoleMit MT",
-							uuid = "0e35af4d-6a68-c664-afc7-591fde06b2ea",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
-							name = "RoleMit ST",
-							uuid = "c8f12501-d004-5bb7-b879-4e0e59e35764",
-							version = 2,
-						},
-						inheritedIndex = 3,
-					},
-				},
-				mechanicTime = 604.5,
-				name = "Guardian (40)",
-				timeRange = true,
-				timelineIndex = 64,
-				timerStartOffset = -5,
-				uuid = "dafa6776-3e41-6009-9433-206e6db1f7cd",
-				version = 2,
-			},
-			inheritedIndex = 3,
-		},
-	},
-	[66] = 
-	{
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
 							actionID = 25746,
 							conditions = 
 							{
@@ -3654,12 +3546,12 @@ local tbl =
 						inheritedIndex = 3,
 					},
 				},
-				mechanicTime = 618.4,
+				mechanicTime = 604.5,
 				name = "sheltron (15)",
 				timeRange = true,
-				timelineIndex = 66,
+				timelineIndex = 64,
 				timerStartOffset = -2,
-				uuid = "7e7c7606-ec18-fd55-8308-a1f983702021",
+				uuid = "783a867a-344e-570f-a0b2-f1dc7fa37745",
 				version = 2,
 			},
 			inheritedIndex = 1,
