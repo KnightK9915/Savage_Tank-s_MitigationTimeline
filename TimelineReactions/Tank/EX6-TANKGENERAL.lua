@@ -261,116 +261,6 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 7548,
-							atomicPriority = true,
-							conditions = 
-							{
-								
-								{
-									"3c769fba-9767-04e5-b76f-4b392fc3e991",
-									true,
-								},
-								
-								{
-									"621bc8a1-d31f-3411-8060-960781f6bacf",
-									true,
-								},
-								
-								{
-									"25881a9e-1a2d-65d7-8490-1caeec14b683",
-									true,
-								},
-							},
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							uuid = "b1baa1ed-9974-fadc-9ba9-18659c5b7733",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionCDValue = 0.10000000149012,
-							actionID = 7548,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "3c769fba-9767-04e5-b76f-4b392fc3e991",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffIDList = 
-							{
-								2663,
-							},
-							category = "Self",
-							uuid = "621bc8a1-d31f-3411-8060-960781f6bacf",
-							version = 2,
-						},
-						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Filter",
-							conditions = 
-							{
-								
-								{
-									"a51c293c-ef08-eaee-a3f0-c212e53ac2d8",
-									true,
-								},
-							},
-							filterTargetType = "ContentID",
-							partyTargetContentID = 14284,
-							uuid = "25881a9e-1a2d-65d7-8490-1caeec14b683",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Party",
-							channelCheckSpellID = 45677,
-							conditionType = 5,
-							partyTargetType = "Detection Target",
-							uuid = "a51c293c-ef08-eaee-a3f0-c212e53ac2d8",
-							version = 2,
-						},
-					},
-				},
-				enabled = false,
-				mechanicTime = 20.4,
-				name = "Arm's Length",
-				timeRange = true,
-				timelineIndex = 2,
-				timerStartOffset = -4,
-				uuid = "58d2a44f-08ac-1c9d-a1c8-b00ff6b6bb2b",
-				version = 2,
-			},
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
 							aType = "Lua",
 							actionLua = "data.iscastingknockback = true\nself.used = true\n",
 							conditions = 
@@ -430,7 +320,7 @@ local tbl =
 				uuid = "1d068daa-01b0-6c50-a567-710682352e26",
 				version = 2,
 			},
-			inheritedIndex = 3,
+			inheritedIndex = 2,
 		},
 		
 		{
@@ -459,7 +349,7 @@ local tbl =
 								},
 								
 								{
-									"570f2773-828d-4cb2-a22d-c0ed975b03ec",
+									"d9bec8e6-d82c-2aad-bb8b-1dbe98c19269",
 									true,
 								},
 							},
@@ -492,7 +382,7 @@ local tbl =
 								},
 								
 								{
-									"570f2773-828d-4cb2-a22d-c0ed975b03ec",
+									"d9bec8e6-d82c-2aad-bb8b-1dbe98c19269",
 									true,
 								},
 							},
@@ -525,7 +415,7 @@ local tbl =
 								},
 								
 								{
-									"570f2773-828d-4cb2-a22d-c0ed975b03ec",
+									"d9bec8e6-d82c-2aad-bb8b-1dbe98c19269",
 									true,
 								},
 							},
@@ -558,7 +448,7 @@ local tbl =
 								},
 								
 								{
-									"570f2773-828d-4cb2-a22d-c0ed975b03ec",
+									"d9bec8e6-d82c-2aad-bb8b-1dbe98c19269",
 									true,
 								},
 							},
@@ -636,26 +526,93 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "-- Custom Condition: Player outside target's hit radius\nlocal target = Player:GetTarget()\nif target and target.alive and target.attackable then\n    local dist = target.distance2d or 0\n    local hr   = target.hitboxradius or target.hitradius or 0\n    return dist > hr\nend\n\n-- 没有目标时直接返回 false\nreturn false\n",
-							uuid = "570f2773-828d-4cb2-a22d-c0ed975b03ec",
+							conditionLua = "-- 没有目标直接 false\nif not Player or not Player:GetTarget() then\n    return false\nend\n\nlocal target = Player:GetTarget()\n\n-- 确保目标有效\nif not target or not target.pos then\n    return false\nend\n\n-- 计算平面距离（XZ）\nlocal dx = Player.pos.x - target.pos.x\nlocal dz = Player.pos.z - target.pos.z\nlocal distance = math.sqrt(dx * dx + dz * dz)\n\n-- 大于 3 米时返回 true\nreturn distance > 3.0\n",
+							uuid = "d9bec8e6-d82c-2aad-bb8b-1dbe98c19269",
 							version = 2,
 						},
 					},
 				},
-				eventType = 2,
 				mechanicTime = 20.4,
 				name = "Instant Dash",
 				timeRange = true,
 				timelineIndex = 2,
-				timerEndOffset = 5,
-				timerStartOffset = 0.5,
+				timerEndOffset = 10,
 				uuid = "42cebcb0-11f4-47f3-8e15-aaa2104894f0",
 				version = 2,
 			},
+			inheritedIndex = 3,
 		},
-	},
-	[6] = 
-	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.iscastingdrawin = true\nself.used = true\n",
+							conditions = 
+							{
+								
+								{
+									"8468c6cd-424d-e772-b867-e60c3baaf174",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							uuid = "1a41ff4e-27c8-5cf7-9716-3216725c1567",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							conditions = 
+							{
+								
+								{
+									"5044a583-fd1d-31c8-beff-eb3b3dbbc335",
+									true,
+								},
+							},
+							filterTargetType = "ContentID",
+							partyTargetContentID = 14284,
+							uuid = "8468c6cd-424d-e772-b867-e60c3baaf174",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							channelCheckSpellID = 45677,
+							conditionType = 5,
+							partyTargetType = "Detection Target",
+							uuid = "5044a583-fd1d-31c8-beff-eb3b3dbbc335",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 20.4,
+				name = "Record Draw-in",
+				timeRange = true,
+				timelineIndex = 2,
+				timerStartOffset = -30,
+				uuid = "9935f1ae-decb-a256-bdec-e0dea88bf96a",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
 		
 		{
 			data = 
@@ -682,7 +639,7 @@ local tbl =
 								},
 								
 								{
-									"25881a9e-1a2d-65d7-8490-1caeec14b683",
+									"abbf3c3f-c4ee-e7d8-9937-36c95bb1bf75",
 									true,
 								},
 							},
@@ -728,44 +685,76 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Filter",
-							conditions = 
-							{
-								
-								{
-									"a51c293c-ef08-eaee-a3f0-c212e53ac2d8",
-									true,
-								},
-							},
-							filterTargetType = "ContentID",
-							partyTargetContentID = 14284,
-							uuid = "25881a9e-1a2d-65d7-8490-1caeec14b683",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Party",
-							channelCheckSpellID = 45677,
-							conditionType = 5,
-							partyTargetType = "Detection Target",
-							uuid = "a51c293c-ef08-eaee-a3f0-c212e53ac2d8",
+							category = "Lua",
+							conditionLua = "return data.iscastingdrawin == true\n",
+							uuid = "abbf3c3f-c4ee-e7d8-9937-36c95bb1bf75",
 							version = 2,
 						},
 					},
 				},
 				enabled = false,
-				mechanicTime = 39.4,
+				mechanicTime = 20.4,
 				name = "Arm's Length",
 				timeRange = true,
-				timelineIndex = 6,
+				timelineIndex = 2,
 				timerStartOffset = -4,
-				uuid = "6e624877-27bb-9f3a-b19e-df1ebdae86c5",
+				uuid = "58d2a44f-08ac-1c9d-a1c8-b00ff6b6bb2b",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.iscastingknockback = nil\ndata.iscastingdrawin   = nil\n\nself.used = true\n",
+							conditions = 
+							{
+								
+								{
+									"47d433a9-77eb-5c82-968b-646ca24209ec",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							uuid = "f35eb8ce-421f-5fb1-9199-d8f1eaf07aa8",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.iscastingknockback == true\n    or data.iscastingdrawin   == true\n",
+							uuid = "47d433a9-77eb-5c82-968b-646ca24209ec",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 20.4,
+				name = "Reset Records",
+				timeRange = true,
+				timelineIndex = 2,
+				timerEndOffset = 10,
+				timerStartOffset = 5,
+				uuid = "f60dedab-c584-8ee5-9099-15adbd6f2439",
 				version = 2,
 			},
 		},
+	},
+	[6] = 
+	{
 		
 		{
 			data = 
@@ -832,7 +821,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 6,
 				timerStartOffset = -30,
-				uuid = "4211f57f-5238-4815-a125-d38e925ddcab",
+				uuid = "d003dcf8-8838-9580-ad00-ff9f006360c1",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -941,6 +930,7 @@ local tbl =
 							uuid = "4d18dd71-f2cb-be02-918a-0c7605486735",
 							version = 2.1,
 						},
+						inheritedIndex = 3,
 					},
 					
 					{
@@ -1041,20 +1031,228 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "-- Custom Condition: Player outside target's hit radius\nlocal target = Player:GetTarget()\nif target and target.alive and target.attackable then\n    local dist = target.distance2d or 0\n    local hr   = target.hitboxradius or target.hitradius or 0\n    return dist > hr\nend\n\n-- 没有目标时直接返回 false\nreturn false\n",
+							conditionLua = "-- 没有目标直接 false\nif not Player or not Player:GetTarget() then\n    return false\nend\n\nlocal target = Player:GetTarget()\n\n-- 确保目标有效\nif not target or not target.pos then\n    return false\nend\n\n-- 计算平面距离（XZ）\nlocal dx = Player.pos.x - target.pos.x\nlocal dz = Player.pos.z - target.pos.z\nlocal distance = math.sqrt(dx * dx + dz * dz)\n\n-- 大于 3 米时返回 true\nreturn distance > 3.0\n",
 							uuid = "570f2773-828d-4cb2-a22d-c0ed975b03ec",
 							version = 2,
 						},
 					},
 				},
-				eventType = 2,
 				mechanicTime = 39.4,
 				name = "Instant Dash",
 				timeRange = true,
 				timelineIndex = 6,
-				timerEndOffset = 5,
-				timerStartOffset = 0.5,
+				timerEndOffset = 10,
 				uuid = "16558287-bac0-15fd-b2fc-1ce00eaf0c3f",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.iscastingdrawin = true\nself.used = true\n",
+							conditions = 
+							{
+								
+								{
+									"8468c6cd-424d-e772-b867-e60c3baaf174",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							uuid = "1a41ff4e-27c8-5cf7-9716-3216725c1567",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							conditions = 
+							{
+								
+								{
+									"5044a583-fd1d-31c8-beff-eb3b3dbbc335",
+									true,
+								},
+							},
+							filterTargetType = "ContentID",
+							partyTargetContentID = 14284,
+							uuid = "8468c6cd-424d-e772-b867-e60c3baaf174",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							channelCheckSpellID = 45677,
+							conditionType = 5,
+							partyTargetType = "Detection Target",
+							uuid = "5044a583-fd1d-31c8-beff-eb3b3dbbc335",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 39.4,
+				name = "Record Draw-in",
+				timeRange = true,
+				timelineIndex = 6,
+				timerStartOffset = -30,
+				uuid = "46e1cb8c-e0a2-aa5e-98b3-497c571a5dba",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7548,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"3c769fba-9767-04e5-b76f-4b392fc3e991",
+									true,
+								},
+								
+								{
+									"621bc8a1-d31f-3411-8060-960781f6bacf",
+									true,
+								},
+								
+								{
+									"abbf3c3f-c4ee-e7d8-9937-36c95bb1bf75",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "b1baa1ed-9974-fadc-9ba9-18659c5b7733",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionCDValue = 0.10000000149012,
+							actionID = 7548,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "3c769fba-9767-04e5-b76f-4b392fc3e991",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2663,
+							},
+							category = "Self",
+							uuid = "621bc8a1-d31f-3411-8060-960781f6bacf",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.iscastingdrawin == true\n",
+							uuid = "abbf3c3f-c4ee-e7d8-9937-36c95bb1bf75",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 39.4,
+				name = "Arm's Length",
+				timeRange = true,
+				timelineIndex = 6,
+				timerStartOffset = -4,
+				uuid = "d10f3649-9ba9-97d8-a243-0c88a6dd82b7",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.iscastingknockback = nil\ndata.iscastingdrawin   = nil\n\nself.used = true\n",
+							conditions = 
+							{
+								
+								{
+									"47d433a9-77eb-5c82-968b-646ca24209ec",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							uuid = "f35eb8ce-421f-5fb1-9199-d8f1eaf07aa8",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.iscastingknockback == true\n    or data.iscastingdrawin   == true\n",
+							uuid = "47d433a9-77eb-5c82-968b-646ca24209ec",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 39.4,
+				name = "Reset Records",
+				timeRange = true,
+				timelineIndex = 6,
+				timerEndOffset = 10,
+				timerStartOffset = 5,
+				uuid = "3438b9a7-fe1d-1931-8008-2f5520f31596",
 				version = 2,
 			},
 		},
@@ -1553,116 +1751,6 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 7548,
-							atomicPriority = true,
-							conditions = 
-							{
-								
-								{
-									"3c769fba-9767-04e5-b76f-4b392fc3e991",
-									true,
-								},
-								
-								{
-									"621bc8a1-d31f-3411-8060-960781f6bacf",
-									true,
-								},
-								
-								{
-									"25881a9e-1a2d-65d7-8490-1caeec14b683",
-									true,
-								},
-							},
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							uuid = "b1baa1ed-9974-fadc-9ba9-18659c5b7733",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionCDValue = 0.10000000149012,
-							actionID = 7548,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "3c769fba-9767-04e5-b76f-4b392fc3e991",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffIDList = 
-							{
-								2663,
-							},
-							category = "Self",
-							uuid = "621bc8a1-d31f-3411-8060-960781f6bacf",
-							version = 2,
-						},
-						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Filter",
-							conditions = 
-							{
-								
-								{
-									"a51c293c-ef08-eaee-a3f0-c212e53ac2d8",
-									true,
-								},
-							},
-							filterTargetType = "ContentID",
-							partyTargetContentID = 14284,
-							uuid = "25881a9e-1a2d-65d7-8490-1caeec14b683",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Party",
-							channelCheckSpellID = 45677,
-							conditionType = 5,
-							partyTargetType = "Detection Target",
-							uuid = "a51c293c-ef08-eaee-a3f0-c212e53ac2d8",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 79.5,
-				name = "Arm's Length",
-				timeRange = true,
-				timelineIndex = 16,
-				timerStartOffset = -4,
-				uuid = "6014d483-e06b-dd02-8fe8-df75252a9089",
-				version = 2,
-			},
-			inheritedIndex = 1,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
 							aType = "Lua",
 							actionLua = "data.iscastingknockback = true\nself.used = true\n",
 							conditions = 
@@ -1719,7 +1807,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 16,
 				timerStartOffset = -30,
-				uuid = "e4253ffa-7d58-9af0-a4da-1e56fe4f9117",
+				uuid = "eb9d42a3-6734-40da-ba7f-f9b953f82615",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -1918,7 +2006,7 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.iscastingknockback == true\n",
+							conditionLua = "return data.iscastingknockback == true\n\n",
 							uuid = "ebe3ff30-3639-507e-939a-0ae9bea67b75",
 							version = 2,
 						},
@@ -1928,18 +2016,17 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "-- Custom Condition: Player outside target's hit radius\nlocal target = Player:GetTarget()\nif target and target.alive and target.attackable then\n    local dist = target.distance2d or 0\n    local hr   = target.hitboxradius or target.hitradius or 0\n    return dist > hr\nend\n\n-- 没有目标时直接返回 false\nreturn false\n",
+							conditionLua = "-- 没有目标直接 false\nif not Player or not Player:GetTarget() then\n    return false\nend\n\nlocal target = Player:GetTarget()\n\n-- 确保目标有效\nif not target or not target.pos then\n    return false\nend\n\n-- 计算平面距离（XZ）\nlocal dx = Player.pos.x - target.pos.x\nlocal dz = Player.pos.z - target.pos.z\nlocal distance = math.sqrt(dx * dx + dz * dz)\n\n-- 大于 3 米时返回 true\nreturn distance > 3.0\n",
 							uuid = "570f2773-828d-4cb2-a22d-c0ed975b03ec",
 							version = 2,
 						},
 					},
 				},
-				eventType = 2,
 				mechanicTime = 79.5,
 				name = "Instant Dash",
 				timeRange = true,
 				timelineIndex = 16,
-				timerEndOffset = 5,
+				timerEndOffset = 10,
 				timerStartOffset = 0.5,
 				uuid = "f4b8c239-b90b-bda1-bcc5-84967a0db66e",
 				version = 2,
@@ -1978,7 +2065,7 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.iscastingknockback == true\n",
+							conditionLua = "return data.iscastingknockback == true\n\n",
 							uuid = "efb35646-8896-f00b-8906-a2c30bb91d13",
 							version = 2,
 						},
@@ -1994,9 +2081,77 @@ local tbl =
 				version = 2,
 			},
 		},
-	},
-	[23] = 
-	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.iscastingdrawin = true\nself.used = true\n",
+							conditions = 
+							{
+								
+								{
+									"8468c6cd-424d-e772-b867-e60c3baaf174",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							uuid = "1a41ff4e-27c8-5cf7-9716-3216725c1567",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							conditions = 
+							{
+								
+								{
+									"5044a583-fd1d-31c8-beff-eb3b3dbbc335",
+									true,
+								},
+							},
+							filterTargetType = "ContentID",
+							partyTargetContentID = 14284,
+							uuid = "8468c6cd-424d-e772-b867-e60c3baaf174",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							channelCheckSpellID = 45677,
+							conditionType = 5,
+							partyTargetType = "Detection Target",
+							uuid = "5044a583-fd1d-31c8-beff-eb3b3dbbc335",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 79.5,
+				name = "Record Draw-in",
+				timeRange = true,
+				timelineIndex = 16,
+				timerStartOffset = -30,
+				uuid = "42f1e522-4270-d7a5-a366-0d85ae1de29d",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
 		
 		{
 			data = 
@@ -2023,7 +2178,7 @@ local tbl =
 								},
 								
 								{
-									"25881a9e-1a2d-65d7-8490-1caeec14b683",
+									"abbf3c3f-c4ee-e7d8-9937-36c95bb1bf75",
 									true,
 								},
 							},
@@ -2069,44 +2224,75 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Filter",
-							conditions = 
-							{
-								
-								{
-									"a51c293c-ef08-eaee-a3f0-c212e53ac2d8",
-									true,
-								},
-							},
-							filterTargetType = "ContentID",
-							partyTargetContentID = 14284,
-							uuid = "25881a9e-1a2d-65d7-8490-1caeec14b683",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Party",
-							channelCheckSpellID = 45677,
-							conditionType = 5,
-							partyTargetType = "Detection Target",
-							uuid = "a51c293c-ef08-eaee-a3f0-c212e53ac2d8",
+							category = "Lua",
+							conditionLua = "return data.iscastingdrawin == true\n",
+							uuid = "abbf3c3f-c4ee-e7d8-9937-36c95bb1bf75",
 							version = 2,
 						},
 					},
 				},
-				mechanicTime = 107.7,
+				mechanicTime = 79.5,
 				name = "Arm's Length",
 				timeRange = true,
-				timelineIndex = 23,
+				timelineIndex = 16,
 				timerStartOffset = -4,
-				uuid = "d70c1a78-1850-9812-b9a0-62cdc65d4caf",
+				uuid = "da2adf08-f48b-7ea2-8132-57f29290e785",
 				version = 2,
 			},
-			inheritedIndex = 1,
+			inheritedIndex = 5,
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.iscastingknockback = nil\ndata.iscastingdrawin   = nil\n\nself.used = true\n",
+							conditions = 
+							{
+								
+								{
+									"47d433a9-77eb-5c82-968b-646ca24209ec",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							uuid = "f35eb8ce-421f-5fb1-9199-d8f1eaf07aa8",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.iscastingknockback == true\n    or data.iscastingdrawin   == true\n",
+							uuid = "47d433a9-77eb-5c82-968b-646ca24209ec",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 79.5,
+				name = "Reset Records",
+				timeRange = true,
+				timelineIndex = 16,
+				timerEndOffset = 10,
+				timerStartOffset = 5,
+				uuid = "a2be2b62-f1ee-b76d-8134-98da9345f803",
+				version = 2,
+			},
+		},
+	},
+	[23] = 
+	{
 		
 		{
 			data = 
@@ -2173,7 +2359,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 23,
 				timerStartOffset = -30,
-				uuid = "0fac08e9-ea1d-ce9b-b356-13b3e038472f",
+				uuid = "f28041d0-ba0e-84d2-9fd0-a346b1ecab1c",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -2382,18 +2568,17 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "-- Custom Condition: Player outside target's hit radius\nlocal target = Player:GetTarget()\nif target and target.alive and target.attackable then\n    local dist = target.distance2d or 0\n    local hr   = target.hitboxradius or target.hitradius or 0\n    return dist > hr\nend\n\n-- 没有目标时直接返回 false\nreturn false\n",
+							conditionLua = "-- 没有目标直接 false\nif not Player or not Player:GetTarget() then\n    return false\nend\n\nlocal target = Player:GetTarget()\n\n-- 确保目标有效\nif not target or not target.pos then\n    return false\nend\n\n-- 计算平面距离（XZ）\nlocal dx = Player.pos.x - target.pos.x\nlocal dz = Player.pos.z - target.pos.z\nlocal distance = math.sqrt(dx * dx + dz * dz)\n\n-- 大于 3 米时返回 true\nreturn distance > 3.0\n",
 							uuid = "570f2773-828d-4cb2-a22d-c0ed975b03ec",
 							version = 2,
 						},
 					},
 				},
-				eventType = 2,
 				mechanicTime = 107.7,
 				name = "Instant Dash",
 				timeRange = true,
 				timelineIndex = 23,
-				timerEndOffset = 5,
+				timerEndOffset = 10,
 				timerStartOffset = 0.5,
 				uuid = "adc947c2-2d47-c046-b30f-382b93c562c4",
 				version = 2,
@@ -2432,7 +2617,7 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.iscastingknockback == true\n",
+							conditionLua = "return data.iscastingknockback == true\n\n",
 							uuid = "efb35646-8896-f00b-8906-a2c30bb91d13",
 							version = 2,
 						},
@@ -2445,6 +2630,215 @@ local tbl =
 				timerEndOffset = 5,
 				timerStartOffset = -0.89999961853027,
 				uuid = "aa58959f-c002-92f3-81ff-7cfee7c5a72c",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.iscastingdrawin = true\nself.used = true\n",
+							conditions = 
+							{
+								
+								{
+									"8468c6cd-424d-e772-b867-e60c3baaf174",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							uuid = "1a41ff4e-27c8-5cf7-9716-3216725c1567",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							conditions = 
+							{
+								
+								{
+									"5044a583-fd1d-31c8-beff-eb3b3dbbc335",
+									true,
+								},
+							},
+							filterTargetType = "ContentID",
+							partyTargetContentID = 14284,
+							uuid = "8468c6cd-424d-e772-b867-e60c3baaf174",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							channelCheckSpellID = 45677,
+							conditionType = 5,
+							partyTargetType = "Detection Target",
+							uuid = "5044a583-fd1d-31c8-beff-eb3b3dbbc335",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 107.7,
+				name = "Record Draw-in",
+				timeRange = true,
+				timelineIndex = 23,
+				timerStartOffset = -30,
+				uuid = "77b00213-2482-0018-968a-2de79c99e9e5",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7548,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"3c769fba-9767-04e5-b76f-4b392fc3e991",
+									true,
+								},
+								
+								{
+									"621bc8a1-d31f-3411-8060-960781f6bacf",
+									true,
+								},
+								
+								{
+									"abbf3c3f-c4ee-e7d8-9937-36c95bb1bf75",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "b1baa1ed-9974-fadc-9ba9-18659c5b7733",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionCDValue = 0.10000000149012,
+							actionID = 7548,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "3c769fba-9767-04e5-b76f-4b392fc3e991",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2663,
+							},
+							category = "Self",
+							uuid = "621bc8a1-d31f-3411-8060-960781f6bacf",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.iscastingdrawin == true\n",
+							uuid = "abbf3c3f-c4ee-e7d8-9937-36c95bb1bf75",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 107.7,
+				name = "Arm's Length",
+				timeRange = true,
+				timelineIndex = 23,
+				timerStartOffset = -4,
+				uuid = "9f5e0f11-a942-ca40-b0b0-f97ba6bdd289",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.iscastingknockback = nil\ndata.iscastingdrawin   = nil\n\nself.used = true\n",
+							conditions = 
+							{
+								
+								{
+									"47d433a9-77eb-5c82-968b-646ca24209ec",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							uuid = "f35eb8ce-421f-5fb1-9199-d8f1eaf07aa8",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.iscastingknockback == true\n    or data.iscastingdrawin   == true\n",
+							uuid = "47d433a9-77eb-5c82-968b-646ca24209ec",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 107.7,
+				name = "Reset Records",
+				timeRange = true,
+				timelineIndex = 23,
+				timerEndOffset = 10,
+				timerStartOffset = 5,
+				uuid = "6829bf75-b012-7a0d-87ec-d899a4503cd0",
 				version = 2,
 			},
 		},
@@ -3107,7 +3501,7 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "-- Custom Condition: Player outside target's hit radius\nlocal target = Player:GetTarget()\nif target and target.alive and target.attackable then\n    local dist = target.distance2d or 0\n    local hr   = target.hitboxradius or target.hitradius or 0\n    return dist > hr\nend\n\n-- 没有目标时直接返回 false\nreturn false\n",
+							conditionLua = "-- 没有目标直接 false\nif not Player or not Player:GetTarget() then\n    return false\nend\n\nlocal target = Player:GetTarget()\n\n-- 确保目标有效\nif not target or not target.pos then\n    return false\nend\n\n-- 计算平面距离（XZ）\nlocal dx = Player.pos.x - target.pos.x\nlocal dz = Player.pos.z - target.pos.z\nlocal distance = math.sqrt(dx * dx + dz * dz)\n\n-- 大于 3 米时返回 true\nreturn distance > 3.0\n",
 							uuid = "8b0ad9cb-a078-d7f4-b360-913cfcd76980",
 							version = 2,
 						},
@@ -3301,7 +3695,7 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "-- Custom Condition: Player outside target's hit radius\nlocal target = Player:GetTarget()\nif target and target.alive and target.attackable then\n    local dist = target.distance2d or 0\n    local hr   = target.hitboxradius or target.hitradius or 0\n    return dist > hr\nend\n\n-- 没有目标时直接返回 false\nreturn false\n",
+							conditionLua = "-- 没有目标直接 false\nif not Player or not Player:GetTarget() then\n    return false\nend\n\nlocal target = Player:GetTarget()\n\n-- 确保目标有效\nif not target or not target.pos then\n    return false\nend\n\n-- 计算平面距离（XZ）\nlocal dx = Player.pos.x - target.pos.x\nlocal dz = Player.pos.z - target.pos.z\nlocal distance = math.sqrt(dx * dx + dz * dz)\n\n-- 大于 3 米时返回 true\nreturn distance > 3.0\n",
 							uuid = "8b0ad9cb-a078-d7f4-b360-913cfcd76980",
 							version = 2,
 						},
@@ -3495,7 +3889,7 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "-- Custom Condition: Player outside target's hit radius\nlocal target = Player:GetTarget()\nif target and target.alive and target.attackable then\n    local dist = target.distance2d or 0\n    local hr   = target.hitboxradius or target.hitradius or 0\n    return dist > hr\nend\n\n-- 没有目标时直接返回 false\nreturn false\n",
+							conditionLua = "-- 没有目标直接 false\nif not Player or not Player:GetTarget() then\n    return false\nend\n\nlocal target = Player:GetTarget()\n\n-- 确保目标有效\nif not target or not target.pos then\n    return false\nend\n\n-- 计算平面距离（XZ）\nlocal dx = Player.pos.x - target.pos.x\nlocal dz = Player.pos.z - target.pos.z\nlocal distance = math.sqrt(dx * dx + dz * dz)\n\n-- 大于 3 米时返回 true\nreturn distance > 3.0\n",
 							uuid = "8b0ad9cb-a078-d7f4-b360-913cfcd76980",
 							version = 2,
 						},
@@ -3689,7 +4083,7 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "-- Custom Condition: Player outside target's hit radius\nlocal target = Player:GetTarget()\nif target and target.alive and target.attackable then\n    local dist = target.distance2d or 0\n    local hr   = target.hitboxradius or target.hitradius or 0\n    return dist > hr\nend\n\n-- 没有目标时直接返回 false\nreturn false\n",
+							conditionLua = "-- 没有目标直接 false\nif not Player or not Player:GetTarget() then\n    return false\nend\n\nlocal target = Player:GetTarget()\n\n-- 确保目标有效\nif not target or not target.pos then\n    return false\nend\n\n-- 计算平面距离（XZ）\nlocal dx = Player.pos.x - target.pos.x\nlocal dz = Player.pos.z - target.pos.z\nlocal distance = math.sqrt(dx * dx + dz * dz)\n\n-- 大于 3 米时返回 true\nreturn distance > 3.0\n",
 							uuid = "8b0ad9cb-a078-d7f4-b360-913cfcd76980",
 							version = 2,
 						},
@@ -3883,7 +4277,7 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "-- Custom Condition: Player outside target's hit radius\nlocal target = Player:GetTarget()\nif target and target.alive and target.attackable then\n    local dist = target.distance2d or 0\n    local hr   = target.hitboxradius or target.hitradius or 0\n    return dist > hr\nend\n\n-- 没有目标时直接返回 false\nreturn false\n",
+							conditionLua = "-- 没有目标直接 false\nif not Player or not Player:GetTarget() then\n    return false\nend\n\nlocal target = Player:GetTarget()\n\n-- 确保目标有效\nif not target or not target.pos then\n    return false\nend\n\n-- 计算平面距离（XZ）\nlocal dx = Player.pos.x - target.pos.x\nlocal dz = Player.pos.z - target.pos.z\nlocal distance = math.sqrt(dx * dx + dz * dz)\n\n-- 大于 3 米时返回 true\nreturn distance > 3.0\n",
 							uuid = "8b0ad9cb-a078-d7f4-b360-913cfcd76980",
 							version = 2,
 						},
@@ -6801,116 +7195,6 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 7548,
-							atomicPriority = true,
-							conditions = 
-							{
-								
-								{
-									"3c769fba-9767-04e5-b76f-4b392fc3e991",
-									true,
-								},
-								
-								{
-									"621bc8a1-d31f-3411-8060-960781f6bacf",
-									true,
-								},
-								
-								{
-									"25881a9e-1a2d-65d7-8490-1caeec14b683",
-									true,
-								},
-							},
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							uuid = "b1baa1ed-9974-fadc-9ba9-18659c5b7733",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionCDValue = 0.10000000149012,
-							actionID = 7548,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "3c769fba-9767-04e5-b76f-4b392fc3e991",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffIDList = 
-							{
-								2663,
-							},
-							category = "Self",
-							uuid = "621bc8a1-d31f-3411-8060-960781f6bacf",
-							version = 2,
-						},
-						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Filter",
-							conditions = 
-							{
-								
-								{
-									"a51c293c-ef08-eaee-a3f0-c212e53ac2d8",
-									true,
-								},
-							},
-							filterTargetType = "ContentID",
-							partyTargetContentID = 14284,
-							uuid = "25881a9e-1a2d-65d7-8490-1caeec14b683",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Party",
-							channelCheckSpellID = 45677,
-							conditionType = 5,
-							partyTargetType = "Detection Target",
-							uuid = "a51c293c-ef08-eaee-a3f0-c212e53ac2d8",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 823.4,
-				name = "Arm's Length",
-				timeRange = true,
-				timelineIndex = 102,
-				timerStartOffset = -4,
-				uuid = "72c97320-55b6-98db-a8ac-bd1bc2fefb21",
-				version = 2,
-			},
-			inheritedIndex = 1,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
 							aType = "Lua",
 							actionLua = "data.iscastingknockback = true\nself.used = true\n",
 							conditions = 
@@ -6967,7 +7251,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 102,
 				timerStartOffset = -30,
-				uuid = "09c0d767-6f32-5d94-a168-ac091a7c2635",
+				uuid = "37f2f3c2-d0b2-b543-9280-8617bdd0d0e1",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -7166,7 +7450,7 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.iscastingknockback == true\n",
+							conditionLua = "return data.iscastingknockback == true\n\n",
 							uuid = "ebe3ff30-3639-507e-939a-0ae9bea67b75",
 							version = 2,
 						},
@@ -7176,18 +7460,17 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "-- Custom Condition: Player outside target's hit radius\nlocal target = Player:GetTarget()\nif target and target.alive and target.attackable then\n    local dist = target.distance2d or 0\n    local hr   = target.hitboxradius or target.hitradius or 0\n    return dist > hr\nend\n\n-- 没有目标时直接返回 false\nreturn false\n",
+							conditionLua = "-- 没有目标直接 false\nif not Player or not Player:GetTarget() then\n    return false\nend\n\nlocal target = Player:GetTarget()\n\n-- 确保目标有效\nif not target or not target.pos then\n    return false\nend\n\n-- 计算平面距离（XZ）\nlocal dx = Player.pos.x - target.pos.x\nlocal dz = Player.pos.z - target.pos.z\nlocal distance = math.sqrt(dx * dx + dz * dz)\n\n-- 大于 3 米时返回 true\nreturn distance > 3.0\n",
 							uuid = "570f2773-828d-4cb2-a22d-c0ed975b03ec",
 							version = 2,
 						},
 					},
 				},
-				eventType = 2,
 				mechanicTime = 823.4,
 				name = "Instant Dash",
 				timeRange = true,
 				timelineIndex = 102,
-				timerEndOffset = 5,
+				timerEndOffset = 10,
 				timerStartOffset = 0.5,
 				uuid = "15563702-5799-5b53-9dee-08c61515d670",
 				version = 2,
@@ -7239,6 +7522,215 @@ local tbl =
 				timerEndOffset = 5,
 				timerStartOffset = -0.89999961853027,
 				uuid = "7ea7cf42-a327-687a-ac2a-93f6879cb046",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.iscastingdrawin = true\nself.used = true\n",
+							conditions = 
+							{
+								
+								{
+									"8468c6cd-424d-e772-b867-e60c3baaf174",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							uuid = "1a41ff4e-27c8-5cf7-9716-3216725c1567",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							conditions = 
+							{
+								
+								{
+									"5044a583-fd1d-31c8-beff-eb3b3dbbc335",
+									true,
+								},
+							},
+							filterTargetType = "ContentID",
+							partyTargetContentID = 14284,
+							uuid = "8468c6cd-424d-e772-b867-e60c3baaf174",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							channelCheckSpellID = 45677,
+							conditionType = 5,
+							partyTargetType = "Detection Target",
+							uuid = "5044a583-fd1d-31c8-beff-eb3b3dbbc335",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 823.4,
+				name = "Record Draw-in",
+				timeRange = true,
+				timelineIndex = 102,
+				timerStartOffset = -30,
+				uuid = "244a8973-46fe-f9b7-91f8-13c1d63f4304",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7548,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"3c769fba-9767-04e5-b76f-4b392fc3e991",
+									true,
+								},
+								
+								{
+									"621bc8a1-d31f-3411-8060-960781f6bacf",
+									true,
+								},
+								
+								{
+									"abbf3c3f-c4ee-e7d8-9937-36c95bb1bf75",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "b1baa1ed-9974-fadc-9ba9-18659c5b7733",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionCDValue = 0.10000000149012,
+							actionID = 7548,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "3c769fba-9767-04e5-b76f-4b392fc3e991",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2663,
+							},
+							category = "Self",
+							uuid = "621bc8a1-d31f-3411-8060-960781f6bacf",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.iscastingdrawin == true\n",
+							uuid = "abbf3c3f-c4ee-e7d8-9937-36c95bb1bf75",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 823.4,
+				name = "Arm's Length",
+				timeRange = true,
+				timelineIndex = 102,
+				timerStartOffset = -4,
+				uuid = "c0bffc8f-ece0-409e-b784-0c0d85f8fa42",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.iscastingknockback = nil\ndata.iscastingdrawin   = nil\n\nself.used = true\n",
+							conditions = 
+							{
+								
+								{
+									"47d433a9-77eb-5c82-968b-646ca24209ec",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							uuid = "f35eb8ce-421f-5fb1-9199-d8f1eaf07aa8",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.iscastingknockback == true\n    or data.iscastingdrawin   == true\n",
+							uuid = "47d433a9-77eb-5c82-968b-646ca24209ec",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 823.4,
+				name = "Reset Records",
+				timeRange = true,
+				timelineIndex = 102,
+				timerEndOffset = 10,
+				timerStartOffset = 5,
+				uuid = "c8e868ea-e5d6-a195-8eaf-c3c9195f3cad",
 				version = 2,
 			},
 		},
@@ -8308,116 +8800,6 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 7548,
-							atomicPriority = true,
-							conditions = 
-							{
-								
-								{
-									"3c769fba-9767-04e5-b76f-4b392fc3e991",
-									true,
-								},
-								
-								{
-									"621bc8a1-d31f-3411-8060-960781f6bacf",
-									true,
-								},
-								
-								{
-									"25881a9e-1a2d-65d7-8490-1caeec14b683",
-									true,
-								},
-							},
-							gVar = "ACR_RikuGNB3_CD",
-							ignoreWeaveRules = true,
-							uuid = "b1baa1ed-9974-fadc-9ba9-18659c5b7733",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionCDValue = 0.10000000149012,
-							actionID = 7548,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "3c769fba-9767-04e5-b76f-4b392fc3e991",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffIDList = 
-							{
-								2663,
-							},
-							category = "Self",
-							uuid = "621bc8a1-d31f-3411-8060-960781f6bacf",
-							version = 2,
-						},
-						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Filter",
-							conditions = 
-							{
-								
-								{
-									"a51c293c-ef08-eaee-a3f0-c212e53ac2d8",
-									true,
-								},
-							},
-							filterTargetType = "ContentID",
-							partyTargetContentID = 14284,
-							uuid = "25881a9e-1a2d-65d7-8490-1caeec14b683",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Party",
-							channelCheckSpellID = 45677,
-							conditionType = 5,
-							partyTargetType = "Detection Target",
-							uuid = "a51c293c-ef08-eaee-a3f0-c212e53ac2d8",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 889.3,
-				name = "Arm's Length",
-				timeRange = true,
-				timelineIndex = 114,
-				timerStartOffset = -4,
-				uuid = "47138881-d8bc-8b07-b9af-de4500ab722d",
-				version = 2,
-			},
-			inheritedIndex = 1,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
 							aType = "Lua",
 							actionLua = "data.iscastingknockback = true\nself.used = true\n",
 							conditions = 
@@ -8474,10 +8856,10 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 114,
 				timerStartOffset = -30,
-				uuid = "3eb7d7db-efdd-487e-a05c-31314e7ad556",
+				uuid = "4da62c9c-9ae8-945c-b594-2127a070552e",
 				version = 2,
 			},
-			inheritedIndex = 2,
+			inheritedIndex = 1,
 		},
 		
 		{
@@ -8683,18 +9065,17 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "-- Custom Condition: Player outside target's hit radius\nlocal target = Player:GetTarget()\nif target and target.alive and target.attackable then\n    local dist = target.distance2d or 0\n    local hr   = target.hitboxradius or target.hitradius or 0\n    return dist > hr\nend\n\n-- 没有目标时直接返回 false\nreturn false\n",
+							conditionLua = "-- 没有目标直接 false\nif not Player or not Player:GetTarget() then\n    return false\nend\n\nlocal target = Player:GetTarget()\n\n-- 确保目标有效\nif not target or not target.pos then\n    return false\nend\n\n-- 计算平面距离（XZ）\nlocal dx = Player.pos.x - target.pos.x\nlocal dz = Player.pos.z - target.pos.z\nlocal distance = math.sqrt(dx * dx + dz * dz)\n\n-- 大于 3 米时返回 true\nreturn distance > 3.0\n",
 							uuid = "570f2773-828d-4cb2-a22d-c0ed975b03ec",
 							version = 2,
 						},
 					},
 				},
-				eventType = 2,
 				mechanicTime = 889.3,
 				name = "Instant Dash",
 				timeRange = true,
 				timelineIndex = 114,
-				timerEndOffset = 5,
+				timerEndOffset = 10,
 				timerStartOffset = 0.5,
 				uuid = "bc41d01f-8f85-fc01-922b-0344073f8f08",
 				version = 2,
@@ -8733,7 +9114,7 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return data.iscastingknockback == true\n",
+							conditionLua = "return data.iscastingknockback == true\n\n",
 							uuid = "efb35646-8896-f00b-8906-a2c30bb91d13",
 							version = 2,
 						},
@@ -8746,6 +9127,215 @@ local tbl =
 				timerEndOffset = 5,
 				timerStartOffset = -0.89999961853027,
 				uuid = "a2f3ec6b-d0d1-6c9d-83f0-eae6fdec47e1",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.iscastingdrawin = true\nself.used = true\n",
+							conditions = 
+							{
+								
+								{
+									"8468c6cd-424d-e772-b867-e60c3baaf174",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							uuid = "1a41ff4e-27c8-5cf7-9716-3216725c1567",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							conditions = 
+							{
+								
+								{
+									"5044a583-fd1d-31c8-beff-eb3b3dbbc335",
+									true,
+								},
+							},
+							filterTargetType = "ContentID",
+							partyTargetContentID = 14284,
+							uuid = "8468c6cd-424d-e772-b867-e60c3baaf174",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							channelCheckSpellID = 45677,
+							conditionType = 5,
+							partyTargetType = "Detection Target",
+							uuid = "5044a583-fd1d-31c8-beff-eb3b3dbbc335",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 889.3,
+				name = "Record Draw-in",
+				timeRange = true,
+				timelineIndex = 114,
+				timerStartOffset = -30,
+				uuid = "3b173f30-fbec-c2c2-bdad-dfad8f004537",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7548,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"3c769fba-9767-04e5-b76f-4b392fc3e991",
+									true,
+								},
+								
+								{
+									"621bc8a1-d31f-3411-8060-960781f6bacf",
+									true,
+								},
+								
+								{
+									"abbf3c3f-c4ee-e7d8-9937-36c95bb1bf75",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "b1baa1ed-9974-fadc-9ba9-18659c5b7733",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionCDValue = 0.10000000149012,
+							actionID = 7548,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "3c769fba-9767-04e5-b76f-4b392fc3e991",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2663,
+							},
+							category = "Self",
+							uuid = "621bc8a1-d31f-3411-8060-960781f6bacf",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.iscastingdrawin == true\n",
+							uuid = "abbf3c3f-c4ee-e7d8-9937-36c95bb1bf75",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 889.3,
+				name = "Arm's Length",
+				timeRange = true,
+				timelineIndex = 114,
+				timerStartOffset = -4,
+				uuid = "742d27fa-c4fe-7d3a-8d75-dcd73b76fdf8",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.iscastingknockback = nil\ndata.iscastingdrawin   = nil\n\nself.used = true\n",
+							conditions = 
+							{
+								
+								{
+									"47d433a9-77eb-5c82-968b-646ca24209ec",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							uuid = "f35eb8ce-421f-5fb1-9199-d8f1eaf07aa8",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.iscastingknockback == true\n    or data.iscastingdrawin   == true\n",
+							uuid = "47d433a9-77eb-5c82-968b-646ca24209ec",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 889.3,
+				name = "Reset Records",
+				timeRange = true,
+				timelineIndex = 114,
+				timerEndOffset = 10,
+				timerStartOffset = 5,
+				uuid = "f7e6cda2-487e-2417-8ab5-d4abadf7b6a8",
 				version = 2,
 			},
 		},
