@@ -3032,6 +3032,224 @@ local tbl =
 			inheritedIndex = 9,
 		},
 	},
+	[64] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36935,
+							conditions = 
+							{
+								
+								{
+									"30f02147-8e47-399f-99c5-279582aa248d",
+									true,
+								},
+								
+								{
+									"64b89849-d595-b613-81a4-a5311d8c7ce5",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "d00db0ec-8fe2-c41e-8ee5-1c53101aa3bb",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36935,
+							conditions = 
+							{
+								
+								{
+									"30f02147-8e47-399f-99c5-279582aa248d",
+									true,
+								},
+								
+								{
+									"dfaad91e-209f-d416-94b3-90aae5141977",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "011236d3-94f8-0ef9-9126-40a50792fbd8",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 36935,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "30f02147-8e47-399f-99c5-279582aa248d",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "64b89849-d595-b613-81a4-a5311d8c7ce5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "dfaad91e-209f-d416-94b3-90aae5141977",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				mechanicTime = 604.5,
+				name = "Great Nebula (40)",
+				timeRange = true,
+				timelineIndex = 64,
+				timerStartOffset = -5,
+				uuid = "6bc24e7e-1c49-7c41-b982-8eea2ba62c0e",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+	},
+	[66] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"ebe0ca92-5578-a2f9-84cb-511cb3181787",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"cbf45802-aac3-ae7a-94ee-152cd8aed9c9",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "0c379931-cb6d-9fea-a951-f2858e3d7614",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "ebe0ca92-5578-a2f9-84cb-511cb3181787",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "cbf45802-aac3-ae7a-94ee-152cd8aed9c9",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				mechanicTime = 618.4,
+				name = "HoC (15)",
+				timeRange = true,
+				timelineIndex = 66,
+				timerOffset = -1,
+				timerStartOffset = -2,
+				uuid = "9a11b880-b59b-dd24-93c9-85538f063ea5",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+	},
 	[73] = 
 	{
 		
