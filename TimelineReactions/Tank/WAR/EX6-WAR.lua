@@ -3730,7 +3730,7 @@ local tbl =
 				name = "BW/NF (20)",
 				timeRange = true,
 				timelineIndex = 54,
-				timerEndOffset = 50.099998474121,
+				timerEndOffset = 36.200000762939,
 				timerStartOffset = 1,
 				uuid = "ff52a4d9-121a-79c6-8ef9-7fd76c5e571a",
 				version = 2,
@@ -3739,115 +3739,6 @@ local tbl =
 		},
 	},
 	[64] = 
-	{
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 36923,
-							conditions = 
-							{
-								
-								{
-									"0aeec9c1-c189-d8ba-8695-4f2d2314a955",
-									true,
-								},
-								
-								{
-									"36c371d2-c8ba-9ef8-9fac-8d437f6a80c2",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuWAR3_CD",
-							ignoreWeaveRules = true,
-							uuid = "e3339fc5-29f8-ea78-b047-31e1f4105077",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionID = 36923,
-							conditions = 
-							{
-								
-								{
-									"0aeec9c1-c189-d8ba-8695-4f2d2314a955",
-									true,
-								},
-								
-								{
-									"2d536a46-b386-c668-a572-dba47b26b279",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuWAR3_CD",
-							ignoreWeaveRules = true,
-							uuid = "01619822-78dc-b6e4-a89d-e7c94dd5dc32",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 36923,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "0aeec9c1-c189-d8ba-8695-4f2d2314a955",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
-							name = "RoleMit MT",
-							uuid = "36c371d2-c8ba-9ef8-9fac-8d437f6a80c2",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
-							name = "RoleMit ST",
-							uuid = "2d536a46-b386-c668-a572-dba47b26b279",
-							version = 2,
-						},
-						inheritedIndex = 3,
-					},
-				},
-				mechanicTime = 604.5,
-				name = "Damnation (40)",
-				timeRange = true,
-				timelineIndex = 64,
-				timerOffset = -5,
-				timerStartOffset = -5,
-				uuid = "6649034b-892f-438a-a94c-e4873a10b115",
-				version = 2,
-			},
-			inheritedIndex = 3,
-		},
-	},
-	[66] = 
 	{
 		
 		{
@@ -3947,12 +3838,12 @@ local tbl =
 						inheritedIndex = 3,
 					},
 				},
-				mechanicTime = 618.4,
+				mechanicTime = 604.5,
 				name = "BW (20)",
 				timeRange = true,
-				timelineIndex = 66,
+				timelineIndex = 64,
 				timerStartOffset = -2.5,
-				uuid = "bc801da4-cb4e-b4f6-933b-4af22c785344",
+				uuid = "bedf636d-5bce-69e2-aa87-48003f799c67",
 				version = 2,
 			},
 			inheritedIndex = 1,
