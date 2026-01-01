@@ -50,7 +50,7 @@ local tbl =
 					data = 
 					{
 						aType = "Lua",
-						actionLua = "-- Invuln Countdown Starter (OnEntityCast)\n-- 30: インビンシブル, 43: ホルムギャング, 3638: リビングデッド, 16152: ボーライド\n\nlocal INVULN = {\n  [30]    = \"インビンシブル\",\n  [43]    = \"ホルムギャング\",\n  [16152] = \"ボーライド\",\n}\n\nlocal me = Player\nif not me or not eventArgs then return end\n\nlocal id = eventArgs.spellID\nif eventArgs.entityID == me.id and INVULN[id] then\n  data._invuln = data._invuln or {}\n  local s = data._invuln\n  s.name        = INVULN[id]     -- 技能名\n  s.start_ms    = Now()          -- 开始时间\n  s.duration_ms = 10000          -- 固定10秒\n  s.next_tick   = 10             -- 下一次要播报的“整秒”\n  s.active      = true\n  s.channel     = \"/e\"\n\n  -- 起手（10秒时，即施放瞬间）\n  SendTextCommand(s.channel .. \" \" .. s.name .. \"（無敵)を発動しました、効果期間は10秒です <se.9>\")\n\n  self.used = true\nend\n\n",
+						actionLua = "-- Invuln Countdown Starter (OnEntityCast)\n-- 30: インビンシブル, 43: ホルムギャング, 3638: リビングデッド, 16152: ボーライド\n\nlocal INVULN = {\n  [30]    = \"インビンシブル\",\n  [43]    = \"ホルムギャング\",\n  [16152] = \"ボーライド\",\n}\n\nlocal me = Player\nif not me or not eventArgs then return end\n\nlocal id = eventArgs.spellID\nif eventArgs.entityID == me.id and INVULN[id] then\n  data._invuln = data._invuln or {}\n  local s = data._invuln\n  s.name        = INVULN[id]     -- 技能名\n  s.start_ms    = Now()          -- 开始时间\n  s.duration_ms = 10000          -- 固定10秒\n  s.next_tick   = 10             -- 下一次要播报的“整秒”\n  s.active      = true\n  s.channel     = \"/p\"\n\n  -- 起手（10秒时，即施放瞬间）\n  SendTextCommand(s.channel .. \" \" .. s.name .. \"（無敵)を発動しました、効果期間は10秒です <se.9>\")\n\n  self.used = true\nend\n\n",
 						gVar = "ACR_RikuGNB3_CD",
 						uuid = "67089b36-3b55-c6f1-97b8-352e113727a1",
 						version = 2.1,
