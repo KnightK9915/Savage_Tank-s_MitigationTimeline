@@ -50,7 +50,7 @@ local tbl =
 					data = 
 					{
 						aType = "Lua",
-						actionLua = "local INVULN_IDS = {\n  [30]    = true,  -- Hallowed Ground\n  [43]    = true,  -- Holmgang\n  [16152] = true,  -- Superbolide\n}\n\nlocal me = Player\nif not me or not eventArgs then return end\n\nif eventArgs.entityID == me.id and INVULN_IDS[eventArgs.spellID] then\n\n  data._invuln = data._invuln or {}\n  local s = data._invuln\n  s.start_ms   = Now()                   \n  s.duration_ms= 10000              \n  s.next_tick  = 10                      \n  s.active     = true\n  s.channel    = \"/p\"                       -- channel\n  s.prefix9    = \"無敵終了まであと\"           -- Invuln ends in ◯◯ seconds    \n  s.suffix     = \"秒 <se.12>\"                -- ◯◯ seconds\n  s.msgStart   = \"無敵を発動しました <se.9>\"      -- invuln used\n  s.msgEnd     = \"無敵効果が終わりました <se.11>\"  -- invuln ended\n\n  SendTextCommand(s.channel .. \" \" .. s.msgStart)\n\n  self.used = true\nend\n",
+						actionLua = "-- Invuln Countdown Starter (OnEntityCast)\n-- 30: インビンシブル, 43: ホルムギャング, 3638: リビングデッド, 16152: ボーライド\n\nlocal INVULN = {\n  [30]    = \"インビンシブル\",\n  [43]    = \"ホルムギャング\",\n  [16152] = \"ボーライド\",\n}\n\nlocal me = Player\nif not me or not eventArgs then return end\n\nlocal id = eventArgs.spellID\nif eventArgs.entityID == me.id and INVULN[id] then\n  data._invuln = data._invuln or {}\n  local s = data._invuln\n  s.name        = INVULN[id]     -- 技能名\n  s.start_ms    = Now()          -- 开始时间\n  s.duration_ms = 10000          -- 固定10秒\n  s.next_tick   = 10             -- 下一次要播报的“整秒”\n  s.active      = true\n  s.channel     = \"/p\"\n\n  -- 起手（10秒时，即施放瞬间）\n  SendTextCommand(s.channel .. \" \" .. s.name .. \"（無敵)を発動しました、効果期間は10秒です\")\n\n  self.used = true\nend\n\n",
 						gVar = "ACR_RikuGNB3_CD",
 						uuid = "67089b36-3b55-c6f1-97b8-352e113727a1",
 						version = 2.1,
@@ -78,7 +78,7 @@ local tbl =
 					data = 
 					{
 						aType = "Lua",
-						actionLua = "local s = data._invuln\nif not s or not s.active then return end\n\nlocal elapsed = TimeSince(s.start_ms)\nlocal remain_ms = (s.duration_ms or 10000) - elapsed\nlocal remain_s  = math.ceil(math.max(remain_ms, 0) / 1000)\n\nif remain_s < (s.next_tick or 0) then\n  s.next_tick = remain_s\n\n  if remain_s <= 0 then\n    SendTextCommand((s.channel or \"/p\") .. \" \" .. (s.msgEnd or \"無敵効果が終わりました\"))\n    s.active = false\n    self.used = true\n    return\n  end\n\n  if remain_s == 9 then\n    local msg = (s.channel or \"/p\") .. \" \" .. (s.prefix9 or \"無敵終了まであと\") .. tostring(remain_s) .. (s.suffix or \"秒\")\n    SendTextCommand(msg)\n    self.used = true\n  elseif remain_s >= 1 and remain_s <= 8 then\n    local msg = (s.channel or \"/p\") .. \" \" .. tostring(remain_s) .. (s.suffix or \"秒\")\n    SendTextCommand(msg)\n    self.used = true\n  end\nend\n",
+						actionLua = "-- Invuln Countdown Ticker (OnFrame)\n-- 规则：\n-- 5秒时：\"/p <技能名>終了まであとX秒\"\n-- 4..1秒时：\"/p X秒\"\n-- 0秒时：\"/p <技能名>効果が終了した\"\n\nlocal s = data._invuln\nif not s or not s.active then return end\n\nlocal elapsed   = TimeSince(s.start_ms or 0)\nlocal duration  = s.duration_ms or 10000\nlocal remain_ms = math.max(duration - elapsed, 0)\nlocal remain_s  = math.ceil(remain_ms / 1000)\n\nif remain_s < (s.next_tick or 0) then\n  s.next_tick = remain_s\n  local ch = s.channel or \"/p\"\n  local name = s.name or \"\"\n\n  if remain_s <= 0 then\n    SendTextCommand(ch .. \" \" .. name .. \"効果が終了した\")\n    s.active = false\n    self.used = true\n    return\n  end\n\n  if remain_s == 5 then\n    SendTextCommand(ch .. \" \" .. name .. \"終了まであと\" .. tostring(remain_s) .. \"秒\")\n    self.used = true\n  elseif remain_s >= 1 and remain_s <= 4 then\n    SendTextCommand(ch .. \" \" .. tostring(remain_s) .. \"秒\")\n    self.used = true\n  end\nend\n\n",
 						gVar = "ACR_RikuGNB3_CD",
 						uuid = "5226fdc9-4088-b912-b678-cb10db941252",
 						version = 2.1,
@@ -170,6 +170,7 @@ local tbl =
 			conditions = 
 			{
 			},
+			enabled = false,
 			eventType = 2,
 			name = "[Tank] Co-Miti",
 			uuid = "a1efe846-1d41-6be9-b4f9-8a7b659f3edd",
