@@ -50,7 +50,7 @@ local tbl =
 					data = 
 					{
 						aType = "Lua",
-						actionLua = "-- Invuln Countdown Starter (OnEntityCast)\n-- 30: インビンシブル, 43: ホルムギャング, 3638: リビングデッド, 16152: ボーライド\n\nlocal INVULN = {\n  [30]    = \"インビンシブル\",\n  [43]    = \"ホルムギャング\",\n  [16152] = \"ボーライド\",\n}\n\nlocal me = Player\nif not me or not eventArgs then return end\n\nlocal id = eventArgs.spellID\nif eventArgs.entityID == me.id and INVULN[id] then\n  data._invuln = data._invuln or {}\n  local s = data._invuln\n  s.name        = INVULN[id]     -- 技能名\n  s.start_ms    = Now()          -- 开始时间\n  s.duration_ms = 10000          -- 固定10秒\n  s.next_tick   = 10             -- 下一次要播报的“整秒”\n  s.active      = true\n  s.channel     = \"/p\"\n\n  -- 起手（10秒时，即施放瞬间）\n  SendTextCommand(s.channel .. \" \" .. s.name .. \"（無敵)を発動しました、効果期間は10秒です\")\n\n  self.used = true\nend\n\n",
+						actionLua = "-- Invuln Countdown Starter (OnEntityCast)\n-- 30: インビンシブル, 43: ホルムギャング, 3638: リビングデッド, 16152: ボーライド\n\nlocal INVULN = {\n  [30]    = \"インビンシブル\",\n  [43]    = \"ホルムギャング\",\n  [16152] = \"ボーライド\",\n}\n\nlocal me = Player\nif not me or not eventArgs then return end\n\nlocal id = eventArgs.spellID\nif eventArgs.entityID == me.id and INVULN[id] then\n  data._invuln = data._invuln or {}\n  local s = data._invuln\n  s.name        = INVULN[id]     -- 技能名\n  s.start_ms    = Now()          -- 开始时间\n  s.duration_ms = 10000          -- 固定10秒\n  s.next_tick   = 10             -- 下一次要播报的“整秒”\n  s.active      = true\n  s.channel     = \"/e\"\n\n  -- 起手（10秒时，即施放瞬间）\n  SendTextCommand(s.channel .. \" \" .. s.name .. \"（無敵)を発動しました、効果期間は10秒です <se.9>\")\n\n  self.used = true\nend\n\n",
 						gVar = "ACR_RikuGNB3_CD",
 						uuid = "67089b36-3b55-c6f1-97b8-352e113727a1",
 						version = 2.1,
@@ -78,7 +78,7 @@ local tbl =
 					data = 
 					{
 						aType = "Lua",
-						actionLua = "-- Invuln Countdown Ticker (OnFrame)\n-- 规则：\n-- 5秒时：\"/p <技能名>終了まであとX秒\"\n-- 4..1秒时：\"/p X秒\"\n-- 0秒时：\"/p <技能名>効果が終了した\"\n\nlocal s = data._invuln\nif not s or not s.active then return end\n\nlocal elapsed   = TimeSince(s.start_ms or 0)\nlocal duration  = s.duration_ms or 10000\nlocal remain_ms = math.max(duration - elapsed, 0)\nlocal remain_s  = math.ceil(remain_ms / 1000)\n\nif remain_s < (s.next_tick or 0) then\n  s.next_tick = remain_s\n  local ch = s.channel or \"/p\"\n  local name = s.name or \"\"\n\n  if remain_s <= 0 then\n    SendTextCommand(ch .. \" \" .. name .. \"効果が終了した\")\n    s.active = false\n    self.used = true\n    return\n  end\n\n  if remain_s == 5 then\n    SendTextCommand(ch .. \" \" .. name .. \"終了まであと\" .. tostring(remain_s) .. \"秒\")\n    self.used = true\n  elseif remain_s >= 1 and remain_s <= 4 then\n    SendTextCommand(ch .. \" \" .. tostring(remain_s) .. \"秒\")\n    self.used = true\n  end\nend\n\n",
+						actionLua = "-- Invuln Countdown Ticker (OnFrame)\n-- 规则：\n-- 5秒时：\"/p <技能名>終了まであとX秒\"\n-- 4..1秒时：\"/p X秒\"\n-- 0秒时：\"/p <技能名>効果が終了した\"\n\nlocal s = data._invuln\nif not s or not s.active then return end\n\nlocal elapsed   = TimeSince(s.start_ms or 0)\nlocal duration  = s.duration_ms or 10000\nlocal remain_ms = math.max(duration - elapsed, 0)\nlocal remain_s  = math.ceil(remain_ms / 1000)\n\nif remain_s < (s.next_tick or 0) then\n  s.next_tick = remain_s\n  local ch = s.channel or \"/p\"\n  local name = s.name or \"\"\n\n  if remain_s <= 0 then\n    SendTextCommand(ch .. \" \" .. name .. \"効果が終了した <se.11>\")\n    s.active = false\n    self.used = true\n    return\n  end\n\n  if remain_s == 5 then\n    SendTextCommand(ch .. \" \" .. name .. \"終了まであと\" .. tostring(remain_s) .. \"秒 <se.7>\")\n    self.used = true\n  elseif remain_s >= 1 and remain_s <= 4 then\n    SendTextCommand(ch .. \" \" .. tostring(remain_s) .. \"秒 <se.4>\")\n    self.used = true\n  end\nend\n\n",
 						gVar = "ACR_RikuGNB3_CD",
 						uuid = "5226fdc9-4088-b912-b678-cb10db941252",
 						version = 2.1,
@@ -138,6 +138,7 @@ local tbl =
 						uuid = "ad76910b-de5a-b9ee-9e90-5a1b2227dd79",
 						version = 2.1,
 					},
+					inheritedIndex = 1,
 				},
 			},
 			conditions = 
@@ -160,7 +161,7 @@ local tbl =
 					data = 
 					{
 						aType = "Lua",
-						actionLua = "local NAME = {\n  [7382]  = \"インターベンション\",       -- Intervention (PLD)\n  [16464] = \"原初の猛り\",               -- Nascent Flash (WAR)\n  [7393]  = \"ブラックナイト\",           -- The Blackest Night (DRK)\n  [25754] = \"オブレーション\",           -- Oblation (DRK)\n  [25758] = \"ハート・オブ・コランダム\", -- Heart of Corundum (GNB)\n  [16151] = \"オーロラ\",                 -- Aurora (GNB)\n}\n\nlocal COOLDOWN_MS = 400 \n\nlocal me = Player\nif not me or not eventArgs then return end\n\nlocal spell = eventArgs.spellID\nif NAME[spell] and eventArgs.entityID == me.id then\n  local tid = eventArgs.targetID\n  if tid and tid ~= 0 and tid ~= me.id then\n\n    local target = (EntityList and EntityList:Get(tid))\n                or (TensorCore and TensorCore.findEntityByID and TensorCore.findEntityByID(tid))\n    local tName = target and target.name\n    if tName and tName ~= \"\" then\n\n      data._mitiSay = data._mitiSay or {}\n      local last = data._mitiSay[spell] or 0\n      if TimeSince(last) >= COOLDOWN_MS then\n        SendTextCommand(\"/p \" .. tName .. \"に\" .. NAME[spell] .. \"を入れました <se.5>\")\n        data._mitiSay[spell] = Now()\n      end\n      self.used = true\n    end\n  end\nend\n",
+						actionLua = "local NAME = {\n  [7382]  = \"インターベンション\",       -- Intervention (PLD)\n  [16464] = \"原初の猛り\",               -- Nascent Flash (WAR)\n  [7393]  = \"ブラックナイト\",           -- The Blackest Night (DRK)\n  [25754] = \"オブレーション\",           -- Oblation (DRK)\n  [25758] = \"ハート・オブ・コランダム\", -- Heart of Corundum (GNB)\n  [16151] = \"オーロラ\",                 -- Aurora (GNB)\n}\n\nlocal COOLDOWN_MS = 400 \n\nlocal me = Player\nif not me or not eventArgs then return end\n\nlocal spell = eventArgs.spellID\nif NAME[spell] and eventArgs.entityID == me.id then\n  local tid = eventArgs.targetID\n  if tid and tid ~= 0 and tid ~= me.id then\n\n    local target = (EntityList and EntityList:Get(tid))\n                or (TensorCore and TensorCore.findEntityByID and TensorCore.findEntityByID(tid))\n    local tName = target and target.name\n    if tName and tName ~= \"\" then\n\n      data._mitiSay = data._mitiSay or {}\n      local last = data._mitiSay[spell] or 0\n      if TimeSince(last) >= COOLDOWN_MS then\n        SendTextCommand(\"/e \" .. tName .. \"に\" .. NAME[spell] .. \"を入れました <se.5>\")\n        data._mitiSay[spell] = Now()\n      end\n      self.used = true\n    end\n  end\nend\n",
 						gVar = "ACR_RikuGNB3_CD",
 						uuid = "42667292-280a-0690-811c-662b87afefc2",
 						version = 2.1,
@@ -170,7 +171,6 @@ local tbl =
 			conditions = 
 			{
 			},
-			enabled = false,
 			eventType = 2,
 			name = "[Tank] Co-Miti",
 			uuid = "a1efe846-1d41-6be9-b4f9-8a7b659f3edd",
