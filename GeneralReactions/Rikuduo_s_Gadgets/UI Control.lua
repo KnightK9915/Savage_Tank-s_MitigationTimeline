@@ -414,6 +414,90 @@ local tbl =
 			version = 2,
 		},
 		inheritedIndex = 9,
+	},
+	
+	{
+		data = 
+		{
+			actions = 
+			{
+				
+				{
+					data = 
+					{
+						aType = "Lua",
+						actionLua = "-- TensorReactions - Custom Action\n-- Rule: For every targetable+attackable entity within 6m that is in combat, draw a 0.2m filled circle under its feet.\n-- Color logic:\n--   - Yellow by default\n--   - Red if the entity is currently targeting the player\n-- Dynamic behavior is achieved by drawing short-lived circles each evaluation tick.\n\nlocal function ToU32(r, g, b, a)\n\tif (GUI and GUI.ColorConvertFloat4ToU32) then\n\t\treturn GUI:ColorConvertFloat4ToU32(r, g, b, a)\n\tend\n\t-- Fallback pack (ABGR): A<<24 | B<<16 | G<<8 | R\n\tlocal function clamp01(x)\n\t\tif (x == nil) then return 0 end\n\t\tif (x < 0) then return 0 end\n\t\tif (x > 1) then return 1 end\n\t\treturn x\n\tend\n\tr, g, b, a = clamp01(r), clamp01(g), clamp01(b), clamp01(a)\n\tlocal R = math.floor(r * 255 + 0.5)\n\tlocal G = math.floor(g * 255 + 0.5)\n\tlocal B = math.floor(b * 255 + 0.5)\n\tlocal A = math.floor(a * 255 + 0.5)\n\treturn (A * 16777216) + (B * 65536) + (G * 256) + R\nend\n\nlocal function tableValid(t)\n\tif (table and table.valid) then\n\t\treturn table.valid(t)\n\tend\n\treturn (type(t) == \"table\" and next(t) ~= nil)\nend\n\n-- Safety guards\nif (not Player or not Player.alive or not Player.id) then\n\treturn nil\nend\nif (not Argus2 or not Argus2.addTimedCircleFilled) then\n\treturn nil\nend\n\nlocal RANGE      = 3.0\nlocal RADIUS     = 0.2\nlocal SEGMENTS   = 18\nlocal DURATIONMS = 250\n\nlocal COLOR_YELLOW = ToU32(1.0, 1.0, 0.0, 0.45)\nlocal COLOR_RED    = ToU32(1.0, 0.0, 0.0, 0.45)\n\n-- Try to use filters first; fall back gracefully if some filters are unsupported in the current build.\nlocal filterA = \"alive,attackable,targetable,incombat,maxdistance=\" .. tostring(RANGE)\nlocal filterB = \"alive,attackable,incombat,maxdistance=\" .. tostring(RANGE)\nlocal filterC = \"alive,attackable,maxdistance=\" .. tostring(RANGE)\n\nlocal el = EntityList(filterA)\nif (not tableValid(el)) then el = EntityList(filterB) end\nif (not tableValid(el)) then el = EntityList(filterC) end\n\nif (tableValid(el)) then\n\tfor _, ent in pairs(el) do\n\t\tif (ent and ent.id and ent.id ~= Player.id) then\n\t\t\t-- Ensure \"in combat\" if filters didn't enforce it\n\t\t\tlocal inCombat = (ent.incombat == true) or (ent.inCombat == true)\n\t\t\tif (inCombat) then\n\t\t\t\t-- Target check: \"entity targets player\" => use targetid when available\n\t\t\t\tlocal tid = ent.targetid or ent.targetID\n\t\t\t\tlocal isTargetingMe = (tid ~= nil and tid == Player.id)\n\n\t\t\t\tlocal pos = ent.pos\n\t\t\t\tlocal x = (pos and pos.x) or ent.x\n\t\t\t\tlocal y = (pos and pos.y) or ent.y\n\t\t\t\tlocal z = (pos and pos.z) or ent.z\n\n\t\t\t\tif (x ~= nil and y ~= nil and z ~= nil) then\n\t\t\t\t\tlocal c = isTargetingMe and COLOR_RED or COLOR_YELLOW\n\t\t\t\t\tpcall(function()\n\t\t\t\t\t\tArgus2.addTimedCircleFilled(DURATIONMS, x, y, z, RADIUS, SEGMENTS, c, c)\n\t\t\t\t\tend)\n\t\t\t\tend\n\t\t\tend\n\t\tend\n\tend\nend\n\n-- Draw-only action: no skill cast\nreturn nil\n",
+						conditions = 
+						{
+							
+							{
+								"59508357-27a3-016b-9172-cad17b4a8fa4",
+								true,
+							},
+						},
+						gVar = "ACR_RikuGNB3_CD",
+						uuid = "5fb15713-6c0c-c641-b9d4-5ea6e445161f",
+						version = 2.1,
+					},
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					data = 
+					{
+						category = "Filter",
+						conditions = 
+						{
+							
+							{
+								"68de1e4d-67f0-f877-881f-9e1ce88a3d82",
+								true,
+							},
+							
+							{
+								"4ed642a7-0d7e-fba3-9e17-d03fb8ca26f3",
+								true,
+							},
+						},
+						matchAnyBuff = true,
+						uuid = "59508357-27a3-016b-9172-cad17b4a8fa4",
+						version = 2,
+					},
+					inheritedIndex = 1,
+				},
+				
+				{
+					data = 
+					{
+						category = "Self",
+						conditionType = 9,
+						name = "is Tank",
+						partyTargetType = "Tank",
+						uuid = "68de1e4d-67f0-f877-881f-9e1ce88a3d82",
+						version = 2,
+					},
+				},
+				
+				{
+					data = 
+					{
+						category = "Self",
+						conditionType = 9,
+						name = "is Melee DPS",
+						partyTargetType = "Melee DPS",
+						uuid = "4ed642a7-0d7e-fba3-9e17-d03fb8ca26f3",
+						version = 2,
+					},
+				},
+			},
+			enabled = false,
+			eventType = 13,
+			name = "Highlight the Attackable Target w/ Range",
+			uuid = "07d5ac0f-dfc2-6720-9d36-fcd0ef70b294",
+			version = 2,
+		},
 	}, 
 	inheritedProfiles = 
 	{
