@@ -498,6 +498,177 @@ local tbl =
 			uuid = "07d5ac0f-dfc2-6720-9d36-fcd0ef70b294",
 			version = 2,
 		},
+	},
+	
+	{
+		data = 
+		{
+			actions = 
+			{
+				
+				{
+					data = 
+					{
+						aType = "Lua",
+						actionLua = "-- UI Hotbar (On Draw only)\n\nif not (GUI and GUI.Begin and GUI.End and GUI.Button) then\n    return\nend\n\ndata.riku_hotbar = data.riku_hotbar or {}\nlocal hb = data.riku_hotbar\n\nif hb.open == nil then hb.open = true end\n\n-- 初始化运行态字段（避免 nil）\nhb.active       = hb.active or false\nhb.queue        = hb.queue or nil\nhb.idx          = hb.idx or 1\nhb.startedAt    = hb.startedAt or 0\nhb.nextAt       = hb.nextAt or 0\nhb.ignoreWeave  = hb.ignoreWeave or false\nhb.allowInterrupt = hb.allowInterrupt or false\nhb.pendingID    = hb.pendingID or 0\nhb.pendingAt    = hb.pendingAt or 0\n\nlocal flags = (GUI.WindowFlags_AlwaysAutoResize ~= nil) and GUI.WindowFlags_AlwaysAutoResize or 0\n\nlocal openRet, visibleRet = GUI:Begin(\"GNB\", hb.open, flags)\nhb.open = openRet\n\nif visibleRet then\n    local function StartQueue(name, steps, ignoreWeave, allowInterrupt)\n        hb.active = true\n        hb.queue = { name = name, steps = steps }\n        hb.idx = 1\n        hb.startedAt = (Now and Now()) or 0\n        hb.nextAt = 0\n        hb.ignoreWeave = (ignoreWeave == true)\n        hb.allowInterrupt = (allowInterrupt == true)\n        hb.pendingID = 0\n        hb.pendingAt = 0\n    end\n\n    if GUI:Button(\"15+10+20\") then\n        StartQueue(\"15+10+20\", {\n            { id = 7531,  skipIfOnCooldown = true  },\n            { id = 16140, skipIfOnCooldown = true },\n            { id = 25758, skipIfOnCooldown = true },\n            { id = 16161, skipIfOnCooldown = false },\n        }, true, false)\n    end\n\n    if GUI:Button(\"15+40\") then\n        StartQueue(\"15+40\", {\n            { id = 36935, skipIfOnCooldown = true },\n            { id = 25758, skipIfOnCooldown = true },\n            { id = 16148, skipIfOnCooldown = true },\n            { id = 16161, skipIfOnCooldown = false },\n        }, true, false)\n    end\n\n    if GUI:Button(\"invuln\") then\n        StartQueue(\"invuln\", {\n            { id = 16152, skipIfOnCooldown = false },\n        }, false, false)\n    end\n\n    if GUI:Button(\"STOP\") then\n        hb.active = false\n        hb.queue = nil\n        hb.idx = 1\n        hb.pendingID = 0\n        hb.pendingAt = 0\n    end\nend\n\nGUI:End()\n\ndata.riku_hotbar = hb\n",
+						conditions = 
+						{
+							
+							{
+								"241c18ed-0dd2-5463-b026-892196b9f14d",
+								true,
+							},
+						},
+						gVar = "ACR_RikuGNB3_CD",
+						name = "GNB MIts",
+						uuid = "3ba46ba9-756f-0390-81fc-1d1749694cf4",
+						version = 2.1,
+					},
+				},
+				
+				{
+					data = 
+					{
+						aType = "Lua",
+						actionLua = "-- UI Hotbar (On Draw only)\n\nif not (GUI and GUI.Begin and GUI.End and GUI.Button) then\n    return\nend\n\ndata.riku_hotbar = data.riku_hotbar or {}\nlocal hb = data.riku_hotbar\n\nif hb.open == nil then hb.open = true end\n\n-- 初始化运行态字段（避免 nil）\nhb.active       = hb.active or false\nhb.queue        = hb.queue or nil\nhb.idx          = hb.idx or 1\nhb.startedAt    = hb.startedAt or 0\nhb.nextAt       = hb.nextAt or 0\nhb.ignoreWeave  = hb.ignoreWeave or false\nhb.allowInterrupt = hb.allowInterrupt or false\nhb.pendingID    = hb.pendingID or 0\nhb.pendingAt    = hb.pendingAt or 0\n\nlocal flags = (GUI.WindowFlags_AlwaysAutoResize ~= nil) and GUI.WindowFlags_AlwaysAutoResize or 0\n\nlocal openRet, visibleRet = GUI:Begin(\"DRK\", hb.open, flags)\nhb.open = openRet\n\nif visibleRet then\n    local function StartQueue(name, steps, ignoreWeave, allowInterrupt)\n        hb.active = true\n        hb.queue = { name = name, steps = steps }\n        hb.idx = 1\n        hb.startedAt = (Now and Now()) or 0\n        hb.nextAt = 0\n        hb.ignoreWeave = (ignoreWeave == true)\n        hb.allowInterrupt = (allowInterrupt == true)\n        hb.pendingID = 0\n        hb.pendingAt = 0\n    end\n\n    if GUI:Button(\"15+10+20\") then\n        StartQueue(\"15+10+20\", {\n            { id = 7531,  skipIfOnCooldown = true  },\n            { id = 3634, skipIfOnCooldown = true },\n            { id = 25754, skipIfOnCooldown = true },\n            { id = 7393, skipIfOnCooldown = false },\n        }, true, false)\n    end\n\n    if GUI:Button(\"15+40\") then\n        StartQueue(\"15+40\", {\n            { id = 36927, skipIfOnCooldown = true },\n            { id = 25754, skipIfOnCooldown = true },\n            { id = 3636, skipIfOnCooldown = true },\n            { id = 7393, skipIfOnCooldown = false },\n        }, true, false)\n    end\n\n    if GUI:Button(\"invuln\") then\n        StartQueue(\"invuln\", {\n            { id = 3638, skipIfOnCooldown = false },\n        }, false, false)\n    end\n\n    if GUI:Button(\"STOP\") then\n        hb.active = false\n        hb.queue = nil\n        hb.idx = 1\n        hb.pendingID = 0\n        hb.pendingAt = 0\n    end\nend\n\nGUI:End()\n\ndata.riku_hotbar = hb\n",
+						conditions = 
+						{
+							
+							{
+								"737e1cb7-0dd8-a699-9fcd-020762c587a8",
+								true,
+							},
+						},
+						gVar = "ACR_RikuGNB3_CD",
+						name = "DRK Mits",
+						uuid = "4de73f74-0b14-2c6f-b43a-63b5177eceef",
+						version = 2.1,
+					},
+				},
+				
+				{
+					data = 
+					{
+						aType = "Lua",
+						actionLua = "-- UI Hotbar (On Draw only)\n\nif not (GUI and GUI.Begin and GUI.End and GUI.Button) then\n    return\nend\n\ndata.riku_hotbar = data.riku_hotbar or {}\nlocal hb = data.riku_hotbar\n\nif hb.open == nil then hb.open = true end\n\n-- 初始化运行态字段（避免 nil）\nhb.active       = hb.active or false\nhb.queue        = hb.queue or nil\nhb.idx          = hb.idx or 1\nhb.startedAt    = hb.startedAt or 0\nhb.nextAt       = hb.nextAt or 0\nhb.ignoreWeave  = hb.ignoreWeave or false\nhb.allowInterrupt = hb.allowInterrupt or false\nhb.pendingID    = hb.pendingID or 0\nhb.pendingAt    = hb.pendingAt or 0\n\nlocal flags = (GUI.WindowFlags_AlwaysAutoResize ~= nil) and GUI.WindowFlags_AlwaysAutoResize or 0\n\nlocal openRet, visibleRet = GUI:Begin(\"WAR\", hb.open, flags)\nhb.open = openRet\n\nif visibleRet then\n    local function StartQueue(name, steps, ignoreWeave, allowInterrupt)\n        hb.active = true\n        hb.queue = { name = name, steps = steps }\n        hb.idx = 1\n        hb.startedAt = (Now and Now()) or 0\n        hb.nextAt = 0\n        hb.ignoreWeave = (ignoreWeave == true)\n        hb.allowInterrupt = (allowInterrupt == true)\n        hb.pendingID = 0\n        hb.pendingAt = 0\n    end\n\n    if GUI:Button(\"15+10+20\") then\n        StartQueue(\"15+10+20\", {\n            { id = 7531,  skipIfOnCooldown = true  },\n            { id = 40, skipIfOnCooldown = true },\n            { id = 25751, skipIfOnCooldown = true },\n            { id = 3551, skipIfOnCooldown = false },\n        }, true, false)\n    end\n\n    if GUI:Button(\"15+40\") then\n        StartQueue(\"15+40\", {\n            { id = 36923, skipIfOnCooldown = true },\n            { id = 25751, skipIfOnCooldown = true },\n            { id = 44, skipIfOnCooldown = true },\n            { id = 3551, skipIfOnCooldown = false },\n        }, true, false)\n    end\n\n    if GUI:Button(\"invuln\") then\n        StartQueue(\"invuln\", {\n            { id = 43, skipIfOnCooldown = false },\n        }, false, false)\n    end\n\n    if GUI:Button(\"STOP\") then\n        hb.active = false\n        hb.queue = nil\n        hb.idx = 1\n        hb.pendingID = 0\n        hb.pendingAt = 0\n    end\nend\n\nGUI:End()\n\ndata.riku_hotbar = hb\n",
+						conditions = 
+						{
+							
+							{
+								"bff6c55b-1007-cc54-b960-44ac3d66cbfe",
+								true,
+							},
+						},
+						gVar = "ACR_RikuGNB3_CD",
+						name = "WAR Mits",
+						uuid = "abf1da7b-c1cb-059e-939f-27aad3596875",
+						version = 2.1,
+					},
+				},
+				
+				{
+					data = 
+					{
+						aType = "Lua",
+						actionLua = "-- UI Hotbar (On Draw only)\n\nif not (GUI and GUI.Begin and GUI.End and GUI.Button) then\n    return\nend\n\ndata.riku_hotbar = data.riku_hotbar or {}\nlocal hb = data.riku_hotbar\n\nif hb.open == nil then hb.open = true end\n\n-- 初始化运行态字段（避免 nil）\nhb.active       = hb.active or false\nhb.queue        = hb.queue or nil\nhb.idx          = hb.idx or 1\nhb.startedAt    = hb.startedAt or 0\nhb.nextAt       = hb.nextAt or 0\nhb.ignoreWeave  = hb.ignoreWeave or false\nhb.allowInterrupt = hb.allowInterrupt or false\nhb.pendingID    = hb.pendingID or 0\nhb.pendingAt    = hb.pendingAt or 0\n\nlocal flags = (GUI.WindowFlags_AlwaysAutoResize ~= nil) and GUI.WindowFlags_AlwaysAutoResize or 0\n\nlocal openRet, visibleRet = GUI:Begin(\"PLD\", hb.open, flags)\nhb.open = openRet\n\nif visibleRet then\n    local function StartQueue(name, steps, ignoreWeave, allowInterrupt)\n        hb.active = true\n        hb.queue = { name = name, steps = steps }\n        hb.idx = 1\n        hb.startedAt = (Now and Now()) or 0\n        hb.nextAt = 0\n        hb.ignoreWeave = (ignoreWeave == true)\n        hb.allowInterrupt = (allowInterrupt == true)\n        hb.pendingID = 0\n        hb.pendingAt = 0\n    end\n\n    if GUI:Button(\"15+10+20\") then\n        StartQueue(\"15+10+20\", {\n            { id = 7531,  skipIfOnCooldown = true  },\n            { id = 22, skipIfOnCooldown = true },\n            { id = 25746, skipIfOnCooldown = true },\n            { id = 3542, skipIfOnCooldown = false },\n        }, true, false)\n    end\n\n    if GUI:Button(\"15+40\") then\n        StartQueue(\"15+40\", {\n            { id = 36920, skipIfOnCooldown = true },\n            { id = 25746, skipIfOnCooldown = true },\n            { id = 3542, skipIfOnCooldown = false },\n        }, true, false)\n    end\n\n    if GUI:Button(\"invuln\") then\n        StartQueue(\"invuln\", {\n            { id = 30, skipIfOnCooldown = false },\n        }, false, false)\n    end\n\n    if GUI:Button(\"STOP\") then\n        hb.active = false\n        hb.queue = nil\n        hb.idx = 1\n        hb.pendingID = 0\n        hb.pendingAt = 0\n    end\nend\n\nGUI:End()\n\ndata.riku_hotbar = hb\n",
+						conditions = 
+						{
+							
+							{
+								"a65cfc8c-7eb9-3afe-b937-ce967ca7e94e",
+								true,
+							},
+						},
+						gVar = "ACR_RikuGNB3_CD",
+						name = "PLD MIts",
+						uuid = "a95b9547-89be-19fd-8efc-90565aee4394",
+						version = 2.1,
+					},
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					data = 
+					{
+						category = "Self",
+						conditionType = 13,
+						jobValue = "GUNBREAKER",
+						name = "GNB",
+						uuid = "241c18ed-0dd2-5463-b026-892196b9f14d",
+						version = 2,
+					},
+				},
+				
+				{
+					data = 
+					{
+						category = "Self",
+						conditionType = 13,
+						jobValue = "DARKKNIGHT",
+						name = "DRK",
+						uuid = "737e1cb7-0dd8-a699-9fcd-020762c587a8",
+						version = 2,
+					},
+				},
+				
+				{
+					data = 
+					{
+						category = "Self",
+						conditionType = 13,
+						jobValue = "WARRIOR",
+						name = "WAR",
+						uuid = "bff6c55b-1007-cc54-b960-44ac3d66cbfe",
+						version = 2,
+					},
+				},
+				
+				{
+					data = 
+					{
+						category = "Self",
+						conditionType = 13,
+						jobValue = "PALADIN",
+						name = "PLD",
+						uuid = "a65cfc8c-7eb9-3afe-b937-ce967ca7e94e",
+						version = 2,
+					},
+				},
+			},
+			eventType = 13,
+			name = "Weave Mits Hotbar",
+			uuid = "881d71ed-c206-e072-9ed6-da0593b0db1c",
+			version = 2,
+		},
+	},
+	
+	{
+		data = 
+		{
+			actions = 
+			{
+				
+				{
+					data = 
+					{
+						aType = "Lua",
+						actionLua = "-- Queue Executor (On Update) - requires \"Lua Returns Action\"\n\nif not (data and data.riku_hotbar) then return end\nlocal hb = data.riku_hotbar\nif not hb.active or not hb.queue or not hb.queue.steps then return end\n\nif not (Player and Player.id and ActionList and ActionList.Get) then return end\n\nlocal now = (Now and Now()) or 0\nhb.nextAt = hb.nextAt or 0\nhb.pendingID = hb.pendingID or 0\nhb.pendingAt = hb.pendingAt or 0\n\n-- 节流\nif now < hb.nextAt then return end\n\n-- 全局超时：10秒没跑完自动取消（相当于自动 STOP）\nif hb.startedAt and hb.startedAt > 0 and (now - hb.startedAt) > 10000 then\n    hb.active, hb.queue, hb.idx, hb.pendingID, hb.pendingAt = false, nil, 1, 0, 0\n    data.riku_hotbar = hb\n    return\nend\n\nlocal steps = hb.queue.steps\n\nlocal function GetStep(idx)\n    local s = steps[idx]\n    if type(s) == \"table\" then\n        return s.id, (s.skipIfOnCooldown == true)\n    end\n    return s, false\nend\n\nlocal function IsReady(a)\n    if a and a.IsReady then\n        return a:IsReady()\n    end\n    if a and a.cd ~= nil then\n        return (a.cd <= 0.1)\n    end\n    return false\nend\n\nlocal function GetCD(a)\n    if a and a.cd ~= nil then return a.cd end\n    return nil\nend\n\nlocal function FinishQueue()\n    hb.active, hb.queue, hb.idx, hb.pendingID, hb.pendingAt = false, nil, 1, 0, 0\nend\n\nif hb.idx > #steps then\n    FinishQueue()\n    data.riku_hotbar = hb\n    return\nend\n\nlocal actionID, skipIfOnCooldown = GetStep(hb.idx)\nif not actionID then\n    FinishQueue()\n    data.riku_hotbar = hb\n    return\nend\n\nlocal act = ActionList:Get(1, actionID)\nif not act then\n    FinishQueue()\n    data.riku_hotbar = hb\n    return\nend\n\nlocal targetID = Player.id\n\n-- pending：等待确认成功（进入CD）后再推进 idx\nif hb.pendingID == actionID then\n    local cd = GetCD(act)\n    if cd ~= nil and cd > 0.1 then\n        hb.pendingID, hb.pendingAt = 0, 0\n        hb.idx = hb.idx + 1\n        hb.nextAt = now + 250\n        data.riku_hotbar = hb\n        return\n    end\n\n    -- 单步超时：2秒仍没成功则取消整个队列（可按你喜好改成“跳过本步”）\n    if hb.pendingAt > 0 and (now - hb.pendingAt) > 2000 then\n        FinishQueue()\n        data.riku_hotbar = hb\n        return\n    end\n\n    hb.nextAt = now + 100\n    data.riku_hotbar = hb\n    return act, targetID, (hb.ignoreWeave == true), (hb.allowInterrupt == true)\nend\n\n-- 非 pending：先处理“在CD就跳过”的规则（只在 cd 明确 >0 时跳）\nlocal ready = IsReady(act)\nif not ready then\n    local cd = GetCD(act)\n    if skipIfOnCooldown and cd ~= nil and cd > 0.1 then\n        hb.idx = hb.idx + 1\n        hb.nextAt = now + 50\n        hb.pendingID, hb.pendingAt = 0, 0\n        if hb.idx > #steps then\n            FinishQueue()\n        end\n        data.riku_hotbar = hb\n        return\n    end\n\n    hb.nextAt = now + 100\n    data.riku_hotbar = hb\n    return\nend\n\n-- 开始尝试当前步：标记 pending，但不推进 idx\nhb.pendingID = actionID\nhb.pendingAt = now\nhb.nextAt = now + 100\ndata.riku_hotbar = hb\n\nreturn act, targetID, (hb.ignoreWeave == true), (hb.allowInterrupt == true)\n",
+						gVar = "ACR_RikuGNB3_CD",
+						uuid = "73c11531-015c-89dd-8f2c-678d6b221fb7",
+						version = 2.1,
+					},
+				},
+			},
+			conditions = 
+			{
+			},
+			eventType = 12,
+			name = "Weave Mits Logic",
+			uuid = "8e88a806-c537-a857-822f-36de6294dd02",
+			version = 2,
+		},
 	}, 
 	inheritedProfiles = 
 	{
