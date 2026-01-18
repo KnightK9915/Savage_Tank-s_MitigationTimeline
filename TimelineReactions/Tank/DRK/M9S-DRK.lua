@@ -4872,6 +4872,7 @@ local tbl =
 						data = 
 						{
 							actionID = 7531,
+							atomicPriority = true,
 							conditions = 
 							{
 								
@@ -4892,6 +4893,11 @@ local tbl =
 								
 								{
 									"ad9399af-b2db-295e-a4fc-d9b43951a1ae",
+									true,
+								},
+								
+								{
+									"43cdb077-1e33-b50c-b4cd-972e1d8c2596",
 									true,
 								},
 							},
@@ -4930,10 +4936,14 @@ local tbl =
 									"ad9399af-b2db-295e-a4fc-d9b43951a1ae",
 									true,
 								},
+								
+								{
+									"43cdb077-1e33-b50c-b4cd-972e1d8c2596",
+									true,
+								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
-							targetType = "Other Tank",
 							uuid = "76a52f84-d441-0bd6-80a4-6d800aed2528",
 							version = 2.1,
 						},
@@ -4964,6 +4974,11 @@ local tbl =
 								
 								{
 									"ad9399af-b2db-295e-a4fc-d9b43951a1ae",
+									true,
+								},
+								
+								{
+									"43cdb077-1e33-b50c-b4cd-972e1d8c2596",
 									true,
 								},
 							},
@@ -5034,6 +5049,17 @@ local tbl =
 							dequeueIfLuaFalse = true,
 							name = "notInCell",
 							uuid = "ad9399af-b2db-295e-a4fc-d9b43951a1ae",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 2,
+							contentid = 14300,
+							name = "isTargetingBoss",
+							uuid = "43cdb077-1e33-b50c-b4cd-972e1d8c2596",
 							version = 2,
 						},
 					},
