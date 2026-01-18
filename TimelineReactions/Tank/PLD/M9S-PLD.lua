@@ -4422,6 +4422,7 @@ local tbl =
 						data = 
 						{
 							actionID = 7531,
+							atomicPriority = true,
 							conditions = 
 							{
 								
@@ -4442,6 +4443,11 @@ local tbl =
 								
 								{
 									"ad9399af-b2db-295e-a4fc-d9b43951a1ae",
+									true,
+								},
+								
+								{
+									"aa707f7b-fa76-4fee-afec-9e609ed31535",
 									true,
 								},
 							},
@@ -4480,6 +4486,11 @@ local tbl =
 									"ad9399af-b2db-295e-a4fc-d9b43951a1ae",
 									true,
 								},
+								
+								{
+									"aa707f7b-fa76-4fee-afec-9e609ed31535",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -4513,6 +4524,11 @@ local tbl =
 								
 								{
 									"ad9399af-b2db-295e-a4fc-d9b43951a1ae",
+									true,
+								},
+								
+								{
+									"aa707f7b-fa76-4fee-afec-9e609ed31535",
 									true,
 								},
 							},
@@ -4584,6 +4600,17 @@ local tbl =
 							dequeueIfLuaFalse = true,
 							name = "notInCell",
 							uuid = "ad9399af-b2db-295e-a4fc-d9b43951a1ae",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 2,
+							contentid = 14300,
+							name = "isTargetingBoss",
+							uuid = "aa707f7b-fa76-4fee-afec-9e609ed31535",
 							version = 2,
 						},
 					},
