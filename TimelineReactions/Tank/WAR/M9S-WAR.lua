@@ -6062,6 +6062,11 @@ local tbl =
 									"ad9399af-b2db-295e-a4fc-d9b43951a1ae",
 									true,
 								},
+								
+								{
+									"05fe33ad-2afa-b220-b846-be7b2602e176",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
@@ -6098,6 +6103,11 @@ local tbl =
 									"ad9399af-b2db-295e-a4fc-d9b43951a1ae",
 									true,
 								},
+								
+								{
+									"05fe33ad-2afa-b220-b846-be7b2602e176",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuWAR3_CD",
@@ -6132,6 +6142,11 @@ local tbl =
 								
 								{
 									"ad9399af-b2db-295e-a4fc-d9b43951a1ae",
+									true,
+								},
+								
+								{
+									"05fe33ad-2afa-b220-b846-be7b2602e176",
 									true,
 								},
 							},
@@ -6204,6 +6219,17 @@ local tbl =
 							dequeueIfLuaFalse = true,
 							name = "notInCell",
 							uuid = "ad9399af-b2db-295e-a4fc-d9b43951a1ae",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 2,
+							contentid = 14300,
+							name = "isTargetingBoss",
+							uuid = "05fe33ad-2afa-b220-b846-be7b2602e176",
 							version = 2,
 						},
 					},
