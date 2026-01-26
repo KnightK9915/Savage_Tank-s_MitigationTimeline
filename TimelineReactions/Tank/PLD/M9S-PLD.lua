@@ -645,7 +645,7 @@ local tbl =
 								},
 								
 								{
-									"952bfc34-0459-d2e8-aeae-5dac2b7c313b",
+									"9d917f8c-8e76-6886-97b9-2daf19cfa24d",
 									true,
 								},
 								
@@ -666,41 +666,6 @@ local tbl =
 							version = 2.1,
 						},
 						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							actionID = 7382,
-							conditions = 
-							{
-								
-								{
-									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
-									true,
-								},
-								
-								{
-									"9d917f8c-8e76-6886-97b9-2daf19cfa24d",
-									true,
-								},
-								
-								{
-									"700c3d14-efd2-1847-a853-508656d9a23d",
-									true,
-								},
-								
-								{
-									"dc3d9b5f-7540-1b40-8101-38c42576be99",
-									true,
-								},
-							},
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Other Tank",
-							uuid = "5ed8c1f4-36d8-ad42-9463-1f8154296465",
-							version = 2.1,
-						},
 					},
 				},
 				conditions = 
@@ -877,6 +842,714 @@ local tbl =
 				timerEndOffset = 5,
 				timerStartOffset = -30,
 				uuid = "b07141b5-6587-4bed-af0a-be602370cde0",
+				version = 2,
+			},
+		},
+	},
+	[9] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"a0c32fff-2645-ca70-a05a-0325df47bc64",
+									true,
+								},
+								
+								{
+									"f449c362-8e76-346b-a1c5-61af4d71ae15",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "ca8e3c49-672f-7f30-b556-8666222d88cf",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"a0c32fff-2645-ca70-a05a-0325df47bc64",
+									true,
+								},
+								
+								{
+									"a1ba213c-6cdd-6cf9-92de-67b3b5a179fe",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "92b93e01-95bb-71d5-9121-52773c65724a",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "a0c32fff-2645-ca70-a05a-0325df47bc64",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 100,
+							uuid = "f449c362-8e76-346b-a1c5-61af4d71ae15",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99.999000549316,
+							uuid = "a1ba213c-6cdd-6cf9-92de-67b3b5a179fe",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 46.7,
+				name = "Sheltron/Interven",
+				timeRange = true,
+				timelineIndex = 9,
+				timerStartOffset = -2.5,
+				uuid = "a85dab5a-9b0a-9a7b-8878-21920101474a",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+	},
+	[11] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"a0c32fff-2645-ca70-a05a-0325df47bc64",
+									true,
+								},
+								
+								{
+									"f449c362-8e76-346b-a1c5-61af4d71ae15",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "ca8e3c49-672f-7f30-b556-8666222d88cf",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"a0c32fff-2645-ca70-a05a-0325df47bc64",
+									true,
+								},
+								
+								{
+									"a1ba213c-6cdd-6cf9-92de-67b3b5a179fe",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "92b93e01-95bb-71d5-9121-52773c65724a",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "a0c32fff-2645-ca70-a05a-0325df47bc64",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 100,
+							uuid = "f449c362-8e76-346b-a1c5-61af4d71ae15",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99.999000549316,
+							uuid = "a1ba213c-6cdd-6cf9-92de-67b3b5a179fe",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 60.7,
+				name = "Sheltron/Interven",
+				timeRange = true,
+				timelineIndex = 11,
+				timerStartOffset = -2.5,
+				uuid = "f2a1aec2-0270-5a43-8743-c34851236070",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+	},
+	[47] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"a0c32fff-2645-ca70-a05a-0325df47bc64",
+									true,
+								},
+								
+								{
+									"f449c362-8e76-346b-a1c5-61af4d71ae15",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "ca8e3c49-672f-7f30-b556-8666222d88cf",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"a0c32fff-2645-ca70-a05a-0325df47bc64",
+									true,
+								},
+								
+								{
+									"a1ba213c-6cdd-6cf9-92de-67b3b5a179fe",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "92b93e01-95bb-71d5-9121-52773c65724a",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "a0c32fff-2645-ca70-a05a-0325df47bc64",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 100,
+							uuid = "f449c362-8e76-346b-a1c5-61af4d71ae15",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99.999000549316,
+							uuid = "a1ba213c-6cdd-6cf9-92de-67b3b5a179fe",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 137.9,
+				name = "Sheltron/Interven",
+				timeRange = true,
+				timelineIndex = 47,
+				timerStartOffset = -2.5,
+				uuid = "a88378d3-0193-d47c-bf45-c25106cc3e1b",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+	},
+	[51] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"a0c32fff-2645-ca70-a05a-0325df47bc64",
+									true,
+								},
+								
+								{
+									"f449c362-8e76-346b-a1c5-61af4d71ae15",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "ca8e3c49-672f-7f30-b556-8666222d88cf",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"a0c32fff-2645-ca70-a05a-0325df47bc64",
+									true,
+								},
+								
+								{
+									"a1ba213c-6cdd-6cf9-92de-67b3b5a179fe",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "92b93e01-95bb-71d5-9121-52773c65724a",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "a0c32fff-2645-ca70-a05a-0325df47bc64",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 100,
+							uuid = "f449c362-8e76-346b-a1c5-61af4d71ae15",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99.999000549316,
+							uuid = "a1ba213c-6cdd-6cf9-92de-67b3b5a179fe",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 171.3,
+				name = "Sheltron/Interven",
+				timeRange = true,
+				timelineIndex = 51,
+				timerStartOffset = -2.5,
+				uuid = "4f22acaa-248e-e748-8fae-e416ec7ba5f8",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+	},
+	[54] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+								
+								{
+									"86ff93c7-f1b2-8712-8979-c8eec98a0815",
+									true,
+								},
+								
+								{
+									"1b0e8dc2-17f2-ea3e-bf5d-3daa0e488ded",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "58943ae5-203f-2351-8cec-638b59deaa88",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							conditions = 
+							{
+								
+								{
+									"1465472a-0137-2f48-b9fc-aa7b9991077a",
+									true,
+								},
+								
+								{
+									"61a489a9-94cb-0c08-acd5-08b30eff4ec3",
+									true,
+								},
+								
+								{
+									"1b0e8dc2-17f2-ea3e-bf5d-3daa0e488ded",
+									true,
+								},
+								
+								{
+									"589c5307-aebe-2346-9dfb-b981bc48da9f",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "670c7bae-eb51-894d-a344-c459170f4d55",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7531,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "1465472a-0137-2f48-b9fc-aa7b9991077a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "86ff93c7-f1b2-8712-8979-c8eec98a0815",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "61a489a9-94cb-0c08-acd5-08b30eff4ec3",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "1b0e8dc2-17f2-ea3e-bf5d-3daa0e488ded",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							partyTargetType = "Other Tank",
+							uuid = "589c5307-aebe-2346-9dfb-b981bc48da9f",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 192.3,
+				name = "Rampart (20)",
+				timeRange = true,
+				timelineIndex = 54,
+				timerEndOffset = 10,
+				timerOffset = -15,
+				timerStartOffset = -1,
+				uuid = "3fc90f60-05fa-07ea-a702-cdc0b172beeb",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 27,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"9776c3b3-9137-666e-87a4-ffef60fce472",
+									true,
+								},
+								
+								{
+									"73ab1ac2-c6b6-102d-aa9c-76f309070b81",
+									true,
+								},
+								
+								{
+									"bbcab24b-9a54-7d98-a8e7-255a0f2ce5c5",
+									true,
+								},
+								
+								{
+									"068316f9-b3f2-1fa6-add5-6c538e5bee12",
+									true,
+								},
+								
+								{
+									"55eaebce-c46f-5059-8b0f-4d482c366261",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "49e2beb3-c22b-dede-9e5e-490cb9db6531",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "9776c3b3-9137-666e-87a4-ffef60fce472",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "73ab1ac2-c6b6-102d-aa9c-76f309070b81",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "bbcab24b-9a54-7d98-a8e7-255a0f2ce5c5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							comparator = 2,
+							conditionType = 2,
+							filterTargetType = "Other Tank",
+							hpValue = 80,
+							partyTargetType = "Other Tank",
+							uuid = "068316f9-b3f2-1fa6-add5-6c538e5bee12",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffID = 1191,
+							category = "Self",
+							uuid = "55eaebce-c46f-5059-8b0f-4d482c366261",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 192.3,
+				name = "Cover MT",
+				timeRange = true,
+				timelineIndex = 54,
+				timerEndOffset = 10,
+				timerStartOffset = -1,
+				uuid = "846feac9-c38a-b9aa-98f5-a7e5eccadda3",
 				version = 2,
 			},
 		},
@@ -1526,42 +2199,6 @@ local tbl =
 								},
 								
 								{
-									"952bfc34-0459-d2e8-aeae-5dac2b7c313b",
-									true,
-								},
-								
-								{
-									"700c3d14-efd2-1847-a853-508656d9a23d",
-									true,
-								},
-								
-								{
-									"dc3d9b5f-7540-1b40-8101-38c42576be99",
-									true,
-								},
-							},
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Other Tank",
-							uuid = "4e50ac07-ca83-58bf-b762-75a3a8e01b28",
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							actionID = 7382,
-							conditions = 
-							{
-								
-								{
-									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
-									true,
-								},
-								
-								{
 									"9d917f8c-8e76-6886-97b9-2daf19cfa24d",
 									true,
 								},
@@ -1648,6 +2285,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 219.7,
 				name = "interven ST (15)",
 				timeRange = true,
@@ -1760,6 +2398,250 @@ local tbl =
 				uuid = "49910c3e-f16e-cb21-9f42-a7461bb0a63f",
 				version = 2,
 			},
+		},
+	},
+	[66] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"a0c32fff-2645-ca70-a05a-0325df47bc64",
+									true,
+								},
+								
+								{
+									"f449c362-8e76-346b-a1c5-61af4d71ae15",
+									true,
+								},
+								
+								{
+									"ff558cb4-1bcc-9742-96f3-6d777dbc4811",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "ca8e3c49-672f-7f30-b556-8666222d88cf",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"a0c32fff-2645-ca70-a05a-0325df47bc64",
+									true,
+								},
+								
+								{
+									"a1ba213c-6cdd-6cf9-92de-67b3b5a179fe",
+									true,
+								},
+								
+								{
+									"ff558cb4-1bcc-9742-96f3-6d777dbc4811",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "92b93e01-95bb-71d5-9121-52773c65724a",
+							version = 2.1,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "a0c32fff-2645-ca70-a05a-0325df47bc64",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 100,
+							uuid = "f449c362-8e76-346b-a1c5-61af4d71ae15",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99.999000549316,
+							uuid = "a1ba213c-6cdd-6cf9-92de-67b3b5a179fe",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							partyTargetType = "Main Tank",
+							uuid = "ff558cb4-1bcc-9742-96f3-6d777dbc4811",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 245.9,
+				name = "Sheltron/Interven",
+				timeRange = true,
+				timelineIndex = 66,
+				timerEndOffset = 5,
+				timerStartOffset = -10,
+				uuid = "b70110d4-0c65-b53b-9f99-a17abaec6ade",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+	},
+	[68] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"a0c32fff-2645-ca70-a05a-0325df47bc64",
+									true,
+								},
+								
+								{
+									"f449c362-8e76-346b-a1c5-61af4d71ae15",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "ca8e3c49-672f-7f30-b556-8666222d88cf",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"a0c32fff-2645-ca70-a05a-0325df47bc64",
+									true,
+								},
+								
+								{
+									"a1ba213c-6cdd-6cf9-92de-67b3b5a179fe",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "92b93e01-95bb-71d5-9121-52773c65724a",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "a0c32fff-2645-ca70-a05a-0325df47bc64",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 100,
+							uuid = "f449c362-8e76-346b-a1c5-61af4d71ae15",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99.999000549316,
+							uuid = "a1ba213c-6cdd-6cf9-92de-67b3b5a179fe",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 256.1,
+				name = "Sheltron/Interven",
+				timeRange = true,
+				timelineIndex = 68,
+				timerStartOffset = -2.5,
+				uuid = "6d0192b5-0604-649b-90c1-fb19578e5035",
+				version = 2,
+			},
+			inheritedIndex = 7,
 		},
 	},
 	[72] = 
@@ -4409,6 +5291,116 @@ local tbl =
 			},
 		},
 	},
+	[87] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"a0c32fff-2645-ca70-a05a-0325df47bc64",
+									true,
+								},
+								
+								{
+									"f449c362-8e76-346b-a1c5-61af4d71ae15",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "ca8e3c49-672f-7f30-b556-8666222d88cf",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"a0c32fff-2645-ca70-a05a-0325df47bc64",
+									true,
+								},
+								
+								{
+									"a1ba213c-6cdd-6cf9-92de-67b3b5a179fe",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "92b93e01-95bb-71d5-9121-52773c65724a",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "a0c32fff-2645-ca70-a05a-0325df47bc64",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 100,
+							uuid = "f449c362-8e76-346b-a1c5-61af4d71ae15",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99.999000549316,
+							uuid = "a1ba213c-6cdd-6cf9-92de-67b3b5a179fe",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 388.9,
+				name = "Sheltron/Interven",
+				timeRange = true,
+				timelineIndex = 87,
+				timerStartOffset = -2.5,
+				uuid = "606e2532-8031-ad3c-b003-9b9a32b07518",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+	},
 	[90] = 
 	{
 		
@@ -4422,7 +5414,6 @@ local tbl =
 						data = 
 						{
 							actionID = 7531,
-							atomicPriority = true,
 							conditions = 
 							{
 								
@@ -4463,46 +5454,6 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 22,
-							conditions = 
-							{
-								
-								{
-									"bae6505c-a68e-423e-8b55-13d91d04706d",
-									true,
-								},
-								
-								{
-									"03650120-049f-42ec-b886-1f2ed9aef45a",
-									true,
-								},
-								
-								{
-									"f70e8f97-d760-c157-9274-de8e0a4823f0",
-									true,
-								},
-								
-								{
-									"ad9399af-b2db-295e-a4fc-d9b43951a1ae",
-									true,
-								},
-								
-								{
-									"aa707f7b-fa76-4fee-afec-9e609ed31535",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "8b8937e4-44dd-1f7b-a09e-8437b6c64a20",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
 							actionID = 25746,
 							conditions = 
 							{
@@ -4536,6 +5487,47 @@ local tbl =
 							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
 							uuid = "1fba4d6b-a08d-c016-a179-f95391754dba",
+							version = 2.1,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 22,
+							conditions = 
+							{
+								
+								{
+									"bae6505c-a68e-423e-8b55-13d91d04706d",
+									true,
+								},
+								
+								{
+									"03650120-049f-42ec-b886-1f2ed9aef45a",
+									true,
+								},
+								
+								{
+									"f70e8f97-d760-c157-9274-de8e0a4823f0",
+									true,
+								},
+								
+								{
+									"ad9399af-b2db-295e-a4fc-d9b43951a1ae",
+									true,
+								},
+								
+								{
+									"aa707f7b-fa76-4fee-afec-9e609ed31535",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "8b8937e4-44dd-1f7b-a09e-8437b6c64a20",
 							version = 2.1,
 						},
 					},
@@ -4626,6 +5618,143 @@ local tbl =
 				timerOffset = -15,
 				timerStartOffset = -15,
 				uuid = "75179fb5-8403-e777-92c7-065e36727115",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 30,
+							conditions = 
+							{
+								
+								{
+									"bae6505c-a68e-423e-8b55-13d91d04706d",
+									true,
+								},
+								
+								{
+									"03650120-049f-42ec-b886-1f2ed9aef45a",
+									true,
+								},
+								
+								{
+									"f70e8f97-d760-c157-9274-de8e0a4823f0",
+									true,
+								},
+								
+								{
+									"ad9399af-b2db-295e-a4fc-d9b43951a1ae",
+									true,
+								},
+								
+								{
+									"05fe33ad-2afa-b220-b846-be7b2602e176",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "297da6ca-006e-1bae-b2fc-09f08c200bdc",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							dequeueIfLuaFalse = true,
+							eventArgType = 2,
+							eventSpellID = 45980,
+							name = "Roles",
+							uuid = "bae6505c-a68e-423e-8b55-13d91d04706d",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetContentID = 14300,
+							inGroupTargetType = "ContentID",
+							partyTargetType = "Event Entity",
+							uuid = "03650120-049f-42ec-b886-1f2ed9aef45a",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "f70e8f97-d760-c157-9274-de8e0a4823f0",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								4731,
+								4732,
+								4733,
+								4734,
+								4735,
+								4736,
+								4737,
+								4738,
+							},
+							category = "Self",
+							dequeueIfLuaFalse = true,
+							name = "notInCell",
+							uuid = "ad9399af-b2db-295e-a4fc-d9b43951a1ae",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 2,
+							contentid = 14300,
+							name = "isTargetingBoss",
+							uuid = "05fe33ad-2afa-b220-b846-be7b2602e176",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				eventType = 3,
+				loop = true,
+				mechanicTime = 400,
+				name = "Ultrasonic Role Invuln",
+				randomOffset = 450,
+				timeRange = true,
+				timelineIndex = 90,
+				timerEndOffset = 450,
+				timerOffset = -15,
+				timerStartOffset = -15,
+				uuid = "16ebe4e7-cf39-e315-92cd-f408f5fe0d27",
 				version = 2,
 			},
 		},
@@ -8208,6 +9337,250 @@ local tbl =
 			},
 		},
 	},
+	[178] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"a0c32fff-2645-ca70-a05a-0325df47bc64",
+									true,
+								},
+								
+								{
+									"f449c362-8e76-346b-a1c5-61af4d71ae15",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "ca8e3c49-672f-7f30-b556-8666222d88cf",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"a0c32fff-2645-ca70-a05a-0325df47bc64",
+									true,
+								},
+								
+								{
+									"a1ba213c-6cdd-6cf9-92de-67b3b5a179fe",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "92b93e01-95bb-71d5-9121-52773c65724a",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "a0c32fff-2645-ca70-a05a-0325df47bc64",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 100,
+							uuid = "f449c362-8e76-346b-a1c5-61af4d71ae15",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99.999000549316,
+							uuid = "a1ba213c-6cdd-6cf9-92de-67b3b5a179fe",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 896.9,
+				name = "Sheltron/Interven",
+				timeRange = true,
+				timelineIndex = 178,
+				timerStartOffset = -2.5,
+				uuid = "772bc4e9-1cc6-8261-a6f3-0c9ed7505458",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+	},
+	[185] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"a0c32fff-2645-ca70-a05a-0325df47bc64",
+									true,
+								},
+								
+								{
+									"f449c362-8e76-346b-a1c5-61af4d71ae15",
+									true,
+								},
+								
+								{
+									"ff558cb4-1bcc-9742-96f3-6d777dbc4811",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "ca8e3c49-672f-7f30-b556-8666222d88cf",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"a0c32fff-2645-ca70-a05a-0325df47bc64",
+									true,
+								},
+								
+								{
+									"a1ba213c-6cdd-6cf9-92de-67b3b5a179fe",
+									true,
+								},
+								
+								{
+									"ff558cb4-1bcc-9742-96f3-6d777dbc4811",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "92b93e01-95bb-71d5-9121-52773c65724a",
+							version = 2.1,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "a0c32fff-2645-ca70-a05a-0325df47bc64",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 4,
+							enmityValue = 100,
+							uuid = "f449c362-8e76-346b-a1c5-61af4d71ae15",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							comparator = 2,
+							conditionType = 4,
+							enmityValue = 99.999000549316,
+							uuid = "a1ba213c-6cdd-6cf9-92de-67b3b5a179fe",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 80,
+							partyTargetType = "Main Tank",
+							uuid = "ff558cb4-1bcc-9742-96f3-6d777dbc4811",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 926,
+				name = "Sheltron/Interven",
+				timeRange = true,
+				timelineIndex = 185,
+				timerEndOffset = 5,
+				timerStartOffset = -10,
+				uuid = "9c20cca9-1293-963a-87f4-aa8b4b31c102",
+				version = 2,
+			},
+			inheritedIndex = 7,
+		},
+	},
 	[187] = 
 	{
 		
@@ -8838,42 +10211,6 @@ local tbl =
 			{
 				actions = 
 				{
-					
-					{
-						data = 
-						{
-							actionID = 7382,
-							conditions = 
-							{
-								
-								{
-									"d74b4c05-cc64-47f8-a3b6-b2d67cf270f6",
-									true,
-								},
-								
-								{
-									"952bfc34-0459-d2e8-aeae-5dac2b7c313b",
-									true,
-								},
-								
-								{
-									"700c3d14-efd2-1847-a853-508656d9a23d",
-									true,
-								},
-								
-								{
-									"dc3d9b5f-7540-1b40-8101-38c42576be99",
-									true,
-								},
-							},
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Other Tank",
-							uuid = "4e50ac07-ca83-58bf-b762-75a3a8e01b28",
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
 					
 					{
 						data = 
