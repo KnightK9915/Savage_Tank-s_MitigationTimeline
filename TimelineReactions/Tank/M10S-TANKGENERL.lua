@@ -14,7 +14,6 @@ local tbl =
 						{
 							actionID = 7386,
 							allowInterrupt = true,
-							atomicPriority = true,
 							conditions = 
 							{
 								
@@ -52,7 +51,6 @@ local tbl =
 						{
 							actionID = 16461,
 							allowInterrupt = true,
-							atomicPriority = true,
 							conditions = 
 							{
 								
@@ -90,7 +88,6 @@ local tbl =
 						{
 							actionID = 36926,
 							allowInterrupt = true,
-							atomicPriority = true,
 							conditions = 
 							{
 								
@@ -128,7 +125,6 @@ local tbl =
 						{
 							actionID = 36934,
 							allowInterrupt = true,
-							atomicPriority = true,
 							conditions = 
 							{
 								
@@ -1495,8 +1491,8 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "local player = TensorCore.mGetPlayer()\nif not player or not player.pos then return false end\n\nlocal wantCID = 14370\nlocal bestDist = nil\n\nif not EntityList then return false end\n\nfor _, e in pairs(EntityList(\"alive,attackable\")) do\n    if e and e.contentid == wantCID and e.pos then\n        local dx = player.pos.x - e.pos.x\n        local dz = player.pos.z - e.pos.z\n        local d  = math.sqrt(dx*dx + dz*dz)\n        if (not bestDist) or d < bestDist then\n            bestDist = d\n        end\n    end\nend\n\nreturn (bestDist ~= nil) and (bestDist > 3.0)\n",
-							name = "Red dis > 3",
+							conditionLua = "local player = TensorCore.mGetPlayer()\nif not player or not player.pos then return false end\n\nlocal wantCID = 14370\nlocal bestDist = nil\n\nif not EntityList then return false end\n\nfor _, e in pairs(EntityList(\"alive,attackable\")) do\n    if e and e.contentid == wantCID and e.pos then\n        local dx = player.pos.x - e.pos.x\n        local dz = player.pos.z - e.pos.z\n        local d  = math.sqrt(dx*dx + dz*dz)\n        if (not bestDist) or d < bestDist then\n            bestDist = d\n        end\n    end\nend\n\nreturn (bestDist ~= nil) and (bestDist > 5.0)\n",
+							name = "Red dis > 5",
 							uuid = "e9689abd-7c60-cc08-ac91-6372440d1ba9",
 							version = 2,
 						},
@@ -1557,6 +1553,11 @@ local tbl =
 									"833094a4-e620-954b-a7f2-1b496d3e4f7f",
 									true,
 								},
+								
+								{
+									"66308edf-3528-d889-b29d-43c707f267a1",
+									true,
+								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -1588,6 +1589,11 @@ local tbl =
 								
 								{
 									"833094a4-e620-954b-a7f2-1b496d3e4f7f",
+									true,
+								},
+								
+								{
+									"66308edf-3528-d889-b29d-43c707f267a1",
 									true,
 								},
 							},
@@ -1623,6 +1629,11 @@ local tbl =
 									"833094a4-e620-954b-a7f2-1b496d3e4f7f",
 									true,
 								},
+								
+								{
+									"66308edf-3528-d889-b29d-43c707f267a1",
+									true,
+								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -1654,6 +1665,11 @@ local tbl =
 								
 								{
 									"833094a4-e620-954b-a7f2-1b496d3e4f7f",
+									true,
+								},
+								
+								{
+									"66308edf-3528-d889-b29d-43c707f267a1",
 									true,
 								},
 							},
@@ -1735,6 +1751,18 @@ local tbl =
 							filterTargetType = "Enemy",
 							partyTargetContentID = 14369,
 							uuid = "833094a4-e620-954b-a7f2-1b496d3e4f7f",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							comparator = 2,
+							conditionType = 2,
+							hpValue = 99.999000549316,
+							uuid = "66308edf-3528-d889-b29d-43c707f267a1",
 							version = 2,
 						},
 					},
@@ -2943,8 +2971,8 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "local player = TensorCore.mGetPlayer()\nif not player or not player.pos then return false end\n\nlocal wantCID = 14369\nlocal bestDist = nil\n\nif not EntityList then return false end\n\nfor _, e in pairs(EntityList(\"alive,attackable\")) do\n    if e and e.contentid == wantCID and e.pos then\n        local dx = player.pos.x - e.pos.x\n        local dz = player.pos.z - e.pos.z\n        local d  = math.sqrt(dx*dx + dz*dz)\n        if (not bestDist) or d < bestDist then\n            bestDist = d\n        end\n    end\nend\n\nreturn (bestDist ~= nil) and (bestDist > 3.0)\n",
-							name = "Blue dis > 3",
+							conditionLua = "local player = TensorCore.mGetPlayer()\nif not player or not player.pos then return false end\n\nlocal wantCID = 14369\nlocal bestDist = nil\n\nif not EntityList then return false end\n\nfor _, e in pairs(EntityList(\"alive,attackable\")) do\n    if e and e.contentid == wantCID and e.pos then\n        local dx = player.pos.x - e.pos.x\n        local dz = player.pos.z - e.pos.z\n        local d  = math.sqrt(dx*dx + dz*dz)\n        if (not bestDist) or d < bestDist then\n            bestDist = d\n        end\n    end\nend\n\nreturn (bestDist ~= nil) and (bestDist > 5.0)\n",
+							name = "Blue dis > 5",
 							uuid = "992dc756-c0c5-8cb0-b921-d6cbe5299db1",
 							version = 2,
 						},
@@ -2979,8 +3007,8 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "local player = TensorCore.mGetPlayer()\nif not player or not player.pos then return false end\n\nlocal wantCID = 14370\nlocal bestDist = nil\n\nif not EntityList then return false end\n\nfor _, e in pairs(EntityList(\"alive,attackable\")) do\n    if e and e.contentid == wantCID and e.pos then\n        local dx = player.pos.x - e.pos.x\n        local dz = player.pos.z - e.pos.z\n        local d  = math.sqrt(dx*dx + dz*dz)\n        if (not bestDist) or d < bestDist then\n            bestDist = d\n        end\n    end\nend\n\nreturn (bestDist ~= nil) and (bestDist > 3.0)\n",
-							name = "Red dis > 3",
+							conditionLua = "local player = TensorCore.mGetPlayer()\nif not player or not player.pos then return false end\n\nlocal wantCID = 14370\nlocal bestDist = nil\n\nif not EntityList then return false end\n\nfor _, e in pairs(EntityList(\"alive,attackable\")) do\n    if e and e.contentid == wantCID and e.pos then\n        local dx = player.pos.x - e.pos.x\n        local dz = player.pos.z - e.pos.z\n        local d  = math.sqrt(dx*dx + dz*dz)\n        if (not bestDist) or d < bestDist then\n            bestDist = d\n        end\n    end\nend\n\nreturn (bestDist ~= nil) and (bestDist > 5.0)\n",
+							name = "Red dis > 5",
 							uuid = "497a29b6-94ce-59d6-a545-dfacaf339424",
 							version = 2,
 						},
@@ -5862,7 +5890,7 @@ local tbl =
 				name = "Instant Dash",
 				timeRange = true,
 				timelineIndex = 57,
-				timerStartOffset = -7,
+				timerStartOffset = -8,
 				uuid = "acb04e87-ce63-5a98-ad73-e988cb896c70",
 				version = 2,
 			},
@@ -6122,7 +6150,7 @@ local tbl =
 				name = "Instant Dash",
 				timeRange = true,
 				timelineIndex = 64,
-				timerStartOffset = -8,
+				timerStartOffset = -9,
 				uuid = "392388a4-c912-449d-ad88-f153a2426588",
 				version = 2,
 			},
