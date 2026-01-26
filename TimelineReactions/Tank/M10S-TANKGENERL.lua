@@ -398,8 +398,8 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 11,
 				timerOffset = -10,
-				timerStartOffset = -4.5,
-				uuid = "b00eed31-cca8-5350-822f-cc6299a10977",
+				timerStartOffset = -2.5,
+				uuid = "b3e182e2-bd3c-4515-a8bb-ee8a2825f804",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -508,8 +508,8 @@ local tbl =
 				name = "HoL",
 				timeRange = true,
 				timelineIndex = 11,
-				timerStartOffset = -4.5,
-				uuid = "34f3584c-6c47-bbf5-80dd-bdb6e66992c9",
+				timerStartOffset = -2.5,
+				uuid = "a90e4181-56e8-1374-acfd-3d3e13a5585a",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -619,8 +619,8 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 11,
 				timerOffset = -10,
-				timerStartOffset = -4.5,
-				uuid = "1279f03e-5423-877e-88a7-96092fef6ab9",
+				timerStartOffset = -2.5,
+				uuid = "919cfc35-a2d1-5602-964e-c32ce6d1e9c3",
 				version = 2,
 			},
 		},
@@ -728,99 +728,11 @@ local tbl =
 				name = "Shake it off",
 				timeRange = true,
 				timelineIndex = 11,
-				timerStartOffset = -4.5,
-				uuid = "5b9d3e97-43c5-9096-94a0-14a0a07363fc",
+				timerStartOffset = -2.5,
+				uuid = "29094103-b3c7-a660-8429-4d3ded46f044",
 				version = 2,
 			},
 			inheritedIndex = 4,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7535,
-							conditions = 
-							{
-								
-								{
-									"920eaf0e-9d68-b87a-b636-36be8e013575",
-									true,
-								},
-								
-								{
-									"5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-									true,
-								},
-								
-								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Current Target",
-							uuid = "c9c9cc18-aa2e-c48a-bebe-6ab6f4e7c114",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return FFXIV_Common_BotRunning",
-							name = "Bot Running",
-							uuid = "920eaf0e-9d68-b87a-b636-36be8e013575",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 2,
-							buffID = 1193,
-							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							comparator = 2,
-							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
-							version = 2,
-						},
-						inheritedIndex = 2,
-					},
-				},
-				mechanicTime = 68.4,
-				name = "Reprisal",
-				randomOffset = -2,
-				timeRange = true,
-				timelineIndex = 11,
-				timerOffset = -3,
-				timerStartOffset = -2.5,
-				uuid = "0ceab745-299f-e01d-a3a5-e8f682c02986",
-				version = 2,
-			},
-			inheritedIndex = 5,
 		},
 	},
 	[12] = 
@@ -930,7 +842,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 12,
 				timerOffset = -10,
-				timerStartOffset = -4.5,
+				timerStartOffset = -14.5,
 				uuid = "8622262d-82e9-f163-89aa-f18140c4b864",
 				version = 2,
 			},
@@ -1040,7 +952,7 @@ local tbl =
 				name = "HoL",
 				timeRange = true,
 				timelineIndex = 12,
-				timerStartOffset = -4.5,
+				timerStartOffset = -14.5,
 				uuid = "34f82b88-9d22-205b-b0a9-543c867d72bc",
 				version = 2,
 			},
@@ -1151,7 +1063,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 12,
 				timerOffset = -10,
-				timerStartOffset = -4.5,
+				timerStartOffset = -14.5,
 				uuid = "6ab94424-d60b-0e27-a332-8c30c2960997",
 				version = 2,
 			},
@@ -1260,7 +1172,7 @@ local tbl =
 				name = "Shake it off",
 				timeRange = true,
 				timelineIndex = 12,
-				timerStartOffset = -4.5,
+				timerStartOffset = -14.5,
 				uuid = "f179523b-3f14-c30c-94ef-5b463e186251",
 				version = 2,
 			},
@@ -1348,7 +1260,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 12,
 				timerOffset = -3,
-				timerStartOffset = -2.5,
+				timerStartOffset = -14.5,
 				uuid = "7c4972c2-1c3f-2e0f-be93-d2601e36676f",
 				version = 2,
 			},
