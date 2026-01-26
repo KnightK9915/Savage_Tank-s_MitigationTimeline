@@ -2998,6 +2998,42 @@ local tbl =
 			},
 		},
 	},
+	[33] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "-- Draw: Player <-> Fixed World Position line + endpoint circles (no residue)\n\nif not (TensorCore and Argus and GUI) then\n    return\nend\n\nlocal player = TensorCore.mGetPlayer()\nif not (player and player.pos) then\n    return\nend\n\n-- Target world coord (X/Y/Z)\nlocal tx, ty, tz = 99.91, 0.0, 118.31\n\nlocal x1, y1, z1 = player.pos.x, player.pos.y, player.pos.z\nlocal x2, y2, z2 = tx, ty, tz\n\n-- White\nlocal white = GUI:ColorConvertFloat4ToU32(1, 1, 1, 1)\n\n-- Static drawer: line + circles\nlocal drawer = TensorCore.getStaticDrawer(white, 1.5)\n\n-- Line thickness\nlocal thickness = 5.00\ndrawer:addLine(x1, y1, z1, x2, y2, z2, thickness, thickness)\n\n-- Endpoint circles (radius 0.5m)\nlocal r = 0.2\ndrawer:addCircle(x1, y1, z1, r)\ndrawer:addCircle(x2, y2, z2, r)\n",
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "ac5bc518-f19c-c97f-8cda-c744a2cc307d",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				eventType = 13,
+				mechanicTime = 168.7,
+				name = "[Draw] Go South",
+				timeRange = true,
+				timelineIndex = 33,
+				timerStartOffset = -7,
+				uuid = "2e1299eb-5703-b7d4-999f-110624dfa92b",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+	},
 	[35] = 
 	{
 		
