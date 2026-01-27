@@ -287,6 +287,100 @@ local tbl =
 			},
 		},
 	},
+	[9] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Alert",
+							alertPriority = 2,
+							alertScale = 0.69999998807907,
+							alertTTS = true,
+							alertText = "Go East Bait Cone AoE",
+							alertVolume = 100,
+							conditions = 
+							{
+								
+								{
+									"d5053685-cd08-213d-a7cc-5cc02382a21d",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "712b847e-2e06-1993-a207-4336d7482de3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							buffCheckType = 4,
+							buffID = 4974,
+							buffIDList = 
+							{
+								4974,
+							},
+							category = "Self",
+							name = "Fire",
+							uuid = "d5053685-cd08-213d-a7cc-5cc02382a21d",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 61.9,
+				name = "[TTS] Bait Cone AoE",
+				timeRange = true,
+				timelineIndex = 9,
+				timerStartOffset = -5,
+				uuid = "36fedcfc-19b2-7f05-9c51-14e2c793b603",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "-- Draw: red circle (r=0.8m) under the farthest party member from contentID 14369\n\nlocal TARGET_CID = 14370\nlocal RADIUS = 0.8\nlocal SEGMENTS = 30\n\nif not Argus then return end\n\nlocal function colorU32(r,g,b,a)\n    if GUI and GUI.ColorConvertFloat4ToU32 then\n        return GUI:ColorConvertFloat4ToU32(r,g,b,a)\n    end\n    return 0xFFFFFFFF\nend\n\nlocal function getBossByContentID(contentID)\n    -- Prefer current target\n    if Player and Player.GetTarget then\n        local t = Player:GetTarget()\n        if t and t.contentid == contentID and t.pos then\n            return t\n        end\n    end\n    -- Fallback: scan entities\n    if EntityList then\n        local el = EntityList(\"alive,attackable\")\n        if el then\n            for _, e in pairs(el) do\n                if e and e.contentid == contentID and e.pos then\n                    return e\n                end\n            end\n        end\n    end\n    return nil\nend\n\nlocal boss = getBossByContentID(TARGET_CID)\nif not boss then return end\n\nlocal party = (TensorCore and TensorCore.getEntityGroupList) and TensorCore.getEntityGroupList(\"Party\") or nil\nif not party then return end\n\nlocal farEnt, farDist = nil, -1\nfor _, p in pairs(party) do\n    if p and p.pos then\n        local d = (TensorCore and TensorCore.getDistance2d) and TensorCore.getDistance2d(p.pos, boss.pos) or nil\n        if d and d > farDist then\n            farDist = d\n            farEnt = p\n        end\n    end\nend\n\nif not farEnt or not farEnt.pos then return end\n\nArgus.addCircleFilled(\n    farEnt.pos.x, farEnt.pos.y, farEnt.pos.z,\n    RADIUS, SEGMENTS,\n    colorU32(204,255,0,1.12),\n    colorU32(220,255,0,1.00),\n    1.6\n)\n",
+							gVar = "ACR_RikuDRK3_CD",
+							uuid = "dfca9f2c-8cfb-7d30-9695-aebe7b1a6774",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				eventType = 13,
+				mechanicTime = 61.9,
+				name = "[Draw] Farest Party Member from Red",
+				timeRange = true,
+				timelineIndex = 9,
+				timerEndOffset = 1,
+				timerStartOffset = -5,
+				uuid = "00516df6-0734-c0ec-a3a0-6b2a12f8cc4b",
+				version = 2,
+			},
+		},
+	},
 	[11] = 
 	{
 		
@@ -1885,6 +1979,37 @@ local tbl =
 				timelineIndex = 26,
 				timerStartOffset = -5,
 				uuid = "8414a1f5-e154-59c5-8048-5295ff36df88",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "-- Draw: red circle (r=0.8m) under the farthest party member from contentID 14369\n\nlocal TARGET_CID = 14369\nlocal RADIUS = 0.8\nlocal SEGMENTS = 30\n\nif not Argus then return end\n\nlocal function colorU32(r,g,b,a)\n    if GUI and GUI.ColorConvertFloat4ToU32 then\n        return GUI:ColorConvertFloat4ToU32(r,g,b,a)\n    end\n    return 0xFFFFFFFF\nend\n\nlocal function getBossByContentID(contentID)\n    -- Prefer current target\n    if Player and Player.GetTarget then\n        local t = Player:GetTarget()\n        if t and t.contentid == contentID and t.pos then\n            return t\n        end\n    end\n    -- Fallback: scan entities\n    if EntityList then\n        local el = EntityList(\"alive,attackable\")\n        if el then\n            for _, e in pairs(el) do\n                if e and e.contentid == contentID and e.pos then\n                    return e\n                end\n            end\n        end\n    end\n    return nil\nend\n\nlocal boss = getBossByContentID(TARGET_CID)\nif not boss then return end\n\nlocal party = (TensorCore and TensorCore.getEntityGroupList) and TensorCore.getEntityGroupList(\"Party\") or nil\nif not party then return end\n\nlocal farEnt, farDist = nil, -1\nfor _, p in pairs(party) do\n    if p and p.pos then\n        local d = (TensorCore and TensorCore.getDistance2d) and TensorCore.getDistance2d(p.pos, boss.pos) or nil\n        if d and d > farDist then\n            farDist = d\n            farEnt = p\n        end\n    end\nend\n\nif not farEnt or not farEnt.pos then return end\n\nArgus.addCircleFilled(\n    farEnt.pos.x, farEnt.pos.y, farEnt.pos.z,\n    RADIUS, SEGMENTS,\n    colorU32(1,0,0,0.12),\n    colorU32(1,0,0,1.00),\n    1.6\n)\n",
+							gVar = "ACR_RikuDRK3_CD",
+							uuid = "dfca9f2c-8cfb-7d30-9695-aebe7b1a6774",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				eventType = 13,
+				mechanicTime = 136.3,
+				name = "[Draw] Farest Party Member from Blue",
+				timeRange = true,
+				timelineIndex = 26,
+				timerStartOffset = -5,
+				uuid = "edb2f493-e827-7e2c-8b62-8b7e344d432d",
 				version = 2,
 			},
 		},
@@ -6156,6 +6281,41 @@ local tbl =
 			},
 		},
 	},
+	[71] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "-- Draw: red circle (r=0.8m) under the farthest party member (who has buff 4974) from contentID 14369\n\nlocal TARGET_CID = 14370\nlocal FILTER_BUFF = 4974\nlocal RADIUS = 0.8\nlocal SEGMENTS = 30\n\nif not Argus then return end\n\nlocal function colorU32(r,g,b,a)\n    if GUI and GUI.ColorConvertFloat4ToU32 then\n        return GUI:ColorConvertFloat4ToU32(r,g,b,a)\n    end\n    return 0xFFFFFFFF\nend\n\nlocal function getBossByContentID(contentID)\n    -- Prefer current target\n    if Player and Player.GetTarget then\n        local t = Player:GetTarget()\n        if t and t.contentid == contentID and t.pos then\n            return t\n        end\n    end\n    -- Fallback: scan entities\n    if EntityList then\n        local el = EntityList(\"alive,attackable\")\n        if el then\n            for _, e in pairs(el) do\n                if e and e.contentid == contentID and e.pos then\n                    return e\n                end\n            end\n        end\n    end\n    return nil\nend\n\nlocal boss = getBossByContentID(TARGET_CID)\nif not boss then return end\n\nlocal party = (TensorCore and TensorCore.getEntityGroupList) and TensorCore.getEntityGroupList(\"Party\") or nil\nif not party then return end\n\nlocal farEnt, farDist = nil, -1\n\nfor _, p in pairs(party) do\n    if p and p.pos then\n        local hasBuff = false\n        if TensorCore and TensorCore.getBuff then\n            local b = TensorCore.getBuff(p, FILTER_BUFF)\n            if b then hasBuff = true end\n        end\n\n        if hasBuff then\n            local d = (TensorCore and TensorCore.getDistance2d) and TensorCore.getDistance2d(p.pos, boss.pos) or nil\n            if d and d > farDist then\n                farDist = d\n                farEnt = p\n            end\n        end\n    end\nend\n\nif not farEnt or not farEnt.pos then\n    return\nend\n\nArgus.addCircleFilled(\n    farEnt.pos.x, farEnt.pos.y, farEnt.pos.z,\n    RADIUS, SEGMENTS,\n    colorU32(1,0,0,0.12),\n    colorU32(1,0,0,1.00),\n    1.6\n)\n",
+							gVar = "ACR_RikuDRK3_CD",
+							uuid = "dfca9f2c-8cfb-7d30-9695-aebe7b1a6774",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				eventType = 13,
+				mechanicTime = 288.5,
+				name = "[Draw] [Red] Farest Party Member from Red",
+				timeRange = true,
+				timelineIndex = 71,
+				timerEndOffset = 7.6999998092651,
+				timerStartOffset = -2,
+				uuid = "c5f9617b-8ceb-8538-a22a-d9d54135d791",
+				version = 2,
+			},
+		},
+	},
 	[73] = 
 	{
 		
@@ -6169,6 +6329,8 @@ local tbl =
 						data = 
 						{
 							aType = "Alert",
+							alertDuration = 7000,
+							alertScale = 0.89999997615814,
 							alertTTS = true,
 							alertText = "Go North Bait Aerial",
 							alertVolume = 100,
@@ -6212,7 +6374,7 @@ local tbl =
 				name = "[TTS] Bait Aerial",
 				timeRange = true,
 				timelineIndex = 73,
-				timerStartOffset = -5,
+				timerStartOffset = -7,
 				uuid = "8449cd84-f54b-5936-a181-d9e98f8b007d",
 				version = 2,
 			},
@@ -6441,11 +6603,43 @@ local tbl =
 					},
 				},
 				mechanicTime = 306.3,
-				name = "[TTS] Bait Cone AoE",
+				name = "[TTS] Bait Aerial",
 				timeRange = true,
 				timelineIndex = 86,
 				timerStartOffset = -5,
 				uuid = "04e20701-c992-1ece-803e-4daa5eea49ab",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "-- Draw: red circle (r=0.8m) under the farthest party member (who has buff 4974) from contentID 14369\n\nlocal TARGET_CID = 14370\nlocal FILTER_BUFF = 4974\nlocal RADIUS = 0.8\nlocal SEGMENTS = 30\n\nif not Argus then return end\n\nlocal function colorU32(r,g,b,a)\n    if GUI and GUI.ColorConvertFloat4ToU32 then\n        return GUI:ColorConvertFloat4ToU32(r,g,b,a)\n    end\n    return 0xFFFFFFFF\nend\n\nlocal function getBossByContentID(contentID)\n    -- Prefer current target\n    if Player and Player.GetTarget then\n        local t = Player:GetTarget()\n        if t and t.contentid == contentID and t.pos then\n            return t\n        end\n    end\n    -- Fallback: scan entities\n    if EntityList then\n        local el = EntityList(\"alive,attackable\")\n        if el then\n            for _, e in pairs(el) do\n                if e and e.contentid == contentID and e.pos then\n                    return e\n                end\n            end\n        end\n    end\n    return nil\nend\n\nlocal boss = getBossByContentID(TARGET_CID)\nif not boss then return end\n\nlocal party = (TensorCore and TensorCore.getEntityGroupList) and TensorCore.getEntityGroupList(\"Party\") or nil\nif not party then return end\n\nlocal farEnt, farDist = nil, -1\n\nfor _, p in pairs(party) do\n    if p and p.pos then\n        local hasBuff = false\n        if TensorCore and TensorCore.getBuff then\n            local b = TensorCore.getBuff(p, FILTER_BUFF)\n            if b then hasBuff = true end\n        end\n\n        if hasBuff then\n            local d = (TensorCore and TensorCore.getDistance2d) and TensorCore.getDistance2d(p.pos, boss.pos) or nil\n            if d and d > farDist then\n                farDist = d\n                farEnt = p\n            end\n        end\n    end\nend\n\nif not farEnt or not farEnt.pos then\n    return\nend\n\nArgus.addCircleFilled(\n    farEnt.pos.x, farEnt.pos.y, farEnt.pos.z,\n    RADIUS, SEGMENTS,\n    colorU32(204,255,0,1.12),\n    colorU32(220,255,0,1.00),\n    1.6\n)\n",
+							gVar = "ACR_RikuDRK3_CD",
+							uuid = "dfca9f2c-8cfb-7d30-9695-aebe7b1a6774",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				eventType = 13,
+				mechanicTime = 306.3,
+				name = "[Draw] [Red] Farest Party Member from Red",
+				timeRange = true,
+				timelineIndex = 86,
+				timerEndOffset = 1,
+				timerStartOffset = -5,
+				uuid = "3909147a-64d4-1990-9748-045354a2b31a",
 				version = 2,
 			},
 		},
@@ -6558,6 +6752,37 @@ local tbl =
 				timelineIndex = 88,
 				timerStartOffset = -5,
 				uuid = "ba2f2113-5017-8464-a0fd-5e9de067dbe3",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "-- Draw: red circle (r=0.8m) under the farthest party member from contentID 14369\n\nlocal TARGET_CID = 14369\nlocal RADIUS = 0.8\nlocal SEGMENTS = 30\n\nif not Argus then return end\n\nlocal function colorU32(r,g,b,a)\n    if GUI and GUI.ColorConvertFloat4ToU32 then\n        return GUI:ColorConvertFloat4ToU32(r,g,b,a)\n    end\n    return 0xFFFFFFFF\nend\n\nlocal function getBossByContentID(contentID)\n    -- Prefer current target\n    if Player and Player.GetTarget then\n        local t = Player:GetTarget()\n        if t and t.contentid == contentID and t.pos then\n            return t\n        end\n    end\n    -- Fallback: scan entities\n    if EntityList then\n        local el = EntityList(\"alive,attackable\")\n        if el then\n            for _, e in pairs(el) do\n                if e and e.contentid == contentID and e.pos then\n                    return e\n                end\n            end\n        end\n    end\n    return nil\nend\n\nlocal boss = getBossByContentID(TARGET_CID)\nif not boss then return end\n\nlocal party = (TensorCore and TensorCore.getEntityGroupList) and TensorCore.getEntityGroupList(\"Party\") or nil\nif not party then return end\n\nlocal farEnt, farDist = nil, -1\nfor _, p in pairs(party) do\n    if p and p.pos then\n        local d = (TensorCore and TensorCore.getDistance2d) and TensorCore.getDistance2d(p.pos, boss.pos) or nil\n        if d and d > farDist then\n            farDist = d\n            farEnt = p\n        end\n    end\nend\n\nif not farEnt or not farEnt.pos then return end\n\nArgus.addCircleFilled(\n    farEnt.pos.x, farEnt.pos.y, farEnt.pos.z,\n    RADIUS, SEGMENTS,\n    colorU32(1,0,0,0.12),\n    colorU32(1,0,0,1.00),\n    1.6\n)\n",
+							gVar = "ACR_RikuDRK3_CD",
+							uuid = "dfca9f2c-8cfb-7d30-9695-aebe7b1a6774",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				eventType = 13,
+				mechanicTime = 313.2,
+				name = "[Draw] Farest Party Member from Blue",
+				timeRange = true,
+				timelineIndex = 88,
+				timerStartOffset = -5,
+				uuid = "acfe5bfe-4664-65ca-ba02-04db250792fe",
 				version = 2,
 			},
 		},
@@ -10247,6 +10472,37 @@ local tbl =
 				timelineIndex = 160,
 				timerStartOffset = -5,
 				uuid = "2feda1fb-5ebb-3d20-b916-47a0a6004df2",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "-- Draw: red circle (r=0.8m) under the farthest party member from contentID 14369\n\nlocal TARGET_CID = 14369\nlocal RADIUS = 0.8\nlocal SEGMENTS = 30\n\nif not Argus then return end\n\nlocal function colorU32(r,g,b,a)\n    if GUI and GUI.ColorConvertFloat4ToU32 then\n        return GUI:ColorConvertFloat4ToU32(r,g,b,a)\n    end\n    return 0xFFFFFFFF\nend\n\nlocal function getBossByContentID(contentID)\n    -- Prefer current target\n    if Player and Player.GetTarget then\n        local t = Player:GetTarget()\n        if t and t.contentid == contentID and t.pos then\n            return t\n        end\n    end\n    -- Fallback: scan entities\n    if EntityList then\n        local el = EntityList(\"alive,attackable\")\n        if el then\n            for _, e in pairs(el) do\n                if e and e.contentid == contentID and e.pos then\n                    return e\n                end\n            end\n        end\n    end\n    return nil\nend\n\nlocal boss = getBossByContentID(TARGET_CID)\nif not boss then return end\n\nlocal party = (TensorCore and TensorCore.getEntityGroupList) and TensorCore.getEntityGroupList(\"Party\") or nil\nif not party then return end\n\nlocal farEnt, farDist = nil, -1\nfor _, p in pairs(party) do\n    if p and p.pos then\n        local d = (TensorCore and TensorCore.getDistance2d) and TensorCore.getDistance2d(p.pos, boss.pos) or nil\n        if d and d > farDist then\n            farDist = d\n            farEnt = p\n        end\n    end\nend\n\nif not farEnt or not farEnt.pos then return end\n\nArgus.addCircleFilled(\n    farEnt.pos.x, farEnt.pos.y, farEnt.pos.z,\n    RADIUS, SEGMENTS,\n    colorU32(1,0,0,0.12),\n    colorU32(1,0,0,1.00),\n    1.6\n)\n",
+							gVar = "ACR_RikuDRK3_CD",
+							uuid = "dfca9f2c-8cfb-7d30-9695-aebe7b1a6774",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				eventType = 13,
+				mechanicTime = 553.2,
+				name = "[Draw] Farest Party Member from Blue",
+				timeRange = true,
+				timelineIndex = 160,
+				timerStartOffset = -5,
+				uuid = "6422e91a-5c09-8486-a267-a25804d1fccb",
 				version = 2,
 			},
 		},
