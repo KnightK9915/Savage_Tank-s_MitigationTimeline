@@ -532,7 +532,7 @@ local tbl =
 								},
 								
 								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									"7286744f-688c-9195-941e-46d65189cc2c",
 									true,
 								},
 								
@@ -578,14 +578,17 @@ local tbl =
 					{
 						data = 
 						{
+							buffCheckType = 3,
+							category = "Lua",
 							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 内（中心点到中心点，不扣 hitradius）存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" and d <= RANGE then\n                return true\n            end\n        end\n    end\nend\n\nreturn false\n",
 							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
 							version = 2,
 						},
-						inheritedIndex = 2,
+						inheritedIndex = 3,
 					},
 					
 					{
@@ -1788,12 +1791,12 @@ local tbl =
 								},
 								
 								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									"7286744f-688c-9195-941e-46d65189cc2c",
 									true,
 								},
 								
 								{
-									"fd4a16e0-b860-5ba0-bd01-ce9c1bf8e038",
+									"81247c1c-ba5c-edea-b313-c2a31370e1ba",
 									true,
 								},
 							},
@@ -1834,14 +1837,17 @@ local tbl =
 					{
 						data = 
 						{
+							buffCheckType = 3,
+							category = "Lua",
 							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 内（中心点到中心点，不扣 hitradius）存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" and d <= RANGE then\n                return true\n            end\n        end\n    end\nend\n\nreturn false\n",
 							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
 							version = 2,
 						},
-						inheritedIndex = 2,
+						inheritedIndex = 3,
 					},
 					
 					{
@@ -1850,7 +1856,7 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
-							uuid = "fd4a16e0-b860-5ba0-bd01-ce9c1bf8e038",
+							uuid = "81247c1c-ba5c-edea-b313-c2a31370e1ba",
 							version = 2,
 						},
 					},
@@ -1862,7 +1868,7 @@ local tbl =
 				timelineIndex = 9,
 				timerOffset = -3,
 				timerStartOffset = -14.5,
-				uuid = "fbdae7f7-8b6f-0d4d-85c8-878eef8ec0a7",
+				uuid = "39a1d3d7-62eb-3408-b363-22198d12209d",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -2400,7 +2406,7 @@ local tbl =
 								},
 								
 								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									"7286744f-688c-9195-941e-46d65189cc2c",
 									true,
 								},
 								
@@ -2412,8 +2418,7 @@ local tbl =
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
-							targetContentID = 14300,
-							targetType = "ContentID",
+							targetType = "Current Target",
 							uuid = "c9c9cc18-aa2e-c48a-bebe-6ab6f4e7c114",
 							version = 2.1,
 						},
@@ -2447,14 +2452,17 @@ local tbl =
 					{
 						data = 
 						{
+							buffCheckType = 3,
+							category = "Lua",
 							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 内（中心点到中心点，不扣 hitradius）存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" and d <= RANGE then\n                return true\n            end\n        end\n    end\nend\n\nreturn false\n",
 							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
 							version = 2,
 						},
-						inheritedIndex = 2,
+						inheritedIndex = 3,
 					},
 					
 					{
@@ -2475,7 +2483,7 @@ local tbl =
 				timelineIndex = 11,
 				timerOffset = -3,
 				timerStartOffset = -2.5,
-				uuid = "76f77c49-c2bd-c776-b291-342366e15fbf",
+				uuid = "4f264a81-f089-c1d5-8007-f5df58604b5e",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -3041,15 +3049,14 @@ local tbl =
 								},
 								
 								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									"7286744f-688c-9195-941e-46d65189cc2c",
 									true,
 								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
-							targetContentID = 14300,
-							targetType = "ContentID",
+							targetType = "Current Target",
 							uuid = "c9c9cc18-aa2e-c48a-bebe-6ab6f4e7c114",
 							version = 2.1,
 						},
@@ -3083,14 +3090,17 @@ local tbl =
 					{
 						data = 
 						{
+							buffCheckType = 3,
+							category = "Lua",
 							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 内（中心点到中心点，不扣 hitradius）存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" and d <= RANGE then\n                return true\n            end\n        end\n    end\nend\n\nreturn false\n",
 							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
 							version = 2,
 						},
-						inheritedIndex = 2,
+						inheritedIndex = 3,
 					},
 				},
 				mechanicTime = 137.9,
@@ -3100,10 +3110,262 @@ local tbl =
 				timelineIndex = 47,
 				timerOffset = -3,
 				timerStartOffset = -14.5,
-				uuid = "9690cc7a-7e14-0a07-8f60-a954e53155bb",
+				uuid = "a8ac41d5-9bcd-7386-b84c-ef3688513df6",
 				version = 2,
 			},
 			inheritedIndex = 5,
+		},
+	},
+	[48] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7386,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"4d87ceee-f728-4838-8f79-80779eccdc0c",
+									true,
+								},
+								
+								{
+									"17048277-8385-50b5-8477-d9746a337790",
+									true,
+								},
+								
+								{
+									"c7eebed6-c0e9-f39d-b6dd-39b96b43ac0f",
+									true,
+								},
+								
+								{
+									"614059bc-bcf6-dc29-bcc3-5a07e597df35",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14284,
+							targetType = "Detection Target",
+							uuid = "a89fd7d3-37b4-dbba-9a35-3461d922b03a",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16461,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"95650279-e1c3-068e-b652-deafc0f27b2b",
+									true,
+								},
+								
+								{
+									"17048277-8385-50b5-8477-d9746a337790",
+									true,
+								},
+								
+								{
+									"c7eebed6-c0e9-f39d-b6dd-39b96b43ac0f",
+									true,
+								},
+								
+								{
+									"614059bc-bcf6-dc29-bcc3-5a07e597df35",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14284,
+							targetType = "Detection Target",
+							uuid = "271166d7-27e1-d3d8-834c-f017e047af65",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36926,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"ec796e6b-2edc-dfac-bcac-8a14110fb746",
+									true,
+								},
+								
+								{
+									"17048277-8385-50b5-8477-d9746a337790",
+									true,
+								},
+								
+								{
+									"c7eebed6-c0e9-f39d-b6dd-39b96b43ac0f",
+									true,
+								},
+								
+								{
+									"614059bc-bcf6-dc29-bcc3-5a07e597df35",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14284,
+							targetType = "Detection Target",
+							uuid = "2c6a556b-f7f3-2846-abd6-50fec65d8bd1",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36934,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"fb94c842-2626-8715-b3de-80ef0f9eb393",
+									true,
+								},
+								
+								{
+									"17048277-8385-50b5-8477-d9746a337790",
+									true,
+								},
+								
+								{
+									"c7eebed6-c0e9-f39d-b6dd-39b96b43ac0f",
+									true,
+								},
+								
+								{
+									"614059bc-bcf6-dc29-bcc3-5a07e597df35",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14284,
+							targetType = "Detection Target",
+							uuid = "2e0a06ea-878e-af29-8f89-70e501c1c1e4",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "WARRIOR",
+							name = "Warrior",
+							uuid = "4d87ceee-f728-4838-8f79-80779eccdc0c",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "Paladin",
+							uuid = "95650279-e1c3-068e-b652-deafc0f27b2b",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "Darkknight",
+							uuid = "ec796e6b-2edc-dfac-bcac-8a14110fb746",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "Gunbreaker",
+							uuid = "fb94c842-2626-8715-b3de-80ef0f9eb393",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "-- 目标参数配置\nlocal targetCID = 14300\nlocal targetX = 99.99\nlocal targetY = 0\nlocal targetZ = 99.99\nlocal tolerance = 1.0 -- 容差范围（米），只要在这个距离内都算“在位置上”\n\n-- 获取指定 ContentID 的实体列表\nlocal el = EntityList(\"contentid=\" .. targetCID)\n\n-- 遍历查找\nif (table.valid(el)) then\n    for i, entity in pairs(el) do\n        if (entity and entity.pos) then\n            -- 计算三维距离的平方（性能优于开根号）\n            local dx = entity.pos.x - targetX\n            local dy = entity.pos.y - targetY\n            local dz = entity.pos.z - targetZ\n            local distSq = (dx * dx) + (dy * dy) + (dz * dz)\n            \n            -- 如果距离小于容差，返回 true\n            if (distSq <= (tolerance * tolerance)) then\n                return true\n            end\n        end\n    end\nend\n\n-- 未找到或不在位置\nreturn false",
+							name = "Check Vamp Position",
+							uuid = "17048277-8385-50b5-8477-d9746a337790",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local player = TensorCore.mGetPlayer()\nif not player or not player.pos then return false end\n\nlocal wantCID = 14300\nlocal bestDist = nil\n\nif not EntityList then return false end\n\nfor _, e in pairs(EntityList(\"alive,attackable\")) do\n    if e and e.contentid == wantCID and e.pos then\n        local dx = player.pos.x - e.pos.x\n        local dz = player.pos.z - e.pos.z\n        local d  = math.sqrt(dx*dx + dz*dz)\n        if (not bestDist) or d < bestDist then\n            bestDist = d\n        end\n    end\nend\n\nreturn (bestDist ~= nil) and (bestDist > 5.0)\n",
+							name = "Vamp dis > 5",
+							uuid = "c7eebed6-c0e9-f39d-b6dd-39b96b43ac0f",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							filterTargetType = "ContentID",
+							partyTargetContentID = 14300,
+							uuid = "614059bc-bcf6-dc29-bcc3-5a07e597df35",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 143.2,
+				name = "Instant Dash",
+				timeRange = true,
+				timelineIndex = 48,
+				timerEndOffset = 5,
+				timerStartOffset = -10,
+				uuid = "5c3b9e3b-3d58-fefc-bd0f-41af2ded8178",
+				version = 2,
+			},
 		},
 	},
 	[49] = 
@@ -3574,7 +3836,7 @@ local tbl =
 								},
 								
 								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									"7286744f-688c-9195-941e-46d65189cc2c",
 									true,
 								},
 							},
@@ -3615,14 +3877,17 @@ local tbl =
 					{
 						data = 
 						{
+							buffCheckType = 3,
+							category = "Lua",
 							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 内（中心点到中心点，不扣 hitradius）存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" and d <= RANGE then\n                return true\n            end\n        end\n    end\nend\n\nreturn false\n",
 							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
 							version = 2,
 						},
-						inheritedIndex = 2,
+						inheritedIndex = 3,
 					},
 				},
 				mechanicTime = 152.3,
@@ -3632,7 +3897,7 @@ local tbl =
 				timelineIndex = 49,
 				timerOffset = -3,
 				timerStartOffset = -2.5,
-				uuid = "1ea84a22-27f7-243e-ba8d-c074d6665697",
+				uuid = "6aa99822-4778-aca0-a0bf-5e26f54b0a7e",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -4106,7 +4371,7 @@ local tbl =
 								},
 								
 								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									"7286744f-688c-9195-941e-46d65189cc2c",
 									true,
 								},
 							},
@@ -4147,14 +4412,17 @@ local tbl =
 					{
 						data = 
 						{
+							buffCheckType = 3,
+							category = "Lua",
 							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 内（中心点到中心点，不扣 hitradius）存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" and d <= RANGE then\n                return true\n            end\n        end\n    end\nend\n\nreturn false\n",
 							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
 							version = 2,
 						},
-						inheritedIndex = 2,
+						inheritedIndex = 3,
 					},
 				},
 				mechanicTime = 171.3,
@@ -4164,7 +4432,7 @@ local tbl =
 				timelineIndex = 51,
 				timerOffset = -3,
 				timerStartOffset = -2.5,
-				uuid = "14f6dfdd-509f-694b-bde3-f46ccc1b3f4e",
+				uuid = "89a780db-7ea4-4dc1-b7df-3bbf9e1c63d7",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -4863,7 +5131,7 @@ local tbl =
 								},
 								
 								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									"7286744f-688c-9195-941e-46d65189cc2c",
 									true,
 								},
 							},
@@ -4904,14 +5172,17 @@ local tbl =
 					{
 						data = 
 						{
+							buffCheckType = 3,
+							category = "Lua",
 							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 内（中心点到中心点，不扣 hitradius）存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" and d <= RANGE then\n                return true\n            end\n        end\n    end\nend\n\nreturn false\n",
 							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
 							version = 2,
 						},
-						inheritedIndex = 2,
+						inheritedIndex = 3,
 					},
 				},
 				mechanicTime = 256.1,
@@ -4921,7 +5192,7 @@ local tbl =
 				timelineIndex = 68,
 				timerOffset = -3,
 				timerStartOffset = -2.5,
-				uuid = "7d5d9785-1623-bbfd-bde2-a3662ea13780",
+				uuid = "d8854ad6-7ca7-da6f-ad7c-0f3715e0bea2",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -5395,7 +5666,7 @@ local tbl =
 								},
 								
 								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									"7286744f-688c-9195-941e-46d65189cc2c",
 									true,
 								},
 							},
@@ -5436,14 +5707,17 @@ local tbl =
 					{
 						data = 
 						{
+							buffCheckType = 3,
+							category = "Lua",
 							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 内（中心点到中心点，不扣 hitradius）存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" and d <= RANGE then\n                return true\n            end\n        end\n    end\nend\n\nreturn false\n",
 							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
 							version = 2,
 						},
-						inheritedIndex = 2,
+						inheritedIndex = 3,
 					},
 				},
 				mechanicTime = 270.1,
@@ -5453,10 +5727,262 @@ local tbl =
 				timelineIndex = 69,
 				timerOffset = -3,
 				timerStartOffset = -2.5,
-				uuid = "e5eaafa0-dacf-95ad-b76f-2e7a3e120242",
+				uuid = "bb2f9390-8045-9a26-aca7-95bdce0aab2c",
 				version = 2,
 			},
 			inheritedIndex = 5,
+		},
+	},
+	[70] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7386,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"4d87ceee-f728-4838-8f79-80779eccdc0c",
+									true,
+								},
+								
+								{
+									"17048277-8385-50b5-8477-d9746a337790",
+									true,
+								},
+								
+								{
+									"c7eebed6-c0e9-f39d-b6dd-39b96b43ac0f",
+									true,
+								},
+								
+								{
+									"614059bc-bcf6-dc29-bcc3-5a07e597df35",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14284,
+							targetType = "Detection Target",
+							uuid = "a89fd7d3-37b4-dbba-9a35-3461d922b03a",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16461,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"95650279-e1c3-068e-b652-deafc0f27b2b",
+									true,
+								},
+								
+								{
+									"17048277-8385-50b5-8477-d9746a337790",
+									true,
+								},
+								
+								{
+									"c7eebed6-c0e9-f39d-b6dd-39b96b43ac0f",
+									true,
+								},
+								
+								{
+									"614059bc-bcf6-dc29-bcc3-5a07e597df35",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14284,
+							targetType = "Detection Target",
+							uuid = "271166d7-27e1-d3d8-834c-f017e047af65",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36926,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"ec796e6b-2edc-dfac-bcac-8a14110fb746",
+									true,
+								},
+								
+								{
+									"17048277-8385-50b5-8477-d9746a337790",
+									true,
+								},
+								
+								{
+									"c7eebed6-c0e9-f39d-b6dd-39b96b43ac0f",
+									true,
+								},
+								
+								{
+									"614059bc-bcf6-dc29-bcc3-5a07e597df35",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14284,
+							targetType = "Detection Target",
+							uuid = "2c6a556b-f7f3-2846-abd6-50fec65d8bd1",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36934,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"fb94c842-2626-8715-b3de-80ef0f9eb393",
+									true,
+								},
+								
+								{
+									"17048277-8385-50b5-8477-d9746a337790",
+									true,
+								},
+								
+								{
+									"c7eebed6-c0e9-f39d-b6dd-39b96b43ac0f",
+									true,
+								},
+								
+								{
+									"614059bc-bcf6-dc29-bcc3-5a07e597df35",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14284,
+							targetType = "Detection Target",
+							uuid = "2e0a06ea-878e-af29-8f89-70e501c1c1e4",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "WARRIOR",
+							name = "Warrior",
+							uuid = "4d87ceee-f728-4838-8f79-80779eccdc0c",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "Paladin",
+							uuid = "95650279-e1c3-068e-b652-deafc0f27b2b",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "Darkknight",
+							uuid = "ec796e6b-2edc-dfac-bcac-8a14110fb746",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "Gunbreaker",
+							uuid = "fb94c842-2626-8715-b3de-80ef0f9eb393",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "-- 目标参数配置\nlocal targetCID = 14300\nlocal targetX = 99.99\nlocal targetY = 0\nlocal targetZ = 99.99\nlocal tolerance = 1.0 -- 容差范围（米），只要在这个距离内都算“在位置上”\n\n-- 获取指定 ContentID 的实体列表\nlocal el = EntityList(\"contentid=\" .. targetCID)\n\n-- 遍历查找\nif (table.valid(el)) then\n    for i, entity in pairs(el) do\n        if (entity and entity.pos) then\n            -- 计算三维距离的平方（性能优于开根号）\n            local dx = entity.pos.x - targetX\n            local dy = entity.pos.y - targetY\n            local dz = entity.pos.z - targetZ\n            local distSq = (dx * dx) + (dy * dy) + (dz * dz)\n            \n            -- 如果距离小于容差，返回 true\n            if (distSq <= (tolerance * tolerance)) then\n                return true\n            end\n        end\n    end\nend\n\n-- 未找到或不在位置\nreturn false",
+							name = "Check Vamp Position",
+							uuid = "17048277-8385-50b5-8477-d9746a337790",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local player = TensorCore.mGetPlayer()\nif not player or not player.pos then return false end\n\nlocal wantCID = 14300\nlocal bestDist = nil\n\nif not EntityList then return false end\n\nfor _, e in pairs(EntityList(\"alive,attackable\")) do\n    if e and e.contentid == wantCID and e.pos then\n        local dx = player.pos.x - e.pos.x\n        local dz = player.pos.z - e.pos.z\n        local d  = math.sqrt(dx*dx + dz*dz)\n        if (not bestDist) or d < bestDist then\n            bestDist = d\n        end\n    end\nend\n\nreturn (bestDist ~= nil) and (bestDist > 5.0)\n",
+							name = "Vamp dis > 5",
+							uuid = "c7eebed6-c0e9-f39d-b6dd-39b96b43ac0f",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							filterTargetType = "ContentID",
+							partyTargetContentID = 14300,
+							uuid = "614059bc-bcf6-dc29-bcc3-5a07e597df35",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 274.1,
+				name = "Instant Dash",
+				timeRange = true,
+				timelineIndex = 70,
+				timerEndOffset = 5,
+				timerStartOffset = -10,
+				uuid = "dfa892b1-dfda-4bdf-aeb2-628e9be2ee7c",
+				version = 2,
+			},
 		},
 	},
 	[71] = 
@@ -5927,7 +6453,7 @@ local tbl =
 								},
 								
 								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									"7286744f-688c-9195-941e-46d65189cc2c",
 									true,
 								},
 							},
@@ -5968,14 +6494,17 @@ local tbl =
 					{
 						data = 
 						{
+							buffCheckType = 3,
+							category = "Lua",
 							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 内（中心点到中心点，不扣 hitradius）存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" and d <= RANGE then\n                return true\n            end\n        end\n    end\nend\n\nreturn false\n",
 							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
 							version = 2,
 						},
-						inheritedIndex = 2,
+						inheritedIndex = 3,
 					},
 				},
 				mechanicTime = 283.1,
@@ -5985,7 +6514,7 @@ local tbl =
 				timelineIndex = 71,
 				timerOffset = -3,
 				timerStartOffset = -2.5,
-				uuid = "80918ed3-0298-011d-9273-2f2d7aabb707",
+				uuid = "f492cc84-7a95-5656-b9e9-227db2b605e6",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -6459,15 +6988,14 @@ local tbl =
 								},
 								
 								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									"7286744f-688c-9195-941e-46d65189cc2c",
 									true,
 								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
-							targetContentID = 14300,
-							targetType = "ContentID",
+							targetType = "Current Target",
 							uuid = "c9c9cc18-aa2e-c48a-bebe-6ab6f4e7c114",
 							version = 2.1,
 						},
@@ -6501,14 +7029,17 @@ local tbl =
 					{
 						data = 
 						{
+							buffCheckType = 3,
+							category = "Lua",
 							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 内（中心点到中心点，不扣 hitradius）存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" and d <= RANGE then\n                return true\n            end\n        end\n    end\nend\n\nreturn false\n",
 							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
 							version = 2,
 						},
-						inheritedIndex = 2,
+						inheritedIndex = 3,
 					},
 				},
 				mechanicTime = 304.3,
@@ -6518,7 +7049,7 @@ local tbl =
 				timelineIndex = 75,
 				timerOffset = -3,
 				timerStartOffset = -2.5,
-				uuid = "63b6c0a2-1b87-df09-baf5-48edfda32a31",
+				uuid = "9d569815-3f83-1ebd-a520-61de1da56eb8",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -6992,15 +7523,14 @@ local tbl =
 								},
 								
 								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									"7286744f-688c-9195-941e-46d65189cc2c",
 									true,
 								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
-							targetContentID = 14300,
-							targetType = "ContentID",
+							targetType = "Current Target",
 							uuid = "c9c9cc18-aa2e-c48a-bebe-6ab6f4e7c114",
 							version = 2.1,
 						},
@@ -7034,14 +7564,17 @@ local tbl =
 					{
 						data = 
 						{
+							buffCheckType = 3,
+							category = "Lua",
 							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 内（中心点到中心点，不扣 hitradius）存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" and d <= RANGE then\n                return true\n            end\n        end\n    end\nend\n\nreturn false\n",
 							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
 							version = 2,
 						},
-						inheritedIndex = 2,
+						inheritedIndex = 3,
 					},
 				},
 				mechanicTime = 322.4,
@@ -7051,7 +7584,7 @@ local tbl =
 				timelineIndex = 79,
 				timerOffset = -3,
 				timerStartOffset = -2.5,
-				uuid = "e9b83425-b494-dd9d-8eea-6eea100ff33e",
+				uuid = "3ff9cd25-d45c-3d29-9709-76c49af05ea9",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -7525,7 +8058,7 @@ local tbl =
 								},
 								
 								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									"7286744f-688c-9195-941e-46d65189cc2c",
 									true,
 								},
 							},
@@ -7566,14 +8099,17 @@ local tbl =
 					{
 						data = 
 						{
+							buffCheckType = 3,
+							category = "Lua",
 							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 内（中心点到中心点，不扣 hitradius）存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" and d <= RANGE then\n                return true\n            end\n        end\n    end\nend\n\nreturn false\n",
 							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
 							version = 2,
 						},
-						inheritedIndex = 2,
+						inheritedIndex = 3,
 					},
 				},
 				mechanicTime = 369.9,
@@ -7582,8 +8118,8 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 85,
 				timerOffset = -3,
-				timerStartOffset = -14.89999961853,
-				uuid = "c05b83ea-a577-7f11-a037-62e7e16fa334",
+				timerStartOffset = -14.5,
+				uuid = "c8ae2c72-229d-3b96-900f-1e3f0299093f",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -8057,7 +8593,7 @@ local tbl =
 								},
 								
 								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									"7286744f-688c-9195-941e-46d65189cc2c",
 									true,
 								},
 							},
@@ -8098,14 +8634,17 @@ local tbl =
 					{
 						data = 
 						{
+							buffCheckType = 3,
+							category = "Lua",
 							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 内（中心点到中心点，不扣 hitradius）存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" and d <= RANGE then\n                return true\n            end\n        end\n    end\nend\n\nreturn false\n",
 							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
 							version = 2,
 						},
-						inheritedIndex = 2,
+						inheritedIndex = 3,
 					},
 				},
 				mechanicTime = 388.9,
@@ -8115,7 +8654,7 @@ local tbl =
 				timelineIndex = 87,
 				timerOffset = -3,
 				timerStartOffset = -2.5,
-				uuid = "72aa170c-37f8-be0b-8980-d97b4da47a16",
+				uuid = "cba22f0d-31a6-abea-a52b-f9fc59cfa5f8",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -9005,12 +9544,12 @@ local tbl =
 								},
 								
 								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									"7286744f-688c-9195-941e-46d65189cc2c",
 									true,
 								},
 								
 								{
-									"117eb0d2-bb93-8f63-8b8f-7253207e4693",
+									"14dcb273-8b5c-07f5-b64a-7fa64a89ddd5",
 									true,
 								},
 							},
@@ -9051,14 +9590,17 @@ local tbl =
 					{
 						data = 
 						{
+							buffCheckType = 3,
+							category = "Lua",
 							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 内（中心点到中心点，不扣 hitradius）存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" and d <= RANGE then\n                return true\n            end\n        end\n    end\nend\n\nreturn false\n",
 							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
 							version = 2,
 						},
-						inheritedIndex = 2,
+						inheritedIndex = 3,
 					},
 					
 					{
@@ -9067,7 +9609,7 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false\n",
 							name = "GroupMit ST",
-							uuid = "117eb0d2-bb93-8f63-8b8f-7253207e4693",
+							uuid = "14dcb273-8b5c-07f5-b64a-7fa64a89ddd5",
 							version = 2,
 						},
 					},
@@ -9079,7 +9621,7 @@ local tbl =
 				timelineIndex = 109,
 				timerOffset = -3,
 				timerStartOffset = -14.5,
-				uuid = "415c81d9-0c56-2008-b071-9fe27ef19032",
+				uuid = "1afbdcbb-61f6-8e05-b431-af56629cfe2a",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -9137,669 +9679,6 @@ local tbl =
 		},
 	},
 	[123] = 
-	{
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 3540,
-							conditions = 
-							{
-								
-								{
-									"6a49330b-844e-31fa-96c9-18ecbe6b49bd",
-									true,
-								},
-								
-								{
-									"d509fc50-866e-82e0-a683-7f673386a79e",
-									true,
-								},
-								
-								{
-									"28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-									true,
-								},
-								
-								{
-									"a787167c-e665-8709-84d0-298a7dbe954a",
-									true,
-								},
-								
-								{
-									"42693300-fb80-e3a0-9f4a-a1d948653d41",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "208d8d0c-038a-0156-ae05-da413fbdfa98",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return FFXIV_Common_BotRunning",
-							name = "Bot Running",
-							uuid = "6a49330b-844e-31fa-96c9-18ecbe6b49bd",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							actionID = 3540,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 14,
-							jobIDList = 
-							{
-								19,
-							},
-							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffID = 1457,
-							buffIDList = 
-							{
-								1457,
-								1839,
-								1894,
-							},
-							category = "Self",
-							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
-							name = "GroupMit MT",
-							uuid = "42693300-fb80-e3a0-9f4a-a1d948653d41",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 607.9,
-				name = "Veil",
-				timeRange = true,
-				timelineIndex = 123,
-				timerOffset = -10,
-				timerStartOffset = -14.5,
-				uuid = "0de87ae0-957c-a847-adb5-a547992df71d",
-				version = 2,
-			},
-			inheritedIndex = 1,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16160,
-							conditions = 
-							{
-								
-								{
-									"d7ee7d76-2e37-5f72-9463-9e74e1643e90",
-									true,
-								},
-								
-								{
-									"a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-									true,
-								},
-								
-								{
-									"115eca71-8e25-2c76-be17-c29c66dcf324",
-									true,
-								},
-								
-								{
-									"a6929435-5dcb-3407-8d89-b38a0596d1ac",
-									true,
-								},
-								
-								{
-									"0626cfe2-10ce-193b-950b-7a0088f827a5",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							uuid = "dbc99f8f-e1c5-f477-89e0-30fa7efeda14",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return FFXIV_Common_BotRunning",
-							name = "Bot Running",
-							uuid = "d7ee7d76-2e37-5f72-9463-9e74e1643e90",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							actionID = 16160,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 14,
-							jobIDList = 
-							{
-								37,
-							},
-							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffID = 1457,
-							buffIDList = 
-							{
-								1457,
-								1894,
-								1362,
-							},
-							category = "Self",
-							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
-							name = "GroupMit MT",
-							uuid = "0626cfe2-10ce-193b-950b-7a0088f827a5",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 607.9,
-				name = "HoL",
-				timeRange = true,
-				timelineIndex = 123,
-				timerStartOffset = -14.5,
-				uuid = "1824d463-e873-7005-ae93-6e6f3c68c6c2",
-				version = 2,
-			},
-			inheritedIndex = 4,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16471,
-							conditions = 
-							{
-								
-								{
-									"c61a0421-fa49-c741-abbd-ffd29ab11e62",
-									true,
-								},
-								
-								{
-									"142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-									true,
-								},
-								
-								{
-									"322dd20f-009d-0bff-941f-f877ce997638",
-									true,
-								},
-								
-								{
-									"e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-									true,
-								},
-								
-								{
-									"fcdf674b-05cd-bc08-a81c-2a0ce10cb8d1",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							uuid = "32970969-7f85-6bc8-90e1-4f30e8ce8093",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return FFXIV_Common_BotRunning",
-							name = "Bot Running",
-							uuid = "c61a0421-fa49-c741-abbd-ffd29ab11e62",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							actionID = 16471,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 14,
-							jobIDList = 
-							{
-								32,
-							},
-							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffID = 1457,
-							buffIDList = 
-							{
-								1457,
-								1362,
-								1839,
-							},
-							category = "Self",
-							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
-						},
-						inheritedIndex = 3,
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
-							name = "GroupMit MT",
-							uuid = "fcdf674b-05cd-bc08-a81c-2a0ce10cb8d1",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 607.9,
-				name = "Dark Missinary",
-				timeRange = true,
-				timelineIndex = 123,
-				timerOffset = -10,
-				timerStartOffset = -14.5,
-				uuid = "ee5ece6a-0eda-a557-80bc-7e4d3e7bcb56",
-				version = 2,
-			},
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7388,
-							conditions = 
-							{
-								
-								{
-									"a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
-									true,
-								},
-								
-								{
-									"c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-									true,
-								},
-								
-								{
-									"cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-									true,
-								},
-								
-								{
-									"3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-									true,
-								},
-								
-								{
-									"01ce1ac8-0b5e-3ec4-a7bd-a740eec24007",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							uuid = "83ae2ac2-4e1e-673e-befc-12d5802ce1cd",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return FFXIV_Common_BotRunning",
-							name = "Bot Running",
-							uuid = "a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							actionID = 7388,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 14,
-							jobIDList = 
-							{
-								21,
-							},
-							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffID = 1457,
-							buffIDList = 
-							{
-								1362,
-								1839,
-								1894,
-							},
-							category = "Self",
-							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
-						},
-						inheritedIndex = 3,
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
-							name = "GroupMit MT",
-							uuid = "01ce1ac8-0b5e-3ec4-a7bd-a740eec24007",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 607.9,
-				name = "Shake it off",
-				timeRange = true,
-				timelineIndex = 123,
-				timerStartOffset = -14.5,
-				uuid = "211a63c9-7db3-7288-b782-fcfc9b54eb44",
-				version = 2,
-			},
-			inheritedIndex = 4,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7535,
-							conditions = 
-							{
-								
-								{
-									"920eaf0e-9d68-b87a-b636-36be8e013575",
-									true,
-								},
-								
-								{
-									"5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-									true,
-								},
-								
-								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
-									true,
-								},
-								
-								{
-									"117eb0d2-bb93-8f63-8b8f-7253207e4693",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Current Target",
-							uuid = "c9c9cc18-aa2e-c48a-bebe-6ab6f4e7c114",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return FFXIV_Common_BotRunning",
-							name = "Bot Running",
-							uuid = "920eaf0e-9d68-b87a-b636-36be8e013575",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 2,
-							buffID = 1193,
-							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							comparator = 2,
-							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
-							version = 2,
-						},
-						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
-							name = "GroupMit MT",
-							uuid = "117eb0d2-bb93-8f63-8b8f-7253207e4693",
-							version = 2,
-						},
-					},
-				},
-				mechanicTime = 607.9,
-				name = "Reprisal",
-				randomOffset = -2,
-				timeRange = true,
-				timelineIndex = 123,
-				timerOffset = -3,
-				timerStartOffset = -14.5,
-				uuid = "f276b270-4534-2290-aefa-049ca96f1ed5",
-				version = 2,
-			},
-			inheritedIndex = 5,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "Lua",
-							actionLua = "data.iscastingrolespread = nil\nself.used = true\n",
-							conditions = 
-							{
-								
-								{
-									"6bf5e9fa-89cd-849f-8807-ce822608ed87",
-									true,
-								},
-							},
-							gVar = "ACR_RikuGNB3_CD",
-							uuid = "96b73ee0-bfd7-9981-82e6-f5e779157240",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return data.iscastingrolespread == true\n",
-							name = "IsRolespread",
-							uuid = "6bf5e9fa-89cd-849f-8807-ce822608ed87",
-							version = 2,
-						},
-					},
-				},
-				enabled = false,
-				mechanicTime = 607.9,
-				name = "Clear Role Spread Record",
-				timeRange = true,
-				timelineIndex = 123,
-				timerEndOffset = 5,
-				timerStartOffset = 1,
-				uuid = "d7467b24-392d-225f-a84c-a1d52bf74af0",
-				version = 2,
-			},
-		},
-	},
-	[145] = 
 	{
 		
 		{
@@ -9917,13 +9796,13 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 737.3,
+				mechanicTime = 607.9,
 				name = "Veil",
 				timeRange = true,
-				timelineIndex = 145,
+				timelineIndex = 123,
 				timerOffset = -10,
 				timerStartOffset = -14.5,
-				uuid = "8f1aec90-e4c9-2872-9e49-04890486b793",
+				uuid = "c0cc1db5-2936-dedb-9b23-a81abc16c94f",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -10044,12 +9923,12 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 737.3,
+				mechanicTime = 607.9,
 				name = "HoL",
 				timeRange = true,
-				timelineIndex = 145,
+				timelineIndex = 123,
 				timerStartOffset = -14.5,
-				uuid = "8c2d2269-9afd-8bdf-b38e-de20da4d1cf9",
+				uuid = "a7db5054-b4e8-6261-99c0-5a605b382195",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -10170,13 +10049,13 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 737.3,
+				mechanicTime = 607.9,
 				name = "Dark Missinary",
 				timeRange = true,
-				timelineIndex = 145,
+				timelineIndex = 123,
 				timerOffset = -10,
 				timerStartOffset = -14.5,
-				uuid = "94aa5a94-5503-374c-b4ae-a4237ee5897e",
+				uuid = "6e6134a5-033c-5246-9521-b4c8b05f845b",
 				version = 2,
 			},
 		},
@@ -10296,12 +10175,12 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 737.3,
+				mechanicTime = 607.9,
 				name = "Shake it off",
 				timeRange = true,
-				timelineIndex = 145,
+				timelineIndex = 123,
 				timerStartOffset = -14.5,
-				uuid = "e10ef9c0-5545-5a87-8088-3c461e5b20ce",
+				uuid = "6707740d-72a9-a748-af2e-84eb465d025f",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -10331,12 +10210,12 @@ local tbl =
 								},
 								
 								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									"7286744f-688c-9195-941e-46d65189cc2c",
 									true,
 								},
 								
 								{
-									"117eb0d2-bb93-8f63-8b8f-7253207e4693",
+									"14dcb273-8b5c-07f5-b64a-7fa64a89ddd5",
 									true,
 								},
 							},
@@ -10377,14 +10256,17 @@ local tbl =
 					{
 						data = 
 						{
+							buffCheckType = 3,
+							category = "Lua",
 							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 内（中心点到中心点，不扣 hitradius）存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" and d <= RANGE then\n                return true\n            end\n        end\n    end\nend\n\nreturn false\n",
 							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
 							version = 2,
 						},
-						inheritedIndex = 2,
+						inheritedIndex = 3,
 					},
 					
 					{
@@ -10393,7 +10275,673 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false\n",
 							name = "GroupMit ST",
-							uuid = "117eb0d2-bb93-8f63-8b8f-7253207e4693",
+							uuid = "14dcb273-8b5c-07f5-b64a-7fa64a89ddd5",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 607.9,
+				name = "Reprisal",
+				randomOffset = -2,
+				timeRange = true,
+				timelineIndex = 123,
+				timerOffset = -3,
+				timerStartOffset = -14.5,
+				uuid = "7de372c4-7891-f27f-8546-055737ef05d5",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.iscastingrolespread = nil\nself.used = true\n",
+							conditions = 
+							{
+								
+								{
+									"6bf5e9fa-89cd-849f-8807-ce822608ed87",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "96b73ee0-bfd7-9981-82e6-f5e779157240",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.iscastingrolespread == true\n",
+							name = "IsRolespread",
+							uuid = "6bf5e9fa-89cd-849f-8807-ce822608ed87",
+							version = 2,
+						},
+					},
+				},
+				enabled = false,
+				mechanicTime = 607.9,
+				name = "Clear Role Spread Record",
+				timeRange = true,
+				timelineIndex = 123,
+				timerEndOffset = 5,
+				timerStartOffset = 1,
+				uuid = "3ac2de29-48f5-64e0-8069-ddcb1b295675",
+				version = 2,
+			},
+		},
+	},
+	[145] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3540,
+							conditions = 
+							{
+								
+								{
+									"6a49330b-844e-31fa-96c9-18ecbe6b49bd",
+									true,
+								},
+								
+								{
+									"d509fc50-866e-82e0-a683-7f673386a79e",
+									true,
+								},
+								
+								{
+									"28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
+									true,
+								},
+								
+								{
+									"a787167c-e665-8709-84d0-298a7dbe954a",
+									true,
+								},
+								
+								{
+									"42693300-fb80-e3a0-9f4a-a1d948653d41",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "208d8d0c-038a-0156-ae05-da413fbdfa98",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "6a49330b-844e-31fa-96c9-18ecbe6b49bd",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 3540,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								19,
+							},
+							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "42693300-fb80-e3a0-9f4a-a1d948653d41",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 737.3,
+				name = "Veil",
+				timeRange = true,
+				timelineIndex = 145,
+				timerOffset = -10,
+				timerStartOffset = -14.5,
+				uuid = "7c3037e9-bcb8-81a0-b5d3-9111e9877f56",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16160,
+							conditions = 
+							{
+								
+								{
+									"d7ee7d76-2e37-5f72-9463-9e74e1643e90",
+									true,
+								},
+								
+								{
+									"a810d2af-ef39-5b67-9d5f-95b37d750c7a",
+									true,
+								},
+								
+								{
+									"115eca71-8e25-2c76-be17-c29c66dcf324",
+									true,
+								},
+								
+								{
+									"a6929435-5dcb-3407-8d89-b38a0596d1ac",
+									true,
+								},
+								
+								{
+									"0626cfe2-10ce-193b-950b-7a0088f827a5",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "dbc99f8f-e1c5-f477-89e0-30fa7efeda14",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "d7ee7d76-2e37-5f72-9463-9e74e1643e90",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16160,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								37,
+							},
+							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1894,
+								1362,
+							},
+							category = "Self",
+							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "0626cfe2-10ce-193b-950b-7a0088f827a5",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 737.3,
+				name = "HoL",
+				timeRange = true,
+				timelineIndex = 145,
+				timerStartOffset = -14.5,
+				uuid = "b6c4267f-180c-45bf-a7f1-7ba653771b86",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16471,
+							conditions = 
+							{
+								
+								{
+									"c61a0421-fa49-c741-abbd-ffd29ab11e62",
+									true,
+								},
+								
+								{
+									"142e7d5f-3fc7-8773-b581-c9fe1ad51671",
+									true,
+								},
+								
+								{
+									"322dd20f-009d-0bff-941f-f877ce997638",
+									true,
+								},
+								
+								{
+									"e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+									true,
+								},
+								
+								{
+									"fcdf674b-05cd-bc08-a81c-2a0ce10cb8d1",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "32970969-7f85-6bc8-90e1-4f30e8ce8093",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "c61a0421-fa49-c741-abbd-ffd29ab11e62",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16471,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								32,
+							},
+							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1362,
+								1839,
+							},
+							category = "Self",
+							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "fcdf674b-05cd-bc08-a81c-2a0ce10cb8d1",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 737.3,
+				name = "Dark Missinary",
+				timeRange = true,
+				timelineIndex = 145,
+				timerOffset = -10,
+				timerStartOffset = -14.5,
+				uuid = "62647dea-76cd-150f-8034-a1494813b5dd",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7388,
+							conditions = 
+							{
+								
+								{
+									"a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
+									true,
+								},
+								
+								{
+									"c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
+									true,
+								},
+								
+								{
+									"cfdfeb27-fd18-76d8-915e-3d53780d23cf",
+									true,
+								},
+								
+								{
+									"3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+									true,
+								},
+								
+								{
+									"01ce1ac8-0b5e-3ec4-a7bd-a740eec24007",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "83ae2ac2-4e1e-673e-befc-12d5802ce1cd",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7388,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								21,
+							},
+							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1362,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "01ce1ac8-0b5e-3ec4-a7bd-a740eec24007",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 737.3,
+				name = "Shake it off",
+				timeRange = true,
+				timelineIndex = 145,
+				timerStartOffset = -14.5,
+				uuid = "bc71b847-47ce-3552-8b8d-f792c23f7882",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7535,
+							conditions = 
+							{
+								
+								{
+									"920eaf0e-9d68-b87a-b636-36be8e013575",
+									true,
+								},
+								
+								{
+									"5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+									true,
+								},
+								
+								{
+									"7286744f-688c-9195-941e-46d65189cc2c",
+									true,
+								},
+								
+								{
+									"21acc7a3-be9c-d1a4-a50a-e6b29f798abf",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "c9c9cc18-aa2e-c48a-bebe-6ab6f4e7c114",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "920eaf0e-9d68-b87a-b636-36be8e013575",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1193,
+							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 3,
+							category = "Lua",
+							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 内（中心点到中心点，不扣 hitradius）存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" and d <= RANGE then\n                return true\n            end\n        end\n    end\nend\n\nreturn false\n",
+							conditionType = 6,
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "GroupMit MT",
+							uuid = "21acc7a3-be9c-d1a4-a50a-e6b29f798abf",
 							version = 2,
 						},
 					},
@@ -10405,7 +10953,7 @@ local tbl =
 				timelineIndex = 145,
 				timerOffset = -3,
 				timerStartOffset = -14.5,
-				uuid = "6df6794b-7abc-9e36-bb81-9f0a7a655ce7",
+				uuid = "37c00e3f-270e-0886-ab51-af06562aa7cf",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -10457,7 +11005,7 @@ local tbl =
 				timelineIndex = 145,
 				timerEndOffset = 5,
 				timerStartOffset = 1,
-				uuid = "f6564806-2828-637f-882e-91f2abcdd7ae",
+				uuid = "99784ab9-d818-18c9-9025-d83b16adac84",
 				version = 2,
 			},
 		},
@@ -10994,12 +11542,12 @@ local tbl =
 								},
 								
 								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									"7286744f-688c-9195-941e-46d65189cc2c",
 									true,
 								},
 								
 								{
-									"117eb0d2-bb93-8f63-8b8f-7253207e4693",
+									"21acc7a3-be9c-d1a4-a50a-e6b29f798abf",
 									true,
 								},
 							},
@@ -11040,14 +11588,17 @@ local tbl =
 					{
 						data = 
 						{
+							buffCheckType = 3,
+							category = "Lua",
 							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 内（中心点到中心点，不扣 hitradius）存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" and d <= RANGE then\n                return true\n            end\n        end\n    end\nend\n\nreturn false\n",
 							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
 							version = 2,
 						},
-						inheritedIndex = 2,
+						inheritedIndex = 3,
 					},
 					
 					{
@@ -11056,7 +11607,7 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
-							uuid = "117eb0d2-bb93-8f63-8b8f-7253207e4693",
+							uuid = "21acc7a3-be9c-d1a4-a50a-e6b29f798abf",
 							version = 2,
 						},
 					},
@@ -11068,7 +11619,7 @@ local tbl =
 				timelineIndex = 155,
 				timerOffset = -3,
 				timerStartOffset = -14.5,
-				uuid = "f6b706ff-0cb3-0e52-a93b-962c3f45f9ad",
+				uuid = "8368f109-1ca5-0ab7-ae9c-801c297555b0",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -11593,7 +12144,7 @@ local tbl =
 								},
 								
 								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									"7286744f-688c-9195-941e-46d65189cc2c",
 									true,
 								},
 							},
@@ -11634,14 +12185,17 @@ local tbl =
 					{
 						data = 
 						{
+							buffCheckType = 3,
+							category = "Lua",
 							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 内（中心点到中心点，不扣 hitradius）存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" and d <= RANGE then\n                return true\n            end\n        end\n    end\nend\n\nreturn false\n",
 							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
 							version = 2,
 						},
-						inheritedIndex = 2,
+						inheritedIndex = 3,
 					},
 				},
 				mechanicTime = 896.9,
@@ -11651,7 +12205,7 @@ local tbl =
 				timelineIndex = 178,
 				timerOffset = -3,
 				timerStartOffset = -2.5,
-				uuid = "854bea17-c9a4-0bd9-8ee5-a554f5468d0d",
+				uuid = "9f4d1622-15cb-bf47-8073-0ecfbd22ea65",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -11878,6 +12432,258 @@ local tbl =
 				timerEndOffset = 5,
 				timerStartOffset = 0.20000000298023,
 				uuid = "f8d6c57f-13c3-182b-8ad2-a259c66f4aa7",
+				version = 2,
+			},
+		},
+	},
+	[189] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7386,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"4d87ceee-f728-4838-8f79-80779eccdc0c",
+									true,
+								},
+								
+								{
+									"17048277-8385-50b5-8477-d9746a337790",
+									true,
+								},
+								
+								{
+									"c7eebed6-c0e9-f39d-b6dd-39b96b43ac0f",
+									true,
+								},
+								
+								{
+									"614059bc-bcf6-dc29-bcc3-5a07e597df35",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14284,
+							targetType = "Detection Target",
+							uuid = "a89fd7d3-37b4-dbba-9a35-3461d922b03a",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16461,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"95650279-e1c3-068e-b652-deafc0f27b2b",
+									true,
+								},
+								
+								{
+									"17048277-8385-50b5-8477-d9746a337790",
+									true,
+								},
+								
+								{
+									"c7eebed6-c0e9-f39d-b6dd-39b96b43ac0f",
+									true,
+								},
+								
+								{
+									"614059bc-bcf6-dc29-bcc3-5a07e597df35",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14284,
+							targetType = "Detection Target",
+							uuid = "271166d7-27e1-d3d8-834c-f017e047af65",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36926,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"ec796e6b-2edc-dfac-bcac-8a14110fb746",
+									true,
+								},
+								
+								{
+									"17048277-8385-50b5-8477-d9746a337790",
+									true,
+								},
+								
+								{
+									"c7eebed6-c0e9-f39d-b6dd-39b96b43ac0f",
+									true,
+								},
+								
+								{
+									"614059bc-bcf6-dc29-bcc3-5a07e597df35",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14284,
+							targetType = "Detection Target",
+							uuid = "2c6a556b-f7f3-2846-abd6-50fec65d8bd1",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36934,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"fb94c842-2626-8715-b3de-80ef0f9eb393",
+									true,
+								},
+								
+								{
+									"17048277-8385-50b5-8477-d9746a337790",
+									true,
+								},
+								
+								{
+									"c7eebed6-c0e9-f39d-b6dd-39b96b43ac0f",
+									true,
+								},
+								
+								{
+									"614059bc-bcf6-dc29-bcc3-5a07e597df35",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14284,
+							targetType = "Detection Target",
+							uuid = "2e0a06ea-878e-af29-8f89-70e501c1c1e4",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "WARRIOR",
+							name = "Warrior",
+							uuid = "4d87ceee-f728-4838-8f79-80779eccdc0c",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "Paladin",
+							uuid = "95650279-e1c3-068e-b652-deafc0f27b2b",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "Darkknight",
+							uuid = "ec796e6b-2edc-dfac-bcac-8a14110fb746",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "Gunbreaker",
+							uuid = "fb94c842-2626-8715-b3de-80ef0f9eb393",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "-- 目标参数配置\nlocal targetCID = 14300\nlocal targetX = 99.99\nlocal targetY = 0\nlocal targetZ = 99.99\nlocal tolerance = 1.0 -- 容差范围（米），只要在这个距离内都算“在位置上”\n\n-- 获取指定 ContentID 的实体列表\nlocal el = EntityList(\"contentid=\" .. targetCID)\n\n-- 遍历查找\nif (table.valid(el)) then\n    for i, entity in pairs(el) do\n        if (entity and entity.pos) then\n            -- 计算三维距离的平方（性能优于开根号）\n            local dx = entity.pos.x - targetX\n            local dy = entity.pos.y - targetY\n            local dz = entity.pos.z - targetZ\n            local distSq = (dx * dx) + (dy * dy) + (dz * dz)\n            \n            -- 如果距离小于容差，返回 true\n            if (distSq <= (tolerance * tolerance)) then\n                return true\n            end\n        end\n    end\nend\n\n-- 未找到或不在位置\nreturn false",
+							name = "Check Vamp Position",
+							uuid = "17048277-8385-50b5-8477-d9746a337790",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local player = TensorCore.mGetPlayer()\nif not player or not player.pos then return false end\n\nlocal wantCID = 14300\nlocal bestDist = nil\n\nif not EntityList then return false end\n\nfor _, e in pairs(EntityList(\"alive,attackable\")) do\n    if e and e.contentid == wantCID and e.pos then\n        local dx = player.pos.x - e.pos.x\n        local dz = player.pos.z - e.pos.z\n        local d  = math.sqrt(dx*dx + dz*dz)\n        if (not bestDist) or d < bestDist then\n            bestDist = d\n        end\n    end\nend\n\nreturn (bestDist ~= nil) and (bestDist > 5.0)\n",
+							name = "Vamp dis > 5",
+							uuid = "c7eebed6-c0e9-f39d-b6dd-39b96b43ac0f",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							filterTargetType = "ContentID",
+							partyTargetContentID = 14300,
+							uuid = "614059bc-bcf6-dc29-bcc3-5a07e597df35",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 942.2,
+				name = "Instant Dash",
+				timeRange = true,
+				timelineIndex = 189,
+				timerEndOffset = 5,
+				timerStartOffset = -10,
+				uuid = "30c7521d-0f01-f64e-9872-55bb42ddf81d",
 				version = 2,
 			},
 		},
@@ -12350,7 +13156,7 @@ local tbl =
 								},
 								
 								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									"7286744f-688c-9195-941e-46d65189cc2c",
 									true,
 								},
 							},
@@ -12391,14 +13197,17 @@ local tbl =
 					{
 						data = 
 						{
+							buffCheckType = 3,
+							category = "Lua",
 							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 内（中心点到中心点，不扣 hitradius）存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" and d <= RANGE then\n                return true\n            end\n        end\n    end\nend\n\nreturn false\n",
 							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
 							version = 2,
 						},
-						inheritedIndex = 2,
+						inheritedIndex = 3,
 					},
 				},
 				mechanicTime = 968.4,
@@ -12408,10 +13217,262 @@ local tbl =
 				timelineIndex = 195,
 				timerOffset = -3,
 				timerStartOffset = -2.5,
-				uuid = "d83427bf-3d75-1d68-b094-18f2fc7f585e",
+				uuid = "90d62c1f-8478-ac6e-af14-e41e2a6283e4",
 				version = 2,
 			},
 			inheritedIndex = 5,
+		},
+	},
+	[196] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7386,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"4d87ceee-f728-4838-8f79-80779eccdc0c",
+									true,
+								},
+								
+								{
+									"17048277-8385-50b5-8477-d9746a337790",
+									true,
+								},
+								
+								{
+									"c7eebed6-c0e9-f39d-b6dd-39b96b43ac0f",
+									true,
+								},
+								
+								{
+									"614059bc-bcf6-dc29-bcc3-5a07e597df35",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14284,
+							targetType = "Detection Target",
+							uuid = "a89fd7d3-37b4-dbba-9a35-3461d922b03a",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16461,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"95650279-e1c3-068e-b652-deafc0f27b2b",
+									true,
+								},
+								
+								{
+									"17048277-8385-50b5-8477-d9746a337790",
+									true,
+								},
+								
+								{
+									"c7eebed6-c0e9-f39d-b6dd-39b96b43ac0f",
+									true,
+								},
+								
+								{
+									"614059bc-bcf6-dc29-bcc3-5a07e597df35",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14284,
+							targetType = "Detection Target",
+							uuid = "271166d7-27e1-d3d8-834c-f017e047af65",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36926,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"ec796e6b-2edc-dfac-bcac-8a14110fb746",
+									true,
+								},
+								
+								{
+									"17048277-8385-50b5-8477-d9746a337790",
+									true,
+								},
+								
+								{
+									"c7eebed6-c0e9-f39d-b6dd-39b96b43ac0f",
+									true,
+								},
+								
+								{
+									"614059bc-bcf6-dc29-bcc3-5a07e597df35",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14284,
+							targetType = "Detection Target",
+							uuid = "2c6a556b-f7f3-2846-abd6-50fec65d8bd1",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36934,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"fb94c842-2626-8715-b3de-80ef0f9eb393",
+									true,
+								},
+								
+								{
+									"17048277-8385-50b5-8477-d9746a337790",
+									true,
+								},
+								
+								{
+									"c7eebed6-c0e9-f39d-b6dd-39b96b43ac0f",
+									true,
+								},
+								
+								{
+									"614059bc-bcf6-dc29-bcc3-5a07e597df35",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14284,
+							targetType = "Detection Target",
+							uuid = "2e0a06ea-878e-af29-8f89-70e501c1c1e4",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "WARRIOR",
+							name = "Warrior",
+							uuid = "4d87ceee-f728-4838-8f79-80779eccdc0c",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "Paladin",
+							uuid = "95650279-e1c3-068e-b652-deafc0f27b2b",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "Darkknight",
+							uuid = "ec796e6b-2edc-dfac-bcac-8a14110fb746",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "Gunbreaker",
+							uuid = "fb94c842-2626-8715-b3de-80ef0f9eb393",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "-- 目标参数配置\nlocal targetCID = 14300\nlocal targetX = 99.99\nlocal targetY = 0\nlocal targetZ = 99.99\nlocal tolerance = 1.0 -- 容差范围（米），只要在这个距离内都算“在位置上”\n\n-- 获取指定 ContentID 的实体列表\nlocal el = EntityList(\"contentid=\" .. targetCID)\n\n-- 遍历查找\nif (table.valid(el)) then\n    for i, entity in pairs(el) do\n        if (entity and entity.pos) then\n            -- 计算三维距离的平方（性能优于开根号）\n            local dx = entity.pos.x - targetX\n            local dy = entity.pos.y - targetY\n            local dz = entity.pos.z - targetZ\n            local distSq = (dx * dx) + (dy * dy) + (dz * dz)\n            \n            -- 如果距离小于容差，返回 true\n            if (distSq <= (tolerance * tolerance)) then\n                return true\n            end\n        end\n    end\nend\n\n-- 未找到或不在位置\nreturn false",
+							name = "Check Vamp Position",
+							uuid = "17048277-8385-50b5-8477-d9746a337790",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local player = TensorCore.mGetPlayer()\nif not player or not player.pos then return false end\n\nlocal wantCID = 14300\nlocal bestDist = nil\n\nif not EntityList then return false end\n\nfor _, e in pairs(EntityList(\"alive,attackable\")) do\n    if e and e.contentid == wantCID and e.pos then\n        local dx = player.pos.x - e.pos.x\n        local dz = player.pos.z - e.pos.z\n        local d  = math.sqrt(dx*dx + dz*dz)\n        if (not bestDist) or d < bestDist then\n            bestDist = d\n        end\n    end\nend\n\nreturn (bestDist ~= nil) and (bestDist > 5.0)\n",
+							name = "Vamp dis > 5",
+							uuid = "c7eebed6-c0e9-f39d-b6dd-39b96b43ac0f",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							filterTargetType = "ContentID",
+							partyTargetContentID = 14300,
+							uuid = "614059bc-bcf6-dc29-bcc3-5a07e597df35",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 973.4,
+				name = "Instant Dash",
+				timeRange = true,
+				timelineIndex = 196,
+				timerEndOffset = 5,
+				timerStartOffset = -10,
+				uuid = "75dcbf8f-fec2-8af2-9b77-2ee236892fca",
+				version = 2,
+			},
 		},
 	},
 	[197] = 
@@ -12882,7 +13943,7 @@ local tbl =
 								},
 								
 								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									"7286744f-688c-9195-941e-46d65189cc2c",
 									true,
 								},
 							},
@@ -12923,14 +13984,17 @@ local tbl =
 					{
 						data = 
 						{
+							buffCheckType = 3,
+							category = "Lua",
 							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 内（中心点到中心点，不扣 hitradius）存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" and d <= RANGE then\n                return true\n            end\n        end\n    end\nend\n\nreturn false\n",
 							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
 							version = 2,
 						},
-						inheritedIndex = 2,
+						inheritedIndex = 3,
 					},
 				},
 				mechanicTime = 982.5,
@@ -12940,7 +14004,7 @@ local tbl =
 				timelineIndex = 197,
 				timerOffset = -3,
 				timerStartOffset = -2.5,
-				uuid = "0127271b-4323-947e-8a6d-17dc9dddb3c2",
+				uuid = "086e7c53-2ea6-364f-be3e-93f01a9f9a9e",
 				version = 2,
 			},
 			inheritedIndex = 5,

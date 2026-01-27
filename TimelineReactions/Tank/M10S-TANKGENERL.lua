@@ -1293,7 +1293,7 @@ local tbl =
 								},
 								
 								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									"7286744f-688c-9195-941e-46d65189cc2c",
 									true,
 								},
 							},
@@ -1334,14 +1334,17 @@ local tbl =
 					{
 						data = 
 						{
+							buffCheckType = 3,
+							category = "Lua",
 							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 内（中心点到中心点，不扣 hitradius）存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" and d <= RANGE then\n                return true\n            end\n        end\n    end\nend\n\nreturn false\n",
 							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
 							version = 2,
 						},
-						inheritedIndex = 2,
+						inheritedIndex = 3,
 					},
 				},
 				mechanicTime = 82.5,
@@ -1351,7 +1354,7 @@ local tbl =
 				timelineIndex = 12,
 				timerOffset = -3,
 				timerStartOffset = -14.5,
-				uuid = "7c4972c2-1c3f-2e0f-be93-d2601e36676f",
+				uuid = "99d2df07-cb54-adba-b7f4-b431a4f105e8",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -2482,7 +2485,7 @@ local tbl =
 								},
 								
 								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									"7286744f-688c-9195-941e-46d65189cc2c",
 									true,
 								},
 							},
@@ -2523,14 +2526,17 @@ local tbl =
 					{
 						data = 
 						{
+							buffCheckType = 3,
+							category = "Lua",
 							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 内（中心点到中心点，不扣 hitradius）存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" and d <= RANGE then\n                return true\n            end\n        end\n    end\nend\n\nreturn false\n",
 							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
 							version = 2,
 						},
-						inheritedIndex = 2,
+						inheritedIndex = 3,
 					},
 				},
 				mechanicTime = 143.5,
@@ -2540,7 +2546,7 @@ local tbl =
 				timelineIndex = 28,
 				timerOffset = -3,
 				timerStartOffset = -2.5,
-				uuid = "193d0de2-44a5-6377-a328-ecb5bda5f892",
+				uuid = "f1ea438c-8320-25c3-868a-4743e9a3e963",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -5186,7 +5192,7 @@ local tbl =
 								},
 								
 								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									"7286744f-688c-9195-941e-46d65189cc2c",
 									true,
 								},
 							},
@@ -5227,14 +5233,17 @@ local tbl =
 					{
 						data = 
 						{
+							buffCheckType = 3,
+							category = "Lua",
 							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 内（中心点到中心点，不扣 hitradius）存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" and d <= RANGE then\n                return true\n            end\n        end\n    end\nend\n\nreturn false\n",
 							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
 							version = 2,
 						},
-						inheritedIndex = 2,
+						inheritedIndex = 3,
 					},
 				},
 				mechanicTime = 229.1,
@@ -5244,7 +5253,7 @@ local tbl =
 				timelineIndex = 52,
 				timerOffset = -3,
 				timerStartOffset = -2.5,
-				uuid = "ffb3fb1e-f841-a386-96a8-9dedd25477ed",
+				uuid = "09dc78b6-8d33-66d0-a617-e4405037c122",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -7255,7 +7264,7 @@ local tbl =
 								},
 								
 								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									"7286744f-688c-9195-941e-46d65189cc2c",
 									true,
 								},
 							},
@@ -7296,14 +7305,17 @@ local tbl =
 					{
 						data = 
 						{
+							buffCheckType = 3,
+							category = "Lua",
 							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 内（中心点到中心点，不扣 hitradius）存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" and d <= RANGE then\n                return true\n            end\n        end\n    end\nend\n\nreturn false\n",
 							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
 							version = 2,
 						},
-						inheritedIndex = 2,
+						inheritedIndex = 3,
 					},
 				},
 				mechanicTime = 320.5,
@@ -7313,7 +7325,7 @@ local tbl =
 				timelineIndex = 90,
 				timerOffset = -3,
 				timerStartOffset = -2.5,
-				uuid = "0a77ba11-8803-f743-9ceb-53feba26dec6",
+				uuid = "13d57c9d-737f-dc70-9d6f-6b19a4eca40a",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -8296,7 +8308,7 @@ local tbl =
 								},
 								
 								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									"7286744f-688c-9195-941e-46d65189cc2c",
 									true,
 								},
 							},
@@ -8337,14 +8349,17 @@ local tbl =
 					{
 						data = 
 						{
+							buffCheckType = 3,
+							category = "Lua",
 							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 内（中心点到中心点，不扣 hitradius）存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" and d <= RANGE then\n                return true\n            end\n        end\n    end\nend\n\nreturn false\n",
 							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
 							version = 2,
 						},
-						inheritedIndex = 2,
+						inheritedIndex = 3,
 					},
 				},
 				mechanicTime = 398.7,
@@ -8354,7 +8369,7 @@ local tbl =
 				timelineIndex = 115,
 				timerOffset = -3,
 				timerStartOffset = -2.5,
-				uuid = "2cf42d40-5a52-d742-805a-df069d4db748",
+				uuid = "a9686a83-5232-4b95-8823-64f91b2c8080",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -8863,7 +8878,7 @@ local tbl =
 								},
 								
 								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									"7286744f-688c-9195-941e-46d65189cc2c",
 									true,
 								},
 							},
@@ -8904,14 +8919,17 @@ local tbl =
 					{
 						data = 
 						{
+							buffCheckType = 3,
+							category = "Lua",
 							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 内（中心点到中心点，不扣 hitradius）存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" and d <= RANGE then\n                return true\n            end\n        end\n    end\nend\n\nreturn false\n",
 							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
 							version = 2,
 						},
-						inheritedIndex = 2,
+						inheritedIndex = 3,
 					},
 				},
 				mechanicTime = 451.8,
@@ -8921,7 +8939,7 @@ local tbl =
 				timelineIndex = 131,
 				timerOffset = -3,
 				timerStartOffset = -2.5,
-				uuid = "ea966809-c0f1-a3f4-b293-35c64f1034c9",
+				uuid = "589d196e-4162-78d4-9521-5fa80d0681fa",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -10301,7 +10319,7 @@ local tbl =
 								},
 								
 								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									"7286744f-688c-9195-941e-46d65189cc2c",
 									true,
 								},
 							},
@@ -10342,14 +10360,17 @@ local tbl =
 					{
 						data = 
 						{
+							buffCheckType = 3,
+							category = "Lua",
 							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 内（中心点到中心点，不扣 hitradius）存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" and d <= RANGE then\n                return true\n            end\n        end\n    end\nend\n\nreturn false\n",
 							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
 							version = 2,
 						},
-						inheritedIndex = 2,
+						inheritedIndex = 3,
 					},
 				},
 				mechanicTime = 526,
@@ -10359,7 +10380,7 @@ local tbl =
 				timelineIndex = 153,
 				timerOffset = -3,
 				timerStartOffset = -2.5,
-				uuid = "adb6189f-d8ba-c3d3-a22a-b8e588765e30",
+				uuid = "aea5b927-abc4-b300-b4e0-c29e9017dd8b",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -10975,7 +10996,7 @@ local tbl =
 								},
 								
 								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									"7286744f-688c-9195-941e-46d65189cc2c",
 									true,
 								},
 							},
@@ -11016,14 +11037,17 @@ local tbl =
 					{
 						data = 
 						{
+							buffCheckType = 3,
+							category = "Lua",
 							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 内（中心点到中心点，不扣 hitradius）存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" and d <= RANGE then\n                return true\n            end\n        end\n    end\nend\n\nreturn false\n",
 							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
 							version = 2,
 						},
-						inheritedIndex = 2,
+						inheritedIndex = 3,
 					},
 				},
 				mechanicTime = 566.5,
@@ -11033,7 +11057,7 @@ local tbl =
 				timelineIndex = 162,
 				timerOffset = -3,
 				timerStartOffset = -2.5,
-				uuid = "2f90fd40-d773-8287-8a48-8911f0c6673c",
+				uuid = "18467279-d397-a8d3-afa5-f5d740ed2c3e",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -11507,7 +11531,7 @@ local tbl =
 								},
 								
 								{
-									"293daf40-34c7-3d12-ac20-7b597e340bdc",
+									"7286744f-688c-9195-941e-46d65189cc2c",
 									true,
 								},
 							},
@@ -11548,14 +11572,17 @@ local tbl =
 					{
 						data = 
 						{
+							buffCheckType = 3,
+							category = "Lua",
 							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 内（中心点到中心点，不扣 hitradius）存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" and d <= RANGE then\n                return true\n            end\n        end\n    end\nend\n\nreturn false\n",
 							conditionType = 6,
-							dequeueIfLuaFalse = true,
-							inRangeValue = 5,
-							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
 							version = 2,
 						},
-						inheritedIndex = 2,
+						inheritedIndex = 3,
 					},
 				},
 				mechanicTime = 575.6,
@@ -11565,7 +11592,7 @@ local tbl =
 				timelineIndex = 163,
 				timerOffset = -3,
 				timerStartOffset = -2.5,
-				uuid = "c46b5202-018f-6951-be8c-a40fc37f349e",
+				uuid = "f3179f80-7c08-6e47-b057-8ce09c09cf4b",
 				version = 2,
 			},
 			inheritedIndex = 5,
