@@ -1222,17 +1222,12 @@ local tbl =
 							{
 								
 								{
-									"611607a0-3a5f-4602-96a6-fa1e144643a3",
-									true,
-								},
-								
-								{
 									"7ff7d550-e7f1-b813-8c61-8d51598a9cff",
 									true,
 								},
 								
 								{
-									"0f8628f3-99de-2bb0-b1ff-1df3c94b2276",
+									"2f0f3cc3-329f-2c70-9386-bbec618eb4b9",
 									true,
 								},
 								
@@ -1258,17 +1253,12 @@ local tbl =
 							{
 								
 								{
-									"611607a0-3a5f-4602-96a6-fa1e144643a3",
-									true,
-								},
-								
-								{
 									"cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
 									true,
 								},
 								
 								{
-									"4f25e7d2-e5c2-ae81-bd11-727a54c8ac3e",
+									"bcc05084-e0dd-c157-a6fd-d512808d8bcc",
 									true,
 								},
 								
@@ -1289,19 +1279,6 @@ local tbl =
 				},
 				conditions = 
 				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							comparator = 2,
-							conditionType = 2,
-							hpValue = 80,
-							uuid = "611607a0-3a5f-4602-96a6-fa1e144643a3",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
 					
 					{
 						data = 
@@ -1332,24 +1309,25 @@ local tbl =
 					{
 						data = 
 						{
-							conditionType = 4,
-							enmityValue = 100,
-							name = "is MT",
-							uuid = "0f8628f3-99de-2bb0-b1ff-1df3c94b2276",
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "Vamp targeting self",
+							uuid = "2f0f3cc3-329f-2c70-9386-bbec618eb4b9",
 							version = 2,
 						},
+						inheritedIndex = 4,
 					},
 					
 					{
 						data = 
 						{
-							comparator = 2,
-							conditionType = 4,
-							enmityValue = 99,
-							name = "is ST",
-							uuid = "4f25e7d2-e5c2-ae81-bd11-727a54c8ac3e",
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
+							name = "Vamp not targeting self",
+							uuid = "bcc05084-e0dd-c157-a6fd-d512808d8bcc",
 							version = 2,
 						},
+						inheritedIndex = 4,
 					},
 					
 					{
@@ -1363,12 +1341,10 @@ local tbl =
 						},
 					},
 				},
-				loop = true,
 				mechanicTime = 46.7,
 				name = "BW/NF (20)",
 				timeRange = true,
 				timelineIndex = 9,
-				timerEndOffset = -0.5,
 				timerStartOffset = -2.5,
 				uuid = "c7817f0e-331f-3172-b5fc-8a20422c08b7",
 				version = 2,
@@ -1393,17 +1369,12 @@ local tbl =
 							{
 								
 								{
-									"611607a0-3a5f-4602-96a6-fa1e144643a3",
-									true,
-								},
-								
-								{
 									"7ff7d550-e7f1-b813-8c61-8d51598a9cff",
 									true,
 								},
 								
 								{
-									"0f8628f3-99de-2bb0-b1ff-1df3c94b2276",
+									"2f0f3cc3-329f-2c70-9386-bbec618eb4b9",
 									true,
 								},
 								
@@ -1429,17 +1400,12 @@ local tbl =
 							{
 								
 								{
-									"611607a0-3a5f-4602-96a6-fa1e144643a3",
-									true,
-								},
-								
-								{
 									"cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
 									true,
 								},
 								
 								{
-									"4f25e7d2-e5c2-ae81-bd11-727a54c8ac3e",
+									"bcc05084-e0dd-c157-a6fd-d512808d8bcc",
 									true,
 								},
 								
@@ -1460,19 +1426,6 @@ local tbl =
 				},
 				conditions = 
 				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							comparator = 2,
-							conditionType = 2,
-							hpValue = 80,
-							uuid = "611607a0-3a5f-4602-96a6-fa1e144643a3",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
 					
 					{
 						data = 
@@ -1503,24 +1456,25 @@ local tbl =
 					{
 						data = 
 						{
-							conditionType = 4,
-							enmityValue = 100,
-							name = "is MT",
-							uuid = "0f8628f3-99de-2bb0-b1ff-1df3c94b2276",
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "Vamp targeting self",
+							uuid = "2f0f3cc3-329f-2c70-9386-bbec618eb4b9",
 							version = 2,
 						},
+						inheritedIndex = 4,
 					},
 					
 					{
 						data = 
 						{
-							comparator = 2,
-							conditionType = 4,
-							enmityValue = 99,
-							name = "is ST",
-							uuid = "4f25e7d2-e5c2-ae81-bd11-727a54c8ac3e",
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
+							name = "Vamp not targeting self",
+							uuid = "bcc05084-e0dd-c157-a6fd-d512808d8bcc",
 							version = 2,
 						},
+						inheritedIndex = 4,
 					},
 					
 					{
@@ -1534,14 +1488,12 @@ local tbl =
 						},
 					},
 				},
-				loop = true,
 				mechanicTime = 60.7,
 				name = "BW/NF (20)",
 				timeRange = true,
 				timelineIndex = 11,
-				timerEndOffset = -0.5,
 				timerStartOffset = -2.5,
-				uuid = "741329ca-8214-366e-8e59-74f6768fd323",
+				uuid = "44b1b1aa-a720-7d20-a3c7-24701e2e4eb8",
 				version = 2,
 			},
 			inheritedIndex = 10,
@@ -1564,17 +1516,12 @@ local tbl =
 							{
 								
 								{
-									"611607a0-3a5f-4602-96a6-fa1e144643a3",
-									true,
-								},
-								
-								{
 									"7ff7d550-e7f1-b813-8c61-8d51598a9cff",
 									true,
 								},
 								
 								{
-									"0f8628f3-99de-2bb0-b1ff-1df3c94b2276",
+									"2f0f3cc3-329f-2c70-9386-bbec618eb4b9",
 									true,
 								},
 								
@@ -1600,17 +1547,12 @@ local tbl =
 							{
 								
 								{
-									"611607a0-3a5f-4602-96a6-fa1e144643a3",
-									true,
-								},
-								
-								{
 									"cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
 									true,
 								},
 								
 								{
-									"4f25e7d2-e5c2-ae81-bd11-727a54c8ac3e",
+									"bcc05084-e0dd-c157-a6fd-d512808d8bcc",
 									true,
 								},
 								
@@ -1631,19 +1573,6 @@ local tbl =
 				},
 				conditions = 
 				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							comparator = 2,
-							conditionType = 2,
-							hpValue = 80,
-							uuid = "611607a0-3a5f-4602-96a6-fa1e144643a3",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
 					
 					{
 						data = 
@@ -1674,24 +1603,25 @@ local tbl =
 					{
 						data = 
 						{
-							conditionType = 4,
-							enmityValue = 100,
-							name = "is MT",
-							uuid = "0f8628f3-99de-2bb0-b1ff-1df3c94b2276",
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "Vamp targeting self",
+							uuid = "2f0f3cc3-329f-2c70-9386-bbec618eb4b9",
 							version = 2,
 						},
+						inheritedIndex = 4,
 					},
 					
 					{
 						data = 
 						{
-							comparator = 2,
-							conditionType = 4,
-							enmityValue = 99,
-							name = "is ST",
-							uuid = "4f25e7d2-e5c2-ae81-bd11-727a54c8ac3e",
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
+							name = "Vamp not targeting self",
+							uuid = "bcc05084-e0dd-c157-a6fd-d512808d8bcc",
 							version = 2,
 						},
+						inheritedIndex = 4,
 					},
 					
 					{
@@ -1705,14 +1635,12 @@ local tbl =
 						},
 					},
 				},
-				loop = true,
 				mechanicTime = 137.9,
 				name = "BW/NF (20)",
 				timeRange = true,
 				timelineIndex = 47,
-				timerEndOffset = -0.5,
 				timerStartOffset = -2.5,
-				uuid = "5c3898fc-9225-22d1-8791-d5a6496090a9",
+				uuid = "d5683ba9-f737-362b-89b5-42b617aeda12",
 				version = 2,
 			},
 			inheritedIndex = 10,
@@ -1735,17 +1663,12 @@ local tbl =
 							{
 								
 								{
-									"611607a0-3a5f-4602-96a6-fa1e144643a3",
-									true,
-								},
-								
-								{
 									"7ff7d550-e7f1-b813-8c61-8d51598a9cff",
 									true,
 								},
 								
 								{
-									"0f8628f3-99de-2bb0-b1ff-1df3c94b2276",
+									"2f0f3cc3-329f-2c70-9386-bbec618eb4b9",
 									true,
 								},
 								
@@ -1771,17 +1694,12 @@ local tbl =
 							{
 								
 								{
-									"611607a0-3a5f-4602-96a6-fa1e144643a3",
-									true,
-								},
-								
-								{
 									"cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
 									true,
 								},
 								
 								{
-									"4f25e7d2-e5c2-ae81-bd11-727a54c8ac3e",
+									"bcc05084-e0dd-c157-a6fd-d512808d8bcc",
 									true,
 								},
 								
@@ -1802,19 +1720,6 @@ local tbl =
 				},
 				conditions = 
 				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							comparator = 2,
-							conditionType = 2,
-							hpValue = 80,
-							uuid = "611607a0-3a5f-4602-96a6-fa1e144643a3",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
 					
 					{
 						data = 
@@ -1845,24 +1750,25 @@ local tbl =
 					{
 						data = 
 						{
-							conditionType = 4,
-							enmityValue = 100,
-							name = "is MT",
-							uuid = "0f8628f3-99de-2bb0-b1ff-1df3c94b2276",
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "Vamp targeting self",
+							uuid = "2f0f3cc3-329f-2c70-9386-bbec618eb4b9",
 							version = 2,
 						},
+						inheritedIndex = 4,
 					},
 					
 					{
 						data = 
 						{
-							comparator = 2,
-							conditionType = 4,
-							enmityValue = 99,
-							name = "is ST",
-							uuid = "4f25e7d2-e5c2-ae81-bd11-727a54c8ac3e",
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
+							name = "Vamp not targeting self",
+							uuid = "bcc05084-e0dd-c157-a6fd-d512808d8bcc",
 							version = 2,
 						},
+						inheritedIndex = 4,
 					},
 					
 					{
@@ -1876,14 +1782,12 @@ local tbl =
 						},
 					},
 				},
-				loop = true,
 				mechanicTime = 171.3,
 				name = "BW/NF (20)",
 				timeRange = true,
 				timelineIndex = 51,
-				timerEndOffset = -0.5,
 				timerStartOffset = -2.5,
-				uuid = "136faf15-0993-294b-95c3-cb40ccefcee7",
+				uuid = "0fd23fb3-ee28-f914-b0e7-9a8b0e923c69",
 				version = 2,
 			},
 			inheritedIndex = 10,
@@ -3270,6 +3174,154 @@ local tbl =
 			inheritedIndex = 10,
 		},
 	},
+	[62] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25751,
+							conditions = 
+							{
+								
+								{
+									"7ff7d550-e7f1-b813-8c61-8d51598a9cff",
+									true,
+								},
+								
+								{
+									"2f0f3cc3-329f-2c70-9386-bbec618eb4b9",
+									true,
+								},
+								
+								{
+									"76972acd-7619-6ac7-84c9-ec57dd1225aa",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "f128886d-3f9c-d873-b184-840ce732e9d1",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							conditions = 
+							{
+								
+								{
+									"cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
+									true,
+								},
+								
+								{
+									"bcc05084-e0dd-c157-a6fd-d512808d8bcc",
+									true,
+								},
+								
+								{
+									"76972acd-7619-6ac7-84c9-ec57dd1225aa",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetSubType = "Lowest HP",
+							targetType = "Other Tank",
+							uuid = "9ea7cc5f-8777-744b-b6de-e198fbc4ef27",
+							version = 2.1,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25751,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							name = "CD BW",
+							uuid = "7ff7d550-e7f1-b813-8c61-8d51598a9cff",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							name = "CD NF",
+							uuid = "cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "Vamp targeting self",
+							uuid = "2f0f3cc3-329f-2c70-9386-bbec618eb4b9",
+							version = 2,
+						},
+						inheritedIndex = 4,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
+							name = "Vamp not targeting self",
+							uuid = "bcc05084-e0dd-c157-a6fd-d512808d8bcc",
+							version = 2,
+						},
+						inheritedIndex = 4,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "76972acd-7619-6ac7-84c9-ec57dd1225aa",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 233.9,
+				name = "BW/NF (20)",
+				timeRange = true,
+				timelineIndex = 62,
+				timerEndOffset = 2,
+				timerStartOffset = -1.5,
+				uuid = "d5deb0a5-1478-a1e6-b4fd-4103d0590631",
+				version = 2,
+			},
+			inheritedIndex = 10,
+		},
+	},
 	[66] = 
 	{
 		
@@ -3376,17 +3428,12 @@ local tbl =
 							{
 								
 								{
-									"611607a0-3a5f-4602-96a6-fa1e144643a3",
-									true,
-								},
-								
-								{
 									"7ff7d550-e7f1-b813-8c61-8d51598a9cff",
 									true,
 								},
 								
 								{
-									"0f8628f3-99de-2bb0-b1ff-1df3c94b2276",
+									"2f0f3cc3-329f-2c70-9386-bbec618eb4b9",
 									true,
 								},
 								
@@ -3412,17 +3459,12 @@ local tbl =
 							{
 								
 								{
-									"611607a0-3a5f-4602-96a6-fa1e144643a3",
-									true,
-								},
-								
-								{
 									"cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
 									true,
 								},
 								
 								{
-									"4f25e7d2-e5c2-ae81-bd11-727a54c8ac3e",
+									"bcc05084-e0dd-c157-a6fd-d512808d8bcc",
 									true,
 								},
 								
@@ -3443,19 +3485,6 @@ local tbl =
 				},
 				conditions = 
 				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							comparator = 2,
-							conditionType = 2,
-							hpValue = 80,
-							uuid = "611607a0-3a5f-4602-96a6-fa1e144643a3",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
 					
 					{
 						data = 
@@ -3486,24 +3515,25 @@ local tbl =
 					{
 						data = 
 						{
-							conditionType = 4,
-							enmityValue = 100,
-							name = "is MT",
-							uuid = "0f8628f3-99de-2bb0-b1ff-1df3c94b2276",
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "Vamp targeting self",
+							uuid = "2f0f3cc3-329f-2c70-9386-bbec618eb4b9",
 							version = 2,
 						},
+						inheritedIndex = 4,
 					},
 					
 					{
 						data = 
 						{
-							comparator = 2,
-							conditionType = 4,
-							enmityValue = 99,
-							name = "is ST",
-							uuid = "4f25e7d2-e5c2-ae81-bd11-727a54c8ac3e",
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
+							name = "Vamp not targeting self",
+							uuid = "bcc05084-e0dd-c157-a6fd-d512808d8bcc",
 							version = 2,
 						},
+						inheritedIndex = 4,
 					},
 					
 					{
@@ -3517,14 +3547,12 @@ local tbl =
 						},
 					},
 				},
-				loop = true,
 				mechanicTime = 256.1,
 				name = "BW/NF (20)",
 				timeRange = true,
 				timelineIndex = 68,
-				timerEndOffset = -0.5,
 				timerStartOffset = -2.5,
-				uuid = "98c3d434-a56b-afb7-ba19-930a84b15738",
+				uuid = "0c2a4ebb-49e8-f0dc-8469-482b51a9b456",
 				version = 2,
 			},
 			inheritedIndex = 10,
@@ -7162,17 +7190,12 @@ local tbl =
 							{
 								
 								{
-									"611607a0-3a5f-4602-96a6-fa1e144643a3",
-									true,
-								},
-								
-								{
 									"7ff7d550-e7f1-b813-8c61-8d51598a9cff",
 									true,
 								},
 								
 								{
-									"0f8628f3-99de-2bb0-b1ff-1df3c94b2276",
+									"2f0f3cc3-329f-2c70-9386-bbec618eb4b9",
 									true,
 								},
 								
@@ -7198,17 +7221,12 @@ local tbl =
 							{
 								
 								{
-									"611607a0-3a5f-4602-96a6-fa1e144643a3",
-									true,
-								},
-								
-								{
 									"cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
 									true,
 								},
 								
 								{
-									"4f25e7d2-e5c2-ae81-bd11-727a54c8ac3e",
+									"bcc05084-e0dd-c157-a6fd-d512808d8bcc",
 									true,
 								},
 								
@@ -7229,19 +7247,6 @@ local tbl =
 				},
 				conditions = 
 				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							comparator = 2,
-							conditionType = 2,
-							hpValue = 80,
-							uuid = "611607a0-3a5f-4602-96a6-fa1e144643a3",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
 					
 					{
 						data = 
@@ -7272,24 +7277,25 @@ local tbl =
 					{
 						data = 
 						{
-							conditionType = 4,
-							enmityValue = 100,
-							name = "is MT",
-							uuid = "0f8628f3-99de-2bb0-b1ff-1df3c94b2276",
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "Vamp targeting self",
+							uuid = "2f0f3cc3-329f-2c70-9386-bbec618eb4b9",
 							version = 2,
 						},
+						inheritedIndex = 4,
 					},
 					
 					{
 						data = 
 						{
-							comparator = 2,
-							conditionType = 4,
-							enmityValue = 99,
-							name = "is ST",
-							uuid = "4f25e7d2-e5c2-ae81-bd11-727a54c8ac3e",
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
+							name = "Vamp not targeting self",
+							uuid = "bcc05084-e0dd-c157-a6fd-d512808d8bcc",
 							version = 2,
 						},
+						inheritedIndex = 4,
 					},
 					
 					{
@@ -7303,14 +7309,12 @@ local tbl =
 						},
 					},
 				},
-				loop = true,
 				mechanicTime = 388.9,
 				name = "BW/NF (20)",
 				timeRange = true,
 				timelineIndex = 87,
-				timerEndOffset = -0.5,
 				timerStartOffset = -2.5,
-				uuid = "67e894b8-c1d7-4c40-bb1d-e6f487fd32ee",
+				uuid = "2e177941-70cb-84d5-9314-0b2f432793b6",
 				version = 2,
 			},
 			inheritedIndex = 10,
@@ -12175,17 +12179,12 @@ local tbl =
 							{
 								
 								{
-									"611607a0-3a5f-4602-96a6-fa1e144643a3",
-									true,
-								},
-								
-								{
 									"7ff7d550-e7f1-b813-8c61-8d51598a9cff",
 									true,
 								},
 								
 								{
-									"0f8628f3-99de-2bb0-b1ff-1df3c94b2276",
+									"2f0f3cc3-329f-2c70-9386-bbec618eb4b9",
 									true,
 								},
 								
@@ -12211,17 +12210,12 @@ local tbl =
 							{
 								
 								{
-									"611607a0-3a5f-4602-96a6-fa1e144643a3",
-									true,
-								},
-								
-								{
 									"cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
 									true,
 								},
 								
 								{
-									"4f25e7d2-e5c2-ae81-bd11-727a54c8ac3e",
+									"bcc05084-e0dd-c157-a6fd-d512808d8bcc",
 									true,
 								},
 								
@@ -12242,19 +12236,6 @@ local tbl =
 				},
 				conditions = 
 				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							comparator = 2,
-							conditionType = 2,
-							hpValue = 80,
-							uuid = "611607a0-3a5f-4602-96a6-fa1e144643a3",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
 					
 					{
 						data = 
@@ -12285,24 +12266,25 @@ local tbl =
 					{
 						data = 
 						{
-							conditionType = 4,
-							enmityValue = 100,
-							name = "is MT",
-							uuid = "0f8628f3-99de-2bb0-b1ff-1df3c94b2276",
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "Vamp targeting self",
+							uuid = "2f0f3cc3-329f-2c70-9386-bbec618eb4b9",
 							version = 2,
 						},
+						inheritedIndex = 4,
 					},
 					
 					{
 						data = 
 						{
-							comparator = 2,
-							conditionType = 4,
-							enmityValue = 99,
-							name = "is ST",
-							uuid = "4f25e7d2-e5c2-ae81-bd11-727a54c8ac3e",
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
+							name = "Vamp not targeting self",
+							uuid = "bcc05084-e0dd-c157-a6fd-d512808d8bcc",
 							version = 2,
 						},
+						inheritedIndex = 4,
 					},
 					
 					{
@@ -12316,14 +12298,12 @@ local tbl =
 						},
 					},
 				},
-				loop = true,
 				mechanicTime = 896.9,
 				name = "BW/NF (20)",
 				timeRange = true,
 				timelineIndex = 178,
-				timerEndOffset = -0.5,
 				timerStartOffset = -2.5,
-				uuid = "bc83f6a4-f2fb-dd4b-a52f-831cd89e240c",
+				uuid = "7af3b25a-831f-a055-83eb-734276b9c8f1",
 				version = 2,
 			},
 			inheritedIndex = 10,
@@ -13617,6 +13597,300 @@ local tbl =
 				timerEndOffset = 13.39999961853,
 				timerStartOffset = 1,
 				uuid = "8bf44b35-242a-53b7-897f-71520d74281b",
+				version = 2,
+			},
+			inheritedIndex = 10,
+		},
+	},
+	[195] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25751,
+							conditions = 
+							{
+								
+								{
+									"7ff7d550-e7f1-b813-8c61-8d51598a9cff",
+									true,
+								},
+								
+								{
+									"2f0f3cc3-329f-2c70-9386-bbec618eb4b9",
+									true,
+								},
+								
+								{
+									"76972acd-7619-6ac7-84c9-ec57dd1225aa",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "f128886d-3f9c-d873-b184-840ce732e9d1",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							conditions = 
+							{
+								
+								{
+									"cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
+									true,
+								},
+								
+								{
+									"bcc05084-e0dd-c157-a6fd-d512808d8bcc",
+									true,
+								},
+								
+								{
+									"76972acd-7619-6ac7-84c9-ec57dd1225aa",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetSubType = "Lowest HP",
+							targetType = "Other Tank",
+							uuid = "9ea7cc5f-8777-744b-b6de-e198fbc4ef27",
+							version = 2.1,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25751,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							name = "CD BW",
+							uuid = "7ff7d550-e7f1-b813-8c61-8d51598a9cff",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							name = "CD NF",
+							uuid = "cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "Vamp targeting self",
+							uuid = "2f0f3cc3-329f-2c70-9386-bbec618eb4b9",
+							version = 2,
+						},
+						inheritedIndex = 4,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
+							name = "Vamp not targeting self",
+							uuid = "bcc05084-e0dd-c157-a6fd-d512808d8bcc",
+							version = 2,
+						},
+						inheritedIndex = 4,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "76972acd-7619-6ac7-84c9-ec57dd1225aa",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 968.4,
+				name = "BW/NF (20)",
+				timeRange = true,
+				timelineIndex = 195,
+				timerStartOffset = -2.5,
+				uuid = "470e1521-11c8-7f8a-8563-420b0f077901",
+				version = 2,
+			},
+			inheritedIndex = 10,
+		},
+	},
+	[197] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25751,
+							conditions = 
+							{
+								
+								{
+									"7ff7d550-e7f1-b813-8c61-8d51598a9cff",
+									true,
+								},
+								
+								{
+									"2f0f3cc3-329f-2c70-9386-bbec618eb4b9",
+									true,
+								},
+								
+								{
+									"76972acd-7619-6ac7-84c9-ec57dd1225aa",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "f128886d-3f9c-d873-b184-840ce732e9d1",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							conditions = 
+							{
+								
+								{
+									"cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
+									true,
+								},
+								
+								{
+									"bcc05084-e0dd-c157-a6fd-d512808d8bcc",
+									true,
+								},
+								
+								{
+									"76972acd-7619-6ac7-84c9-ec57dd1225aa",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetSubType = "Lowest HP",
+							targetType = "Other Tank",
+							uuid = "9ea7cc5f-8777-744b-b6de-e198fbc4ef27",
+							version = 2.1,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25751,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							name = "CD BW",
+							uuid = "7ff7d550-e7f1-b813-8c61-8d51598a9cff",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16464,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							name = "CD NF",
+							uuid = "cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "Vamp targeting self",
+							uuid = "2f0f3cc3-329f-2c70-9386-bbec618eb4b9",
+							version = 2,
+						},
+						inheritedIndex = 4,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
+							name = "Vamp not targeting self",
+							uuid = "bcc05084-e0dd-c157-a6fd-d512808d8bcc",
+							version = 2,
+						},
+						inheritedIndex = 4,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "76972acd-7619-6ac7-84c9-ec57dd1225aa",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 982.5,
+				name = "BW/NF (20)",
+				timeRange = true,
+				timelineIndex = 197,
+				timerStartOffset = -2.5,
+				uuid = "2b06e8d2-54d3-ff84-b6e5-fe94a1bff7ce",
 				version = 2,
 			},
 			inheritedIndex = 10,
