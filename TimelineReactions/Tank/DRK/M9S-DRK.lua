@@ -1,270 +1,5 @@
 local tbl = 
 {
-	
-	{
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7393,
-							conditions = 
-							{
-								
-								{
-									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
-									true,
-								},
-								
-								{
-									"2b3a90b2-0f76-f07d-b7fd-9206027312e9",
-									true,
-								},
-								
-								{
-									"bce2c4a9-b5a3-785b-97d2-a685a0dca02e",
-									true,
-								},
-								
-								{
-									"fb5929c9-8f82-dbd3-b6a5-24c8d98a50f0",
-									true,
-								},
-								
-								{
-									"ef19ac2e-b5e2-e80b-a108-a4bd04bb7ad7",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							actionID = 7393,
-							conditions = 
-							{
-								
-								{
-									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
-									true,
-								},
-								
-								{
-									"2b3a90b2-0f76-f07d-b7fd-9206027312e9",
-									true,
-								},
-								
-								{
-									"bce2c4a9-b5a3-785b-97d2-a685a0dca02e",
-									true,
-								},
-								
-								{
-									"caafa320-ccb8-a931-8872-0a1caf9793fa",
-									true,
-								},
-								
-								{
-									"ef19ac2e-b5e2-e80b-a108-a4bd04bb7ad7",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							uuid = "306cb6db-5a25-6e20-9ab8-6d0ca73406ae",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionID = 7393,
-							conditions = 
-							{
-								
-								{
-									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
-									true,
-								},
-								
-								{
-									"ae8bcade-a3df-41dd-be82-6733b11f504d",
-									true,
-								},
-								
-								{
-									"bce2c4a9-b5a3-785b-97d2-a685a0dca02e",
-									true,
-								},
-								
-								{
-									"fb5929c9-8f82-dbd3-b6a5-24c8d98a50f0",
-									true,
-								},
-								
-								{
-									"ef19ac2e-b5e2-e80b-a108-a4bd04bb7ad7",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Other Tank",
-							uuid = "b438467f-3d1e-ba27-b3c4-bd42e9c02dd4",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionID = 7393,
-							conditions = 
-							{
-								
-								{
-									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
-									true,
-								},
-								
-								{
-									"ae8bcade-a3df-41dd-be82-6733b11f504d",
-									true,
-								},
-								
-								{
-									"bce2c4a9-b5a3-785b-97d2-a685a0dca02e",
-									true,
-								},
-								
-								{
-									"caafa320-ccb8-a931-8872-0a1caf9793fa",
-									true,
-								},
-								
-								{
-									"ef19ac2e-b5e2-e80b-a108-a4bd04bb7ad7",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Other Tank",
-							uuid = "cd991d89-989c-78e6-a761-687f4318608b",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 3,
-							mpType = 2,
-							mpValue = 3000,
-							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
-							name = "RoleMit MT",
-							uuid = "2b3a90b2-0f76-f07d-b7fd-9206027312e9",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
-							name = "RoleMit ST",
-							uuid = "ae8bcade-a3df-41dd-be82-6733b11f504d",
-							version = 2,
-						},
-						inheritedIndex = 3,
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return FFXIV_Common_BotRunning",
-							name = "Bot Running",
-							uuid = "bce2c4a9-b5a3-785b-97d2-a685a0dca02e",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgType = 2,
-							eventSpellID = 48039,
-							uuid = "fb5929c9-8f82-dbd3-b6a5-24c8d98a50f0",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgType = 2,
-							eventSpellID = 47048,
-							uuid = "caafa320-ccb8-a931-8872-0a1caf9793fa",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Party",
-							conditionType = 10,
-							inGroupTargetContentID = 14300,
-							inGroupTargetType = "ContentID",
-							partyTargetType = "Event Entity",
-							uuid = "ef19ac2e-b5e2-e80b-a108-a4bd04bb7ad7",
-							version = 2,
-						},
-					},
-				},
-				eventType = 3,
-				mechanicTime = 5.4,
-				name = "TBN (15)",
-				timeRange = true,
-				timelineIndex = 1,
-				timerOffset = -4,
-				timerStartOffset = -6.5,
-				uuid = "08ea23f5-112b-0604-bf34-aed6d7db835c",
-				version = 2,
-			},
-			inheritedIndex = 1,
-		},
-	}, 
 	[3] = 
 	{
 		
@@ -1258,7 +993,7 @@ local tbl =
 								},
 								
 								{
-									"2b3a90b2-0f76-f07d-b7fd-9206027312e9",
+									"1d6bcc54-328f-a38f-b3bd-5041683a9c53",
 									true,
 								},
 								
@@ -1287,12 +1022,17 @@ local tbl =
 								},
 								
 								{
-									"ae8bcade-a3df-41dd-be82-6733b11f504d",
+									"eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 									true,
 								},
 								
 								{
 									"bce2c4a9-b5a3-785b-97d2-a685a0dca02e",
+									true,
+								},
+								
+								{
+									"42f58489-c0ef-f6e5-bc6d-94a9b0215e26",
 									true,
 								},
 							},
@@ -1323,20 +1063,21 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
-							name = "RoleMit MT",
-							uuid = "2b3a90b2-0f76-f07d-b7fd-9206027312e9",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "Vamp targeting self",
+							uuid = "1d6bcc54-328f-a38f-b3bd-5041683a9c53",
 							version = 2,
 						},
+						inheritedIndex = 2,
 					},
 					
 					{
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
-							name = "RoleMit ST",
-							uuid = "ae8bcade-a3df-41dd-be82-6733b11f504d",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
+							name = "Vamp not targeting self",
+							uuid = "eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 							version = 2,
 						},
 						inheritedIndex = 3,
@@ -1352,14 +1093,51 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2674,
+								2675,
+								77,
+								1191,
+								3829,
+								3830,
+								82,
+								2678,
+								2679,
+								2680,
+								3832,
+								2683,
+								2684,
+								1832,
+								3838,
+								1836,
+								1178,
+								2682,
+								746,
+								3835,
+								3902,
+							},
+							category = "Party",
+							name = "ST doesn't have mits",
+							partyTargetType = "Other Tank",
+							uuid = "42f58489-c0ef-f6e5-bc6d-94a9b0215e26",
+							version = 2,
+						},
+					},
 				},
 				mechanicTime = 46.7,
 				name = "TBN (15)",
 				timeRange = true,
 				timelineIndex = 9,
+				timerEndOffset = 2,
 				timerOffset = -4,
-				timerStartOffset = -2.5,
-				uuid = "679f99f8-749b-6e16-b396-dc412ced4710",
+				timerStartOffset = -1.5,
+				uuid = "9ed90a5b-9af7-a6ac-b740-e024622b4d19",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -1387,7 +1165,7 @@ local tbl =
 								},
 								
 								{
-									"2b3a90b2-0f76-f07d-b7fd-9206027312e9",
+									"1d6bcc54-328f-a38f-b3bd-5041683a9c53",
 									true,
 								},
 								
@@ -1416,7 +1194,7 @@ local tbl =
 								},
 								
 								{
-									"ae8bcade-a3df-41dd-be82-6733b11f504d",
+									"eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 									true,
 								},
 								
@@ -1452,20 +1230,21 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
-							name = "RoleMit MT",
-							uuid = "2b3a90b2-0f76-f07d-b7fd-9206027312e9",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "Vamp targeting self",
+							uuid = "1d6bcc54-328f-a38f-b3bd-5041683a9c53",
 							version = 2,
 						},
+						inheritedIndex = 2,
 					},
 					
 					{
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
-							name = "RoleMit ST",
-							uuid = "ae8bcade-a3df-41dd-be82-6733b11f504d",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
+							name = "Vamp not targeting self",
+							uuid = "eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 							version = 2,
 						},
 						inheritedIndex = 3,
@@ -1486,9 +1265,182 @@ local tbl =
 				name = "TBN (15)",
 				timeRange = true,
 				timelineIndex = 11,
+				timerEndOffset = 2,
 				timerOffset = -4,
-				timerStartOffset = -2.5,
-				uuid = "ac672204-468e-c110-9541-48cb506570cf",
+				timerStartOffset = -1.5,
+				uuid = "c1288525-1235-8a96-b91b-792d655d4e29",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[42] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"1d6bcc54-328f-a38f-b3bd-5041683a9c53",
+									true,
+								},
+								
+								{
+									"bce2c4a9-b5a3-785b-97d2-a685a0dca02e",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
+									true,
+								},
+								
+								{
+									"bce2c4a9-b5a3-785b-97d2-a685a0dca02e",
+									true,
+								},
+								
+								{
+									"8dbcace7-d18d-895b-b59d-9d9946bb9453",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "306cb6db-5a25-6e20-9ab8-6d0ca73406ae",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "Vamp targeting self",
+							uuid = "1d6bcc54-328f-a38f-b3bd-5041683a9c53",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
+							name = "Vamp not targeting self",
+							uuid = "eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "bce2c4a9-b5a3-785b-97d2-a685a0dca02e",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2674,
+								2675,
+								77,
+								1191,
+								3829,
+								3830,
+								82,
+								2678,
+								2679,
+								2680,
+								3832,
+								2683,
+								2684,
+								1832,
+								3838,
+								1836,
+								1178,
+								2682,
+								746,
+								3835,
+								3902,
+							},
+							category = "Party",
+							name = "ST doesn't have mits",
+							partyTargetType = "Other Tank",
+							uuid = "8dbcace7-d18d-895b-b59d-9d9946bb9453",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 120.1,
+				name = "TBN (15)",
+				timeRange = true,
+				timelineIndex = 42,
+				timerEndOffset = 10,
+				timerOffset = -4,
+				timerStartOffset = 5,
+				uuid = "8d6681b2-e349-87c7-85b7-7ddf28213a1a",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -1516,7 +1468,7 @@ local tbl =
 								},
 								
 								{
-									"2b3a90b2-0f76-f07d-b7fd-9206027312e9",
+									"1d6bcc54-328f-a38f-b3bd-5041683a9c53",
 									true,
 								},
 								
@@ -1545,7 +1497,7 @@ local tbl =
 								},
 								
 								{
-									"ae8bcade-a3df-41dd-be82-6733b11f504d",
+									"eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 									true,
 								},
 								
@@ -1581,20 +1533,21 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
-							name = "RoleMit MT",
-							uuid = "2b3a90b2-0f76-f07d-b7fd-9206027312e9",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "Vamp targeting self",
+							uuid = "1d6bcc54-328f-a38f-b3bd-5041683a9c53",
 							version = 2,
 						},
+						inheritedIndex = 2,
 					},
 					
 					{
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
-							name = "RoleMit ST",
-							uuid = "ae8bcade-a3df-41dd-be82-6733b11f504d",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
+							name = "Vamp not targeting self",
+							uuid = "eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 							version = 2,
 						},
 						inheritedIndex = 3,
@@ -1616,8 +1569,8 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 47,
 				timerOffset = -4,
-				timerStartOffset = -2.5,
-				uuid = "a6323473-9e0f-a228-be78-c5ac6b93ab96",
+				timerStartOffset = -1.5,
+				uuid = "4711812d-83a0-546e-90b3-5b058994c4eb",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -1645,7 +1598,7 @@ local tbl =
 								},
 								
 								{
-									"2b3a90b2-0f76-f07d-b7fd-9206027312e9",
+									"1d6bcc54-328f-a38f-b3bd-5041683a9c53",
 									true,
 								},
 								
@@ -1674,7 +1627,7 @@ local tbl =
 								},
 								
 								{
-									"ae8bcade-a3df-41dd-be82-6733b11f504d",
+									"eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 									true,
 								},
 								
@@ -1710,20 +1663,21 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
-							name = "RoleMit MT",
-							uuid = "2b3a90b2-0f76-f07d-b7fd-9206027312e9",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "Vamp targeting self",
+							uuid = "1d6bcc54-328f-a38f-b3bd-5041683a9c53",
 							version = 2,
 						},
+						inheritedIndex = 2,
 					},
 					
 					{
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
-							name = "RoleMit ST",
-							uuid = "ae8bcade-a3df-41dd-be82-6733b11f504d",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
+							name = "Vamp not targeting self",
+							uuid = "eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 							version = 2,
 						},
 						inheritedIndex = 3,
@@ -1745,8 +1699,8 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 49,
 				timerOffset = -4,
-				timerStartOffset = -2.5,
-				uuid = "1a38fe77-8ee6-39dd-a814-514dfec9199c",
+				timerStartOffset = -1.5,
+				uuid = "d911c2bd-13ef-469a-b300-6d0684fc55f3",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -1774,7 +1728,7 @@ local tbl =
 								},
 								
 								{
-									"2b3a90b2-0f76-f07d-b7fd-9206027312e9",
+									"1d6bcc54-328f-a38f-b3bd-5041683a9c53",
 									true,
 								},
 								
@@ -1803,7 +1757,7 @@ local tbl =
 								},
 								
 								{
-									"ae8bcade-a3df-41dd-be82-6733b11f504d",
+									"eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 									true,
 								},
 								
@@ -1839,20 +1793,21 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
-							name = "RoleMit MT",
-							uuid = "2b3a90b2-0f76-f07d-b7fd-9206027312e9",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "Vamp targeting self",
+							uuid = "1d6bcc54-328f-a38f-b3bd-5041683a9c53",
 							version = 2,
 						},
+						inheritedIndex = 2,
 					},
 					
 					{
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
-							name = "RoleMit ST",
-							uuid = "ae8bcade-a3df-41dd-be82-6733b11f504d",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
+							name = "Vamp not targeting self",
+							uuid = "eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 							version = 2,
 						},
 						inheritedIndex = 3,
@@ -1874,8 +1829,8 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 51,
 				timerOffset = -4,
-				timerStartOffset = -2.5,
-				uuid = "37b83a21-6fd0-705e-bb44-83dc5b7c5f63",
+				timerStartOffset = -1.5,
+				uuid = "e753e920-1003-7822-9eff-f24687a873ea",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -1989,7 +1944,7 @@ local tbl =
 								},
 								
 								{
-									"2b3a90b2-0f76-f07d-b7fd-9206027312e9",
+									"1d6bcc54-328f-a38f-b3bd-5041683a9c53",
 									true,
 								},
 								
@@ -2018,7 +1973,7 @@ local tbl =
 								},
 								
 								{
-									"ae8bcade-a3df-41dd-be82-6733b11f504d",
+									"eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 									true,
 								},
 								
@@ -2054,20 +2009,21 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
-							name = "RoleMit MT",
-							uuid = "2b3a90b2-0f76-f07d-b7fd-9206027312e9",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "Vamp targeting self",
+							uuid = "1d6bcc54-328f-a38f-b3bd-5041683a9c53",
 							version = 2,
 						},
+						inheritedIndex = 2,
 					},
 					
 					{
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
-							name = "RoleMit ST",
-							uuid = "ae8bcade-a3df-41dd-be82-6733b11f504d",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
+							name = "Vamp not targeting self",
+							uuid = "eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 							version = 2,
 						},
 						inheritedIndex = 3,
@@ -2088,12 +2044,13 @@ local tbl =
 				name = "TBN (15)",
 				timeRange = true,
 				timelineIndex = 54,
+				timerEndOffset = 5,
 				timerOffset = -4,
 				timerStartOffset = 0.5,
-				uuid = "8898dde0-2934-3a77-88da-e9bca4e0594f",
+				uuid = "60e4bb83-4110-cc8a-bb19-dc2f0e123f83",
 				version = 2,
 			},
-			inheritedIndex = 1,
+			inheritedIndex = 2,
 		},
 	},
 	[58] = 
@@ -3069,7 +3026,7 @@ local tbl =
 			inheritedIndex = 9,
 		},
 	},
-	[68] = 
+	[62] = 
 	{
 		
 		{
@@ -3091,7 +3048,7 @@ local tbl =
 								},
 								
 								{
-									"2b3a90b2-0f76-f07d-b7fd-9206027312e9",
+									"1d6bcc54-328f-a38f-b3bd-5041683a9c53",
 									true,
 								},
 								
@@ -3120,7 +3077,179 @@ local tbl =
 								},
 								
 								{
-									"ae8bcade-a3df-41dd-be82-6733b11f504d",
+									"eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
+									true,
+								},
+								
+								{
+									"bce2c4a9-b5a3-785b-97d2-a685a0dca02e",
+									true,
+								},
+								
+								{
+									"ff20e57d-4aca-02e1-9775-efcef536b6de",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "306cb6db-5a25-6e20-9ab8-6d0ca73406ae",
+							version = 2.1,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 3,
+							mpType = 2,
+							mpValue = 3000,
+							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "Vamp targeting self",
+							uuid = "1d6bcc54-328f-a38f-b3bd-5041683a9c53",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
+							name = "Vamp not targeting self",
+							uuid = "eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "bce2c4a9-b5a3-785b-97d2-a685a0dca02e",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2674,
+								2675,
+								77,
+								1191,
+								3829,
+								3830,
+								82,
+								2678,
+								2679,
+								2680,
+								3832,
+								2683,
+								2684,
+								1832,
+								3838,
+								1836,
+								1178,
+								2682,
+								746,
+								3835,
+								3902,
+							},
+							category = "Party",
+							name = "ST doesn't have mits",
+							partyTargetType = "Other Tank",
+							uuid = "ff20e57d-4aca-02e1-9775-efcef536b6de",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 233.9,
+				name = "TBN (15)",
+				timeRange = true,
+				timelineIndex = 62,
+				timerOffset = -4,
+				timerStartOffset = -1.5,
+				uuid = "9beaae74-ef6f-46d5-8bb8-80b3d87a360a",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[68] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"1d6bcc54-328f-a38f-b3bd-5041683a9c53",
+									true,
+								},
+								
+								{
+									"bce2c4a9-b5a3-785b-97d2-a685a0dca02e",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 									true,
 								},
 								
@@ -3156,20 +3285,21 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
-							name = "RoleMit MT",
-							uuid = "2b3a90b2-0f76-f07d-b7fd-9206027312e9",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "Vamp targeting self",
+							uuid = "1d6bcc54-328f-a38f-b3bd-5041683a9c53",
 							version = 2,
 						},
+						inheritedIndex = 2,
 					},
 					
 					{
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
-							name = "RoleMit ST",
-							uuid = "ae8bcade-a3df-41dd-be82-6733b11f504d",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
+							name = "Vamp not targeting self",
+							uuid = "eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 							version = 2,
 						},
 						inheritedIndex = 3,
@@ -3192,7 +3322,7 @@ local tbl =
 				timelineIndex = 68,
 				timerOffset = -4,
 				timerStartOffset = -2.5,
-				uuid = "60fc4861-f49a-dfe2-a91b-28255edfa2b6",
+				uuid = "30190532-1362-d629-9512-e30d198a2447",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -3220,7 +3350,7 @@ local tbl =
 								},
 								
 								{
-									"2b3a90b2-0f76-f07d-b7fd-9206027312e9",
+									"1d6bcc54-328f-a38f-b3bd-5041683a9c53",
 									true,
 								},
 								
@@ -3249,7 +3379,7 @@ local tbl =
 								},
 								
 								{
-									"ae8bcade-a3df-41dd-be82-6733b11f504d",
+									"eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 									true,
 								},
 								
@@ -3285,20 +3415,21 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
-							name = "RoleMit MT",
-							uuid = "2b3a90b2-0f76-f07d-b7fd-9206027312e9",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "Vamp targeting self",
+							uuid = "1d6bcc54-328f-a38f-b3bd-5041683a9c53",
 							version = 2,
 						},
+						inheritedIndex = 2,
 					},
 					
 					{
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
-							name = "RoleMit ST",
-							uuid = "ae8bcade-a3df-41dd-be82-6733b11f504d",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
+							name = "Vamp not targeting self",
+							uuid = "eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 							version = 2,
 						},
 						inheritedIndex = 3,
@@ -3320,8 +3451,8 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 71,
 				timerOffset = -4,
-				timerStartOffset = -2.5,
-				uuid = "9d7aeba5-5bb6-f3aa-9f6d-d86c9f876a37",
+				timerStartOffset = -1.5,
+				uuid = "ae831528-dda0-3d2f-9cc6-cc92a9affae8",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -6264,7 +6395,7 @@ local tbl =
 								},
 								
 								{
-									"2b3a90b2-0f76-f07d-b7fd-9206027312e9",
+									"1d6bcc54-328f-a38f-b3bd-5041683a9c53",
 									true,
 								},
 								
@@ -6293,7 +6424,7 @@ local tbl =
 								},
 								
 								{
-									"ae8bcade-a3df-41dd-be82-6733b11f504d",
+									"eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 									true,
 								},
 								
@@ -6329,20 +6460,21 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
-							name = "RoleMit MT",
-							uuid = "2b3a90b2-0f76-f07d-b7fd-9206027312e9",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "Vamp targeting self",
+							uuid = "1d6bcc54-328f-a38f-b3bd-5041683a9c53",
 							version = 2,
 						},
+						inheritedIndex = 2,
 					},
 					
 					{
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
-							name = "RoleMit ST",
-							uuid = "ae8bcade-a3df-41dd-be82-6733b11f504d",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
+							name = "Vamp not targeting self",
+							uuid = "eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 							version = 2,
 						},
 						inheritedIndex = 3,
@@ -6365,7 +6497,7 @@ local tbl =
 				timelineIndex = 87,
 				timerOffset = -4,
 				timerStartOffset = -2.5,
-				uuid = "76f88e31-d359-fbfe-bc55-f4d72eaafb0e",
+				uuid = "690397c3-bea7-e4d5-b0b8-5da800692f86",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -10054,7 +10186,7 @@ local tbl =
 								},
 								
 								{
-									"2b3a90b2-0f76-f07d-b7fd-9206027312e9",
+									"1d6bcc54-328f-a38f-b3bd-5041683a9c53",
 									true,
 								},
 								
@@ -10083,7 +10215,7 @@ local tbl =
 								},
 								
 								{
-									"ae8bcade-a3df-41dd-be82-6733b11f504d",
+									"eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 									true,
 								},
 								
@@ -10119,20 +10251,21 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
-							name = "RoleMit MT",
-							uuid = "2b3a90b2-0f76-f07d-b7fd-9206027312e9",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "Vamp targeting self",
+							uuid = "1d6bcc54-328f-a38f-b3bd-5041683a9c53",
 							version = 2,
 						},
+						inheritedIndex = 2,
 					},
 					
 					{
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
-							name = "RoleMit ST",
-							uuid = "ae8bcade-a3df-41dd-be82-6733b11f504d",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
+							name = "Vamp not targeting self",
+							uuid = "eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 							version = 2,
 						},
 						inheritedIndex = 3,
@@ -10155,7 +10288,7 @@ local tbl =
 				timelineIndex = 178,
 				timerOffset = -4,
 				timerStartOffset = -2.5,
-				uuid = "ff9f4e6f-04e7-e401-865f-0402a7841a09",
+				uuid = "06cc2301-308f-72ae-a0f0-a1a999e87800",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -11153,7 +11286,7 @@ local tbl =
 								},
 								
 								{
-									"2b3a90b2-0f76-f07d-b7fd-9206027312e9",
+									"1d6bcc54-328f-a38f-b3bd-5041683a9c53",
 									true,
 								},
 								
@@ -11182,7 +11315,7 @@ local tbl =
 								},
 								
 								{
-									"ae8bcade-a3df-41dd-be82-6733b11f504d",
+									"eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 									true,
 								},
 								
@@ -11218,20 +11351,21 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
-							name = "RoleMit MT",
-							uuid = "2b3a90b2-0f76-f07d-b7fd-9206027312e9",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "Vamp targeting self",
+							uuid = "1d6bcc54-328f-a38f-b3bd-5041683a9c53",
 							version = 2,
 						},
+						inheritedIndex = 2,
 					},
 					
 					{
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
-							name = "RoleMit ST",
-							uuid = "ae8bcade-a3df-41dd-be82-6733b11f504d",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
+							name = "Vamp not targeting self",
+							uuid = "eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 							version = 2,
 						},
 						inheritedIndex = 3,
@@ -11254,7 +11388,7 @@ local tbl =
 				timelineIndex = 195,
 				timerOffset = -4,
 				timerStartOffset = -2.5,
-				uuid = "2ba077d8-f14a-3899-af16-9c981c99fe4b",
+				uuid = "967349ac-dcfc-346d-a246-9c16e16ffcfa",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -11282,7 +11416,7 @@ local tbl =
 								},
 								
 								{
-									"2b3a90b2-0f76-f07d-b7fd-9206027312e9",
+									"1d6bcc54-328f-a38f-b3bd-5041683a9c53",
 									true,
 								},
 								
@@ -11311,7 +11445,7 @@ local tbl =
 								},
 								
 								{
-									"ae8bcade-a3df-41dd-be82-6733b11f504d",
+									"eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 									true,
 								},
 								
@@ -11347,20 +11481,21 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
-							name = "RoleMit MT",
-							uuid = "2b3a90b2-0f76-f07d-b7fd-9206027312e9",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "Vamp targeting self",
+							uuid = "1d6bcc54-328f-a38f-b3bd-5041683a9c53",
 							version = 2,
 						},
+						inheritedIndex = 2,
 					},
 					
 					{
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
-							name = "RoleMit ST",
-							uuid = "ae8bcade-a3df-41dd-be82-6733b11f504d",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14300\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
+							name = "Vamp not targeting self",
+							uuid = "eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 							version = 2,
 						},
 						inheritedIndex = 3,
@@ -11383,7 +11518,7 @@ local tbl =
 				timelineIndex = 197,
 				timerOffset = -4,
 				timerStartOffset = -2.5,
-				uuid = "788a3092-cd7c-0b12-a57b-5d833bf53311",
+				uuid = "bfaf852d-cb0e-fc1a-93c4-7088e6da6019",
 				version = 2,
 			},
 			inheritedIndex = 1,
