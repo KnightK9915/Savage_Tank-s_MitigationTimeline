@@ -845,6 +845,118 @@ local tbl =
 			},
 		},
 	}, 
+	[7] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"a0c32fff-2645-ca70-a05a-0325df47bc64",
+									true,
+								},
+								
+								{
+									"d6b34358-010d-4fbd-a8fe-a4b4840e2b03",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "ca8e3c49-672f-7f30-b556-8666222d88cf",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7382,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"a0c32fff-2645-ca70-a05a-0325df47bc64",
+									true,
+								},
+								
+								{
+									"c6af8a32-e26e-40fa-8bc1-49438507827f",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "92b93e01-95bb-71d5-9121-52773c65724a",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "a0c32fff-2645-ca70-a05a-0325df47bc64",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14370\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "RedHot targeting self",
+							uuid = "d6b34358-010d-4fbd-a8fe-a4b4840e2b03",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14370\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
+							name = "RedHot not targeting self",
+							uuid = "c6af8a32-e26e-40fa-8bc1-49438507827f",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 52.3,
+				name = "Sheltron/Interven",
+				timeRange = true,
+				timelineIndex = 7,
+				timerStartOffset = -8,
+				uuid = "cc457056-0175-7785-902d-5f1afb75df50",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
 	[11] = 
 	{
 		
@@ -5380,6 +5492,311 @@ local tbl =
 			inheritedIndex = 10,
 		},
 	},
+	[119] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"a0c32fff-2645-ca70-a05a-0325df47bc64",
+									true,
+								},
+								
+								{
+									"10c3d2c2-4f80-062d-8015-0b20974509af",
+									true,
+								},
+								
+								{
+									"fe25f504-d2ad-07fc-9c7b-3005108d88fb",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "ca8e3c49-672f-7f30-b556-8666222d88cf",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "a0c32fff-2645-ca70-a05a-0325df47bc64",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "DeepBlue targeting self",
+							uuid = "10c3d2c2-4f80-062d-8015-0b20974509af",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "fe25f504-d2ad-07fc-9c7b-3005108d88fb",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 414.3,
+				name = "[Blue] Sheltron (15)",
+				timeRange = true,
+				timelineIndex = 119,
+				timerEndOffset = 5,
+				uuid = "7e8da8f8-bc59-320c-bb9d-4b10370595b7",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[127] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"a0c32fff-2645-ca70-a05a-0325df47bc64",
+									true,
+								},
+								
+								{
+									"d6b34358-010d-4fbd-a8fe-a4b4840e2b03",
+									true,
+								},
+								
+								{
+									"fb74b65a-0df9-c7a4-8ce8-80cdb9ecaf2a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "ca8e3c49-672f-7f30-b556-8666222d88cf",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "a0c32fff-2645-ca70-a05a-0325df47bc64",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14370\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "RedHot targeting self",
+							uuid = "d6b34358-010d-4fbd-a8fe-a4b4840e2b03",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "fb74b65a-0df9-c7a4-8ce8-80cdb9ecaf2a",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 444.7,
+				name = "[Red] Sheltron (15)",
+				timeRange = true,
+				timelineIndex = 127,
+				timerStartOffset = -7,
+				uuid = "2f5edbdb-cbf4-6ab5-a9ce-79ac5ad21440",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[131] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+								
+								{
+									"35a1b1f0-9bdc-3684-b272-3868034e0aae",
+									true,
+								},
+								
+								{
+									"5e1a2ad7-0c46-d03f-89bc-4c4737125915",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+								
+								{
+									"67d10d27-7cc7-3942-b06d-850f234ecaf7",
+									true,
+								},
+								
+								{
+									"5e1a2ad7-0c46-d03f-89bc-4c4737125915",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "395c750c-23c2-816e-bc8e-251c74fd1a9c",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "35a1b1f0-9bdc-3684-b272-3868034e0aae",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "67d10d27-7cc7-3942-b06d-850f234ecaf7",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "5e1a2ad7-0c46-d03f-89bc-4c4737125915",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 451.8,
+				name = "sheltron (15)",
+				timeRange = true,
+				timelineIndex = 131,
+				timerEndOffset = 10,
+				timerStartOffset = 4,
+				uuid = "edc683de-ec5f-acb1-ad9f-11ff806e4759",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
 	[136] = 
 	{
 		
@@ -5603,6 +6020,135 @@ local tbl =
 				timerEndOffset = 45,
 				timerStartOffset = -15,
 				uuid = "7d39c174-0bfe-1325-b125-bffb8d569a6d",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[153] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+								
+								{
+									"35a1b1f0-9bdc-3684-b272-3868034e0aae",
+									true,
+								},
+								
+								{
+									"5e1a2ad7-0c46-d03f-89bc-4c4737125915",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+								
+								{
+									"67d10d27-7cc7-3942-b06d-850f234ecaf7",
+									true,
+								},
+								
+								{
+									"5e1a2ad7-0c46-d03f-89bc-4c4737125915",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "395c750c-23c2-816e-bc8e-251c74fd1a9c",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "35a1b1f0-9bdc-3684-b272-3868034e0aae",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "67d10d27-7cc7-3942-b06d-850f234ecaf7",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "5e1a2ad7-0c46-d03f-89bc-4c4737125915",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 526,
+				name = "sheltron (15)",
+				timeRange = true,
+				timelineIndex = 153,
+				timerEndOffset = 5,
+				timerStartOffset = 1.5,
+				uuid = "b0e0fff6-a67c-0875-b179-58ff2662f1dc",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -6668,6 +7214,264 @@ local tbl =
 				uuid = "406e8c1b-a716-3137-bd46-275e27552981",
 				version = 2,
 			},
+		},
+	},
+	[162] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+								
+								{
+									"35a1b1f0-9bdc-3684-b272-3868034e0aae",
+									true,
+								},
+								
+								{
+									"5e1a2ad7-0c46-d03f-89bc-4c4737125915",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+								
+								{
+									"67d10d27-7cc7-3942-b06d-850f234ecaf7",
+									true,
+								},
+								
+								{
+									"5e1a2ad7-0c46-d03f-89bc-4c4737125915",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "395c750c-23c2-816e-bc8e-251c74fd1a9c",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "35a1b1f0-9bdc-3684-b272-3868034e0aae",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "67d10d27-7cc7-3942-b06d-850f234ecaf7",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "5e1a2ad7-0c46-d03f-89bc-4c4737125915",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 566.5,
+				name = "sheltron (15)",
+				timeRange = true,
+				timelineIndex = 162,
+				timerEndOffset = 5,
+				timerStartOffset = 1.5,
+				uuid = "7734d498-e5c2-b617-883a-24e831af8052",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[163] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+								
+								{
+									"35a1b1f0-9bdc-3684-b272-3868034e0aae",
+									true,
+								},
+								
+								{
+									"5e1a2ad7-0c46-d03f-89bc-4c4737125915",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "414a624f-e8e5-5a92-a9e1-edd228b0aa4c",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 25746,
+							conditions = 
+							{
+								
+								{
+									"ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+									true,
+								},
+								
+								{
+									"67d10d27-7cc7-3942-b06d-850f234ecaf7",
+									true,
+								},
+								
+								{
+									"5e1a2ad7-0c46-d03f-89bc-4c4737125915",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "395c750c-23c2-816e-bc8e-251c74fd1a9c",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 6,
+							gaugeValue = 50,
+							uuid = "ebeccbba-5a30-21d0-8545-a71b3d4174b3",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "35a1b1f0-9bdc-3684-b272-3868034e0aae",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "67d10d27-7cc7-3942-b06d-850f234ecaf7",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "5e1a2ad7-0c46-d03f-89bc-4c4737125915",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 575.6,
+				name = "sheltron (15)",
+				timeRange = true,
+				timelineIndex = 163,
+				timerEndOffset = 5,
+				timerStartOffset = 3.5,
+				uuid = "bf781c9f-2fcb-ce45-ba93-1efa38e04627",
+				version = 2,
+			},
+			inheritedIndex = 1,
 		},
 	},
 	inheritedProfiles = 
