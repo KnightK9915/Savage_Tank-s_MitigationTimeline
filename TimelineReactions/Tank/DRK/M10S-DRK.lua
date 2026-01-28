@@ -2815,32 +2815,26 @@ local tbl =
 								},
 								
 								{
-									"85a4871f-d391-e9d7-953b-ff0305395dea",
+									"4165b9f2-fd16-83c3-973f-8af5417778c6",
 									true,
 								},
 								
 								{
-									"0b6b3a8f-3bf5-04c3-9ed1-851525fed446",
+									"1d6bcc54-328f-a38f-b3bd-5041683a9c53",
 									true,
 								},
 								
 								{
-									"e9f575e4-e4b1-36a6-9032-83f43c0a7d5b",
-									true,
-								},
-								
-								{
-									"2edb33e9-4663-2a40-bf73-3978909bc78e",
+									"bce2c4a9-b5a3-785b-97d2-a685a0dca02e",
 									true,
 								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
-							targetType = "Detection Target",
-							uuid = "cae0af52-39c8-03a4-b481-b653c7ee003e",
+							targetType = "Other Tank",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
 							version = 2.1,
 						},
-						inheritedIndex = 1,
 					},
 					
 					{
@@ -2856,29 +2850,24 @@ local tbl =
 								},
 								
 								{
-									"f3eea7a1-edc1-70ff-996d-caaf5c63d21c",
+									"75b80de1-73d0-c241-9771-7b5634447ca4",
 									true,
 								},
 								
 								{
-									"0b6b3a8f-3bf5-04c3-9ed1-851525fed446",
+									"eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 									true,
 								},
 								
 								{
-									"e9f575e4-e4b1-36a6-9032-83f43c0a7d5b",
-									true,
-								},
-								
-								{
-									"2edb33e9-4663-2a40-bf73-3978909bc78e",
+									"bce2c4a9-b5a3-785b-97d2-a685a0dca02e",
 									true,
 								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
-							targetType = "Detection Target",
-							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							targetType = "Other Tank",
+							uuid = "306cb6db-5a25-6e20-9ab8-6d0ca73406ae",
 							version = 2.1,
 						},
 					},
@@ -2904,7 +2893,7 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
 							name = "RoleMit MT",
-							uuid = "85a4871f-d391-e9d7-953b-ff0305395dea",
+							uuid = "4165b9f2-fd16-83c3-973f-8af5417778c6",
 							version = 2,
 						},
 						inheritedIndex = 2,
@@ -2916,7 +2905,19 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
 							name = "RoleMit ST",
-							uuid = "f3eea7a1-edc1-70ff-996d-caaf5c63d21c",
+							uuid = "75b80de1-73d0-c241-9771-7b5634447ca4",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "DeepBlue targeting self",
+							uuid = "1d6bcc54-328f-a38f-b3bd-5041683a9c53",
 							version = 2,
 						},
 						inheritedIndex = 2,
@@ -2926,72 +2927,32 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return FFXIV_Common_BotRunning",
-							name = "Bot Running",
-							uuid = "0b6b3a8f-3bf5-04c3-9ed1-851525fed446",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\n-- 场上存在 14369，且没有任何一个在盯你\nreturn found\n",
+							name = "DeepBlue not targeting self",
+							uuid = "eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 							version = 2,
 						},
+						inheritedIndex = 3,
 					},
 					
 					{
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\n-- 场上存在 14369，且没有任何一个在盯你\nreturn found\n",
-							name = "DeepBlue not targeting self",
-							uuid = "e9f575e4-e4b1-36a6-9032-83f43c0a7d5b",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "bce2c4a9-b5a3-785b-97d2-a685a0dca02e",
 							version = 2,
 						},
-						inheritedIndex = 5,
-					},
-					
-					{
-						data = 
-						{
-							category = "Filter",
-							conditions = 
-							{
-								
-								{
-									"6d0c742b-1eb7-c1bb-a52e-48c0ce6a45f4",
-									true,
-								},
-							},
-							filterTargetSubtype = "Furthest",
-							filterTargetType = "Other Tank",
-							subtypeRangeCheckSourceSubType = "Furthest",
-							subtypeRangeCheckSourceType = "ContentID",
-							subtypeRangeSourceContentID = 14369,
-							uuid = "2edb33e9-4663-2a40-bf73-3978909bc78e",
-							version = 2,
-						},
-						inheritedIndex = 7,
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffIDList = 
-							{
-								82,
-								1836,
-							},
-							category = "Party",
-							partyTargetType = "Detection Target",
-							uuid = "6d0c742b-1eb7-c1bb-a52e-48c0ce6a45f4",
-							version = 2,
-						},
-						inheritedIndex = 7,
 					},
 				},
 				mechanicTime = 136.3,
-				name = "TBN ST (25)",
+				name = "TBN (15) ST",
 				timeRange = true,
 				timelineIndex = 26,
 				timerOffset = -4,
 				timerStartOffset = -3.5,
-				uuid = "2b646ead-d7b0-7474-bf72-48e1cf5c798f",
+				uuid = "4325dc4d-5623-47d6-a21f-d49bc1bea7ce",
 				version = 2,
 			},
 			inheritedIndex = 8,
@@ -3011,7 +2972,12 @@ local tbl =
 							{
 								
 								{
-									"c674cbfb-7633-1438-8510-103ed8b1e174",
+									"6e3996a5-f552-8330-815f-1dc9e15a1a26",
+									true,
+								},
+								
+								{
+									"fade4121-82b2-0b8a-8e42-c5df177beb17",
 									true,
 								},
 								
@@ -3019,20 +2985,10 @@ local tbl =
 									"75542d97-472f-8868-a8d0-325a7594721e",
 									true,
 								},
-								
-								{
-									"286151a2-48af-c5e5-b395-ed55d2cf7a18",
-									true,
-								},
-								
-								{
-									"4c99e0c0-2a80-f738-bd03-4c1fab7461ce",
-									true,
-								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
-							targetType = "Detection Target",
+							targetType = "Other Tank",
 							uuid = "c2248fe9-6f5a-3a0f-93b6-f045b1d30d67",
 							version = 2.1,
 						},
@@ -3047,7 +3003,12 @@ local tbl =
 							{
 								
 								{
-									"38aad16b-01df-cc30-a16f-2d56019ce737",
+									"bdb442ab-8b6b-33fd-aa81-c8ce0c31edc4",
+									true,
+								},
+								
+								{
+									"a74531ec-0563-9ce2-ad1a-e1eeafb30da2",
 									true,
 								},
 								
@@ -3055,20 +3016,10 @@ local tbl =
 									"75542d97-472f-8868-a8d0-325a7594721e",
 									true,
 								},
-								
-								{
-									"286151a2-48af-c5e5-b395-ed55d2cf7a18",
-									true,
-								},
-								
-								{
-									"4c99e0c0-2a80-f738-bd03-4c1fab7461ce",
-									true,
-								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
-							targetType = "Detection Target",
+							targetType = "Other Tank",
 							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
 							version = 2.1,
 						},
@@ -3084,10 +3035,10 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
 							name = "RoleMit MT",
-							uuid = "c674cbfb-7633-1438-8510-103ed8b1e174",
+							uuid = "6e3996a5-f552-8330-815f-1dc9e15a1a26",
 							version = 2,
 						},
-						inheritedIndex = 3,
+						inheritedIndex = 1,
 					},
 					
 					{
@@ -3096,9 +3047,34 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
 							name = "RoleMit ST",
-							uuid = "38aad16b-01df-cc30-a16f-2d56019ce737",
+							uuid = "bdb442ab-8b6b-33fd-aa81-c8ce0c31edc4",
 							version = 2,
 						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "DeepBlue targeting self",
+							uuid = "fade4121-82b2-0b8a-8e42-c5df177beb17",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\n-- 场上存在 14369，且没有任何一个在盯你\nreturn found\n",
+							name = "DeepBlue not targeting self",
+							uuid = "a74531ec-0563-9ce2-ad1a-e1eeafb30da2",
+							version = 2,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -3111,58 +3087,6 @@ local tbl =
 							version = 2,
 						},
 					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\n-- 场上存在 14369，且没有任何一个在盯你\nreturn found\n",
-							name = "DeepBlue not targeting self",
-							uuid = "286151a2-48af-c5e5-b395-ed55d2cf7a18",
-							version = 2,
-						},
-						inheritedIndex = 5,
-					},
-					
-					{
-						data = 
-						{
-							category = "Filter",
-							conditions = 
-							{
-								
-								{
-									"763af5b7-f660-8659-945a-a0ebf76730ff",
-									true,
-								},
-							},
-							filterTargetSubtype = "Furthest",
-							filterTargetType = "Other Tank",
-							subtypeRangeCheckSourceSubType = "Furthest",
-							subtypeRangeCheckSourceType = "ContentID",
-							subtypeRangeSourceContentID = 14369,
-							uuid = "4c99e0c0-2a80-f738-bd03-4c1fab7461ce",
-							version = 2,
-						},
-						inheritedIndex = 7,
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffIDList = 
-							{
-								82,
-								1836,
-							},
-							category = "Party",
-							partyTargetType = "Detection Target",
-							uuid = "763af5b7-f660-8659-945a-a0ebf76730ff",
-							version = 2,
-						},
-						inheritedIndex = 7,
-					},
 				},
 				mechanicTime = 136.3,
 				name = "Oblation ST (10)",
@@ -3170,7 +3094,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 26,
 				timerStartOffset = -8,
-				uuid = "e0cda97f-a2d3-2a32-ae4c-8763cc24aa39",
+				uuid = "f44cfb13-5463-fe85-b634-acd25a803e06",
 				version = 2,
 			},
 			inheritedIndex = 9,
@@ -6190,32 +6114,26 @@ local tbl =
 								},
 								
 								{
-									"85a4871f-d391-e9d7-953b-ff0305395dea",
+									"4165b9f2-fd16-83c3-973f-8af5417778c6",
 									true,
 								},
 								
 								{
-									"0b6b3a8f-3bf5-04c3-9ed1-851525fed446",
+									"1d6bcc54-328f-a38f-b3bd-5041683a9c53",
 									true,
 								},
 								
 								{
-									"e9f575e4-e4b1-36a6-9032-83f43c0a7d5b",
-									true,
-								},
-								
-								{
-									"2edb33e9-4663-2a40-bf73-3978909bc78e",
+									"bce2c4a9-b5a3-785b-97d2-a685a0dca02e",
 									true,
 								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
-							targetType = "Detection Target",
-							uuid = "cae0af52-39c8-03a4-b481-b653c7ee003e",
+							targetType = "Other Tank",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
 							version = 2.1,
 						},
-						inheritedIndex = 1,
 					},
 					
 					{
@@ -6231,29 +6149,24 @@ local tbl =
 								},
 								
 								{
-									"f3eea7a1-edc1-70ff-996d-caaf5c63d21c",
+									"75b80de1-73d0-c241-9771-7b5634447ca4",
 									true,
 								},
 								
 								{
-									"0b6b3a8f-3bf5-04c3-9ed1-851525fed446",
+									"eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 									true,
 								},
 								
 								{
-									"e9f575e4-e4b1-36a6-9032-83f43c0a7d5b",
-									true,
-								},
-								
-								{
-									"2edb33e9-4663-2a40-bf73-3978909bc78e",
+									"bce2c4a9-b5a3-785b-97d2-a685a0dca02e",
 									true,
 								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
-							targetType = "Detection Target",
-							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							targetType = "Other Tank",
+							uuid = "306cb6db-5a25-6e20-9ab8-6d0ca73406ae",
 							version = 2.1,
 						},
 					},
@@ -6279,7 +6192,7 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
 							name = "RoleMit MT",
-							uuid = "85a4871f-d391-e9d7-953b-ff0305395dea",
+							uuid = "4165b9f2-fd16-83c3-973f-8af5417778c6",
 							version = 2,
 						},
 						inheritedIndex = 2,
@@ -6291,7 +6204,19 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
 							name = "RoleMit ST",
-							uuid = "f3eea7a1-edc1-70ff-996d-caaf5c63d21c",
+							uuid = "75b80de1-73d0-c241-9771-7b5634447ca4",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "DeepBlue targeting self",
+							uuid = "1d6bcc54-328f-a38f-b3bd-5041683a9c53",
 							version = 2,
 						},
 						inheritedIndex = 2,
@@ -6301,72 +6226,32 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return FFXIV_Common_BotRunning",
-							name = "Bot Running",
-							uuid = "0b6b3a8f-3bf5-04c3-9ed1-851525fed446",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\n-- 场上存在 14369，且没有任何一个在盯你\nreturn found\n",
+							name = "DeepBlue not targeting self",
+							uuid = "eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 							version = 2,
 						},
+						inheritedIndex = 3,
 					},
 					
 					{
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\n-- 场上存在 14369，且没有任何一个在盯你\nreturn found\n",
-							name = "DeepBlue not targeting self",
-							uuid = "e9f575e4-e4b1-36a6-9032-83f43c0a7d5b",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "bce2c4a9-b5a3-785b-97d2-a685a0dca02e",
 							version = 2,
 						},
-						inheritedIndex = 5,
-					},
-					
-					{
-						data = 
-						{
-							category = "Filter",
-							conditions = 
-							{
-								
-								{
-									"6d0c742b-1eb7-c1bb-a52e-48c0ce6a45f4",
-									true,
-								},
-							},
-							filterTargetSubtype = "Furthest",
-							filterTargetType = "Other Tank",
-							subtypeRangeCheckSourceSubType = "Furthest",
-							subtypeRangeCheckSourceType = "ContentID",
-							subtypeRangeSourceContentID = 14369,
-							uuid = "2edb33e9-4663-2a40-bf73-3978909bc78e",
-							version = 2,
-						},
-						inheritedIndex = 7,
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffIDList = 
-							{
-								82,
-								1836,
-							},
-							category = "Party",
-							partyTargetType = "Detection Target",
-							uuid = "6d0c742b-1eb7-c1bb-a52e-48c0ce6a45f4",
-							version = 2,
-						},
-						inheritedIndex = 7,
 					},
 				},
 				mechanicTime = 313.2,
-				name = "TBN ST (25)",
+				name = "TBN (15) ST",
 				timeRange = true,
 				timelineIndex = 88,
 				timerOffset = -4,
 				timerStartOffset = -3.5,
-				uuid = "9bf0c02a-1446-ca20-b983-c717f076afcc",
+				uuid = "babc5a9c-9b70-f1a3-8f72-2db5ad3cb3c7",
 				version = 2,
 			},
 			inheritedIndex = 8,
@@ -6386,7 +6271,12 @@ local tbl =
 							{
 								
 								{
-									"c674cbfb-7633-1438-8510-103ed8b1e174",
+									"6e3996a5-f552-8330-815f-1dc9e15a1a26",
+									true,
+								},
+								
+								{
+									"fade4121-82b2-0b8a-8e42-c5df177beb17",
 									true,
 								},
 								
@@ -6394,20 +6284,10 @@ local tbl =
 									"75542d97-472f-8868-a8d0-325a7594721e",
 									true,
 								},
-								
-								{
-									"286151a2-48af-c5e5-b395-ed55d2cf7a18",
-									true,
-								},
-								
-								{
-									"4c99e0c0-2a80-f738-bd03-4c1fab7461ce",
-									true,
-								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
-							targetType = "Detection Target",
+							targetType = "Other Tank",
 							uuid = "c2248fe9-6f5a-3a0f-93b6-f045b1d30d67",
 							version = 2.1,
 						},
@@ -6422,7 +6302,12 @@ local tbl =
 							{
 								
 								{
-									"38aad16b-01df-cc30-a16f-2d56019ce737",
+									"bdb442ab-8b6b-33fd-aa81-c8ce0c31edc4",
+									true,
+								},
+								
+								{
+									"a74531ec-0563-9ce2-ad1a-e1eeafb30da2",
 									true,
 								},
 								
@@ -6430,20 +6315,10 @@ local tbl =
 									"75542d97-472f-8868-a8d0-325a7594721e",
 									true,
 								},
-								
-								{
-									"286151a2-48af-c5e5-b395-ed55d2cf7a18",
-									true,
-								},
-								
-								{
-									"4c99e0c0-2a80-f738-bd03-4c1fab7461ce",
-									true,
-								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
-							targetType = "Detection Target",
+							targetType = "Other Tank",
 							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
 							version = 2.1,
 						},
@@ -6459,10 +6334,10 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
 							name = "RoleMit MT",
-							uuid = "c674cbfb-7633-1438-8510-103ed8b1e174",
+							uuid = "6e3996a5-f552-8330-815f-1dc9e15a1a26",
 							version = 2,
 						},
-						inheritedIndex = 3,
+						inheritedIndex = 1,
 					},
 					
 					{
@@ -6471,9 +6346,34 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
 							name = "RoleMit ST",
-							uuid = "38aad16b-01df-cc30-a16f-2d56019ce737",
+							uuid = "bdb442ab-8b6b-33fd-aa81-c8ce0c31edc4",
 							version = 2,
 						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "DeepBlue targeting self",
+							uuid = "fade4121-82b2-0b8a-8e42-c5df177beb17",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\n-- 场上存在 14369，且没有任何一个在盯你\nreturn found\n",
+							name = "DeepBlue not targeting self",
+							uuid = "a74531ec-0563-9ce2-ad1a-e1eeafb30da2",
+							version = 2,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -6486,58 +6386,6 @@ local tbl =
 							version = 2,
 						},
 					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\n-- 场上存在 14369，且没有任何一个在盯你\nreturn found\n",
-							name = "DeepBlue not targeting self",
-							uuid = "286151a2-48af-c5e5-b395-ed55d2cf7a18",
-							version = 2,
-						},
-						inheritedIndex = 5,
-					},
-					
-					{
-						data = 
-						{
-							category = "Filter",
-							conditions = 
-							{
-								
-								{
-									"763af5b7-f660-8659-945a-a0ebf76730ff",
-									true,
-								},
-							},
-							filterTargetSubtype = "Furthest",
-							filterTargetType = "Other Tank",
-							subtypeRangeCheckSourceSubType = "Furthest",
-							subtypeRangeCheckSourceType = "ContentID",
-							subtypeRangeSourceContentID = 14369,
-							uuid = "4c99e0c0-2a80-f738-bd03-4c1fab7461ce",
-							version = 2,
-						},
-						inheritedIndex = 7,
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffIDList = 
-							{
-								82,
-								1836,
-							},
-							category = "Party",
-							partyTargetType = "Detection Target",
-							uuid = "763af5b7-f660-8659-945a-a0ebf76730ff",
-							version = 2,
-						},
-						inheritedIndex = 7,
-					},
 				},
 				mechanicTime = 313.2,
 				name = "Oblation ST (10)",
@@ -6545,7 +6393,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 88,
 				timerStartOffset = -8,
-				uuid = "aa6efb3a-e190-ae82-a8f2-63907e1a7b52",
+				uuid = "d4409ffc-70f5-c5fe-837e-471d1b04dc35",
 				version = 2,
 			},
 			inheritedIndex = 9,
@@ -6637,6 +6485,20 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				name = "SetTarget",
+				uuid = "e86983c6-2cfe-5937-af90-f2150b57a3d7",
+				version = 2,
+			},
+			inheritedObjectUUID = "521f288a-61a4-4d21-9a50-42d5c4cc9895",
+			inheritedOverwrites = 
+			{
+				timerEndOffset = 30.39999961853,
+			},
 		},
 	},
 	[127] = 
@@ -6850,7 +6712,7 @@ local tbl =
 				timelineIndex = 131,
 				timerEndOffset = 10,
 				timerOffset = -4,
-				timerStartOffset = 4,
+				timerStartOffset = 5,
 				uuid = "94c35468-de49-9575-a1a1-e1276fe67a29",
 				version = 2,
 			},
@@ -8140,32 +8002,26 @@ local tbl =
 								},
 								
 								{
-									"85a4871f-d391-e9d7-953b-ff0305395dea",
+									"4165b9f2-fd16-83c3-973f-8af5417778c6",
 									true,
 								},
 								
 								{
-									"0b6b3a8f-3bf5-04c3-9ed1-851525fed446",
+									"1d6bcc54-328f-a38f-b3bd-5041683a9c53",
 									true,
 								},
 								
 								{
-									"e9f575e4-e4b1-36a6-9032-83f43c0a7d5b",
-									true,
-								},
-								
-								{
-									"2edb33e9-4663-2a40-bf73-3978909bc78e",
+									"bce2c4a9-b5a3-785b-97d2-a685a0dca02e",
 									true,
 								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
-							targetType = "Detection Target",
-							uuid = "cae0af52-39c8-03a4-b481-b653c7ee003e",
+							targetType = "Other Tank",
+							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
 							version = 2.1,
 						},
-						inheritedIndex = 1,
 					},
 					
 					{
@@ -8181,29 +8037,24 @@ local tbl =
 								},
 								
 								{
-									"f3eea7a1-edc1-70ff-996d-caaf5c63d21c",
+									"75b80de1-73d0-c241-9771-7b5634447ca4",
 									true,
 								},
 								
 								{
-									"0b6b3a8f-3bf5-04c3-9ed1-851525fed446",
+									"eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 									true,
 								},
 								
 								{
-									"e9f575e4-e4b1-36a6-9032-83f43c0a7d5b",
-									true,
-								},
-								
-								{
-									"2edb33e9-4663-2a40-bf73-3978909bc78e",
+									"bce2c4a9-b5a3-785b-97d2-a685a0dca02e",
 									true,
 								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
-							targetType = "Detection Target",
-							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
+							targetType = "Other Tank",
+							uuid = "306cb6db-5a25-6e20-9ab8-6d0ca73406ae",
 							version = 2.1,
 						},
 					},
@@ -8229,7 +8080,7 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
 							name = "RoleMit MT",
-							uuid = "85a4871f-d391-e9d7-953b-ff0305395dea",
+							uuid = "4165b9f2-fd16-83c3-973f-8af5417778c6",
 							version = 2,
 						},
 						inheritedIndex = 2,
@@ -8241,7 +8092,19 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
 							name = "RoleMit ST",
-							uuid = "f3eea7a1-edc1-70ff-996d-caaf5c63d21c",
+							uuid = "75b80de1-73d0-c241-9771-7b5634447ca4",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "DeepBlue targeting self",
+							uuid = "1d6bcc54-328f-a38f-b3bd-5041683a9c53",
 							version = 2,
 						},
 						inheritedIndex = 2,
@@ -8251,72 +8114,32 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return FFXIV_Common_BotRunning",
-							name = "Bot Running",
-							uuid = "0b6b3a8f-3bf5-04c3-9ed1-851525fed446",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\n-- 场上存在 14369，且没有任何一个在盯你\nreturn found\n",
+							name = "DeepBlue not targeting self",
+							uuid = "eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 							version = 2,
 						},
+						inheritedIndex = 3,
 					},
 					
 					{
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\n-- 场上存在 14369，且没有任何一个在盯你\nreturn found\n",
-							name = "DeepBlue not targeting self",
-							uuid = "e9f575e4-e4b1-36a6-9032-83f43c0a7d5b",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "bce2c4a9-b5a3-785b-97d2-a685a0dca02e",
 							version = 2,
 						},
-						inheritedIndex = 5,
-					},
-					
-					{
-						data = 
-						{
-							category = "Filter",
-							conditions = 
-							{
-								
-								{
-									"6d0c742b-1eb7-c1bb-a52e-48c0ce6a45f4",
-									true,
-								},
-							},
-							filterTargetSubtype = "Furthest",
-							filterTargetType = "Other Tank",
-							subtypeRangeCheckSourceSubType = "Furthest",
-							subtypeRangeCheckSourceType = "ContentID",
-							subtypeRangeSourceContentID = 14369,
-							uuid = "2edb33e9-4663-2a40-bf73-3978909bc78e",
-							version = 2,
-						},
-						inheritedIndex = 7,
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffIDList = 
-							{
-								82,
-								1836,
-							},
-							category = "Party",
-							partyTargetType = "Detection Target",
-							uuid = "6d0c742b-1eb7-c1bb-a52e-48c0ce6a45f4",
-							version = 2,
-						},
-						inheritedIndex = 7,
 					},
 				},
 				mechanicTime = 553.2,
-				name = "TBN ST (25)",
+				name = "TBN (15) ST",
 				timeRange = true,
 				timelineIndex = 160,
 				timerOffset = -4,
 				timerStartOffset = -3.5,
-				uuid = "588cbbea-d1bf-9984-8917-9873e6cb0366",
+				uuid = "0ad5b6b4-4ff5-132c-a0eb-378c1827e5cd",
 				version = 2,
 			},
 			inheritedIndex = 8,
@@ -8336,7 +8159,12 @@ local tbl =
 							{
 								
 								{
-									"c674cbfb-7633-1438-8510-103ed8b1e174",
+									"6e3996a5-f552-8330-815f-1dc9e15a1a26",
+									true,
+								},
+								
+								{
+									"fade4121-82b2-0b8a-8e42-c5df177beb17",
 									true,
 								},
 								
@@ -8344,20 +8172,10 @@ local tbl =
 									"75542d97-472f-8868-a8d0-325a7594721e",
 									true,
 								},
-								
-								{
-									"286151a2-48af-c5e5-b395-ed55d2cf7a18",
-									true,
-								},
-								
-								{
-									"4c99e0c0-2a80-f738-bd03-4c1fab7461ce",
-									true,
-								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
-							targetType = "Detection Target",
+							targetType = "Other Tank",
 							uuid = "c2248fe9-6f5a-3a0f-93b6-f045b1d30d67",
 							version = 2.1,
 						},
@@ -8372,7 +8190,12 @@ local tbl =
 							{
 								
 								{
-									"38aad16b-01df-cc30-a16f-2d56019ce737",
+									"bdb442ab-8b6b-33fd-aa81-c8ce0c31edc4",
+									true,
+								},
+								
+								{
+									"a74531ec-0563-9ce2-ad1a-e1eeafb30da2",
 									true,
 								},
 								
@@ -8380,20 +8203,10 @@ local tbl =
 									"75542d97-472f-8868-a8d0-325a7594721e",
 									true,
 								},
-								
-								{
-									"286151a2-48af-c5e5-b395-ed55d2cf7a18",
-									true,
-								},
-								
-								{
-									"4c99e0c0-2a80-f738-bd03-4c1fab7461ce",
-									true,
-								},
 							},
 							gVar = "ACR_RikuDRK3_CD",
 							ignoreWeaveRules = true,
-							targetType = "Detection Target",
+							targetType = "Other Tank",
 							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
 							version = 2.1,
 						},
@@ -8409,10 +8222,10 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
 							name = "RoleMit MT",
-							uuid = "c674cbfb-7633-1438-8510-103ed8b1e174",
+							uuid = "6e3996a5-f552-8330-815f-1dc9e15a1a26",
 							version = 2,
 						},
-						inheritedIndex = 3,
+						inheritedIndex = 1,
 					},
 					
 					{
@@ -8421,9 +8234,34 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
 							name = "RoleMit ST",
-							uuid = "38aad16b-01df-cc30-a16f-2d56019ce737",
+							uuid = "bdb442ab-8b6b-33fd-aa81-c8ce0c31edc4",
 							version = 2,
 						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "DeepBlue targeting self",
+							uuid = "fade4121-82b2-0b8a-8e42-c5df177beb17",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\n-- 场上存在 14369，且没有任何一个在盯你\nreturn found\n",
+							name = "DeepBlue not targeting self",
+							uuid = "a74531ec-0563-9ce2-ad1a-e1eeafb30da2",
+							version = 2,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -8436,58 +8274,6 @@ local tbl =
 							version = 2,
 						},
 					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\n-- 场上存在 14369，且没有任何一个在盯你\nreturn found\n",
-							name = "DeepBlue not targeting self",
-							uuid = "286151a2-48af-c5e5-b395-ed55d2cf7a18",
-							version = 2,
-						},
-						inheritedIndex = 5,
-					},
-					
-					{
-						data = 
-						{
-							category = "Filter",
-							conditions = 
-							{
-								
-								{
-									"763af5b7-f660-8659-945a-a0ebf76730ff",
-									true,
-								},
-							},
-							filterTargetSubtype = "Furthest",
-							filterTargetType = "Other Tank",
-							subtypeRangeCheckSourceSubType = "Furthest",
-							subtypeRangeCheckSourceType = "ContentID",
-							subtypeRangeSourceContentID = 14369,
-							uuid = "4c99e0c0-2a80-f738-bd03-4c1fab7461ce",
-							version = 2,
-						},
-						inheritedIndex = 7,
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffIDList = 
-							{
-								82,
-								1836,
-							},
-							category = "Party",
-							partyTargetType = "Detection Target",
-							uuid = "763af5b7-f660-8659-945a-a0ebf76730ff",
-							version = 2,
-						},
-						inheritedIndex = 7,
-					},
 				},
 				mechanicTime = 553.2,
 				name = "Oblation ST (10)",
@@ -8495,7 +8281,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 160,
 				timerStartOffset = -8,
-				uuid = "f13e916f-6e79-0c3d-b987-142e23931927",
+				uuid = "62cf7dce-c7d8-0a9e-a852-21e5695de9a1",
 				version = 2,
 			},
 			inheritedIndex = 9,
