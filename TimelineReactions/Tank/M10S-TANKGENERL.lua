@@ -1869,7 +1869,7 @@ local tbl =
 				name = "Instant Dash",
 				timeRange = true,
 				timelineIndex = 22,
-				timerEndOffset = 10,
+				timerEndOffset = 5,
 				uuid = "5d5903c9-bbec-c5d8-8818-008dafb24677",
 				version = 2,
 			},
@@ -1981,7 +1981,7 @@ local tbl =
 				name = "[TTS] Bait Call",
 				timeRange = true,
 				timelineIndex = 26,
-				timerStartOffset = -5,
+				timerStartOffset = -7,
 				uuid = "8414a1f5-e154-59c5-8048-5295ff36df88",
 				version = 2,
 			},
@@ -3155,6 +3155,285 @@ local tbl =
 				timelineIndex = 30,
 				timerEndOffset = 10,
 				uuid = "a16d4fdb-9999-1649-b34e-000b27f72ea6",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"a5e5ab0d-67b3-3834-866c-477fac755433",
+									true,
+								},
+								
+								{
+									"87265275-edc7-84f6-b28d-be1685a7a9e2",
+									true,
+								},
+								
+								{
+									"dbd26744-37bf-1a45-8da1-7c869c687113",
+									true,
+								},
+								
+								{
+									"0a954f3b-feed-954e-b959-39b39c77cab0",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "eaa7ad25-ffb0-535a-8c63-b2ba4c955f81",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"0a954f3b-feed-954e-b959-39b39c77cab0",
+									true,
+								},
+								
+								{
+									"6f7e5558-d0e7-8e33-99d2-c4121d16bf9b",
+									true,
+								},
+								
+								{
+									"97e99f78-dda9-b169-ab63-f08884530c62",
+									true,
+								},
+								
+								{
+									"dbd26744-37bf-1a45-8da1-7c869c687113",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "729cf7bd-bb87-2e6c-b7e9-718aeffe9e9e",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"0a954f3b-feed-954e-b959-39b39c77cab0",
+									true,
+								},
+								
+								{
+									"faae9cbb-b4ef-c33e-a461-3f6b92655fcc",
+									true,
+								},
+								
+								{
+									"83c73f4e-854c-62d1-906d-dcf7562fdc92",
+									true,
+								},
+								
+								{
+									"dbd26744-37bf-1a45-8da1-7c869c687113",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "35faf26d-11b5-ec21-b406-94793c769918",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"0a954f3b-feed-954e-b959-39b39c77cab0",
+									true,
+								},
+								
+								{
+									"8a4a2b67-d6cb-1c2d-8f9a-36a4ec16b9f6",
+									true,
+								},
+								
+								{
+									"7e8ae6c8-618a-98f1-9434-7a133728336d",
+									true,
+								},
+								
+								{
+									"dbd26744-37bf-1a45-8da1-7c869c687113",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "92213065-52ef-715d-81e3-b758855adf1a",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "0a954f3b-feed-954e-b959-39b39c77cab0",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "a5e5ab0d-67b3-3834-866c-477fac755433",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1833,
+							category = "Self",
+							name = "GNB Buff",
+							uuid = "87265275-edc7-84f6-b28d-be1685a7a9e2",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "6f7e5558-d0e7-8e33-99d2-c4121d16bf9b",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 79,
+							category = "Self",
+							name = "PLD Buff",
+							uuid = "97e99f78-dda9-b169-ab63-f08884530c62",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "faae9cbb-b4ef-c33e-a461-3f6b92655fcc",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 743,
+							category = "Self",
+							name = "DRK Buff",
+							uuid = "83c73f4e-854c-62d1-906d-dcf7562fdc92",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobIDList = 
+							{
+								21,
+							},
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "8a4a2b67-d6cb-1c2d-8f9a-36a4ec16b9f6",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 91,
+							category = "Self",
+							name = "WAR Buff",
+							uuid = "7e8ae6c8-618a-98f1-9434-7a133728336d",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "dbd26744-37bf-1a45-8da1-7c869c687113",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 151.6,
+				name = "[ST] Stance ON",
+				timeRange = true,
+				timelineIndex = 30,
+				timerOffset = -15,
+				timerStartOffset = -5,
+				uuid = "299896dd-4313-08c4-b058-5526033ff209",
 				version = 2,
 			},
 		},
@@ -5274,7 +5553,8 @@ local tbl =
 						data = 
 						{
 							aType = "Alert",
-							alertPriority = 2,
+							alertColor = -7339777,
+							alertPriority = 4,
 							alertScale = 0.89999997615814,
 							alertTTS = true,
 							alertText = "Fire Group",
@@ -5300,7 +5580,8 @@ local tbl =
 						data = 
 						{
 							aType = "Alert",
-							alertPriority = 2,
+							alertColor = 9699327,
+							alertPriority = 4,
 							alertScale = 0.89999997615814,
 							alertTTS = true,
 							alertText = "Water Group",
@@ -6767,7 +7048,7 @@ local tbl =
 				name = "[TTS] Bait Call",
 				timeRange = true,
 				timelineIndex = 88,
-				timerStartOffset = -5,
+				timerStartOffset = -7,
 				uuid = "ba2f2113-5017-8464-a0fd-5e9de067dbe3",
 				version = 2,
 			},
@@ -6784,6 +7065,14 @@ local tbl =
 						{
 							aType = "Lua",
 							actionLua = "-- Draw: red circle (r=0.8m) under the farthest party member from contentID 14369\n\nlocal TARGET_CID = 14369\nlocal RADIUS = 0.8\nlocal SEGMENTS = 30\n\nif not Argus then return end\n\nlocal function colorU32(r,g,b,a)\n    if GUI and GUI.ColorConvertFloat4ToU32 then\n        return GUI:ColorConvertFloat4ToU32(r,g,b,a)\n    end\n    return 0xFFFFFFFF\nend\n\nlocal function getBossByContentID(contentID)\n    -- Prefer current target\n    if Player and Player.GetTarget then\n        local t = Player:GetTarget()\n        if t and t.contentid == contentID and t.pos then\n            return t\n        end\n    end\n    -- Fallback: scan entities\n    if EntityList then\n        local el = EntityList(\"alive,attackable\")\n        if el then\n            for _, e in pairs(el) do\n                if e and e.contentid == contentID and e.pos then\n                    return e\n                end\n            end\n        end\n    end\n    return nil\nend\n\nlocal boss = getBossByContentID(TARGET_CID)\nif not boss then return end\n\nlocal party = (TensorCore and TensorCore.getEntityGroupList) and TensorCore.getEntityGroupList(\"Party\") or nil\nif not party then return end\n\nlocal farEnt, farDist = nil, -1\nfor _, p in pairs(party) do\n    if p and p.pos then\n        local d = (TensorCore and TensorCore.getDistance2d) and TensorCore.getDistance2d(p.pos, boss.pos) or nil\n        if d and d > farDist then\n            farDist = d\n            farEnt = p\n        end\n    end\nend\n\nif not farEnt or not farEnt.pos then return end\n\nArgus.addCircleFilled(\n    farEnt.pos.x, farEnt.pos.y, farEnt.pos.z,\n    RADIUS, SEGMENTS,\n    colorU32(1,0,0,0.12),\n    colorU32(1,0,0,1.00),\n    1.6\n)\n",
+							conditions = 
+							{
+								
+								{
+									"fd9a0dbb-32dc-f09d-9d82-f8e861935760",
+									true,
+								},
+							},
 							gVar = "ACR_RikuDRK3_CD",
 							uuid = "dfca9f2c-8cfb-7d30-9695-aebe7b1a6774",
 							version = 2.1,
@@ -6792,6 +7081,21 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							buffCheckType = 4,
+							buffIDList = 
+							{
+								4975,
+							},
+							category = "Self",
+							name = "Water",
+							uuid = "fd9a0dbb-32dc-f09d-9d82-f8e861935760",
+							version = 2,
+						},
+					},
 				},
 				eventType = 13,
 				mechanicTime = 313.2,
@@ -9159,8 +9463,11 @@ local tbl =
 						data = 
 						{
 							aType = "Alert",
+							alertColor = -7339777,
+							alertPriority = 4,
 							alertTTS = true,
 							alertText = "Fire Group",
+							alertVolume = 100,
 							conditions = 
 							{
 								
@@ -9176,14 +9483,18 @@ local tbl =
 							uuid = "fcb3f743-ef43-921b-b3bd-edb286f8998e",
 							version = 2.1,
 						},
+						inheritedIndex = 1,
 					},
 					
 					{
 						data = 
 						{
 							aType = "Alert",
+							alertColor = 9699327,
+							alertPriority = 4,
 							alertTTS = true,
 							alertText = "Water Group",
+							alertVolume = 100,
 							conditions = 
 							{
 								
@@ -10694,7 +11005,7 @@ local tbl =
 				name = "[TTS] Bait Call",
 				timeRange = true,
 				timelineIndex = 160,
-				timerStartOffset = -5,
+				timerStartOffset = -7,
 				uuid = "2feda1fb-5ebb-3d20-b916-47a0a6004df2",
 				version = 2,
 			},
