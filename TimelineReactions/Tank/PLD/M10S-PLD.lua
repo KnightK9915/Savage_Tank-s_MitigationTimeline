@@ -1379,6 +1379,7 @@ local tbl =
 						inheritedIndex = 3,
 					},
 				},
+				enabled = false,
 				mechanicTime = 117.1,
 				name = "Sheltron/Interven",
 				timeRange = true,
