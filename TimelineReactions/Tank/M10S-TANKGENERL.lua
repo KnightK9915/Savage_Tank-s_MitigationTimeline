@@ -342,6 +342,7 @@ local tbl =
 				name = "[TTS] Bait Cone AoE",
 				timeRange = true,
 				timelineIndex = 9,
+				timerEndOffset = 1,
 				timerStartOffset = -5,
 				uuid = "36fedcfc-19b2-7f05-9c51-14e2c793b603",
 				version = 2,
@@ -1834,8 +1835,8 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "local player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nif not EntityList then\n    return false\nend\n\nlocal nearestDist = nil\n\n-- 过滤：alive, attackable, targetable（可选中/可锁定）\nfor _, e in pairs(EntityList(\"alive,attackable,targetable\")) do\n    if e and e.pos then\n        local dx = player.pos.x - e.pos.x\n        local dz = player.pos.z - e.pos.z\n        local d  = math.sqrt(dx * dx + dz * dz)\n\n        if (not nearestDist) or d < nearestDist then\n            nearestDist = d\n        end\n    end\nend\n\n-- 没有任何可选中可攻击目标\nif not nearestDist then\n    return false\nend\n\nreturn nearestDist > 3.0\n",
-							name = "Nearest Enemy dis > 3",
+							conditionLua = "local player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nif not EntityList then\n    return false\nend\n\nlocal nearestDist = nil\n\n-- 过滤：alive, attackable, targetable（可选中/可锁定）\nfor _, e in pairs(EntityList(\"alive,attackable,targetable\")) do\n    if e and e.pos then\n        local dx = player.pos.x - e.pos.x\n        local dz = player.pos.z - e.pos.z\n        local d  = math.sqrt(dx * dx + dz * dz)\n\n        if (not nearestDist) or d < nearestDist then\n            nearestDist = d\n        end\n    end\nend\n\n-- 没有任何可选中可攻击目标\nif not nearestDist then\n    return false\nend\n\nreturn nearestDist > 5.0\n",
+							name = "Nearest Enemy dis > 5",
 							uuid = "992dc756-c0c5-8cb0-b921-d6cbe5299db1",
 							version = 2,
 						},
@@ -2011,7 +2012,8 @@ local tbl =
 				name = "[Draw] Farest Party Member from Blue",
 				timeRange = true,
 				timelineIndex = 26,
-				timerStartOffset = -5,
+				timerEndOffset = 1,
+				timerStartOffset = -6,
 				uuid = "edb2f493-e827-7e2c-8b62-8b7e344d432d",
 				version = 2,
 			},
@@ -5272,8 +5274,11 @@ local tbl =
 						data = 
 						{
 							aType = "Alert",
+							alertPriority = 2,
+							alertScale = 0.89999997615814,
 							alertTTS = true,
 							alertText = "Fire Group",
+							alertVolume = 100,
 							conditions = 
 							{
 								
@@ -5295,8 +5300,11 @@ local tbl =
 						data = 
 						{
 							aType = "Alert",
+							alertPriority = 2,
+							alertScale = 0.89999997615814,
 							alertTTS = true,
 							alertText = "Water Group",
+							alertVolume = 100,
 							conditions = 
 							{
 								
@@ -5352,7 +5360,7 @@ local tbl =
 				name = "[TTS] Fire/Water Group",
 				timeRange = true,
 				timelineIndex = 54,
-				timerEndOffset = 5,
+				timerEndOffset = 15,
 				timerStartOffset = -10,
 				uuid = "3b457cba-8278-6f74-8fb0-7fb5f116eb21",
 				version = 2,
@@ -5446,7 +5454,7 @@ local tbl =
 				name = "SetTarget",
 				timeRange = true,
 				timelineIndex = 54,
-				timerEndOffset = 5,
+				timerEndOffset = 15,
 				timerStartOffset = -10,
 				uuid = "dc4946dd-c899-eded-bba4-426bc8b7a88f",
 				version = 2,
@@ -6790,7 +6798,8 @@ local tbl =
 				name = "[Draw] Farest Party Member from Blue",
 				timeRange = true,
 				timelineIndex = 88,
-				timerStartOffset = -5,
+				timerEndOffset = 1,
+				timerStartOffset = -6,
 				uuid = "acfe5bfe-4664-65ca-ba02-04db250792fe",
 				version = 2,
 			},
@@ -8375,6 +8384,58 @@ local tbl =
 			inheritedIndex = 5,
 		},
 	},
+	[119] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Misc",
+							gVar = "ACR_RikuGNB3_CD",
+							setTarget = true,
+							targetContentID = 14369,
+							targetType = "Enemy",
+							uuid = "64af11bd-a171-69b9-9b01-bd933a610172",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							buffCheckType = 3,
+							category = "Lua",
+							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 有效射程内存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\n-- 取敌对实体列表：优先 TensorCore，其次兼容 Minion 的 EntityList（若存在）\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    -- 常见：Enemy / Attackable / Aggro 等；这里用 Enemy，若你环境不是这个名字会直接降级到 false\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    -- Minion 常见过滤：attackable\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        -- 存活判断（不同对象字段可能不同，做兼容）\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        -- 可选中 / 可攻击（同样做兼容）\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" then\n                -- 目标命中半径字段兼容：hitradius / hitdarius\n                local hitr = 0\n                if type(e.hitradius) == \"number\" then\n                    hitr = e.hitradius\n                elseif type(e.hitdarius) == \"number\" then\n                    hitr = e.hitdarius\n                end\n\n                -- 有效距离：中心距 - 目标命中半径\n                if (d - hitr) <= RANGE then\n                    return true\n                end\n            end\n        end\n    end\nend\n\nreturn false\n",
+							conditionType = 6,
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "bb169dfd-1b36-a827-83ff-40eed191216b",
+							version = 2,
+						},
+					},
+				},
+				loop = true,
+				mechanicTime = 414.3,
+				name = "SetTarget",
+				timeRange = true,
+				timelineIndex = 119,
+				timerEndOffset = 30.39999961853,
+				timerStartOffset = -8,
+				uuid = "521f288a-61a4-4d21-9a50-42d5c4cc9895",
+				version = 2,
+			},
+		},
+	},
 	[128] = 
 	{
 		
@@ -8406,6 +8467,42 @@ local tbl =
 				timelineIndex = 128,
 				timerStartOffset = -3,
 				uuid = "f4f2d37e-e2d6-918d-83fe-b13ccf7a36c3",
+				version = 2,
+			},
+		},
+	},
+	[129] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Misc",
+							gVar = "ACR_RikuGNB3_CD",
+							setTarget = true,
+							targetContentID = 14369,
+							targetType = "ContentID",
+							uuid = "64af11bd-a171-69b9-9b01-bd933a610172",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 446.7,
+				name = "SetTarget",
+				timeRange = true,
+				timelineIndex = 129,
+				timerEndOffset = 2,
+				timerStartOffset = -2,
+				uuid = "b0332aeb-a382-11b0-a8c6-6ba4891ea789",
 				version = 2,
 			},
 		},
@@ -8943,6 +9040,110 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Misc",
+							conditions = 
+							{
+								
+								{
+									"72bf36d2-90e8-185f-b579-a2aae3b238f1",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							setTarget = true,
+							targetContentID = 14369,
+							targetType = "ContentID",
+							uuid = "64af11bd-a171-69b9-9b01-bd933a610172",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "DeepBlue targeting self",
+							uuid = "72bf36d2-90e8-185f-b579-a2aae3b238f1",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				mechanicTime = 451.8,
+				name = "[Blue] SetTarget",
+				timeRange = true,
+				timelineIndex = 131,
+				timerEndOffset = 10,
+				uuid = "460f385b-7849-0445-a258-4a72abb11233",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Misc",
+							conditions = 
+							{
+								
+								{
+									"014c8be4-6aa0-f1af-913a-1315c5c3dc0b",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							setTarget = true,
+							targetContentID = 14370,
+							targetType = "ContentID",
+							uuid = "64af11bd-a171-69b9-9b01-bd933a610172",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14370\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "RedHot targeting self",
+							uuid = "014c8be4-6aa0-f1af-913a-1315c5c3dc0b",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				mechanicTime = 451.8,
+				name = "[Red] SetTarget",
+				timeRange = true,
+				timelineIndex = 131,
+				timerEndOffset = 10,
+				uuid = "9b527c0b-db55-b7a1-9f6c-dfef8aae619c",
+				version = 2,
+			},
 		},
 	},
 	[133] = 
@@ -10522,7 +10723,8 @@ local tbl =
 				name = "[Draw] Farest Party Member from Blue",
 				timeRange = true,
 				timelineIndex = 160,
-				timerStartOffset = -5,
+				timerEndOffset = 1,
+				timerStartOffset = -6,
 				uuid = "6422e91a-5c09-8486-a267-a25804d1fccb",
 				version = 2,
 			},
