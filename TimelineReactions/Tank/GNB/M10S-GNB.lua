@@ -1530,6 +1530,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 117.1,
 				name = "HoC (15)",
 				timeRange = true,
@@ -6094,11 +6095,6 @@ local tbl =
 								},
 								
 								{
-									"64f824b6-ef30-56dc-ab6f-4e707c076937",
-									true,
-								},
-								
-								{
 									"9b46475a-03a0-ba79-8e1c-daf5e5cdd0ff",
 									true,
 								},
@@ -6111,7 +6107,7 @@ local tbl =
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
 							ignoreWeaveRules = true,
-							targetType = "Detection Target",
+							targetType = "Other Tank",
 							uuid = "67d3314d-d0c4-2f13-8a5f-6e47bffc70c5",
 							version = 2.1,
 						},
@@ -6136,11 +6132,6 @@ local tbl =
 								},
 								
 								{
-									"64f824b6-ef30-56dc-ab6f-4e707c076937",
-									true,
-								},
-								
-								{
 									"9b46475a-03a0-ba79-8e1c-daf5e5cdd0ff",
 									true,
 								},
@@ -6153,7 +6144,7 @@ local tbl =
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
 							ignoreWeaveRules = true,
-							targetType = "Detection Target",
+							targetType = "Other Tank",
 							uuid = "94511374-01bd-2218-adca-8213e488a837",
 							version = 2.1,
 						},
@@ -6221,46 +6212,6 @@ local tbl =
 							version = 2,
 						},
 					},
-					
-					{
-						data = 
-						{
-							category = "Filter",
-							conditions = 
-							{
-								
-								{
-									"64f824b6-ef30-56dc-ab6f-4e707c076937",
-									true,
-								},
-							},
-							filterTargetSubtype = "Furthest",
-							filterTargetType = "Party",
-							subtypeRangeCheckSourceSubType = "Furthest",
-							subtypeRangeCheckSourceType = "ContentID",
-							subtypeRangeSourceContentID = 14369,
-							uuid = "91b7527a-8bda-0a44-8899-2fb98b2c2788",
-							version = 2,
-						},
-						inheritedIndex = 7,
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffIDList = 
-							{
-								82,
-								1836,
-							},
-							category = "Party",
-							partyTargetType = "Detection Target",
-							uuid = "64f824b6-ef30-56dc-ab6f-4e707c076937",
-							version = 2,
-						},
-						inheritedIndex = 7,
-					},
 				},
 				mechanicTime = 313.2,
 				name = "HoC (15) ST",
@@ -6268,7 +6219,7 @@ local tbl =
 				timelineIndex = 88,
 				timerOffset = -1,
 				timerStartOffset = -3.5,
-				uuid = "d325939b-3b8b-15c3-93ba-62d286295aa4",
+				uuid = "84271616-e807-6f7d-a78c-c6731890f6bc",
 				version = 2,
 			},
 			inheritedIndex = 9,
@@ -6365,6 +6316,20 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				name = "SetTarget",
+				uuid = "f8a58509-f406-f1ff-8f8e-5491e3cca3bf",
+				version = 2,
+			},
+			inheritedObjectUUID = "521f288a-61a4-4d21-9a50-42d5c4cc9895",
+			inheritedOverwrites = 
+			{
+				timerEndOffset = 30.39999961853,
+			},
 		},
 	},
 	[127] = 
@@ -6584,7 +6549,7 @@ local tbl =
 				timelineIndex = 131,
 				timerEndOffset = 10,
 				timerOffset = -1,
-				timerStartOffset = 4,
+				timerStartOffset = 5,
 				uuid = "da103dfb-23c3-505a-b84f-484bab93b099",
 				version = 2,
 			},
@@ -8023,11 +7988,6 @@ local tbl =
 								},
 								
 								{
-									"64f824b6-ef30-56dc-ab6f-4e707c076937",
-									true,
-								},
-								
-								{
 									"9b46475a-03a0-ba79-8e1c-daf5e5cdd0ff",
 									true,
 								},
@@ -8040,7 +8000,7 @@ local tbl =
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
 							ignoreWeaveRules = true,
-							targetType = "Detection Target",
+							targetType = "Other Tank",
 							uuid = "67d3314d-d0c4-2f13-8a5f-6e47bffc70c5",
 							version = 2.1,
 						},
@@ -8065,11 +8025,6 @@ local tbl =
 								},
 								
 								{
-									"64f824b6-ef30-56dc-ab6f-4e707c076937",
-									true,
-								},
-								
-								{
 									"9b46475a-03a0-ba79-8e1c-daf5e5cdd0ff",
 									true,
 								},
@@ -8082,7 +8037,7 @@ local tbl =
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
 							ignoreWeaveRules = true,
-							targetType = "Detection Target",
+							targetType = "Other Tank",
 							uuid = "94511374-01bd-2218-adca-8213e488a837",
 							version = 2.1,
 						},
@@ -8150,46 +8105,6 @@ local tbl =
 							version = 2,
 						},
 					},
-					
-					{
-						data = 
-						{
-							category = "Filter",
-							conditions = 
-							{
-								
-								{
-									"64f824b6-ef30-56dc-ab6f-4e707c076937",
-									true,
-								},
-							},
-							filterTargetSubtype = "Furthest",
-							filterTargetType = "Party",
-							subtypeRangeCheckSourceSubType = "Furthest",
-							subtypeRangeCheckSourceType = "ContentID",
-							subtypeRangeSourceContentID = 14369,
-							uuid = "91b7527a-8bda-0a44-8899-2fb98b2c2788",
-							version = 2,
-						},
-						inheritedIndex = 7,
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 5,
-							buffIDList = 
-							{
-								82,
-								1836,
-							},
-							category = "Party",
-							partyTargetType = "Detection Target",
-							uuid = "64f824b6-ef30-56dc-ab6f-4e707c076937",
-							version = 2,
-						},
-						inheritedIndex = 7,
-					},
 				},
 				mechanicTime = 553.2,
 				name = "HoC (15) ST",
@@ -8197,7 +8112,7 @@ local tbl =
 				timelineIndex = 160,
 				timerOffset = -1,
 				timerStartOffset = -3.5,
-				uuid = "92fdb1b7-7140-3b46-a447-b4e35baf8bb9",
+				uuid = "a5178a0e-0e0e-e9a7-a9e1-7b877982af64",
 				version = 2,
 			},
 			inheritedIndex = 9,
