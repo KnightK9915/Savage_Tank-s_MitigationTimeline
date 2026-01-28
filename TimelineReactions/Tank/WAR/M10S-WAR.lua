@@ -1817,6 +1817,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 117.1,
 				name = "BW/NF (20)",
 				timeRange = true,
@@ -1826,7 +1827,7 @@ local tbl =
 				uuid = "a66a14fe-f5a6-f1a2-a777-0701a2c47527",
 				version = 2,
 			},
-			inheritedIndex = 10,
+			inheritedIndex = 1,
 		},
 	},
 	[22] = 
