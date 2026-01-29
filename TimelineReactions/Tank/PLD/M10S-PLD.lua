@@ -5125,7 +5125,7 @@ local tbl =
 							category = "Self",
 							comparator = 2,
 							conditionType = 2,
-							hpValue = 70,
+							hpValue = 80,
 							uuid = "969e4b71-8cec-763a-8e65-5a90bee72db0",
 							version = 2,
 						},
