@@ -1133,6 +1133,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 52.3,
 				name = "TBN (15)",
 				timeRange = true,
@@ -1353,6 +1354,7 @@ local tbl =
 							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
 							version = 2.1,
 						},
+						inheritedIndex = 1,
 					},
 					
 					{
@@ -1378,7 +1380,7 @@ local tbl =
 								},
 								
 								{
-									"ee56db50-8bf2-2649-bc8f-8f51597f09f2",
+									"b7a45b93-ae4d-32be-8fe7-877117f04105",
 									true,
 								},
 							},
@@ -1470,7 +1472,7 @@ local tbl =
 							category = "Party",
 							name = "ST doesn't have mits",
 							partyTargetType = "Other Tank",
-							uuid = "ee56db50-8bf2-2649-bc8f-8f51597f09f2",
+							uuid = "b7a45b93-ae4d-32be-8fe7-877117f04105",
 							version = 2,
 						},
 					},
@@ -6078,7 +6080,7 @@ local tbl =
 							category = "Self",
 							comparator = 2,
 							conditionType = 2,
-							hpValue = 70,
+							hpValue = 80,
 							uuid = "e60de23d-c7fe-6663-8130-e169fc4a67ec",
 							version = 2,
 						},
