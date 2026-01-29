@@ -6432,7 +6432,7 @@ local tbl =
 							category = "Self",
 							comparator = 2,
 							conditionType = 2,
-							hpValue = 70,
+							hpValue = 80,
 							uuid = "c3253b93-c6d4-3480-86e5-cf385ce0e3df",
 							version = 2,
 						},
