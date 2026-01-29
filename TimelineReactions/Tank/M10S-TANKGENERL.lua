@@ -498,7 +498,6 @@ local tbl =
 						},
 					},
 				},
-				enabled = false,
 				mechanicTime = 53.1,
 				name = "Instant Dash",
 				timeRange = true,
@@ -583,7 +582,7 @@ local tbl =
 						data = 
 						{
 							aType = "Lua",
-							actionLua = "-- Draw: red circle (r=0.8m) under the farthest party member from contentID 14369\n\nlocal TARGET_CID = 14370\nlocal RADIUS = 0.8\nlocal SEGMENTS = 30\n\nif not Argus then return end\n\nlocal function colorU32(r,g,b,a)\n    if GUI and GUI.ColorConvertFloat4ToU32 then\n        return GUI:ColorConvertFloat4ToU32(r,g,b,a)\n    end\n    return 0xFFFFFFFF\nend\n\nlocal function getBossByContentID(contentID)\n    -- Prefer current target\n    if Player and Player.GetTarget then\n        local t = Player:GetTarget()\n        if t and t.contentid == contentID and t.pos then\n            return t\n        end\n    end\n    -- Fallback: scan entities\n    if EntityList then\n        local el = EntityList(\"alive,attackable\")\n        if el then\n            for _, e in pairs(el) do\n                if e and e.contentid == contentID and e.pos then\n                    return e\n                end\n            end\n        end\n    end\n    return nil\nend\n\nlocal boss = getBossByContentID(TARGET_CID)\nif not boss then return end\n\nlocal party = (TensorCore and TensorCore.getEntityGroupList) and TensorCore.getEntityGroupList(\"Party\") or nil\nif not party then return end\n\nlocal farEnt, farDist = nil, -1\nfor _, p in pairs(party) do\n    if p and p.pos then\n        local d = (TensorCore and TensorCore.getDistance2d) and TensorCore.getDistance2d(p.pos, boss.pos) or nil\n        if d and d > farDist then\n            farDist = d\n            farEnt = p\n        end\n    end\nend\n\nif not farEnt or not farEnt.pos then return end\n\nArgus.addCircleFilled(\n    farEnt.pos.x, farEnt.pos.y, farEnt.pos.z,\n    RADIUS, SEGMENTS,\n    colorU32(204,255,0,1.12),\n    colorU32(220,255,0,1.00),\n    1.6\n)\n",
+							actionLua = "-- Draw: red circle (r=0.8m) under the farthest party member from contentID 14369\n\nlocal TARGET_CID = 14370\nlocal RADIUS = 0.8\nlocal SEGMENTS = 30\n\nif not Argus then return end\n\nlocal function colorU32(r,g,b,a)\n    if GUI and GUI.ColorConvertFloat4ToU32 then\n        return GUI:ColorConvertFloat4ToU32(r,g,b,a)\n    end\n    return 0xFFFFFFFF\nend\n\nlocal function getBossByContentID(contentID)\n    -- Prefer current target\n    if Player and Player.GetTarget then\n        local t = Player:GetTarget()\n        if t and t.contentid == contentID and t.pos then\n            return t\n        end\n    end\n    -- Fallback: scan entities\n    if EntityList then\n        local el = EntityList(\"alive,attackable\")\n        if el then\n            for _, e in pairs(el) do\n                if e and e.contentid == contentID and e.pos then\n                    return e\n                end\n            end\n        end\n    end\n    return nil\nend\n\nlocal boss = getBossByContentID(TARGET_CID)\nif not boss then return end\n\nlocal party = (TensorCore and TensorCore.getEntityGroupList) and TensorCore.getEntityGroupList(\"Party\") or nil\nif not party then return end\n\nlocal farEnt, farDist = nil, -1\nfor _, p in pairs(party) do\n    if p and p.pos then\n        local d = (TensorCore and TensorCore.getDistance2d) and TensorCore.getDistance2d(p.pos, boss.pos) or nil\n        if d and d > farDist then\n            farDist = d\n            farEnt = p\n        end\n    end\nend\n\nif not farEnt or not farEnt.pos then return end\n\nArgus.addCircleFilled(\n    farEnt.pos.x, farEnt.pos.y, farEnt.pos.z,\n    RADIUS, SEGMENTS,\n    colorU32(0,0,0,0.1),\n    colorU32(220,255,0,1.00),\n    1.6\n)\n",
 							gVar = "ACR_RikuDRK3_CD",
 							uuid = "dfca9f2c-8cfb-7d30-9695-aebe7b1a6774",
 							version = 2.1,
@@ -1842,6 +1841,63 @@ local tbl =
 			},
 		},
 	},
+	[15] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "-- On Draw: Player -> Target (line ends at circle rim) + hollow circle at target only\n\nif not (TensorCore and Argus2 and GUI) then\n    return\nend\n\nlocal player = TensorCore.mGetPlayer()\nif not (player and player.pos) then\n    return\nend\n\n-- Fixed world coord (X/Y/Z)\nlocal tx, ty, tz = 100.00, 0.0, 100.00\n\nlocal x1, y1, z1 = player.pos.x, player.pos.y, player.pos.z\nlocal x2, y2, z2 = tx, ty, tz\n\nlocal r = 5.0 -- circle radius (outer radius)\n\n-- --------- compute line endpoint on circle rim ----------\nlocal dx, dy, dz = (x2 - x1), (y2 - y1), (z2 - z1)\nlocal dist = math.sqrt(dx*dx + dy*dy + dz*dz)\n\n-- If player is inside/too close to circle, skip line to avoid weird flip\nif dist and dist > r then\n    local inv = 1.0 / dist\n    local ux, uy, uz = dx * inv, dy * inv, dz * inv\n\n    -- endpoint pulled back by r, so it touches the outer radius\n    local ex = x2 - ux * r\n    local ey = y2 - uy * r\n    local ez = z2 - uz * r\n\n    local white = GUI:ColorConvertFloat4ToU32(1, 1, 1, 1)\n    local lineDrawer = TensorCore.getStaticDrawer(white, 1.5)\n\n    local thickness = 5.00\n    lineDrawer:addLine(x1, y1, z1, ex, ey, ez, thickness, thickness)\nend\n\n-- --------- hollow circle at target only ----------\nlocal outline = GUI:ColorConvertFloat4ToU32(1, 1, 1, 1)\nlocal fillTransparent = GUI:ColorConvertFloat4ToU32(1, 1, 1, 0)\n\nlocal c = Argus2.ShapeDrawer:new(nil, nil, fillTransparent, outline, 2.0)\nc.gradientMinOpacity = 0\nc.gradientIntensity = 0\nc.segments = 50\n\n-- A) 只画轮廓（填充透明）\nc:addCircle(x2, y2, z2, r)\n\n-- B) 如果你这里依然出现“淡填充”，把上面那行换成下面这一行（薄圆环 = 空心轮廓）：\n-- c:addDonut(x2, y2, z2, r - 0.03, r)\n",
+							conditions = 
+							{
+								
+								{
+									"386148ba-f8bd-0d98-8cc5-8c6b2bf7994b",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "ac5bc518-f19c-c97f-8cda-c744a2cc307d",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
+							name = "DeepBlue targeting self",
+							uuid = "386148ba-f8bd-0d98-8cc5-8c6b2bf7994b",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				eventType = 13,
+				mechanicTime = 90.7,
+				name = "[Draw] Center",
+				timeRange = true,
+				timelineIndex = 15,
+				timerEndOffset = 7,
+				timerStartOffset = -3,
+				uuid = "5347f6c9-174e-c2d7-bb59-cfade4fb07f0",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+	},
 	[22] = 
 	{
 		
@@ -2220,7 +2276,7 @@ local tbl =
 						data = 
 						{
 							aType = "Lua",
-							actionLua = "-- Draw: red circle (r=0.8m) under the farthest party member from contentID 14369\n\nlocal TARGET_CID = 14369\nlocal RADIUS = 0.8\nlocal SEGMENTS = 30\n\nif not Argus then return end\n\nlocal function colorU32(r,g,b,a)\n    if GUI and GUI.ColorConvertFloat4ToU32 then\n        return GUI:ColorConvertFloat4ToU32(r,g,b,a)\n    end\n    return 0xFFFFFFFF\nend\n\nlocal function getBossByContentID(contentID)\n    -- Prefer current target\n    if Player and Player.GetTarget then\n        local t = Player:GetTarget()\n        if t and t.contentid == contentID and t.pos then\n            return t\n        end\n    end\n    -- Fallback: scan entities\n    if EntityList then\n        local el = EntityList(\"alive,attackable\")\n        if el then\n            for _, e in pairs(el) do\n                if e and e.contentid == contentID and e.pos then\n                    return e\n                end\n            end\n        end\n    end\n    return nil\nend\n\nlocal boss = getBossByContentID(TARGET_CID)\nif not boss then return end\n\nlocal party = (TensorCore and TensorCore.getEntityGroupList) and TensorCore.getEntityGroupList(\"Party\") or nil\nif not party then return end\n\nlocal farEnt, farDist = nil, -1\nfor _, p in pairs(party) do\n    if p and p.pos then\n        local d = (TensorCore and TensorCore.getDistance2d) and TensorCore.getDistance2d(p.pos, boss.pos) or nil\n        if d and d > farDist then\n            farDist = d\n            farEnt = p\n        end\n    end\nend\n\nif not farEnt or not farEnt.pos then return end\n\nArgus.addCircleFilled(\n    farEnt.pos.x, farEnt.pos.y, farEnt.pos.z,\n    RADIUS, SEGMENTS,\n    colorU32(1,0,0,0.12),\n    colorU32(1,0,0,1.00),\n    1.6\n)\n",
+							actionLua = "local TARGET_CID = 14369\nlocal RADIUS = 5.0\nlocal SEGMENTS = 30\n\nif not Argus then return end\n\nlocal function colorU32(r,g,b,a)\n    if GUI and GUI.ColorConvertFloat4ToU32 then\n        return GUI:ColorConvertFloat4ToU32(r,g,b,a)\n    end\n    return 0xFFFFFFFF\nend\n\nlocal function getBossByContentID(contentID)\n    -- Prefer current target\n    if Player and Player.GetTarget then\n        local t = Player:GetTarget()\n        if t and t.contentid == contentID and t.pos then\n            return t\n        end\n    end\n    -- Fallback: scan entities\n    if EntityList then\n        local el = EntityList(\"alive,attackable\")\n        if el then\n            for _, e in pairs(el) do\n                if e and e.contentid == contentID and e.pos then\n                    return e\n                end\n            end\n        end\n    end\n    return nil\nend\n\nlocal boss = getBossByContentID(TARGET_CID)\nif not boss then return end\n\nlocal party = (TensorCore and TensorCore.getEntityGroupList) and TensorCore.getEntityGroupList(\"Party\") or nil\nif not party then return end\n\nlocal farEnt, farDist = nil, -1\nfor _, p in pairs(party) do\n    if p and p.pos then\n        local d = (TensorCore and TensorCore.getDistance2d) and TensorCore.getDistance2d(p.pos, boss.pos) or nil\n        if d and d > farDist then\n            farDist = d\n            farEnt = p\n        end\n    end\nend\n\nif not farEnt or not farEnt.pos then return end\n\nArgus.addCircleFilled(\n    farEnt.pos.x, farEnt.pos.y, farEnt.pos.z,\n    RADIUS, SEGMENTS,\n    colorU32(1,0,0,0.12),\n    colorU32(1,0,0,1.00),\n    1.6\n)\n",
 							gVar = "ACR_RikuDRK3_CD",
 							uuid = "dfca9f2c-8cfb-7d30-9695-aebe7b1a6774",
 							version = 2.1,
@@ -3674,7 +3730,7 @@ local tbl =
 						data = 
 						{
 							aType = "Lua",
-							actionLua = "-- Draw: Player <-> Fixed World Position line + endpoint circles (no residue)\n\nif not (TensorCore and Argus and GUI) then\n    return\nend\n\nlocal player = TensorCore.mGetPlayer()\nif not (player and player.pos) then\n    return\nend\n\n-- Target world coord (X/Y/Z)\nlocal tx, ty, tz = 100.00, 0.0, 119.00\n\nlocal x1, y1, z1 = player.pos.x, player.pos.y, player.pos.z\nlocal x2, y2, z2 = tx, ty, tz\n\n-- White\nlocal white = GUI:ColorConvertFloat4ToU32(1, 1, 1, 1)\n\n-- Static drawer: line + circles\nlocal drawer = TensorCore.getStaticDrawer(white, 1.5)\n\n-- Line thickness\nlocal thickness = 5.00\ndrawer:addLine(x1, y1, z1, x2, y2, z2, thickness, thickness)\n\n-- Endpoint circles (radius 0.5m)\nlocal r = 0.2\ndrawer:addCircle(x1, y1, z1, r)\ndrawer:addCircle(x2, y2, z2, r)\n",
+							actionLua = "-- On Draw: Player -> Target (line ends at circle rim) + hollow circle at target only\n\nif not (TensorCore and Argus2 and GUI) then\n    return\nend\n\nlocal player = TensorCore.mGetPlayer()\nif not (player and player.pos) then\n    return\nend\n\n-- Fixed world coord (X/Y/Z)\nlocal tx, ty, tz = 100.00, 0.0, 119.00\n\nlocal x1, y1, z1 = player.pos.x, player.pos.y, player.pos.z\nlocal x2, y2, z2 = tx, ty, tz\n\nlocal r = 0.2 -- circle radius (outer radius)\n\n-- --------- compute line endpoint on circle rim ----------\nlocal dx, dy, dz = (x2 - x1), (y2 - y1), (z2 - z1)\nlocal dist = math.sqrt(dx*dx + dy*dy + dz*dz)\n\n-- If player is inside/too close to circle, skip line to avoid weird flip\nif dist and dist > r then\n    local inv = 1.0 / dist\n    local ux, uy, uz = dx * inv, dy * inv, dz * inv\n\n    -- endpoint pulled back by r, so it touches the outer radius\n    local ex = x2 - ux * r\n    local ey = y2 - uy * r\n    local ez = z2 - uz * r\n\n    local white = GUI:ColorConvertFloat4ToU32(1, 1, 1, 1)\n    local lineDrawer = TensorCore.getStaticDrawer(white, 1.5)\n\n    local thickness = 5.00\n    lineDrawer:addLine(x1, y1, z1, ex, ey, ez, thickness, thickness)\nend\n\n-- --------- hollow circle at target only ----------\nlocal outline = GUI:ColorConvertFloat4ToU32(1, 1, 1, 1)\nlocal fillTransparent = GUI:ColorConvertFloat4ToU32(1, 1, 1, 0)\n\nlocal c = Argus2.ShapeDrawer:new(nil, nil, fillTransparent, outline, 3.0)\nc.gradientMinOpacity = 0\nc.gradientIntensity = 0\nc.segments = 50\n\n-- A) 只画轮廓（填充透明）\nc:addCircle(x2, y2, z2, r)\n\n-- B) 如果你这里依然出现“淡填充”，把上面那行换成下面这一行（薄圆环 = 空心轮廓）：\n-- c:addDonut(x2, y2, z2, r - 0.03, r)\n",
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
 							uuid = "ac5bc518-f19c-c97f-8cda-c744a2cc307d",
@@ -6801,6 +6857,64 @@ local tbl =
 				version = 2,
 			},
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "-- On Draw: Player -> Target (line ends at circle rim) + hollow circle at target only\n\nif not (TensorCore and Argus2 and GUI) then\n    return\nend\n\nlocal player = TensorCore.mGetPlayer()\nif not (player and player.pos) then\n    return\nend\n\n-- Fixed world coord (X/Y/Z)\nlocal tx, ty, tz = 100.00, 0.0, 100.00\n\nlocal x1, y1, z1 = player.pos.x, player.pos.y, player.pos.z\nlocal x2, y2, z2 = tx, ty, tz\n\nlocal r = 5.0 -- circle radius (outer radius)\n\n-- --------- compute line endpoint on circle rim ----------\nlocal dx, dy, dz = (x2 - x1), (y2 - y1), (z2 - z1)\nlocal dist = math.sqrt(dx*dx + dy*dy + dz*dz)\n\n-- If player is inside/too close to circle, skip line to avoid weird flip\nif dist and dist > r then\n    local inv = 1.0 / dist\n    local ux, uy, uz = dx * inv, dy * inv, dz * inv\n\n    -- endpoint pulled back by r, so it touches the outer radius\n    local ex = x2 - ux * r\n    local ey = y2 - uy * r\n    local ez = z2 - uz * r\n\n    local white = GUI:ColorConvertFloat4ToU32(1, 1, 1, 1)\n    local lineDrawer = TensorCore.getStaticDrawer(white, 1.5)\n\n    local thickness = 5.00\n    lineDrawer:addLine(x1, y1, z1, ex, ey, ez, thickness, thickness)\nend\n\n-- --------- hollow circle at target only ----------\nlocal outline = GUI:ColorConvertFloat4ToU32(1, 1, 1, 1)\nlocal fillTransparent = GUI:ColorConvertFloat4ToU32(1, 1, 1, 0)\n\nlocal c = Argus2.ShapeDrawer:new(nil, nil, fillTransparent, outline, 2.0)\nc.gradientMinOpacity = 0\nc.gradientIntensity = 0\nc.segments = 50\n\n-- A) 只画轮廓（填充透明）\nc:addCircle(x2, y2, z2, r)\n\n-- B) 如果你这里依然出现“淡填充”，把上面那行换成下面这一行（薄圆环 = 空心轮廓）：\n-- c:addDonut(x2, y2, z2, r - 0.03, r)\n",
+							conditions = 
+							{
+								
+								{
+									"60c24ad4-f7c8-3601-bb0c-5674f0733b6a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "ac5bc518-f19c-c97f-8cda-c744a2cc307d",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							buffCheckType = 4,
+							buffID = 4974,
+							buffIDList = 
+							{
+								4974,
+							},
+							category = "Self",
+							name = "Fire",
+							uuid = "60c24ad4-f7c8-3601-bb0c-5674f0733b6a",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				eventType = 13,
+				mechanicTime = 268.8,
+				name = "[Draw] Center",
+				timeRange = true,
+				timelineIndex = 64,
+				timerStartOffset = -10,
+				uuid = "cf0a7e89-729f-3e8b-8d97-ad96abc5970e",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
 	},
 	[71] = 
 	{
@@ -6913,7 +7027,7 @@ local tbl =
 						data = 
 						{
 							aType = "Lua",
-							actionLua = "-- Draw: Player <-> Fixed World Position line + endpoint circles (no residue)\n\nif not (TensorCore and Argus and GUI) then\n    return\nend\n\nlocal player = TensorCore.mGetPlayer()\nif not (player and player.pos) then\n    return\nend\n\n-- Target world coord (X/Y/Z)\nlocal tx, ty, tz = 117.42, 0.0, 81.70\n\nlocal x1, y1, z1 = player.pos.x, player.pos.y, player.pos.z\nlocal x2, y2, z2 = tx, ty, tz\n\n-- White\nlocal white = GUI:ColorConvertFloat4ToU32(1, 1, 1, 1)\n\n-- Static drawer: line + circles\nlocal drawer = TensorCore.getStaticDrawer(white, 1.5)\n\n-- Line thickness\nlocal thickness = 5.00\ndrawer:addLine(x1, y1, z1, x2, y2, z2, thickness, thickness)\n\n-- Endpoint circles (radius 0.5m)\nlocal r = 0.2\ndrawer:addCircle(x1, y1, z1, r)\ndrawer:addCircle(x2, y2, z2, r)\n",
+							actionLua = "-- On Draw: Player -> Target (line ends at circle rim) + hollow circle at target only\n\nif not (TensorCore and Argus2 and GUI) then\n    return\nend\n\nlocal player = TensorCore.mGetPlayer()\nif not (player and player.pos) then\n    return\nend\n\n-- Fixed world coord (X/Y/Z)\nlocal tx, ty, tz = 117.42, 0.0, 81.07\n\nlocal x1, y1, z1 = player.pos.x, player.pos.y, player.pos.z\nlocal x2, y2, z2 = tx, ty, tz\n\nlocal r = 0.2 -- circle radius (outer radius)\n\n-- --------- compute line endpoint on circle rim ----------\nlocal dx, dy, dz = (x2 - x1), (y2 - y1), (z2 - z1)\nlocal dist = math.sqrt(dx*dx + dy*dy + dz*dz)\n\n-- If player is inside/too close to circle, skip line to avoid weird flip\nif dist and dist > r then\n    local inv = 1.0 / dist\n    local ux, uy, uz = dx * inv, dy * inv, dz * inv\n\n    -- endpoint pulled back by r, so it touches the outer radius\n    local ex = x2 - ux * r\n    local ey = y2 - uy * r\n    local ez = z2 - uz * r\n\n    local white = GUI:ColorConvertFloat4ToU32(1, 1, 1, 1)\n    local lineDrawer = TensorCore.getStaticDrawer(white, 1.5)\n\n    local thickness = 5.00\n    lineDrawer:addLine(x1, y1, z1, ex, ey, ez, thickness, thickness)\nend\n\n-- --------- hollow circle at target only ----------\nlocal outline = GUI:ColorConvertFloat4ToU32(1, 1, 1, 1)\nlocal fillTransparent = GUI:ColorConvertFloat4ToU32(1, 1, 1, 0)\n\nlocal c = Argus2.ShapeDrawer:new(nil, nil, fillTransparent, outline, 3.0)\nc.gradientMinOpacity = 0\nc.gradientIntensity = 0\nc.segments = 50\n\n-- A) 只画轮廓（填充透明）\nc:addCircle(x2, y2, z2, r)\n\n-- B) 如果你这里依然出现“淡填充”，把上面那行换成下面这一行（薄圆环 = 空心轮廓）：\n-- c:addDonut(x2, y2, z2, r - 0.03, r)\n",
 							conditions = 
 							{
 								
@@ -7403,7 +7517,7 @@ local tbl =
 						data = 
 						{
 							aType = "Lua",
-							actionLua = "-- Draw: red circle (r=0.8m) under the farthest party member (who has buff 4974) from contentID 14369\n\nlocal TARGET_CID = 14370\nlocal FILTER_BUFF = 4974\nlocal RADIUS = 0.8\nlocal SEGMENTS = 30\n\nif not Argus then return end\n\nlocal function colorU32(r,g,b,a)\n    if GUI and GUI.ColorConvertFloat4ToU32 then\n        return GUI:ColorConvertFloat4ToU32(r,g,b,a)\n    end\n    return 0xFFFFFFFF\nend\n\nlocal function getBossByContentID(contentID)\n    -- Prefer current target\n    if Player and Player.GetTarget then\n        local t = Player:GetTarget()\n        if t and t.contentid == contentID and t.pos then\n            return t\n        end\n    end\n    -- Fallback: scan entities\n    if EntityList then\n        local el = EntityList(\"alive,attackable\")\n        if el then\n            for _, e in pairs(el) do\n                if e and e.contentid == contentID and e.pos then\n                    return e\n                end\n            end\n        end\n    end\n    return nil\nend\n\nlocal boss = getBossByContentID(TARGET_CID)\nif not boss then return end\n\nlocal party = (TensorCore and TensorCore.getEntityGroupList) and TensorCore.getEntityGroupList(\"Party\") or nil\nif not party then return end\n\nlocal farEnt, farDist = nil, -1\n\nfor _, p in pairs(party) do\n    if p and p.pos then\n        local hasBuff = false\n        if TensorCore and TensorCore.getBuff then\n            local b = TensorCore.getBuff(p, FILTER_BUFF)\n            if b then hasBuff = true end\n        end\n\n        if hasBuff then\n            local d = (TensorCore and TensorCore.getDistance2d) and TensorCore.getDistance2d(p.pos, boss.pos) or nil\n            if d and d > farDist then\n                farDist = d\n                farEnt = p\n            end\n        end\n    end\nend\n\nif not farEnt or not farEnt.pos then\n    return\nend\n\nArgus.addCircleFilled(\n    farEnt.pos.x, farEnt.pos.y, farEnt.pos.z,\n    RADIUS, SEGMENTS,\n    colorU32(204,255,0,1.12),\n    colorU32(220,255,0,1.00),\n    1.6\n)\n",
+							actionLua = "-- Draw: red circle (r=0.8m) under the farthest party member (who has buff 4974) from contentID 14369\n\nlocal TARGET_CID = 14370\nlocal FILTER_BUFF = 4974\nlocal RADIUS = 0.8\nlocal SEGMENTS = 30\n\nif not Argus then return end\n\nlocal function colorU32(r,g,b,a)\n    if GUI and GUI.ColorConvertFloat4ToU32 then\n        return GUI:ColorConvertFloat4ToU32(r,g,b,a)\n    end\n    return 0xFFFFFFFF\nend\n\nlocal function getBossByContentID(contentID)\n    -- Prefer current target\n    if Player and Player.GetTarget then\n        local t = Player:GetTarget()\n        if t and t.contentid == contentID and t.pos then\n            return t\n        end\n    end\n    -- Fallback: scan entities\n    if EntityList then\n        local el = EntityList(\"alive,attackable\")\n        if el then\n            for _, e in pairs(el) do\n                if e and e.contentid == contentID and e.pos then\n                    return e\n                end\n            end\n        end\n    end\n    return nil\nend\n\nlocal boss = getBossByContentID(TARGET_CID)\nif not boss then return end\n\nlocal party = (TensorCore and TensorCore.getEntityGroupList) and TensorCore.getEntityGroupList(\"Party\") or nil\nif not party then return end\n\nlocal farEnt, farDist = nil, -1\n\nfor _, p in pairs(party) do\n    if p and p.pos then\n        local hasBuff = false\n        if TensorCore and TensorCore.getBuff then\n            local b = TensorCore.getBuff(p, FILTER_BUFF)\n            if b then hasBuff = true end\n        end\n\n        if hasBuff then\n            local d = (TensorCore and TensorCore.getDistance2d) and TensorCore.getDistance2d(p.pos, boss.pos) or nil\n            if d and d > farDist then\n                farDist = d\n                farEnt = p\n            end\n        end\n    end\nend\n\nif not farEnt or not farEnt.pos then\n    return\nend\n\nArgus.addCircleFilled(\n    farEnt.pos.x, farEnt.pos.y, farEnt.pos.z,\n    RADIUS, SEGMENTS,\n    colorU32(0,0,0,0.1),\n    colorU32(220,255,0,1.00),\n    1.6\n)\n",
 							gVar = "ACR_RikuDRK3_CD",
 							uuid = "dfca9f2c-8cfb-7d30-9695-aebe7b1a6774",
 							version = 2.1,
@@ -7547,7 +7661,7 @@ local tbl =
 						data = 
 						{
 							aType = "Lua",
-							actionLua = "-- Draw: red circle (r=0.8m) under the farthest party member from contentID 14369\n\nlocal TARGET_CID = 14369\nlocal RADIUS = 0.8\nlocal SEGMENTS = 30\n\nif not Argus then return end\n\nlocal function colorU32(r,g,b,a)\n    if GUI and GUI.ColorConvertFloat4ToU32 then\n        return GUI:ColorConvertFloat4ToU32(r,g,b,a)\n    end\n    return 0xFFFFFFFF\nend\n\nlocal function getBossByContentID(contentID)\n    -- Prefer current target\n    if Player and Player.GetTarget then\n        local t = Player:GetTarget()\n        if t and t.contentid == contentID and t.pos then\n            return t\n        end\n    end\n    -- Fallback: scan entities\n    if EntityList then\n        local el = EntityList(\"alive,attackable\")\n        if el then\n            for _, e in pairs(el) do\n                if e and e.contentid == contentID and e.pos then\n                    return e\n                end\n            end\n        end\n    end\n    return nil\nend\n\nlocal boss = getBossByContentID(TARGET_CID)\nif not boss then return end\n\nlocal party = (TensorCore and TensorCore.getEntityGroupList) and TensorCore.getEntityGroupList(\"Party\") or nil\nif not party then return end\n\nlocal farEnt, farDist = nil, -1\nfor _, p in pairs(party) do\n    if p and p.pos then\n        local d = (TensorCore and TensorCore.getDistance2d) and TensorCore.getDistance2d(p.pos, boss.pos) or nil\n        if d and d > farDist then\n            farDist = d\n            farEnt = p\n        end\n    end\nend\n\nif not farEnt or not farEnt.pos then return end\n\nArgus.addCircleFilled(\n    farEnt.pos.x, farEnt.pos.y, farEnt.pos.z,\n    RADIUS, SEGMENTS,\n    colorU32(1,0,0,0.12),\n    colorU32(1,0,0,1.00),\n    1.6\n)\n",
+							actionLua = "local TARGET_CID = 14369\nlocal RADIUS = 5.0\nlocal SEGMENTS = 30\n\nif not Argus then return end\n\nlocal function colorU32(r,g,b,a)\n    if GUI and GUI.ColorConvertFloat4ToU32 then\n        return GUI:ColorConvertFloat4ToU32(r,g,b,a)\n    end\n    return 0xFFFFFFFF\nend\n\nlocal function getBossByContentID(contentID)\n    -- Prefer current target\n    if Player and Player.GetTarget then\n        local t = Player:GetTarget()\n        if t and t.contentid == contentID and t.pos then\n            return t\n        end\n    end\n    -- Fallback: scan entities\n    if EntityList then\n        local el = EntityList(\"alive,attackable\")\n        if el then\n            for _, e in pairs(el) do\n                if e and e.contentid == contentID and e.pos then\n                    return e\n                end\n            end\n        end\n    end\n    return nil\nend\n\nlocal boss = getBossByContentID(TARGET_CID)\nif not boss then return end\n\nlocal party = (TensorCore and TensorCore.getEntityGroupList) and TensorCore.getEntityGroupList(\"Party\") or nil\nif not party then return end\n\nlocal farEnt, farDist = nil, -1\nfor _, p in pairs(party) do\n    if p and p.pos then\n        local d = (TensorCore and TensorCore.getDistance2d) and TensorCore.getDistance2d(p.pos, boss.pos) or nil\n        if d and d > farDist then\n            farDist = d\n            farEnt = p\n        end\n    end\nend\n\nif not farEnt or not farEnt.pos then return end\n\nArgus.addCircleFilled(\n    farEnt.pos.x, farEnt.pos.y, farEnt.pos.z,\n    RADIUS, SEGMENTS,\n    colorU32(1,0,0,0.12),\n    colorU32(1,0,0,1.00),\n    1.6\n)\n",
 							conditions = 
 							{
 								
@@ -9184,7 +9298,7 @@ local tbl =
 						data = 
 						{
 							aType = "Lua",
-							actionLua = "-- Draw: Player <-> Fixed World Position line + endpoint circles (no residue)\n\nif not (TensorCore and Argus and GUI) then\n    return\nend\n\nlocal player = TensorCore.mGetPlayer()\nif not (player and player.pos) then\n    return\nend\n\n-- Target world coord (X/Y/Z)\nlocal tx, ty, tz = 100.00, 0.0, 100.00\n\nlocal x1, y1, z1 = player.pos.x, player.pos.y, player.pos.z\nlocal x2, y2, z2 = tx, ty, tz\n\n-- White\nlocal white = GUI:ColorConvertFloat4ToU32(1, 1, 1, 1)\n\n-- Static drawer: line + circles\nlocal drawer = TensorCore.getStaticDrawer(white, 1.5)\n\n-- Line thickness\nlocal thickness = 5.00\ndrawer:addLine(x1, y1, z1, x2, y2, z2, thickness, thickness)\n\n-- Endpoint circles (radius 0.5m)\nlocal r = 0.2\ndrawer:addCircle(x1, y1, z1, r)\ndrawer:addCircle(x2, y2, z2, r)\n",
+							actionLua = "-- On Draw: Player -> Target (line ends at circle rim) + hollow circle at target only\n\nif not (TensorCore and Argus2 and GUI) then\n    return\nend\n\nlocal player = TensorCore.mGetPlayer()\nif not (player and player.pos) then\n    return\nend\n\n-- Fixed world coord (X/Y/Z)\nlocal tx, ty, tz = 100.00, 0.0, 100.00\n\nlocal x1, y1, z1 = player.pos.x, player.pos.y, player.pos.z\nlocal x2, y2, z2 = tx, ty, tz\n\nlocal r = 5.0 -- circle radius (outer radius)\n\n-- --------- compute line endpoint on circle rim ----------\nlocal dx, dy, dz = (x2 - x1), (y2 - y1), (z2 - z1)\nlocal dist = math.sqrt(dx*dx + dy*dy + dz*dz)\n\n-- If player is inside/too close to circle, skip line to avoid weird flip\nif dist and dist > r then\n    local inv = 1.0 / dist\n    local ux, uy, uz = dx * inv, dy * inv, dz * inv\n\n    -- endpoint pulled back by r, so it touches the outer radius\n    local ex = x2 - ux * r\n    local ey = y2 - uy * r\n    local ez = z2 - uz * r\n\n    local white = GUI:ColorConvertFloat4ToU32(1, 1, 1, 1)\n    local lineDrawer = TensorCore.getStaticDrawer(white, 1.5)\n\n    local thickness = 5.00\n    lineDrawer:addLine(x1, y1, z1, ex, ey, ez, thickness, thickness)\nend\n\n-- --------- hollow circle at target only ----------\nlocal outline = GUI:ColorConvertFloat4ToU32(1, 1, 1, 1)\nlocal fillTransparent = GUI:ColorConvertFloat4ToU32(1, 1, 1, 0)\n\nlocal c = Argus2.ShapeDrawer:new(nil, nil, fillTransparent, outline, 2.0)\nc.gradientMinOpacity = 0\nc.gradientIntensity = 0\nc.segments = 50\n\n-- A) 只画轮廓（填充透明）\nc:addCircle(x2, y2, z2, r)\n\n-- B) 如果你这里依然出现“淡填充”，把上面那行换成下面这一行（薄圆环 = 空心轮廓）：\n-- c:addDonut(x2, y2, z2, r - 0.03, r)\n",
 							conditions = 
 							{
 								
@@ -9220,9 +9334,9 @@ local tbl =
 				name = "[Draw] Center",
 				timeRange = true,
 				timelineIndex = 117,
-				timerEndOffset = 5,
+				timerEndOffset = 10,
 				timerStartOffset = -3,
-				uuid = "20ad5a6c-5dac-63f7-a507-2fb0e5ad01a4",
+				uuid = "2ecf58ad-aa77-54fb-ba04-18faa00b5f97",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -11788,7 +11902,6 @@ local tbl =
 						},
 					},
 				},
-				enabled = false,
 				mechanicTime = 544.3,
 				name = "Instant Dash",
 				timeRange = true,
@@ -11921,7 +12034,7 @@ local tbl =
 						data = 
 						{
 							aType = "Lua",
-							actionLua = "-- Draw: red circle (r=0.8m) under the farthest party member from contentID 14369\n\nlocal TARGET_CID = 14369\nlocal RADIUS = 0.8\nlocal SEGMENTS = 30\n\nif not Argus then return end\n\nlocal function colorU32(r,g,b,a)\n    if GUI and GUI.ColorConvertFloat4ToU32 then\n        return GUI:ColorConvertFloat4ToU32(r,g,b,a)\n    end\n    return 0xFFFFFFFF\nend\n\nlocal function getBossByContentID(contentID)\n    -- Prefer current target\n    if Player and Player.GetTarget then\n        local t = Player:GetTarget()\n        if t and t.contentid == contentID and t.pos then\n            return t\n        end\n    end\n    -- Fallback: scan entities\n    if EntityList then\n        local el = EntityList(\"alive,attackable\")\n        if el then\n            for _, e in pairs(el) do\n                if e and e.contentid == contentID and e.pos then\n                    return e\n                end\n            end\n        end\n    end\n    return nil\nend\n\nlocal boss = getBossByContentID(TARGET_CID)\nif not boss then return end\n\nlocal party = (TensorCore and TensorCore.getEntityGroupList) and TensorCore.getEntityGroupList(\"Party\") or nil\nif not party then return end\n\nlocal farEnt, farDist = nil, -1\nfor _, p in pairs(party) do\n    if p and p.pos then\n        local d = (TensorCore and TensorCore.getDistance2d) and TensorCore.getDistance2d(p.pos, boss.pos) or nil\n        if d and d > farDist then\n            farDist = d\n            farEnt = p\n        end\n    end\nend\n\nif not farEnt or not farEnt.pos then return end\n\nArgus.addCircleFilled(\n    farEnt.pos.x, farEnt.pos.y, farEnt.pos.z,\n    RADIUS, SEGMENTS,\n    colorU32(1,0,0,0.12),\n    colorU32(1,0,0,1.00),\n    1.6\n)\n",
+							actionLua = "local TARGET_CID = 14369\nlocal RADIUS = 5.0\nlocal SEGMENTS = 30\n\nif not Argus then return end\n\nlocal function colorU32(r,g,b,a)\n    if GUI and GUI.ColorConvertFloat4ToU32 then\n        return GUI:ColorConvertFloat4ToU32(r,g,b,a)\n    end\n    return 0xFFFFFFFF\nend\n\nlocal function getBossByContentID(contentID)\n    -- Prefer current target\n    if Player and Player.GetTarget then\n        local t = Player:GetTarget()\n        if t and t.contentid == contentID and t.pos then\n            return t\n        end\n    end\n    -- Fallback: scan entities\n    if EntityList then\n        local el = EntityList(\"alive,attackable\")\n        if el then\n            for _, e in pairs(el) do\n                if e and e.contentid == contentID and e.pos then\n                    return e\n                end\n            end\n        end\n    end\n    return nil\nend\n\nlocal boss = getBossByContentID(TARGET_CID)\nif not boss then return end\n\nlocal party = (TensorCore and TensorCore.getEntityGroupList) and TensorCore.getEntityGroupList(\"Party\") or nil\nif not party then return end\n\nlocal farEnt, farDist = nil, -1\nfor _, p in pairs(party) do\n    if p and p.pos then\n        local d = (TensorCore and TensorCore.getDistance2d) and TensorCore.getDistance2d(p.pos, boss.pos) or nil\n        if d and d > farDist then\n            farDist = d\n            farEnt = p\n        end\n    end\nend\n\nif not farEnt or not farEnt.pos then return end\n\nArgus.addCircleFilled(\n    farEnt.pos.x, farEnt.pos.y, farEnt.pos.z,\n    RADIUS, SEGMENTS,\n    colorU32(1,0,0,0.12),\n    colorU32(1,0,0,1.00),\n    1.6\n)\n",
 							gVar = "ACR_RikuDRK3_CD",
 							uuid = "dfca9f2c-8cfb-7d30-9695-aebe7b1a6774",
 							version = 2.1,
