@@ -1256,6 +1256,7 @@ local tbl =
 				uuid = "5753207b-95a0-6ab3-a4b3-75f36143b421",
 				version = 2,
 			},
+			inheritedIndex = 3,
 		},
 	},
 	[9] = 
@@ -4436,6 +4437,462 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 5,
+		},
+	},
+	[53] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							actionID = 7386,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"2172525a-bd95-3099-a710-2bcf05f2d5fd",
+									true,
+								},
+								
+								{
+									"02bc6c2f-b065-e7f1-8f27-b020e63eda65",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							holdActionCharges = 3,
+							holdActionDuration = 9999,
+							holdActionID = 7386,
+							ignoreWeaveRules = true,
+							targetContentID = 14300,
+							targetType = "ContentID",
+							uuid = "29ecc6cc-0ec5-7459-ad81-b7d79de628b9",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							actionID = 16461,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"d99cc6dd-5723-4089-a486-232fbddeb07e",
+									true,
+								},
+								
+								{
+									"02bc6c2f-b065-e7f1-8f27-b020e63eda65",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							holdActionCharges = 2,
+							holdActionDuration = 9999,
+							holdActionID = 16461,
+							ignoreWeaveRules = true,
+							targetContentID = 14300,
+							targetType = "ContentID",
+							uuid = "11bec670-4d28-27c3-a56a-9599afdf7cc7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							actionID = 36926,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"9b1bc192-045b-662c-9300-d4fab416f27b",
+									true,
+								},
+								
+								{
+									"02bc6c2f-b065-e7f1-8f27-b020e63eda65",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							holdActionCharges = 2,
+							holdActionDuration = 9999,
+							holdActionID = 36926,
+							ignoreWeaveRules = true,
+							targetContentID = 14300,
+							targetType = "ContentID",
+							uuid = "39e2bf70-89cc-caf1-8cb3-6e581e7fcb69",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							actionID = 36934,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"27a5fe09-f2a4-58ab-9fa9-5aa1db9283aa",
+									true,
+								},
+								
+								{
+									"02bc6c2f-b065-e7f1-8f27-b020e63eda65",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							holdActionCharges = 2,
+							holdActionDuration = 9999,
+							holdActionID = 36934,
+							ignoreWeaveRules = true,
+							targetContentID = 14300,
+							targetType = "ContentID",
+							uuid = "4f572d00-24d6-4952-8a0d-0e69ed828da2",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "WARRIOR",
+							name = "Warrior",
+							uuid = "2172525a-bd95-3099-a710-2bcf05f2d5fd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "Paladin",
+							uuid = "d99cc6dd-5723-4089-a486-232fbddeb07e",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "Darkknight",
+							uuid = "9b1bc192-045b-662c-9300-d4fab416f27b",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "Gunbreaker",
+							uuid = "27a5fe09-f2a4-58ab-9fa9-5aa1db9283aa",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "-- 没有目标直接 false\nif not Player or not Player:GetTarget() then\n    return false\nend\n\nlocal target = Player:GetTarget()\n\n-- 确保目标有效\nif not target or not target.pos then\n    return false\nend\n\n-- 计算平面距离（XZ）\nlocal dx = Player.pos.x - target.pos.x\nlocal dz = Player.pos.z - target.pos.z\nlocal distance = math.sqrt(dx * dx + dz * dz)\n\n-- 大于 3 米时返回 true\nreturn distance > 3.0\n",
+							name = "Out of Range",
+							uuid = "02bc6c2f-b065-e7f1-8f27-b020e63eda65",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 190.3,
+				name = "Hold Jumps",
+				timelineIndex = 53,
+				timerEndOffset = 5,
+				timerOffset = -16,
+				timerStartOffset = -3.7999999523163,
+				uuid = "f2a6063f-4ab6-b4ad-9ccb-b8273956a5f2",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							actionID = 7386,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"7333e85c-e077-ebed-9b20-c38e9ba7228c",
+									true,
+								},
+								
+								{
+									"275acfcd-d0a1-677c-aae5-ceb418a32ad7",
+									true,
+								},
+								
+								{
+									"2172525a-bd95-3099-a710-2bcf05f2d5fd",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							holdActionID = 7386,
+							ignoreWeaveRules = true,
+							targetContentID = 14300,
+							targetType = "ContentID",
+							uuid = "29ecc6cc-0ec5-7459-ad81-b7d79de628b9",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							actionID = 16461,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"7333e85c-e077-ebed-9b20-c38e9ba7228c",
+									true,
+								},
+								
+								{
+									"275acfcd-d0a1-677c-aae5-ceb418a32ad7",
+									true,
+								},
+								
+								{
+									"d99cc6dd-5723-4089-a486-232fbddeb07e",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							holdActionID = 16461,
+							ignoreWeaveRules = true,
+							targetContentID = 14300,
+							targetType = "ContentID",
+							uuid = "11bec670-4d28-27c3-a56a-9599afdf7cc7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							actionID = 36926,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"7333e85c-e077-ebed-9b20-c38e9ba7228c",
+									true,
+								},
+								
+								{
+									"275acfcd-d0a1-677c-aae5-ceb418a32ad7",
+									true,
+								},
+								
+								{
+									"9b1bc192-045b-662c-9300-d4fab416f27b",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							holdActionID = 36926,
+							ignoreWeaveRules = true,
+							targetContentID = 14300,
+							targetType = "ContentID",
+							uuid = "39e2bf70-89cc-caf1-8cb3-6e581e7fcb69",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							acrOptionType = "Hold Action",
+							actionID = 36934,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"7333e85c-e077-ebed-9b20-c38e9ba7228c",
+									true,
+								},
+								
+								{
+									"275acfcd-d0a1-677c-aae5-ceb418a32ad7",
+									true,
+								},
+								
+								{
+									"27a5fe09-f2a4-58ab-9fa9-5aa1db9283aa",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							holdActionID = 36934,
+							ignoreWeaveRules = true,
+							targetContentID = 14300,
+							targetType = "ContentID",
+							uuid = "4f572d00-24d6-4952-8a0d-0e69ed828da2",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							dequeueIfLuaFalse = true,
+							eventArgType = 2,
+							eventSpellID = 45970,
+							uuid = "7333e85c-e077-ebed-9b20-c38e9ba7228c",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 9,
+							dequeueIfLuaFalse = true,
+							partyTargetType = "Event Target",
+							uuid = "275acfcd-d0a1-677c-aae5-ceb418a32ad7",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "WARRIOR",
+							name = "Warrior",
+							uuid = "2172525a-bd95-3099-a710-2bcf05f2d5fd",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "Paladin",
+							uuid = "d99cc6dd-5723-4089-a486-232fbddeb07e",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "Darkknight",
+							uuid = "9b1bc192-045b-662c-9300-d4fab416f27b",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "Gunbreaker",
+							uuid = "27a5fe09-f2a4-58ab-9fa9-5aa1db9283aa",
+							version = 2,
+						},
+					},
+				},
+				eventType = 2,
+				mechanicTime = 190.3,
+				name = "Stop Holding Jumps",
+				timeRange = true,
+				timelineIndex = 53,
+				timerEndOffset = 15,
+				timerOffset = -15,
+				timerStartOffset = -15,
+				uuid = "4259d6f5-244d-72ae-b5fd-0b7763a5f1e6",
+				version = 2,
+			},
+			inheritedIndex = 3,
 		},
 	},
 	[58] = 
@@ -9552,11 +10009,17 @@ local tbl =
 									"14dcb273-8b5c-07f5-b64a-7fa64a89ddd5",
 									true,
 								},
+								
+								{
+									"d4fbda30-f991-a751-9c6c-83428447368b",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
-							targetType = "Current Target",
+							targetContentID = 14300,
+							targetType = "ContentID",
 							uuid = "c9c9cc18-aa2e-c48a-bebe-6ab6f4e7c114",
 							version = 2.1,
 						},
@@ -9610,6 +10073,16 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false\n",
 							name = "GroupMit ST",
 							uuid = "14dcb273-8b5c-07f5-b64a-7fa64a89ddd5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 2,
+							contentid = 14300,
+							uuid = "d4fbda30-f991-a751-9c6c-83428447368b",
 							version = 2,
 						},
 					},
@@ -10218,11 +10691,17 @@ local tbl =
 									"14dcb273-8b5c-07f5-b64a-7fa64a89ddd5",
 									true,
 								},
+								
+								{
+									"9f38eb60-d42a-4138-9915-0046d6c1a0bf",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
-							targetType = "Current Target",
+							targetContentID = 14300,
+							targetType = "ContentID",
 							uuid = "c9c9cc18-aa2e-c48a-bebe-6ab6f4e7c114",
 							version = 2.1,
 						},
@@ -10276,6 +10755,16 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false\n",
 							name = "GroupMit ST",
 							uuid = "14dcb273-8b5c-07f5-b64a-7fa64a89ddd5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 2,
+							contentid = 14300,
+							uuid = "9f38eb60-d42a-4138-9915-0046d6c1a0bf",
 							version = 2,
 						},
 					},
@@ -10884,11 +11373,17 @@ local tbl =
 									"21acc7a3-be9c-d1a4-a50a-e6b29f798abf",
 									true,
 								},
+								
+								{
+									"15e6e975-008f-68cd-82d0-bed50c999096",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
-							targetType = "Current Target",
+							targetContentID = 14300,
+							targetType = "ContentID",
 							uuid = "c9c9cc18-aa2e-c48a-bebe-6ab6f4e7c114",
 							version = 2.1,
 						},
@@ -10942,6 +11437,16 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "21acc7a3-be9c-d1a4-a50a-e6b29f798abf",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 2,
+							contentid = 14300,
+							uuid = "15e6e975-008f-68cd-82d0-bed50c999096",
 							version = 2,
 						},
 					},
@@ -11550,11 +12055,17 @@ local tbl =
 									"21acc7a3-be9c-d1a4-a50a-e6b29f798abf",
 									true,
 								},
+								
+								{
+									"99258768-1c67-c143-a893-25b7e9e9451c",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
-							targetType = "Current Target",
+							targetContentID = 14300,
+							targetType = "ContentID",
 							uuid = "c9c9cc18-aa2e-c48a-bebe-6ab6f4e7c114",
 							version = 2.1,
 						},
@@ -11608,6 +12119,16 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "21acc7a3-be9c-d1a4-a50a-e6b29f798abf",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							conditionType = 2,
+							contentid = 14300,
+							uuid = "99258768-1c67-c143-a893-25b7e9e9451c",
 							version = 2,
 						},
 					},
