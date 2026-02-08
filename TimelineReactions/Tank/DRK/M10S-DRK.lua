@@ -2817,6 +2817,11 @@ local tbl =
 								},
 								
 								{
+									"453acb58-9a79-a1c6-babe-7ac909cbf260",
+									true,
+								},
+								
+								{
 									"eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 									true,
 								},
@@ -2830,6 +2835,41 @@ local tbl =
 							ignoreWeaveRules = true,
 							targetType = "Other Tank",
 							uuid = "306cb6db-5a25-6e20-9ab8-6d0ca73406ae",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"01b7a6b7-9fa9-8154-967e-d267566df928",
+									true,
+								},
+								
+								{
+									"eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
+									true,
+								},
+								
+								{
+									"bce2c4a9-b5a3-785b-97d2-a685a0dca02e",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5d4789b4-cc3b-07cf-b705-a34a02a3ce63",
 							version = 2.1,
 						},
 					},
@@ -2847,6 +2887,30 @@ local tbl =
 							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
 							version = 2,
 						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "453acb58-9a79-a1c6-babe-7ac909cbf260",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "01b7a6b7-9fa9-8154-967e-d267566df928",
+							version = 2,
+						},
+						inheritedIndex = 3,
 					},
 					
 					{
@@ -2898,6 +2962,11 @@ local tbl =
 							{
 								
 								{
+									"1a9529e6-cd66-00b2-a48c-e2c6731ef416",
+									true,
+								},
+								
+								{
 									"a74531ec-0563-9ce2-ad1a-e1eeafb30da2",
 									true,
 								},
@@ -2915,9 +2984,64 @@ local tbl =
 						},
 						inheritedIndex = 1,
 					},
+					
+					{
+						data = 
+						{
+							actionID = 25754,
+							conditions = 
+							{
+								
+								{
+									"f8ed89b5-5ca4-701b-9253-ff5b38091e8a",
+									true,
+								},
+								
+								{
+									"a74531ec-0563-9ce2-ad1a-e1eeafb30da2",
+									true,
+								},
+								
+								{
+									"75542d97-472f-8868-a8d0-325a7594721e",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "3792772e-b49d-56ff-a5bd-47441e7b7f2d",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "1a9529e6-cd66-00b2-a48c-e2c6731ef416",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "f8ed89b5-5ca4-701b-9253-ff5b38091e8a",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
 					
 					{
 						data = 
@@ -5968,6 +6092,11 @@ local tbl =
 								},
 								
 								{
+									"453acb58-9a79-a1c6-babe-7ac909cbf260",
+									true,
+								},
+								
+								{
 									"eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 									true,
 								},
@@ -5981,6 +6110,41 @@ local tbl =
 							ignoreWeaveRules = true,
 							targetType = "Other Tank",
 							uuid = "306cb6db-5a25-6e20-9ab8-6d0ca73406ae",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"01b7a6b7-9fa9-8154-967e-d267566df928",
+									true,
+								},
+								
+								{
+									"eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
+									true,
+								},
+								
+								{
+									"bce2c4a9-b5a3-785b-97d2-a685a0dca02e",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5d4789b4-cc3b-07cf-b705-a34a02a3ce63",
 							version = 2.1,
 						},
 					},
@@ -5998,6 +6162,30 @@ local tbl =
 							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
 							version = 2,
 						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "453acb58-9a79-a1c6-babe-7ac909cbf260",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "01b7a6b7-9fa9-8154-967e-d267566df928",
+							version = 2,
+						},
+						inheritedIndex = 3,
 					},
 					
 					{
@@ -6029,7 +6217,7 @@ local tbl =
 				timelineIndex = 88,
 				timerOffset = -4,
 				timerStartOffset = -3.5,
-				uuid = "54e875ee-c8e2-a824-97cd-aafae7e18834",
+				uuid = "112535bc-6ab4-7f76-9aa9-8103c0a095b5",
 				version = 2,
 			},
 			inheritedIndex = 8,
@@ -6049,6 +6237,11 @@ local tbl =
 							{
 								
 								{
+									"1a9529e6-cd66-00b2-a48c-e2c6731ef416",
+									true,
+								},
+								
+								{
 									"a74531ec-0563-9ce2-ad1a-e1eeafb30da2",
 									true,
 								},
@@ -6066,9 +6259,64 @@ local tbl =
 						},
 						inheritedIndex = 1,
 					},
+					
+					{
+						data = 
+						{
+							actionID = 25754,
+							conditions = 
+							{
+								
+								{
+									"f8ed89b5-5ca4-701b-9253-ff5b38091e8a",
+									true,
+								},
+								
+								{
+									"a74531ec-0563-9ce2-ad1a-e1eeafb30da2",
+									true,
+								},
+								
+								{
+									"75542d97-472f-8868-a8d0-325a7594721e",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "3792772e-b49d-56ff-a5bd-47441e7b7f2d",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "1a9529e6-cd66-00b2-a48c-e2c6731ef416",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "f8ed89b5-5ca4-701b-9253-ff5b38091e8a",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
 					
 					{
 						data = 
@@ -6099,7 +6347,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 88,
 				timerStartOffset = -8,
-				uuid = "8cb7115b-c9af-d94b-b511-2cdde94a6676",
+				uuid = "b3a0d09a-bd2d-8cf9-b796-7c6bfe21dfee",
 				version = 2,
 			},
 			inheritedIndex = 9,
@@ -7708,6 +7956,11 @@ local tbl =
 								},
 								
 								{
+									"453acb58-9a79-a1c6-babe-7ac909cbf260",
+									true,
+								},
+								
+								{
 									"eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 									true,
 								},
@@ -7721,6 +7974,41 @@ local tbl =
 							ignoreWeaveRules = true,
 							targetType = "Other Tank",
 							uuid = "306cb6db-5a25-6e20-9ab8-6d0ca73406ae",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7393,
+							conditions = 
+							{
+								
+								{
+									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
+									true,
+								},
+								
+								{
+									"01b7a6b7-9fa9-8154-967e-d267566df928",
+									true,
+								},
+								
+								{
+									"eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
+									true,
+								},
+								
+								{
+									"bce2c4a9-b5a3-785b-97d2-a685a0dca02e",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "5d4789b4-cc3b-07cf-b705-a34a02a3ce63",
 							version = 2.1,
 						},
 					},
@@ -7738,6 +8026,30 @@ local tbl =
 							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
 							version = 2,
 						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "453acb58-9a79-a1c6-babe-7ac909cbf260",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "01b7a6b7-9fa9-8154-967e-d267566df928",
+							version = 2,
+						},
+						inheritedIndex = 3,
 					},
 					
 					{
@@ -7769,7 +8081,7 @@ local tbl =
 				timelineIndex = 160,
 				timerOffset = -4,
 				timerStartOffset = -3.5,
-				uuid = "53e9b74b-6120-6a4b-ae78-6be3ef92ceca",
+				uuid = "6aa09188-22b3-a2e2-84ea-40d074c3557c",
 				version = 2,
 			},
 			inheritedIndex = 8,
@@ -7789,6 +8101,11 @@ local tbl =
 							{
 								
 								{
+									"1a9529e6-cd66-00b2-a48c-e2c6731ef416",
+									true,
+								},
+								
+								{
 									"a74531ec-0563-9ce2-ad1a-e1eeafb30da2",
 									true,
 								},
@@ -7806,9 +8123,64 @@ local tbl =
 						},
 						inheritedIndex = 1,
 					},
+					
+					{
+						data = 
+						{
+							actionID = 25754,
+							conditions = 
+							{
+								
+								{
+									"f8ed89b5-5ca4-701b-9253-ff5b38091e8a",
+									true,
+								},
+								
+								{
+									"a74531ec-0563-9ce2-ad1a-e1eeafb30da2",
+									true,
+								},
+								
+								{
+									"75542d97-472f-8868-a8d0-325a7594721e",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "3792772e-b49d-56ff-a5bd-47441e7b7f2d",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "1a9529e6-cd66-00b2-a48c-e2c6731ef416",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "f8ed89b5-5ca4-701b-9253-ff5b38091e8a",
+							version = 2,
+						},
+						inheritedIndex = 2,
+					},
 					
 					{
 						data = 
@@ -7839,7 +8211,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 160,
 				timerStartOffset = -8,
-				uuid = "787ab273-6672-8226-871d-c6585f79e097",
+				uuid = "ad09c2b6-4932-a641-a1c9-5912cf36d8dc",
 				version = 2,
 			},
 			inheritedIndex = 9,
