@@ -7386,6 +7386,64 @@ local tbl =
 				version = 2,
 			},
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Misc",
+							conditions = 
+							{
+								
+								{
+									"dc7af6f7-ec0f-af6d-91bb-f50a1b20855a",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							setTarget = true,
+							targetContentID = 14369,
+							targetType = "ContentID",
+							uuid = "fcb3f743-ef43-921b-b3bd-edb286f8998e",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							buffCheckType = 4,
+							buffID = 4974,
+							buffIDList = 
+							{
+								4974,
+							},
+							category = "Self",
+							name = "Fire",
+							uuid = "dc7af6f7-ec0f-af6d-91bb-f50a1b20855a",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 290,
+				name = "SetTarget",
+				timeRange = true,
+				timelineIndex = 73,
+				timerEndOffset = 2,
+				timerStartOffset = -5,
+				uuid = "2fbc48b2-35dc-78eb-a3f8-e2c8b1c1b099",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
 	},
 	[83] = 
 	{
@@ -10441,141 +10499,6 @@ local tbl =
 					{
 						data = 
 						{
-							aType = "Alert",
-							alertPriority = 3,
-							alertScale = 0.89999997615814,
-							alertTTS = true,
-							alertText = "Switch Tank Buster",
-							alertVolume = 100,
-							conditions = 
-							{
-								
-								{
-									"1ed22d69-d84b-f19c-b325-92de1249881f",
-									true,
-								},
-								
-								{
-									"2bebe761-5deb-a4b4-b7f8-e70a48dfb20a",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							uuid = "7f0dbff9-7cd8-70de-9a54-f17039409666",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							aType = "Alert",
-							alertPriority = 3,
-							alertScale = 0.89999997615814,
-							alertTTS = true,
-							alertText = "Switch Tank Buster",
-							alertVolume = 100,
-							conditions = 
-							{
-								
-								{
-									"e34b7e90-c202-141c-aae3-9bad7ddba835",
-									true,
-								},
-								
-								{
-									"9bb69cf8-5f16-3055-acf3-a202c33f1487",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuGNB3_CD",
-							uuid = "3bb40f67-11b4-1b0e-8e31-bb95969f1a1b",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "if not eventArgs then\n    return false\nend\n\nreturn eventArgs.a1 >= 14 and eventArgs.a1 <= 22 and eventArgs.a2 == 64",
-							name = "Blue Side",
-							uuid = "1ed22d69-d84b-f19c-b325-92de1249881f",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "if not eventArgs then\n    return false\nend\n\nreturn eventArgs.a2 == 4096\n",
-							name = "Red Side",
-							uuid = "e34b7e90-c202-141c-aae3-9bad7ddba835",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 4,
-							buffIDList = 
-							{
-								4828,
-							},
-							category = "Self",
-							name = "Water",
-							uuid = "2bebe761-5deb-a4b4-b7f8-e70a48dfb20a",
-							version = 2,
-						},
-						inheritedIndex = 3,
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 4,
-							buffID = 4974,
-							buffIDList = 
-							{
-								4827,
-							},
-							category = "Self",
-							name = "Fire",
-							uuid = "9bb69cf8-5f16-3055-acf3-a202c33f1487",
-							version = 2,
-						},
-					},
-				},
-				eventType = 14,
-				mechanicTime = 482.3,
-				name = "[TTS] TB",
-				timeRange = true,
-				timelineIndex = 136,
-				timerEndOffset = 45,
-				timerStartOffset = -15,
-				uuid = "087985fc-b737-b6ca-b8cd-56413ce898e9",
-				version = 2,
-			},
-			inheritedIndex = 1,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
 							actionID = 7386,
 							allowInterrupt = true,
 							atomicPriority = true,
@@ -11017,6 +10940,142 @@ local tbl =
 				uuid = "ddae7c36-1647-8d82-a958-f66424c963ed",
 				version = 2,
 			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Alert",
+							alertPriority = 3,
+							alertScale = 0.89999997615814,
+							alertTTS = true,
+							alertText = "Switch Tank Buster",
+							alertVolume = 100,
+							conditions = 
+							{
+								
+								{
+									"1ed22d69-d84b-f19c-b325-92de1249881f",
+									true,
+								},
+								
+								{
+									"2bebe761-5deb-a4b4-b7f8-e70a48dfb20a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "7f0dbff9-7cd8-70de-9a54-f17039409666",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "Alert",
+							alertPriority = 3,
+							alertScale = 0.89999997615814,
+							alertTTS = true,
+							alertText = "Switch Tank Buster",
+							alertVolume = 100,
+							conditions = 
+							{
+								
+								{
+									"e34b7e90-c202-141c-aae3-9bad7ddba835",
+									true,
+								},
+								
+								{
+									"9bb69cf8-5f16-3055-acf3-a202c33f1487",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "3bb40f67-11b4-1b0e-8e31-bb95969f1a1b",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "if not eventArgs then\n    return false\nend\n\nreturn eventArgs.a1 >= 14 and eventArgs.a1 <= 22 and eventArgs.a2 == 64",
+							name = "Blue Side",
+							uuid = "1ed22d69-d84b-f19c-b325-92de1249881f",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "if not eventArgs then\n    return false\nend\n\nreturn eventArgs.a2 == 4096\n",
+							name = "Red Side",
+							uuid = "e34b7e90-c202-141c-aae3-9bad7ddba835",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 4,
+							buffIDList = 
+							{
+								4828,
+							},
+							category = "Self",
+							name = "Water",
+							uuid = "2bebe761-5deb-a4b4-b7f8-e70a48dfb20a",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 4,
+							buffID = 4974,
+							buffIDList = 
+							{
+								4827,
+							},
+							category = "Self",
+							name = "Fire",
+							uuid = "9bb69cf8-5f16-3055-acf3-a202c33f1487",
+							version = 2,
+						},
+					},
+				},
+				eventType = 14,
+				mechanicTime = 482.3,
+				name = "[TTS] TB",
+				timeRange = true,
+				timelineIndex = 136,
+				timerEndOffset = 45,
+				timerStartOffset = -15,
+				uuid = "087985fc-b737-b6ca-b8cd-56413ce898e9",
+				version = 2,
+			},
+			inheritedIndex = 2,
 		},
 		
 		{
@@ -11151,6 +11210,670 @@ local tbl =
 				timerEndOffset = 45,
 				timerStartOffset = -15,
 				uuid = "ae812bf6-dcda-2ead-8251-8e21fc74aaa1",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Misc",
+							actionID = 3,
+							alertPriority = 3,
+							alertScale = 0.89999997615814,
+							alertTTS = true,
+							alertText = "Switch Tank Buster",
+							alertVolume = 100,
+							conditions = 
+							{
+								
+								{
+									"1ed22d69-d84b-f19c-b325-92de1249881f",
+									true,
+								},
+								
+								{
+									"2bebe761-5deb-a4b4-b7f8-e70a48dfb20a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							setTarget = true,
+							targetContentID = 14369,
+							targetType = "ContentID",
+							uuid = "7f0dbff9-7cd8-70de-9a54-f17039409666",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "Misc",
+							actionID = 3,
+							alertPriority = 3,
+							alertScale = 0.89999997615814,
+							alertTTS = true,
+							alertText = "Switch Tank Buster",
+							alertVolume = 100,
+							conditions = 
+							{
+								
+								{
+									"e34b7e90-c202-141c-aae3-9bad7ddba835",
+									true,
+								},
+								
+								{
+									"9bb69cf8-5f16-3055-acf3-a202c33f1487",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							setTarget = true,
+							targetContentID = 14370,
+							targetType = "ContentID",
+							uuid = "3bb40f67-11b4-1b0e-8e31-bb95969f1a1b",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "if not eventArgs then\n    return false\nend\n\nreturn eventArgs.a1 >= 14 and eventArgs.a1 <= 22 and eventArgs.a2 == 64",
+							name = "Blue Side",
+							uuid = "1ed22d69-d84b-f19c-b325-92de1249881f",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "if not eventArgs then\n    return false\nend\n\nreturn eventArgs.a2 == 4096\n",
+							name = "Red Side",
+							uuid = "e34b7e90-c202-141c-aae3-9bad7ddba835",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 4,
+							buffIDList = 
+							{
+								4828,
+							},
+							category = "Self",
+							name = "Water",
+							uuid = "2bebe761-5deb-a4b4-b7f8-e70a48dfb20a",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 4,
+							buffID = 4974,
+							buffIDList = 
+							{
+								4827,
+							},
+							category = "Self",
+							name = "Fire",
+							uuid = "9bb69cf8-5f16-3055-acf3-a202c33f1487",
+							version = 2,
+						},
+					},
+				},
+				eventType = 14,
+				mechanicTime = 482.3,
+				name = "TB Switch Target",
+				timeRange = true,
+				timelineIndex = 136,
+				timerEndOffset = 45,
+				timerStartOffset = -15,
+				uuid = "4dc17e09-1305-95e6-b6b9-898b1f5ba500",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7386,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"96351b59-49a5-85d4-af8f-8caf06dba68d",
+									true,
+								},
+								
+								{
+									"d58f8f4b-1d92-94cd-b9bb-1aaa2a980373",
+									true,
+								},
+								
+								{
+									"402fadb7-04a5-f5f8-a168-9f10380c2ddd",
+									true,
+								},
+								
+								{
+									"d4ba3731-d2c9-f91b-89f4-f9dcdc3d419a",
+									true,
+								},
+								
+								{
+									"a3ea0b88-f8c4-2554-8161-cbe6d0e3fb61",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14284,
+							targetType = "Detection Target",
+							uuid = "ed62921e-fdf7-b969-94e0-f58f163d2d96",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16461,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"a183ef87-f083-a261-85aa-360f30758953",
+									true,
+								},
+								
+								{
+									"d58f8f4b-1d92-94cd-b9bb-1aaa2a980373",
+									true,
+								},
+								
+								{
+									"402fadb7-04a5-f5f8-a168-9f10380c2ddd",
+									true,
+								},
+								
+								{
+									"d4ba3731-d2c9-f91b-89f4-f9dcdc3d419a",
+									true,
+								},
+								
+								{
+									"a3ea0b88-f8c4-2554-8161-cbe6d0e3fb61",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14284,
+							targetType = "Detection Target",
+							uuid = "575a918a-c495-f56f-aac0-8513ada3be11",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36926,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"3224d691-685d-714a-8ba5-03793462ef60",
+									true,
+								},
+								
+								{
+									"d58f8f4b-1d92-94cd-b9bb-1aaa2a980373",
+									true,
+								},
+								
+								{
+									"402fadb7-04a5-f5f8-a168-9f10380c2ddd",
+									true,
+								},
+								
+								{
+									"d4ba3731-d2c9-f91b-89f4-f9dcdc3d419a",
+									true,
+								},
+								
+								{
+									"a3ea0b88-f8c4-2554-8161-cbe6d0e3fb61",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14284,
+							targetType = "Detection Target",
+							uuid = "d54e010d-7abe-c455-b597-b1fe7506ab7c",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36934,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"56d35a96-7914-efb4-8e42-66fab46a4ba5",
+									true,
+								},
+								
+								{
+									"d58f8f4b-1d92-94cd-b9bb-1aaa2a980373",
+									true,
+								},
+								
+								{
+									"402fadb7-04a5-f5f8-a168-9f10380c2ddd",
+									true,
+								},
+								
+								{
+									"d4ba3731-d2c9-f91b-89f4-f9dcdc3d419a",
+									true,
+								},
+								
+								{
+									"a3ea0b88-f8c4-2554-8161-cbe6d0e3fb61",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14284,
+							targetType = "Detection Target",
+							uuid = "db72980f-7fed-8e50-88c3-18d9a971f90d",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7386,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"96351b59-49a5-85d4-af8f-8caf06dba68d",
+									true,
+								},
+								
+								{
+									"368dd721-c555-6967-81c6-a36197fe3178",
+									true,
+								},
+								
+								{
+									"4912ef93-b03b-6d1f-ba6e-26c6b59b330d",
+									true,
+								},
+								
+								{
+									"ba506d1a-4382-da62-bf1a-a7d62bc238d0",
+									true,
+								},
+								
+								{
+									"ba8983ce-f4c6-2f48-95aa-cd94b8fd5e2e",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14284,
+							targetType = "Detection Target",
+							uuid = "3ce4cd09-f3f9-2b34-a8b0-2cb32925d0f6",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16461,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"a183ef87-f083-a261-85aa-360f30758953",
+									true,
+								},
+								
+								{
+									"368dd721-c555-6967-81c6-a36197fe3178",
+									true,
+								},
+								
+								{
+									"4912ef93-b03b-6d1f-ba6e-26c6b59b330d",
+									true,
+								},
+								
+								{
+									"ba506d1a-4382-da62-bf1a-a7d62bc238d0",
+									true,
+								},
+								
+								{
+									"ba8983ce-f4c6-2f48-95aa-cd94b8fd5e2e",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14284,
+							targetType = "Detection Target",
+							uuid = "af2c682e-6af4-f35e-9420-2d40dce41871",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36926,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"3224d691-685d-714a-8ba5-03793462ef60",
+									true,
+								},
+								
+								{
+									"368dd721-c555-6967-81c6-a36197fe3178",
+									true,
+								},
+								
+								{
+									"4912ef93-b03b-6d1f-ba6e-26c6b59b330d",
+									true,
+								},
+								
+								{
+									"ba506d1a-4382-da62-bf1a-a7d62bc238d0",
+									true,
+								},
+								
+								{
+									"ba8983ce-f4c6-2f48-95aa-cd94b8fd5e2e",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14284,
+							targetType = "Detection Target",
+							uuid = "f9031ffb-a683-f460-a328-9d6f0f1cc00b",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36934,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"56d35a96-7914-efb4-8e42-66fab46a4ba5",
+									true,
+								},
+								
+								{
+									"368dd721-c555-6967-81c6-a36197fe3178",
+									true,
+								},
+								
+								{
+									"4912ef93-b03b-6d1f-ba6e-26c6b59b330d",
+									true,
+								},
+								
+								{
+									"ba506d1a-4382-da62-bf1a-a7d62bc238d0",
+									true,
+								},
+								
+								{
+									"ba8983ce-f4c6-2f48-95aa-cd94b8fd5e2e",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14284,
+							targetType = "Detection Target",
+							uuid = "be10c044-1cda-887a-9d0a-759b0a7b73eb",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "WARRIOR",
+							name = "Warrior",
+							uuid = "96351b59-49a5-85d4-af8f-8caf06dba68d",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "Paladin",
+							uuid = "a183ef87-f083-a261-85aa-360f30758953",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "Darkknight",
+							uuid = "3224d691-685d-714a-8ba5-03793462ef60",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "Gunbreaker",
+							uuid = "56d35a96-7914-efb4-8e42-66fab46a4ba5",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							filterTargetType = "ContentID",
+							name = "Blue",
+							partyTargetContentID = 14369,
+							uuid = "d58f8f4b-1d92-94cd-b9bb-1aaa2a980373",
+							version = 2,
+						},
+						inheritedIndex = 5,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 4,
+							buffIDList = 
+							{
+								4828,
+							},
+							category = "Self",
+							name = "Water",
+							uuid = "402fadb7-04a5-f5f8-a168-9f10380c2ddd",
+							version = 2,
+						},
+						inheritedIndex = 6,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "if not eventArgs then\n    return false\nend\n\nreturn eventArgs.a1 >= 14 and eventArgs.a1 <= 22 and eventArgs.a2 == 64",
+							name = "Blue Side",
+							uuid = "d4ba3731-d2c9-f91b-89f4-f9dcdc3d419a",
+							version = 2,
+						},
+						inheritedIndex = 7,
+					},
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							filterTargetType = "ContentID",
+							name = "Red",
+							partyTargetContentID = 14370,
+							uuid = "368dd721-c555-6967-81c6-a36197fe3178",
+							version = 2,
+						},
+						inheritedIndex = 8,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 4,
+							buffID = 4974,
+							buffIDList = 
+							{
+								4827,
+							},
+							category = "Self",
+							name = "Fire",
+							uuid = "4912ef93-b03b-6d1f-ba6e-26c6b59b330d",
+							version = 2,
+						},
+						inheritedIndex = 10,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "if not eventArgs then\n    return false\nend\n\nreturn eventArgs.a2 == 4096\n",
+							name = "Red Side",
+							uuid = "ba506d1a-4382-da62-bf1a-a7d62bc238d0",
+							version = 2,
+						},
+						inheritedIndex = 10,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "-- 目标参数配置\nlocal targetCID = 14369\nlocal targetX = 86.99\nlocal targetY = 0\nlocal targetZ = 86.99\nlocal tolerance = 1.0 -- 容差范围（米），只要在这个距离内都算“在位置上”\n\n-- 获取指定 ContentID 的实体列表\nlocal el = EntityList(\"contentid=\" .. targetCID)\n\n-- 遍历查找\nif (table.valid(el)) then\n    for i, entity in pairs(el) do\n        if (entity and entity.pos) then\n            -- 计算三维距离的平方（性能优于开根号）\n            local dx = entity.pos.x - targetX\n            local dy = entity.pos.y - targetY\n            local dz = entity.pos.z - targetZ\n            local distSq = (dx * dx) + (dy * dy) + (dz * dz)\n            \n            -- 如果距离小于容差，返回 true\n            if (distSq <= (tolerance * tolerance)) then\n                return true\n            end\n        end\n    end\nend\n\n-- 未找到或不在位置\nreturn false",
+							name = "Check Blue Position",
+							uuid = "a3ea0b88-f8c4-2554-8161-cbe6d0e3fb61",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "-- 目标参数配置\nlocal targetCID = 14370\nlocal targetX = 112.99\nlocal targetY = 0\nlocal targetZ = 112.99\nlocal tolerance = 1.0 -- 容差范围（米），只要在这个距离内都算“在位置上”\n\n-- 获取指定 ContentID 的实体列表\nlocal el = EntityList(\"contentid=\" .. targetCID)\n\n-- 遍历查找\nif (table.valid(el)) then\n    for i, entity in pairs(el) do\n        if (entity and entity.pos) then\n            -- 计算三维距离的平方（性能优于开根号）\n            local dx = entity.pos.x - targetX\n            local dy = entity.pos.y - targetY\n            local dz = entity.pos.z - targetZ\n            local distSq = (dx * dx) + (dy * dy) + (dz * dz)\n            \n            -- 如果距离小于容差，返回 true\n            if (distSq <= (tolerance * tolerance)) then\n                return true\n            end\n        end\n    end\nend\n\n-- 未找到或不在位置\nreturn false",
+							name = "Check Red Position",
+							uuid = "ba8983ce-f4c6-2f48-95aa-cd94b8fd5e2e",
+							version = 2,
+						},
+					},
+				},
+				eventType = 14,
+				mechanicTime = 482.3,
+				name = "TB Instant Dash",
+				timeRange = true,
+				timelineIndex = 136,
+				timerEndOffset = 45,
+				timerStartOffset = -15,
+				uuid = "a5420ab7-e538-a79e-a330-3995bf0157ec",
 				version = 2,
 			},
 			inheritedIndex = 1,
