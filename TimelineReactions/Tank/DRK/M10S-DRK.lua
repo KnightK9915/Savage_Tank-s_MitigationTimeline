@@ -2817,46 +2817,6 @@ local tbl =
 								},
 								
 								{
-									"4165b9f2-fd16-83c3-973f-8af5417778c6",
-									true,
-								},
-								
-								{
-									"1d6bcc54-328f-a38f-b3bd-5041683a9c53",
-									true,
-								},
-								
-								{
-									"bce2c4a9-b5a3-785b-97d2-a685a0dca02e",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Other Tank",
-							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionID = 7393,
-							conditions = 
-							{
-								
-								{
-									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
-									true,
-								},
-								
-								{
-									"75b80de1-73d0-c241-9771-7b5634447ca4",
-									true,
-								},
-								
-								{
 									"eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 									true,
 								},
@@ -2887,42 +2847,6 @@ local tbl =
 							uuid = "f9f28c63-3ddc-7568-a885-a9436d917fd5",
 							version = 2,
 						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
-							name = "RoleMit MT",
-							uuid = "4165b9f2-fd16-83c3-973f-8af5417778c6",
-							version = 2,
-						},
-						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
-							name = "RoleMit ST",
-							uuid = "75b80de1-73d0-c241-9771-7b5634447ca4",
-							version = 2,
-						},
-						inheritedIndex = 3,
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
-							name = "DeepBlue targeting self",
-							uuid = "1d6bcc54-328f-a38f-b3bd-5041683a9c53",
-							version = 2,
-						},
-						inheritedIndex = 2,
 					},
 					
 					{
@@ -2974,42 +2898,6 @@ local tbl =
 							{
 								
 								{
-									"6e3996a5-f552-8330-815f-1dc9e15a1a26",
-									true,
-								},
-								
-								{
-									"fade4121-82b2-0b8a-8e42-c5df177beb17",
-									true,
-								},
-								
-								{
-									"75542d97-472f-8868-a8d0-325a7594721e",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Other Tank",
-							uuid = "c2248fe9-6f5a-3a0f-93b6-f045b1d30d67",
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							actionID = 25754,
-							conditions = 
-							{
-								
-								{
-									"bdb442ab-8b6b-33fd-aa81-c8ce0c31edc4",
-									true,
-								},
-								
-								{
 									"a74531ec-0563-9ce2-ad1a-e1eeafb30da2",
 									true,
 								},
@@ -3030,42 +2918,6 @@ local tbl =
 				},
 				conditions = 
 				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
-							name = "RoleMit MT",
-							uuid = "6e3996a5-f552-8330-815f-1dc9e15a1a26",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
-							name = "RoleMit ST",
-							uuid = "bdb442ab-8b6b-33fd-aa81-c8ce0c31edc4",
-							version = 2,
-						},
-						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
-							name = "DeepBlue targeting self",
-							uuid = "fade4121-82b2-0b8a-8e42-c5df177beb17",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
 					
 					{
 						data = 
@@ -6116,46 +5968,6 @@ local tbl =
 								},
 								
 								{
-									"4165b9f2-fd16-83c3-973f-8af5417778c6",
-									true,
-								},
-								
-								{
-									"1d6bcc54-328f-a38f-b3bd-5041683a9c53",
-									true,
-								},
-								
-								{
-									"bce2c4a9-b5a3-785b-97d2-a685a0dca02e",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Other Tank",
-							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionID = 7393,
-							conditions = 
-							{
-								
-								{
-									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
-									true,
-								},
-								
-								{
-									"75b80de1-73d0-c241-9771-7b5634447ca4",
-									true,
-								},
-								
-								{
 									"eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 									true,
 								},
@@ -6192,42 +6004,6 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
-							name = "RoleMit MT",
-							uuid = "4165b9f2-fd16-83c3-973f-8af5417778c6",
-							version = 2,
-						},
-						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
-							name = "RoleMit ST",
-							uuid = "75b80de1-73d0-c241-9771-7b5634447ca4",
-							version = 2,
-						},
-						inheritedIndex = 3,
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
-							name = "DeepBlue targeting self",
-							uuid = "1d6bcc54-328f-a38f-b3bd-5041683a9c53",
-							version = 2,
-						},
-						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
 							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\n-- 场上存在 14369，且没有任何一个在盯你\nreturn found\n",
 							name = "DeepBlue not targeting self",
 							uuid = "eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
@@ -6253,7 +6029,7 @@ local tbl =
 				timelineIndex = 88,
 				timerOffset = -4,
 				timerStartOffset = -3.5,
-				uuid = "babc5a9c-9b70-f1a3-8f72-2db5ad3cb3c7",
+				uuid = "54e875ee-c8e2-a824-97cd-aafae7e18834",
 				version = 2,
 			},
 			inheritedIndex = 8,
@@ -6271,42 +6047,6 @@ local tbl =
 							actionID = 25754,
 							conditions = 
 							{
-								
-								{
-									"6e3996a5-f552-8330-815f-1dc9e15a1a26",
-									true,
-								},
-								
-								{
-									"fade4121-82b2-0b8a-8e42-c5df177beb17",
-									true,
-								},
-								
-								{
-									"75542d97-472f-8868-a8d0-325a7594721e",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Other Tank",
-							uuid = "c2248fe9-6f5a-3a0f-93b6-f045b1d30d67",
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							actionID = 25754,
-							conditions = 
-							{
-								
-								{
-									"bdb442ab-8b6b-33fd-aa81-c8ce0c31edc4",
-									true,
-								},
 								
 								{
 									"a74531ec-0563-9ce2-ad1a-e1eeafb30da2",
@@ -6329,42 +6069,6 @@ local tbl =
 				},
 				conditions = 
 				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
-							name = "RoleMit MT",
-							uuid = "6e3996a5-f552-8330-815f-1dc9e15a1a26",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
-							name = "RoleMit ST",
-							uuid = "bdb442ab-8b6b-33fd-aa81-c8ce0c31edc4",
-							version = 2,
-						},
-						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
-							name = "DeepBlue targeting self",
-							uuid = "fade4121-82b2-0b8a-8e42-c5df177beb17",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
 					
 					{
 						data = 
@@ -6395,7 +6099,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 88,
 				timerStartOffset = -8,
-				uuid = "d4409ffc-70f5-c5fe-837e-471d1b04dc35",
+				uuid = "8cb7115b-c9af-d94b-b511-2cdde94a6676",
 				version = 2,
 			},
 			inheritedIndex = 9,
@@ -8004,46 +7708,6 @@ local tbl =
 								},
 								
 								{
-									"4165b9f2-fd16-83c3-973f-8af5417778c6",
-									true,
-								},
-								
-								{
-									"1d6bcc54-328f-a38f-b3bd-5041683a9c53",
-									true,
-								},
-								
-								{
-									"bce2c4a9-b5a3-785b-97d2-a685a0dca02e",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Other Tank",
-							uuid = "cf13f9cf-8be6-cdfc-b34e-e5efc26a91d3",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionID = 7393,
-							conditions = 
-							{
-								
-								{
-									"f9f28c63-3ddc-7568-a885-a9436d917fd5",
-									true,
-								},
-								
-								{
-									"75b80de1-73d0-c241-9771-7b5634447ca4",
-									true,
-								},
-								
-								{
 									"eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
 									true,
 								},
@@ -8080,42 +7744,6 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
-							name = "RoleMit MT",
-							uuid = "4165b9f2-fd16-83c3-973f-8af5417778c6",
-							version = 2,
-						},
-						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
-							name = "RoleMit ST",
-							uuid = "75b80de1-73d0-c241-9771-7b5634447ca4",
-							version = 2,
-						},
-						inheritedIndex = 3,
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
-							name = "DeepBlue targeting self",
-							uuid = "1d6bcc54-328f-a38f-b3bd-5041683a9c53",
-							version = 2,
-						},
-						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
 							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\n-- 场上存在 14369，且没有任何一个在盯你\nreturn found\n",
 							name = "DeepBlue not targeting self",
 							uuid = "eb61923b-ce60-2bb6-b883-c3fc48fd38ab",
@@ -8141,7 +7769,7 @@ local tbl =
 				timelineIndex = 160,
 				timerOffset = -4,
 				timerStartOffset = -3.5,
-				uuid = "0ad5b6b4-4ff5-132c-a0eb-378c1827e5cd",
+				uuid = "53e9b74b-6120-6a4b-ae78-6be3ef92ceca",
 				version = 2,
 			},
 			inheritedIndex = 8,
@@ -8159,42 +7787,6 @@ local tbl =
 							actionID = 25754,
 							conditions = 
 							{
-								
-								{
-									"6e3996a5-f552-8330-815f-1dc9e15a1a26",
-									true,
-								},
-								
-								{
-									"fade4121-82b2-0b8a-8e42-c5df177beb17",
-									true,
-								},
-								
-								{
-									"75542d97-472f-8868-a8d0-325a7594721e",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Other Tank",
-							uuid = "c2248fe9-6f5a-3a0f-93b6-f045b1d30d67",
-							version = 2.1,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							actionID = 25754,
-							conditions = 
-							{
-								
-								{
-									"bdb442ab-8b6b-33fd-aa81-c8ce0c31edc4",
-									true,
-								},
 								
 								{
 									"a74531ec-0563-9ce2-ad1a-e1eeafb30da2",
@@ -8217,42 +7809,6 @@ local tbl =
 				},
 				conditions = 
 				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
-							name = "RoleMit MT",
-							uuid = "6e3996a5-f552-8330-815f-1dc9e15a1a26",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
-							name = "RoleMit ST",
-							uuid = "bdb442ab-8b6b-33fd-aa81-c8ce0c31edc4",
-							version = 2,
-						},
-						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
-							name = "DeepBlue targeting self",
-							uuid = "fade4121-82b2-0b8a-8e42-c5df177beb17",
-							version = 2,
-						},
-						inheritedIndex = 1,
-					},
 					
 					{
 						data = 
@@ -8283,7 +7839,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 160,
 				timerStartOffset = -8,
-				uuid = "62cf7dce-c7d8-0a9e-a852-21e5695de9a1",
+				uuid = "787ab273-6672-8226-871d-c6585f79e097",
 				version = 2,
 			},
 			inheritedIndex = 9,
