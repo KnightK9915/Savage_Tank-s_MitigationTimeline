@@ -9578,6 +9578,7 @@ local tbl =
 				conditions = 
 				{
 				},
+				enabled = false,
 				eventType = 12,
 				mechanicTime = 444.7,
 				name = "Anti Knockback",
