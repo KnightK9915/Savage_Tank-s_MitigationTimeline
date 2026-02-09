@@ -1301,7 +1301,7 @@ local tbl =
 				uuid = "a72d6844-bd83-7c2f-a176-c05f0ff2fec0",
 				version = 2,
 			},
-			inheritedIndex = 3,
+			inheritedIndex = 2,
 		},
 		
 		{
@@ -1404,7 +1404,7 @@ local tbl =
 				uuid = "fd63eec9-6cbf-a73b-90e0-8b7cbd696db5",
 				version = 2,
 			},
-			inheritedIndex = 5,
+			inheritedIndex = 3,
 		},
 	},
 	[21] = 
@@ -2931,6 +2931,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 173.6,
 				name = "HoC (15)",
 				timeRange = true,
@@ -6053,7 +6054,7 @@ local tbl =
 							category = "Self",
 							comparator = 2,
 							conditionType = 2,
-							hpValue = 80,
+							hpValue = 99.98999786377,
 							uuid = "13894b80-808c-5a57-b688-d13042561c6d",
 							version = 2,
 						},
