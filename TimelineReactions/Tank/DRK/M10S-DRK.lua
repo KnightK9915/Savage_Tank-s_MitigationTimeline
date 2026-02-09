@@ -244,7 +244,6 @@ local tbl =
 						},
 					},
 				},
-				enabled = false,
 				mechanicTime = 14.6,
 				name = "Oblation (10)",
 				randomOffset = -1,
@@ -1144,6 +1143,135 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25754,
+							conditions = 
+							{
+								
+								{
+									"3977f523-c2b7-1eda-84c3-e4421aae6c9e",
+									true,
+								},
+								
+								{
+									"7da4c036-797c-886c-896c-fd048da26bc9",
+									true,
+								},
+								
+								{
+									"f16fcfc9-9ca3-45a4-83e4-3655f0c5a091",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "e0f64b1e-dab0-f59a-a416-478e41cf7199",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 25754,
+							conditions = 
+							{
+								
+								{
+									"3977f523-c2b7-1eda-84c3-e4421aae6c9e",
+									true,
+								},
+								
+								{
+									"b2faaba7-de1a-a018-a09a-56cd00d1e45e",
+									true,
+								},
+								
+								{
+									"f16fcfc9-9ca3-45a4-83e4-3655f0c5a091",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "d41f9112-9b12-d9b2-aea5-ec9bf6840b02",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								2682,
+							},
+							category = "Self",
+							uuid = "3977f523-c2b7-1eda-84c3-e4421aae6c9e",
+							version = 2,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "7da4c036-797c-886c-896c-fd048da26bc9",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "b2faaba7-de1a-a018-a09a-56cd00d1e45e",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "f16fcfc9-9ca3-45a4-83e4-3655f0c5a091",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 52.3,
+				name = "Oblation (10)",
+				randomOffset = -1,
+				timeRange = true,
+				timelineIndex = 7,
+				timerOffset = -3,
+				timerStartOffset = -8,
+				uuid = "05b7b1f5-9c8d-6eb2-93dc-7f53c3dc7df8",
+				version = 2,
+			},
+			inheritedIndex = 2,
 		},
 	},
 	[11] = 
@@ -4954,6 +5082,23 @@ local tbl =
 			inheritedIndex = 3,
 		},
 	},
+	[73] = 
+	{
+		
+		{
+			data = 
+			{
+				name = "Instant Dash",
+				uuid = "3122f0ae-f295-7862-a544-9ab602ff6b08",
+				version = 2,
+			},
+			inheritedObjectUUID = "b813cff3-38b0-3084-a540-001fe0918c6e",
+			inheritedOverwrites = 
+			{
+				timerStartOffset = 0.5,
+			},
+		},
+	},
 	[88] = 
 	{
 		
@@ -6660,6 +6805,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 451.8,
 				name = "TBN (15)",
 				timeRange = true,
