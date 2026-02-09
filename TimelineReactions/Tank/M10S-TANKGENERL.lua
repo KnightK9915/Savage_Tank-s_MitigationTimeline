@@ -1890,7 +1890,7 @@ local tbl =
 				name = "[Draw] Center",
 				timeRange = true,
 				timelineIndex = 15,
-				timerEndOffset = 7,
+				timerEndOffset = 16,
 				timerStartOffset = -3,
 				uuid = "5347f6c9-174e-c2d7-bb59-cfade4fb07f0",
 				version = 2,
@@ -2880,6 +2880,11 @@ local tbl =
 									"fcba2014-03d2-49af-8f94-06c7eaefc52a",
 									true,
 								},
+								
+								{
+									"6321efd8-f638-94ed-a55e-921d1982b670",
+									true,
+								},
 							},
 							gVar = "ACR_RikuGNB3_CD",
 							ignoreWeaveRules = true,
@@ -2930,6 +2935,11 @@ local tbl =
 									"00578686-0eca-f182-8830-9c1168cef551",
 									true,
 								},
+								
+								{
+									"59d1a4ae-c4a0-6318-8414-57fd3778106d",
+									true,
+								},
 							},
 							gVar = "ACR_RikuGNB3_CD",
 							ignoreWeaveRules = true,
@@ -2975,12 +2985,36 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\n-- 场上存在 14369，且没有任何一个在盯你\nreturn found\n",
+							name = "DeepBlue not targeting self",
+							uuid = "6321efd8-f638-94ed-a55e-921d1982b670",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
 							name = "RoleMit ST",
 							uuid = "00578686-0eca-f182-8830-9c1168cef551",
 							version = 2,
 						},
 						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14370\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
+							name = "RedHot not targeting self",
+							uuid = "59d1a4ae-c4a0-6318-8414-57fd3778106d",
+							version = 2,
+						},
+						inheritedIndex = 3,
 					},
 				},
 				mechanicTime = 151.6,
@@ -4621,6 +4655,11 @@ local tbl =
 									"fcba2014-03d2-49af-8f94-06c7eaefc52a",
 									true,
 								},
+								
+								{
+									"acbe4393-6895-d107-a2ab-b66bf1b2e54e",
+									true,
+								},
 							},
 							gVar = "ACR_RikuGNB3_CD",
 							ignoreWeaveRules = true,
@@ -4647,6 +4686,11 @@ local tbl =
 								
 								{
 									"00578686-0eca-f182-8830-9c1168cef551",
+									true,
+								},
+								
+								{
+									"5389b04b-4dd9-2ded-8796-053776da0611",
 									true,
 								},
 							},
@@ -4693,12 +4737,36 @@ local tbl =
 						data = 
 						{
 							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\n-- 场上存在 14369，且没有任何一个在盯你\nreturn found\n",
+							name = "DeepBlue not targeting self",
+							uuid = "acbe4393-6895-d107-a2ab-b66bf1b2e54e",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
 							name = "RoleMit ST",
 							uuid = "00578686-0eca-f182-8830-9c1168cef551",
 							version = 2,
 						},
 						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14370\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
+							name = "RedHot not targeting self",
+							uuid = "5389b04b-4dd9-2ded-8796-053776da0611",
+							version = 2,
+						},
+						inheritedIndex = 3,
 					},
 				},
 				mechanicTime = 178.8,
@@ -6044,6 +6112,11 @@ local tbl =
 									"124c9ff2-abc5-0378-87e8-fb1c7b3f7c08",
 									true,
 								},
+								
+								{
+									"6ec56083-6e09-eab2-b441-a362c3aeef47",
+									true,
+								},
 							},
 							gVar = "ACR_RikuGNB3_CD",
 							ignoreWeaveRules = true,
@@ -6070,6 +6143,11 @@ local tbl =
 								
 								{
 									"4e346f03-9320-42f6-a445-9698656276de",
+									true,
+								},
+								
+								{
+									"5e0fe113-0485-0236-bf41-7bc8ad10aba4",
 									true,
 								},
 							},
@@ -6120,6 +6198,18 @@ local tbl =
 					{
 						data = 
 						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14370\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
+							name = "RedHot not targeting self",
+							uuid = "6ec56083-6e09-eab2-b441-a362c3aeef47",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
 							buffCheckType = 4,
 							buffIDList = 
 							{
@@ -6130,6 +6220,18 @@ local tbl =
 							uuid = "4e346f03-9320-42f6-a445-9698656276de",
 							version = 2,
 						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\n-- 场上存在 14369，且没有任何一个在盯你\nreturn found\n",
+							name = "DeepBlue not targeting self",
+							uuid = "5e0fe113-0485-0236-bf41-7bc8ad10aba4",
+							version = 2,
+						},
+						inheritedIndex = 3,
 					},
 				},
 				mechanicTime = 237.7,
@@ -7381,7 +7483,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 73,
 				timerEndOffset = 5,
-				timerStartOffset = 0.10000000149012,
+				timerStartOffset = 0.5,
 				uuid = "b813cff3-38b0-3084-a540-001fe0918c6e",
 				version = 2,
 			},
@@ -10388,6 +10490,11 @@ local tbl =
 									"124c9ff2-abc5-0378-87e8-fb1c7b3f7c08",
 									true,
 								},
+								
+								{
+									"b961553f-947d-bf53-b004-dd58b3c1e06f",
+									true,
+								},
 							},
 							gVar = "ACR_RikuGNB3_CD",
 							ignoreWeaveRules = true,
@@ -10414,6 +10521,11 @@ local tbl =
 								
 								{
 									"4e346f03-9320-42f6-a445-9698656276de",
+									true,
+								},
+								
+								{
+									"6a42a22b-3e48-9b31-8687-00425fb048a1",
 									true,
 								},
 							},
@@ -10464,6 +10576,18 @@ local tbl =
 					{
 						data = 
 						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14370\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
+							name = "RedHot not targeting self",
+							uuid = "b961553f-947d-bf53-b004-dd58b3c1e06f",
+							version = 2,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
 							buffCheckType = 4,
 							buffIDList = 
 							{
@@ -10474,6 +10598,18 @@ local tbl =
 							uuid = "4e346f03-9320-42f6-a445-9698656276de",
 							version = 2,
 						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\n-- 场上存在 14369，且没有任何一个在盯你\nreturn found\n",
+							name = "DeepBlue not targeting self",
+							uuid = "6a42a22b-3e48-9b31-8687-00425fb048a1",
+							version = 2,
+						},
+						inheritedIndex = 4,
 					},
 				},
 				mechanicTime = 460.3,
@@ -11371,7 +11507,6 @@ local tbl =
 						{
 							actionID = 7386,
 							allowInterrupt = true,
-							atomicPriority = true,
 							conditions = 
 							{
 								
@@ -11414,7 +11549,6 @@ local tbl =
 						{
 							actionID = 16461,
 							allowInterrupt = true,
-							atomicPriority = true,
 							conditions = 
 							{
 								
@@ -11457,7 +11591,6 @@ local tbl =
 						{
 							actionID = 36926,
 							allowInterrupt = true,
-							atomicPriority = true,
 							conditions = 
 							{
 								
@@ -11500,7 +11633,6 @@ local tbl =
 						{
 							actionID = 36934,
 							allowInterrupt = true,
-							atomicPriority = true,
 							conditions = 
 							{
 								
@@ -11543,7 +11675,6 @@ local tbl =
 						{
 							actionID = 7386,
 							allowInterrupt = true,
-							atomicPriority = true,
 							conditions = 
 							{
 								
@@ -11586,7 +11717,6 @@ local tbl =
 						{
 							actionID = 16461,
 							allowInterrupt = true,
-							atomicPriority = true,
 							conditions = 
 							{
 								
@@ -11629,7 +11759,6 @@ local tbl =
 						{
 							actionID = 36926,
 							allowInterrupt = true,
-							atomicPriority = true,
 							conditions = 
 							{
 								
@@ -11672,7 +11801,6 @@ local tbl =
 						{
 							actionID = 36934,
 							allowInterrupt = true,
-							atomicPriority = true,
 							conditions = 
 							{
 								
@@ -12625,6 +12753,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 544.3,
 				name = "Instant Dash",
 				timeRange = true,
