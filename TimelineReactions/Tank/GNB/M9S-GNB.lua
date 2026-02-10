@@ -1735,6 +1735,178 @@ local tbl =
 			inheritedIndex = 1,
 		},
 	},
+	[53] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 7386,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"a2808b56-0f85-b9d8-a913-85c86f4f67d8",
+									true,
+								},
+								
+								{
+									"d01929a5-f58c-75d1-8a2a-b6905fab0123",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_AOE",
+							gVarValue = 2,
+							holdActionCharges = 3,
+							holdActionDuration = 9999,
+							holdActionID = 7386,
+							ignoreWeaveRules = true,
+							targetContentID = 14300,
+							targetType = "ContentID",
+							uuid = "63d1d092-0825-7853-b6a6-10848e38ddcf",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "Gunbreaker",
+							uuid = "a2808b56-0f85-b9d8-a913-85c86f4f67d8",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "-- 没有目标直接 false\nif not Player or not Player:GetTarget() then\n    return false\nend\n\nlocal target = Player:GetTarget()\n\n-- 确保目标有效\nif not target or not target.pos then\n    return false\nend\n\n-- 计算平面距离（XZ）\nlocal dx = Player.pos.x - target.pos.x\nlocal dz = Player.pos.z - target.pos.z\nlocal distance = math.sqrt(dx * dx + dz * dz)\n\n-- 大于 3 米时返回 true\nreturn distance > 3.0\n",
+							name = "Out of Range",
+							uuid = "d01929a5-f58c-75d1-8a2a-b6905fab0123",
+							version = 2,
+						},
+					},
+				},
+				mechanicTime = 190.3,
+				name = "Hold Jumps",
+				timelineIndex = 53,
+				timerEndOffset = 5,
+				timerOffset = -16,
+				timerStartOffset = -3.7999999523163,
+				uuid = "f7a92e83-ab57-eed9-883a-1cc95dd76058",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 36934,
+							allowInterrupt = true,
+							atomicPriority = true,
+							conditions = 
+							{
+								
+								{
+									"e96ce2b2-52c5-f379-98be-3c875d5cf184",
+									true,
+								},
+								
+								{
+									"a539bca6-5545-91ca-8a96-18ed9a043a9c",
+									true,
+								},
+								
+								{
+									"77ebf88d-01de-64b7-a2f9-6d4f2bee4acc",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_AOE",
+							holdActionID = 36934,
+							ignoreWeaveRules = true,
+							targetContentID = 14300,
+							targetType = "ContentID",
+							uuid = "113b73e5-ee70-ba6a-b180-92f6fc3007db",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							dequeueIfLuaFalse = true,
+							eventArgType = 2,
+							eventSpellID = 45970,
+							uuid = "e96ce2b2-52c5-f379-98be-3c875d5cf184",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 9,
+							dequeueIfLuaFalse = true,
+							partyTargetType = "Event Target",
+							uuid = "a539bca6-5545-91ca-8a96-18ed9a043a9c",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "Gunbreaker",
+							uuid = "77ebf88d-01de-64b7-a2f9-6d4f2bee4acc",
+							version = 2,
+						},
+					},
+				},
+				eventType = 2,
+				mechanicTime = 190.3,
+				name = "Stop Holding Jumps",
+				timeRange = true,
+				timelineIndex = 53,
+				timerEndOffset = 15,
+				timerOffset = -15,
+				timerStartOffset = -15,
+				uuid = "814a7b77-89e6-d0a1-9031-f7ec97e8eac0",
+				version = 2,
+			},
+		},
+	},
 	[54] = 
 	{
 		
@@ -11842,12 +12014,12 @@ local tbl =
 	inheritedProfiles = 
 	{
 		"Tank\\M9S-TANKGENERAL",
-		"store\\anyone\\savage6\\m9s\\modules\\core",
-		"store\\anyone\\savage6\\m9s\\modules\\draws",
-		"store\\anyone\\savage6\\m9s\\modules\\optimization",
+		"store\\anyone\\savage6\\m9s\\modules\\core_old",
+		"store\\anyone\\savage6\\m9s\\modules\\draws_old",
+		"store\\anyone\\savage6\\m9s\\modules\\optimization_old",
 	},
-	mapID = 1321,
-	version = 2,
+	timelineName = "r9s",
+	version = "1.0.2",
 }
 
 

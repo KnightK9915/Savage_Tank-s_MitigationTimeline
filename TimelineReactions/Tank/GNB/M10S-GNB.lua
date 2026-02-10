@@ -2944,23 +2944,6 @@ local tbl =
 			inheritedIndex = 1,
 		},
 	},
-	[36] = 
-	{
-		
-		{
-			data = 
-			{
-				name = "[Opti] Retarget",
-				uuid = "a9b884e3-324a-bfb9-86cf-cc578dae077d",
-				version = 2,
-			},
-			inheritedObjectUUID = "f00060f0-f978-c897-9636-9ecd4ed22297",
-			inheritedOverwrites = 
-			{
-				enabled = false,
-			},
-		},
-	},
 	[37] = 
 	{
 		
@@ -8386,12 +8369,12 @@ local tbl =
 	inheritedProfiles = 
 	{
 		"Tank\\M10S-TANKGENERL",
-		"store\\anyone\\savage6\\m10s\\modules\\core",
-		"store\\anyone\\savage6\\m10s\\modules\\draws",
-		"store\\anyone\\savage6\\m10s\\modules\\optimization",
+		"store\\anyone\\savage6\\m10s\\modules\\core_old",
+		"store\\anyone\\savage6\\m10s\\modules\\draws_old",
+		"store\\anyone\\savage6\\m10s\\modules\\optimization_old",
 	},
-	mapID = 1323,
-	version = 2,
+	timelineName = "r10s",
+	version = "1.0.2",
 }
 
 
