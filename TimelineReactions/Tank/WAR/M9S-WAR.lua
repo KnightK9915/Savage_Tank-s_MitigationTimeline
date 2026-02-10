@@ -13899,12 +13899,12 @@ local tbl =
 	inheritedProfiles = 
 	{
 		"Tank\\M9S-TANKGENERAL",
-		"store\\anyone\\savage6\\m9s\\modules\\core",
-		"store\\anyone\\savage6\\m9s\\modules\\draws",
-		"store\\anyone\\savage6\\m9s\\modules\\optimization",
+		"store\\anyone\\savage6\\m9s\\modules\\core_old",
+		"store\\anyone\\savage6\\m9s\\modules\\draws_old",
+		"store\\anyone\\savage6\\m9s\\modules\\optimization_old",
 	},
-	mapID = 1321,
-	version = 2,
+	timelineName = "r9s",
+	version = "1.0.2",
 }
 
 
