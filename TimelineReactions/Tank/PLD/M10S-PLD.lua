@@ -2351,7 +2351,7 @@ local tbl =
 				uuid = "7cb3b325-99de-2c7b-8209-b9750b83647f",
 				version = 2,
 			},
-			inheritedIndex = 10,
+			inheritedIndex = 8,
 		},
 		
 		{
@@ -2403,6 +2403,7 @@ local tbl =
 				uuid = "f4f2d82b-97a5-7072-9d19-0d2fb138e276",
 				version = 2,
 			},
+			inheritedIndex = 9,
 		},
 	},
 	[28] = 
@@ -7345,12 +7346,12 @@ local tbl =
 	inheritedProfiles = 
 	{
 		"Tank\\M10S-TANKGENERL",
-		"store\\anyone\\savage6\\m10s\\modules\\core",
-		"store\\anyone\\savage6\\m10s\\modules\\draws",
-		"store\\anyone\\savage6\\m10s\\modules\\optimization",
+		"store\\anyone\\savage6\\m10s\\modules\\core_old",
+		"store\\anyone\\savage6\\m10s\\modules\\draws_old",
+		"store\\anyone\\savage6\\m10s\\modules\\optimization_old",
 	},
-	mapID = 1323,
-	version = 2,
+	timelineName = "r10s",
+	version = "1.0.2",
 }
 
 
