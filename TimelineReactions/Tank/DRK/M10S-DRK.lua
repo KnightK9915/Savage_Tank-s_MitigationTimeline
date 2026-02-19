@@ -1605,6 +1605,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 90.7,
 				name = "TBN (15)",
 				timeRange = true,
