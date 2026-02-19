@@ -1291,8 +1291,9 @@ local tbl =
 						data = 
 						{
 							category = "Event",
+							dequeueIfLuaFalse = true,
 							eventArgType = 2,
-							eventSpellID = 45951,
+							eventSpellID = 45952,
 							uuid = "1bc285fc-353c-220b-a7e4-c97723d9a72c",
 							version = 2,
 						},
@@ -5216,8 +5217,9 @@ local tbl =
 						data = 
 						{
 							category = "Event",
+							dequeueIfLuaFalse = true,
 							eventArgType = 2,
-							eventSpellID = 45951,
+							eventSpellID = 45952,
 							uuid = "1bc285fc-353c-220b-a7e4-c97723d9a72c",
 							version = 2,
 						},
@@ -13117,8 +13119,9 @@ local tbl =
 						data = 
 						{
 							category = "Event",
+							dequeueIfLuaFalse = true,
 							eventArgType = 2,
-							eventSpellID = 45951,
+							eventSpellID = 45952,
 							uuid = "1bc285fc-353c-220b-a7e4-c97723d9a72c",
 							version = 2,
 						},
