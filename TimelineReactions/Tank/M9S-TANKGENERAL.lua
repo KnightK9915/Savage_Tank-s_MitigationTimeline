@@ -1065,6 +1065,16 @@ local tbl =
 									"fd8e8925-97c3-173e-8e41-dc1a125096ab",
 									true,
 								},
+								
+								{
+									"1bc285fc-353c-220b-a7e4-c97723d9a72c",
+									true,
+								},
+								
+								{
+									"7111472b-f495-1f67-a5e8-ee0107b5bcaf",
+									true,
+								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -1096,6 +1106,16 @@ local tbl =
 								
 								{
 									"fd8e8925-97c3-173e-8e41-dc1a125096ab",
+									true,
+								},
+								
+								{
+									"1bc285fc-353c-220b-a7e4-c97723d9a72c",
+									true,
+								},
+								
+								{
+									"7111472b-f495-1f67-a5e8-ee0107b5bcaf",
 									true,
 								},
 							},
@@ -1131,6 +1151,16 @@ local tbl =
 									"fd8e8925-97c3-173e-8e41-dc1a125096ab",
 									true,
 								},
+								
+								{
+									"1bc285fc-353c-220b-a7e4-c97723d9a72c",
+									true,
+								},
+								
+								{
+									"7111472b-f495-1f67-a5e8-ee0107b5bcaf",
+									true,
+								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -1162,6 +1192,16 @@ local tbl =
 								
 								{
 									"fd8e8925-97c3-173e-8e41-dc1a125096ab",
+									true,
+								},
+								
+								{
+									"1bc285fc-353c-220b-a7e4-c97723d9a72c",
+									true,
+								},
+								
+								{
+									"7111472b-f495-1f67-a5e8-ee0107b5bcaf",
 									true,
 								},
 							},
@@ -1246,13 +1286,36 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 45951,
+							uuid = "1bc285fc-353c-220b-a7e4-c97723d9a72c",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 9,
+							partyTargetType = "Event Target",
+							uuid = "7111472b-f495-1f67-a5e8-ee0107b5bcaf",
+							version = 2,
+						},
+					},
 				},
+				eventType = 2,
 				mechanicTime = 20.5,
 				name = "Instant Dash",
 				timeRange = true,
 				timelineIndex = 3,
 				timerEndOffset = 5,
-				timerStartOffset = 0.20000000298023,
+				timerStartOffset = -1,
 				uuid = "5753207b-95a0-6ab3-a4b3-75f36143b421",
 				version = 2,
 			},
@@ -4927,6 +4990,16 @@ local tbl =
 									"fd8e8925-97c3-173e-8e41-dc1a125096ab",
 									true,
 								},
+								
+								{
+									"1bc285fc-353c-220b-a7e4-c97723d9a72c",
+									true,
+								},
+								
+								{
+									"7111472b-f495-1f67-a5e8-ee0107b5bcaf",
+									true,
+								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -4958,6 +5031,16 @@ local tbl =
 								
 								{
 									"fd8e8925-97c3-173e-8e41-dc1a125096ab",
+									true,
+								},
+								
+								{
+									"1bc285fc-353c-220b-a7e4-c97723d9a72c",
+									true,
+								},
+								
+								{
+									"7111472b-f495-1f67-a5e8-ee0107b5bcaf",
 									true,
 								},
 							},
@@ -4993,6 +5076,16 @@ local tbl =
 									"fd8e8925-97c3-173e-8e41-dc1a125096ab",
 									true,
 								},
+								
+								{
+									"1bc285fc-353c-220b-a7e4-c97723d9a72c",
+									true,
+								},
+								
+								{
+									"7111472b-f495-1f67-a5e8-ee0107b5bcaf",
+									true,
+								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -5024,6 +5117,16 @@ local tbl =
 								
 								{
 									"fd8e8925-97c3-173e-8e41-dc1a125096ab",
+									true,
+								},
+								
+								{
+									"1bc285fc-353c-220b-a7e4-c97723d9a72c",
+									true,
+								},
+								
+								{
+									"7111472b-f495-1f67-a5e8-ee0107b5bcaf",
 									true,
 								},
 							},
@@ -5108,16 +5211,40 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 45951,
+							uuid = "1bc285fc-353c-220b-a7e4-c97723d9a72c",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 9,
+							partyTargetType = "Event Target",
+							uuid = "7111472b-f495-1f67-a5e8-ee0107b5bcaf",
+							version = 2,
+						},
+					},
 				},
+				eventType = 2,
 				mechanicTime = 219.7,
 				name = "Instant Dash",
 				timeRange = true,
 				timelineIndex = 58,
 				timerEndOffset = 5,
-				timerStartOffset = 0.20000000298023,
-				uuid = "b650a605-929b-b590-9ed9-12137e074150",
+				timerStartOffset = -1,
+				uuid = "53209e0e-0ab6-6a6e-84e2-85bc243b1fe6",
 				version = 2,
 			},
+			inheritedIndex = 3,
 		},
 	},
 	[68] = 
@@ -12764,6 +12891,16 @@ local tbl =
 									"fd8e8925-97c3-173e-8e41-dc1a125096ab",
 									true,
 								},
+								
+								{
+									"1bc285fc-353c-220b-a7e4-c97723d9a72c",
+									true,
+								},
+								
+								{
+									"7111472b-f495-1f67-a5e8-ee0107b5bcaf",
+									true,
+								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -12795,6 +12932,16 @@ local tbl =
 								
 								{
 									"fd8e8925-97c3-173e-8e41-dc1a125096ab",
+									true,
+								},
+								
+								{
+									"1bc285fc-353c-220b-a7e4-c97723d9a72c",
+									true,
+								},
+								
+								{
+									"7111472b-f495-1f67-a5e8-ee0107b5bcaf",
 									true,
 								},
 							},
@@ -12830,6 +12977,16 @@ local tbl =
 									"fd8e8925-97c3-173e-8e41-dc1a125096ab",
 									true,
 								},
+								
+								{
+									"1bc285fc-353c-220b-a7e4-c97723d9a72c",
+									true,
+								},
+								
+								{
+									"7111472b-f495-1f67-a5e8-ee0107b5bcaf",
+									true,
+								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -12861,6 +13018,16 @@ local tbl =
 								
 								{
 									"fd8e8925-97c3-173e-8e41-dc1a125096ab",
+									true,
+								},
+								
+								{
+									"1bc285fc-353c-220b-a7e4-c97723d9a72c",
+									true,
+								},
+								
+								{
+									"7111472b-f495-1f67-a5e8-ee0107b5bcaf",
 									true,
 								},
 							},
@@ -12945,16 +13112,40 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 45951,
+							uuid = "1bc285fc-353c-220b-a7e4-c97723d9a72c",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 9,
+							partyTargetType = "Event Target",
+							uuid = "7111472b-f495-1f67-a5e8-ee0107b5bcaf",
+							version = 2,
+						},
+					},
 				},
+				eventType = 2,
 				mechanicTime = 936.1,
 				name = "Instant Dash",
 				timeRange = true,
 				timelineIndex = 187,
 				timerEndOffset = 5,
-				timerStartOffset = 0.20000000298023,
-				uuid = "f8d6c57f-13c3-182b-8ad2-a259c66f4aa7",
+				timerStartOffset = -1,
+				uuid = "ef4d00e6-c111-52e5-934f-74a458e8888e",
 				version = 2,
 			},
+			inheritedIndex = 3,
 		},
 	},
 	[189] = 
@@ -14534,8 +14725,8 @@ local tbl =
 	inheritedProfiles = 
 	{
 	},
-	mapID = 1321,
-	version = 2,
+	timelineName = "r9s",
+	version = "1.0.2",
 }
 
 
