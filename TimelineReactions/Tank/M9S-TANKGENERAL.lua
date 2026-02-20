@@ -920,6 +920,11 @@ local tbl =
 									"194d7b81-ee5b-efda-ae7c-d1f30dee0c87",
 									true,
 								},
+								
+								{
+									"7f43925c-8c8f-fdc2-8e4b-13a46806bed6",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_Hotbar_ShirkOT",
@@ -952,6 +957,20 @@ local tbl =
 							name = "RoleMit ST",
 							uuid = "194d7b81-ee5b-efda-ae7c-d1f30dee0c87",
 							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "7f43925c-8c8f-fdc2-8e4b-13a46806bed6",
+							version = 2,
+						},
+						inheritedOverwrites = 
+						{
 						},
 					},
 				},
@@ -988,6 +1007,11 @@ local tbl =
 									"b53967a3-5e68-2cd0-b3e3-60fb00c1556b",
 									true,
 								},
+								
+								{
+									"0f45c909-5577-bf4f-85d9-1cb3f3941cf2",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_Hotbar_Provoke",
@@ -1021,6 +1045,20 @@ local tbl =
 							name = "RoleMit MT",
 							uuid = "b53967a3-5e68-2cd0-b3e3-60fb00c1556b",
 							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "0f45c909-5577-bf4f-85d9-1cb3f3941cf2",
+							version = 2,
+						},
+						inheritedOverwrites = 
+						{
 						},
 					},
 				},
@@ -1075,6 +1113,11 @@ local tbl =
 									"7111472b-f495-1f67-a5e8-ee0107b5bcaf",
 									true,
 								},
+								
+								{
+									"de1b8b64-41b3-be5e-b190-6bf9dd8ecb0f",
+									true,
+								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -1116,6 +1159,11 @@ local tbl =
 								
 								{
 									"7111472b-f495-1f67-a5e8-ee0107b5bcaf",
+									true,
+								},
+								
+								{
+									"de1b8b64-41b3-be5e-b190-6bf9dd8ecb0f",
 									true,
 								},
 							},
@@ -1161,6 +1209,11 @@ local tbl =
 									"7111472b-f495-1f67-a5e8-ee0107b5bcaf",
 									true,
 								},
+								
+								{
+									"de1b8b64-41b3-be5e-b190-6bf9dd8ecb0f",
+									true,
+								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -1202,6 +1255,11 @@ local tbl =
 								
 								{
 									"7111472b-f495-1f67-a5e8-ee0107b5bcaf",
+									true,
+								},
+								
+								{
+									"de1b8b64-41b3-be5e-b190-6bf9dd8ecb0f",
 									true,
 								},
 							},
@@ -1291,7 +1349,6 @@ local tbl =
 						data = 
 						{
 							category = "Event",
-							dequeueIfLuaFalse = true,
 							eventArgType = 2,
 							eventSpellID = 45952,
 							uuid = "1bc285fc-353c-220b-a7e4-c97723d9a72c",
@@ -1307,6 +1364,20 @@ local tbl =
 							partyTargetType = "Event Target",
 							uuid = "7111472b-f495-1f67-a5e8-ee0107b5bcaf",
 							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "de1b8b64-41b3-be5e-b190-6bf9dd8ecb0f",
+							version = 2,
+						},
+						inheritedOverwrites = 
+						{
 						},
 					},
 				},
@@ -2581,6 +2652,11 @@ local tbl =
 									"b53967a3-5e68-2cd0-b3e3-60fb00c1556b",
 									true,
 								},
+								
+								{
+									"90bc8770-6a14-d74e-a6fd-6bcce635cb7c",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_Hotbar_Provoke",
@@ -2626,6 +2702,20 @@ local tbl =
 							name = "RoleMit MT",
 							uuid = "b53967a3-5e68-2cd0-b3e3-60fb00c1556b",
 							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "90bc8770-6a14-d74e-a6fd-6bcce635cb7c",
+							version = 2,
+						},
+						inheritedOverwrites = 
+						{
 						},
 					},
 				},
@@ -3109,19 +3199,19 @@ local tbl =
 								},
 								
 								{
-									"5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+									"7286744f-688c-9195-941e-46d65189cc2c",
 									true,
 								},
 								
 								{
-									"7286744f-688c-9195-941e-46d65189cc2c",
+									"2ec753d8-6263-347d-81e4-a4b09d3dfb17",
 									true,
 								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuPLD3_CD",
 							ignoreWeaveRules = true,
-							targetType = "Current Target",
+							targetType = "Detection Target",
 							uuid = "c9c9cc18-aa2e-c48a-bebe-6ab6f4e7c114",
 							version = 2.1,
 						},
@@ -3145,16 +3235,6 @@ local tbl =
 					{
 						data = 
 						{
-							buffCheckType = 2,
-							buffID = 1193,
-							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
-						},
-					},
-					
-					{
-						data = 
-						{
 							buffCheckType = 3,
 							category = "Lua",
 							comparator = 2,
@@ -3166,6 +3246,38 @@ local tbl =
 							version = 2,
 						},
 						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							conditions = 
+							{
+								
+								{
+									"5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+									true,
+								},
+							},
+							filterTargetType = "ContentID",
+							partyTargetContentID = 14300,
+							uuid = "2ec753d8-6263-347d-81e4-a4b09d3dfb17",
+							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1193,
+							category = "Party",
+							partyTargetType = "Detection Target",
+							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+							version = 2,
+						},
+						inheritedIndex = 4,
 					},
 				},
 				mechanicTime = 137.9,
@@ -3217,6 +3329,11 @@ local tbl =
 									"614059bc-bcf6-dc29-bcc3-5a07e597df35",
 									true,
 								},
+								
+								{
+									"90d95de7-b286-c07e-ae3e-570bd4a710fa",
+									true,
+								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -3252,6 +3369,11 @@ local tbl =
 								
 								{
 									"614059bc-bcf6-dc29-bcc3-5a07e597df35",
+									true,
+								},
+								
+								{
+									"90d95de7-b286-c07e-ae3e-570bd4a710fa",
 									true,
 								},
 							},
@@ -3291,6 +3413,11 @@ local tbl =
 									"614059bc-bcf6-dc29-bcc3-5a07e597df35",
 									true,
 								},
+								
+								{
+									"90d95de7-b286-c07e-ae3e-570bd4a710fa",
+									true,
+								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -3326,6 +3453,11 @@ local tbl =
 								
 								{
 									"614059bc-bcf6-dc29-bcc3-5a07e597df35",
+									true,
+								},
+								
+								{
+									"90d95de7-b286-c07e-ae3e-570bd4a710fa",
 									true,
 								},
 							},
@@ -3419,6 +3551,20 @@ local tbl =
 							partyTargetContentID = 14300,
 							uuid = "614059bc-bcf6-dc29-bcc3-5a07e597df35",
 							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "90d95de7-b286-c07e-ae3e-570bd4a710fa",
+							version = 2,
+						},
+						inheritedOverwrites = 
+						{
 						},
 					},
 				},
@@ -5001,6 +5147,11 @@ local tbl =
 									"7111472b-f495-1f67-a5e8-ee0107b5bcaf",
 									true,
 								},
+								
+								{
+									"de1b8b64-41b3-be5e-b190-6bf9dd8ecb0f",
+									true,
+								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -5042,6 +5193,11 @@ local tbl =
 								
 								{
 									"7111472b-f495-1f67-a5e8-ee0107b5bcaf",
+									true,
+								},
+								
+								{
+									"de1b8b64-41b3-be5e-b190-6bf9dd8ecb0f",
 									true,
 								},
 							},
@@ -5087,6 +5243,11 @@ local tbl =
 									"7111472b-f495-1f67-a5e8-ee0107b5bcaf",
 									true,
 								},
+								
+								{
+									"de1b8b64-41b3-be5e-b190-6bf9dd8ecb0f",
+									true,
+								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -5128,6 +5289,11 @@ local tbl =
 								
 								{
 									"7111472b-f495-1f67-a5e8-ee0107b5bcaf",
+									true,
+								},
+								
+								{
+									"de1b8b64-41b3-be5e-b190-6bf9dd8ecb0f",
 									true,
 								},
 							},
@@ -5217,7 +5383,6 @@ local tbl =
 						data = 
 						{
 							category = "Event",
-							dequeueIfLuaFalse = true,
 							eventArgType = 2,
 							eventSpellID = 45952,
 							uuid = "1bc285fc-353c-220b-a7e4-c97723d9a72c",
@@ -5235,6 +5400,17 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "de1b8b64-41b3-be5e-b190-6bf9dd8ecb0f",
+							version = 2,
+						},
+					},
 				},
 				eventType = 2,
 				mechanicTime = 219.7,
@@ -5243,7 +5419,7 @@ local tbl =
 				timelineIndex = 58,
 				timerEndOffset = 5,
 				timerStartOffset = -1,
-				uuid = "53209e0e-0ab6-6a6e-84e2-85bc243b1fe6",
+				uuid = "ee1f9c20-749d-485e-a624-f0930fb485aa",
 				version = 2,
 			},
 			inheritedIndex = 3,
@@ -6355,6 +6531,11 @@ local tbl =
 									"614059bc-bcf6-dc29-bcc3-5a07e597df35",
 									true,
 								},
+								
+								{
+									"990281ff-4300-e228-b439-c977013bd72a",
+									true,
+								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -6390,6 +6571,11 @@ local tbl =
 								
 								{
 									"614059bc-bcf6-dc29-bcc3-5a07e597df35",
+									true,
+								},
+								
+								{
+									"990281ff-4300-e228-b439-c977013bd72a",
 									true,
 								},
 							},
@@ -6429,6 +6615,11 @@ local tbl =
 									"614059bc-bcf6-dc29-bcc3-5a07e597df35",
 									true,
 								},
+								
+								{
+									"990281ff-4300-e228-b439-c977013bd72a",
+									true,
+								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -6464,6 +6655,11 @@ local tbl =
 								
 								{
 									"614059bc-bcf6-dc29-bcc3-5a07e597df35",
+									true,
+								},
+								
+								{
+									"990281ff-4300-e228-b439-c977013bd72a",
 									true,
 								},
 							},
@@ -6557,6 +6753,20 @@ local tbl =
 							partyTargetContentID = 14300,
 							uuid = "614059bc-bcf6-dc29-bcc3-5a07e597df35",
 							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "990281ff-4300-e228-b439-c977013bd72a",
+							version = 2,
+						},
+						inheritedOverwrites = 
+						{
 						},
 					},
 				},
@@ -12903,6 +13113,11 @@ local tbl =
 									"7111472b-f495-1f67-a5e8-ee0107b5bcaf",
 									true,
 								},
+								
+								{
+									"de1b8b64-41b3-be5e-b190-6bf9dd8ecb0f",
+									true,
+								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -12944,6 +13159,11 @@ local tbl =
 								
 								{
 									"7111472b-f495-1f67-a5e8-ee0107b5bcaf",
+									true,
+								},
+								
+								{
+									"de1b8b64-41b3-be5e-b190-6bf9dd8ecb0f",
 									true,
 								},
 							},
@@ -12989,6 +13209,11 @@ local tbl =
 									"7111472b-f495-1f67-a5e8-ee0107b5bcaf",
 									true,
 								},
+								
+								{
+									"de1b8b64-41b3-be5e-b190-6bf9dd8ecb0f",
+									true,
+								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -13030,6 +13255,11 @@ local tbl =
 								
 								{
 									"7111472b-f495-1f67-a5e8-ee0107b5bcaf",
+									true,
+								},
+								
+								{
+									"de1b8b64-41b3-be5e-b190-6bf9dd8ecb0f",
 									true,
 								},
 							},
@@ -13119,7 +13349,6 @@ local tbl =
 						data = 
 						{
 							category = "Event",
-							dequeueIfLuaFalse = true,
 							eventArgType = 2,
 							eventSpellID = 45952,
 							uuid = "1bc285fc-353c-220b-a7e4-c97723d9a72c",
@@ -13137,6 +13366,17 @@ local tbl =
 							version = 2,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "de1b8b64-41b3-be5e-b190-6bf9dd8ecb0f",
+							version = 2,
+						},
+					},
 				},
 				eventType = 2,
 				mechanicTime = 936.1,
@@ -13145,7 +13385,7 @@ local tbl =
 				timelineIndex = 187,
 				timerEndOffset = 5,
 				timerStartOffset = -1,
-				uuid = "ef4d00e6-c111-52e5-934f-74a458e8888e",
+				uuid = "a88d033e-c2ad-e9c7-9b2d-fb7b0c66eb10",
 				version = 2,
 			},
 			inheritedIndex = 3,
@@ -13187,6 +13427,11 @@ local tbl =
 									"614059bc-bcf6-dc29-bcc3-5a07e597df35",
 									true,
 								},
+								
+								{
+									"702125cc-1736-2afd-b257-11f86c765463",
+									true,
+								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -13222,6 +13467,11 @@ local tbl =
 								
 								{
 									"614059bc-bcf6-dc29-bcc3-5a07e597df35",
+									true,
+								},
+								
+								{
+									"702125cc-1736-2afd-b257-11f86c765463",
 									true,
 								},
 							},
@@ -13261,6 +13511,11 @@ local tbl =
 									"614059bc-bcf6-dc29-bcc3-5a07e597df35",
 									true,
 								},
+								
+								{
+									"702125cc-1736-2afd-b257-11f86c765463",
+									true,
+								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -13296,6 +13551,11 @@ local tbl =
 								
 								{
 									"614059bc-bcf6-dc29-bcc3-5a07e597df35",
+									true,
+								},
+								
+								{
+									"702125cc-1736-2afd-b257-11f86c765463",
 									true,
 								},
 							},
@@ -13389,6 +13649,20 @@ local tbl =
 							partyTargetContentID = 14300,
 							uuid = "614059bc-bcf6-dc29-bcc3-5a07e597df35",
 							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "702125cc-1736-2afd-b257-11f86c765463",
+							version = 2,
+						},
+						inheritedOverwrites = 
+						{
 						},
 					},
 				},
@@ -13974,6 +14248,11 @@ local tbl =
 									"614059bc-bcf6-dc29-bcc3-5a07e597df35",
 									true,
 								},
+								
+								{
+									"0dfd0b93-dd43-6ebb-aa0e-fe3faf1394b1",
+									true,
+								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -14009,6 +14288,11 @@ local tbl =
 								
 								{
 									"614059bc-bcf6-dc29-bcc3-5a07e597df35",
+									true,
+								},
+								
+								{
+									"0dfd0b93-dd43-6ebb-aa0e-fe3faf1394b1",
 									true,
 								},
 							},
@@ -14048,6 +14332,11 @@ local tbl =
 									"614059bc-bcf6-dc29-bcc3-5a07e597df35",
 									true,
 								},
+								
+								{
+									"0dfd0b93-dd43-6ebb-aa0e-fe3faf1394b1",
+									true,
+								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
@@ -14083,6 +14372,11 @@ local tbl =
 								
 								{
 									"614059bc-bcf6-dc29-bcc3-5a07e597df35",
+									true,
+								},
+								
+								{
+									"0dfd0b93-dd43-6ebb-aa0e-fe3faf1394b1",
 									true,
 								},
 							},
@@ -14176,6 +14470,20 @@ local tbl =
 							partyTargetContentID = 14300,
 							uuid = "614059bc-bcf6-dc29-bcc3-5a07e597df35",
 							version = 2,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "0dfd0b93-dd43-6ebb-aa0e-fe3faf1394b1",
+							version = 2,
+						},
+						inheritedOverwrites = 
+						{
 						},
 					},
 				},
