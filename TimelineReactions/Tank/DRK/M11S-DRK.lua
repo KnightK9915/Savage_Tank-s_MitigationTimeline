@@ -1150,7 +1150,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 8,
 				timerOffset = -4,
-				timerStartOffset = -2.5,
+				timerStartOffset = -1.5,
 				uuid = "c6786b83-0bcd-c170-b211-24f8cb244c4d",
 				version = 2,
 			},
@@ -1300,7 +1300,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 10,
 				timerOffset = -4,
-				timerStartOffset = -2.5,
+				timerStartOffset = -1.5,
 				uuid = "0a546dd0-ac12-f79a-b8c7-cec223d3cace",
 				version = 2,
 			},
@@ -1450,7 +1450,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 12,
 				timerOffset = -4,
-				timerStartOffset = -2.5,
+				timerStartOffset = -1.5,
 				uuid = "48a80da9-e83e-1940-94e0-47e8d5cffffc",
 				version = 2,
 			},
@@ -1763,63 +1763,11 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 21,
 				timerOffset = -4,
-				timerStartOffset = -2.5,
+				timerStartOffset = -1.5,
 				uuid = "303d0ccb-7ef3-6787-aaea-9ddeda6072c7",
 				version = 2,
 			},
 			inheritedIndex = 1,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "Alert",
-							alertTTS = true,
-							alertText = "11111",
-							conditions = 
-							{
-								
-								{
-									"06dc6de8-68e0-0e50-8ff5-b174bf95d314",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							uuid = "310a0398-4757-efee-951f-6ac5ba18fa75",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return Argus.getEntityModel(data.RKM11SWeapon3.ordered[1]) == 19185",
-							name = "Get weapon model",
-							uuid = "06dc6de8-68e0-0e50-8ff5-b174bf95d314",
-							version = 3,
-						},
-					},
-				},
-				mechanicTime = 94.248,
-				name = "allert",
-				timeRange = true,
-				timelineIndex = 21,
-				timerOffset = -4,
-				timerStartOffset = -2.5,
-				uuid = "aee74b28-af0b-40a6-bff2-76518279a9a7",
-				version = 2,
-			},
-			inheritedIndex = 2,
 		},
 	},
 	[23] = 
@@ -1965,63 +1913,11 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 23,
 				timerOffset = -4,
-				timerStartOffset = -2.5,
+				timerStartOffset = -1.5,
 				uuid = "bd42e260-f1cc-3773-b2de-510d2d806d92",
 				version = 2,
 			},
 			inheritedIndex = 1,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "Alert",
-							alertTTS = true,
-							alertText = "11111",
-							conditions = 
-							{
-								
-								{
-									"06dc6de8-68e0-0e50-8ff5-b174bf95d314",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							uuid = "310a0398-4757-efee-951f-6ac5ba18fa75",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return Argus.getEntityModel(data.RKM11SWeapon3.ordered[2]) == 19185",
-							name = "Get weapon model",
-							uuid = "06dc6de8-68e0-0e50-8ff5-b174bf95d314",
-							version = 3,
-						},
-					},
-				},
-				mechanicTime = 99.263,
-				name = "allert",
-				timeRange = true,
-				timelineIndex = 23,
-				timerOffset = -4,
-				timerStartOffset = -2.5,
-				uuid = "133305d5-df98-5a3e-8de0-8c4e5a5796da",
-				version = 2,
-			},
-			inheritedIndex = 2,
 		},
 	},
 	[25] = 
@@ -2167,63 +2063,11 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 25,
 				timerOffset = -4,
-				timerStartOffset = -2.5,
+				timerStartOffset = -1.5,
 				uuid = "a07cf0b5-d100-9cd8-afc9-8fa06072d474",
 				version = 2,
 			},
 			inheritedIndex = 1,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "Alert",
-							alertTTS = true,
-							alertText = "11111",
-							conditions = 
-							{
-								
-								{
-									"06dc6de8-68e0-0e50-8ff5-b174bf95d314",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							uuid = "310a0398-4757-efee-951f-6ac5ba18fa75",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return Argus.getEntityModel(data.RKM11SWeapon3.ordered[3]) == 19185",
-							name = "Get weapon model",
-							uuid = "06dc6de8-68e0-0e50-8ff5-b174bf95d314",
-							version = 3,
-						},
-					},
-				},
-				mechanicTime = 104.247,
-				name = "allert",
-				timeRange = true,
-				timelineIndex = 25,
-				timerOffset = -4,
-				timerStartOffset = -2.5,
-				uuid = "1fcf5ed1-17b5-c11d-a0ea-e08a29624d6b",
-				version = 2,
-			},
-			inheritedIndex = 2,
 		},
 	},
 	[29] = 
@@ -3526,7 +3370,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 50,
 				timerOffset = -4,
-				timerStartOffset = -2.5,
+				timerStartOffset = -1.5,
 				uuid = "471ba596-a2da-80c2-ba9e-93e6a15fe2ea",
 				version = 2,
 			},
@@ -3676,7 +3520,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 52,
 				timerOffset = -4,
-				timerStartOffset = -2.5,
+				timerStartOffset = -1.5,
 				uuid = "b342baca-40e6-df5b-af12-9e8f4d397e11",
 				version = 2,
 			},
@@ -3826,7 +3670,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 54,
 				timerOffset = -4,
-				timerStartOffset = -2.5,
+				timerStartOffset = -1.5,
 				uuid = "9a15f391-328a-87dd-b0c7-9798ed338c70",
 				version = 2,
 			},
@@ -3976,7 +3820,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 56,
 				timerOffset = -4,
-				timerStartOffset = -2.5,
+				timerStartOffset = -1.5,
 				uuid = "adf46fef-83e1-825d-8f23-7cc5eeda67a6",
 				version = 2,
 			},
@@ -4126,7 +3970,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 58,
 				timerOffset = -4,
-				timerStartOffset = -2.5,
+				timerStartOffset = -1.5,
 				uuid = "e62b120a-96bc-53d4-9d02-566d2d600515",
 				version = 2,
 			},
@@ -4276,7 +4120,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 60,
 				timerOffset = -4,
-				timerStartOffset = -2.5,
+				timerStartOffset = -1.5,
 				uuid = "ec341662-8516-8632-8198-28e70c9dd9cd",
 				version = 2,
 			},
