@@ -1033,12 +1033,13 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 49.609,
 				name = "Sprint",
 				timeRange = true,
 				timelineIndex = 8,
 				timerOffset = -1,
-				timerStartOffset = -2,
+				timerStartOffset = -5,
 				uuid = "8033ac6f-1052-e731-87c3-70818f4da53d",
 				version = 2,
 			},
@@ -1122,12 +1123,13 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 54.64,
 				name = "Sprint",
 				timeRange = true,
 				timelineIndex = 10,
 				timerOffset = -1,
-				timerStartOffset = -2,
+				timerStartOffset = -5,
 				uuid = "43543442-d61e-cc69-80ae-8010d18f791a",
 				version = 2,
 			},
@@ -1211,12 +1213,13 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 59.656,
 				name = "Sprint",
 				timeRange = true,
 				timelineIndex = 12,
 				timerOffset = -1,
-				timerStartOffset = -2,
+				timerStartOffset = -5,
 				uuid = "798875c7-4682-2e75-931c-9e22218b6984",
 				version = 2,
 			},
@@ -1486,7 +1489,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 21,
 				timerOffset = -1,
-				timerStartOffset = -2,
+				timerStartOffset = -5,
 				uuid = "e589a7e9-714a-c8bc-aebe-e4017b0e9ab7",
 				version = 2,
 			},
@@ -1575,7 +1578,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 23,
 				timerOffset = -1,
-				timerStartOffset = -2,
+				timerStartOffset = -5,
 				uuid = "4ba5d64f-4dab-cfef-98c3-932fd55c5c6b",
 				version = 2,
 			},
@@ -1664,7 +1667,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 25,
 				timerOffset = -1,
-				timerStartOffset = -2,
+				timerStartOffset = -5,
 				uuid = "05d96ee3-2fff-9c10-ac8c-2f7cdba6000a",
 				version = 2,
 			},
@@ -2904,6 +2907,540 @@ local tbl =
 				uuid = "9789e9dd-a4ec-27b6-a1cd-7708c083316d",
 				version = 2,
 			},
+		},
+	},
+	[50] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+									true,
+								},
+								
+								{
+									"28c6e666-84f1-a533-9e57-acdacff520ee",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return Argus.getEntityModel(data.RKM11SWeapon6.entities[1]) == 19185",
+							name = "Get weapon model",
+							uuid = "28c6e666-84f1-a533-9e57-acdacff520ee",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 194.012,
+				name = "Sprint",
+				timeRange = true,
+				timelineIndex = 50,
+				timerOffset = -1,
+				timerStartOffset = -5,
+				uuid = "af993a08-81bc-8377-a0b1-74d8ea0af2d7",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[52] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+									true,
+								},
+								
+								{
+									"28c6e666-84f1-a533-9e57-acdacff520ee",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return Argus.getEntityModel(data.RKM11SWeapon6.entities[2]) == 19185",
+							name = "Get weapon model",
+							uuid = "28c6e666-84f1-a533-9e57-acdacff520ee",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 199.059,
+				name = "Sprint",
+				timeRange = true,
+				timelineIndex = 52,
+				timerOffset = -1,
+				timerStartOffset = -5,
+				uuid = "ba1ff5d4-97eb-629b-aff2-5a9df59c775c",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[54] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+									true,
+								},
+								
+								{
+									"28c6e666-84f1-a533-9e57-acdacff520ee",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return Argus.getEntityModel(data.RKM11SWeapon6.entities[3]) == 19185",
+							name = "Get weapon model",
+							uuid = "28c6e666-84f1-a533-9e57-acdacff520ee",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 204.012,
+				name = "Sprint",
+				timeRange = true,
+				timelineIndex = 54,
+				timerOffset = -1,
+				timerStartOffset = -5,
+				uuid = "346c6d3e-d128-5a22-b3fb-642181895994",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[56] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+									true,
+								},
+								
+								{
+									"28c6e666-84f1-a533-9e57-acdacff520ee",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return Argus.getEntityModel(data.RKM11SWeapon6.entities[4]) == 19185",
+							name = "Get weapon model",
+							uuid = "28c6e666-84f1-a533-9e57-acdacff520ee",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 208.933,
+				name = "Sprint",
+				timeRange = true,
+				timelineIndex = 56,
+				timerOffset = -1,
+				timerStartOffset = -5,
+				uuid = "0a0785ff-9178-9a7b-97cf-736c1b3f994f",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[58] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+									true,
+								},
+								
+								{
+									"28c6e666-84f1-a533-9e57-acdacff520ee",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return Argus.getEntityModel(data.RKM11SWeapon6.entities[5]) == 19185",
+							name = "Get weapon model",
+							uuid = "28c6e666-84f1-a533-9e57-acdacff520ee",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 213.856,
+				name = "Sprint",
+				timeRange = true,
+				timelineIndex = 58,
+				timerOffset = -1,
+				timerStartOffset = -5,
+				uuid = "4146da58-d0a2-25a6-baa4-0c7561427dcd",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[60] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+									true,
+								},
+								
+								{
+									"28c6e666-84f1-a533-9e57-acdacff520ee",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return Argus.getEntityModel(data.RKM11SWeapon6.entities[6]) == 19185",
+							name = "Get weapon model",
+							uuid = "28c6e666-84f1-a533-9e57-acdacff520ee",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 218.871,
+				name = "Sprint",
+				timeRange = true,
+				timelineIndex = 60,
+				timerOffset = -1,
+				timerStartOffset = -5,
+				uuid = "5e133ff1-48f4-7d4b-95ac-009540b6425d",
+				version = 2,
+			},
+			inheritedIndex = 1,
 		},
 	},
 	[61] = 
