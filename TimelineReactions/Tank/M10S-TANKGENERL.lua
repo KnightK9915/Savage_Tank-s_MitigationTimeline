@@ -188,7 +188,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "Warrior",
 							uuid = "96351b59-49a5-85d4-af8f-8caf06dba68d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -200,7 +200,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "Paladin",
 							uuid = "a183ef87-f083-a261-85aa-360f30758953",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -212,7 +212,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "Darkknight",
 							uuid = "3224d691-685d-714a-8ba5-03793462ef60",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -224,7 +224,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "Gunbreaker",
 							uuid = "56d35a96-7914-efb4-8e42-66fab46a4ba5",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -235,7 +235,7 @@ local tbl =
 							conditionLua = "local player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nif not EntityList then\n    return false\nend\n\nlocal nearestDist = nil\n\n-- 过滤：alive, attackable, targetable（可选中/可锁定）\nfor _, e in pairs(EntityList(\"alive,attackable,targetable\")) do\n    if e and e.pos then\n        local dx = player.pos.x - e.pos.x\n        local dz = player.pos.z - e.pos.z\n        local d  = math.sqrt(dx * dx + dz * dz)\n\n        if (not nearestDist) or d < nearestDist then\n            nearestDist = d\n        end\n    end\nend\n\n-- 没有任何可选中可攻击目标\nif not nearestDist then\n    return false\nend\n\nreturn nearestDist > 3.0\n",
 							name = "Nearest Enemy dis > 3",
 							uuid = "992dc756-c0c5-8cb0-b921-d6cbe5299db1",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -246,7 +246,7 @@ local tbl =
 							conditionLua = "-- 参数配置\nlocal targetCID = 14370\nlocal tolerance = 1.0 -- 容差半径（米）\nlocal toleranceSq = tolerance * tolerance -- 预计算平方值，优化性能\n\n-- 定义所有可能的坐标模式\nlocal patterns = {\n    {x = 119.98, y = 0, z = 99.99},  -- Pattern 1\n    {x = 99.99, y = 0, z = 119.98},  -- Pattern 2\n    {x = 79.97, y = 0, z = 99.99},  -- Pattern 3\n    {x = 99.99, y = 0, z = 79.97},  -- Pattern 4\n}\n\n-- 获取实体列表\nlocal el = EntityList(\"contentid=\" .. targetCID)\n\nif (table.valid(el)) then\n    for id, entity in pairs(el) do\n        if (entity and entity.pos) then\n            -- 遍历所有定义的模式坐标\n            for _, pos in ipairs(patterns) do\n                local dx = entity.pos.x - pos.x\n                local dy = entity.pos.y - pos.y\n                local dz = entity.pos.z - pos.z\n                \n                -- 计算距离平方\n                local distSq = (dx * dx) + (dy * dy) + (dz * dz)\n                \n                -- 只要匹配任何一个模式，立即返回 true\n                if (distSq <= toleranceSq) then\n                    return true\n                end\n            end\n        end\n    end\nend\n\nreturn false",
 							name = "Check Red Position",
 							uuid = "80826daf-d350-6065-aff3-2abfd2fc6ec3",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 6,
 					},
@@ -258,7 +258,7 @@ local tbl =
 							filterTargetType = "Enemy",
 							partyTargetContentID = 14370,
 							uuid = "833094a4-e620-954b-a7f2-1b496d3e4f7f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -269,10 +269,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "8530cc16-92e3-ec04-b110-a1a06cd6b596",
-							version = 2,
-						},
-						inheritedOverwrites = 
-						{
+							version = 3,
 						},
 					},
 				},
@@ -530,7 +527,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "Warrior",
 							uuid = "96351b59-49a5-85d4-af8f-8caf06dba68d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -542,7 +539,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "Paladin",
 							uuid = "a183ef87-f083-a261-85aa-360f30758953",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -554,7 +551,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "Darkknight",
 							uuid = "3224d691-685d-714a-8ba5-03793462ef60",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -566,7 +563,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "Gunbreaker",
 							uuid = "56d35a96-7914-efb4-8e42-66fab46a4ba5",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -577,7 +574,7 @@ local tbl =
 							conditionLua = "local player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nif not EntityList then\n    return false\nend\n\nlocal nearestDist = nil\n\n-- 过滤：alive, attackable, targetable（可选中/可锁定）\nfor _, e in pairs(EntityList(\"alive,attackable,targetable\")) do\n    if e and e.pos then\n        local dx = player.pos.x - e.pos.x\n        local dz = player.pos.z - e.pos.z\n        local d  = math.sqrt(dx * dx + dz * dz)\n\n        if (not nearestDist) or d < nearestDist then\n            nearestDist = d\n        end\n    end\nend\n\n-- 没有任何可选中可攻击目标\nif not nearestDist then\n    return false\nend\n\nreturn nearestDist > 3.0\n",
 							name = "Nearest Enemy dis > 3",
 							uuid = "992dc756-c0c5-8cb0-b921-d6cbe5299db1",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -588,7 +585,7 @@ local tbl =
 							filterTargetType = "Enemy",
 							partyTargetContentID = 14370,
 							uuid = "833094a4-e620-954b-a7f2-1b496d3e4f7f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -599,7 +596,7 @@ local tbl =
 							eventArgType = 2,
 							eventSpellID = 46529,
 							uuid = "8ee3b738-d6b8-5795-8d80-486ebe4f776b",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -610,7 +607,7 @@ local tbl =
 							conditionType = 9,
 							partyTargetType = "Event Target",
 							uuid = "94153ebe-dfc0-88e6-bd0a-5c351a31ffad",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -621,10 +618,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "20dec5bf-d185-ceb5-941f-b32a89d6fe23",
-							version = 2,
-						},
-						inheritedOverwrites = 
-						{
+							version = 3,
 						},
 					},
 				},
@@ -678,7 +672,7 @@ local tbl =
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffID = 4974,
 							buffIDList = 
 							{
@@ -687,7 +681,7 @@ local tbl =
 							category = "Self",
 							name = "Fire",
 							uuid = "d5053685-cd08-213d-a7cc-5cc02382a21d",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -789,7 +783,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "6a49330b-844e-31fa-96c9-18ecbe6b49bd",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -802,7 +796,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -816,14 +810,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -833,7 +827,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -900,7 +894,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "d7ee7d76-2e37-5f72-9463-9e74e1643e90",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -913,7 +907,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -927,14 +921,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -944,7 +938,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -1009,7 +1003,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "c61a0421-fa49-c741-abbd-ffd29ab11e62",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -1022,7 +1016,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1036,14 +1030,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -1053,7 +1047,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -1119,7 +1113,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -1132,7 +1126,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1146,14 +1140,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -1163,7 +1157,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -1177,6 +1171,36 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "Argus.addPlayerMarker(640)\nself.used = true",
+							gVar = "ACR_RikuPLD3_CD",
+							uuid = "69610243-4efa-bba4-9abb-d28e193fb5d6",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 68.4,
+				name = "[Draw] Draw Aerial",
+				timeRange = true,
+				timelineIndex = 11,
+				timerStartOffset = -4,
+				uuid = "c6bf4f5a-2876-07bd-8419-3d45166e843e",
+				version = 2,
+			},
 		},
 	},
 	[12] = 
@@ -1233,7 +1257,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "6a49330b-844e-31fa-96c9-18ecbe6b49bd",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -1246,7 +1270,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1260,14 +1284,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -1277,7 +1301,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -1344,7 +1368,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "d7ee7d76-2e37-5f72-9463-9e74e1643e90",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -1357,7 +1381,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1371,14 +1395,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -1388,7 +1412,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -1453,7 +1477,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "c61a0421-fa49-c741-abbd-ffd29ab11e62",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -1466,7 +1490,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1480,14 +1504,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -1497,7 +1521,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -1563,7 +1587,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -1576,7 +1600,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1590,14 +1614,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -1607,7 +1631,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -1670,7 +1694,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "920eaf0e-9d68-b87a-b636-36be8e013575",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -1681,7 +1705,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1696,7 +1720,7 @@ local tbl =
 							inRangeValue = 3.2799999713898,
 							name = "<Range",
 							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -1906,7 +1930,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "Warrior",
 							uuid = "96351b59-49a5-85d4-af8f-8caf06dba68d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1918,7 +1942,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "Paladin",
 							uuid = "a183ef87-f083-a261-85aa-360f30758953",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1930,7 +1954,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "Darkknight",
 							uuid = "3224d691-685d-714a-8ba5-03793462ef60",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1942,7 +1966,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "Gunbreaker",
 							uuid = "56d35a96-7914-efb4-8e42-66fab46a4ba5",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1953,7 +1977,7 @@ local tbl =
 							conditionLua = "-- 目标参数配置\nlocal targetCID = 14370\nlocal targetX = 99.99\nlocal targetY = 0\nlocal targetZ = 92.48\nlocal tolerance = 1.0 -- 容差范围（米），只要在这个距离内都算“在位置上”\n\n-- 获取指定 ContentID 的实体列表\nlocal el = EntityList(\"contentid=\" .. targetCID)\n\n-- 遍历查找\nif (table.valid(el)) then\n    for i, entity in pairs(el) do\n        if (entity and entity.pos) then\n            -- 计算三维距离的平方（性能优于开根号）\n            local dx = entity.pos.x - targetX\n            local dy = entity.pos.y - targetY\n            local dz = entity.pos.z - targetZ\n            local distSq = (dx * dx) + (dy * dy) + (dz * dz)\n            \n            -- 如果距离小于容差，返回 true\n            if (distSq <= (tolerance * tolerance)) then\n                return true\n            end\n        end\n    end\nend\n\n-- 未找到或不在位置\nreturn false",
 							name = "Check Red Position",
 							uuid = "eb497524-4378-f045-be5c-5f866f30977e",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 6,
 					},
@@ -1965,7 +1989,7 @@ local tbl =
 							conditionLua = "local player = TensorCore.mGetPlayer()\nif not player or not player.pos then return false end\n\nlocal wantCID = 14370\nlocal bestDist = nil\n\nif not EntityList then return false end\n\nfor _, e in pairs(EntityList(\"alive,attackable\")) do\n    if e and e.contentid == wantCID and e.pos then\n        local dx = player.pos.x - e.pos.x\n        local dz = player.pos.z - e.pos.z\n        local d  = math.sqrt(dx*dx + dz*dz)\n        if (not bestDist) or d < bestDist then\n            bestDist = d\n        end\n    end\nend\n\nreturn (bestDist ~= nil) and (bestDist > 5.0)\n",
 							name = "Red dis > 5",
 							uuid = "e9689abd-7c60-cc08-ac91-6372440d1ba9",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 6,
 					},
@@ -1977,7 +2001,7 @@ local tbl =
 							filterTargetType = "ContentID",
 							partyTargetContentID = 14370,
 							uuid = "833094a4-e620-954b-a7f2-1b496d3e4f7f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1988,10 +2012,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "a7721511-19d0-4849-a582-d2bf6709c9c9",
-							version = 2,
-						},
-						inheritedOverwrites = 
-						{
+							version = 3,
 						},
 					},
 				},
@@ -2045,7 +2066,7 @@ local tbl =
 							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
 							name = "DeepBlue targeting self",
 							uuid = "386148ba-f8bd-0d98-8cc5-8c6b2bf7994b",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -2276,7 +2297,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "Warrior",
 							uuid = "96351b59-49a5-85d4-af8f-8caf06dba68d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2288,7 +2309,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "Paladin",
 							uuid = "a183ef87-f083-a261-85aa-360f30758953",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2300,7 +2321,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "Darkknight",
 							uuid = "3224d691-685d-714a-8ba5-03793462ef60",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2312,7 +2333,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "Gunbreaker",
 							uuid = "56d35a96-7914-efb4-8e42-66fab46a4ba5",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2323,7 +2344,7 @@ local tbl =
 							conditionLua = "local player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nif not EntityList then\n    return false\nend\n\nlocal nearestDist = nil\n\n-- 过滤：alive, attackable, targetable（可选中/可锁定）\nfor _, e in pairs(EntityList(\"alive,attackable,targetable\")) do\n    if e and e.pos then\n        local dx = player.pos.x - e.pos.x\n        local dz = player.pos.z - e.pos.z\n        local d  = math.sqrt(dx * dx + dz * dz)\n\n        if (not nearestDist) or d < nearestDist then\n            nearestDist = d\n        end\n    end\nend\n\n-- 没有任何可选中可攻击目标\nif not nearestDist then\n    return false\nend\n\nreturn nearestDist > 5.0\n",
 							name = "Nearest Enemy dis > 5",
 							uuid = "992dc756-c0c5-8cb0-b921-d6cbe5299db1",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2334,7 +2355,7 @@ local tbl =
 							filterTargetType = "Enemy",
 							partyTargetContentID = 14369,
 							uuid = "833094a4-e620-954b-a7f2-1b496d3e4f7f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2345,7 +2366,7 @@ local tbl =
 							eventArgType = 2,
 							eventSpellID = 46543,
 							uuid = "79a7f08a-91b0-c58a-8bc2-ad5c5c1bf96f",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 7,
 					},
@@ -2360,7 +2381,7 @@ local tbl =
 							inGroupTargetType = "Party",
 							partyTargetType = "Event Target",
 							uuid = "af6fd4c2-ab97-0290-bb0f-6abfc30541fb",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2371,10 +2392,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "362fe0ed-6218-b5da-85b2-82b3105faa78",
-							version = 2,
-						},
-						inheritedOverwrites = 
-						{
+							version = 3,
 						},
 					},
 				},
@@ -2599,7 +2617,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "Warrior",
 							uuid = "96351b59-49a5-85d4-af8f-8caf06dba68d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2611,7 +2629,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "Paladin",
 							uuid = "a183ef87-f083-a261-85aa-360f30758953",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2623,7 +2641,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "Darkknight",
 							uuid = "3224d691-685d-714a-8ba5-03793462ef60",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2635,7 +2653,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "Gunbreaker",
 							uuid = "56d35a96-7914-efb4-8e42-66fab46a4ba5",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2646,7 +2664,7 @@ local tbl =
 							conditionLua = "local player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nif not EntityList then\n    return false\nend\n\nlocal nearestDist = nil\n\n-- 过滤：alive, attackable, targetable（可选中/可锁定）\nfor _, e in pairs(EntityList(\"alive,attackable,targetable\")) do\n    if e and e.pos then\n        local dx = player.pos.x - e.pos.x\n        local dz = player.pos.z - e.pos.z\n        local d  = math.sqrt(dx * dx + dz * dz)\n\n        if (not nearestDist) or d < nearestDist then\n            nearestDist = d\n        end\n    end\nend\n\n-- 没有任何可选中可攻击目标\nif not nearestDist then\n    return false\nend\n\nreturn nearestDist > 5.0\n",
 							name = "Nearest Enemy dis > 5",
 							uuid = "992dc756-c0c5-8cb0-b921-d6cbe5299db1",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2657,7 +2675,7 @@ local tbl =
 							filterTargetType = "Enemy",
 							partyTargetContentID = 14369,
 							uuid = "833094a4-e620-954b-a7f2-1b496d3e4f7f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2668,7 +2686,7 @@ local tbl =
 							eventArgType = 2,
 							eventSpellID = 46543,
 							uuid = "af6fd4c2-ab97-0290-bb0f-6abfc30541fb",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2680,7 +2698,7 @@ local tbl =
 							inGroupTargetType = "Party",
 							partyTargetType = "Event Target",
 							uuid = "5fae050f-beb9-73e2-adbc-f30c3e23ccc4",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2691,10 +2709,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "4d683c9b-bff4-43c6-88ea-44836229c1f5",
-							version = 2,
-						},
-						inheritedOverwrites = 
-						{
+							version = 3,
 						},
 					},
 				},
@@ -2749,7 +2764,7 @@ local tbl =
 							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
 							name = "DeepBlue targeting self",
 							uuid = "ab9f7d50-f285-09c9-8b06-db7d83ef0d25",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -2808,7 +2823,7 @@ local tbl =
 							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
 							name = "DeepBlue targeting self",
 							uuid = "ab9f7d50-f285-09c9-8b06-db7d83ef0d25",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -3062,7 +3077,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "Warrior",
 							uuid = "2172525a-bd95-3099-a710-2bcf05f2d5fd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3074,7 +3089,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "Paladin",
 							uuid = "d99cc6dd-5723-4089-a486-232fbddeb07e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3086,7 +3101,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "Darkknight",
 							uuid = "9b1bc192-045b-662c-9300-d4fab416f27b",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3098,7 +3113,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "Gunbreaker",
 							uuid = "27a5fe09-f2a4-58ab-9fa9-5aa1db9283aa",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3109,7 +3124,7 @@ local tbl =
 							conditionLua = "-- 没有目标直接 false\nif not Player or not Player:GetTarget() then\n    return false\nend\n\nlocal target = Player:GetTarget()\n\n-- 确保目标有效\nif not target or not target.pos then\n    return false\nend\n\n-- 计算平面距离（XZ）\nlocal dx = Player.pos.x - target.pos.x\nlocal dz = Player.pos.z - target.pos.z\nlocal distance = math.sqrt(dx * dx + dz * dz)\n\n-- 大于 3 米时返回 true\nreturn distance > 3.0\n",
 							name = "Out of Range",
 							uuid = "02bc6c2f-b065-e7f1-8f27-b020e63eda65",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3120,7 +3135,7 @@ local tbl =
 							eventArgType = 2,
 							eventSpellID = 44486,
 							uuid = "1bc285fc-353c-220b-a7e4-c97723d9a72c",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3131,7 +3146,7 @@ local tbl =
 							conditionType = 9,
 							partyTargetType = "Event Target",
 							uuid = "7111472b-f495-1f67-a5e8-ee0107b5bcaf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3142,7 +3157,7 @@ local tbl =
 							filterTargetType = "ContentID",
 							partyTargetContentID = 14369,
 							uuid = "73bb819a-5ad5-9fae-88d6-66313c4d4009",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3153,10 +3168,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "db74a241-38ad-c247-a67b-01237c4abd77",
-							version = 2,
-						},
-						inheritedOverwrites = 
-						{
+							version = 3,
 						},
 					},
 				},
@@ -3227,7 +3239,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "6a49330b-844e-31fa-96c9-18ecbe6b49bd",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -3240,7 +3252,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3254,14 +3266,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -3271,7 +3283,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -3338,7 +3350,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "d7ee7d76-2e37-5f72-9463-9e74e1643e90",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -3351,7 +3363,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3365,14 +3377,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -3382,7 +3394,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -3447,7 +3459,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "c61a0421-fa49-c741-abbd-ffd29ab11e62",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -3460,7 +3472,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3474,14 +3486,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -3491,7 +3503,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -3557,7 +3569,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -3570,7 +3582,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3584,14 +3596,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -3601,7 +3613,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -3664,7 +3676,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "920eaf0e-9d68-b87a-b636-36be8e013575",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -3675,7 +3687,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3690,7 +3702,7 @@ local tbl =
 							inRangeValue = 3.2799999713898,
 							name = "<Range",
 							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -3860,7 +3872,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "878f14ce-f51f-ec7f-b174-dea5086e0d07",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -3872,7 +3884,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
 							name = "RoleMit MT",
 							uuid = "fcba2014-03d2-49af-8f94-06c7eaefc52a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3883,7 +3895,7 @@ local tbl =
 							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\n-- 场上存在 14369，且没有任何一个在盯你\nreturn found\n",
 							name = "DeepBlue not targeting self",
 							uuid = "6321efd8-f638-94ed-a55e-921d1982b670",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -3895,7 +3907,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
 							name = "RoleMit ST",
 							uuid = "00578686-0eca-f182-8830-9c1168cef551",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -3907,7 +3919,7 @@ local tbl =
 							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14370\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
 							name = "RedHot not targeting self",
 							uuid = "59d1a4ae-c4a0-6318-8414-57fd3778106d",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -3919,10 +3931,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "085f4f9b-ee67-de86-9e64-6639bae3ff95",
-							version = 2,
-						},
-						inheritedOverwrites = 
-						{
+							version = 3,
 						},
 					},
 				},
@@ -4297,7 +4306,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "Warrior",
 							uuid = "96351b59-49a5-85d4-af8f-8caf06dba68d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4309,7 +4318,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "Paladin",
 							uuid = "a183ef87-f083-a261-85aa-360f30758953",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4321,7 +4330,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "Darkknight",
 							uuid = "3224d691-685d-714a-8ba5-03793462ef60",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4333,7 +4342,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "Gunbreaker",
 							uuid = "56d35a96-7914-efb4-8e42-66fab46a4ba5",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4345,7 +4354,7 @@ local tbl =
 							name = "Blue",
 							partyTargetContentID = 14369,
 							uuid = "82c7a426-a9d7-236e-b9fd-74fa5af3f0c1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 5,
 					},
@@ -4357,7 +4366,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
 							name = "RoleMit MT",
 							uuid = "89fb3214-ee9d-a39d-9895-91946780f8e4",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 5,
 					},
@@ -4369,7 +4378,7 @@ local tbl =
 							conditionLua = "local player = TensorCore.mGetPlayer()\nif not player or not player.pos then return false end\n\nlocal wantCID = 14369\nlocal bestDist = nil\n\nif not EntityList then return false end\n\nfor _, e in pairs(EntityList(\"alive,attackable\")) do\n    if e and e.contentid == wantCID and e.pos then\n        local dx = player.pos.x - e.pos.x\n        local dz = player.pos.z - e.pos.z\n        local d  = math.sqrt(dx*dx + dz*dz)\n        if (not bestDist) or d < bestDist then\n            bestDist = d\n        end\n    end\nend\n\nreturn (bestDist ~= nil) and (bestDist > 5.0)\n",
 							name = "Blue dis > 5",
 							uuid = "992dc756-c0c5-8cb0-b921-d6cbe5299db1",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4381,7 +4390,7 @@ local tbl =
 							name = "Red",
 							partyTargetContentID = 14370,
 							uuid = "47a24acb-f144-1f08-9a15-1bd565a16fcb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 8,
 					},
@@ -4393,7 +4402,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
 							name = "RoleMit ST",
 							uuid = "ce23b2db-490e-db7e-a2c5-acb340ff05f0",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 7,
 					},
@@ -4405,7 +4414,7 @@ local tbl =
 							conditionLua = "local player = TensorCore.mGetPlayer()\nif not player or not player.pos then return false end\n\nlocal wantCID = 14370\nlocal bestDist = nil\n\nif not EntityList then return false end\n\nfor _, e in pairs(EntityList(\"alive,attackable\")) do\n    if e and e.contentid == wantCID and e.pos then\n        local dx = player.pos.x - e.pos.x\n        local dz = player.pos.z - e.pos.z\n        local d  = math.sqrt(dx*dx + dz*dz)\n        if (not bestDist) or d < bestDist then\n            bestDist = d\n        end\n    end\nend\n\nreturn (bestDist ~= nil) and (bestDist > 5.0)\n",
 							name = "Red dis > 5",
 							uuid = "497a29b6-94ce-59d6-a545-dfacaf339424",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 6,
 					},
@@ -4417,10 +4426,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "b42825a3-f5bb-51fc-b9a0-d06b166e3424",
-							version = 2,
-						},
-						inheritedOverwrites = 
-						{
+							version = 3,
 						},
 					},
 				},
@@ -4588,7 +4594,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "0a954f3b-feed-954e-b959-39b39c77cab0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4600,7 +4606,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "a5e5ab0d-67b3-3834-866c-477fac755433",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4612,7 +4618,7 @@ local tbl =
 							category = "Self",
 							name = "GNB Buff",
 							uuid = "87265275-edc7-84f6-b28d-be1685a7a9e2",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4624,7 +4630,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "6f7e5558-d0e7-8e33-99d2-c4121d16bf9b",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4636,7 +4642,7 @@ local tbl =
 							category = "Self",
 							name = "PLD Buff",
 							uuid = "97e99f78-dda9-b169-ab63-f08884530c62",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4648,7 +4654,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "faae9cbb-b4ef-c33e-a461-3f6b92655fcc",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4660,7 +4666,7 @@ local tbl =
 							category = "Self",
 							name = "DRK Buff",
 							uuid = "83c73f4e-854c-62d1-906d-dcf7562fdc92",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4676,7 +4682,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "8a4a2b67-d6cb-1c2d-8f9a-36a4ec16b9f6",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4688,7 +4694,7 @@ local tbl =
 							category = "Self",
 							name = "WAR Buff",
 							uuid = "7e8ae6c8-618a-98f1-9434-7a133728336d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4699,7 +4705,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
 							name = "RoleMit ST",
 							uuid = "dbd26744-37bf-1a45-8da1-7c869c687113",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -4804,7 +4810,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "6a49330b-844e-31fa-96c9-18ecbe6b49bd",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -4817,7 +4823,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4831,14 +4837,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -4848,7 +4854,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -4915,7 +4921,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "d7ee7d76-2e37-5f72-9463-9e74e1643e90",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -4928,7 +4934,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4942,14 +4948,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -4959,7 +4965,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -5024,7 +5030,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "c61a0421-fa49-c741-abbd-ffd29ab11e62",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -5037,7 +5043,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5051,14 +5057,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -5068,7 +5074,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -5134,7 +5140,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -5147,7 +5153,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5161,14 +5167,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -5178,7 +5184,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -5380,7 +5386,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "0a954f3b-feed-954e-b959-39b39c77cab0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5392,7 +5398,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "a5e5ab0d-67b3-3834-866c-477fac755433",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5404,7 +5410,7 @@ local tbl =
 							category = "Self",
 							name = "GNB Buff",
 							uuid = "87265275-edc7-84f6-b28d-be1685a7a9e2",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5416,7 +5422,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "6f7e5558-d0e7-8e33-99d2-c4121d16bf9b",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5428,7 +5434,7 @@ local tbl =
 							category = "Self",
 							name = "PLD Buff",
 							uuid = "97e99f78-dda9-b169-ab63-f08884530c62",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5440,7 +5446,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "faae9cbb-b4ef-c33e-a461-3f6b92655fcc",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5452,7 +5458,7 @@ local tbl =
 							category = "Self",
 							name = "DRK Buff",
 							uuid = "83c73f4e-854c-62d1-906d-dcf7562fdc92",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5468,7 +5474,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "8a4a2b67-d6cb-1c2d-8f9a-36a4ec16b9f6",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5480,7 +5486,7 @@ local tbl =
 							category = "Self",
 							name = "WAR Buff",
 							uuid = "7e8ae6c8-618a-98f1-9434-7a133728336d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5491,7 +5497,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
 							name = "RoleMit ST",
 							uuid = "dbd26744-37bf-1a45-8da1-7c869c687113",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -5565,7 +5571,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
 							name = "RoleMit MT",
 							uuid = "0a9041eb-f994-ff6f-9b61-13ef8f0b0b9b",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5576,7 +5582,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
 							name = "RoleMit ST",
 							uuid = "21f5cba9-ec08-886b-8511-6855e1642617",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -5690,7 +5696,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "878f14ce-f51f-ec7f-b174-dea5086e0d07",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -5702,7 +5708,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
 							name = "RoleMit MT",
 							uuid = "fcba2014-03d2-49af-8f94-06c7eaefc52a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5713,7 +5719,7 @@ local tbl =
 							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\n-- 场上存在 14369，且没有任何一个在盯你\nreturn found\n",
 							name = "DeepBlue not targeting self",
 							uuid = "acbe4393-6895-d107-a2ab-b66bf1b2e54e",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -5725,7 +5731,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
 							name = "RoleMit ST",
 							uuid = "00578686-0eca-f182-8830-9c1168cef551",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -5737,7 +5743,7 @@ local tbl =
 							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14370\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
 							name = "RedHot not targeting self",
 							uuid = "5389b04b-4dd9-2ded-8796-053776da0611",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -5749,10 +5755,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "6f8fdd67-ff3c-03b9-9dde-57ab1a21b0d4",
-							version = 2,
-						},
-						inheritedOverwrites = 
-						{
+							version = 3,
 						},
 					},
 				},
@@ -6128,7 +6131,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "Warrior",
 							uuid = "96351b59-49a5-85d4-af8f-8caf06dba68d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6140,7 +6143,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "Paladin",
 							uuid = "a183ef87-f083-a261-85aa-360f30758953",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6152,7 +6155,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "Darkknight",
 							uuid = "3224d691-685d-714a-8ba5-03793462ef60",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6164,7 +6167,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "Gunbreaker",
 							uuid = "56d35a96-7914-efb4-8e42-66fab46a4ba5",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6176,7 +6179,7 @@ local tbl =
 							name = "Blue",
 							partyTargetContentID = 14369,
 							uuid = "d58f8f4b-1d92-94cd-b9bb-1aaa2a980373",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 5,
 					},
@@ -6188,7 +6191,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
 							name = "RoleMit MT",
 							uuid = "89fb3214-ee9d-a39d-9895-91946780f8e4",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 5,
 					},
@@ -6201,7 +6204,7 @@ local tbl =
 							name = "Red",
 							partyTargetContentID = 14370,
 							uuid = "368dd721-c555-6967-81c6-a36197fe3178",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 8,
 					},
@@ -6213,7 +6216,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
 							name = "RoleMit ST",
 							uuid = "ce23b2db-490e-db7e-a2c5-acb340ff05f0",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 7,
 					},
@@ -6225,7 +6228,7 @@ local tbl =
 							conditionLua = "-- 目标参数配置\nlocal targetCID = 14369\nlocal targetX = 86.99\nlocal targetY = 0\nlocal targetZ = 86.99\nlocal tolerance = 1.0 -- 容差范围（米），只要在这个距离内都算“在位置上”\n\n-- 获取指定 ContentID 的实体列表\nlocal el = EntityList(\"contentid=\" .. targetCID)\n\n-- 遍历查找\nif (table.valid(el)) then\n    for i, entity in pairs(el) do\n        if (entity and entity.pos) then\n            -- 计算三维距离的平方（性能优于开根号）\n            local dx = entity.pos.x - targetX\n            local dy = entity.pos.y - targetY\n            local dz = entity.pos.z - targetZ\n            local distSq = (dx * dx) + (dy * dy) + (dz * dz)\n            \n            -- 如果距离小于容差，返回 true\n            if (distSq <= (tolerance * tolerance)) then\n                return true\n            end\n        end\n    end\nend\n\n-- 未找到或不在位置\nreturn false",
 							name = "Check Blue Position",
 							uuid = "a3ea0b88-f8c4-2554-8161-cbe6d0e3fb61",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6236,7 +6239,7 @@ local tbl =
 							conditionLua = "-- 目标参数配置\nlocal targetCID = 14370\nlocal targetX = 112.99\nlocal targetY = 0\nlocal targetZ = 112.99\nlocal tolerance = 1.0 -- 容差范围（米），只要在这个距离内都算“在位置上”\n\n-- 获取指定 ContentID 的实体列表\nlocal el = EntityList(\"contentid=\" .. targetCID)\n\n-- 遍历查找\nif (table.valid(el)) then\n    for i, entity in pairs(el) do\n        if (entity and entity.pos) then\n            -- 计算三维距离的平方（性能优于开根号）\n            local dx = entity.pos.x - targetX\n            local dy = entity.pos.y - targetY\n            local dz = entity.pos.z - targetZ\n            local distSq = (dx * dx) + (dy * dy) + (dz * dz)\n            \n            -- 如果距离小于容差，返回 true\n            if (distSq <= (tolerance * tolerance)) then\n                return true\n            end\n        end\n    end\nend\n\n-- 未找到或不在位置\nreturn false",
 							name = "Check Red Position",
 							uuid = "ba8983ce-f4c6-2f48-95aa-cd94b8fd5e2e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6247,10 +6250,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "3ee67bc9-5bd4-da27-b731-1bb44a7ed9c5",
-							version = 2,
-						},
-						inheritedOverwrites = 
-						{
+							version = 3,
 						},
 					},
 				},
@@ -6341,7 +6341,7 @@ local tbl =
 							conditionLua = "if not eventArgs then\n    return false\nend\n\nreturn eventArgs.a1 >= 14 and eventArgs.a1 <= 22 and eventArgs.a2 == 64",
 							name = "Blue Side",
 							uuid = "1ed22d69-d84b-f19c-b325-92de1249881f",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -6353,7 +6353,7 @@ local tbl =
 							conditionLua = "if not eventArgs then\n    return false\nend\n\nreturn eventArgs.a2 == 4096\n",
 							name = "Red Side",
 							uuid = "e34b7e90-c202-141c-aae3-9bad7ddba835",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6364,7 +6364,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
 							name = "RoleMit MT",
 							uuid = "ae1e677b-3c5b-70be-bd7a-11a458ff3f21",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6375,7 +6375,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
 							name = "RoleMit ST",
 							uuid = "95f7391d-2f5b-de19-9654-66892e52862f",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -6447,7 +6447,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "6a49330b-844e-31fa-96c9-18ecbe6b49bd",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -6460,7 +6460,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6474,14 +6474,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -6491,7 +6491,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -6558,7 +6558,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "d7ee7d76-2e37-5f72-9463-9e74e1643e90",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -6571,7 +6571,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6585,14 +6585,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -6602,7 +6602,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -6667,7 +6667,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "c61a0421-fa49-c741-abbd-ffd29ab11e62",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -6680,7 +6680,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6694,14 +6694,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -6711,7 +6711,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -6777,7 +6777,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -6790,7 +6790,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6804,14 +6804,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -6821,7 +6821,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -6884,7 +6884,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "920eaf0e-9d68-b87a-b636-36be8e013575",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -6895,7 +6895,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6910,7 +6910,7 @@ local tbl =
 							inRangeValue = 3.2799999713898,
 							name = "<Range",
 							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -6997,7 +6997,7 @@ local tbl =
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffID = 4974,
 							buffIDList = 
 							{
@@ -7006,14 +7006,14 @@ local tbl =
 							category = "Self",
 							name = "Fire",
 							uuid = "dc7af6f7-ec0f-af6d-91bb-f50a1b20855a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffIDList = 
 							{
 								4975,
@@ -7021,7 +7021,7 @@ local tbl =
 							category = "Self",
 							name = "Water",
 							uuid = "5912b8d8-b6fb-8245-8d79-98819abbbcbd",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -7101,7 +7101,7 @@ local tbl =
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffID = 4974,
 							buffIDList = 
 							{
@@ -7110,14 +7110,14 @@ local tbl =
 							category = "Self",
 							name = "Fire",
 							uuid = "dc7af6f7-ec0f-af6d-91bb-f50a1b20855a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffIDList = 
 							{
 								4975,
@@ -7125,7 +7125,7 @@ local tbl =
 							category = "Self",
 							name = "Water",
 							uuid = "5912b8d8-b6fb-8245-8d79-98819abbbcbd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7136,10 +7136,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "6d33fbb2-c5ce-0514-9f5f-f502f0d2bd61",
-							version = 2,
-						},
-						inheritedOverwrites = 
-						{
+							version = 3,
 						},
 					},
 				},
@@ -7249,7 +7246,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "878f14ce-f51f-ec7f-b174-dea5086e0d07",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -7257,7 +7254,7 @@ local tbl =
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffID = 4974,
 							buffIDList = 
 							{
@@ -7266,7 +7263,7 @@ local tbl =
 							category = "Self",
 							name = "Fire",
 							uuid = "124c9ff2-abc5-0378-87e8-fb1c7b3f7c08",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7277,7 +7274,7 @@ local tbl =
 							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14370\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
 							name = "RedHot not targeting self",
 							uuid = "6ec56083-6e09-eab2-b441-a362c3aeef47",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -7285,7 +7282,7 @@ local tbl =
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffIDList = 
 							{
 								4975,
@@ -7293,7 +7290,7 @@ local tbl =
 							category = "Self",
 							name = "Water",
 							uuid = "4e346f03-9320-42f6-a445-9698656276de",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7304,7 +7301,7 @@ local tbl =
 							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\n-- 场上存在 14369，且没有任何一个在盯你\nreturn found\n",
 							name = "DeepBlue not targeting self",
 							uuid = "5e0fe113-0485-0236-bf41-7bc8ad10aba4",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -7316,10 +7313,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "a327f6bc-93de-f1cd-877a-71565fb29a27",
-							version = 2,
-						},
-						inheritedOverwrites = 
-						{
+							version = 3,
 						},
 					},
 				},
@@ -7698,7 +7692,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "Warrior",
 							uuid = "96351b59-49a5-85d4-af8f-8caf06dba68d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7710,7 +7704,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "Paladin",
 							uuid = "a183ef87-f083-a261-85aa-360f30758953",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7722,7 +7716,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "Darkknight",
 							uuid = "3224d691-685d-714a-8ba5-03793462ef60",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7734,7 +7728,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "Gunbreaker",
 							uuid = "56d35a96-7914-efb4-8e42-66fab46a4ba5",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7746,7 +7740,7 @@ local tbl =
 							name = "Blue",
 							partyTargetContentID = 14369,
 							uuid = "b8a0e2ad-6a36-e14b-8d95-7ebb2f609bdf",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 5,
 					},
@@ -7754,7 +7748,7 @@ local tbl =
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffIDList = 
 							{
 								4975,
@@ -7762,7 +7756,7 @@ local tbl =
 							category = "Self",
 							name = "Water",
 							uuid = "1724a22b-a972-6235-90be-f612b7fa919a",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 5,
 					},
@@ -7775,7 +7769,7 @@ local tbl =
 							name = "Red",
 							partyTargetContentID = 14370,
 							uuid = "59fa4008-6663-c72b-afcc-dbc72a6414fc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 7,
 					},
@@ -7783,7 +7777,7 @@ local tbl =
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffID = 4974,
 							buffIDList = 
 							{
@@ -7792,7 +7786,7 @@ local tbl =
 							category = "Self",
 							name = "Fire",
 							uuid = "0eac2831-703f-5f06-a40f-7e767919d4b9",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 5,
 					},
@@ -7804,7 +7798,7 @@ local tbl =
 							conditionLua = "-- 参数配置\nlocal targetCID = 14369\nlocal tolerance = 1.0 -- 容差半径（米）\nlocal toleranceSq = tolerance * tolerance -- 预计算平方值，优化性能\n\n-- 定义所有可能的坐标模式\nlocal patterns = {\n    {x = 80.00, y = 0, z = 90.00},  -- Pattern 1\n    {x = 79.97, y = 0, z = 109.97}  -- Pattern 2\n}\n\n-- 获取实体列表\nlocal el = EntityList(\"contentid=\" .. targetCID)\n\nif (table.valid(el)) then\n    for id, entity in pairs(el) do\n        if (entity and entity.pos) then\n            -- 遍历所有定义的模式坐标\n            for _, pos in ipairs(patterns) do\n                local dx = entity.pos.x - pos.x\n                local dy = entity.pos.y - pos.y\n                local dz = entity.pos.z - pos.z\n                \n                -- 计算距离平方\n                local distSq = (dx * dx) + (dy * dy) + (dz * dz)\n                \n                -- 只要匹配任何一个模式，立即返回 true\n                if (distSq <= toleranceSq) then\n                    return true\n                end\n            end\n        end\n    end\nend\n\nreturn false",
 							name = "Check Blue Position",
 							uuid = "a3ea0b88-f8c4-2554-8161-cbe6d0e3fb61",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7815,7 +7809,7 @@ local tbl =
 							conditionLua = "-- 目标参数配置\nlocal targetCID = 14370\nlocal targetX = 109.97\nlocal targetY = 0\nlocal targetZ = 99.99\nlocal tolerance = 1.0 -- 容差范围（米），只要在这个距离内都算“在位置上”\n\n-- 获取指定 ContentID 的实体列表\nlocal el = EntityList(\"contentid=\" .. targetCID)\n\n-- 遍历查找\nif (table.valid(el)) then\n    for i, entity in pairs(el) do\n        if (entity and entity.pos) then\n            -- 计算三维距离的平方（性能优于开根号）\n            local dx = entity.pos.x - targetX\n            local dy = entity.pos.y - targetY\n            local dz = entity.pos.z - targetZ\n            local distSq = (dx * dx) + (dy * dy) + (dz * dz)\n            \n            -- 如果距离小于容差，返回 true\n            if (distSq <= (tolerance * tolerance)) then\n                return true\n            end\n        end\n    end\nend\n\n-- 未找到或不在位置\nreturn false",
 							name = "Check Red Position",
 							uuid = "ba8983ce-f4c6-2f48-95aa-cd94b8fd5e2e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7826,10 +7820,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "2a78c9d7-6689-fd92-9942-4af0cf5841a1",
-							version = 2,
-						},
-						inheritedOverwrites = 
-						{
+							version = 3,
 						},
 					},
 				},
@@ -8036,7 +8027,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "Warrior",
 							uuid = "96351b59-49a5-85d4-af8f-8caf06dba68d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8048,7 +8039,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "Paladin",
 							uuid = "a183ef87-f083-a261-85aa-360f30758953",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8060,7 +8051,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "Darkknight",
 							uuid = "3224d691-685d-714a-8ba5-03793462ef60",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8072,7 +8063,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "Gunbreaker",
 							uuid = "56d35a96-7914-efb4-8e42-66fab46a4ba5",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8083,7 +8074,7 @@ local tbl =
 							conditionLua = "local player = TensorCore.mGetPlayer()\nif not player or not player.pos then return false end\n\nlocal wantCID = 14370\nlocal bestDist = nil\n\nif not EntityList then return false end\n\nfor _, e in pairs(EntityList(\"alive,attackable\")) do\n    if e and e.contentid == wantCID and e.pos then\n        local dx = player.pos.x - e.pos.x\n        local dz = player.pos.z - e.pos.z\n        local d  = math.sqrt(dx*dx + dz*dz)\n        if (not bestDist) or d < bestDist then\n            bestDist = d\n        end\n    end\nend\n\nreturn (bestDist ~= nil) and (bestDist > 3.0)\n",
 							name = "Red dis > 3",
 							uuid = "992dc756-c0c5-8cb0-b921-d6cbe5299db1",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8094,14 +8085,14 @@ local tbl =
 							filterTargetType = "ContentID",
 							partyTargetContentID = 14370,
 							uuid = "833094a4-e620-954b-a7f2-1b496d3e4f7f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffIDList = 
 							{
 								4975,
@@ -8109,7 +8100,7 @@ local tbl =
 							category = "Self",
 							name = "Water",
 							uuid = "19474e69-9ed9-b5f7-8275-6cac40802045",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8120,10 +8111,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "939da7b7-9428-1c2f-883a-d9efedc26e43",
-							version = 2,
-						},
-						inheritedOverwrites = 
-						{
+							version = 3,
 						},
 					},
 				},
@@ -8169,7 +8157,7 @@ local tbl =
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffID = 4974,
 							buffIDList = 
 							{
@@ -8178,7 +8166,7 @@ local tbl =
 							category = "Self",
 							name = "Fire",
 							uuid = "60c24ad4-f7c8-3601-bb0c-5674f0733b6a",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -8271,7 +8259,7 @@ local tbl =
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffID = 4974,
 							buffIDList = 
 							{
@@ -8280,7 +8268,7 @@ local tbl =
 							category = "Self",
 							name = "Fire",
 							uuid = "dc7af6f7-ec0f-af6d-91bb-f50a1b20855a",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -8328,7 +8316,7 @@ local tbl =
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffID = 4974,
 							buffIDList = 
 							{
@@ -8337,7 +8325,7 @@ local tbl =
 							category = "Self",
 							name = "Fire",
 							uuid = "20db149d-da00-6b65-aa87-4b9c03a9c405",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -8389,7 +8377,7 @@ local tbl =
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffID = 4974,
 							buffIDList = 
 							{
@@ -8398,7 +8386,7 @@ local tbl =
 							category = "Self",
 							name = "Fire",
 							uuid = "22ca0ed7-9322-8f49-91dd-de63df37a2b7",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8409,10 +8397,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "3ad1509f-41bb-4cf8-9a1f-24c0d3184b85",
-							version = 2,
-						},
-						inheritedOverwrites = 
-						{
+							version = 3,
 						},
 					},
 				},
@@ -8655,7 +8640,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "Warrior",
 							uuid = "96351b59-49a5-85d4-af8f-8caf06dba68d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8667,7 +8652,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "Paladin",
 							uuid = "a183ef87-f083-a261-85aa-360f30758953",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8679,7 +8664,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "Darkknight",
 							uuid = "3224d691-685d-714a-8ba5-03793462ef60",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8691,7 +8676,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "Gunbreaker",
 							uuid = "56d35a96-7914-efb4-8e42-66fab46a4ba5",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8702,7 +8687,7 @@ local tbl =
 							conditionLua = "local player = TensorCore.mGetPlayer()\nif not player or not player.pos then return false end\n\nlocal wantCID = 14369\nlocal bestDist = nil\n\nif not EntityList then return false end\n\nfor _, e in pairs(EntityList(\"alive,attackable\")) do\n    if e and e.contentid == wantCID and e.pos then\n        local dx = player.pos.x - e.pos.x\n        local dz = player.pos.z - e.pos.z\n        local d  = math.sqrt(dx*dx + dz*dz)\n        if (not bestDist) or d < bestDist then\n            bestDist = d\n        end\n    end\nend\n\nreturn (bestDist ~= nil) and (bestDist > 3.0)\n",
 							name = "Blue dis > 3",
 							uuid = "992dc756-c0c5-8cb0-b921-d6cbe5299db1",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8713,14 +8698,14 @@ local tbl =
 							filterTargetType = "ContentID",
 							partyTargetContentID = 14369,
 							uuid = "833094a4-e620-954b-a7f2-1b496d3e4f7f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffID = 4974,
 							buffIDList = 
 							{
@@ -8729,7 +8714,7 @@ local tbl =
 							category = "Self",
 							name = "Fire",
 							uuid = "3ab9af18-a7d5-d669-be7d-17254d05dc0a",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -8741,7 +8726,7 @@ local tbl =
 							eventArgType = 2,
 							eventSpellID = 47390,
 							uuid = "a3c9cbeb-d3fa-a690-a61f-98cafa8155e6",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8752,7 +8737,7 @@ local tbl =
 							conditionType = 9,
 							partyTargetType = "Event Target",
 							uuid = "995c804d-3738-3ce7-a0a9-15e77f5a427e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8763,10 +8748,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "dd218007-22f2-a0ac-9295-e0b9527accbf",
-							version = 2,
-						},
-						inheritedOverwrites = 
-						{
+							version = 3,
 						},
 					},
 				},
@@ -8825,7 +8807,7 @@ local tbl =
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffID = 4974,
 							buffIDList = 
 							{
@@ -8834,7 +8816,7 @@ local tbl =
 							category = "Self",
 							name = "Fire",
 							uuid = "dc7af6f7-ec0f-af6d-91bb-f50a1b20855a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8845,7 +8827,7 @@ local tbl =
 							filterTargetType = "ContentID",
 							partyTargetContentID = 14369,
 							uuid = "0e024e46-bfa2-fef5-9880-f9e86823252d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8856,10 +8838,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "dbb18b94-33c4-90ad-964c-ca9b8c63f43f",
-							version = 2,
-						},
-						inheritedOverwrites = 
-						{
+							version = 3,
 						},
 					},
 				},
@@ -8910,7 +8889,7 @@ local tbl =
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffID = 4974,
 							buffIDList = 
 							{
@@ -8919,7 +8898,7 @@ local tbl =
 							category = "Self",
 							name = "Fire",
 							uuid = "251baed0-2038-cccd-8b6b-ad49c210c474",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -8972,7 +8951,7 @@ local tbl =
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffID = 4974,
 							buffIDList = 
 							{
@@ -8981,7 +8960,7 @@ local tbl =
 							category = "Self",
 							name = "Fire",
 							uuid = "d5053685-cd08-213d-a7cc-5cc02382a21d",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -9066,7 +9045,7 @@ local tbl =
 							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
 							name = "DeepBlue targeting self",
 							uuid = "ab9f7d50-f285-09c9-8b06-db7d83ef0d25",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -9125,7 +9104,7 @@ local tbl =
 							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
 							name = "DeepBlue targeting self",
 							uuid = "ab9f7d50-f285-09c9-8b06-db7d83ef0d25",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -9170,7 +9149,7 @@ local tbl =
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffIDList = 
 							{
 								4975,
@@ -9178,7 +9157,7 @@ local tbl =
 							category = "Self",
 							name = "Water",
 							uuid = "fd9a0dbb-32dc-f09d-9d82-f8e861935760",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -9426,7 +9405,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "Warrior",
 							uuid = "96351b59-49a5-85d4-af8f-8caf06dba68d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9438,7 +9417,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "Paladin",
 							uuid = "a183ef87-f083-a261-85aa-360f30758953",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9450,7 +9429,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "Darkknight",
 							uuid = "3224d691-685d-714a-8ba5-03793462ef60",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9462,7 +9441,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "Gunbreaker",
 							uuid = "56d35a96-7914-efb4-8e42-66fab46a4ba5",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9473,7 +9452,7 @@ local tbl =
 							conditionLua = "local player = TensorCore.mGetPlayer()\nif not player or not player.pos then return false end\n\nlocal wantCID = 14370\nlocal bestDist = nil\n\nif not EntityList then return false end\n\nfor _, e in pairs(EntityList(\"alive,attackable\")) do\n    if e and e.contentid == wantCID and e.pos then\n        local dx = player.pos.x - e.pos.x\n        local dz = player.pos.z - e.pos.z\n        local d  = math.sqrt(dx*dx + dz*dz)\n        if (not bestDist) or d < bestDist then\n            bestDist = d\n        end\n    end\nend\n\nreturn (bestDist ~= nil) and (bestDist > 3.0)\n",
 							name = "Red dis > 3",
 							uuid = "992dc756-c0c5-8cb0-b921-d6cbe5299db1",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9484,14 +9463,14 @@ local tbl =
 							filterTargetType = "ContentID",
 							partyTargetContentID = 14370,
 							uuid = "833094a4-e620-954b-a7f2-1b496d3e4f7f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffIDList = 
 							{
 								4975,
@@ -9499,7 +9478,7 @@ local tbl =
 							category = "Self",
 							name = "Water",
 							uuid = "19474e69-9ed9-b5f7-8275-6cac40802045",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9510,7 +9489,7 @@ local tbl =
 							eventArgType = 2,
 							eventSpellID = 44486,
 							uuid = "48a48933-da09-1ad7-9f9e-69f29fb5681b",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9521,7 +9500,7 @@ local tbl =
 							conditionType = 9,
 							partyTargetType = "Event Target",
 							uuid = "fce2a7b3-74ed-20dd-8579-abd423a2335c",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9532,10 +9511,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "823c043e-7722-6bed-a840-152dbadb0e8d",
-							version = 2,
-						},
-						inheritedOverwrites = 
-						{
+							version = 3,
 						},
 					},
 				},
@@ -9605,7 +9581,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "6a49330b-844e-31fa-96c9-18ecbe6b49bd",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -9618,7 +9594,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9632,14 +9608,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -9649,7 +9625,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -9716,7 +9692,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "d7ee7d76-2e37-5f72-9463-9e74e1643e90",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -9729,7 +9705,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9743,14 +9719,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -9760,7 +9736,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -9825,7 +9801,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "c61a0421-fa49-c741-abbd-ffd29ab11e62",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -9838,7 +9814,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9852,14 +9828,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -9869,7 +9845,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -9935,7 +9911,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -9948,7 +9924,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9962,14 +9938,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -9979,7 +9955,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -10042,7 +10018,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "920eaf0e-9d68-b87a-b636-36be8e013575",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -10053,7 +10029,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10068,7 +10044,7 @@ local tbl =
 							inRangeValue = 3.2799999713898,
 							name = "<Range",
 							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -10194,7 +10170,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "8fedcfb2-31c9-d488-ab7d-bcebff7a9418",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10206,7 +10182,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "0aeafd61-cf7a-4e5e-a03f-ad91dd8daf1c",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10218,7 +10194,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "23453b2d-a056-b37d-bf47-82b166534855",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10229,7 +10205,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "064e3672-f3be-7b00-a15c-350cbc3b9327",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -10364,7 +10340,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "8592e1d4-7871-5bcf-9162-05b43dc3ac9b",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10376,7 +10352,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "2869e4d1-b594-f913-b62d-324ed7428484",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10388,7 +10364,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "2a9695fc-bdc8-3f06-85b6-675836350e86",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10399,7 +10375,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "1a9de7c3-ab6d-0a3d-ac04-074766ff5044",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10418,7 +10394,7 @@ local tbl =
 							filterTargetType = "ContentID",
 							partyTargetContentID = 14373,
 							uuid = "988d6e78-e99d-bd8a-a663-716b3f4464a0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10429,7 +10405,7 @@ local tbl =
 							category = "Party",
 							partyTargetType = "Detection Target",
 							uuid = "9dce889a-64a4-4dbe-940b-9a69619fc58f",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -10547,7 +10523,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "8592e1d4-7871-5bcf-9162-05b43dc3ac9b",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10559,7 +10535,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "2869e4d1-b594-f913-b62d-324ed7428484",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10571,7 +10547,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "2a9695fc-bdc8-3f06-85b6-675836350e86",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10582,7 +10558,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "1a9de7c3-ab6d-0a3d-ac04-074766ff5044",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -10649,7 +10625,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "6a49330b-844e-31fa-96c9-18ecbe6b49bd",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -10662,7 +10638,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10676,14 +10652,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -10693,7 +10669,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -10760,7 +10736,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "d7ee7d76-2e37-5f72-9463-9e74e1643e90",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -10773,7 +10749,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10787,14 +10763,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -10804,7 +10780,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -10869,7 +10845,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "c61a0421-fa49-c741-abbd-ffd29ab11e62",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -10882,7 +10858,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10896,14 +10872,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -10913,7 +10889,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -10979,7 +10955,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -10992,7 +10968,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11006,14 +10982,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -11023,7 +10999,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -11086,7 +11062,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "920eaf0e-9d68-b87a-b636-36be8e013575",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -11097,7 +11073,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11112,7 +11088,7 @@ local tbl =
 							inRangeValue = 3.2799999713898,
 							name = "<Range",
 							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -11169,7 +11145,7 @@ local tbl =
 							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
 							name = "DeepBlue targeting self",
 							uuid = "386148ba-f8bd-0d98-8cc5-8c6b2bf7994b",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -11223,7 +11199,7 @@ local tbl =
 							inRangeValue = 3.2799999713898,
 							name = "<Range",
 							uuid = "bb169dfd-1b36-a827-83ff-40eed191216b",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -11365,7 +11341,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "6a49330b-844e-31fa-96c9-18ecbe6b49bd",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -11378,7 +11354,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11392,14 +11368,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -11409,7 +11385,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -11476,7 +11452,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "d7ee7d76-2e37-5f72-9463-9e74e1643e90",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -11489,7 +11465,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11503,14 +11479,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -11520,7 +11496,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -11585,7 +11561,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "c61a0421-fa49-c741-abbd-ffd29ab11e62",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -11598,7 +11574,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11612,14 +11588,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -11629,7 +11605,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -11695,7 +11671,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -11708,7 +11684,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11722,14 +11698,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -11739,7 +11715,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -11802,7 +11778,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "920eaf0e-9d68-b87a-b636-36be8e013575",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -11813,7 +11789,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11828,7 +11804,7 @@ local tbl =
 							inRangeValue = 3.2799999713898,
 							name = "<Range",
 							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -11883,7 +11859,7 @@ local tbl =
 							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
 							name = "DeepBlue targeting self",
 							uuid = "72bf36d2-90e8-185f-b579-a2aae3b238f1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -11935,7 +11911,7 @@ local tbl =
 							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14370\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
 							name = "RedHot targeting self",
 							uuid = "014c8be4-6aa0-f1af-913a-1315c5c3dc0b",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -12018,7 +11994,7 @@ local tbl =
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffID = 4974,
 							buffIDList = 
 							{
@@ -12027,14 +12003,14 @@ local tbl =
 							category = "Self",
 							name = "Fire",
 							uuid = "dc7af6f7-ec0f-af6d-91bb-f50a1b20855a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffIDList = 
 							{
 								4828,
@@ -12042,7 +12018,7 @@ local tbl =
 							category = "Self",
 							name = "Water",
 							uuid = "5912b8d8-b6fb-8245-8d79-98819abbbcbd",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -12124,7 +12100,7 @@ local tbl =
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffID = 4974,
 							buffIDList = 
 							{
@@ -12133,14 +12109,14 @@ local tbl =
 							category = "Self",
 							name = "Fire",
 							uuid = "dc7af6f7-ec0f-af6d-91bb-f50a1b20855a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffIDList = 
 							{
 								4828,
@@ -12148,7 +12124,7 @@ local tbl =
 							category = "Self",
 							name = "Water",
 							uuid = "5912b8d8-b6fb-8245-8d79-98819abbbcbd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -12159,10 +12135,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "c7a7f205-5fe0-0463-90b6-e0d8a007d75a",
-							version = 2,
-						},
-						inheritedOverwrites = 
-						{
+							version = 3,
 						},
 					},
 				},
@@ -12272,7 +12245,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "878f14ce-f51f-ec7f-b174-dea5086e0d07",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -12280,7 +12253,7 @@ local tbl =
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffID = 4974,
 							buffIDList = 
 							{
@@ -12289,7 +12262,7 @@ local tbl =
 							category = "Self",
 							name = "Fire",
 							uuid = "124c9ff2-abc5-0378-87e8-fb1c7b3f7c08",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -12300,7 +12273,7 @@ local tbl =
 							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14370\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
 							name = "RedHot not targeting self",
 							uuid = "b961553f-947d-bf53-b004-dd58b3c1e06f",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -12308,7 +12281,7 @@ local tbl =
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffIDList = 
 							{
 								4828,
@@ -12316,7 +12289,7 @@ local tbl =
 							category = "Self",
 							name = "Water",
 							uuid = "4e346f03-9320-42f6-a445-9698656276de",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -12327,7 +12300,7 @@ local tbl =
 							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\n-- 场上存在 14369，且没有任何一个在盯你\nreturn found\n",
 							name = "DeepBlue not targeting self",
 							uuid = "6a42a22b-3e48-9b31-8687-00425fb048a1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -12339,10 +12312,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "b5f885d4-9a33-838b-a98c-c5ebec35df75",
-							version = 2,
-						},
-						inheritedOverwrites = 
-						{
+							version = 3,
 						},
 					},
 				},
@@ -12721,7 +12691,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "Warrior",
 							uuid = "96351b59-49a5-85d4-af8f-8caf06dba68d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -12733,7 +12703,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "Paladin",
 							uuid = "a183ef87-f083-a261-85aa-360f30758953",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -12745,7 +12715,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "Darkknight",
 							uuid = "3224d691-685d-714a-8ba5-03793462ef60",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -12757,7 +12727,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "Gunbreaker",
 							uuid = "56d35a96-7914-efb4-8e42-66fab46a4ba5",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -12769,7 +12739,7 @@ local tbl =
 							name = "Blue",
 							partyTargetContentID = 14369,
 							uuid = "d58f8f4b-1d92-94cd-b9bb-1aaa2a980373",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 5,
 					},
@@ -12777,7 +12747,7 @@ local tbl =
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffIDList = 
 							{
 								4828,
@@ -12785,7 +12755,7 @@ local tbl =
 							category = "Self",
 							name = "Water",
 							uuid = "402fadb7-04a5-f5f8-a168-9f10380c2ddd",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 6,
 					},
@@ -12798,7 +12768,7 @@ local tbl =
 							name = "Red",
 							partyTargetContentID = 14370,
 							uuid = "368dd721-c555-6967-81c6-a36197fe3178",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 8,
 					},
@@ -12806,7 +12776,7 @@ local tbl =
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffID = 4974,
 							buffIDList = 
 							{
@@ -12815,7 +12785,7 @@ local tbl =
 							category = "Self",
 							name = "Fire",
 							uuid = "4912ef93-b03b-6d1f-ba6e-26c6b59b330d",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 10,
 					},
@@ -12827,7 +12797,7 @@ local tbl =
 							conditionLua = "-- 目标参数配置\nlocal targetCID = 14369\nlocal targetX = 86.99\nlocal targetY = 0\nlocal targetZ = 86.99\nlocal tolerance = 1.0 -- 容差范围（米），只要在这个距离内都算“在位置上”\n\n-- 获取指定 ContentID 的实体列表\nlocal el = EntityList(\"contentid=\" .. targetCID)\n\n-- 遍历查找\nif (table.valid(el)) then\n    for i, entity in pairs(el) do\n        if (entity and entity.pos) then\n            -- 计算三维距离的平方（性能优于开根号）\n            local dx = entity.pos.x - targetX\n            local dy = entity.pos.y - targetY\n            local dz = entity.pos.z - targetZ\n            local distSq = (dx * dx) + (dy * dy) + (dz * dz)\n            \n            -- 如果距离小于容差，返回 true\n            if (distSq <= (tolerance * tolerance)) then\n                return true\n            end\n        end\n    end\nend\n\n-- 未找到或不在位置\nreturn false",
 							name = "Check Blue Position",
 							uuid = "a3ea0b88-f8c4-2554-8161-cbe6d0e3fb61",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -12838,7 +12808,7 @@ local tbl =
 							conditionLua = "-- 目标参数配置\nlocal targetCID = 14370\nlocal targetX = 112.99\nlocal targetY = 0\nlocal targetZ = 112.99\nlocal tolerance = 1.0 -- 容差范围（米），只要在这个距离内都算“在位置上”\n\n-- 获取指定 ContentID 的实体列表\nlocal el = EntityList(\"contentid=\" .. targetCID)\n\n-- 遍历查找\nif (table.valid(el)) then\n    for i, entity in pairs(el) do\n        if (entity and entity.pos) then\n            -- 计算三维距离的平方（性能优于开根号）\n            local dx = entity.pos.x - targetX\n            local dy = entity.pos.y - targetY\n            local dz = entity.pos.z - targetZ\n            local distSq = (dx * dx) + (dy * dy) + (dz * dz)\n            \n            -- 如果距离小于容差，返回 true\n            if (distSq <= (tolerance * tolerance)) then\n                return true\n            end\n        end\n    end\nend\n\n-- 未找到或不在位置\nreturn false",
 							name = "Check Red Position",
 							uuid = "ba8983ce-f4c6-2f48-95aa-cd94b8fd5e2e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -12849,10 +12819,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "fea726bb-08fa-9f62-86a4-c3d370bea28b",
-							version = 2,
-						},
-						inheritedOverwrites = 
-						{
+							version = 3,
 						},
 					},
 				},
@@ -12941,7 +12908,7 @@ local tbl =
 							conditionLua = "if not eventArgs then\n    return false\nend\n\nreturn eventArgs.a1 >= 14 and eventArgs.a1 <= 22 and eventArgs.a2 == 64",
 							name = "Blue Side",
 							uuid = "1ed22d69-d84b-f19c-b325-92de1249881f",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -12953,14 +12920,14 @@ local tbl =
 							conditionLua = "if not eventArgs then\n    return false\nend\n\nreturn eventArgs.a2 == 4096\n",
 							name = "Red Side",
 							uuid = "e34b7e90-c202-141c-aae3-9bad7ddba835",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffIDList = 
 							{
 								4828,
@@ -12968,7 +12935,7 @@ local tbl =
 							category = "Self",
 							name = "Water",
 							uuid = "2bebe761-5deb-a4b4-b7f8-e70a48dfb20a",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -12976,7 +12943,7 @@ local tbl =
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffID = 4974,
 							buffIDList = 
 							{
@@ -12985,7 +12952,7 @@ local tbl =
 							category = "Self",
 							name = "Fire",
 							uuid = "9bb69cf8-5f16-3055-acf3-a202c33f1487",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -13088,7 +13055,7 @@ local tbl =
 							conditionLua = "if not eventArgs then\n    return false\nend\n\nreturn eventArgs.a1 >= 14 and eventArgs.a1 <= 22 and eventArgs.a2 == 64",
 							name = "Blue Side",
 							uuid = "1ed22d69-d84b-f19c-b325-92de1249881f",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -13100,14 +13067,14 @@ local tbl =
 							conditionLua = "if not eventArgs then\n    return false\nend\n\nreturn eventArgs.a2 == 4096\n",
 							name = "Red Side",
 							uuid = "e34b7e90-c202-141c-aae3-9bad7ddba835",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffIDList = 
 							{
 								4828,
@@ -13115,7 +13082,7 @@ local tbl =
 							category = "Self",
 							name = "Water",
 							uuid = "2bebe761-5deb-a4b4-b7f8-e70a48dfb20a",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -13123,7 +13090,7 @@ local tbl =
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffID = 4974,
 							buffIDList = 
 							{
@@ -13132,7 +13099,7 @@ local tbl =
 							category = "Self",
 							name = "Fire",
 							uuid = "9bb69cf8-5f16-3055-acf3-a202c33f1487",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13143,10 +13110,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "98e50fa8-7319-6b56-8dc2-cda6f4a2f890",
-							version = 2,
-						},
-						inheritedOverwrites = 
-						{
+							version = 3,
 						},
 					},
 				},
@@ -13257,7 +13221,7 @@ local tbl =
 							conditionLua = "if not eventArgs then\n    return false\nend\n\nreturn eventArgs.a1 >= 14 and eventArgs.a1 <= 22 and eventArgs.a2 == 64",
 							name = "Blue Side",
 							uuid = "1ed22d69-d84b-f19c-b325-92de1249881f",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -13269,14 +13233,14 @@ local tbl =
 							conditionLua = "if not eventArgs then\n    return false\nend\n\nreturn eventArgs.a2 == 4096\n",
 							name = "Red Side",
 							uuid = "e34b7e90-c202-141c-aae3-9bad7ddba835",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffIDList = 
 							{
 								4828,
@@ -13284,7 +13248,7 @@ local tbl =
 							category = "Self",
 							name = "Water",
 							uuid = "2bebe761-5deb-a4b4-b7f8-e70a48dfb20a",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -13292,7 +13256,7 @@ local tbl =
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffID = 4974,
 							buffIDList = 
 							{
@@ -13301,7 +13265,7 @@ local tbl =
 							category = "Self",
 							name = "Fire",
 							uuid = "9bb69cf8-5f16-3055-acf3-a202c33f1487",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13312,10 +13276,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "32c4aea0-f8e6-6a8f-afea-e0247cc2a21e",
-							version = 2,
-						},
-						inheritedOverwrites = 
-						{
+							version = 3,
 						},
 					},
 				},
@@ -13725,7 +13686,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "Warrior",
 							uuid = "96351b59-49a5-85d4-af8f-8caf06dba68d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13737,7 +13698,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "Paladin",
 							uuid = "a183ef87-f083-a261-85aa-360f30758953",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13749,7 +13710,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "Darkknight",
 							uuid = "3224d691-685d-714a-8ba5-03793462ef60",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13761,7 +13722,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "Gunbreaker",
 							uuid = "56d35a96-7914-efb4-8e42-66fab46a4ba5",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13773,7 +13734,7 @@ local tbl =
 							name = "Blue",
 							partyTargetContentID = 14369,
 							uuid = "d58f8f4b-1d92-94cd-b9bb-1aaa2a980373",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 5,
 					},
@@ -13781,7 +13742,7 @@ local tbl =
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffIDList = 
 							{
 								4828,
@@ -13789,7 +13750,7 @@ local tbl =
 							category = "Self",
 							name = "Water",
 							uuid = "402fadb7-04a5-f5f8-a168-9f10380c2ddd",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 6,
 					},
@@ -13801,7 +13762,7 @@ local tbl =
 							conditionLua = "if not eventArgs then\n    return false\nend\n\nreturn eventArgs.a1 >= 14 and eventArgs.a1 <= 22 and eventArgs.a2 == 64",
 							name = "Blue Side",
 							uuid = "d4ba3731-d2c9-f91b-89f4-f9dcdc3d419a",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 7,
 					},
@@ -13814,7 +13775,7 @@ local tbl =
 							name = "Red",
 							partyTargetContentID = 14370,
 							uuid = "368dd721-c555-6967-81c6-a36197fe3178",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 8,
 					},
@@ -13822,7 +13783,7 @@ local tbl =
 					{
 						data = 
 						{
-							buffCheckType = 4,
+							buffCheckType = 5,
 							buffID = 4974,
 							buffIDList = 
 							{
@@ -13831,7 +13792,7 @@ local tbl =
 							category = "Self",
 							name = "Fire",
 							uuid = "4912ef93-b03b-6d1f-ba6e-26c6b59b330d",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 10,
 					},
@@ -13843,7 +13804,7 @@ local tbl =
 							conditionLua = "if not eventArgs then\n    return false\nend\n\nreturn eventArgs.a2 == 4096\n",
 							name = "Red Side",
 							uuid = "ba506d1a-4382-da62-bf1a-a7d62bc238d0",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 10,
 					},
@@ -13855,7 +13816,7 @@ local tbl =
 							conditionLua = "-- 目标参数配置\nlocal targetCID = 14369\nlocal targetX = 86.99\nlocal targetY = 0\nlocal targetZ = 86.99\nlocal tolerance = 1.0 -- 容差范围（米），只要在这个距离内都算“在位置上”\n\n-- 获取指定 ContentID 的实体列表\nlocal el = EntityList(\"contentid=\" .. targetCID)\n\n-- 遍历查找\nif (table.valid(el)) then\n    for i, entity in pairs(el) do\n        if (entity and entity.pos) then\n            -- 计算三维距离的平方（性能优于开根号）\n            local dx = entity.pos.x - targetX\n            local dy = entity.pos.y - targetY\n            local dz = entity.pos.z - targetZ\n            local distSq = (dx * dx) + (dy * dy) + (dz * dz)\n            \n            -- 如果距离小于容差，返回 true\n            if (distSq <= (tolerance * tolerance)) then\n                return true\n            end\n        end\n    end\nend\n\n-- 未找到或不在位置\nreturn false",
 							name = "Check Blue Position",
 							uuid = "a3ea0b88-f8c4-2554-8161-cbe6d0e3fb61",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13866,7 +13827,7 @@ local tbl =
 							conditionLua = "-- 目标参数配置\nlocal targetCID = 14370\nlocal targetX = 112.99\nlocal targetY = 0\nlocal targetZ = 112.99\nlocal tolerance = 1.0 -- 容差范围（米），只要在这个距离内都算“在位置上”\n\n-- 获取指定 ContentID 的实体列表\nlocal el = EntityList(\"contentid=\" .. targetCID)\n\n-- 遍历查找\nif (table.valid(el)) then\n    for i, entity in pairs(el) do\n        if (entity and entity.pos) then\n            -- 计算三维距离的平方（性能优于开根号）\n            local dx = entity.pos.x - targetX\n            local dy = entity.pos.y - targetY\n            local dz = entity.pos.z - targetZ\n            local distSq = (dx * dx) + (dy * dy) + (dz * dz)\n            \n            -- 如果距离小于容差，返回 true\n            if (distSq <= (tolerance * tolerance)) then\n                return true\n            end\n        end\n    end\nend\n\n-- 未找到或不在位置\nreturn false",
 							name = "Check Red Position",
 							uuid = "ba8983ce-f4c6-2f48-95aa-cd94b8fd5e2e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13877,10 +13838,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "dbe9adcf-f7ee-4da2-864a-e06b94ddcea5",
-							version = 2,
-						},
-						inheritedOverwrites = 
-						{
+							version = 3,
 						},
 					},
 				},
@@ -13951,7 +13909,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "6a49330b-844e-31fa-96c9-18ecbe6b49bd",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -13964,7 +13922,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13978,14 +13936,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -13995,7 +13953,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -14062,7 +14020,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "d7ee7d76-2e37-5f72-9463-9e74e1643e90",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -14075,7 +14033,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -14089,14 +14047,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -14106,7 +14064,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -14171,7 +14129,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "c61a0421-fa49-c741-abbd-ffd29ab11e62",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -14184,7 +14142,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -14198,14 +14156,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -14215,7 +14173,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -14281,7 +14239,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -14294,7 +14252,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -14308,14 +14266,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -14325,7 +14283,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -14388,7 +14346,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "920eaf0e-9d68-b87a-b636-36be8e013575",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -14399,7 +14357,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -14414,7 +14372,7 @@ local tbl =
 							inRangeValue = 3.2799999713898,
 							name = "<Range",
 							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -14641,7 +14599,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "Warrior",
 							uuid = "96351b59-49a5-85d4-af8f-8caf06dba68d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -14653,7 +14611,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "Paladin",
 							uuid = "a183ef87-f083-a261-85aa-360f30758953",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -14665,7 +14623,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "Darkknight",
 							uuid = "3224d691-685d-714a-8ba5-03793462ef60",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -14677,7 +14635,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "Gunbreaker",
 							uuid = "56d35a96-7914-efb4-8e42-66fab46a4ba5",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -14688,7 +14646,7 @@ local tbl =
 							conditionLua = "local player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nif not EntityList then\n    return false\nend\n\nlocal nearestDist = nil\n\n-- 过滤：alive, attackable, targetable（可选中/可锁定）\nfor _, e in pairs(EntityList(\"alive,attackable,targetable\")) do\n    if e and e.pos then\n        local dx = player.pos.x - e.pos.x\n        local dz = player.pos.z - e.pos.z\n        local d  = math.sqrt(dx * dx + dz * dz)\n\n        if (not nearestDist) or d < nearestDist then\n            nearestDist = d\n        end\n    end\nend\n\n-- 没有任何可选中可攻击目标\nif not nearestDist then\n    return false\nend\n\nreturn nearestDist > 3.0\n",
 							name = "Nearest Enemy dis > 3",
 							uuid = "992dc756-c0c5-8cb0-b921-d6cbe5299db1",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -14699,7 +14657,7 @@ local tbl =
 							filterTargetType = "Enemy",
 							partyTargetContentID = 14370,
 							uuid = "833094a4-e620-954b-a7f2-1b496d3e4f7f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -14710,7 +14668,7 @@ local tbl =
 							eventArgType = 2,
 							eventSpellID = 46529,
 							uuid = "8ee3b738-d6b8-5795-8d80-486ebe4f776b",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -14721,7 +14679,7 @@ local tbl =
 							conditionType = 9,
 							partyTargetType = "Event Target",
 							uuid = "94153ebe-dfc0-88e6-bd0a-5c351a31ffad",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -14732,10 +14690,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "e78a8006-1aa9-5d0c-8c8f-90521e5e9438",
-							version = 2,
-						},
-						inheritedOverwrites = 
-						{
+							version = 3,
 						},
 					},
 				},
@@ -14786,10 +14741,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "ebbc12e2-5b42-449f-ae89-84b926aef3ba",
-							version = 2,
-						},
-						inheritedOverwrites = 
-						{
+							version = 3,
 						},
 					},
 				},
@@ -14850,7 +14802,7 @@ local tbl =
 							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\n-- 场上存在 14369，且没有任何一个在盯你\nreturn found\n",
 							name = "DeepBlue not targeting self",
 							uuid = "3e3d9a53-2975-588b-b842-e865f3d67106",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -14860,6 +14812,55 @@ local tbl =
 				timelineIndex = 159,
 				timerStartOffset = -7,
 				uuid = "b67dba70-e59f-afad-8d79-5dfaf93859dc",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "Argus.addPlayerMarker(640)\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"20df3926-8a25-cab2-afe2-afc226b18218",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							uuid = "69610243-4efa-bba4-9abb-d28e193fb5d6",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\n-- 场上存在 14369，且没有任何一个在盯你\nreturn found\n",
+							name = "DeepBlue not targeting self",
+							uuid = "20df3926-8a25-cab2-afe2-afc226b18218",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 552.3,
+				name = "[Draw] Draw Aerial",
+				timeRange = true,
+				timelineIndex = 159,
+				timerStartOffset = -4,
+				uuid = "0e335cb4-6fd7-8ffd-b29b-1b6f00064cb6",
 				version = 2,
 			},
 		},
@@ -14903,7 +14904,7 @@ local tbl =
 							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
 							name = "DeepBlue targeting self",
 							uuid = "9e8a5ae0-9d7b-9a16-99e7-76d08e44279b",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -14961,7 +14962,7 @@ local tbl =
 							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 and e.targetid == me.id then\n        return true\n    end\nend\n\nreturn false\n",
 							name = "DeepBlue targeting self",
 							uuid = "ab9f7d50-f285-09c9-8b06-db7d83ef0d25",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -15235,7 +15236,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "Warrior",
 							uuid = "2172525a-bd95-3099-a710-2bcf05f2d5fd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -15247,7 +15248,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "Paladin",
 							uuid = "d99cc6dd-5723-4089-a486-232fbddeb07e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -15259,7 +15260,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "Darkknight",
 							uuid = "9b1bc192-045b-662c-9300-d4fab416f27b",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -15271,7 +15272,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "Gunbreaker",
 							uuid = "27a5fe09-f2a4-58ab-9fa9-5aa1db9283aa",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -15282,7 +15283,7 @@ local tbl =
 							conditionLua = "-- 没有目标直接 false\nif not Player or not Player:GetTarget() then\n    return false\nend\n\nlocal target = Player:GetTarget()\n\n-- 确保目标有效\nif not target or not target.pos then\n    return false\nend\n\n-- 计算平面距离（XZ）\nlocal dx = Player.pos.x - target.pos.x\nlocal dz = Player.pos.z - target.pos.z\nlocal distance = math.sqrt(dx * dx + dz * dz)\n\n-- 大于 3 米时返回 true\nreturn distance > 3.0\n",
 							name = "Out of Range",
 							uuid = "02bc6c2f-b065-e7f1-8f27-b020e63eda65",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -15293,7 +15294,7 @@ local tbl =
 							conditionLua = "if not TensorCore or not TensorCore.getBuff or not EntityList then\n    return false\nend\n\nlocal list = EntityList(\"contentid=14300\") or {}\n\nfor _, ent in pairs(list) do\n    if ent and ent.id and ent.alive then\n        local buff = TensorCore.getBuff(ent, 4727)\n        local stacks = (buff and buff.stacks) and buff.stacks or 0\n        if stacks > 8 then\n            return true\n        end\n    end\nend\n\nreturn false\n",
 							name = "Check Boss buff",
 							uuid = "fd8e8925-97c3-173e-8e41-dc1a125096ab",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -15304,7 +15305,7 @@ local tbl =
 							eventArgType = 2,
 							eventSpellID = 44486,
 							uuid = "1bc285fc-353c-220b-a7e4-c97723d9a72c",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -15315,7 +15316,7 @@ local tbl =
 							conditionType = 9,
 							partyTargetType = "Event Target",
 							uuid = "7111472b-f495-1f67-a5e8-ee0107b5bcaf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -15326,7 +15327,7 @@ local tbl =
 							filterTargetType = "ContentID",
 							partyTargetContentID = 14370,
 							uuid = "ea382a36-b555-8eb9-b3e4-07fd8b23a177",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -15337,10 +15338,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "a875a7f6-5038-bd1f-8c54-7d9cef4a719f",
-							version = 2,
-						},
-						inheritedOverwrites = 
-						{
+							version = 3,
 						},
 					},
 				},
@@ -15411,7 +15409,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "6a49330b-844e-31fa-96c9-18ecbe6b49bd",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -15424,7 +15422,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -15438,14 +15436,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -15455,7 +15453,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -15522,7 +15520,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "d7ee7d76-2e37-5f72-9463-9e74e1643e90",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -15535,7 +15533,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -15549,14 +15547,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -15566,7 +15564,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -15631,7 +15629,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "c61a0421-fa49-c741-abbd-ffd29ab11e62",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -15644,7 +15642,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -15658,14 +15656,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -15675,7 +15673,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -15741,7 +15739,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -15754,7 +15752,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -15768,14 +15766,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -15785,7 +15783,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -15848,7 +15846,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "920eaf0e-9d68-b87a-b636-36be8e013575",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -15859,7 +15857,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -15874,7 +15872,7 @@ local tbl =
 							inRangeValue = 3.2799999713898,
 							name = "<Range",
 							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -15946,7 +15944,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "6a49330b-844e-31fa-96c9-18ecbe6b49bd",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -15959,7 +15957,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -15973,14 +15971,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -15990,7 +15988,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -16057,7 +16055,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "d7ee7d76-2e37-5f72-9463-9e74e1643e90",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -16070,7 +16068,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -16084,14 +16082,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -16101,7 +16099,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -16166,7 +16164,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "c61a0421-fa49-c741-abbd-ffd29ab11e62",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -16179,7 +16177,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -16193,14 +16191,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -16210,7 +16208,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -16276,7 +16274,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -16289,7 +16287,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -16303,14 +16301,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -16320,7 +16318,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -16383,7 +16381,7 @@ local tbl =
 							conditionLua = "return FFXIV_Common_BotRunning",
 							name = "Bot Running",
 							uuid = "920eaf0e-9d68-b87a-b636-36be8e013575",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -16394,7 +16392,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -16409,7 +16407,7 @@ local tbl =
 							inRangeValue = 3.2799999713898,
 							name = "<Range",
 							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},

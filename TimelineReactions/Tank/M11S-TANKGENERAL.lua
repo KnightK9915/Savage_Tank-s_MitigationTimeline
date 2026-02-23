@@ -1,0 +1,7065 @@
+local tbl = 
+{
+	
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3540,
+							conditions = 
+							{
+								
+								{
+									"6a49330b-844e-31fa-96c9-18ecbe6b49bd",
+									true,
+								},
+								
+								{
+									"d509fc50-866e-82e0-a683-7f673386a79e",
+									true,
+								},
+								
+								{
+									"28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
+									true,
+								},
+								
+								{
+									"a787167c-e665-8709-84d0-298a7dbe954a",
+									true,
+								},
+								
+								{
+									"26489610-0cc6-0a6f-81cb-44cfa78804a4",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "208d8d0c-038a-0156-ae05-da413fbdfa98",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "6a49330b-844e-31fa-96c9-18ecbe6b49bd",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 3540,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								19,
+							},
+							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "ST group",
+							uuid = "26489610-0cc6-0a6f-81cb-44cfa78804a4",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 10.203,
+				name = "Veil",
+				timeRange = true,
+				timelineIndex = 1,
+				timerOffset = -10,
+				timerStartOffset = -4.5,
+				uuid = "c830db3a-f5b9-bd5d-8b6b-0f96320fd5c3",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16160,
+							conditions = 
+							{
+								
+								{
+									"d7ee7d76-2e37-5f72-9463-9e74e1643e90",
+									true,
+								},
+								
+								{
+									"a810d2af-ef39-5b67-9d5f-95b37d750c7a",
+									true,
+								},
+								
+								{
+									"115eca71-8e25-2c76-be17-c29c66dcf324",
+									true,
+								},
+								
+								{
+									"a6929435-5dcb-3407-8d89-b38a0596d1ac",
+									true,
+								},
+								
+								{
+									"b5e984bc-57e7-ef73-bec8-dfa858705fe6",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "dbc99f8f-e1c5-f477-89e0-30fa7efeda14",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "d7ee7d76-2e37-5f72-9463-9e74e1643e90",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16160,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								37,
+							},
+							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1894,
+								1362,
+							},
+							category = "Self",
+							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "ST group",
+							uuid = "b5e984bc-57e7-ef73-bec8-dfa858705fe6",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 10.203,
+				name = "HoL",
+				timeRange = true,
+				timelineIndex = 1,
+				timerStartOffset = -4.5,
+				uuid = "3d1ca12a-c407-3885-b258-34e23dcd1a25",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16471,
+							conditions = 
+							{
+								
+								{
+									"c61a0421-fa49-c741-abbd-ffd29ab11e62",
+									true,
+								},
+								
+								{
+									"142e7d5f-3fc7-8773-b581-c9fe1ad51671",
+									true,
+								},
+								
+								{
+									"322dd20f-009d-0bff-941f-f877ce997638",
+									true,
+								},
+								
+								{
+									"e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+									true,
+								},
+								
+								{
+									"12a75b3f-682f-eac6-8ded-0a71d3e61687",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "32970969-7f85-6bc8-90e1-4f30e8ce8093",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "c61a0421-fa49-c741-abbd-ffd29ab11e62",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16471,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								32,
+							},
+							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1362,
+								1839,
+							},
+							category = "Self",
+							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "ST group",
+							uuid = "12a75b3f-682f-eac6-8ded-0a71d3e61687",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 10.203,
+				name = "Dark Missinary",
+				timeRange = true,
+				timelineIndex = 1,
+				timerOffset = -10,
+				timerStartOffset = -4.5,
+				uuid = "3390a73e-8a71-4997-86e8-6c016ff056d8",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7388,
+							conditions = 
+							{
+								
+								{
+									"a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
+									true,
+								},
+								
+								{
+									"c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
+									true,
+								},
+								
+								{
+									"cfdfeb27-fd18-76d8-915e-3d53780d23cf",
+									true,
+								},
+								
+								{
+									"3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+									true,
+								},
+								
+								{
+									"7c5abb8e-dcb7-7c89-8796-39d4944d828b",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "83ae2ac2-4e1e-673e-befc-12d5802ce1cd",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7388,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								21,
+							},
+							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1362,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
+							name = "ST group",
+							uuid = "7c5abb8e-dcb7-7c89-8796-39d4944d828b",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 10.203,
+				name = "Shake it off",
+				timeRange = true,
+				timelineIndex = 1,
+				timerStartOffset = -4.5,
+				uuid = "6a57d130-5c8b-77be-8a97-c4a673a435c2",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7535,
+							conditions = 
+							{
+								
+								{
+									"920eaf0e-9d68-b87a-b636-36be8e013575",
+									true,
+								},
+								
+								{
+									"5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+									true,
+								},
+								
+								{
+									"7286744f-688c-9195-941e-46d65189cc2c",
+									true,
+								},
+								
+								{
+									"85f58c3a-3b0c-86b2-b9ec-3d98e217f52b",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "c9c9cc18-aa2e-c48a-bebe-6ab6f4e7c114",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "920eaf0e-9d68-b87a-b636-36be8e013575",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1193,
+							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 3,
+							category = "Lua",
+							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 有效射程内存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\n-- 取敌对实体列表：优先 TensorCore，其次兼容 Minion 的 EntityList（若存在）\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    -- 常见：Enemy / Attackable / Aggro 等；这里用 Enemy，若你环境不是这个名字会直接降级到 false\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    -- Minion 常见过滤：attackable\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        -- 存活判断（不同对象字段可能不同，做兼容）\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        -- 可选中 / 可攻击（同样做兼容）\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" then\n                -- 目标命中半径字段兼容：hitradius / hitdarius\n                local hitr = 0\n                if type(e.hitradius) == \"number\" then\n                    hitr = e.hitradius\n                elseif type(e.hitdarius) == \"number\" then\n                    hitr = e.hitdarius\n                end\n\n                -- 有效距离：中心距 - 目标命中半径\n                if (d - hitr) <= RANGE then\n                    return true\n                end\n            end\n        end\n    end\nend\n\nreturn false\n",
+							conditionType = 6,
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
+							name = "MT group",
+							uuid = "85f58c3a-3b0c-86b2-b9ec-3d98e217f52b",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 10.203,
+				name = "Reprisal",
+				randomOffset = -2,
+				timeRange = true,
+				timelineIndex = 1,
+				timerOffset = -3,
+				timerStartOffset = -2.5,
+				uuid = "ef7447e8-8672-7e2d-9e96-51ca87967709",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16142,
+							conditions = 
+							{
+								
+								{
+									"c9abb23e-0abc-dd6c-9ab5-afedeae20b6d",
+									true,
+								},
+								
+								{
+									"5d5b75ab-dc16-bc5d-bf5b-a51454d4adcf",
+									true,
+								},
+								
+								{
+									"804932ae-8941-45ea-a2aa-06a6c322a8fa",
+									true,
+								},
+								
+								{
+									"c62f640d-c989-5080-bed1-e9b802073ed7",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "e40568af-ca84-dc63-b758-47e2fa126104",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 28,
+							conditions = 
+							{
+								
+								{
+									"c62f640d-c989-5080-bed1-e9b802073ed7",
+									true,
+								},
+								
+								{
+									"2991c22a-5be6-8257-94c7-3ad5b461d17c",
+									true,
+								},
+								
+								{
+									"970fb1ed-9b40-09e3-826d-3f2f728ad479",
+									true,
+								},
+								
+								{
+									"804932ae-8941-45ea-a2aa-06a6c322a8fa",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "10cbc6f9-3485-07cf-b3bd-9a799278227a",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 3629,
+							conditions = 
+							{
+								
+								{
+									"c62f640d-c989-5080-bed1-e9b802073ed7",
+									true,
+								},
+								
+								{
+									"da7ef725-d65e-c89d-8dc5-2b16b1e64a5d",
+									true,
+								},
+								
+								{
+									"633f51d7-4888-7475-85c8-e60f478dc8bc",
+									true,
+								},
+								
+								{
+									"804932ae-8941-45ea-a2aa-06a6c322a8fa",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "fd9f846f-264c-efca-9df1-371a248bbea0",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 48,
+							conditions = 
+							{
+								
+								{
+									"c62f640d-c989-5080-bed1-e9b802073ed7",
+									true,
+								},
+								
+								{
+									"230666ae-1e04-5a2b-9ecc-2fb916296245",
+									true,
+								},
+								
+								{
+									"bd15b902-bfd0-73c9-8e77-139249ff9bd0",
+									true,
+								},
+								
+								{
+									"804932ae-8941-45ea-a2aa-06a6c322a8fa",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "f1de41b5-20c6-3772-b1a6-50fc906bde36",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "c62f640d-c989-5080-bed1-e9b802073ed7",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "GNB Job",
+							uuid = "c9abb23e-0abc-dd6c-9ab5-afedeae20b6d",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1833,
+							category = "Self",
+							name = "GNB Buff",
+							uuid = "5d5b75ab-dc16-bc5d-bf5b-a51454d4adcf",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "PLD Job",
+							uuid = "2991c22a-5be6-8257-94c7-3ad5b461d17c",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 79,
+							category = "Self",
+							name = "PLD Buff",
+							uuid = "970fb1ed-9b40-09e3-826d-3f2f728ad479",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "DRK Job",
+							uuid = "da7ef725-d65e-c89d-8dc5-2b16b1e64a5d",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 743,
+							category = "Self",
+							name = "DRK Buff",
+							uuid = "633f51d7-4888-7475-85c8-e60f478dc8bc",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobIDList = 
+							{
+								21,
+							},
+							jobValue = "WARRIOR",
+							name = "WAR Job",
+							uuid = "230666ae-1e04-5a2b-9ecc-2fb916296245",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 91,
+							category = "Self",
+							name = "WAR Buff",
+							uuid = "bd15b902-bfd0-73c9-8e77-139249ff9bd0",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "804932ae-8941-45ea-a2aa-06a6c322a8fa",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 10.203,
+				name = "[ST] Stance ON",
+				timeRange = true,
+				timelineIndex = 1,
+				timerOffset = -15,
+				timerStartOffset = -5,
+				uuid = "bcb83e5a-e326-649e-8201-6ea13fd8394c",
+				version = 2,
+			},
+		},
+	}, 
+	[6] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.RKM11SWeapon3 = {\n    ids = {},\n    entities = {},\n    ordered = {},\n}\n\nlocal IsSameDirection = function(angle1, angle2, tolerance)\n    tolerance = tolerance or 0.05\n    angle1 = angle1 % (2 * math.pi)\n    if angle1 < 0 then\n        angle1 = angle1 + 2 * math.pi\n    end\n    angle2 = angle2 % (2 * math.pi)\n    if angle2 < 0 then\n        angle2 = angle2 + 2 * math.pi\n    end\n    local diff = math.abs(angle1 - angle2)\n    if diff > math.pi then\n        diff = 2 * math.pi - diff\n    end\n    return diff <= tolerance\nend\n\nfor _, ent in pairs(TensorCore.entityList(\"contentid=108\")) do\n    if Argus.isEntityVisible(ent) and not table.contains(data.RKM11SWeapon3.ids, ent.id) then\n        local md = Argus.getEntityModel(ent.id)\n        if (md == 19184 or md == 19185 or md == 19186)\n        then\n            table.insert(data.RKM11SWeapon3.ids, ent.id)\n            table.insert(data.RKM11SWeapon3.entities, ent)\n        end\n    end\nend\n\nif table.size(data.RKM11SWeapon3.ids) == 3 then\n    local first\n    for _, ent in pairs(data.RKM11SWeapon3.entities) do\n        local curHeading = TensorCore.getHeadingToTarget({ x = 100, y = 0, z = 100 }, ent.pos)\n        if IsSameDirection(ent.pos.h, curHeading, 0.1) then\n            table.insert(data.RKM11SWeapon3.ordered, ent)\n            first = ent\n            break\n        end\n    end\n    local second\n    for _, ent in pairs(data.RKM11SWeapon3.entities) do\n        if ent.id ~= first.id then\n            local curHeading = TensorCore.getHeadingToTarget(first.pos, ent.pos)\n            if IsSameDirection(ent.pos.h, curHeading, 0.1) then\n                table.insert(data.RKM11SWeapon3.ordered, ent)\n                second = ent\n                break\n            end\n        end\n    end\n    for _, ent in pairs(data.RKM11SWeapon3.entities) do\n        if ent.id ~= first.id and ent.id ~= second.id then\n            table.insert(data.RKM11SWeapon3.ordered, ent)\n            break\n        end\n    end\nend\n\nself.used = true",
+							gVar = "ACR_RikuDRK3_CD",
+							uuid = "1c970d7c-4be6-fa30-8eab-b2a600ec5a33",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 47.515,
+				name = "[Muai] Get ordered Weapon",
+				timeRange = true,
+				timelineIndex = 6,
+				timerEndOffset = 20,
+				timerStartOffset = -7,
+				uuid = "16a06274-a241-d17b-9b6f-6507dcfd2b80",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "-- 19185 镰刀  \n-- 19186 大剑 \n-- 19184 斧子\n-- 这里123表示几个兵器\nreturn Argus.getEntityModel(data.RKM11SWeapon3.ordered[1]) == 19185",
+							name = "Get weapon model",
+							uuid = "9740e5df-44a0-49b0-a973-8dcfe10c6cba",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 47.515,
+				name = "[Sample] is ??? Weapon",
+				timelineIndex = 6,
+				uuid = "fa235e70-6537-156e-8fcb-a2a27c1759c8",
+				version = 2,
+			},
+		},
+	},
+	[8] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+									true,
+								},
+								
+								{
+									"28c6e666-84f1-a533-9e57-acdacff520ee",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return Argus.getEntityModel(data.RKM11SWeapon3.ordered[1]) == 19185",
+							name = "Get weapon model",
+							uuid = "28c6e666-84f1-a533-9e57-acdacff520ee",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 49.609,
+				name = "Sprint",
+				timeRange = true,
+				timelineIndex = 8,
+				timerOffset = -1,
+				timerStartOffset = -2,
+				uuid = "8033ac6f-1052-e731-87c3-70818f4da53d",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[10] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+									true,
+								},
+								
+								{
+									"28c6e666-84f1-a533-9e57-acdacff520ee",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return Argus.getEntityModel(data.RKM11SWeapon3.ordered[2]) == 19185",
+							name = "Get weapon model",
+							uuid = "28c6e666-84f1-a533-9e57-acdacff520ee",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 54.64,
+				name = "Sprint",
+				timeRange = true,
+				timelineIndex = 10,
+				timerOffset = -1,
+				timerStartOffset = -2,
+				uuid = "43543442-d61e-cc69-80ae-8010d18f791a",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[12] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+									true,
+								},
+								
+								{
+									"28c6e666-84f1-a533-9e57-acdacff520ee",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return Argus.getEntityModel(data.RKM11SWeapon3.ordered[3]) == 19185",
+							name = "Get weapon model",
+							uuid = "28c6e666-84f1-a533-9e57-acdacff520ee",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 59.656,
+				name = "Sprint",
+				timeRange = true,
+				timelineIndex = 12,
+				timerOffset = -1,
+				timerStartOffset = -2,
+				uuid = "798875c7-4682-2e75-931c-9e22218b6984",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[14] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "-- On Draw: Player -> Target (line ends at circle rim) + hollow circle at target only\n\nif not (TensorCore and Argus2 and GUI) then\n    return\nend\n\nlocal player = TensorCore.mGetPlayer()\nif not (player and player.pos) then\n    return\nend\n\n-- Fixed world coord (X/Y/Z)\nlocal tx, ty, tz = 100.00, 0.1, 104.97\n\nlocal x1, y1, z1 = player.pos.x, player.pos.y, player.pos.z\nlocal x2, y2, z2 = tx, ty, tz\n\nlocal r = 2.5 -- circle radius (outer radius)\n\n-- --------- compute line endpoint on circle rim ----------\nlocal dx, dy, dz = (x2 - x1), (y2 - y1), (z2 - z1)\nlocal dist = math.sqrt(dx*dx + dy*dy + dz*dz)\n\n-- If player is inside/too close to circle, skip line to avoid weird flip\nif dist and dist > r then\n    local inv = 1.0 / dist\n    local ux, uy, uz = dx * inv, dy * inv, dz * inv\n\n    -- endpoint pulled back by r, so it touches the outer radius\n    local ex = x2 - ux * r\n    local ey = y2 - uy * r\n    local ez = z2 - uz * r\n\n    local white = GUI:ColorConvertFloat4ToU32(1, 1, 1, 1)\n    local lineDrawer = TensorCore.getStaticDrawer(white, 1.5)\n\n    local thickness = 0.08\n    lineDrawer:addLine(x1, y1, z1, ex, ey, ez, thickness, thickness)\nend\n\n-- --------- hollow circle at target only ----------\nlocal outline = GUI:ColorConvertFloat4ToU32(1, 1, 1, 1)\nlocal fillTransparent = GUI:ColorConvertFloat4ToU32(1, 1, 1, 0)\n\nlocal c = Argus2.ShapeDrawer:new(nil, nil, fillTransparent, outline, 2.0)\nc.gradientMinOpacity = 0\nc.gradientIntensity = 0\nc.segments = 50\n\n-- A) 只画轮廓（填充透明）\nc:addCircle(x2, y2, z2, r)\n\n-- B) 如果你这里依然出现“淡填充”，把上面那行换成下面这一行（薄圆环 = 空心轮廓）：\n-- c:addDonut(x2, y2, z2, r - 0.03, r)",
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "d2d6c7bc-4e68-9970-af6f-122be3dc6b48",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				eventType = 13,
+				mechanicTime = 78.873,
+				name = "[Draw] Bait Comet",
+				timeRange = true,
+				timelineIndex = 14,
+				timerEndOffset = 4,
+				timerStartOffset = -7,
+				uuid = "bbb2e41e-d6ec-3832-baaf-00aea35c2ea6",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Alert",
+							alertDuration = 11100,
+							alertPriority = 3,
+							alertText = "Bait 3x Comet",
+							alertVolume = 100,
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "8feb2e0e-570c-b7f9-a9f8-a8950086b182",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							aType = "Alert",
+							alertDuration = 11100,
+							alertPriority = 2,
+							alertScale = 0.60000002384186,
+							alertTTS = true,
+							alertText = "Go south, Clockwise",
+							alertVolume = 100,
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "20b6f712-3a36-ca90-b439-e07b9d3f3081",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 78.873,
+				name = "[TTS] Bait Comet",
+				timeRange = true,
+				timelineIndex = 14,
+				timerEndOffset = 4,
+				timerStartOffset = -7,
+				uuid = "88083949-6c07-c41f-b132-d6008935159f",
+				version = 2,
+			},
+		},
+	},
+	[15] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "Argus.addPlayerMarker(640)\nself.used = true",
+							gVar = "ACR_RikuPLD3_CD",
+							uuid = "69610243-4efa-bba4-9abb-d28e193fb5d6",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 82.936,
+				name = "[Draw] Draw Comet",
+				timeRange = true,
+				timelineIndex = 15,
+				timerStartOffset = -4,
+				uuid = "e5c7f0f9-d8be-7a40-8fff-b812bdd359b2",
+				version = 2,
+			},
+		},
+	},
+	[19] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.RKM11SWeapon3 = {\n    ids = {},\n    entities = {},\n    ordered = {},\n}\n\nlocal IsSameDirection = function(angle1, angle2, tolerance)\n    tolerance = tolerance or 0.05\n    angle1 = angle1 % (2 * math.pi)\n    if angle1 < 0 then\n        angle1 = angle1 + 2 * math.pi\n    end\n    angle2 = angle2 % (2 * math.pi)\n    if angle2 < 0 then\n        angle2 = angle2 + 2 * math.pi\n    end\n    local diff = math.abs(angle1 - angle2)\n    if diff > math.pi then\n        diff = 2 * math.pi - diff\n    end\n    return diff <= tolerance\nend\n\nfor _, ent in pairs(TensorCore.entityList(\"contentid=108\")) do\n    if Argus.isEntityVisible(ent) and not table.contains(data.RKM11SWeapon3.ids, ent.id) then\n        local md = Argus.getEntityModel(ent.id)\n        if (md == 19184 or md == 19185 or md == 19186)\n        then\n            table.insert(data.RKM11SWeapon3.ids, ent.id)\n            table.insert(data.RKM11SWeapon3.entities, ent)\n        end\n    end\nend\n\nif table.size(data.RKM11SWeapon3.ids) == 3 then\n    local first\n    for _, ent in pairs(data.RKM11SWeapon3.entities) do\n        local curHeading = TensorCore.getHeadingToTarget({ x = 100, y = 0, z = 100 }, ent.pos)\n        if IsSameDirection(ent.pos.h, curHeading, 0.1) then\n            table.insert(data.RKM11SWeapon3.ordered, ent)\n            first = ent\n            break\n        end\n    end\n    local second\n    for _, ent in pairs(data.RKM11SWeapon3.entities) do\n        if ent.id ~= first.id then\n            local curHeading = TensorCore.getHeadingToTarget(first.pos, ent.pos)\n            if IsSameDirection(ent.pos.h, curHeading, 0.1) then\n                table.insert(data.RKM11SWeapon3.ordered, ent)\n                second = ent\n                break\n            end\n        end\n    end\n    for _, ent in pairs(data.RKM11SWeapon3.entities) do\n        if ent.id ~= first.id and ent.id ~= second.id then\n            table.insert(data.RKM11SWeapon3.ordered, ent)\n            break\n        end\n    end\nend\n\nself.used = true",
+							gVar = "ACR_RikuDRK3_CD",
+							uuid = "1c970d7c-4be6-fa30-8eab-b2a600ec5a33",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 92.217,
+				name = "[Muai] Get ordered Weapon",
+				timeRange = true,
+				timelineIndex = 19,
+				timerEndOffset = 20,
+				timerStartOffset = -7,
+				uuid = "a5eaf5cc-ffa4-e709-9f91-b2001459d2f9",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "-- 19185 镰刀  \n-- 19186 大剑 \n-- 19184 斧子\n-- 这里123表示几个兵器\nreturn Argus.getEntityModel(data.RKM11SWeapon3.ordered[1]) == 19185",
+							name = "Get weapon model",
+							uuid = "9740e5df-44a0-49b0-a973-8dcfe10c6cba",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 92.217,
+				name = "[Sample] is ??? Weapon",
+				timelineIndex = 19,
+				uuid = "aca59702-6f48-0d1b-97d1-1163a0c3955a",
+				version = 2,
+			},
+		},
+	},
+	[21] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+									true,
+								},
+								
+								{
+									"28c6e666-84f1-a533-9e57-acdacff520ee",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return Argus.getEntityModel(data.RKM11SWeapon3.ordered[1]) == 19185",
+							name = "Get weapon model",
+							uuid = "28c6e666-84f1-a533-9e57-acdacff520ee",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 94.248,
+				name = "Sprint",
+				timeRange = true,
+				timelineIndex = 21,
+				timerOffset = -1,
+				timerStartOffset = -2,
+				uuid = "e589a7e9-714a-c8bc-aebe-e4017b0e9ab7",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[23] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+									true,
+								},
+								
+								{
+									"28c6e666-84f1-a533-9e57-acdacff520ee",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return Argus.getEntityModel(data.RKM11SWeapon3.ordered[2]) == 19185",
+							name = "Get weapon model",
+							uuid = "28c6e666-84f1-a533-9e57-acdacff520ee",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 99.263,
+				name = "Sprint",
+				timeRange = true,
+				timelineIndex = 23,
+				timerOffset = -1,
+				timerStartOffset = -2,
+				uuid = "4ba5d64f-4dab-cfef-98c3-932fd55c5c6b",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[25] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+									true,
+								},
+								
+								{
+									"28c6e666-84f1-a533-9e57-acdacff520ee",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return Argus.getEntityModel(data.RKM11SWeapon3.ordered[3]) == 19185",
+							name = "Get weapon model",
+							uuid = "28c6e666-84f1-a533-9e57-acdacff520ee",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 104.247,
+				name = "Sprint",
+				timeRange = true,
+				timelineIndex = 25,
+				timerOffset = -1,
+				timerStartOffset = -2,
+				uuid = "05d96ee3-2fff-9c10-ac8c-2f7cdba6000a",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[26] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Alert",
+							alertDuration = 11000,
+							alertPriority = 3,
+							alertText = "Bait 3x Comet",
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "8feb2e0e-570c-b7f9-a9f8-a8950086b182",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							aType = "Alert",
+							alertDuration = 11000,
+							alertPriority = 2,
+							alertScale = 0.60000002384186,
+							alertTTS = true,
+							alertText = "Go behind boss, Clockwise",
+							alertVolume = 100,
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "20b6f712-3a36-ca90-b439-e07b9d3f3081",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 109.45,
+				name = "[TTS] Bait Comet",
+				timeRange = true,
+				timelineIndex = 26,
+				timerStartOffset = -7,
+				uuid = "8bba7398-e112-aeb5-aa9a-6e6edccfb9c2",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "Argus.addPlayerMarker(640)\nself.used = true",
+							gVar = "ACR_RikuPLD3_CD",
+							uuid = "69610243-4efa-bba4-9abb-d28e193fb5d6",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 109.45,
+				name = "[Draw] Draw Comet",
+				timeRange = true,
+				timelineIndex = 26,
+				timerStartOffset = -4,
+				uuid = "ea8432cb-8736-caf3-8ca0-220f84c05b0c",
+				version = 2,
+			},
+		},
+	},
+	[30] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3540,
+							conditions = 
+							{
+								
+								{
+									"6a49330b-844e-31fa-96c9-18ecbe6b49bd",
+									true,
+								},
+								
+								{
+									"d509fc50-866e-82e0-a683-7f673386a79e",
+									true,
+								},
+								
+								{
+									"28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
+									true,
+								},
+								
+								{
+									"a787167c-e665-8709-84d0-298a7dbe954a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "208d8d0c-038a-0156-ae05-da413fbdfa98",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "6a49330b-844e-31fa-96c9-18ecbe6b49bd",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 3540,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								19,
+							},
+							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 121.403,
+				name = "Veil",
+				timeRange = true,
+				timelineIndex = 30,
+				timerOffset = -10,
+				timerStartOffset = -4.5,
+				uuid = "5d3adb6f-2ef4-9717-8f33-ab08e96c6d31",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16160,
+							conditions = 
+							{
+								
+								{
+									"d7ee7d76-2e37-5f72-9463-9e74e1643e90",
+									true,
+								},
+								
+								{
+									"a810d2af-ef39-5b67-9d5f-95b37d750c7a",
+									true,
+								},
+								
+								{
+									"115eca71-8e25-2c76-be17-c29c66dcf324",
+									true,
+								},
+								
+								{
+									"a6929435-5dcb-3407-8d89-b38a0596d1ac",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "dbc99f8f-e1c5-f477-89e0-30fa7efeda14",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "d7ee7d76-2e37-5f72-9463-9e74e1643e90",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16160,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								37,
+							},
+							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1894,
+								1362,
+							},
+							category = "Self",
+							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 121.403,
+				name = "HoL",
+				timeRange = true,
+				timelineIndex = 30,
+				timerStartOffset = -4.5,
+				uuid = "bc718b2b-96de-1a04-a164-b7b4e0dfc485",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16471,
+							conditions = 
+							{
+								
+								{
+									"c61a0421-fa49-c741-abbd-ffd29ab11e62",
+									true,
+								},
+								
+								{
+									"142e7d5f-3fc7-8773-b581-c9fe1ad51671",
+									true,
+								},
+								
+								{
+									"322dd20f-009d-0bff-941f-f877ce997638",
+									true,
+								},
+								
+								{
+									"e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "32970969-7f85-6bc8-90e1-4f30e8ce8093",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "c61a0421-fa49-c741-abbd-ffd29ab11e62",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16471,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								32,
+							},
+							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1362,
+								1839,
+							},
+							category = "Self",
+							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 121.403,
+				name = "Dark Missinary",
+				timeRange = true,
+				timelineIndex = 30,
+				timerOffset = -10,
+				timerStartOffset = -4.5,
+				uuid = "8a5c2da5-f80f-1579-aaac-43306a3ff852",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7388,
+							conditions = 
+							{
+								
+								{
+									"a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
+									true,
+								},
+								
+								{
+									"c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
+									true,
+								},
+								
+								{
+									"cfdfeb27-fd18-76d8-915e-3d53780d23cf",
+									true,
+								},
+								
+								{
+									"3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "83ae2ac2-4e1e-673e-befc-12d5802ce1cd",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7388,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								21,
+							},
+							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1362,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 121.403,
+				name = "Shake it off",
+				timeRange = true,
+				timelineIndex = 30,
+				timerStartOffset = -4.5,
+				uuid = "daea135d-e6c8-21fa-9cc8-9393bb3b1088",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7535,
+							conditions = 
+							{
+								
+								{
+									"920eaf0e-9d68-b87a-b636-36be8e013575",
+									true,
+								},
+								
+								{
+									"5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+									true,
+								},
+								
+								{
+									"7286744f-688c-9195-941e-46d65189cc2c",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "c9c9cc18-aa2e-c48a-bebe-6ab6f4e7c114",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "920eaf0e-9d68-b87a-b636-36be8e013575",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1193,
+							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 3,
+							category = "Lua",
+							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 有效射程内存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\n-- 取敌对实体列表：优先 TensorCore，其次兼容 Minion 的 EntityList（若存在）\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    -- 常见：Enemy / Attackable / Aggro 等；这里用 Enemy，若你环境不是这个名字会直接降级到 false\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    -- Minion 常见过滤：attackable\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        -- 存活判断（不同对象字段可能不同，做兼容）\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        -- 可选中 / 可攻击（同样做兼容）\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" then\n                -- 目标命中半径字段兼容：hitradius / hitdarius\n                local hitr = 0\n                if type(e.hitradius) == \"number\" then\n                    hitr = e.hitradius\n                elseif type(e.hitdarius) == \"number\" then\n                    hitr = e.hitdarius\n                end\n\n                -- 有效距离：中心距 - 目标命中半径\n                if (d - hitr) <= RANGE then\n                    return true\n                end\n            end\n        end\n    end\nend\n\nreturn false\n",
+							conditionType = 6,
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 121.403,
+				name = "Reprisal",
+				randomOffset = -2,
+				timeRange = true,
+				timelineIndex = 30,
+				timerOffset = -3,
+				timerStartOffset = -2.5,
+				uuid = "14b30e31-78f8-b620-98ae-bb9e10efd900",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+	},
+	[40] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3540,
+							conditions = 
+							{
+								
+								{
+									"6a49330b-844e-31fa-96c9-18ecbe6b49bd",
+									true,
+								},
+								
+								{
+									"d509fc50-866e-82e0-a683-7f673386a79e",
+									true,
+								},
+								
+								{
+									"28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
+									true,
+								},
+								
+								{
+									"a787167c-e665-8709-84d0-298a7dbe954a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "208d8d0c-038a-0156-ae05-da413fbdfa98",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "6a49330b-844e-31fa-96c9-18ecbe6b49bd",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 3540,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								19,
+							},
+							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 149.637,
+				name = "Veil",
+				timeRange = true,
+				timelineIndex = 40,
+				timerOffset = -10,
+				timerStartOffset = -14.5,
+				uuid = "349798c7-2966-4028-b671-6458116fc65d",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16160,
+							conditions = 
+							{
+								
+								{
+									"d7ee7d76-2e37-5f72-9463-9e74e1643e90",
+									true,
+								},
+								
+								{
+									"a810d2af-ef39-5b67-9d5f-95b37d750c7a",
+									true,
+								},
+								
+								{
+									"115eca71-8e25-2c76-be17-c29c66dcf324",
+									true,
+								},
+								
+								{
+									"a6929435-5dcb-3407-8d89-b38a0596d1ac",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "dbc99f8f-e1c5-f477-89e0-30fa7efeda14",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "d7ee7d76-2e37-5f72-9463-9e74e1643e90",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16160,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								37,
+							},
+							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1894,
+								1362,
+							},
+							category = "Self",
+							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 149.637,
+				name = "HoL",
+				timeRange = true,
+				timelineIndex = 40,
+				timerStartOffset = -14.5,
+				uuid = "e450e331-622c-d146-8d43-0176068a00ae",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16471,
+							conditions = 
+							{
+								
+								{
+									"c61a0421-fa49-c741-abbd-ffd29ab11e62",
+									true,
+								},
+								
+								{
+									"142e7d5f-3fc7-8773-b581-c9fe1ad51671",
+									true,
+								},
+								
+								{
+									"322dd20f-009d-0bff-941f-f877ce997638",
+									true,
+								},
+								
+								{
+									"e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "32970969-7f85-6bc8-90e1-4f30e8ce8093",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "c61a0421-fa49-c741-abbd-ffd29ab11e62",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16471,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								32,
+							},
+							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1362,
+								1839,
+							},
+							category = "Self",
+							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 149.637,
+				name = "Dark Missinary",
+				timeRange = true,
+				timelineIndex = 40,
+				timerOffset = -10,
+				timerStartOffset = -14.5,
+				uuid = "479e3557-f420-784f-99ac-ebc989a9d887",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7388,
+							conditions = 
+							{
+								
+								{
+									"a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
+									true,
+								},
+								
+								{
+									"c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
+									true,
+								},
+								
+								{
+									"cfdfeb27-fd18-76d8-915e-3d53780d23cf",
+									true,
+								},
+								
+								{
+									"3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "83ae2ac2-4e1e-673e-befc-12d5802ce1cd",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7388,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								21,
+							},
+							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1362,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 149.637,
+				name = "Shake it off",
+				timeRange = true,
+				timelineIndex = 40,
+				timerStartOffset = -14.5,
+				uuid = "77dbfd5e-2cac-82c1-9b16-698e0fc154e3",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7535,
+							conditions = 
+							{
+								
+								{
+									"920eaf0e-9d68-b87a-b636-36be8e013575",
+									true,
+								},
+								
+								{
+									"5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+									true,
+								},
+								
+								{
+									"7286744f-688c-9195-941e-46d65189cc2c",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "c9c9cc18-aa2e-c48a-bebe-6ab6f4e7c114",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "920eaf0e-9d68-b87a-b636-36be8e013575",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1193,
+							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 3,
+							category = "Lua",
+							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 有效射程内存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\n-- 取敌对实体列表：优先 TensorCore，其次兼容 Minion 的 EntityList（若存在）\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    -- 常见：Enemy / Attackable / Aggro 等；这里用 Enemy，若你环境不是这个名字会直接降级到 false\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    -- Minion 常见过滤：attackable\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        -- 存活判断（不同对象字段可能不同，做兼容）\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        -- 可选中 / 可攻击（同样做兼容）\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" then\n                -- 目标命中半径字段兼容：hitradius / hitdarius\n                local hitr = 0\n                if type(e.hitradius) == \"number\" then\n                    hitr = e.hitradius\n                elseif type(e.hitdarius) == \"number\" then\n                    hitr = e.hitdarius\n                end\n\n                -- 有效距离：中心距 - 目标命中半径\n                if (d - hitr) <= RANGE then\n                    return true\n                end\n            end\n        end\n    end\nend\n\nreturn false\n",
+							conditionType = 6,
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 149.637,
+				name = "Reprisal",
+				randomOffset = -2,
+				timeRange = true,
+				timelineIndex = 40,
+				timerOffset = -3,
+				timerStartOffset = -14.5,
+				uuid = "1d397fb0-8742-f4c6-be66-3b3b804057c5",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+	},
+	[49] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "if data.RKM11SWeapon6 == nil then\n    data.RKM11SWeapon6 = {\n        ids = {},\n        entities = {}\n    }\nend\n\nfor _, ent in pairs(TensorCore.entityList(\"contentid=108\")) do\n    if Argus.isEntityVisible(ent) and not table.contains(data.RKM11SWeapon6.ids, ent.id) then\n        local md = Argus.getEntityModel(ent.id)\n        if (md == 19184 or md == 19185 or md == 19186)\n        then\n            table.insert(data.RKM11SWeapon6.ids, ent.id)\n            table.insert(data.RKM11SWeapon6.entities, ent)\n        end\n    end\nend\n\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"21399dea-6b11-00ac-bf21-14ad9e3135a8",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							name = "Load Data",
+							uuid = "426bfcc6-2b09-9e2a-be6d-b1903a338a71",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.RKM11SWeapon6 == nil or table.size(data.RKM11SWeapon6) < 6",
+							name = "Weapon Count < 6",
+							uuid = "21399dea-6b11-00ac-bf21-14ad9e3135a8",
+							version = 3,
+						},
+					},
+				},
+				eventType = 12,
+				mechanicTime = 192.215,
+				name = "Get ordered Weapon 6",
+				timeRange = true,
+				timelineIndex = 49,
+				timerEndOffset = 28,
+				timerStartOffset = -10,
+				uuid = "091f7db4-7f88-0379-8f10-901a1355af0e",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "-- 19185 镰刀  \n-- 19186 大剑 \n-- 19184 斧子\nreturn Argus.getEntityModel(data.RKM11SWeapon6.entities[1]) == 19186 -- 这里1~6表示第几个兵器，ID表示是哪个模型",
+							name = "the 1st weapon is sward?",
+							uuid = "b225f2c4-553b-9457-9faa-85f5bf1d2cea",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 192.215,
+				name = "[Sample] is ??? Weapon",
+				timelineIndex = 49,
+				uuid = "9789e9dd-a4ec-27b6-a1cd-7708c083316d",
+				version = 2,
+			},
+		},
+	},
+	[61] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "-- On Draw: Player -> Target (line ends at circle rim) + hollow circle at target only\n\nif not (TensorCore and Argus2 and GUI) then\n    return\nend\n\nlocal player = TensorCore.mGetPlayer()\nif not (player and player.pos) then\n    return\nend\n\n-- Fixed world coord (X/Y/Z)\nlocal tx, ty, tz = 104.95, 0.0, 81.70\n\nlocal x1, y1, z1 = player.pos.x, player.pos.y, player.pos.z\nlocal x2, y2, z2 = tx, ty, tz\n\nlocal r = 0.2 -- circle radius (outer radius)\n\n-- --------- compute line endpoint on circle rim ----------\nlocal dx, dy, dz = (x2 - x1), (y2 - y1), (z2 - z1)\nlocal dist = math.sqrt(dx*dx + dy*dy + dz*dz)\n\n-- If player is inside/too close to circle, skip line to avoid weird flip\nif dist and dist > r then\n    local inv = 1.0 / dist\n    local ux, uy, uz = dx * inv, dy * inv, dz * inv\n\n    -- endpoint pulled back by r, so it touches the outer radius\n    local ex = x2 - ux * r\n    local ey = y2 - uy * r\n    local ez = z2 - uz * r\n\n    local white = GUI:ColorConvertFloat4ToU32(1, 1, 1, 1)\n    local lineDrawer = TensorCore.getStaticDrawer(white, 1.5)\n\n    local thickness = 5.00\n    lineDrawer:addLine(x1, y1, z1, ex, ey, ez, thickness, thickness)\nend\n\n-- --------- hollow circle at target only ----------\nlocal outline = GUI:ColorConvertFloat4ToU32(1, 1, 1, 1)\nlocal fillTransparent = GUI:ColorConvertFloat4ToU32(1, 1, 1, 0)\n\nlocal c = Argus2.ShapeDrawer:new(nil, nil, fillTransparent, outline, 3.0)\nc.gradientMinOpacity = 0\nc.gradientIntensity = 0\nc.segments = 50\n\n-- A) 只画轮廓（填充透明）\nc:addCircle(x2, y2, z2, r)\n\n-- B) 如果你这里依然出现“淡填充”，把上面那行换成下面这一行（薄圆环 = 空心轮廓）：\n-- c:addDonut(x2, y2, z2, r - 0.03, r)\n",
+							conditions = 
+							{
+								
+								{
+									"98bee4af-319d-92f7-9a26-0d1c02c4c651",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "aa631627-fbc1-9c74-b529-c65dae2eca85",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "-- On Draw: Player -> Target (line ends at circle rim) + hollow circle at target only\n\nif not (TensorCore and Argus2 and GUI) then\n    return\nend\n\nlocal player = TensorCore.mGetPlayer()\nif not (player and player.pos) then\n    return\nend\n\n-- Fixed world coord (X/Y/Z)\nlocal tx, ty, tz = 98.3, 0.0, 118.21\n\nlocal x1, y1, z1 = player.pos.x, player.pos.y, player.pos.z\nlocal x2, y2, z2 = tx, ty, tz\n\nlocal r = 0.2 -- circle radius (outer radius)\n\n-- --------- compute line endpoint on circle rim ----------\nlocal dx, dy, dz = (x2 - x1), (y2 - y1), (z2 - z1)\nlocal dist = math.sqrt(dx*dx + dy*dy + dz*dz)\n\n-- If player is inside/too close to circle, skip line to avoid weird flip\nif dist and dist > r then\n    local inv = 1.0 / dist\n    local ux, uy, uz = dx * inv, dy * inv, dz * inv\n\n    -- endpoint pulled back by r, so it touches the outer radius\n    local ex = x2 - ux * r\n    local ey = y2 - uy * r\n    local ez = z2 - uz * r\n\n    local white = GUI:ColorConvertFloat4ToU32(1, 1, 1, 1)\n    local lineDrawer = TensorCore.getStaticDrawer(white, 1.5)\n\n    local thickness = 5.00\n    lineDrawer:addLine(x1, y1, z1, ex, ey, ez, thickness, thickness)\nend\n\n-- --------- hollow circle at target only ----------\nlocal outline = GUI:ColorConvertFloat4ToU32(1, 1, 1, 1)\nlocal fillTransparent = GUI:ColorConvertFloat4ToU32(1, 1, 1, 0)\n\nlocal c = Argus2.ShapeDrawer:new(nil, nil, fillTransparent, outline, 3.0)\nc.gradientMinOpacity = 0\nc.gradientIntensity = 0\nc.segments = 50\n\n-- A) 只画轮廓（填充透明）\nc:addCircle(x2, y2, z2, r)\n\n-- B) 如果你这里依然出现“淡填充”，把上面那行换成下面这一行（薄圆环 = 空心轮廓）：\n-- c:addDonut(x2, y2, z2, r - 0.03, r)\n",
+							conditions = 
+							{
+								
+								{
+									"121347a5-3de6-263a-b916-ab93a631fef7",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "bf01f96e-fd96-01bc-8fba-c8a68e0ac8c1",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "98bee4af-319d-92f7-9a26-0d1c02c4c651",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "121347a5-3de6-263a-b916-ab93a631fef7",
+							version = 3,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				eventType = 13,
+				mechanicTime = 225.152,
+				name = "[Draw] Bait Storm",
+				timeRange = true,
+				timelineIndex = 61,
+				timerStartOffset = -6.3000001907349,
+				uuid = "c3a9fcee-8639-1866-ac86-b86328949b71",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Alert",
+							alertColor = 6553599,
+							alertDuration = 6300,
+							alertPriority = 4,
+							alertScale = 1,
+							alertText = "MT",
+							alertVolume = 100,
+							conditions = 
+							{
+								
+								{
+									"f6d732d1-c1d8-fcb5-be1d-85c71ff1c290",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							uuid = "e1d9fc24-1d96-ca47-b2f1-ab88283d4d8a",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							aType = "Alert",
+							alertDuration = 6300,
+							alertTTS = true,
+							alertText = "Go north, Bait Storm",
+							alertVolume = 100,
+							conditions = 
+							{
+								
+								{
+									"f6d732d1-c1d8-fcb5-be1d-85c71ff1c290",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							uuid = "2e4738cc-5dd7-575b-bc89-f82eba4b4d60",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "Alert",
+							alertColor = 6553599,
+							alertDuration = 6300,
+							alertPriority = 4,
+							alertScale = 1,
+							alertText = "ST",
+							alertVolume = 100,
+							conditions = 
+							{
+								
+								{
+									"3d68d278-5ce4-3dc8-a1ac-8434ae15baf9",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							uuid = "a9b91334-d078-3ba8-a635-6d9cdd113a35",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							aType = "Alert",
+							alertDuration = 6300,
+							alertTTS = true,
+							alertText = "Go south, Bait Storm",
+							alertVolume = 100,
+							conditions = 
+							{
+								
+								{
+									"3d68d278-5ce4-3dc8-a1ac-8434ae15baf9",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							uuid = "e7b86b0c-2a95-2fbd-b6a7-fe0a6c092ba3",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "f6d732d1-c1d8-fcb5-be1d-85c71ff1c290",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "3d68d278-5ce4-3dc8-a1ac-8434ae15baf9",
+							version = 3,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				mechanicTime = 225.152,
+				name = "[TTS] Bait Storm",
+				timeRange = true,
+				timelineIndex = 61,
+				timerStartOffset = -6.3000001907349,
+				uuid = "a101b411-3bc7-dbc2-94e9-845f6cee6c89",
+				version = 2,
+			},
+		},
+	},
+	[64] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3540,
+							conditions = 
+							{
+								
+								{
+									"6a49330b-844e-31fa-96c9-18ecbe6b49bd",
+									true,
+								},
+								
+								{
+									"d509fc50-866e-82e0-a683-7f673386a79e",
+									true,
+								},
+								
+								{
+									"28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
+									true,
+								},
+								
+								{
+									"a787167c-e665-8709-84d0-298a7dbe954a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "208d8d0c-038a-0156-ae05-da413fbdfa98",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "6a49330b-844e-31fa-96c9-18ecbe6b49bd",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 3540,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								19,
+							},
+							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 239.246,
+				name = "Veil",
+				timeRange = true,
+				timelineIndex = 64,
+				timerOffset = -10,
+				timerStartOffset = -4.5,
+				uuid = "c8243da0-5038-553f-befe-f3c2979d0a7b",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16160,
+							conditions = 
+							{
+								
+								{
+									"d7ee7d76-2e37-5f72-9463-9e74e1643e90",
+									true,
+								},
+								
+								{
+									"a810d2af-ef39-5b67-9d5f-95b37d750c7a",
+									true,
+								},
+								
+								{
+									"115eca71-8e25-2c76-be17-c29c66dcf324",
+									true,
+								},
+								
+								{
+									"a6929435-5dcb-3407-8d89-b38a0596d1ac",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "dbc99f8f-e1c5-f477-89e0-30fa7efeda14",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "d7ee7d76-2e37-5f72-9463-9e74e1643e90",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16160,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								37,
+							},
+							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1894,
+								1362,
+							},
+							category = "Self",
+							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 239.246,
+				name = "HoL",
+				timeRange = true,
+				timelineIndex = 64,
+				timerStartOffset = -4.5,
+				uuid = "6c7d71a2-6ebc-f87c-9bdf-ddf596302433",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16471,
+							conditions = 
+							{
+								
+								{
+									"c61a0421-fa49-c741-abbd-ffd29ab11e62",
+									true,
+								},
+								
+								{
+									"142e7d5f-3fc7-8773-b581-c9fe1ad51671",
+									true,
+								},
+								
+								{
+									"322dd20f-009d-0bff-941f-f877ce997638",
+									true,
+								},
+								
+								{
+									"e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "32970969-7f85-6bc8-90e1-4f30e8ce8093",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "c61a0421-fa49-c741-abbd-ffd29ab11e62",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16471,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								32,
+							},
+							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1362,
+								1839,
+							},
+							category = "Self",
+							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 239.246,
+				name = "Dark Missinary",
+				timeRange = true,
+				timelineIndex = 64,
+				timerOffset = -10,
+				timerStartOffset = -4.5,
+				uuid = "4adcdef4-e601-69a0-a53b-577f18de8bc3",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7388,
+							conditions = 
+							{
+								
+								{
+									"a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
+									true,
+								},
+								
+								{
+									"c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
+									true,
+								},
+								
+								{
+									"cfdfeb27-fd18-76d8-915e-3d53780d23cf",
+									true,
+								},
+								
+								{
+									"3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "83ae2ac2-4e1e-673e-befc-12d5802ce1cd",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7388,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								21,
+							},
+							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1362,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 239.246,
+				name = "Shake it off",
+				timeRange = true,
+				timelineIndex = 64,
+				timerStartOffset = -4.5,
+				uuid = "ae466c15-dc98-85e6-b518-b2964df42933",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7535,
+							conditions = 
+							{
+								
+								{
+									"920eaf0e-9d68-b87a-b636-36be8e013575",
+									true,
+								},
+								
+								{
+									"5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+									true,
+								},
+								
+								{
+									"7286744f-688c-9195-941e-46d65189cc2c",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "c9c9cc18-aa2e-c48a-bebe-6ab6f4e7c114",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "920eaf0e-9d68-b87a-b636-36be8e013575",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1193,
+							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 3,
+							category = "Lua",
+							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 有效射程内存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\n-- 取敌对实体列表：优先 TensorCore，其次兼容 Minion 的 EntityList（若存在）\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    -- 常见：Enemy / Attackable / Aggro 等；这里用 Enemy，若你环境不是这个名字会直接降级到 false\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    -- Minion 常见过滤：attackable\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        -- 存活判断（不同对象字段可能不同，做兼容）\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        -- 可选中 / 可攻击（同样做兼容）\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" then\n                -- 目标命中半径字段兼容：hitradius / hitdarius\n                local hitr = 0\n                if type(e.hitradius) == \"number\" then\n                    hitr = e.hitradius\n                elseif type(e.hitdarius) == \"number\" then\n                    hitr = e.hitdarius\n                end\n\n                -- 有效距离：中心距 - 目标命中半径\n                if (d - hitr) <= RANGE then\n                    return true\n                end\n            end\n        end\n    end\nend\n\nreturn false\n",
+							conditionType = 6,
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 239.246,
+				name = "Reprisal",
+				randomOffset = -2,
+				timeRange = true,
+				timelineIndex = 64,
+				timerOffset = -3,
+				timerStartOffset = -2.5,
+				uuid = "4c1c32b4-5aaf-8078-a42d-18bbee90944e",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+	},
+	[126] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3540,
+							conditions = 
+							{
+								
+								{
+									"6a49330b-844e-31fa-96c9-18ecbe6b49bd",
+									true,
+								},
+								
+								{
+									"d509fc50-866e-82e0-a683-7f673386a79e",
+									true,
+								},
+								
+								{
+									"28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
+									true,
+								},
+								
+								{
+									"a787167c-e665-8709-84d0-298a7dbe954a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "208d8d0c-038a-0156-ae05-da413fbdfa98",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "6a49330b-844e-31fa-96c9-18ecbe6b49bd",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 3540,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								19,
+							},
+							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 478.854,
+				name = "Veil",
+				timeRange = true,
+				timelineIndex = 126,
+				timerOffset = -10,
+				timerStartOffset = -4.5,
+				uuid = "f86b746a-2925-15c2-8903-cacc6aa58fbe",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16160,
+							conditions = 
+							{
+								
+								{
+									"d7ee7d76-2e37-5f72-9463-9e74e1643e90",
+									true,
+								},
+								
+								{
+									"a810d2af-ef39-5b67-9d5f-95b37d750c7a",
+									true,
+								},
+								
+								{
+									"115eca71-8e25-2c76-be17-c29c66dcf324",
+									true,
+								},
+								
+								{
+									"a6929435-5dcb-3407-8d89-b38a0596d1ac",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "dbc99f8f-e1c5-f477-89e0-30fa7efeda14",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "d7ee7d76-2e37-5f72-9463-9e74e1643e90",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16160,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								37,
+							},
+							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1894,
+								1362,
+							},
+							category = "Self",
+							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 478.854,
+				name = "HoL",
+				timeRange = true,
+				timelineIndex = 126,
+				timerStartOffset = -4.5,
+				uuid = "36d4fbe8-86d3-3a59-b866-91bf011e346d",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16471,
+							conditions = 
+							{
+								
+								{
+									"c61a0421-fa49-c741-abbd-ffd29ab11e62",
+									true,
+								},
+								
+								{
+									"142e7d5f-3fc7-8773-b581-c9fe1ad51671",
+									true,
+								},
+								
+								{
+									"322dd20f-009d-0bff-941f-f877ce997638",
+									true,
+								},
+								
+								{
+									"e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "32970969-7f85-6bc8-90e1-4f30e8ce8093",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "c61a0421-fa49-c741-abbd-ffd29ab11e62",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16471,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								32,
+							},
+							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1362,
+								1839,
+							},
+							category = "Self",
+							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 478.854,
+				name = "Dark Missinary",
+				timeRange = true,
+				timelineIndex = 126,
+				timerOffset = -10,
+				timerStartOffset = -4.5,
+				uuid = "ab9fd6c6-5b6d-eb41-9b5c-641c8d6db6f3",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7388,
+							conditions = 
+							{
+								
+								{
+									"a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
+									true,
+								},
+								
+								{
+									"c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
+									true,
+								},
+								
+								{
+									"cfdfeb27-fd18-76d8-915e-3d53780d23cf",
+									true,
+								},
+								
+								{
+									"3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "83ae2ac2-4e1e-673e-befc-12d5802ce1cd",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7388,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								21,
+							},
+							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1362,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 478.854,
+				name = "Shake it off",
+				timeRange = true,
+				timelineIndex = 126,
+				timerStartOffset = -4.5,
+				uuid = "6e928903-2134-21b0-a799-f11df21dd31d",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7535,
+							conditions = 
+							{
+								
+								{
+									"920eaf0e-9d68-b87a-b636-36be8e013575",
+									true,
+								},
+								
+								{
+									"5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+									true,
+								},
+								
+								{
+									"7286744f-688c-9195-941e-46d65189cc2c",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "c9c9cc18-aa2e-c48a-bebe-6ab6f4e7c114",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "920eaf0e-9d68-b87a-b636-36be8e013575",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1193,
+							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 3,
+							category = "Lua",
+							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 有效射程内存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\n-- 取敌对实体列表：优先 TensorCore，其次兼容 Minion 的 EntityList（若存在）\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    -- 常见：Enemy / Attackable / Aggro 等；这里用 Enemy，若你环境不是这个名字会直接降级到 false\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    -- Minion 常见过滤：attackable\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        -- 存活判断（不同对象字段可能不同，做兼容）\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        -- 可选中 / 可攻击（同样做兼容）\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" then\n                -- 目标命中半径字段兼容：hitradius / hitdarius\n                local hitr = 0\n                if type(e.hitradius) == \"number\" then\n                    hitr = e.hitradius\n                elseif type(e.hitdarius) == \"number\" then\n                    hitr = e.hitdarius\n                end\n\n                -- 有效距离：中心距 - 目标命中半径\n                if (d - hitr) <= RANGE then\n                    return true\n                end\n            end\n        end\n    end\nend\n\nreturn false\n",
+							conditionType = 6,
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 478.854,
+				name = "Reprisal",
+				randomOffset = -2,
+				timeRange = true,
+				timelineIndex = 126,
+				timerOffset = -3,
+				timerStartOffset = -2.5,
+				uuid = "bd82eab3-a8c8-ad3e-aaaa-a251deeab820",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+	},
+	[127] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3540,
+							conditions = 
+							{
+								
+								{
+									"6a49330b-844e-31fa-96c9-18ecbe6b49bd",
+									true,
+								},
+								
+								{
+									"d509fc50-866e-82e0-a683-7f673386a79e",
+									true,
+								},
+								
+								{
+									"28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
+									true,
+								},
+								
+								{
+									"a787167c-e665-8709-84d0-298a7dbe954a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "208d8d0c-038a-0156-ae05-da413fbdfa98",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "6a49330b-844e-31fa-96c9-18ecbe6b49bd",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 3540,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								19,
+							},
+							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 479.464,
+				name = "Veil",
+				timeRange = true,
+				timelineIndex = 127,
+				timerOffset = -10,
+				timerStartOffset = -4.5,
+				uuid = "af96f63f-b474-5232-938e-5af8661057f2",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16160,
+							conditions = 
+							{
+								
+								{
+									"d7ee7d76-2e37-5f72-9463-9e74e1643e90",
+									true,
+								},
+								
+								{
+									"a810d2af-ef39-5b67-9d5f-95b37d750c7a",
+									true,
+								},
+								
+								{
+									"115eca71-8e25-2c76-be17-c29c66dcf324",
+									true,
+								},
+								
+								{
+									"a6929435-5dcb-3407-8d89-b38a0596d1ac",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "dbc99f8f-e1c5-f477-89e0-30fa7efeda14",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "d7ee7d76-2e37-5f72-9463-9e74e1643e90",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16160,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								37,
+							},
+							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1894,
+								1362,
+							},
+							category = "Self",
+							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 479.464,
+				name = "HoL",
+				timeRange = true,
+				timelineIndex = 127,
+				timerStartOffset = -4.5,
+				uuid = "bdb8344c-1f83-56ea-9493-faf64dab283f",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16471,
+							conditions = 
+							{
+								
+								{
+									"c61a0421-fa49-c741-abbd-ffd29ab11e62",
+									true,
+								},
+								
+								{
+									"142e7d5f-3fc7-8773-b581-c9fe1ad51671",
+									true,
+								},
+								
+								{
+									"322dd20f-009d-0bff-941f-f877ce997638",
+									true,
+								},
+								
+								{
+									"e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "32970969-7f85-6bc8-90e1-4f30e8ce8093",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "c61a0421-fa49-c741-abbd-ffd29ab11e62",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16471,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								32,
+							},
+							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1362,
+								1839,
+							},
+							category = "Self",
+							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 479.464,
+				name = "Dark Missinary",
+				timeRange = true,
+				timelineIndex = 127,
+				timerOffset = -10,
+				timerStartOffset = -4.5,
+				uuid = "2b3a20b0-8bff-8f2b-a99c-6b84e6cb983e",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7388,
+							conditions = 
+							{
+								
+								{
+									"a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
+									true,
+								},
+								
+								{
+									"c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
+									true,
+								},
+								
+								{
+									"cfdfeb27-fd18-76d8-915e-3d53780d23cf",
+									true,
+								},
+								
+								{
+									"3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "83ae2ac2-4e1e-673e-befc-12d5802ce1cd",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7388,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								21,
+							},
+							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1362,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 479.464,
+				name = "Shake it off",
+				timeRange = true,
+				timelineIndex = 127,
+				timerStartOffset = -4.5,
+				uuid = "68057c40-f4f9-07b2-b563-f46208cce4b1",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7535,
+							conditions = 
+							{
+								
+								{
+									"920eaf0e-9d68-b87a-b636-36be8e013575",
+									true,
+								},
+								
+								{
+									"5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+									true,
+								},
+								
+								{
+									"7286744f-688c-9195-941e-46d65189cc2c",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "c9c9cc18-aa2e-c48a-bebe-6ab6f4e7c114",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "920eaf0e-9d68-b87a-b636-36be8e013575",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1193,
+							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 3,
+							category = "Lua",
+							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 有效射程内存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\n-- 取敌对实体列表：优先 TensorCore，其次兼容 Minion 的 EntityList（若存在）\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    -- 常见：Enemy / Attackable / Aggro 等；这里用 Enemy，若你环境不是这个名字会直接降级到 false\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    -- Minion 常见过滤：attackable\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        -- 存活判断（不同对象字段可能不同，做兼容）\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        -- 可选中 / 可攻击（同样做兼容）\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" then\n                -- 目标命中半径字段兼容：hitradius / hitdarius\n                local hitr = 0\n                if type(e.hitradius) == \"number\" then\n                    hitr = e.hitradius\n                elseif type(e.hitdarius) == \"number\" then\n                    hitr = e.hitdarius\n                end\n\n                -- 有效距离：中心距 - 目标命中半径\n                if (d - hitr) <= RANGE then\n                    return true\n                end\n            end\n        end\n    end\nend\n\nreturn false\n",
+							conditionType = 6,
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 479.464,
+				name = "Reprisal",
+				randomOffset = -2,
+				timeRange = true,
+				timelineIndex = 127,
+				timerOffset = -3,
+				timerStartOffset = -2.5,
+				uuid = "ea43f556-e83d-5949-abd1-621f97004a33",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+	},
+	[144] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3540,
+							conditions = 
+							{
+								
+								{
+									"6a49330b-844e-31fa-96c9-18ecbe6b49bd",
+									true,
+								},
+								
+								{
+									"d509fc50-866e-82e0-a683-7f673386a79e",
+									true,
+								},
+								
+								{
+									"28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
+									true,
+								},
+								
+								{
+									"a787167c-e665-8709-84d0-298a7dbe954a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "208d8d0c-038a-0156-ae05-da413fbdfa98",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "6a49330b-844e-31fa-96c9-18ecbe6b49bd",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 3540,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								19,
+							},
+							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 521.886,
+				name = "Veil",
+				timeRange = true,
+				timelineIndex = 144,
+				timerOffset = -10,
+				timerStartOffset = -4.5,
+				uuid = "c96d0bc3-d756-2257-9f2f-6c79487f66f0",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16160,
+							conditions = 
+							{
+								
+								{
+									"d7ee7d76-2e37-5f72-9463-9e74e1643e90",
+									true,
+								},
+								
+								{
+									"a810d2af-ef39-5b67-9d5f-95b37d750c7a",
+									true,
+								},
+								
+								{
+									"115eca71-8e25-2c76-be17-c29c66dcf324",
+									true,
+								},
+								
+								{
+									"a6929435-5dcb-3407-8d89-b38a0596d1ac",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "dbc99f8f-e1c5-f477-89e0-30fa7efeda14",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "d7ee7d76-2e37-5f72-9463-9e74e1643e90",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16160,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								37,
+							},
+							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1894,
+								1362,
+							},
+							category = "Self",
+							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 521.886,
+				name = "HoL",
+				timeRange = true,
+				timelineIndex = 144,
+				timerStartOffset = -4.5,
+				uuid = "af18ac17-5fd6-dfca-b29a-c26a4ac44875",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16471,
+							conditions = 
+							{
+								
+								{
+									"c61a0421-fa49-c741-abbd-ffd29ab11e62",
+									true,
+								},
+								
+								{
+									"142e7d5f-3fc7-8773-b581-c9fe1ad51671",
+									true,
+								},
+								
+								{
+									"322dd20f-009d-0bff-941f-f877ce997638",
+									true,
+								},
+								
+								{
+									"e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "32970969-7f85-6bc8-90e1-4f30e8ce8093",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "c61a0421-fa49-c741-abbd-ffd29ab11e62",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16471,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								32,
+							},
+							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1362,
+								1839,
+							},
+							category = "Self",
+							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 521.886,
+				name = "Dark Missinary",
+				timeRange = true,
+				timelineIndex = 144,
+				timerOffset = -10,
+				timerStartOffset = -4.5,
+				uuid = "026d75cb-1b02-f67b-8275-83548cbdfcab",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7388,
+							conditions = 
+							{
+								
+								{
+									"a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
+									true,
+								},
+								
+								{
+									"c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
+									true,
+								},
+								
+								{
+									"cfdfeb27-fd18-76d8-915e-3d53780d23cf",
+									true,
+								},
+								
+								{
+									"3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "83ae2ac2-4e1e-673e-befc-12d5802ce1cd",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7388,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								21,
+							},
+							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1362,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 521.886,
+				name = "Shake it off",
+				timeRange = true,
+				timelineIndex = 144,
+				timerStartOffset = -4.5,
+				uuid = "1454dca5-b929-053f-b7f9-35611b3702f2",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7535,
+							conditions = 
+							{
+								
+								{
+									"920eaf0e-9d68-b87a-b636-36be8e013575",
+									true,
+								},
+								
+								{
+									"5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+									true,
+								},
+								
+								{
+									"7286744f-688c-9195-941e-46d65189cc2c",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "c9c9cc18-aa2e-c48a-bebe-6ab6f4e7c114",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "920eaf0e-9d68-b87a-b636-36be8e013575",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1193,
+							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 3,
+							category = "Lua",
+							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 有效射程内存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\n-- 取敌对实体列表：优先 TensorCore，其次兼容 Minion 的 EntityList（若存在）\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    -- 常见：Enemy / Attackable / Aggro 等；这里用 Enemy，若你环境不是这个名字会直接降级到 false\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    -- Minion 常见过滤：attackable\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        -- 存活判断（不同对象字段可能不同，做兼容）\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        -- 可选中 / 可攻击（同样做兼容）\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" then\n                -- 目标命中半径字段兼容：hitradius / hitdarius\n                local hitr = 0\n                if type(e.hitradius) == \"number\" then\n                    hitr = e.hitradius\n                elseif type(e.hitdarius) == \"number\" then\n                    hitr = e.hitdarius\n                end\n\n                -- 有效距离：中心距 - 目标命中半径\n                if (d - hitr) <= RANGE then\n                    return true\n                end\n            end\n        end\n    end\nend\n\nreturn false\n",
+							conditionType = 6,
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 521.886,
+				name = "Reprisal",
+				randomOffset = -2,
+				timeRange = true,
+				timelineIndex = 144,
+				timerOffset = -3,
+				timerStartOffset = -2.5,
+				uuid = "49917abe-4b53-dc59-8a91-9052bd8c8e69",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+	},
+	[146] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3540,
+							conditions = 
+							{
+								
+								{
+									"6a49330b-844e-31fa-96c9-18ecbe6b49bd",
+									true,
+								},
+								
+								{
+									"d509fc50-866e-82e0-a683-7f673386a79e",
+									true,
+								},
+								
+								{
+									"28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
+									true,
+								},
+								
+								{
+									"a787167c-e665-8709-84d0-298a7dbe954a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "208d8d0c-038a-0156-ae05-da413fbdfa98",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "6a49330b-844e-31fa-96c9-18ecbe6b49bd",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 3540,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								19,
+							},
+							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 541.479,
+				name = "Veil",
+				timeRange = true,
+				timelineIndex = 146,
+				timerOffset = -10,
+				timerStartOffset = -4.5,
+				uuid = "a2b14698-e528-5d73-8e97-cb8e84cae317",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16160,
+							conditions = 
+							{
+								
+								{
+									"d7ee7d76-2e37-5f72-9463-9e74e1643e90",
+									true,
+								},
+								
+								{
+									"a810d2af-ef39-5b67-9d5f-95b37d750c7a",
+									true,
+								},
+								
+								{
+									"115eca71-8e25-2c76-be17-c29c66dcf324",
+									true,
+								},
+								
+								{
+									"a6929435-5dcb-3407-8d89-b38a0596d1ac",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "dbc99f8f-e1c5-f477-89e0-30fa7efeda14",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "d7ee7d76-2e37-5f72-9463-9e74e1643e90",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16160,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								37,
+							},
+							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1894,
+								1362,
+							},
+							category = "Self",
+							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 541.479,
+				name = "HoL",
+				timeRange = true,
+				timelineIndex = 146,
+				timerStartOffset = -4.5,
+				uuid = "57797840-25e2-ac76-9909-48e8e8cf774d",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16471,
+							conditions = 
+							{
+								
+								{
+									"c61a0421-fa49-c741-abbd-ffd29ab11e62",
+									true,
+								},
+								
+								{
+									"142e7d5f-3fc7-8773-b581-c9fe1ad51671",
+									true,
+								},
+								
+								{
+									"322dd20f-009d-0bff-941f-f877ce997638",
+									true,
+								},
+								
+								{
+									"e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "32970969-7f85-6bc8-90e1-4f30e8ce8093",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "c61a0421-fa49-c741-abbd-ffd29ab11e62",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16471,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								32,
+							},
+							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1362,
+								1839,
+							},
+							category = "Self",
+							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 541.479,
+				name = "Dark Missinary",
+				timeRange = true,
+				timelineIndex = 146,
+				timerOffset = -10,
+				timerStartOffset = -4.5,
+				uuid = "524021e1-c368-5024-a533-5c025e0433da",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7388,
+							conditions = 
+							{
+								
+								{
+									"a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
+									true,
+								},
+								
+								{
+									"c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
+									true,
+								},
+								
+								{
+									"cfdfeb27-fd18-76d8-915e-3d53780d23cf",
+									true,
+								},
+								
+								{
+									"3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "83ae2ac2-4e1e-673e-befc-12d5802ce1cd",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7388,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								21,
+							},
+							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1362,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 541.479,
+				name = "Shake it off",
+				timeRange = true,
+				timelineIndex = 146,
+				timerStartOffset = -4.5,
+				uuid = "42551f81-2968-ad60-8f3a-b8765a90afaa",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7535,
+							conditions = 
+							{
+								
+								{
+									"920eaf0e-9d68-b87a-b636-36be8e013575",
+									true,
+								},
+								
+								{
+									"5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+									true,
+								},
+								
+								{
+									"7286744f-688c-9195-941e-46d65189cc2c",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "c9c9cc18-aa2e-c48a-bebe-6ab6f4e7c114",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "920eaf0e-9d68-b87a-b636-36be8e013575",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1193,
+							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 3,
+							category = "Lua",
+							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 有效射程内存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\n-- 取敌对实体列表：优先 TensorCore，其次兼容 Minion 的 EntityList（若存在）\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    -- 常见：Enemy / Attackable / Aggro 等；这里用 Enemy，若你环境不是这个名字会直接降级到 false\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    -- Minion 常见过滤：attackable\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        -- 存活判断（不同对象字段可能不同，做兼容）\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        -- 可选中 / 可攻击（同样做兼容）\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" then\n                -- 目标命中半径字段兼容：hitradius / hitdarius\n                local hitr = 0\n                if type(e.hitradius) == \"number\" then\n                    hitr = e.hitradius\n                elseif type(e.hitdarius) == \"number\" then\n                    hitr = e.hitdarius\n                end\n\n                -- 有效距离：中心距 - 目标命中半径\n                if (d - hitr) <= RANGE then\n                    return true\n                end\n            end\n        end\n    end\nend\n\nreturn false\n",
+							conditionType = 6,
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 541.479,
+				name = "Reprisal",
+				randomOffset = -2,
+				timeRange = true,
+				timelineIndex = 146,
+				timerOffset = -3,
+				timerStartOffset = -2.5,
+				uuid = "b3a7a2bd-43a9-fb59-9fe7-3a9075a36016",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+	},
+	[160] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3540,
+							conditions = 
+							{
+								
+								{
+									"6a49330b-844e-31fa-96c9-18ecbe6b49bd",
+									true,
+								},
+								
+								{
+									"d509fc50-866e-82e0-a683-7f673386a79e",
+									true,
+								},
+								
+								{
+									"28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
+									true,
+								},
+								
+								{
+									"a787167c-e665-8709-84d0-298a7dbe954a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "208d8d0c-038a-0156-ae05-da413fbdfa98",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "6a49330b-844e-31fa-96c9-18ecbe6b49bd",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 3540,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								19,
+							},
+							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 579.511,
+				name = "Veil",
+				timeRange = true,
+				timelineIndex = 160,
+				timerOffset = -10,
+				timerStartOffset = -4.5,
+				uuid = "4ddc45c6-1c49-ca4e-9419-8811ef6d9e16",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16160,
+							conditions = 
+							{
+								
+								{
+									"d7ee7d76-2e37-5f72-9463-9e74e1643e90",
+									true,
+								},
+								
+								{
+									"a810d2af-ef39-5b67-9d5f-95b37d750c7a",
+									true,
+								},
+								
+								{
+									"115eca71-8e25-2c76-be17-c29c66dcf324",
+									true,
+								},
+								
+								{
+									"a6929435-5dcb-3407-8d89-b38a0596d1ac",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "dbc99f8f-e1c5-f477-89e0-30fa7efeda14",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "d7ee7d76-2e37-5f72-9463-9e74e1643e90",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16160,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								37,
+							},
+							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1894,
+								1362,
+							},
+							category = "Self",
+							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 579.511,
+				name = "HoL",
+				timeRange = true,
+				timelineIndex = 160,
+				timerStartOffset = -4.5,
+				uuid = "8272b3c2-0774-fd11-81f4-62f7e7ed1d97",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16471,
+							conditions = 
+							{
+								
+								{
+									"c61a0421-fa49-c741-abbd-ffd29ab11e62",
+									true,
+								},
+								
+								{
+									"142e7d5f-3fc7-8773-b581-c9fe1ad51671",
+									true,
+								},
+								
+								{
+									"322dd20f-009d-0bff-941f-f877ce997638",
+									true,
+								},
+								
+								{
+									"e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "32970969-7f85-6bc8-90e1-4f30e8ce8093",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "c61a0421-fa49-c741-abbd-ffd29ab11e62",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16471,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								32,
+							},
+							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1362,
+								1839,
+							},
+							category = "Self",
+							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 579.511,
+				name = "Dark Missinary",
+				timeRange = true,
+				timelineIndex = 160,
+				timerOffset = -10,
+				timerStartOffset = -4.5,
+				uuid = "a1bbb125-c2a5-462d-a199-89f4dc25279e",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7388,
+							conditions = 
+							{
+								
+								{
+									"a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
+									true,
+								},
+								
+								{
+									"c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
+									true,
+								},
+								
+								{
+									"cfdfeb27-fd18-76d8-915e-3d53780d23cf",
+									true,
+								},
+								
+								{
+									"3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "83ae2ac2-4e1e-673e-befc-12d5802ce1cd",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7388,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								21,
+							},
+							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1362,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 579.511,
+				name = "Shake it off",
+				timeRange = true,
+				timelineIndex = 160,
+				timerStartOffset = -4.5,
+				uuid = "3e16d0ab-fcb2-600d-9611-ad33907a0c11",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7535,
+							conditions = 
+							{
+								
+								{
+									"920eaf0e-9d68-b87a-b636-36be8e013575",
+									true,
+								},
+								
+								{
+									"5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+									true,
+								},
+								
+								{
+									"7286744f-688c-9195-941e-46d65189cc2c",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "c9c9cc18-aa2e-c48a-bebe-6ab6f4e7c114",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "920eaf0e-9d68-b87a-b636-36be8e013575",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1193,
+							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 3,
+							category = "Lua",
+							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 有效射程内存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\n-- 取敌对实体列表：优先 TensorCore，其次兼容 Minion 的 EntityList（若存在）\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    -- 常见：Enemy / Attackable / Aggro 等；这里用 Enemy，若你环境不是这个名字会直接降级到 false\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    -- Minion 常见过滤：attackable\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        -- 存活判断（不同对象字段可能不同，做兼容）\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        -- 可选中 / 可攻击（同样做兼容）\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" then\n                -- 目标命中半径字段兼容：hitradius / hitdarius\n                local hitr = 0\n                if type(e.hitradius) == \"number\" then\n                    hitr = e.hitradius\n                elseif type(e.hitdarius) == \"number\" then\n                    hitr = e.hitdarius\n                end\n\n                -- 有效距离：中心距 - 目标命中半径\n                if (d - hitr) <= RANGE then\n                    return true\n                end\n            end\n        end\n    end\nend\n\nreturn false\n",
+							conditionType = 6,
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 579.511,
+				name = "Reprisal",
+				randomOffset = -2,
+				timeRange = true,
+				timelineIndex = 160,
+				timerOffset = -3,
+				timerStartOffset = -2.5,
+				uuid = "98c860b2-42a6-ad99-b650-f34f6795fa4f",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+	},
+	[161] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Alert",
+							alertDuration = 14200,
+							alertTTS = true,
+							alertText = "Tower 1: Full Party",
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "d47e171f-20f7-32be-a55c-be42ccd463ee",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 592.776,
+				name = "Tower 1",
+				timelineIndex = 161,
+				timerOffset = -5,
+				uuid = "0b2ae507-2889-7178-bf94-6292f91a6933",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3540,
+							conditions = 
+							{
+								
+								{
+									"6a49330b-844e-31fa-96c9-18ecbe6b49bd",
+									true,
+								},
+								
+								{
+									"d509fc50-866e-82e0-a683-7f673386a79e",
+									true,
+								},
+								
+								{
+									"28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
+									true,
+								},
+								
+								{
+									"a787167c-e665-8709-84d0-298a7dbe954a",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "208d8d0c-038a-0156-ae05-da413fbdfa98",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "6a49330b-844e-31fa-96c9-18ecbe6b49bd",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 3540,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								19,
+							},
+							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 592.776,
+				name = "Veil",
+				timeRange = true,
+				timelineIndex = 161,
+				timerEndOffset = 20,
+				timerOffset = -10,
+				timerStartOffset = 0.5,
+				uuid = "7717e04d-06fd-f081-8a37-f1cd05a64831",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16160,
+							conditions = 
+							{
+								
+								{
+									"d7ee7d76-2e37-5f72-9463-9e74e1643e90",
+									true,
+								},
+								
+								{
+									"a810d2af-ef39-5b67-9d5f-95b37d750c7a",
+									true,
+								},
+								
+								{
+									"115eca71-8e25-2c76-be17-c29c66dcf324",
+									true,
+								},
+								
+								{
+									"a6929435-5dcb-3407-8d89-b38a0596d1ac",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "dbc99f8f-e1c5-f477-89e0-30fa7efeda14",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "d7ee7d76-2e37-5f72-9463-9e74e1643e90",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16160,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								37,
+							},
+							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1894,
+								1362,
+							},
+							category = "Self",
+							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 592.776,
+				name = "HoL",
+				timeRange = true,
+				timelineIndex = 161,
+				timerEndOffset = 20,
+				timerStartOffset = 0.5,
+				uuid = "0ece8d7e-839d-8b5d-8e43-ff90d247957a",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 16471,
+							conditions = 
+							{
+								
+								{
+									"c61a0421-fa49-c741-abbd-ffd29ab11e62",
+									true,
+								},
+								
+								{
+									"142e7d5f-3fc7-8773-b581-c9fe1ad51671",
+									true,
+								},
+								
+								{
+									"322dd20f-009d-0bff-941f-f877ce997638",
+									true,
+								},
+								
+								{
+									"e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "32970969-7f85-6bc8-90e1-4f30e8ce8093",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "c61a0421-fa49-c741-abbd-ffd29ab11e62",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16471,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								32,
+							},
+							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1457,
+								1362,
+								1839,
+							},
+							category = "Self",
+							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 592.776,
+				name = "Dark Missinary",
+				timeRange = true,
+				timelineIndex = 161,
+				timerEndOffset = 20,
+				timerOffset = -10,
+				timerStartOffset = 0.5,
+				uuid = "61b7a8f3-677b-ab32-aecc-ea1a01e1693f",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7388,
+							conditions = 
+							{
+								
+								{
+									"a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
+									true,
+								},
+								
+								{
+									"c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
+									true,
+								},
+								
+								{
+									"cfdfeb27-fd18-76d8-915e-3d53780d23cf",
+									true,
+								},
+								
+								{
+									"3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							ignoreWeaveRules = true,
+							uuid = "83ae2ac2-4e1e-673e-befc-12d5802ce1cd",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 7388,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								21,
+							},
+							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 6,
+							buffID = 1457,
+							buffIDList = 
+							{
+								1362,
+								1839,
+								1894,
+							},
+							category = "Self",
+							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 592.776,
+				name = "Shake it off",
+				timeRange = true,
+				timelineIndex = 161,
+				timerEndOffset = 20,
+				timerStartOffset = 0.5,
+				uuid = "44c66656-b574-7daa-ad2a-0949dc89e4b5",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7535,
+							conditions = 
+							{
+								
+								{
+									"920eaf0e-9d68-b87a-b636-36be8e013575",
+									true,
+								},
+								
+								{
+									"5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+									true,
+								},
+								
+								{
+									"7286744f-688c-9195-941e-46d65189cc2c",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Current Target",
+							uuid = "c9c9cc18-aa2e-c48a-bebe-6ab6f4e7c114",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "920eaf0e-9d68-b87a-b636-36be8e013575",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 2,
+							buffID = 1193,
+							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 3,
+							category = "Lua",
+							comparator = 2,
+							conditionLua = "-- Condition: 若 5m 有效射程内存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\n-- 取敌对实体列表：优先 TensorCore，其次兼容 Minion 的 EntityList（若存在）\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    -- 常见：Enemy / Attackable / Aggro 等；这里用 Enemy，若你环境不是这个名字会直接降级到 false\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    -- Minion 常见过滤：attackable\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        -- 存活判断（不同对象字段可能不同，做兼容）\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        -- 可选中 / 可攻击（同样做兼容）\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" then\n                -- 目标命中半径字段兼容：hitradius / hitdarius\n                local hitr = 0\n                if type(e.hitradius) == \"number\" then\n                    hitr = e.hitradius\n                elseif type(e.hitdarius) == \"number\" then\n                    hitr = e.hitdarius\n                end\n\n                -- 有效距离：中心距 - 目标命中半径\n                if (d - hitr) <= RANGE then\n                    return true\n                end\n            end\n        end\n    end\nend\n\nreturn false\n",
+							conditionType = 6,
+							inRangeValue = 3.2799999713898,
+							name = "<Range",
+							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+				},
+				mechanicTime = 592.776,
+				name = "Reprisal",
+				randomOffset = -2,
+				timeRange = true,
+				timelineIndex = 161,
+				timerEndOffset = 20,
+				timerOffset = -3,
+				timerStartOffset = 0.5,
+				uuid = "c5ddf07d-9deb-3ef0-a18d-4b12e6e6999e",
+				version = 2,
+			},
+			inheritedIndex = 5,
+		},
+	},
+	[167] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Alert",
+							alertDuration = 16300,
+							alertTTS = true,
+							alertText = "Tower 2: Tanks Invuln",
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "3b141027-d904-4bf4-bd6a-7ed3a9642ea9",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 611.901,
+				name = "Tower 2",
+				timelineIndex = 167,
+				timerOffset = -5,
+				uuid = "0f3d492e-864c-191a-8e56-695795f816a2",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "Argus.addPlayerMarker(381)\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"a3466279-65ee-a6d3-8407-478930a1dd65",
+									true,
+								},
+								
+								{
+									"ddd2100c-0591-2653-abdd-e4c8ff151182",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_CD",
+							uuid = "69610243-4efa-bba4-9abb-d28e193fb5d6",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "a3466279-65ee-a6d3-8407-478930a1dd65",
+							version = 3,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 7,
+							buffDuration = 2,
+							buffIDList = 
+							{
+								810,
+								409,
+								1836,
+								82,
+							},
+							category = "Party",
+							comparator = 2,
+							matchAnyBuff = true,
+							name = "MT invuln duration",
+							partyTargetType = "Other Tank",
+							uuid = "ddd2100c-0591-2653-abdd-e4c8ff151182",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 611.901,
+				name = "ST switch invuln",
+				timeRange = true,
+				timelineIndex = 167,
+				uuid = "b33c957c-cd26-9445-98a5-ca350a69d171",
+				version = 2,
+			},
+		},
+	},
+	[174] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Alert",
+							alertDuration = 18400,
+							alertTTS = true,
+							alertText = "Tower 3: Tanks Mits",
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "0477509f-6000-f82c-93af-7547a843161c",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 633.026,
+				name = "Tower 3",
+				timelineIndex = 174,
+				timerOffset = -5,
+				uuid = "0f6cdd2c-d872-05d4-916a-760d31e66a4f",
+				version = 2,
+			},
+		},
+	},
+	inheritedProfiles = 
+	{
+	},
+	timelineName = "r11s",
+	version = "1.5.0",
+}
+
+
+
+return tbl
