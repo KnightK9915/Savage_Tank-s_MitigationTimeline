@@ -1194,7 +1194,7 @@ local tbl =
 				{
 				},
 				mechanicTime = 68.4,
-				name = "[Draw] Draw Aerial",
+				name = "[VFX] Draw Aerial",
 				timeRange = true,
 				timelineIndex = 11,
 				timerEndOffset = 2,
@@ -16796,7 +16796,7 @@ local tbl =
 					},
 				},
 				mechanicTime = 552.3,
-				name = "[Draw] Draw Aerial",
+				name = "[VFX] Draw Aerial",
 				timeRange = true,
 				timelineIndex = 159,
 				timerStartOffset = -4,
