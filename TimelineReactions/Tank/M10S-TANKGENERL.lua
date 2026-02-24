@@ -2364,7 +2364,7 @@ local tbl =
 						{
 							category = "Event",
 							eventArgType = 2,
-							eventSpellID = 46543,
+							eventSpellID = 46544,
 							uuid = "79a7f08a-91b0-c58a-8bc2-ad5c5c1bf96f",
 							version = 3,
 						},
@@ -4863,7 +4863,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 35,
 				timerOffset = -10,
-				timerStartOffset = -5.5,
+				timerStartOffset = -6,
 				uuid = "596f89d3-23f9-ad62-85dc-7dae74bf6b32",
 				version = 2,
 			},
@@ -4973,7 +4973,7 @@ local tbl =
 				name = "HoL",
 				timeRange = true,
 				timelineIndex = 35,
-				timerStartOffset = -5.5,
+				timerStartOffset = -6,
 				uuid = "6fd189fe-5fdc-43fd-a893-72b313588099",
 				version = 2,
 			},
@@ -5084,7 +5084,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 35,
 				timerOffset = -10,
-				timerStartOffset = -5.5,
+				timerStartOffset = -6,
 				uuid = "873f1ec2-e4c3-fa6d-9325-be18638b210a",
 				version = 2,
 			},
@@ -5193,7 +5193,7 @@ local tbl =
 				name = "Shake it off",
 				timeRange = true,
 				timelineIndex = 35,
-				timerStartOffset = -5.5,
+				timerStartOffset = -6,
 				uuid = "d2f42f50-7059-9844-b184-3469ec0d02a6",
 				version = 2,
 			},
@@ -5226,6 +5226,115 @@ local tbl =
 				timelineIndex = 35,
 				timerStartOffset = -2,
 				uuid = "3ebdaa62-3421-5ebb-a6b5-e5ecdd59fc97",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							conditions = 
+							{
+								
+								{
+									"cb983461-0f8f-cacc-a8d3-98369d4c5123",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_SmartAOE",
+							uuid = "c33056f4-dc1a-6195-bd95-4e514866b6f5",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 7385,
+							conditions = 
+							{
+								
+								{
+									"cb983461-0f8f-cacc-a8d3-98369d4c5123",
+									true,
+								},
+							},
+							fallthrough = true,
+							gVar = "ACR_RikuPLD3_Tankbar_PassageOfArms",
+							ignoreWeaveRules = true,
+							uuid = "65257871-731c-06cb-ad14-0cccde0d6934",
+							variableTogglesType = 3,
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							conditions = 
+							{
+								
+								{
+									"794486f4-30b7-2daf-8df8-6dc83b3e723d",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_SmartAOE",
+							gVarValue = 2,
+							uuid = "8c5a04d1-aae7-8010-b7d7-50192128b1d3",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionCDValue = 0.10000000149012,
+							actionID = 7385,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "cb983461-0f8f-cacc-a8d3-98369d4c5123",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1175,
+							buffIDList = 
+							{
+								1175,
+							},
+							category = "Self",
+							uuid = "794486f4-30b7-2daf-8df8-6dc83b3e723d",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 173.6,
+				name = "PoA",
+				timeRange = true,
+				timelineIndex = 35,
+				timerStartOffset = -4,
+				uuid = "97414210-45e2-31db-aeaa-fa5d324eda8d",
 				version = 2,
 			},
 		},
@@ -10419,6 +10528,633 @@ local tbl =
 			},
 		},
 	},
+	[98] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7386,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"9dc256c4-0973-92e1-b8d1-8c26c8338c69",
+									true,
+								},
+								
+								{
+									"c5b031d9-39d8-20ce-852d-fe2badd0c7de",
+									true,
+								},
+								
+								{
+									"20ca99f0-05b2-a371-a3d5-e0248c7794a5",
+									true,
+								},
+								
+								{
+									"b7bf2038-9e83-988e-bb35-53593e44a22a",
+									true,
+								},
+								
+								{
+									"9e30131a-f5cc-f4ef-aa07-dada79f7511c",
+									true,
+								},
+								
+								{
+									"be9e4661-c2c4-05a6-b609-359e384d3ce3",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "2b0f079f-660b-7638-8cbe-1f621b90d82d",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16461,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"d0073ae7-0925-b120-b077-e7fb8c5399c6",
+									true,
+								},
+								
+								{
+									"c5b031d9-39d8-20ce-852d-fe2badd0c7de",
+									true,
+								},
+								
+								{
+									"20ca99f0-05b2-a371-a3d5-e0248c7794a5",
+									true,
+								},
+								
+								{
+									"b7bf2038-9e83-988e-bb35-53593e44a22a",
+									true,
+								},
+								
+								{
+									"9e30131a-f5cc-f4ef-aa07-dada79f7511c",
+									true,
+								},
+								
+								{
+									"be9e4661-c2c4-05a6-b609-359e384d3ce3",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "a99eeb72-9584-d8ab-a668-2a31a50a1c99",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36926,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"369872b3-8031-7449-bcf6-1832505f319c",
+									true,
+								},
+								
+								{
+									"c5b031d9-39d8-20ce-852d-fe2badd0c7de",
+									true,
+								},
+								
+								{
+									"20ca99f0-05b2-a371-a3d5-e0248c7794a5",
+									true,
+								},
+								
+								{
+									"b7bf2038-9e83-988e-bb35-53593e44a22a",
+									true,
+								},
+								
+								{
+									"9e30131a-f5cc-f4ef-aa07-dada79f7511c",
+									true,
+								},
+								
+								{
+									"be9e4661-c2c4-05a6-b609-359e384d3ce3",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "0db81040-95bf-5bd8-b3d5-16f694e7ac66",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36934,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"2fe271b9-641f-23ab-afc7-80a85111a680",
+									true,
+								},
+								
+								{
+									"c5b031d9-39d8-20ce-852d-fe2badd0c7de",
+									true,
+								},
+								
+								{
+									"20ca99f0-05b2-a371-a3d5-e0248c7794a5",
+									true,
+								},
+								
+								{
+									"b7bf2038-9e83-988e-bb35-53593e44a22a",
+									true,
+								},
+								
+								{
+									"9e30131a-f5cc-f4ef-aa07-dada79f7511c",
+									true,
+								},
+								
+								{
+									"be9e4661-c2c4-05a6-b609-359e384d3ce3",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "916ad1dd-ba43-c585-949c-bed6700651e0",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "WARRIOR",
+							name = "Warrior",
+							uuid = "9dc256c4-0973-92e1-b8d1-8c26c8338c69",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "Paladin",
+							uuid = "d0073ae7-0925-b120-b077-e7fb8c5399c6",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "Darkknight",
+							uuid = "369872b3-8031-7449-bcf6-1832505f319c",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "Gunbreaker",
+							uuid = "2fe271b9-641f-23ab-afc7-80a85111a680",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "-- 没有目标直接 false\nif not Player or not Player:GetTarget() then\n    return false\nend\n\nlocal target = Player:GetTarget()\n\n-- 确保目标有效\nif not target or not target.pos then\n    return false\nend\n\n-- 计算平面距离（XZ）\nlocal dx = Player.pos.x - target.pos.x\nlocal dz = Player.pos.z - target.pos.z\nlocal distance = math.sqrt(dx * dx + dz * dz)\n\n-- 大于 3 米时返回 true\nreturn distance > 3.0\n",
+							name = "Out of Range",
+							uuid = "c5b031d9-39d8-20ce-852d-fe2badd0c7de",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 46545,
+							uuid = "20ca99f0-05b2-a371-a3d5-e0248c7794a5",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 9,
+							partyTargetType = "Event Target",
+							uuid = "b7bf2038-9e83-988e-bb35-53593e44a22a",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							filterTargetType = "ContentID",
+							partyTargetContentID = 14373,
+							uuid = "9e30131a-f5cc-f4ef-aa07-dada79f7511c",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "be9e4661-c2c4-05a6-b609-359e384d3ce3",
+							version = 3,
+						},
+					},
+				},
+				eventType = 2,
+				loop = true,
+				mechanicTime = 345.7,
+				name = "Instant Dash",
+				timeRange = true,
+				timelineIndex = 98,
+				timerEndOffset = 44.900001525879,
+				uuid = "6c5bfd79-312c-9824-a6b1-922abfbccc2c",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7386,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"9dc256c4-0973-92e1-b8d1-8c26c8338c69",
+									true,
+								},
+								
+								{
+									"c5b031d9-39d8-20ce-852d-fe2badd0c7de",
+									true,
+								},
+								
+								{
+									"20ca99f0-05b2-a371-a3d5-e0248c7794a5",
+									true,
+								},
+								
+								{
+									"b7bf2038-9e83-988e-bb35-53593e44a22a",
+									true,
+								},
+								
+								{
+									"9e30131a-f5cc-f4ef-aa07-dada79f7511c",
+									true,
+								},
+								
+								{
+									"be9e4661-c2c4-05a6-b609-359e384d3ce3",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "2b0f079f-660b-7638-8cbe-1f621b90d82d",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16461,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"d0073ae7-0925-b120-b077-e7fb8c5399c6",
+									true,
+								},
+								
+								{
+									"c5b031d9-39d8-20ce-852d-fe2badd0c7de",
+									true,
+								},
+								
+								{
+									"20ca99f0-05b2-a371-a3d5-e0248c7794a5",
+									true,
+								},
+								
+								{
+									"b7bf2038-9e83-988e-bb35-53593e44a22a",
+									true,
+								},
+								
+								{
+									"9e30131a-f5cc-f4ef-aa07-dada79f7511c",
+									true,
+								},
+								
+								{
+									"be9e4661-c2c4-05a6-b609-359e384d3ce3",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "a99eeb72-9584-d8ab-a668-2a31a50a1c99",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36926,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"369872b3-8031-7449-bcf6-1832505f319c",
+									true,
+								},
+								
+								{
+									"c5b031d9-39d8-20ce-852d-fe2badd0c7de",
+									true,
+								},
+								
+								{
+									"20ca99f0-05b2-a371-a3d5-e0248c7794a5",
+									true,
+								},
+								
+								{
+									"b7bf2038-9e83-988e-bb35-53593e44a22a",
+									true,
+								},
+								
+								{
+									"9e30131a-f5cc-f4ef-aa07-dada79f7511c",
+									true,
+								},
+								
+								{
+									"be9e4661-c2c4-05a6-b609-359e384d3ce3",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "0db81040-95bf-5bd8-b3d5-16f694e7ac66",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36934,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"2fe271b9-641f-23ab-afc7-80a85111a680",
+									true,
+								},
+								
+								{
+									"c5b031d9-39d8-20ce-852d-fe2badd0c7de",
+									true,
+								},
+								
+								{
+									"20ca99f0-05b2-a371-a3d5-e0248c7794a5",
+									true,
+								},
+								
+								{
+									"b7bf2038-9e83-988e-bb35-53593e44a22a",
+									true,
+								},
+								
+								{
+									"9e30131a-f5cc-f4ef-aa07-dada79f7511c",
+									true,
+								},
+								
+								{
+									"be9e4661-c2c4-05a6-b609-359e384d3ce3",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "916ad1dd-ba43-c585-949c-bed6700651e0",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "WARRIOR",
+							name = "Warrior",
+							uuid = "9dc256c4-0973-92e1-b8d1-8c26c8338c69",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "Paladin",
+							uuid = "d0073ae7-0925-b120-b077-e7fb8c5399c6",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "Darkknight",
+							uuid = "369872b3-8031-7449-bcf6-1832505f319c",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "Gunbreaker",
+							uuid = "2fe271b9-641f-23ab-afc7-80a85111a680",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "-- 没有目标直接 false\nif not Player or not Player:GetTarget() then\n    return false\nend\n\nlocal target = Player:GetTarget()\n\n-- 确保目标有效\nif not target or not target.pos then\n    return false\nend\n\n-- 计算平面距离（XZ）\nlocal dx = Player.pos.x - target.pos.x\nlocal dz = Player.pos.z - target.pos.z\nlocal distance = math.sqrt(dx * dx + dz * dz)\n\n-- 大于 3 米时返回 true\nreturn distance > 3.0\n",
+							name = "Out of Range",
+							uuid = "c5b031d9-39d8-20ce-852d-fe2badd0c7de",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 46546,
+							uuid = "20ca99f0-05b2-a371-a3d5-e0248c7794a5",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 9,
+							partyTargetType = "Event Target",
+							uuid = "b7bf2038-9e83-988e-bb35-53593e44a22a",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							filterTargetType = "ContentID",
+							partyTargetContentID = 14373,
+							uuid = "9e30131a-f5cc-f4ef-aa07-dada79f7511c",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "be9e4661-c2c4-05a6-b609-359e384d3ce3",
+							version = 3,
+						},
+					},
+				},
+				eventType = 2,
+				loop = true,
+				mechanicTime = 345.7,
+				name = "Instant Dash",
+				timeRange = true,
+				timelineIndex = 98,
+				timerEndOffset = 44.900001525879,
+				uuid = "6c5ae4a6-74db-ecbe-8397-22028174e4be",
+				version = 2,
+			},
+		},
+	},
 	[110] = 
 	{
 		
@@ -13209,7 +13945,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 137,
 				timerStartOffset = -10,
-				uuid = "8c807c34-6b22-9e7d-bf60-58e5ee06bd0a",
+				uuid = "b6738eb7-2924-fb09-960a-0eaa4dd66bd0",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -13297,6 +14033,7 @@ local tbl =
 						{
 							category = "Lua",
 							conditionLua = "return data.insaneairmt == true",
+							dequeueIfLuaFalse = true,
 							name = "InsaneAir MT",
 							uuid = "25191cc0-a833-b801-827f-f371b9fd38bc",
 							version = 3,
@@ -13309,6 +14046,7 @@ local tbl =
 						{
 							category = "Lua",
 							conditionLua = "return data.insaneairst == true",
+							dequeueIfLuaFalse = true,
 							name = "InsaneAir ST",
 							uuid = "94a724a9-6bfe-6ee1-a583-8b802962e730",
 							version = 3,
@@ -13331,8 +14069,8 @@ local tbl =
 				name = "TB Switch Target",
 				timeRange = true,
 				timelineIndex = 137,
-				timerStartOffset = -12,
-				uuid = "cbd377c4-530e-22c3-a543-9a6407c4bfb3",
+				timerStartOffset = -9,
+				uuid = "130a1104-61e5-a4f1-9d73-d5fc5a6d474f",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -13709,6 +14447,7 @@ local tbl =
 						{
 							category = "Lua",
 							conditionLua = "return data.insaneairmt == true",
+							dequeueIfLuaFalse = true,
 							name = "InsaneAir MT",
 							uuid = "58a461e7-ed34-2213-8294-908c5c54d423",
 							version = 3,
@@ -13734,6 +14473,7 @@ local tbl =
 						{
 							category = "Lua",
 							conditionLua = "return data.insaneairst == true",
+							dequeueIfLuaFalse = true,
 							name = "InsaneAir ST",
 							uuid = "b12715bd-ab3c-f486-8d53-98d22935500a",
 							version = 3,
@@ -13756,8 +14496,8 @@ local tbl =
 				name = "TB Instant Dash",
 				timeRange = true,
 				timelineIndex = 137,
-				timerStartOffset = -10,
-				uuid = "9d04e52b-8a7f-703f-b54a-4121b8f90987",
+				timerStartOffset = -8,
+				uuid = "6a77ab78-d5bd-722b-ab78-9e8dd4fab01f",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -13963,6 +14703,7 @@ local tbl =
 						{
 							category = "Lua",
 							conditionLua = "return data.insaneairmt == true",
+							dequeueIfLuaFalse = true,
 							name = "InsaneAir MT",
 							uuid = "25191cc0-a833-b801-827f-f371b9fd38bc",
 							version = 3,
@@ -13975,6 +14716,7 @@ local tbl =
 						{
 							category = "Lua",
 							conditionLua = "return data.insaneairst == true",
+							dequeueIfLuaFalse = true,
 							name = "InsaneAir ST",
 							uuid = "94a724a9-6bfe-6ee1-a583-8b802962e730",
 							version = 3,
@@ -13997,7 +14739,7 @@ local tbl =
 				name = "TB Switch Target",
 				timeRange = true,
 				timelineIndex = 141,
-				timerStartOffset = -12,
+				timerStartOffset = -9,
 				uuid = "b3ebffaf-ca7c-e970-b353-c327a9f270e1",
 				version = 2,
 			},
@@ -14375,6 +15117,7 @@ local tbl =
 						{
 							category = "Lua",
 							conditionLua = "return data.insaneairmt == true",
+							dequeueIfLuaFalse = true,
 							name = "InsaneAir MT",
 							uuid = "58a461e7-ed34-2213-8294-908c5c54d423",
 							version = 3,
@@ -14400,6 +15143,7 @@ local tbl =
 						{
 							category = "Lua",
 							conditionLua = "return data.insaneairst == true",
+							dequeueIfLuaFalse = true,
 							name = "InsaneAir ST",
 							uuid = "b12715bd-ab3c-f486-8d53-98d22935500a",
 							version = 3,
@@ -14422,7 +15166,7 @@ local tbl =
 				name = "TB Instant Dash",
 				timeRange = true,
 				timelineIndex = 141,
-				timerStartOffset = -10,
+				timerStartOffset = -8,
 				uuid = "695cbe9d-4d59-92ea-8d36-3cb8fa434c44",
 				version = 2,
 			},
@@ -14541,7 +15285,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 145,
 				timerStartOffset = -10,
-				uuid = "39c9294a-8b4b-9b0f-8311-eadc1a1f89f1",
+				uuid = "22c0de8c-cab3-2ea3-8667-952b7b7b6884",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -14629,6 +15373,7 @@ local tbl =
 						{
 							category = "Lua",
 							conditionLua = "return data.insaneairmt == true",
+							dequeueIfLuaFalse = true,
 							name = "InsaneAir MT",
 							uuid = "25191cc0-a833-b801-827f-f371b9fd38bc",
 							version = 3,
@@ -14641,6 +15386,7 @@ local tbl =
 						{
 							category = "Lua",
 							conditionLua = "return data.insaneairst == true",
+							dequeueIfLuaFalse = true,
 							name = "InsaneAir ST",
 							uuid = "94a724a9-6bfe-6ee1-a583-8b802962e730",
 							version = 3,
@@ -14663,8 +15409,8 @@ local tbl =
 				name = "TB Switch Target",
 				timeRange = true,
 				timelineIndex = 145,
-				timerStartOffset = -12,
-				uuid = "22aa1d31-2974-fe4b-8934-cbc9502d9cc2",
+				timerStartOffset = -9,
+				uuid = "8a97d983-efb7-8731-a055-fc5512d203cd",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -15041,6 +15787,7 @@ local tbl =
 						{
 							category = "Lua",
 							conditionLua = "return data.insaneairmt == true",
+							dequeueIfLuaFalse = true,
 							name = "InsaneAir MT",
 							uuid = "58a461e7-ed34-2213-8294-908c5c54d423",
 							version = 3,
@@ -15066,6 +15813,7 @@ local tbl =
 						{
 							category = "Lua",
 							conditionLua = "return data.insaneairst == true",
+							dequeueIfLuaFalse = true,
 							name = "InsaneAir ST",
 							uuid = "b12715bd-ab3c-f486-8d53-98d22935500a",
 							version = 3,
@@ -15088,8 +15836,8 @@ local tbl =
 				name = "TB Instant Dash",
 				timeRange = true,
 				timelineIndex = 145,
-				timerStartOffset = -10,
-				uuid = "dd3d2c5b-56eb-de4a-8fe1-26f7907e63a4",
+				timerStartOffset = -8,
+				uuid = "caaa825f-b29e-a392-9fc4-ab2954a651cb",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -15207,7 +15955,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 149,
 				timerStartOffset = -10,
-				uuid = "2fa5254a-3efd-e7f8-973d-68e38faf12b9",
+				uuid = "20abaf5e-2d8d-3a1e-aa15-0524112dbafc",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -15295,6 +16043,7 @@ local tbl =
 						{
 							category = "Lua",
 							conditionLua = "return data.insaneairmt == true",
+							dequeueIfLuaFalse = true,
 							name = "InsaneAir MT",
 							uuid = "25191cc0-a833-b801-827f-f371b9fd38bc",
 							version = 3,
@@ -15307,6 +16056,7 @@ local tbl =
 						{
 							category = "Lua",
 							conditionLua = "return data.insaneairst == true",
+							dequeueIfLuaFalse = true,
 							name = "InsaneAir ST",
 							uuid = "94a724a9-6bfe-6ee1-a583-8b802962e730",
 							version = 3,
@@ -15329,8 +16079,8 @@ local tbl =
 				name = "TB Switch Target",
 				timeRange = true,
 				timelineIndex = 149,
-				timerStartOffset = -12,
-				uuid = "2bc3bee8-3218-cebd-8c9a-ac1d46121b44",
+				timerStartOffset = -9,
+				uuid = "a9fa7248-ed2e-92a1-a87f-708c9e1b6e81",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -15707,6 +16457,7 @@ local tbl =
 						{
 							category = "Lua",
 							conditionLua = "return data.insaneairmt == true",
+							dequeueIfLuaFalse = true,
 							name = "InsaneAir MT",
 							uuid = "58a461e7-ed34-2213-8294-908c5c54d423",
 							version = 3,
@@ -15732,6 +16483,7 @@ local tbl =
 						{
 							category = "Lua",
 							conditionLua = "return data.insaneairst == true",
+							dequeueIfLuaFalse = true,
 							name = "InsaneAir ST",
 							uuid = "b12715bd-ab3c-f486-8d53-98d22935500a",
 							version = 3,
@@ -15754,8 +16506,8 @@ local tbl =
 				name = "TB Instant Dash",
 				timeRange = true,
 				timelineIndex = 149,
-				timerStartOffset = -10,
-				uuid = "d9325c64-bce5-3edf-9bf8-39170675d421",
+				timerStartOffset = -8,
+				uuid = "cae07308-456c-3db8-b138-caf64de391e9",
 				version = 2,
 			},
 			inheritedIndex = 1,
