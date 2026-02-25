@@ -1172,36 +1172,6 @@ local tbl =
 			},
 			inheritedIndex = 4,
 		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "Lua",
-							actionLua = "Argus.addPlayerMarker(640)\nself.used = true",
-							gVar = "ACR_RikuPLD3_CD",
-							uuid = "69610243-4efa-bba4-9abb-d28e193fb5d6",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 68.4,
-				name = "[VFX] Draw Aerial",
-				timeRange = true,
-				timelineIndex = 11,
-				timerEndOffset = 2,
-				uuid = "c6bf4f5a-2876-07bd-8419-3d45166e843e",
-				version = 2,
-			},
-		},
 	},
 	[12] = 
 	{
@@ -3180,6 +3150,319 @@ local tbl =
 				timerEndOffset = 5,
 				timerStartOffset = -1,
 				uuid = "b924acd3-7a5c-4dd5-b3de-efdf1e59da20",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7386,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"2172525a-bd95-3099-a710-2bcf05f2d5fd",
+									true,
+								},
+								
+								{
+									"02bc6c2f-b065-e7f1-8f27-b020e63eda65",
+									true,
+								},
+								
+								{
+									"1bc285fc-353c-220b-a7e4-c97723d9a72c",
+									true,
+								},
+								
+								{
+									"7111472b-f495-1f67-a5e8-ee0107b5bcaf",
+									true,
+								},
+								
+								{
+									"73bb819a-5ad5-9fae-88d6-66313c4d4009",
+									true,
+								},
+								
+								{
+									"db74a241-38ad-c247-a67b-01237c4abd77",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "29ecc6cc-0ec5-7459-ad81-b7d79de628b9",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16461,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"d99cc6dd-5723-4089-a486-232fbddeb07e",
+									true,
+								},
+								
+								{
+									"02bc6c2f-b065-e7f1-8f27-b020e63eda65",
+									true,
+								},
+								
+								{
+									"1bc285fc-353c-220b-a7e4-c97723d9a72c",
+									true,
+								},
+								
+								{
+									"7111472b-f495-1f67-a5e8-ee0107b5bcaf",
+									true,
+								},
+								
+								{
+									"73bb819a-5ad5-9fae-88d6-66313c4d4009",
+									true,
+								},
+								
+								{
+									"db74a241-38ad-c247-a67b-01237c4abd77",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "11bec670-4d28-27c3-a56a-9599afdf7cc7",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36926,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"9b1bc192-045b-662c-9300-d4fab416f27b",
+									true,
+								},
+								
+								{
+									"02bc6c2f-b065-e7f1-8f27-b020e63eda65",
+									true,
+								},
+								
+								{
+									"1bc285fc-353c-220b-a7e4-c97723d9a72c",
+									true,
+								},
+								
+								{
+									"7111472b-f495-1f67-a5e8-ee0107b5bcaf",
+									true,
+								},
+								
+								{
+									"73bb819a-5ad5-9fae-88d6-66313c4d4009",
+									true,
+								},
+								
+								{
+									"db74a241-38ad-c247-a67b-01237c4abd77",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "39e2bf70-89cc-caf1-8cb3-6e581e7fcb69",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36934,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"27a5fe09-f2a4-58ab-9fa9-5aa1db9283aa",
+									true,
+								},
+								
+								{
+									"02bc6c2f-b065-e7f1-8f27-b020e63eda65",
+									true,
+								},
+								
+								{
+									"1bc285fc-353c-220b-a7e4-c97723d9a72c",
+									true,
+								},
+								
+								{
+									"7111472b-f495-1f67-a5e8-ee0107b5bcaf",
+									true,
+								},
+								
+								{
+									"73bb819a-5ad5-9fae-88d6-66313c4d4009",
+									true,
+								},
+								
+								{
+									"db74a241-38ad-c247-a67b-01237c4abd77",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "4f572d00-24d6-4952-8a0d-0e69ed828da2",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "WARRIOR",
+							name = "Warrior",
+							uuid = "2172525a-bd95-3099-a710-2bcf05f2d5fd",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "Paladin",
+							uuid = "d99cc6dd-5723-4089-a486-232fbddeb07e",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "Darkknight",
+							uuid = "9b1bc192-045b-662c-9300-d4fab416f27b",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "Gunbreaker",
+							uuid = "27a5fe09-f2a4-58ab-9fa9-5aa1db9283aa",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "if not Player or not Player:GetTarget() then\n    return false\nend\n\nlocal target = Player:GetTarget()\n\nif not target or not target.pos then\n    return false\nend\n\nlocal dx = Player.pos.x - target.pos.x\nlocal dz = Player.pos.z - target.pos.z\nlocal distance = math.sqrt(dx * dx + dz * dz)\n\nreturn distance > 3.0\n",
+							name = "Out of Range",
+							uuid = "02bc6c2f-b065-e7f1-8f27-b020e63eda65",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 44486,
+							uuid = "1bc285fc-353c-220b-a7e4-c97723d9a72c",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 9,
+							partyTargetType = "Event Target",
+							uuid = "7111472b-f495-1f67-a5e8-ee0107b5bcaf",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							filterTargetType = "ContentID",
+							partyTargetContentID = 14369,
+							uuid = "73bb819a-5ad5-9fae-88d6-66313c4d4009",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "db74a241-38ad-c247-a67b-01237c4abd77",
+							version = 3,
+						},
+					},
+				},
+				eventType = 2,
+				mechanicTime = 136.5,
+				name = "Instant Dash",
+				timeRange = true,
+				timelineIndex = 27,
+				timerEndOffset = 5,
+				timerStartOffset = -1,
+				uuid = "4f0e1c0b-5167-8e34-831c-1cfcd80b4e61",
 				version = 2,
 			},
 			inheritedIndex = 3,
@@ -17504,55 +17787,6 @@ local tbl =
 				timelineIndex = 159,
 				timerStartOffset = -7,
 				uuid = "b67dba70-e59f-afad-8d79-5dfaf93859dc",
-				version = 2,
-			},
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "Lua",
-							actionLua = "Argus.addPlayerMarker(640)\nself.used = true",
-							conditions = 
-							{
-								
-								{
-									"20df3926-8a25-cab2-afe2-afc226b18218",
-									true,
-								},
-							},
-							gVar = "ACR_RikuPLD3_CD",
-							uuid = "69610243-4efa-bba4-9abb-d28e193fb5d6",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14369\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\n-- 场上存在 14369，且没有任何一个在盯你\nreturn found\n",
-							name = "DeepBlue not targeting self",
-							uuid = "20df3926-8a25-cab2-afe2-afc226b18218",
-							version = 3,
-						},
-					},
-				},
-				mechanicTime = 552.3,
-				name = "[VFX] Draw Aerial",
-				timeRange = true,
-				timelineIndex = 159,
-				timerStartOffset = -4,
-				uuid = "0e335cb4-6fd7-8ffd-b29b-1b6f00064cb6",
 				version = 2,
 			},
 		},

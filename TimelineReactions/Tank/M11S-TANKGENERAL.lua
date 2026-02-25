@@ -1312,7 +1312,7 @@ local tbl =
 			},
 		},
 	},
-	[15] = 
+	[18] = 
 	{
 		
 		{
@@ -1325,9 +1325,78 @@ local tbl =
 						data = 
 						{
 							aType = "Lua",
-							actionLua = "Argus.addPlayerMarker(640)\nself.used = true",
-							gVar = "ACR_RikuPLD3_CD",
-							uuid = "69610243-4efa-bba4-9abb-d28e193fb5d6",
+							actionLua = "data.cometspread = true\nself.used = true",
+							gVar = "ACR_RikuGNB3_CD",
+							name = "Spread",
+							uuid = "a325af4f-031e-e935-91e0-186e2f6a610a",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.cometstack = true\nself.used = true",
+							gVar = "ACR_RikuGNB3_CD",
+							name = "Stack",
+							uuid = "61a199ae-2b78-13c9-9a9b-51ab0cfb8a3f",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 139,
+							name = "Spread",
+							uuid = "be8d2aad-d283-d064-868f-e4ca0372bc24",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 161,
+							name = "Stack",
+							uuid = "43816d9d-3e51-65b4-85b5-ef21656a976a",
+							version = 3,
+						},
+					},
+				},
+				eventType = 4,
+				mechanicTime = 88.983,
+				name = "Comet Trigger",
+				timeRange = true,
+				timelineIndex = 18,
+				timerStartOffset = -15,
+				uuid = "bcd0888c-62e5-bdd8-bd69-2ebb71dafe07",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.cometspread = nil\ndata.cometstack = nil\nself.used = true",
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "3497195c-899d-41ed-a41c-f8ea8cc748da",
 							version = 2.1,
 						},
 					},
@@ -1335,12 +1404,168 @@ local tbl =
 				conditions = 
 				{
 				},
-				mechanicTime = 82.936,
-				name = "[VFX] Draw Comet",
+				mechanicTime = 88.983,
+				name = "Trigger Reset",
 				timeRange = true,
-				timelineIndex = 15,
-				timerStartOffset = -4,
-				uuid = "e5c7f0f9-d8be-7a40-8fff-b812bdd359b2",
+				timelineIndex = 18,
+				timerEndOffset = 5,
+				timerStartOffset = 2,
+				uuid = "c0ccbe8e-a982-31de-903c-f5342f2cd266",
+				version = 2,
+			},
+			inheritedIndex = 8,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 88.983,
+				name = "--------------",
+				timelineIndex = 18,
+				uuid = "8c44d9be-6274-71fc-8503-8f59818f1ae2",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							conditions = 
+							{
+								
+								{
+									"2642fb99-71ba-9c15-b5c9-caeee8628cab",
+									true,
+								},
+								
+								{
+									"cb983461-0f8f-cacc-a8d3-98369d4c5123",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_SmartAOE",
+							uuid = "c33056f4-dc1a-6195-bd95-4e514866b6f5",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 7385,
+							conditions = 
+							{
+								
+								{
+									"2642fb99-71ba-9c15-b5c9-caeee8628cab",
+									true,
+								},
+								
+								{
+									"cb983461-0f8f-cacc-a8d3-98369d4c5123",
+									true,
+								},
+							},
+							fallthrough = true,
+							gVar = "ACR_RikuPLD3_Tankbar_PassageOfArms",
+							ignoreWeaveRules = true,
+							uuid = "65257871-731c-06cb-ad14-0cccde0d6934",
+							variableTogglesType = 3,
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							conditions = 
+							{
+								
+								{
+									"2642fb99-71ba-9c15-b5c9-caeee8628cab",
+									true,
+								},
+								
+								{
+									"794486f4-30b7-2daf-8df8-6dc83b3e723d",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_SmartAOE",
+							gVarValue = 2,
+							uuid = "8c5a04d1-aae7-8010-b7d7-50192128b1d3",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.cometstack == true",
+							name = "Comet Stack",
+							uuid = "2642fb99-71ba-9c15-b5c9-caeee8628cab",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionCDValue = 0.10000000149012,
+							actionID = 7385,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "cb983461-0f8f-cacc-a8d3-98369d4c5123",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1175,
+							buffIDList = 
+							{
+								1175,
+							},
+							category = "Self",
+							uuid = "794486f4-30b7-2daf-8df8-6dc83b3e723d",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 88.983,
+				name = "PoA",
+				timeRange = true,
+				timelineIndex = 18,
+				timerStartOffset = -2,
+				uuid = "e72012eb-cb95-b6fc-9ef3-e3ac8dca917d",
 				version = 2,
 			},
 		},
@@ -1725,6 +1950,9 @@ local tbl =
 				version = 2,
 			},
 		},
+	},
+	[29] = 
+	{
 		
 		{
 			data = 
@@ -1736,9 +1964,78 @@ local tbl =
 						data = 
 						{
 							aType = "Lua",
-							actionLua = "Argus.addPlayerMarker(640)\nself.used = true",
-							gVar = "ACR_RikuPLD3_CD",
-							uuid = "69610243-4efa-bba4-9abb-d28e193fb5d6",
+							actionLua = "data.cometspread = true\nself.used = true",
+							gVar = "ACR_RikuGNB3_CD",
+							name = "Spread",
+							uuid = "a325af4f-031e-e935-91e0-186e2f6a610a",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.cometstack = true\nself.used = true",
+							gVar = "ACR_RikuGNB3_CD",
+							name = "Stack",
+							uuid = "61a199ae-2b78-13c9-9a9b-51ab0cfb8a3f",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 139,
+							name = "Spread",
+							uuid = "be8d2aad-d283-d064-868f-e4ca0372bc24",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 161,
+							name = "Stack",
+							uuid = "43816d9d-3e51-65b4-85b5-ef21656a976a",
+							version = 3,
+						},
+					},
+				},
+				eventType = 4,
+				mechanicTime = 115.387,
+				name = "Comet Trigger",
+				timeRange = true,
+				timelineIndex = 29,
+				timerStartOffset = -15,
+				uuid = "ebb53a97-3876-12a4-a1db-9832889032aa",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.cometspread = nil\ndata.cometstack = nil\nself.used = true",
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "3497195c-899d-41ed-a41c-f8ea8cc748da",
 							version = 2.1,
 						},
 					},
@@ -1746,12 +2043,168 @@ local tbl =
 				conditions = 
 				{
 				},
-				mechanicTime = 109.45,
-				name = "[VFX] Draw Comet",
+				mechanicTime = 115.387,
+				name = "Trigger Reset",
 				timeRange = true,
-				timelineIndex = 26,
-				timerStartOffset = -4,
-				uuid = "ea8432cb-8736-caf3-8ca0-220f84c05b0c",
+				timelineIndex = 29,
+				timerEndOffset = 5,
+				timerStartOffset = 2,
+				uuid = "36cb9f2c-64e0-8357-bc5f-507cde26f4ea",
+				version = 2,
+			},
+			inheritedIndex = 8,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 115.387,
+				name = "--------------",
+				timelineIndex = 29,
+				uuid = "e57cad1f-7621-0cb0-8168-21f80dc04d1f",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							conditions = 
+							{
+								
+								{
+									"2642fb99-71ba-9c15-b5c9-caeee8628cab",
+									true,
+								},
+								
+								{
+									"cb983461-0f8f-cacc-a8d3-98369d4c5123",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_SmartAOE",
+							uuid = "c33056f4-dc1a-6195-bd95-4e514866b6f5",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 7385,
+							conditions = 
+							{
+								
+								{
+									"2642fb99-71ba-9c15-b5c9-caeee8628cab",
+									true,
+								},
+								
+								{
+									"cb983461-0f8f-cacc-a8d3-98369d4c5123",
+									true,
+								},
+							},
+							fallthrough = true,
+							gVar = "ACR_RikuPLD3_Tankbar_PassageOfArms",
+							ignoreWeaveRules = true,
+							uuid = "65257871-731c-06cb-ad14-0cccde0d6934",
+							variableTogglesType = 3,
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							conditions = 
+							{
+								
+								{
+									"2642fb99-71ba-9c15-b5c9-caeee8628cab",
+									true,
+								},
+								
+								{
+									"794486f4-30b7-2daf-8df8-6dc83b3e723d",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_SmartAOE",
+							gVarValue = 2,
+							uuid = "8c5a04d1-aae7-8010-b7d7-50192128b1d3",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.cometstack == true",
+							name = "Comet Stack",
+							uuid = "2642fb99-71ba-9c15-b5c9-caeee8628cab",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionCDValue = 0.10000000149012,
+							actionID = 7385,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "cb983461-0f8f-cacc-a8d3-98369d4c5123",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1175,
+							buffIDList = 
+							{
+								1175,
+							},
+							category = "Self",
+							uuid = "794486f4-30b7-2daf-8df8-6dc83b3e723d",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 115.387,
+				name = "PoA",
+				timeRange = true,
+				timelineIndex = 29,
+				timerStartOffset = -2,
+				uuid = "0bf9d3f3-a66d-8052-bac6-7dfbb5bacbf8",
 				version = 2,
 			},
 		},
@@ -3661,6 +4114,318 @@ local tbl =
 				timelineIndex = 61,
 				timerStartOffset = -6.3000001907349,
 				uuid = "a101b411-3bc7-dbc2-94e9-845f6cee6c89",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7386,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"a7adc4fe-47df-c8e4-8666-dd4c0d69de6e",
+									true,
+								},
+								
+								{
+									"10938913-c01d-53ff-b131-d705854b2ea0",
+									true,
+								},
+								
+								{
+									"3399f589-6567-0955-91d2-82ad5886550c",
+									true,
+								},
+								
+								{
+									"2a5b0514-bfae-2bbb-8c09-f86a36fd26fd",
+									true,
+								},
+								
+								{
+									"671741ed-7942-01d4-831c-81599ffdf4ea",
+									true,
+								},
+								
+								{
+									"fadacd08-84f1-679b-9ad3-253ae69f2ead",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "f2ac831b-090a-3c01-a111-84685e62a922",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16461,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"f931b07c-7ca7-0e6d-8bed-c71b4a9e89ea",
+									true,
+								},
+								
+								{
+									"10938913-c01d-53ff-b131-d705854b2ea0",
+									true,
+								},
+								
+								{
+									"3399f589-6567-0955-91d2-82ad5886550c",
+									true,
+								},
+								
+								{
+									"2a5b0514-bfae-2bbb-8c09-f86a36fd26fd",
+									true,
+								},
+								
+								{
+									"671741ed-7942-01d4-831c-81599ffdf4ea",
+									true,
+								},
+								
+								{
+									"fadacd08-84f1-679b-9ad3-253ae69f2ead",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "6e14d463-2c91-9d5c-a583-245f65c25585",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36926,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"89674c1a-523d-7931-b22f-0e7220d46fe1",
+									true,
+								},
+								
+								{
+									"10938913-c01d-53ff-b131-d705854b2ea0",
+									true,
+								},
+								
+								{
+									"3399f589-6567-0955-91d2-82ad5886550c",
+									true,
+								},
+								
+								{
+									"2a5b0514-bfae-2bbb-8c09-f86a36fd26fd",
+									true,
+								},
+								
+								{
+									"671741ed-7942-01d4-831c-81599ffdf4ea",
+									true,
+								},
+								
+								{
+									"fadacd08-84f1-679b-9ad3-253ae69f2ead",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "168594ac-14b6-b4c1-a8ac-c1997ef1d28b",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36934,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"129eaf6a-1dcf-cfae-b514-c6e3afd609b5",
+									true,
+								},
+								
+								{
+									"10938913-c01d-53ff-b131-d705854b2ea0",
+									true,
+								},
+								
+								{
+									"3399f589-6567-0955-91d2-82ad5886550c",
+									true,
+								},
+								
+								{
+									"2a5b0514-bfae-2bbb-8c09-f86a36fd26fd",
+									true,
+								},
+								
+								{
+									"671741ed-7942-01d4-831c-81599ffdf4ea",
+									true,
+								},
+								
+								{
+									"fadacd08-84f1-679b-9ad3-253ae69f2ead",
+									true,
+								},
+							},
+							gVar = "ACR_TensorWeeb3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "5d95d42b-d93f-7234-af13-712eb8b749ce",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "WARRIOR",
+							name = "Warrior",
+							uuid = "a7adc4fe-47df-c8e4-8666-dd4c0d69de6e",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "Paladin",
+							uuid = "f931b07c-7ca7-0e6d-8bed-c71b4a9e89ea",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "Darkknight",
+							uuid = "89674c1a-523d-7931-b22f-0e7220d46fe1",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "Gunbreaker",
+							uuid = "129eaf6a-1dcf-cfae-b514-c6e3afd609b5",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "-- 没有目标直接 false\nif not Player or not Player:GetTarget() then\n    return false\nend\n\nlocal target = Player:GetTarget()\n\n-- 确保目标有效\nif not target or not target.pos then\n    return false\nend\n\n-- 计算平面距离（XZ）\nlocal dx = Player.pos.x - target.pos.x\nlocal dz = Player.pos.z - target.pos.z\nlocal distance = math.sqrt(dx * dx + dz * dz)\n\n-- 大于 3 米时返回 true\nreturn distance > 3.0\n",
+							name = "Out of Range",
+							uuid = "10938913-c01d-53ff-b131-d705854b2ea0",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 46119,
+							uuid = "3399f589-6567-0955-91d2-82ad5886550c",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 9,
+							partyTargetType = "Event Target",
+							uuid = "2a5b0514-bfae-2bbb-8c09-f86a36fd26fd",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							filterTargetType = "ContentID",
+							partyTargetContentID = 14305,
+							uuid = "671741ed-7942-01d4-831c-81599ffdf4ea",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "fadacd08-84f1-679b-9ad3-253ae69f2ead",
+							version = 3,
+						},
+					},
+				},
+				eventType = 2,
+				mechanicTime = 225.152,
+				name = "Instant Dash",
+				timeRange = true,
+				timelineIndex = 61,
+				timerEndOffset = 5,
+				timerStartOffset = -1,
+				uuid = "d0cbbfa2-08f6-063a-bcbf-a6cff411f9a9",
 				version = 2,
 			},
 		},
@@ -7476,83 +8241,6 @@ local tbl =
 				timelineIndex = 167,
 				timerOffset = -5,
 				uuid = "0f3d492e-864c-191a-8e56-695795f816a2",
-				version = 2,
-			},
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "Lua",
-							actionLua = "Argus.addPlayerMarker(381)\nself.used = true",
-							conditions = 
-							{
-								
-								{
-									"a3466279-65ee-a6d3-8407-478930a1dd65",
-									true,
-								},
-								
-								{
-									"ddd2100c-0591-2653-abdd-e4c8ff151182",
-									true,
-								},
-							},
-							gVar = "ACR_RikuPLD3_CD",
-							uuid = "69610243-4efa-bba4-9abb-d28e193fb5d6",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
-							name = "RoleMit ST",
-							uuid = "a3466279-65ee-a6d3-8407-478930a1dd65",
-							version = 3,
-						},
-						inheritedIndex = 2,
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 7,
-							buffDuration = 2,
-							buffIDList = 
-							{
-								810,
-								409,
-								1836,
-								82,
-							},
-							category = "Party",
-							comparator = 2,
-							matchAnyBuff = true,
-							name = "MT invuln duration",
-							partyTargetType = "Other Tank",
-							uuid = "ddd2100c-0591-2653-abdd-e4c8ff151182",
-							version = 3,
-						},
-					},
-				},
-				mechanicTime = 611.901,
-				name = "[VFX] ST switch invuln",
-				timeRange = true,
-				timelineIndex = 167,
-				timerEndOffset = 14,
-				uuid = "b33c957c-cd26-9445-98a5-ca350a69d171",
 				version = 2,
 			},
 		},
