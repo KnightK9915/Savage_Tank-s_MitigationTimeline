@@ -1757,9 +1757,115 @@ local tbl =
 					{
 						data = 
 						{
+							aType = "Lua",
+							actionLua = "data.cometspread = true\nself.used = true",
+							gVar = "ACR_RikuGNB3_CD",
+							name = "Spread",
+							uuid = "a325af4f-031e-e935-91e0-186e2f6a610a",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.cometstack = true\nself.used = true",
+							gVar = "ACR_RikuGNB3_CD",
+							name = "Stack",
+							uuid = "61a199ae-2b78-13c9-9a9b-51ab0cfb8a3f",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 139,
+							name = "Spread",
+							uuid = "be8d2aad-d283-d064-868f-e4ca0372bc24",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 161,
+							name = "Stack",
+							uuid = "43816d9d-3e51-65b4-85b5-ef21656a976a",
+							version = 3,
+						},
+					},
+				},
+				eventType = 4,
+				mechanicTime = 88.983,
+				name = "Comet Trigger",
+				timeRange = true,
+				timelineIndex = 18,
+				timerStartOffset = -15,
+				uuid = "761a7903-cd6c-a414-a8e5-afdf51b7fac0",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.cometspread = nil\ndata.cometstack = nil\nself.used = true",
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "3497195c-899d-41ed-a41c-f8ea8cc748da",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 88.983,
+				name = "Trigger Reset",
+				timeRange = true,
+				timelineIndex = 18,
+				timerEndOffset = 5,
+				timerStartOffset = 2,
+				uuid = "f194390e-2264-7a14-aa43-323f1bedfd71",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 25751,
 							conditions = 
 							{
+								
+								{
+									"2cbc978f-b25b-0881-91bf-564326da4fb5",
+									true,
+								},
 								
 								{
 									"7ff7d550-e7f1-b813-8c61-8d51598a9cff",
@@ -1793,6 +1899,11 @@ local tbl =
 							{
 								
 								{
+									"2cbc978f-b25b-0881-91bf-564326da4fb5",
+									true,
+								},
+								
+								{
 									"cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
 									true,
 								},
@@ -1819,6 +1930,18 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.cometspread == true",
+							name = "Comet Spread",
+							uuid = "2cbc978f-b25b-0881-91bf-564326da4fb5",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
 					
 					{
 						data = 
@@ -2446,9 +2569,115 @@ local tbl =
 					{
 						data = 
 						{
+							aType = "Lua",
+							actionLua = "data.cometspread = true\nself.used = true",
+							gVar = "ACR_RikuGNB3_CD",
+							name = "Spread",
+							uuid = "a325af4f-031e-e935-91e0-186e2f6a610a",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.cometstack = true\nself.used = true",
+							gVar = "ACR_RikuGNB3_CD",
+							name = "Stack",
+							uuid = "61a199ae-2b78-13c9-9a9b-51ab0cfb8a3f",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 139,
+							name = "Spread",
+							uuid = "be8d2aad-d283-d064-868f-e4ca0372bc24",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 161,
+							name = "Stack",
+							uuid = "43816d9d-3e51-65b4-85b5-ef21656a976a",
+							version = 3,
+						},
+					},
+				},
+				eventType = 4,
+				mechanicTime = 115.387,
+				name = "Comet Trigger",
+				timeRange = true,
+				timelineIndex = 29,
+				timerStartOffset = -15,
+				uuid = "d57b48f2-061a-6a81-8e69-19fe947facdd",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.cometspread = nil\ndata.cometstack = nil\nself.used = true",
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "3497195c-899d-41ed-a41c-f8ea8cc748da",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 115.387,
+				name = "Trigger Reset",
+				timeRange = true,
+				timelineIndex = 29,
+				timerEndOffset = 5,
+				timerStartOffset = 2,
+				uuid = "24fda8e7-f713-34bb-9b4b-86cfda813ed9",
+				version = 2,
+			},
+			inheritedIndex = 4,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 25751,
 							conditions = 
 							{
+								
+								{
+									"7cc277c6-6f84-9b56-8bfb-6e0b37a3debb",
+									true,
+								},
 								
 								{
 									"7ff7d550-e7f1-b813-8c61-8d51598a9cff",
@@ -2482,6 +2711,11 @@ local tbl =
 							{
 								
 								{
+									"7cc277c6-6f84-9b56-8bfb-6e0b37a3debb",
+									true,
+								},
+								
+								{
 									"cd0403dc-3f11-9f27-8ca1-4eec020e0bc9",
 									true,
 								},
@@ -2508,6 +2742,18 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.cometspread == true",
+							name = "Comet Spread",
+							uuid = "7cc277c6-6f84-9b56-8bfb-6e0b37a3debb",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
 					
 					{
 						data = 
@@ -14330,7 +14576,7 @@ local tbl =
 						data = 
 						{
 							buffCheckType = 7,
-							buffDuration = 2,
+							buffDuration = 5,
 							buffIDList = 
 							{
 								810,
@@ -15591,6 +15837,7 @@ local tbl =
 		"store\\anyone\\savage6\\m11s\\modules\\core",
 		"store\\anyone\\savage6\\m11s\\modules\\draws",
 		"store\\anyone\\savage6\\m11s\\modules\\optimization",
+		"Tank\\M11S-OtherFuncs",
 	},
 	timelineName = "r11s",
 	version = "1.5.0",
