@@ -118,7 +118,7 @@ local tbl =
 						data = 
 						{
 							buffCheckType = 7,
-							buffDuration = 2,
+							buffDuration = 5,
 							buffIDList = 
 							{
 								810,
