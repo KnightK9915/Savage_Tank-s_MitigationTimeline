@@ -1439,9 +1439,115 @@ local tbl =
 					{
 						data = 
 						{
+							aType = "Lua",
+							actionLua = "data.cometspread = true\nself.used = true",
+							gVar = "ACR_RikuGNB3_CD",
+							name = "Spread",
+							uuid = "a325af4f-031e-e935-91e0-186e2f6a610a",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.cometstack = true\nself.used = true",
+							gVar = "ACR_RikuGNB3_CD",
+							name = "Stack",
+							uuid = "61a199ae-2b78-13c9-9a9b-51ab0cfb8a3f",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 139,
+							name = "Spread",
+							uuid = "be8d2aad-d283-d064-868f-e4ca0372bc24",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 161,
+							name = "Stack",
+							uuid = "43816d9d-3e51-65b4-85b5-ef21656a976a",
+							version = 3,
+						},
+					},
+				},
+				eventType = 4,
+				mechanicTime = 88.983,
+				name = "Comet Trigger",
+				timeRange = true,
+				timelineIndex = 18,
+				timerStartOffset = -15,
+				uuid = "0bac49dc-a208-8bb3-a549-ed4d7bc6a69c",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.cometspread = nil\ndata.cometstack = nil\nself.used = true",
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "3497195c-899d-41ed-a41c-f8ea8cc748da",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 88.983,
+				name = "Trigger Reset",
+				timeRange = true,
+				timelineIndex = 18,
+				timerEndOffset = 5,
+				timerStartOffset = 2,
+				uuid = "78c7a54d-7180-7a37-b06b-6105348c1096",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 25758,
 							conditions = 
 							{
+								
+								{
+									"fe0c6312-841d-cacd-836e-006cd0933608",
+									true,
+								},
 								
 								{
 									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
@@ -1474,6 +1580,11 @@ local tbl =
 							{
 								
 								{
+									"fe0c6312-841d-cacd-836e-006cd0933608",
+									true,
+								},
+								
+								{
 									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
 									true,
 								},
@@ -1499,6 +1610,18 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.cometspread == true",
+							name = "Comet Spread",
+							uuid = "fe0c6312-841d-cacd-836e-006cd0933608",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
 					
 					{
 						data = 
@@ -1556,7 +1679,7 @@ local tbl =
 				uuid = "3ffb9bc8-d56f-4a22-bab9-cb7ee750de90",
 				version = 2,
 			},
-			inheritedIndex = 1,
+			inheritedIndex = 3,
 		},
 	},
 	[19] = 
@@ -2064,9 +2187,115 @@ local tbl =
 					{
 						data = 
 						{
+							aType = "Lua",
+							actionLua = "data.cometspread = true\nself.used = true",
+							gVar = "ACR_RikuGNB3_CD",
+							name = "Spread",
+							uuid = "a325af4f-031e-e935-91e0-186e2f6a610a",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.cometstack = true\nself.used = true",
+							gVar = "ACR_RikuGNB3_CD",
+							name = "Stack",
+							uuid = "61a199ae-2b78-13c9-9a9b-51ab0cfb8a3f",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 139,
+							name = "Spread",
+							uuid = "be8d2aad-d283-d064-868f-e4ca0372bc24",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 161,
+							name = "Stack",
+							uuid = "43816d9d-3e51-65b4-85b5-ef21656a976a",
+							version = 3,
+						},
+					},
+				},
+				eventType = 4,
+				mechanicTime = 115.387,
+				name = "Comet Trigger",
+				timeRange = true,
+				timelineIndex = 29,
+				timerStartOffset = -15,
+				uuid = "779ebe44-c2a7-73fe-bb8a-d68c84f21c94",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.cometspread = nil\ndata.cometstack = nil\nself.used = true",
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "3497195c-899d-41ed-a41c-f8ea8cc748da",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 115.387,
+				name = "Trigger Reset",
+				timeRange = true,
+				timelineIndex = 29,
+				timerEndOffset = 5,
+				timerStartOffset = 2,
+				uuid = "d3d62f63-edef-8135-bb45-16f62f159bb0",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 25758,
 							conditions = 
 							{
+								
+								{
+									"a1dd75cf-c524-4d47-ae38-7bd0cbc0953b",
+									true,
+								},
 								
 								{
 									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
@@ -2099,6 +2328,11 @@ local tbl =
 							{
 								
 								{
+									"a1dd75cf-c524-4d47-ae38-7bd0cbc0953b",
+									true,
+								},
+								
+								{
 									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
 									true,
 								},
@@ -2124,6 +2358,18 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.cometspread == true",
+							name = "Comet Spread",
+							uuid = "a1dd75cf-c524-4d47-ae38-7bd0cbc0953b",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
 					
 					{
 						data = 
@@ -2181,7 +2427,7 @@ local tbl =
 				uuid = "9d8e514e-53d8-d0ba-8eb4-573a276e407e",
 				version = 2,
 			},
-			inheritedIndex = 1,
+			inheritedIndex = 3,
 		},
 	},
 	[45] = 
@@ -4125,6 +4371,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 251.683,
 				name = "HoC (15)",
 				timeRange = true,
@@ -4418,6 +4665,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 251.683,
 				name = "Great Nebula (40)",
 				timeRange = true,
@@ -4725,7 +4973,6 @@ local tbl =
 						},
 					},
 				},
-				enabled = false,
 				mechanicTime = 251.683,
 				name = "Superbolide (Invinsible)",
 				timeRange = true,
@@ -11407,7 +11654,7 @@ local tbl =
 						data = 
 						{
 							buffCheckType = 7,
-							buffDuration = 2,
+							buffDuration = 5,
 							buffIDList = 
 							{
 								810,
@@ -12397,6 +12644,7 @@ local tbl =
 		"store\\anyone\\savage6\\m11s\\modules\\core",
 		"store\\anyone\\savage6\\m11s\\modules\\draws",
 		"store\\anyone\\savage6\\m11s\\modules\\optimization",
+		"Tank\\M11S-OtherFuncs",
 	},
 	timelineName = "r11s",
 	version = "1.5.0",
