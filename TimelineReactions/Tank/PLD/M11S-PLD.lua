@@ -1297,6 +1297,11 @@ local tbl =
 							{
 								
 								{
+									"789b4556-4df8-013f-9761-9d0f57a21f92",
+									true,
+								},
+								
+								{
 									"a0c32fff-2645-ca70-a05a-0325df47bc64",
 									true,
 								},
@@ -1323,6 +1328,11 @@ local tbl =
 							{
 								
 								{
+									"789b4556-4df8-013f-9761-9d0f57a21f92",
+									true,
+								},
+								
+								{
 									"a0c32fff-2645-ca70-a05a-0325df47bc64",
 									true,
 								},
@@ -1344,6 +1354,18 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.cometspread == true",
+							name = "Comet Spread",
+							uuid = "789b4556-4df8-013f-9761-9d0f57a21f92",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
 					
 					{
 						data = 
@@ -1389,6 +1411,107 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.cometspread = true\nself.used = true",
+							gVar = "ACR_RikuGNB3_CD",
+							name = "Spread",
+							uuid = "a325af4f-031e-e935-91e0-186e2f6a610a",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.cometstack = true\nself.used = true",
+							gVar = "ACR_RikuGNB3_CD",
+							name = "Stack",
+							uuid = "61a199ae-2b78-13c9-9a9b-51ab0cfb8a3f",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 139,
+							name = "Spread",
+							uuid = "be8d2aad-d283-d064-868f-e4ca0372bc24",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 161,
+							name = "Stack",
+							uuid = "43816d9d-3e51-65b4-85b5-ef21656a976a",
+							version = 3,
+						},
+					},
+				},
+				eventType = 4,
+				mechanicTime = 88.983,
+				name = "Comet Trigger",
+				timeRange = true,
+				timelineIndex = 18,
+				timerStartOffset = -15,
+				uuid = "28c5cbf4-da21-55ee-bb61-13b142731101",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.cometspread = nil\ndata.cometstack = nil\nself.used = true",
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "3497195c-899d-41ed-a41c-f8ea8cc748da",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 88.983,
+				name = "Trigger Reset",
+				timeRange = true,
+				timelineIndex = 18,
+				timerEndOffset = 5,
+				timerStartOffset = 2,
+				uuid = "48c34442-7b40-2928-a1eb-09badb86cb80",
+				version = 2,
+			},
+			inheritedIndex = 4,
 		},
 	},
 	[19] = 
@@ -1842,6 +1965,11 @@ local tbl =
 							{
 								
 								{
+									"df07ecfe-f079-f9ec-82c0-1cdbc72bc836",
+									true,
+								},
+								
+								{
 									"a0c32fff-2645-ca70-a05a-0325df47bc64",
 									true,
 								},
@@ -1868,6 +1996,11 @@ local tbl =
 							{
 								
 								{
+									"df07ecfe-f079-f9ec-82c0-1cdbc72bc836",
+									true,
+								},
+								
+								{
 									"a0c32fff-2645-ca70-a05a-0325df47bc64",
 									true,
 								},
@@ -1889,6 +2022,18 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.cometspread == true",
+							name = "Comet Spread",
+							uuid = "df07ecfe-f079-f9ec-82c0-1cdbc72bc836",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
 					
 					{
 						data = 
@@ -1934,6 +2079,107 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.cometspread = true\nself.used = true",
+							gVar = "ACR_RikuGNB3_CD",
+							name = "Spread",
+							uuid = "a325af4f-031e-e935-91e0-186e2f6a610a",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.cometstack = true\nself.used = true",
+							gVar = "ACR_RikuGNB3_CD",
+							name = "Stack",
+							uuid = "61a199ae-2b78-13c9-9a9b-51ab0cfb8a3f",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 139,
+							name = "Spread",
+							uuid = "be8d2aad-d283-d064-868f-e4ca0372bc24",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 161,
+							name = "Stack",
+							uuid = "43816d9d-3e51-65b4-85b5-ef21656a976a",
+							version = 3,
+						},
+					},
+				},
+				eventType = 4,
+				mechanicTime = 115.387,
+				name = "Comet Trigger",
+				timeRange = true,
+				timelineIndex = 29,
+				timerStartOffset = -15,
+				uuid = "fddb4faa-9f2e-8640-b951-dd8fd027f180",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.cometspread = nil\ndata.cometstack = nil\nself.used = true",
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "3497195c-899d-41ed-a41c-f8ea8cc748da",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 115.387,
+				name = "Trigger Reset",
+				timeRange = true,
+				timelineIndex = 29,
+				timerEndOffset = 5,
+				timerStartOffset = 2,
+				uuid = "b7b39dd8-c7df-dfc8-959f-9eceb365d862",
+				version = 2,
+			},
+			inheritedIndex = 4,
 		},
 	},
 	[45] = 
@@ -10414,7 +10660,7 @@ local tbl =
 						data = 
 						{
 							buffCheckType = 7,
-							buffDuration = 2,
+							buffDuration = 5,
 							buffIDList = 
 							{
 								810,
@@ -11317,6 +11563,7 @@ local tbl =
 		"store\\anyone\\savage6\\m11s\\modules\\core",
 		"store\\anyone\\savage6\\m11s\\modules\\draws",
 		"store\\anyone\\savage6\\m11s\\modules\\optimization",
+		"Tank\\M11S-OtherFuncs",
 	},
 	timelineName = "r11s",
 	version = "1.5.0",
