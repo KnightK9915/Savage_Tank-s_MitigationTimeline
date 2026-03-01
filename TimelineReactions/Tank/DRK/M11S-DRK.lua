@@ -1471,6 +1471,14 @@ local tbl =
 						{
 							aType = "Lua",
 							actionLua = "data.cometspread = true\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"be8d2aad-d283-d064-868f-e4ca0372bc24",
+									true,
+								},
+							},
 							gVar = "ACR_RikuGNB3_CD",
 							name = "Spread",
 							uuid = "a325af4f-031e-e935-91e0-186e2f6a610a",
@@ -1483,6 +1491,14 @@ local tbl =
 						{
 							aType = "Lua",
 							actionLua = "data.cometstack = true\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"43816d9d-3e51-65b4-85b5-ef21656a976a",
+									true,
+								},
+							},
 							gVar = "ACR_RikuGNB3_CD",
 							name = "Stack",
 							uuid = "61a199ae-2b78-13c9-9a9b-51ab0cfb8a3f",
@@ -2207,6 +2223,14 @@ local tbl =
 						{
 							aType = "Lua",
 							actionLua = "data.cometspread = true\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"be8d2aad-d283-d064-868f-e4ca0372bc24",
+									true,
+								},
+							},
 							gVar = "ACR_RikuGNB3_CD",
 							name = "Spread",
 							uuid = "a325af4f-031e-e935-91e0-186e2f6a610a",
@@ -2219,6 +2243,14 @@ local tbl =
 						{
 							aType = "Lua",
 							actionLua = "data.cometstack = true\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"43816d9d-3e51-65b4-85b5-ef21656a976a",
+									true,
+								},
+							},
 							gVar = "ACR_RikuGNB3_CD",
 							name = "Stack",
 							uuid = "61a199ae-2b78-13c9-9a9b-51ab0cfb8a3f",
