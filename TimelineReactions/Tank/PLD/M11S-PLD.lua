@@ -1424,6 +1424,14 @@ local tbl =
 						{
 							aType = "Lua",
 							actionLua = "data.cometspread = true\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"be8d2aad-d283-d064-868f-e4ca0372bc24",
+									true,
+								},
+							},
 							gVar = "ACR_RikuGNB3_CD",
 							name = "Spread",
 							uuid = "a325af4f-031e-e935-91e0-186e2f6a610a",
@@ -1436,6 +1444,14 @@ local tbl =
 						{
 							aType = "Lua",
 							actionLua = "data.cometstack = true\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"43816d9d-3e51-65b4-85b5-ef21656a976a",
+									true,
+								},
+							},
 							gVar = "ACR_RikuGNB3_CD",
 							name = "Stack",
 							uuid = "61a199ae-2b78-13c9-9a9b-51ab0cfb8a3f",
@@ -1959,6 +1975,91 @@ local tbl =
 					{
 						data = 
 						{
+							aType = "Lua",
+							actionLua = "data.cometspread = true\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"be8d2aad-d283-d064-868f-e4ca0372bc24",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							name = "Spread",
+							uuid = "a325af4f-031e-e935-91e0-186e2f6a610a",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.cometstack = true\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"43816d9d-3e51-65b4-85b5-ef21656a976a",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							name = "Stack",
+							uuid = "61a199ae-2b78-13c9-9a9b-51ab0cfb8a3f",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 139,
+							name = "Spread",
+							uuid = "be8d2aad-d283-d064-868f-e4ca0372bc24",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventMarkerID = 161,
+							name = "Stack",
+							uuid = "43816d9d-3e51-65b4-85b5-ef21656a976a",
+							version = 3,
+						},
+					},
+				},
+				eventType = 4,
+				mechanicTime = 115.387,
+				name = "Comet Trigger",
+				timeRange = true,
+				timelineIndex = 29,
+				timerStartOffset = -15,
+				uuid = "fddb4faa-9f2e-8640-b951-dd8fd027f180",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
 							actionID = 25746,
 							atomicPriority = true,
 							conditions = 
@@ -2076,75 +2177,6 @@ local tbl =
 				timelineIndex = 29,
 				timerStartOffset = -2.5,
 				uuid = "c5c57f87-8dbe-622e-8000-dcc983316ef1",
-				version = 2,
-			},
-			inheritedIndex = 1,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "Lua",
-							actionLua = "data.cometspread = true\nself.used = true",
-							gVar = "ACR_RikuGNB3_CD",
-							name = "Spread",
-							uuid = "a325af4f-031e-e935-91e0-186e2f6a610a",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							aType = "Lua",
-							actionLua = "data.cometstack = true\nself.used = true",
-							gVar = "ACR_RikuGNB3_CD",
-							name = "Stack",
-							uuid = "61a199ae-2b78-13c9-9a9b-51ab0cfb8a3f",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgType = 2,
-							eventMarkerID = 139,
-							name = "Spread",
-							uuid = "be8d2aad-d283-d064-868f-e4ca0372bc24",
-							version = 3,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgType = 2,
-							eventMarkerID = 161,
-							name = "Stack",
-							uuid = "43816d9d-3e51-65b4-85b5-ef21656a976a",
-							version = 3,
-						},
-					},
-				},
-				eventType = 4,
-				mechanicTime = 115.387,
-				name = "Comet Trigger",
-				timeRange = true,
-				timelineIndex = 29,
-				timerStartOffset = -15,
-				uuid = "fddb4faa-9f2e-8640-b951-dd8fd027f180",
 				version = 2,
 			},
 			inheritedIndex = 2,
