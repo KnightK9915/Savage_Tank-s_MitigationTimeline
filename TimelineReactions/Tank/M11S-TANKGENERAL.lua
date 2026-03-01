@@ -5868,11 +5868,6 @@ local tbl =
 							{
 								
 								{
-									"2642fb99-71ba-9c15-b5c9-caeee8628cab",
-									true,
-								},
-								
-								{
 									"cb983461-0f8f-cacc-a8d3-98369d4c5123",
 									true,
 								},
@@ -5896,11 +5891,6 @@ local tbl =
 							actionID = 7385,
 							conditions = 
 							{
-								
-								{
-									"2642fb99-71ba-9c15-b5c9-caeee8628cab",
-									true,
-								},
 								
 								{
 									"cb983461-0f8f-cacc-a8d3-98369d4c5123",
@@ -5929,11 +5919,6 @@ local tbl =
 							{
 								
 								{
-									"2642fb99-71ba-9c15-b5c9-caeee8628cab",
-									true,
-								},
-								
-								{
 									"794486f4-30b7-2daf-8df8-6dc83b3e723d",
 									true,
 								},
@@ -5954,18 +5939,6 @@ local tbl =
 				},
 				conditions = 
 				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return data.cometstack == true",
-							name = "Comet Stack",
-							uuid = "2642fb99-71ba-9c15-b5c9-caeee8628cab",
-							version = 3,
-						},
-						inheritedIndex = 1,
-					},
 					
 					{
 						data = 
@@ -7123,541 +7096,6 @@ local tbl =
 			inheritedIndex = 5,
 		},
 	},
-	[146] = 
-	{
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 3540,
-							conditions = 
-							{
-								
-								{
-									"6a49330b-844e-31fa-96c9-18ecbe6b49bd",
-									true,
-								},
-								
-								{
-									"d509fc50-866e-82e0-a683-7f673386a79e",
-									true,
-								},
-								
-								{
-									"28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-									true,
-								},
-								
-								{
-									"a787167c-e665-8709-84d0-298a7dbe954a",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							uuid = "208d8d0c-038a-0156-ae05-da413fbdfa98",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return FFXIV_Common_BotRunning",
-							name = "Bot Running",
-							uuid = "6a49330b-844e-31fa-96c9-18ecbe6b49bd",
-							version = 3,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							actionID = 3540,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 3,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 14,
-							jobIDList = 
-							{
-								19,
-							},
-							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 3,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 6,
-							buffID = 1457,
-							buffIDList = 
-							{
-								1457,
-								1839,
-								1894,
-							},
-							category = "Self",
-							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 3,
-						},
-					},
-				},
-				mechanicTime = 541.479,
-				name = "Veil",
-				timeRange = true,
-				timelineIndex = 146,
-				timerOffset = -10,
-				timerStartOffset = -4.5,
-				uuid = "a2b14698-e528-5d73-8e97-cb8e84cae317",
-				version = 2,
-			},
-			inheritedIndex = 1,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16160,
-							conditions = 
-							{
-								
-								{
-									"d7ee7d76-2e37-5f72-9463-9e74e1643e90",
-									true,
-								},
-								
-								{
-									"a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-									true,
-								},
-								
-								{
-									"115eca71-8e25-2c76-be17-c29c66dcf324",
-									true,
-								},
-								
-								{
-									"a6929435-5dcb-3407-8d89-b38a0596d1ac",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							uuid = "dbc99f8f-e1c5-f477-89e0-30fa7efeda14",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return FFXIV_Common_BotRunning",
-							name = "Bot Running",
-							uuid = "d7ee7d76-2e37-5f72-9463-9e74e1643e90",
-							version = 3,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							actionID = 16160,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 3,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 14,
-							jobIDList = 
-							{
-								37,
-							},
-							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 3,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 6,
-							buffID = 1457,
-							buffIDList = 
-							{
-								1457,
-								1894,
-								1362,
-							},
-							category = "Self",
-							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 3,
-						},
-					},
-				},
-				mechanicTime = 541.479,
-				name = "HoL",
-				timeRange = true,
-				timelineIndex = 146,
-				timerStartOffset = -4.5,
-				uuid = "57797840-25e2-ac76-9909-48e8e8cf774d",
-				version = 2,
-			},
-			inheritedIndex = 4,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 16471,
-							conditions = 
-							{
-								
-								{
-									"c61a0421-fa49-c741-abbd-ffd29ab11e62",
-									true,
-								},
-								
-								{
-									"142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-									true,
-								},
-								
-								{
-									"322dd20f-009d-0bff-941f-f877ce997638",
-									true,
-								},
-								
-								{
-									"e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							uuid = "32970969-7f85-6bc8-90e1-4f30e8ce8093",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return FFXIV_Common_BotRunning",
-							name = "Bot Running",
-							uuid = "c61a0421-fa49-c741-abbd-ffd29ab11e62",
-							version = 3,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							actionID = 16471,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 3,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 14,
-							jobIDList = 
-							{
-								32,
-							},
-							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 3,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 6,
-							buffID = 1457,
-							buffIDList = 
-							{
-								1457,
-								1362,
-								1839,
-							},
-							category = "Self",
-							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 3,
-						},
-						inheritedIndex = 3,
-					},
-				},
-				mechanicTime = 541.479,
-				name = "Dark Missinary",
-				timeRange = true,
-				timelineIndex = 146,
-				timerOffset = -10,
-				timerStartOffset = -4.5,
-				uuid = "524021e1-c368-5024-a533-5c025e0433da",
-				version = 2,
-			},
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7388,
-							conditions = 
-							{
-								
-								{
-									"a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
-									true,
-								},
-								
-								{
-									"c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-									true,
-								},
-								
-								{
-									"cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-									true,
-								},
-								
-								{
-									"3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-									true,
-								},
-							},
-							gVar = "ACR_RikuDRK3_CD",
-							ignoreWeaveRules = true,
-							uuid = "83ae2ac2-4e1e-673e-befc-12d5802ce1cd",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return FFXIV_Common_BotRunning",
-							name = "Bot Running",
-							uuid = "a2e15094-0bc5-7369-bc8f-ef4c49766fcc",
-							version = 3,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							actionID = 7388,
-							category = "Self",
-							comparator = 2,
-							conditionType = 4,
-							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 3,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 14,
-							jobIDList = 
-							{
-								21,
-							},
-							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 3,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 6,
-							buffID = 1457,
-							buffIDList = 
-							{
-								1362,
-								1839,
-								1894,
-							},
-							category = "Self",
-							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 3,
-						},
-						inheritedIndex = 3,
-					},
-				},
-				mechanicTime = 541.479,
-				name = "Shake it off",
-				timeRange = true,
-				timelineIndex = 146,
-				timerStartOffset = -4.5,
-				uuid = "42551f81-2968-ad60-8f3a-b8765a90afaa",
-				version = 2,
-			},
-			inheritedIndex = 4,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							actionID = 7535,
-							conditions = 
-							{
-								
-								{
-									"920eaf0e-9d68-b87a-b636-36be8e013575",
-									true,
-								},
-								
-								{
-									"5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-									true,
-								},
-								
-								{
-									"7286744f-688c-9195-941e-46d65189cc2c",
-									true,
-								},
-							},
-							endIfUsed = true,
-							gVar = "ACR_RikuPLD3_CD",
-							ignoreWeaveRules = true,
-							targetType = "Current Target",
-							uuid = "c9c9cc18-aa2e-c48a-bebe-6ab6f4e7c114",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return FFXIV_Common_BotRunning",
-							name = "Bot Running",
-							uuid = "920eaf0e-9d68-b87a-b636-36be8e013575",
-							version = 3,
-						},
-						inheritedIndex = 1,
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 2,
-							buffID = 1193,
-							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 3,
-						},
-					},
-					
-					{
-						data = 
-						{
-							buffCheckType = 3,
-							category = "Lua",
-							comparator = 2,
-							conditionLua = "-- Condition: 若 5m 有效射程内存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\n-- 取敌对实体列表：优先 TensorCore，其次兼容 Minion 的 EntityList（若存在）\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    -- 常见：Enemy / Attackable / Aggro 等；这里用 Enemy，若你环境不是这个名字会直接降级到 false\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    -- Minion 常见过滤：attackable\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        -- 存活判断（不同对象字段可能不同，做兼容）\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        -- 可选中 / 可攻击（同样做兼容）\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" then\n                -- 目标命中半径字段兼容：hitradius / hitdarius\n                local hitr = 0\n                if type(e.hitradius) == \"number\" then\n                    hitr = e.hitradius\n                elseif type(e.hitdarius) == \"number\" then\n                    hitr = e.hitdarius\n                end\n\n                -- 有效距离：中心距 - 目标命中半径\n                if (d - hitr) <= RANGE then\n                    return true\n                end\n            end\n        end\n    end\nend\n\nreturn false\n",
-							conditionType = 6,
-							inRangeValue = 3.2799999713898,
-							name = "<Range",
-							uuid = "7286744f-688c-9195-941e-46d65189cc2c",
-							version = 3,
-						},
-						inheritedIndex = 3,
-					},
-				},
-				mechanicTime = 541.479,
-				name = "Reprisal",
-				randomOffset = -2,
-				timeRange = true,
-				timelineIndex = 146,
-				timerOffset = -3,
-				timerStartOffset = -2.5,
-				uuid = "b3a7a2bd-43a9-fb59-9fe7-3a9075a36016",
-				version = 2,
-			},
-			inheritedIndex = 5,
-		},
-	},
 	[160] = 
 	{
 		
@@ -8226,6 +7664,9 @@ local tbl =
 				version = 2,
 			},
 		},
+	},
+	[166] = 
+	{
 		
 		{
 			data = 
@@ -8326,14 +7767,13 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 592.776,
+				mechanicTime = 601.964,
 				name = "Veil",
 				timeRange = true,
-				timelineIndex = 161,
-				timerEndOffset = 20,
+				timelineIndex = 166,
 				timerOffset = -10,
-				timerStartOffset = 0.5,
-				uuid = "7717e04d-06fd-f081-8a37-f1cd05a64831",
+				timerStartOffset = -9.5,
+				uuid = "a66285a1-23e9-7e25-b886-bbd7b27c46e3",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -8438,13 +7878,13 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 592.776,
+				mechanicTime = 601.964,
 				name = "HoL",
 				timeRange = true,
-				timelineIndex = 161,
+				timelineIndex = 166,
 				timerEndOffset = 20,
-				timerStartOffset = 0.5,
-				uuid = "0ece8d7e-839d-8b5d-8e43-ff90d247957a",
+				timerStartOffset = -9.5,
+				uuid = "c47889b4-7efd-2635-a8e1-181114989f19",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -8549,14 +7989,14 @@ local tbl =
 						inheritedIndex = 3,
 					},
 				},
-				mechanicTime = 592.776,
+				mechanicTime = 601.964,
 				name = "Dark Missinary",
 				timeRange = true,
-				timelineIndex = 161,
+				timelineIndex = 166,
 				timerEndOffset = 20,
 				timerOffset = -10,
-				timerStartOffset = 0.5,
-				uuid = "61b7a8f3-677b-ab32-aecc-ea1a01e1693f",
+				timerStartOffset = -9.5,
+				uuid = "76d06fec-5db2-50c9-9537-79819cb38397",
 				version = 2,
 			},
 		},
@@ -8660,13 +8100,13 @@ local tbl =
 						inheritedIndex = 3,
 					},
 				},
-				mechanicTime = 592.776,
+				mechanicTime = 601.964,
 				name = "Shake it off",
 				timeRange = true,
-				timelineIndex = 161,
+				timelineIndex = 166,
 				timerEndOffset = 20,
-				timerStartOffset = 0.5,
-				uuid = "44c66656-b574-7daa-ad2a-0949dc89e4b5",
+				timerStartOffset = -9.5,
+				uuid = "2c181ba7-d141-fcf3-8ecf-ba9e8378405b",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -8750,18 +8190,156 @@ local tbl =
 						inheritedIndex = 3,
 					},
 				},
-				mechanicTime = 592.776,
+				mechanicTime = 601.964,
 				name = "Reprisal",
 				randomOffset = -2,
 				timeRange = true,
-				timelineIndex = 161,
+				timelineIndex = 166,
 				timerEndOffset = 20,
 				timerOffset = -3,
-				timerStartOffset = 0.5,
-				uuid = "c5ddf07d-9deb-3ef0-a18d-4b12e6e6999e",
+				timerStartOffset = -8.5,
+				uuid = "e79d84a9-cc7d-5ced-aa6c-2c96fb4c0323",
 				version = 2,
 			},
 			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							conditions = 
+							{
+								
+								{
+									"cb983461-0f8f-cacc-a8d3-98369d4c5123",
+									true,
+								},
+								
+								{
+									"7d791b6a-44b6-2caa-9dad-e90ebb9f0371",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_SmartAOE",
+							uuid = "c33056f4-dc1a-6195-bd95-4e514866b6f5",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 7385,
+							conditions = 
+							{
+								
+								{
+									"cb983461-0f8f-cacc-a8d3-98369d4c5123",
+									true,
+								},
+								
+								{
+									"7d791b6a-44b6-2caa-9dad-e90ebb9f0371",
+									true,
+								},
+							},
+							fallthrough = true,
+							gVar = "ACR_RikuPLD3_Tankbar_PassageOfArms",
+							ignoreWeaveRules = true,
+							uuid = "65257871-731c-06cb-ad14-0cccde0d6934",
+							variableTogglesType = 3,
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							conditions = 
+							{
+								
+								{
+									"794486f4-30b7-2daf-8df8-6dc83b3e723d",
+									true,
+								},
+								
+								{
+									"7d791b6a-44b6-2caa-9dad-e90ebb9f0371",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_SmartAOE",
+							gVarValue = 2,
+							uuid = "8c5a04d1-aae7-8010-b7d7-50192128b1d3",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionCDValue = 0.10000000149012,
+							actionID = 7385,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "cb983461-0f8f-cacc-a8d3-98369d4c5123",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1175,
+							buffIDList = 
+							{
+								1175,
+							},
+							category = "Self",
+							uuid = "794486f4-30b7-2daf-8df8-6dc83b3e723d",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								19,
+							},
+							uuid = "7d791b6a-44b6-2caa-9dad-e90ebb9f0371",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 601.964,
+				name = "PoA",
+				timeRange = true,
+				timelineIndex = 166,
+				timerStartOffset = -8,
+				uuid = "efc29bee-ae27-b89b-9203-643320f70768",
+				version = 2,
+			},
 		},
 	},
 	[167] = 
