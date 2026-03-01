@@ -66,6 +66,39 @@ local tbl =
 			},
 		},
 	},
+	[146] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "Argus.addPlayerMarker(640)\nself.used = true",
+							gVar = "ACR_RikuPLD3_CD",
+							uuid = "69610243-4efa-bba4-9abb-d28e193fb5d6",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 541.479,
+				name = "[VFX] Draw Comet",
+				timeRange = true,
+				timelineIndex = 146,
+				timerStartOffset = -2,
+				uuid = "bc05d40b-48d8-b9f9-a324-b53a0910fcd7",
+				version = 2,
+			},
+		},
+	},
 	[167] = 
 	{
 		

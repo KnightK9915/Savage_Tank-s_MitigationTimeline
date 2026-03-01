@@ -1326,6 +1326,14 @@ local tbl =
 						{
 							aType = "Lua",
 							actionLua = "data.cometspread = true\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"be8d2aad-d283-d064-868f-e4ca0372bc24",
+									true,
+								},
+							},
 							gVar = "ACR_RikuGNB3_CD",
 							name = "Spread",
 							uuid = "a325af4f-031e-e935-91e0-186e2f6a610a",
@@ -1338,6 +1346,14 @@ local tbl =
 						{
 							aType = "Lua",
 							actionLua = "data.cometstack = true\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"43816d9d-3e51-65b4-85b5-ef21656a976a",
+									true,
+								},
+							},
 							gVar = "ACR_RikuGNB3_CD",
 							name = "Stack",
 							uuid = "61a199ae-2b78-13c9-9a9b-51ab0cfb8a3f",
@@ -1456,6 +1472,11 @@ local tbl =
 									"cb983461-0f8f-cacc-a8d3-98369d4c5123",
 									true,
 								},
+								
+								{
+									"c064a1c0-d48c-8d74-99dc-336181aac0ea",
+									true,
+								},
 							},
 							gVar = "ACR_RikuPLD3_SmartAOE",
 							uuid = "c33056f4-dc1a-6195-bd95-4e514866b6f5",
@@ -1479,6 +1500,11 @@ local tbl =
 								
 								{
 									"cb983461-0f8f-cacc-a8d3-98369d4c5123",
+									true,
+								},
+								
+								{
+									"c064a1c0-d48c-8d74-99dc-336181aac0ea",
 									true,
 								},
 							},
@@ -1505,6 +1531,11 @@ local tbl =
 								
 								{
 									"794486f4-30b7-2daf-8df8-6dc83b3e723d",
+									true,
+								},
+								
+								{
+									"c064a1c0-d48c-8d74-99dc-336181aac0ea",
 									true,
 								},
 							},
@@ -1556,6 +1587,20 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "794486f4-30b7-2daf-8df8-6dc83b3e723d",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								19,
+							},
+							uuid = "c064a1c0-d48c-8d74-99dc-336181aac0ea",
 							version = 3,
 						},
 					},
@@ -1965,6 +2010,14 @@ local tbl =
 						{
 							aType = "Lua",
 							actionLua = "data.cometspread = true\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"be8d2aad-d283-d064-868f-e4ca0372bc24",
+									true,
+								},
+							},
 							gVar = "ACR_RikuGNB3_CD",
 							name = "Spread",
 							uuid = "a325af4f-031e-e935-91e0-186e2f6a610a",
@@ -1977,6 +2030,14 @@ local tbl =
 						{
 							aType = "Lua",
 							actionLua = "data.cometstack = true\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"43816d9d-3e51-65b4-85b5-ef21656a976a",
+									true,
+								},
+							},
 							gVar = "ACR_RikuGNB3_CD",
 							name = "Stack",
 							uuid = "61a199ae-2b78-13c9-9a9b-51ab0cfb8a3f",
@@ -2095,6 +2156,11 @@ local tbl =
 									"cb983461-0f8f-cacc-a8d3-98369d4c5123",
 									true,
 								},
+								
+								{
+									"7d791b6a-44b6-2caa-9dad-e90ebb9f0371",
+									true,
+								},
 							},
 							gVar = "ACR_RikuPLD3_SmartAOE",
 							uuid = "c33056f4-dc1a-6195-bd95-4e514866b6f5",
@@ -2118,6 +2184,11 @@ local tbl =
 								
 								{
 									"cb983461-0f8f-cacc-a8d3-98369d4c5123",
+									true,
+								},
+								
+								{
+									"7d791b6a-44b6-2caa-9dad-e90ebb9f0371",
 									true,
 								},
 							},
@@ -2144,6 +2215,11 @@ local tbl =
 								
 								{
 									"794486f4-30b7-2daf-8df8-6dc83b3e723d",
+									true,
+								},
+								
+								{
+									"7d791b6a-44b6-2caa-9dad-e90ebb9f0371",
 									true,
 								},
 							},
@@ -2195,6 +2271,20 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "794486f4-30b7-2daf-8df8-6dc83b3e723d",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								19,
+							},
+							uuid = "7d791b6a-44b6-2caa-9dad-e90ebb9f0371",
 							version = 3,
 						},
 					},
@@ -4148,11 +4238,6 @@ local tbl =
 								},
 								
 								{
-									"2a5b0514-bfae-2bbb-8c09-f86a36fd26fd",
-									true,
-								},
-								
-								{
 									"671741ed-7942-01d4-831c-81599ffdf4ea",
 									true,
 								},
@@ -4191,11 +4276,6 @@ local tbl =
 								
 								{
 									"3399f589-6567-0955-91d2-82ad5886550c",
-									true,
-								},
-								
-								{
-									"2a5b0514-bfae-2bbb-8c09-f86a36fd26fd",
 									true,
 								},
 								
@@ -4242,11 +4322,6 @@ local tbl =
 								},
 								
 								{
-									"2a5b0514-bfae-2bbb-8c09-f86a36fd26fd",
-									true,
-								},
-								
-								{
 									"671741ed-7942-01d4-831c-81599ffdf4ea",
 									true,
 								},
@@ -4285,11 +4360,6 @@ local tbl =
 								
 								{
 									"3399f589-6567-0955-91d2-82ad5886550c",
-									true,
-								},
-								
-								{
-									"2a5b0514-bfae-2bbb-8c09-f86a36fd26fd",
 									true,
 								},
 								
@@ -4388,17 +4458,6 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Self",
-							conditionType = 9,
-							partyTargetType = "Event Target",
-							uuid = "2a5b0514-bfae-2bbb-8c09-f86a36fd26fd",
-							version = 3,
-						},
-					},
-					
-					{
-						data = 
-						{
 							category = "Filter",
 							filterTargetType = "ContentID",
 							partyTargetContentID = 14305,
@@ -4418,6 +4477,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				eventType = 2,
 				mechanicTime = 225.152,
 				name = "Instant Dash",
@@ -4965,7 +5025,301 @@ local tbl =
 			inheritedIndex = 5,
 		},
 	},
-	[126] = 
+	[81] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "-- Rectangle from 4 corners -> center/length/width/heading -> draw outline\n-- Works as an On Update / On Frame script (NO return).\n\nlocal function packU32(r, g, b, a)\n    -- r,g,b,a in 0..1\n    local function clamp01(x)\n        if x < 0 then return 0 end\n        if x > 1 then return 1 end\n        return x\n    end\n    r, g, b, a = clamp01(r), clamp01(g), clamp01(b), clamp01(a)\n    local R = math.floor(r * 255 + 0.5)\n    local G = math.floor(g * 255 + 0.5)\n    local B = math.floor(b * 255 + 0.5)\n    local A = math.floor(a * 255 + 0.5)\n    -- ABGR (common for ImGui U32)\n    return (A << 24) | (B << 16) | (G << 8) | R\nend\n\nlocal function u32(r, g, b, a)\n    if GUI and GUI.ColorConvertFloat4ToU32 then\n        return GUI:ColorConvertFloat4ToU32(r, g, b, a)\n    end\n    return packU32(r, g, b, a)\nend\n\nlocal function v2(x, z) return { x = x, z = z } end\nlocal function vadd(a, b) return v2(a.x + b.x, a.z + b.z) end\nlocal function vsub(a, b) return v2(a.x - b.x, a.z - b.z) end\nlocal function vmul(a, s) return v2(a.x * s, a.z * s) end\nlocal function vlen(a) return math.sqrt(a.x * a.x + a.z * a.z) end\nlocal function vnorm(a)\n    local l = vlen(a)\n    if l < 1e-8 then return v2(0, 0) end\n    return v2(a.x / l, a.z / l)\nend\n\n-- Your points (x,z). y is 0 in your data.\nlocal p0 = v2( 99.81, 119.83)\nlocal p1 = v2(100.00,  80.3)\nlocal p2 = v2(80.1,  80.23)\nlocal p3 = v2(80.1, 119.94)\n\n-- Center (average of 4 corners)\nlocal center = v2(\n    (p0.x + p1.x + p2.x + p3.x) / 4.0,\n    (p0.z + p1.z + p2.z + p3.z) / 4.0\n)\nlocal y = 0.0\n\n-- Build averaged “length direction” and “width direction” (more robust than picking one edge)\nlocal vLen = vmul(vadd(vsub(p1, p0), vsub(p2, p3)), 0.5) -- (p1-p0 + p2-p3)/2\nlocal vWid = vmul(vadd(vsub(p3, p0), vsub(p2, p1)), 0.5) -- (p3-p0 + p2-p1)/2\n\nlocal length = vlen(vLen)   -- ≈ 39.5701\nlocal width  = vlen(vWid)   -- ≈ 19.7652\n\nlocal dirL = vnorm(vLen)\nlocal dirW = vnorm(vWid)\n\n-- Heading (if you need it for rect APIs): atan2(dz, dx)\nlocal heading = math.atan2(dirL.z, dirL.x)  -- ≈ -1.5681428 rad\n\n-- Reconstruct ideal rectangle corners from center + axes\nlocal halfL = length * 0.5\nlocal halfW = width  * 0.5\n\nlocal c0 = vadd(vadd(center, vmul(dirL, -halfL)), vmul(dirW,  halfW))\nlocal c1 = vadd(vadd(center, vmul(dirL, -halfL)), vmul(dirW, -halfW))\nlocal c2 = vadd(vadd(center, vmul(dirL,  halfL)), vmul(dirW, -halfW))\nlocal c3 = vadd(vadd(center, vmul(dirL,  halfL)), vmul(dirW,  halfW))\n\n-- Draw (frame draw, no residue)\nif not (Argus2 and Argus2.ShapeDrawer and Argus2.ShapeDrawer.new) then\n    return\nend\n\nlocal color = u32(1, 1, 1, 1) -- white\nlocal drawer = Argus2.ShapeDrawer:new(nil, nil, color, nil, 2.0) -- outline thickness-ish for lines\n\n-- You can tune these:\nlocal lineThickness = 5.0\nlocal endpointThickness = 0.0\n\npcall(function()\n    drawer:addLine(c0.x, y, c0.z, c1.x, y, c1.z, lineThickness, endpointThickness)\n    drawer:addLine(c1.x, y, c1.z, c2.x, y, c2.z, lineThickness, endpointThickness)\n    drawer:addLine(c2.x, y, c2.z, c3.x, y, c3.z, lineThickness, endpointThickness)\n    drawer:addLine(c3.x, y, c3.z, c0.x, y, c0.z, lineThickness, endpointThickness)\nend)\n\n-- Debug values if you want to print:\n-- d(string.format(\"center=(%.4f, %.4f) len=%.4f wid=%.4f heading=%.6f\", center.x, center.z, length, width, heading))",
+							conditions = 
+							{
+								
+								{
+									"d15571d5-d6cc-6a71-abe0-f797588e9aee",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							name = "MT Area",
+							uuid = "1a3bb224-4b26-40dd-bd79-3403dce944c7",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "-- Rectangle from 4 corners -> center/length/width/heading -> draw outline\n-- Works as an On Update / On Frame script (NO return).\n\nlocal function packU32(r, g, b, a)\n    -- r,g,b,a in 0..1\n    local function clamp01(x)\n        if x < 0 then return 0 end\n        if x > 1 then return 1 end\n        return x\n    end\n    r, g, b, a = clamp01(r), clamp01(g), clamp01(b), clamp01(a)\n    local R = math.floor(r * 255 + 0.5)\n    local G = math.floor(g * 255 + 0.5)\n    local B = math.floor(b * 255 + 0.5)\n    local A = math.floor(a * 255 + 0.5)\n    -- ABGR (common for ImGui U32)\n    return (A << 24) | (B << 16) | (G << 8) | R\nend\n\nlocal function u32(r, g, b, a)\n    if GUI and GUI.ColorConvertFloat4ToU32 then\n        return GUI:ColorConvertFloat4ToU32(r, g, b, a)\n    end\n    return packU32(r, g, b, a)\nend\n\nlocal function v2(x, z) return { x = x, z = z } end\nlocal function vadd(a, b) return v2(a.x + b.x, a.z + b.z) end\nlocal function vsub(a, b) return v2(a.x - b.x, a.z - b.z) end\nlocal function vmul(a, s) return v2(a.x * s, a.z * s) end\nlocal function vlen(a) return math.sqrt(a.x * a.x + a.z * a.z) end\nlocal function vnorm(a)\n    local l = vlen(a)\n    if l < 1e-8 then return v2(0, 0) end\n    return v2(a.x / l, a.z / l)\nend\n\n-- Your points (x,z). y is 0 in your data.\nlocal p0 = v2( 99.99, 119.94)\nlocal p1 = v2(100.13,  80.29)\nlocal p2 = v2(119.86,  80.45)\nlocal p3 = v2(119.79, 119.94)\n\n-- Center (average of 4 corners)\nlocal center = v2(\n    (p0.x + p1.x + p2.x + p3.x) / 4.0,\n    (p0.z + p1.z + p2.z + p3.z) / 4.0\n)\nlocal y = 0.0\n\n-- Build averaged “length direction” and “width direction” (more robust than picking one edge)\nlocal vLen = vmul(vadd(vsub(p1, p0), vsub(p2, p3)), 0.5) -- (p1-p0 + p2-p3)/2\nlocal vWid = vmul(vadd(vsub(p3, p0), vsub(p2, p1)), 0.5) -- (p3-p0 + p2-p1)/2\n\nlocal length = vlen(vLen)   -- ≈ 39.5701\nlocal width  = vlen(vWid)   -- ≈ 19.7652\n\nlocal dirL = vnorm(vLen)\nlocal dirW = vnorm(vWid)\n\n-- Heading (if you need it for rect APIs): atan2(dz, dx)\nlocal heading = math.atan2(dirL.z, dirL.x)  -- ≈ -1.5681428 rad\n\n-- Reconstruct ideal rectangle corners from center + axes\nlocal halfL = length * 0.5\nlocal halfW = width  * 0.5\n\nlocal c0 = vadd(vadd(center, vmul(dirL, -halfL)), vmul(dirW,  halfW))\nlocal c1 = vadd(vadd(center, vmul(dirL, -halfL)), vmul(dirW, -halfW))\nlocal c2 = vadd(vadd(center, vmul(dirL,  halfL)), vmul(dirW, -halfW))\nlocal c3 = vadd(vadd(center, vmul(dirL,  halfL)), vmul(dirW,  halfW))\n\n-- Draw (frame draw, no residue)\nif not (Argus2 and Argus2.ShapeDrawer and Argus2.ShapeDrawer.new) then\n    return\nend\n\nlocal color = u32(1, 1, 1, 1) -- white\nlocal drawer = Argus2.ShapeDrawer:new(nil, nil, color, nil, 2.0) -- outline thickness-ish for lines\n\n-- You can tune these:\nlocal lineThickness = 5.0\nlocal endpointThickness = 0.0\n\npcall(function()\n    drawer:addLine(c0.x, y, c0.z, c1.x, y, c1.z, lineThickness, endpointThickness)\n    drawer:addLine(c1.x, y, c1.z, c2.x, y, c2.z, lineThickness, endpointThickness)\n    drawer:addLine(c2.x, y, c2.z, c3.x, y, c3.z, lineThickness, endpointThickness)\n    drawer:addLine(c3.x, y, c3.z, c0.x, y, c0.z, lineThickness, endpointThickness)\nend)\n\n-- Debug values if you want to print:\n-- d(string.format(\"center=(%.4f, %.4f) len=%.4f wid=%.4f heading=%.6f\", center.x, center.z, length, width, heading))",
+							conditions = 
+							{
+								
+								{
+									"1a2a03a0-6850-674d-a7f7-797a5683eb3b",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							name = "ST Area",
+							uuid = "cd4a3016-0139-2524-8bf2-30fa9ccfdc67",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "1a2a03a0-6850-674d-a7f7-797a5683eb3b",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "d15571d5-d6cc-6a71-abe0-f797588e9aee",
+							version = 3,
+						},
+						inheritedIndex = 2,
+					},
+				},
+				eventType = 13,
+				mechanicTime = 299.027,
+				name = "[Draw] Responsible Area",
+				timeRange = true,
+				timelineIndex = 81,
+				timerEndOffset = 30,
+				uuid = "d175d18d-1cc5-bc30-b179-eeada35e8480",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							conditions = 
+							{
+								
+								{
+									"5dc712d5-6bbb-3edd-9fe1-500707c449aa",
+									true,
+								},
+								
+								{
+									"cb983461-0f8f-cacc-a8d3-98369d4c5123",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_SmartAOE",
+							uuid = "c33056f4-dc1a-6195-bd95-4e514866b6f5",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 7385,
+							conditions = 
+							{
+								
+								{
+									"5dc712d5-6bbb-3edd-9fe1-500707c449aa",
+									true,
+								},
+								
+								{
+									"cb983461-0f8f-cacc-a8d3-98369d4c5123",
+									true,
+								},
+							},
+							fallthrough = true,
+							gVar = "ACR_RikuPLD3_Tankbar_PassageOfArms",
+							ignoreWeaveRules = true,
+							uuid = "65257871-731c-06cb-ad14-0cccde0d6934",
+							variableTogglesType = 3,
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							conditions = 
+							{
+								
+								{
+									"5dc712d5-6bbb-3edd-9fe1-500707c449aa",
+									true,
+								},
+								
+								{
+									"794486f4-30b7-2daf-8df8-6dc83b3e723d",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_SmartAOE",
+							gVarValue = 2,
+							uuid = "8c5a04d1-aae7-8010-b7d7-50192128b1d3",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								19,
+							},
+							uuid = "5dc712d5-6bbb-3edd-9fe1-500707c449aa",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionCDValue = 0.10000000149012,
+							actionID = 7385,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "cb983461-0f8f-cacc-a8d3-98369d4c5123",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1175,
+							buffIDList = 
+							{
+								1175,
+							},
+							category = "Self",
+							uuid = "794486f4-30b7-2daf-8df8-6dc83b3e723d",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 299.027,
+				name = "PoA",
+				timeRange = true,
+				timelineIndex = 81,
+				timerStartOffset = -2,
+				uuid = "38bbf0cb-351a-2fdd-bdf0-c229e3d6d120",
+				version = 2,
+			},
+		},
+	},
+	[104] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "local cx = 99.975\nlocal cy = 0\nlocal cz = 99.995\nlocal length = 40.11\nlocal width = 9.85\nlocal heading = 0.004\n\nlocal colorFill    = GUI:ColorConvertFloat4ToU32(0.75, 0.10, 0.10, 0.08)  -- 淡红，8% 不透明\nlocal colorOutline = GUI:ColorConvertFloat4ToU32(1.00, 0.95, 0.70, 0.35)  -- 暖淡黄，35% 不透明\n\nlocal drawer = TensorCore.getCachedDrawer(colorFill, colorFill, colorFill, colorOutline, 0.6)\n\nlocal uuid = drawer:addTimedCenteredRect(\n    6000,\n    cx, cy, cz,\n    length, width,\n    heading,\n    0,\n    false,\n    false\n)",
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "b77e8480-50b9-02f6-808d-bcee9ac8cb30",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 388.246,
+				name = "[Draw] Danger Area",
+				timeRange = true,
+				timelineIndex = 104,
+				timerEndOffset = 5,
+				timerStartOffset = -1,
+				uuid = "752ec88a-cecd-0450-861d-4e24829c1863",
+				version = 2,
+			},
+		},
+	},
+	[110] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "local cx = 99.975\nlocal cy = 0\nlocal cz = 99.995\nlocal length = 40.11\nlocal width = 9.85\nlocal heading = 0.004\n\nlocal colorFill    = GUI:ColorConvertFloat4ToU32(0.75, 0.10, 0.10, 0.08)  -- 淡红，8% 不透明\nlocal colorOutline = GUI:ColorConvertFloat4ToU32(1.00, 0.95, 0.70, 0.35)  -- 暖淡黄，35% 不透明\n\nlocal drawer = TensorCore.getCachedDrawer(colorFill, colorFill, colorFill, colorOutline, 0.6)\n\nlocal uuid = drawer:addTimedCenteredRect(\n    6000,\n    cx, cy, cz,\n    length, width,\n    heading,\n    0,\n    false,\n    false\n)",
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "b77e8480-50b9-02f6-808d-bcee9ac8cb30",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 420.339,
+				name = "[Draw] Danger Area",
+				timeRange = true,
+				timelineIndex = 110,
+				timerEndOffset = 5,
+				timerStartOffset = -1,
+				uuid = "2d9986da-6551-e478-937e-9fcf53bfd288",
+				version = 2,
+			},
+		},
+	},
+	[120] = 
 	{
 		
 		{
@@ -5067,13 +5421,13 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 478.854,
+				mechanicTime = 451.511,
 				name = "Veil",
 				timeRange = true,
-				timelineIndex = 126,
+				timelineIndex = 120,
 				timerOffset = -10,
-				timerStartOffset = -4.5,
-				uuid = "f86b746a-2925-15c2-8903-cacc6aa58fbe",
+				timerStartOffset = -7.5,
+				uuid = "5a6b25e1-1226-cb62-9628-b84c4e16f3e2",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -5178,12 +5532,12 @@ local tbl =
 						},
 					},
 				},
-				mechanicTime = 478.854,
+				mechanicTime = 451.511,
 				name = "HoL",
 				timeRange = true,
-				timelineIndex = 126,
-				timerStartOffset = -4.5,
-				uuid = "36d4fbe8-86d3-3a59-b866-91bf011e346d",
+				timelineIndex = 120,
+				timerStartOffset = -7.5,
+				uuid = "51de8515-3827-b6ec-b499-5e303d3da7a8",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -5288,13 +5642,13 @@ local tbl =
 						inheritedIndex = 3,
 					},
 				},
-				mechanicTime = 478.854,
+				mechanicTime = 451.511,
 				name = "Dark Missinary",
 				timeRange = true,
-				timelineIndex = 126,
+				timelineIndex = 120,
 				timerOffset = -10,
-				timerStartOffset = -4.5,
-				uuid = "ab9fd6c6-5b6d-eb41-9b5c-641c8d6db6f3",
+				timerStartOffset = -7.5,
+				uuid = "21ec8d19-492e-4e43-b953-5e772f99a01d",
 				version = 2,
 			},
 		},
@@ -5398,12 +5752,12 @@ local tbl =
 						inheritedIndex = 3,
 					},
 				},
-				mechanicTime = 478.854,
+				mechanicTime = 451.511,
 				name = "Shake it off",
 				timeRange = true,
-				timelineIndex = 126,
-				timerStartOffset = -4.5,
-				uuid = "6e928903-2134-21b0-a799-f11df21dd31d",
+				timelineIndex = 120,
+				timerStartOffset = -7.5,
+				uuid = "a1ab8681-23ec-9ffd-8da6-6c6ae87d27f0",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -5487,17 +5841,216 @@ local tbl =
 						inheritedIndex = 3,
 					},
 				},
-				mechanicTime = 478.854,
+				mechanicTime = 451.511,
 				name = "Reprisal",
 				randomOffset = -2,
 				timeRange = true,
-				timelineIndex = 126,
+				timelineIndex = 120,
 				timerOffset = -3,
-				timerStartOffset = -2.5,
-				uuid = "bd82eab3-a8c8-ad3e-aaaa-a251deeab820",
+				timerStartOffset = -6.5,
+				uuid = "5ad48f94-dfc9-5e4e-a243-7b5365b3c642",
 				version = 2,
 			},
 			inheritedIndex = 5,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							conditions = 
+							{
+								
+								{
+									"2642fb99-71ba-9c15-b5c9-caeee8628cab",
+									true,
+								},
+								
+								{
+									"cb983461-0f8f-cacc-a8d3-98369d4c5123",
+									true,
+								},
+								
+								{
+									"7d791b6a-44b6-2caa-9dad-e90ebb9f0371",
+									true,
+								},
+							},
+							gVar = "ACR_RikuPLD3_SmartAOE",
+							uuid = "c33056f4-dc1a-6195-bd95-4e514866b6f5",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 7385,
+							conditions = 
+							{
+								
+								{
+									"2642fb99-71ba-9c15-b5c9-caeee8628cab",
+									true,
+								},
+								
+								{
+									"cb983461-0f8f-cacc-a8d3-98369d4c5123",
+									true,
+								},
+								
+								{
+									"7d791b6a-44b6-2caa-9dad-e90ebb9f0371",
+									true,
+								},
+							},
+							fallthrough = true,
+							gVar = "ACR_RikuPLD3_Tankbar_PassageOfArms",
+							ignoreWeaveRules = true,
+							uuid = "65257871-731c-06cb-ad14-0cccde0d6934",
+							variableTogglesType = 3,
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							conditions = 
+							{
+								
+								{
+									"2642fb99-71ba-9c15-b5c9-caeee8628cab",
+									true,
+								},
+								
+								{
+									"794486f4-30b7-2daf-8df8-6dc83b3e723d",
+									true,
+								},
+								
+								{
+									"7d791b6a-44b6-2caa-9dad-e90ebb9f0371",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_SmartAOE",
+							gVarValue = 2,
+							uuid = "8c5a04d1-aae7-8010-b7d7-50192128b1d3",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.cometstack == true",
+							name = "Comet Stack",
+							uuid = "2642fb99-71ba-9c15-b5c9-caeee8628cab",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionCDValue = 0.10000000149012,
+							actionID = 7385,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "cb983461-0f8f-cacc-a8d3-98369d4c5123",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffID = 1175,
+							buffIDList = 
+							{
+								1175,
+							},
+							category = "Self",
+							uuid = "794486f4-30b7-2daf-8df8-6dc83b3e723d",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 14,
+							jobIDList = 
+							{
+								19,
+							},
+							uuid = "7d791b6a-44b6-2caa-9dad-e90ebb9f0371",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 451.511,
+				name = "PoA",
+				timeRange = true,
+				timelineIndex = 120,
+				timerStartOffset = -5,
+				uuid = "a183e819-a799-6a7e-8899-076b95a43a3e",
+				version = 2,
+			},
+		},
+	},
+	[121] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "local cx = 99.975\nlocal cy = 0\nlocal cz = 99.995\nlocal length = 40.11\nlocal width = 9.85\nlocal heading = 0.004\n\nlocal colorFill    = GUI:ColorConvertFloat4ToU32(0.75, 0.10, 0.10, 0.08)  -- 淡红，8% 不透明\nlocal colorOutline = GUI:ColorConvertFloat4ToU32(1.00, 0.95, 0.70, 0.35)  -- 暖淡黄，35% 不透明\n\nlocal drawer = TensorCore.getCachedDrawer(colorFill, colorFill, colorFill, colorOutline, 0.6)\n\nlocal uuid = drawer:addTimedCenteredRect(\n    6000,\n    cx, cy, cz,\n    length, width,\n    heading,\n    0,\n    false,\n    false\n)",
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "b77e8480-50b9-02f6-808d-bcee9ac8cb30",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 458.261,
+				name = "[Draw] Danger Area",
+				timeRange = true,
+				timelineIndex = 121,
+				timerEndOffset = 5,
+				timerStartOffset = -1,
+				uuid = "ef54799c-2c5f-7292-9233-f7d96f9023d2",
+				version = 2,
+			},
 		},
 	},
 	[127] = 
