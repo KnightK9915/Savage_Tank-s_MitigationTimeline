@@ -1441,6 +1441,14 @@ local tbl =
 						{
 							aType = "Lua",
 							actionLua = "data.cometspread = true\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"be8d2aad-d283-d064-868f-e4ca0372bc24",
+									true,
+								},
+							},
 							gVar = "ACR_RikuGNB3_CD",
 							name = "Spread",
 							uuid = "a325af4f-031e-e935-91e0-186e2f6a610a",
@@ -1453,6 +1461,14 @@ local tbl =
 						{
 							aType = "Lua",
 							actionLua = "data.cometstack = true\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"43816d9d-3e51-65b4-85b5-ef21656a976a",
+									true,
+								},
+							},
 							gVar = "ACR_RikuGNB3_CD",
 							name = "Stack",
 							uuid = "61a199ae-2b78-13c9-9a9b-51ab0cfb8a3f",
@@ -2189,6 +2205,14 @@ local tbl =
 						{
 							aType = "Lua",
 							actionLua = "data.cometspread = true\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"be8d2aad-d283-d064-868f-e4ca0372bc24",
+									true,
+								},
+							},
 							gVar = "ACR_RikuGNB3_CD",
 							name = "Spread",
 							uuid = "a325af4f-031e-e935-91e0-186e2f6a610a",
@@ -2201,6 +2225,14 @@ local tbl =
 						{
 							aType = "Lua",
 							actionLua = "data.cometstack = true\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"43816d9d-3e51-65b4-85b5-ef21656a976a",
+									true,
+								},
+							},
 							gVar = "ACR_RikuGNB3_CD",
 							name = "Stack",
 							uuid = "61a199ae-2b78-13c9-9a9b-51ab0cfb8a3f",
@@ -3019,6 +3051,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 162.981,
 				name = "Aurora (regen) self",
 				throttleTime = 500,
@@ -3125,6 +3158,7 @@ local tbl =
 						inheritedIndex = 2,
 					},
 				},
+				enabled = false,
 				mechanicTime = 162.981,
 				name = "Aurora (regen) ST",
 				throttleTime = 500,
@@ -8818,6 +8852,530 @@ local tbl =
 			inheritedIndex = 9,
 		},
 	},
+	[105] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"ebe0ca92-5578-a2f9-84cb-511cb3181787",
+									true,
+								},
+								
+								{
+									"5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"cbf45802-aac3-ae7a-94ee-152cd8aed9c9",
+									true,
+								},
+								
+								{
+									"5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "0c379931-cb6d-9fea-a951-f2858e3d7614",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "ebe0ca92-5578-a2f9-84cb-511cb3181787",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "cbf45802-aac3-ae7a-94ee-152cd8aed9c9",
+							version = 3,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 399.308,
+				name = "HoC (15)",
+				timeRange = true,
+				timelineIndex = 105,
+				timerOffset = -1,
+				timerStartOffset = -1,
+				uuid = "64436cd6-f0bb-1284-890a-7c4e2549db2f",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[111] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"ebe0ca92-5578-a2f9-84cb-511cb3181787",
+									true,
+								},
+								
+								{
+									"5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"cbf45802-aac3-ae7a-94ee-152cd8aed9c9",
+									true,
+								},
+								
+								{
+									"5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "0c379931-cb6d-9fea-a951-f2858e3d7614",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "ebe0ca92-5578-a2f9-84cb-511cb3181787",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "cbf45802-aac3-ae7a-94ee-152cd8aed9c9",
+							version = 3,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 431.354,
+				name = "HoC (15)",
+				timeRange = true,
+				timelineIndex = 111,
+				timerOffset = -1,
+				timerStartOffset = -2,
+				uuid = "09e70c19-5622-d952-b298-333a877d53e8",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[116] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"ebe0ca92-5578-a2f9-84cb-511cb3181787",
+									true,
+								},
+								
+								{
+									"5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"cbf45802-aac3-ae7a-94ee-152cd8aed9c9",
+									true,
+								},
+								
+								{
+									"5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "0c379931-cb6d-9fea-a951-f2858e3d7614",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "ebe0ca92-5578-a2f9-84cb-511cb3181787",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "cbf45802-aac3-ae7a-94ee-152cd8aed9c9",
+							version = 3,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 445.683,
+				name = "HoC (15)",
+				timeRange = true,
+				timelineIndex = 116,
+				timerOffset = -1,
+				timerStartOffset = -2,
+				uuid = "f1d21dc0-7ffa-639e-8645-034819607b6c",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
+	[121] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"ebe0ca92-5578-a2f9-84cb-511cb3181787",
+									true,
+								},
+								
+								{
+									"5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "94511374-01bd-2218-adca-8213e488a837",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"cbf45802-aac3-ae7a-94ee-152cd8aed9c9",
+									true,
+								},
+								
+								{
+									"5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							uuid = "0c379931-cb6d-9fea-a951-f2858e3d7614",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							dequeueIfLuaFalse = true,
+							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "ebe0ca92-5578-a2f9-84cb-511cb3181787",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "cbf45802-aac3-ae7a-94ee-152cd8aed9c9",
+							version = 3,
+						},
+						inheritedIndex = 2,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "5eeeb9eb-0dfb-f416-a771-4100c284e9dc",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 458.261,
+				name = "HoC (15)",
+				timeRange = true,
+				timelineIndex = 121,
+				timerOffset = -1,
+				timerStartOffset = -2,
+				uuid = "4ee0b534-1ce1-8c8f-8a23-39756a76b008",
+				version = 2,
+			},
+			inheritedIndex = 1,
+		},
+	},
 	[129] = 
 	{
 		
@@ -10923,13 +11481,12 @@ local tbl =
 						},
 					},
 				},
-				enabled = false,
 				mechanicTime = 557.386,
 				name = "Rampart (20)",
 				timeRange = true,
 				timelineIndex = 156,
 				timerOffset = -15,
-				timerStartOffset = -10,
+				timerStartOffset = -19,
 				uuid = "254f5eaf-531e-a945-a9e8-3525691ae7fc",
 				version = 2,
 			},
@@ -11052,6 +11609,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 557.386,
 				name = "Great Nebula (40)",
 				timeRange = true,
