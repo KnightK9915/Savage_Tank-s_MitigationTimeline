@@ -5849,6 +5849,7 @@ local tbl =
 						},
 					},
 				},
+				enabled = false,
 				mechanicTime = 251.683,
 				name = "Equilibrium (Regen)",
 				timeRange = true,
@@ -6160,6 +6161,142 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 10,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 251.683,
+				name = "_________________",
+				timelineIndex = 66,
+				uuid = "22149315-0bd9-1ae0-81c0-53584b697b74",
+				version = 2,
+			},
+			inheritedIndex = 11,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 43,
+							conditions = 
+							{
+								
+								{
+									"aeb29bc7-62f7-4fec-a7f0-e449ceee7e7b",
+									true,
+								},
+								
+								{
+									"e45a75df-8009-e643-b542-f804adbe02c3",
+									true,
+								},
+								
+								{
+									"0ad04636-2fc0-3600-ab92-6d08b7c0448c",
+									true,
+								},
+								
+								{
+									"6d2663b2-cd5c-b0b1-af4a-a61085465b7d",
+									true,
+								},
+							},
+							gVar = "ACR_RikuWAR3_CD",
+							ignoreWeaveRules = true,
+							uuid = "a62e49e7-f005-8fa5-ae7f-0c85bbae4c05",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 43,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "aeb29bc7-62f7-4fec-a7f0-e449ceee7e7b",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "e1b4dcbf-5567-2cf1-a785-7f70ef2e2dec",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "e45a75df-8009-e643-b542-f804adbe02c3",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "0ad04636-2fc0-3600-ab92-6d08b7c0448c",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 8,
+							dequeueIfLuaFalse = true,
+							jobIDList = 
+							{
+								19,
+							},
+							name = "Other Tank is PLD",
+							partyTargetType = "Other Tank",
+							uuid = "6d2663b2-cd5c-b0b1-af4a-a61085465b7d",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 251.683,
+				name = "Holmgang (Invincible)",
+				timeRange = true,
+				timelineIndex = 66,
+				timerStartOffset = -2.5,
+				uuid = "5d0c8110-007f-a143-a673-12f8a58dac0c",
+				version = 2,
+			},
+			inheritedIndex = 12,
 		},
 	},
 	[68] = 
