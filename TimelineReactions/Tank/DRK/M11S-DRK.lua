@@ -5232,6 +5232,142 @@ local tbl =
 			},
 			inheritedIndex = 9,
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 251.683,
+				name = "_________________",
+				timelineIndex = 66,
+				uuid = "6e28b907-e1dd-9aac-8712-ab9719def29a",
+				version = 2,
+			},
+			inheritedIndex = 10,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3638,
+							conditions = 
+							{
+								
+								{
+									"e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
+									true,
+								},
+								
+								{
+									"cf470a74-cb46-a3bf-82d0-24a11f72881b",
+									true,
+								},
+								
+								{
+									"00b15d4d-be13-0bb9-bf9e-91ac2ee97531",
+									true,
+								},
+								
+								{
+									"18f3c522-2380-8118-9ee5-f1c93d8ddcc9",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuPLD3_CD",
+							ignoreWeaveRules = true,
+							uuid = "9b1f0885-3a72-1913-ad03-47c71acda8e5",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 3638,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "e7d7df8d-a51a-1fe7-852c-06f78e90ca99",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "8b36e940-bcf1-5b69-9057-739bd7798de8",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "cf470a74-cb46-a3bf-82d0-24a11f72881b",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "00b15d4d-be13-0bb9-bf9e-91ac2ee97531",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 8,
+							dequeueIfLuaFalse = true,
+							jobIDList = 
+							{
+								19,
+							},
+							name = "Other Tank is PLD",
+							partyTargetType = "Other Tank",
+							uuid = "18f3c522-2380-8118-9ee5-f1c93d8ddcc9",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 251.683,
+				name = "Living Dead (Invinsible)",
+				timeRange = true,
+				timelineIndex = 66,
+				timerStartOffset = -2.5,
+				uuid = "4e4787f0-b779-2b84-bf17-4d3b730bf8bf",
+				version = 2,
+			},
+			inheritedIndex = 11,
+		},
 	},
 	[68] = 
 	{
