@@ -5025,6 +5025,150 @@ local tbl =
 			inheritedIndex = 5,
 		},
 	},
+	[66] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7533,
+							conditions = 
+							{
+								
+								{
+									"7166674b-50cd-8ebc-b1fa-0c98f9d42636",
+									true,
+								},
+								
+								{
+									"23a4497d-6972-8d8c-b335-62a93ab6728c",
+									true,
+								},
+								
+								{
+									"1d32a6c8-4a19-c648-a83f-728f1bcb726c",
+									true,
+								},
+								
+								{
+									"2b2f906c-9001-726c-ad1d-cc13f03a8d3a",
+									true,
+								},
+								
+								{
+									"1b2d4a8e-fc95-4f3b-9c96-8bc346cd4867",
+									true,
+								},
+								
+								{
+									"26dd59ae-8810-85a5-b8fa-7ebbb3f6a611",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "914155e4-cd7d-a983-8181-c90710a9166c",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							actionCDValue = 0.10000000149012,
+							actionID = 7533,
+							category = "Self",
+							comparator = 2,
+							conditionType = 4,
+							uuid = "7166674b-50cd-8ebc-b1fa-0c98f9d42636",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
+							name = "RoleMit ST",
+							uuid = "23a4497d-6972-8d8c-b335-62a93ab6728c",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							filterTargetType = "ContentID",
+							partyTargetContentID = 14305,
+							uuid = "1d32a6c8-4a19-c648-a83f-728f1bcb726c",
+							version = 3,
+						},
+						inheritedIndex = 3,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local me = Player\nif not me then return false end\n\nlocal list = EntityList(\"contentid=14305\") or {}\nlocal found = false\n\nfor _, e in pairs(list) do\n    if e and e.id ~= 0 then\n        found = true\n        if e.targetid == me.id then\n            return false\n        end\n    end\nend\n\nreturn found\n",
+							name = "Tyrant not targeting self",
+							uuid = "2b2f906c-9001-726c-ad1d-cc13f03a8d3a",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 8,
+							dequeueIfLuaFalse = true,
+							jobIDList = 
+							{
+								19,
+							},
+							name = "Other Tank is PLD",
+							partyTargetType = "Other Tank",
+							uuid = "1b2d4a8e-fc95-4f3b-9c96-8bc346cd4867",
+							version = 3,
+						},
+						inheritedIndex = 5,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "26dd59ae-8810-85a5-b8fa-7ebbb3f6a611",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 251.683,
+				name = "Provoke",
+				timeRange = true,
+				timelineIndex = 66,
+				timerStartOffset = -15,
+				uuid = "4531a72f-d421-ac6a-9b6f-fb71a504ef32",
+				version = 2,
+			},
+		},
+	},
 	[81] = 
 	{
 		
@@ -5284,6 +5428,386 @@ local tbl =
 				version = 2,
 			},
 		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.knockbackcasted = true\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"01fa5efb-3810-b22e-b4ad-5ba1aa6d0ae8",
+									true,
+								},
+								
+								{
+									"a39425fd-a79f-3ec8-996f-f8663a5d2b7b",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "bb6171da-449b-fbd8-9f15-e728f34d7873",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 46148,
+							uuid = "01fa5efb-3810-b22e-b4ad-5ba1aa6d0ae8",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "if Player and Player.pos then\n    if Player.pos.y > 1 then\n        return true\n    end\nend\n\nreturn false",
+							name = "flying",
+							uuid = "a39425fd-a79f-3ec8-996f-f8663a5d2b7b",
+							version = 3,
+						},
+					},
+				},
+				eventType = 2,
+				mechanicTime = 388.246,
+				name = "Knockback Trigger",
+				timeRange = true,
+				timelineIndex = 104,
+				timerEndOffset = 2,
+				timerStartOffset = -2,
+				uuid = "d0af8319-98b4-51b6-b28b-130e25ec3f64",
+				version = 2,
+			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 7386,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"a7adc4fe-47df-c8e4-8666-dd4c0d69de6e",
+									true,
+								},
+								
+								{
+									"10938913-c01d-53ff-b131-d705854b2ea0",
+									true,
+								},
+								
+								{
+									"fadacd08-84f1-679b-9ad3-253ae69f2ead",
+									true,
+								},
+								
+								{
+									"215e429d-be41-8e75-ac18-cb4596456147",
+									true,
+								},
+								
+								{
+									"3afc1fef-78f5-0037-b868-d3ffdf2eea91",
+									true,
+								},
+							},
+							fallthrough = true,
+							gVar = "ACR_RikuWAR3_Hotbar_Onslaught",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "f2ac831b-090a-3c01-a111-84685e62a922",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16461,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"f931b07c-7ca7-0e6d-8bed-c71b4a9e89ea",
+									true,
+								},
+								
+								{
+									"10938913-c01d-53ff-b131-d705854b2ea0",
+									true,
+								},
+								
+								{
+									"fadacd08-84f1-679b-9ad3-253ae69f2ead",
+									true,
+								},
+								
+								{
+									"215e429d-be41-8e75-ac18-cb4596456147",
+									true,
+								},
+								
+								{
+									"3afc1fef-78f5-0037-b868-d3ffdf2eea91",
+									true,
+								},
+							},
+							fallthrough = true,
+							gVar = "ACR_RikuPLD3_Hotbar_Intervene",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "6e14d463-2c91-9d5c-a583-245f65c25585",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 36926,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"89674c1a-523d-7931-b22f-0e7220d46fe1",
+									true,
+								},
+								
+								{
+									"10938913-c01d-53ff-b131-d705854b2ea0",
+									true,
+								},
+								
+								{
+									"fadacd08-84f1-679b-9ad3-253ae69f2ead",
+									true,
+								},
+								
+								{
+									"215e429d-be41-8e75-ac18-cb4596456147",
+									true,
+								},
+								
+								{
+									"3afc1fef-78f5-0037-b868-d3ffdf2eea91",
+									true,
+								},
+							},
+							fallthrough = true,
+							gVar = "ACR_RikuDRK3_Hotbar_Shadowstride",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "168594ac-14b6-b4c1-a8ac-c1997ef1d28b",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 36934,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"129eaf6a-1dcf-cfae-b514-c6e3afd609b5",
+									true,
+								},
+								
+								{
+									"10938913-c01d-53ff-b131-d705854b2ea0",
+									true,
+								},
+								
+								{
+									"fadacd08-84f1-679b-9ad3-253ae69f2ead",
+									true,
+								},
+								
+								{
+									"215e429d-be41-8e75-ac18-cb4596456147",
+									true,
+								},
+								
+								{
+									"3afc1fef-78f5-0037-b868-d3ffdf2eea91",
+									true,
+								},
+							},
+							fallthrough = true,
+							gVar = "ACR_RikuGNB3_Hotbar_Trajectory",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "5d95d42b-d93f-7234-af13-712eb8b749ce",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.knockbackcasted = nil\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"3afc1fef-78f5-0037-b868-d3ffdf2eea91",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							name = "Reset",
+							uuid = "eabe11fb-7cad-6bb6-94d1-170c3988cee4",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "WARRIOR",
+							name = "Warrior",
+							uuid = "a7adc4fe-47df-c8e4-8666-dd4c0d69de6e",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "Paladin",
+							uuid = "f931b07c-7ca7-0e6d-8bed-c71b4a9e89ea",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "Darkknight",
+							uuid = "89674c1a-523d-7931-b22f-0e7220d46fe1",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "Gunbreaker",
+							uuid = "129eaf6a-1dcf-cfae-b514-c6e3afd609b5",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "-- 没有目标直接 false\nif not Player or not Player:GetTarget() then\n    return false\nend\n\nlocal target = Player:GetTarget()\n\n-- 确保目标有效\nif not target or not target.pos then\n    return false\nend\n\n-- 计算平面距离（XZ）\nlocal dx = Player.pos.x - target.pos.x\nlocal dz = Player.pos.z - target.pos.z\nlocal distance = math.sqrt(dx * dx + dz * dz)\n\n-- 大于 3 米时返回 true\nreturn distance > 3.0\n",
+							name = "Out of Range",
+							uuid = "10938913-c01d-53ff-b131-d705854b2ea0",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "fadacd08-84f1-679b-9ad3-253ae69f2ead",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local tolerance = 0.1 -- 设定 0.1 的上下浮动安全范围\n\n-- 确保 Player 对象及其位置信息存在，防止极小概率下的加载报错\nif Player and Player.pos then\n    -- 使用绝对值判断 Y 轴高度是否在 [-0.1, 0.1] 之间\n    if math.abs(Player.pos.y) <= tolerance then\n        return true\n    end\nend\n\nreturn false",
+							name = "Y = 0",
+							uuid = "215e429d-be41-8e75-ac18-cb4596456147",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.knockbackcasted == true",
+							name = "Knockbacked",
+							uuid = "3afc1fef-78f5-0037-b868-d3ffdf2eea91",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 388.246,
+				name = "Instant Dash",
+				timeRange = true,
+				timelineIndex = 104,
+				timerEndOffset = 5,
+				uuid = "b35adb8e-43ae-4164-ad1b-6f326cb433c1",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
 	},
 	[110] = 
 	{
@@ -5317,6 +5841,387 @@ local tbl =
 				uuid = "2d9986da-6551-e478-937e-9fcf53bfd288",
 				version = 2,
 			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.knockbackcasted = true\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"01fa5efb-3810-b22e-b4ad-5ba1aa6d0ae8",
+									true,
+								},
+								
+								{
+									"a39425fd-a79f-3ec8-996f-f8663a5d2b7b",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "bb6171da-449b-fbd8-9f15-e728f34d7873",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 46148,
+							uuid = "01fa5efb-3810-b22e-b4ad-5ba1aa6d0ae8",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "if Player and Player.pos then\n    if Player.pos.y > 1 then\n        return true\n    end\nend\n\nreturn false",
+							name = "flying",
+							uuid = "a39425fd-a79f-3ec8-996f-f8663a5d2b7b",
+							version = 3,
+						},
+					},
+				},
+				eventType = 2,
+				mechanicTime = 420.339,
+				name = "Knockback Trigger",
+				timeRange = true,
+				timelineIndex = 110,
+				timerEndOffset = 2,
+				timerStartOffset = -2,
+				uuid = "b9a74569-5413-31bc-82cf-2ee9875db8a6",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 7386,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"a7adc4fe-47df-c8e4-8666-dd4c0d69de6e",
+									true,
+								},
+								
+								{
+									"10938913-c01d-53ff-b131-d705854b2ea0",
+									true,
+								},
+								
+								{
+									"fadacd08-84f1-679b-9ad3-253ae69f2ead",
+									true,
+								},
+								
+								{
+									"215e429d-be41-8e75-ac18-cb4596456147",
+									true,
+								},
+								
+								{
+									"3afc1fef-78f5-0037-b868-d3ffdf2eea91",
+									true,
+								},
+							},
+							fallthrough = true,
+							gVar = "ACR_RikuWAR3_Hotbar_Onslaught",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "f2ac831b-090a-3c01-a111-84685e62a922",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16461,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"f931b07c-7ca7-0e6d-8bed-c71b4a9e89ea",
+									true,
+								},
+								
+								{
+									"10938913-c01d-53ff-b131-d705854b2ea0",
+									true,
+								},
+								
+								{
+									"fadacd08-84f1-679b-9ad3-253ae69f2ead",
+									true,
+								},
+								
+								{
+									"215e429d-be41-8e75-ac18-cb4596456147",
+									true,
+								},
+								
+								{
+									"3afc1fef-78f5-0037-b868-d3ffdf2eea91",
+									true,
+								},
+							},
+							fallthrough = true,
+							gVar = "ACR_RikuPLD3_Hotbar_Intervene",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "6e14d463-2c91-9d5c-a583-245f65c25585",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 36926,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"89674c1a-523d-7931-b22f-0e7220d46fe1",
+									true,
+								},
+								
+								{
+									"10938913-c01d-53ff-b131-d705854b2ea0",
+									true,
+								},
+								
+								{
+									"fadacd08-84f1-679b-9ad3-253ae69f2ead",
+									true,
+								},
+								
+								{
+									"215e429d-be41-8e75-ac18-cb4596456147",
+									true,
+								},
+								
+								{
+									"3afc1fef-78f5-0037-b868-d3ffdf2eea91",
+									true,
+								},
+							},
+							fallthrough = true,
+							gVar = "ACR_RikuDRK3_Hotbar_Shadowstride",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "168594ac-14b6-b4c1-a8ac-c1997ef1d28b",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 36934,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"129eaf6a-1dcf-cfae-b514-c6e3afd609b5",
+									true,
+								},
+								
+								{
+									"10938913-c01d-53ff-b131-d705854b2ea0",
+									true,
+								},
+								
+								{
+									"fadacd08-84f1-679b-9ad3-253ae69f2ead",
+									true,
+								},
+								
+								{
+									"215e429d-be41-8e75-ac18-cb4596456147",
+									true,
+								},
+								
+								{
+									"3afc1fef-78f5-0037-b868-d3ffdf2eea91",
+									true,
+								},
+							},
+							fallthrough = true,
+							gVar = "ACR_RikuGNB3_Hotbar_Trajectory",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "5d95d42b-d93f-7234-af13-712eb8b749ce",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.knockbackcasted = nil\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"3afc1fef-78f5-0037-b868-d3ffdf2eea91",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							name = "Reset",
+							uuid = "eabe11fb-7cad-6bb6-94d1-170c3988cee4",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "WARRIOR",
+							name = "Warrior",
+							uuid = "a7adc4fe-47df-c8e4-8666-dd4c0d69de6e",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "Paladin",
+							uuid = "f931b07c-7ca7-0e6d-8bed-c71b4a9e89ea",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "Darkknight",
+							uuid = "89674c1a-523d-7931-b22f-0e7220d46fe1",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "Gunbreaker",
+							uuid = "129eaf6a-1dcf-cfae-b514-c6e3afd609b5",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "-- 没有目标直接 false\nif not Player or not Player:GetTarget() then\n    return false\nend\n\nlocal target = Player:GetTarget()\n\n-- 确保目标有效\nif not target or not target.pos then\n    return false\nend\n\n-- 计算平面距离（XZ）\nlocal dx = Player.pos.x - target.pos.x\nlocal dz = Player.pos.z - target.pos.z\nlocal distance = math.sqrt(dx * dx + dz * dz)\n\n-- 大于 3 米时返回 true\nreturn distance > 3.0\n",
+							name = "Out of Range",
+							uuid = "10938913-c01d-53ff-b131-d705854b2ea0",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "fadacd08-84f1-679b-9ad3-253ae69f2ead",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local tolerance = 0.1 -- 设定 0.1 的上下浮动安全范围\n\n-- 确保 Player 对象及其位置信息存在，防止极小概率下的加载报错\nif Player and Player.pos then\n    -- 使用绝对值判断 Y 轴高度是否在 [-0.1, 0.1] 之间\n    if math.abs(Player.pos.y) <= tolerance then\n        return true\n    end\nend\n\nreturn false",
+							name = "Y = 0",
+							uuid = "215e429d-be41-8e75-ac18-cb4596456147",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.knockbackcasted == true",
+							name = "Knockbacked",
+							uuid = "3afc1fef-78f5-0037-b868-d3ffdf2eea91",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 420.339,
+				name = "Instant Dash",
+				timeRange = true,
+				timelineIndex = 110,
+				timerEndOffset = 5,
+				uuid = "9b1b6bf7-d819-6071-9812-99ca0b05ff17",
+				version = 2,
+			},
+			inheritedIndex = 4,
 		},
 	},
 	[120] = 
@@ -6024,6 +6929,387 @@ local tbl =
 				uuid = "ef54799c-2c5f-7292-9233-f7d96f9023d2",
 				version = 2,
 			},
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.knockbackcasted = true\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"01fa5efb-3810-b22e-b4ad-5ba1aa6d0ae8",
+									true,
+								},
+								
+								{
+									"a39425fd-a79f-3ec8-996f-f8663a5d2b7b",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "bb6171da-449b-fbd8-9f15-e728f34d7873",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 46148,
+							uuid = "01fa5efb-3810-b22e-b4ad-5ba1aa6d0ae8",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "if Player and Player.pos then\n    if Player.pos.y > 1 then\n        return true\n    end\nend\n\nreturn false",
+							name = "flying",
+							uuid = "a39425fd-a79f-3ec8-996f-f8663a5d2b7b",
+							version = 3,
+						},
+					},
+				},
+				eventType = 2,
+				mechanicTime = 458.261,
+				name = "Knockback Trigger",
+				timeRange = true,
+				timelineIndex = 121,
+				timerEndOffset = 2,
+				timerStartOffset = -2,
+				uuid = "abc22dcd-e11f-fa00-95e3-1f9ffc858a4d",
+				version = 2,
+			},
+			inheritedIndex = 2,
+		},
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 7386,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"a7adc4fe-47df-c8e4-8666-dd4c0d69de6e",
+									true,
+								},
+								
+								{
+									"10938913-c01d-53ff-b131-d705854b2ea0",
+									true,
+								},
+								
+								{
+									"fadacd08-84f1-679b-9ad3-253ae69f2ead",
+									true,
+								},
+								
+								{
+									"215e429d-be41-8e75-ac18-cb4596456147",
+									true,
+								},
+								
+								{
+									"3afc1fef-78f5-0037-b868-d3ffdf2eea91",
+									true,
+								},
+							},
+							fallthrough = true,
+							gVar = "ACR_RikuWAR3_Hotbar_Onslaught",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "f2ac831b-090a-3c01-a111-84685e62a922",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 16461,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"f931b07c-7ca7-0e6d-8bed-c71b4a9e89ea",
+									true,
+								},
+								
+								{
+									"10938913-c01d-53ff-b131-d705854b2ea0",
+									true,
+								},
+								
+								{
+									"fadacd08-84f1-679b-9ad3-253ae69f2ead",
+									true,
+								},
+								
+								{
+									"215e429d-be41-8e75-ac18-cb4596456147",
+									true,
+								},
+								
+								{
+									"3afc1fef-78f5-0037-b868-d3ffdf2eea91",
+									true,
+								},
+							},
+							fallthrough = true,
+							gVar = "ACR_RikuPLD3_Hotbar_Intervene",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "6e14d463-2c91-9d5c-a583-245f65c25585",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 36926,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"89674c1a-523d-7931-b22f-0e7220d46fe1",
+									true,
+								},
+								
+								{
+									"10938913-c01d-53ff-b131-d705854b2ea0",
+									true,
+								},
+								
+								{
+									"fadacd08-84f1-679b-9ad3-253ae69f2ead",
+									true,
+								},
+								
+								{
+									"215e429d-be41-8e75-ac18-cb4596456147",
+									true,
+								},
+								
+								{
+									"3afc1fef-78f5-0037-b868-d3ffdf2eea91",
+									true,
+								},
+							},
+							fallthrough = true,
+							gVar = "ACR_RikuDRK3_Hotbar_Shadowstride",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "168594ac-14b6-b4c1-a8ac-c1997ef1d28b",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "ACR",
+							actionID = 36934,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"129eaf6a-1dcf-cfae-b514-c6e3afd609b5",
+									true,
+								},
+								
+								{
+									"10938913-c01d-53ff-b131-d705854b2ea0",
+									true,
+								},
+								
+								{
+									"fadacd08-84f1-679b-9ad3-253ae69f2ead",
+									true,
+								},
+								
+								{
+									"215e429d-be41-8e75-ac18-cb4596456147",
+									true,
+								},
+								
+								{
+									"3afc1fef-78f5-0037-b868-d3ffdf2eea91",
+									true,
+								},
+							},
+							fallthrough = true,
+							gVar = "ACR_RikuGNB3_Hotbar_Trajectory",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "5d95d42b-d93f-7234-af13-712eb8b749ce",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.knockbackcasted = nil\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"3afc1fef-78f5-0037-b868-d3ffdf2eea91",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							name = "Reset",
+							uuid = "eabe11fb-7cad-6bb6-94d1-170c3988cee4",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "WARRIOR",
+							name = "Warrior",
+							uuid = "a7adc4fe-47df-c8e4-8666-dd4c0d69de6e",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "Paladin",
+							uuid = "f931b07c-7ca7-0e6d-8bed-c71b4a9e89ea",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "Darkknight",
+							uuid = "89674c1a-523d-7931-b22f-0e7220d46fe1",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "Gunbreaker",
+							uuid = "129eaf6a-1dcf-cfae-b514-c6e3afd609b5",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "-- 没有目标直接 false\nif not Player or not Player:GetTarget() then\n    return false\nend\n\nlocal target = Player:GetTarget()\n\n-- 确保目标有效\nif not target or not target.pos then\n    return false\nend\n\n-- 计算平面距离（XZ）\nlocal dx = Player.pos.x - target.pos.x\nlocal dz = Player.pos.z - target.pos.z\nlocal distance = math.sqrt(dx * dx + dz * dz)\n\n-- 大于 3 米时返回 true\nreturn distance > 3.0\n",
+							name = "Out of Range",
+							uuid = "10938913-c01d-53ff-b131-d705854b2ea0",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "fadacd08-84f1-679b-9ad3-253ae69f2ead",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local tolerance = 0.1 -- 设定 0.1 的上下浮动安全范围\n\n-- 确保 Player 对象及其位置信息存在，防止极小概率下的加载报错\nif Player and Player.pos then\n    -- 使用绝对值判断 Y 轴高度是否在 [-0.1, 0.1] 之间\n    if math.abs(Player.pos.y) <= tolerance then\n        return true\n    end\nend\n\nreturn false",
+							name = "Y = 0",
+							uuid = "215e429d-be41-8e75-ac18-cb4596456147",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return data.knockbackcasted == true",
+							name = "Knockbacked",
+							uuid = "3afc1fef-78f5-0037-b868-d3ffdf2eea91",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 458.261,
+				name = "Instant Dash",
+				timeRange = true,
+				timelineIndex = 121,
+				timerEndOffset = 5,
+				uuid = "64bc47c9-e342-35f7-94df-bb1507620acc",
+				version = 2,
+			},
+			inheritedIndex = 4,
 		},
 	},
 	[127] = 
@@ -7094,6 +8380,58 @@ local tbl =
 				version = 2,
 			},
 			inheritedIndex = 5,
+		},
+	},
+	[146] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Alert",
+							alertDuration = 11000,
+							alertPriority = 3,
+							alertText = "Bait 6x Comet",
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "8feb2e0e-570c-b7f9-a9f8-a8950086b182",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							aType = "Alert",
+							alertDuration = 11000,
+							alertPriority = 2,
+							alertScale = 0.60000002384186,
+							alertTTS = true,
+							alertText = "Under Boss, Then Clockwise",
+							alertVolume = 100,
+							gVar = "ACR_RikuGNB3_CD",
+							uuid = "20b6f712-3a36-ca90-b439-e07b9d3f3081",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 541.479,
+				name = "[TTS] Bait Comet",
+				timeRange = true,
+				timelineIndex = 146,
+				timerStartOffset = -7,
+				uuid = "0a883fa2-991d-f249-a251-e3d715ff546d",
+				version = 2,
+			},
 		},
 	},
 	[160] = 
