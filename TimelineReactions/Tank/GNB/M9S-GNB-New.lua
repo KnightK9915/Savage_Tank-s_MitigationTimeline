@@ -4920,98 +4920,6 @@ local tbl =
 			inheritedIndex = 9,
 		},
 	},
-	[92] = 
-	{
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "Lua",
-							actionLua = "data.iscastingrolespread = true\nself.used = true\n",
-							conditions = 
-							{
-								
-								{
-									"7b445069-3243-af12-9e3d-97b8ca0f6e14",
-									true,
-								},
-							},
-							gVar = "ACR_RikuGNB3_CD",
-							name = "Record Role Spread",
-							uuid = "ef27bab0-55b0-ae49-891e-a77a0b055fab",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							aType = "Lua",
-							actionLua = "data.iscastinggroupstack = true\nself.used = true\n",
-							conditions = 
-							{
-								
-								{
-									"a2d2b154-3edf-51c4-92ca-3e265975844e",
-									true,
-								},
-							},
-							gVar = "ACR_RikuGNB3_CD",
-							name = "Record Group Stack",
-							uuid = "9854921b-63a7-b085-b584-f22a1b529d1f",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Event",
-							dequeueIfLuaFalse = true,
-							eventArgType = 2,
-							eventSpellID = 45980,
-							name = "Roles",
-							uuid = "7b445069-3243-af12-9e3d-97b8ca0f6e14",
-							version = 3,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgType = 2,
-							eventSpellID = 45981,
-							name = "Stack",
-							uuid = "a2d2b154-3edf-51c4-92ca-3e265975844e",
-							version = 3,
-						},
-					},
-				},
-				eventType = 3,
-				loop = true,
-				mechanicTime = 399.595,
-				name = "Record Ultrasonic Role/Stack",
-				randomOffset = 450,
-				timeRange = true,
-				timelineIndex = 92,
-				timerEndOffset = 450,
-				timerOffset = -15,
-				timerStartOffset = -15,
-				uuid = "a11367e1-1d24-216f-a5c6-58a015a08637",
-				version = 2,
-			},
-		},
-	},
 	[99] = 
 	{
 		
@@ -5029,7 +4937,12 @@ local tbl =
 							{
 								
 								{
-									"19a2e016-6e63-a6a7-a5b4-9bd3b4015d29",
+									"cc808c53-4cc6-9084-95eb-e6b68ecb62dc",
+									true,
+								},
+								
+								{
+									"7ed6f148-6c1a-1abe-8010-32df33c823df",
 									true,
 								},
 								
@@ -5074,7 +4987,12 @@ local tbl =
 							{
 								
 								{
-									"19a2e016-6e63-a6a7-a5b4-9bd3b4015d29",
+									"cc808c53-4cc6-9084-95eb-e6b68ecb62dc",
+									true,
+								},
+								
+								{
+									"7ed6f148-6c1a-1abe-8010-32df33c823df",
 									true,
 								},
 								
@@ -5117,13 +5035,28 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Lua",
-							conditionLua = "return data.iscastingrolespread == true",
-							name = "Is Casting Spread",
-							uuid = "19a2e016-6e63-a6a7-a5b4-9bd3b4015d29",
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 45980,
+							name = "Casting Spread",
+							uuid = "cc808c53-4cc6-9084-95eb-e6b68ecb62dc",
 							version = 3,
 						},
 						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetContentID = 14300,
+							inGroupTargetType = "ContentID",
+							partyTargetType = "Event Entity",
+							uuid = "7ed6f148-6c1a-1abe-8010-32df33c823df",
+							version = 3,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -5207,13 +5140,14 @@ local tbl =
 						},
 					},
 				},
+				eventType = 3,
 				mechanicTime = 408.642,
 				name = "HoC (15)",
 				timeRange = true,
 				timelineIndex = 99,
 				timerOffset = -1,
-				timerStartOffset = -2,
-				uuid = "cc2f66a7-d85a-0a1a-8fae-57b23f993f9a",
+				timerStartOffset = -8,
+				uuid = "46cf9e06-0d0e-2319-96fb-c17ca9c40dc7",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -5233,7 +5167,12 @@ local tbl =
 							{
 								
 								{
-									"a4edd847-1d59-0a05-b5a7-da85ab127ca3",
+									"81c34e71-0420-8378-bf5a-e8da6bc12697",
+									true,
+								},
+								
+								{
+									"7c27b88f-d857-9454-a1bb-4c72a6350e1b",
 									true,
 								},
 								
@@ -5278,7 +5217,12 @@ local tbl =
 							{
 								
 								{
-									"a4edd847-1d59-0a05-b5a7-da85ab127ca3",
+									"81c34e71-0420-8378-bf5a-e8da6bc12697",
+									true,
+								},
+								
+								{
+									"7c27b88f-d857-9454-a1bb-4c72a6350e1b",
 									true,
 								},
 								
@@ -5321,13 +5265,28 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Lua",
-							conditionLua = "return data.iscastingrolespread == true",
-							name = "Is Casting Spread",
-							uuid = "a4edd847-1d59-0a05-b5a7-da85ab127ca3",
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 45980,
+							name = "Casting Spread",
+							uuid = "81c34e71-0420-8378-bf5a-e8da6bc12697",
 							version = 3,
 						},
 						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetContentID = 14300,
+							inGroupTargetType = "ContentID",
+							partyTargetType = "Event Entity",
+							uuid = "7c27b88f-d857-9454-a1bb-4c72a6350e1b",
+							version = 3,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -5410,13 +5369,14 @@ local tbl =
 						},
 					},
 				},
+				eventType = 3,
 				mechanicTime = 408.642,
 				name = "Camou (10)",
 				timeRange = true,
 				timelineIndex = 99,
 				timerOffset = -10,
-				timerStartOffset = -10,
-				uuid = "2f210e9a-705b-13dc-8517-5aefd03b2ab5",
+				timerStartOffset = -19,
+				uuid = "435b8a23-13c8-4f56-9955-328a12ee990b",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -5436,7 +5396,12 @@ local tbl =
 							{
 								
 								{
-									"481944dd-7fe8-711b-bb89-39ea1d8b319e",
+									"583c87e2-b7d7-26aa-ac74-58ef6740d149",
+									true,
+								},
+								
+								{
+									"72b6a39d-de3c-1721-b8c4-b8ccfd64cd33",
 									true,
 								},
 								
@@ -5481,7 +5446,12 @@ local tbl =
 							{
 								
 								{
-									"481944dd-7fe8-711b-bb89-39ea1d8b319e",
+									"583c87e2-b7d7-26aa-ac74-58ef6740d149",
+									true,
+								},
+								
+								{
+									"72b6a39d-de3c-1721-b8c4-b8ccfd64cd33",
 									true,
 								},
 								
@@ -5524,13 +5494,28 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Lua",
-							conditionLua = "return data.iscastingrolespread == true",
-							name = "Is Casting Spread",
-							uuid = "481944dd-7fe8-711b-bb89-39ea1d8b319e",
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 45980,
+							name = "Casting Spread",
+							uuid = "583c87e2-b7d7-26aa-ac74-58ef6740d149",
 							version = 3,
 						},
 						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetContentID = 14300,
+							inGroupTargetType = "ContentID",
+							partyTargetType = "Event Entity",
+							uuid = "72b6a39d-de3c-1721-b8c4-b8ccfd64cd33",
+							version = 3,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -5613,13 +5598,14 @@ local tbl =
 						},
 					},
 				},
+				eventType = 3,
 				mechanicTime = 408.642,
 				name = "Rampart (20)",
 				timeRange = true,
 				timelineIndex = 99,
 				timerOffset = -15,
-				timerStartOffset = -5,
-				uuid = "78197c1a-73f3-f248-ae1b-a25a7a03d580",
+				timerStartOffset = -19,
+				uuid = "4f35953c-fa2a-a088-b0bd-c95630b3a30b",
 				version = 2,
 			},
 			inheritedIndex = 3,
@@ -5639,7 +5625,12 @@ local tbl =
 							{
 								
 								{
-									"2b1bd9d8-5794-e234-80d0-00731099c61d",
+									"d09737d0-0874-d954-8084-c7e22f67f9d8",
+									true,
+								},
+								
+								{
+									"f9da09b1-c378-f700-8db4-f86c0cf59e9d",
 									true,
 								},
 								
@@ -5684,7 +5675,12 @@ local tbl =
 							{
 								
 								{
-									"2b1bd9d8-5794-e234-80d0-00731099c61d",
+									"d09737d0-0874-d954-8084-c7e22f67f9d8",
+									true,
+								},
+								
+								{
+									"f9da09b1-c378-f700-8db4-f86c0cf59e9d",
 									true,
 								},
 								
@@ -5728,13 +5724,28 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Lua",
-							conditionLua = "return data.iscastingrolespread == true",
-							name = "Is Casting Spread",
-							uuid = "2b1bd9d8-5794-e234-80d0-00731099c61d",
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 45980,
+							name = "Casting Spread",
+							uuid = "d09737d0-0874-d954-8084-c7e22f67f9d8",
 							version = 3,
 						},
 						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetContentID = 14300,
+							inGroupTargetType = "ContentID",
+							partyTargetType = "Event Entity",
+							uuid = "f9da09b1-c378-f700-8db4-f86c0cf59e9d",
+							version = 3,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -5818,12 +5829,13 @@ local tbl =
 					},
 				},
 				enabled = false,
+				eventType = 3,
 				mechanicTime = 408.642,
 				name = "Great Nebula (40)",
 				timeRange = true,
 				timelineIndex = 99,
-				timerStartOffset = -10,
-				uuid = "0602fb3d-92ed-96dc-b853-d73ddf874a0a",
+				timerStartOffset = -14,
+				uuid = "0798f967-9972-fe90-9779-274a35bdfea8",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -5910,7 +5922,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 99,
 				timerEndOffset = 10,
-				uuid = "11348beb-7dd1-46ad-a813-2fd0e0157749",
+				uuid = "e434e88a-436f-620e-b4a0-ef1de450394d",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -6000,7 +6012,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 99,
 				timerEndOffset = 10,
-				uuid = "45252511-18f3-e5dd-bdab-6f921e794166",
+				uuid = "393373f7-3e12-7344-8553-2bbd465351b2",
 				version = 2,
 			},
 			inheritedIndex = 6,
@@ -6018,7 +6030,7 @@ local tbl =
 				mechanicTime = 408.642,
 				name = "_________________",
 				timelineIndex = 99,
-				uuid = "2f06ff54-099e-2e78-9d76-52ea59b8daf0",
+				uuid = "3565b607-a598-5923-ae78-48c9a7a817cd",
 				version = 2,
 			},
 			inheritedIndex = 7,
@@ -6038,6 +6050,16 @@ local tbl =
 							{
 								
 								{
+									"16e9bc2f-3148-2401-8ac2-c32b5fd1cd35",
+									true,
+								},
+								
+								{
+									"6a290bb0-3b30-5179-a48a-65e282a684bd",
+									true,
+								},
+								
+								{
 									"7e0d26db-790b-1b75-bfca-ad4daf3ae049",
 									true,
 								},
@@ -6049,11 +6071,6 @@ local tbl =
 								
 								{
 									"df505c51-c9e6-b149-a5a7-a408517c9afa",
-									true,
-								},
-								
-								{
-									"a179f7f9-c2a0-51b1-bba4-2dd6cf979c40",
 									true,
 								},
 								
@@ -6081,13 +6098,28 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Lua",
-							conditionLua = "return data.iscastingrolespread == true",
-							name = "Is Casting Spread",
-							uuid = "a179f7f9-c2a0-51b1-bba4-2dd6cf979c40",
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 45980,
+							name = "Casting Spread",
+							uuid = "16e9bc2f-3148-2401-8ac2-c32b5fd1cd35",
 							version = 3,
 						},
 						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetContentID = 14300,
+							inGroupTargetType = "ContentID",
+							partyTargetType = "Event Entity",
+							uuid = "6a290bb0-3b30-5179-a48a-65e282a684bd",
+							version = 3,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -6171,13 +6203,14 @@ local tbl =
 					},
 				},
 				enabled = false,
+				eventType = 3,
 				mechanicTime = 408.642,
 				name = "Superbolide (Invinsible)",
 				timeRange = true,
 				timelineIndex = 99,
 				timerOffset = -1,
-				timerStartOffset = -2.2999999523163,
-				uuid = "2b5a6782-0a6f-07dd-8160-46a53999d4c1",
+				timerStartOffset = -9,
+				uuid = "d09b32c5-e515-17ae-8461-178a6beaf7f5",
 				version = 2,
 			},
 			inheritedIndex = 8,
@@ -6195,6 +6228,68 @@ local tbl =
 							actionID = 25758,
 							conditions = 
 							{
+								
+								{
+									"adbad49d-c2d8-3587-9e2e-f5a8d9045902",
+									true,
+								},
+								
+								{
+									"9599ed13-30a6-8a96-905e-9e915dbc5a68",
+									true,
+								},
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"c2c08b25-0b80-0834-8d69-9d342e2365c9",
+									true,
+								},
+								
+								{
+									"64f824b6-ef30-56dc-ab6f-4e707c076937",
+									true,
+								},
+								
+								{
+									"9b46475a-03a0-ba79-8e1c-daf5e5cdd0ff",
+									true,
+								},
+								
+								{
+									"3ead7af9-2217-69b0-8001-c88ebb998803",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "549106e5-efb1-9bcc-9a32-e56fbdaf9323",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"adbad49d-c2d8-3587-9e2e-f5a8d9045902",
+									true,
+								},
+								
+								{
+									"9599ed13-30a6-8a96-905e-9e915dbc5a68",
+									true,
+								},
 								
 								{
 									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
@@ -6215,6 +6310,11 @@ local tbl =
 									"9b46475a-03a0-ba79-8e1c-daf5e5cdd0ff",
 									true,
 								},
+								
+								{
+									"3ead7af9-2217-69b0-8001-c88ebb998803",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -6232,6 +6332,33 @@ local tbl =
 					{
 						data = 
 						{
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 45980,
+							name = "Casting Spread",
+							uuid = "adbad49d-c2d8-3587-9e2e-f5a8d9045902",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetContentID = 14300,
+							inGroupTargetType = "ContentID",
+							partyTargetType = "Event Entity",
+							uuid = "9599ed13-30a6-8a96-905e-9e915dbc5a68",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
 							actionID = 25758,
 							category = "Self",
 							comparator = 2,
@@ -6240,6 +6367,18 @@ local tbl =
 							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
 							version = 3,
 						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "c2c08b25-0b80-0834-8d69-9d342e2365c9",
+							version = 3,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -6280,69 +6419,41 @@ local tbl =
 							version = 3,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								4731,
+								4732,
+								4733,
+								4734,
+								4735,
+								4736,
+								4737,
+								4738,
+							},
+							category = "Self",
+							dequeueIfLuaFalse = true,
+							name = "InCell",
+							uuid = "3ead7af9-2217-69b0-8001-c88ebb998803",
+							version = 3,
+						},
+					},
 				},
-				enabled = false,
+				eventType = 3,
 				mechanicTime = 408.642,
 				name = "HoC (15) ST",
 				timeRange = true,
 				timelineIndex = 99,
 				timerOffset = -1,
-				timerStartOffset = -2,
-				uuid = "05d42c33-c5eb-6902-8e49-ec7e2f698b45",
+				timerStartOffset = -8,
+				uuid = "2e6ad666-cc4c-1ba2-82ca-570c93adb6cd",
 				version = 2,
 			},
 			inheritedIndex = 9,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "Lua",
-							actionLua = "data.iscastingrolespread = nil\nself.used = true\n",
-							conditions = 
-							{
-								
-								{
-									"72f1338e-fbc2-a14b-8033-ba289b577989",
-									true,
-								},
-							},
-							gVar = "ACR_RikuGNB3_CD",
-							name = "Reset Trigger",
-							uuid = "71eca76d-469f-6966-8c33-d77065b5dd55",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return data.iscastingrolespread == true",
-							name = "Is Casting Spread",
-							uuid = "72f1338e-fbc2-a14b-8033-ba289b577989",
-							version = 3,
-						},
-						inheritedIndex = 1,
-					},
-				},
-				mechanicTime = 408.642,
-				name = "Reset Role Trigger",
-				timelineIndex = 99,
-				timerOffset = 1,
-				uuid = "36fadaae-ffa5-e55c-85f8-6ee7881a28f9",
-				version = 2,
-			},
-			inheritedIndex = 16,
 		},
 	},
 	[103] = 
@@ -6362,7 +6473,12 @@ local tbl =
 							{
 								
 								{
-									"19a2e016-6e63-a6a7-a5b4-9bd3b4015d29",
+									"cc808c53-4cc6-9084-95eb-e6b68ecb62dc",
+									true,
+								},
+								
+								{
+									"7ed6f148-6c1a-1abe-8010-32df33c823df",
 									true,
 								},
 								
@@ -6407,7 +6523,12 @@ local tbl =
 							{
 								
 								{
-									"19a2e016-6e63-a6a7-a5b4-9bd3b4015d29",
+									"cc808c53-4cc6-9084-95eb-e6b68ecb62dc",
+									true,
+								},
+								
+								{
+									"7ed6f148-6c1a-1abe-8010-32df33c823df",
 									true,
 								},
 								
@@ -6450,13 +6571,28 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Lua",
-							conditionLua = "return data.iscastingrolespread == true",
-							name = "Is Casting Spread",
-							uuid = "19a2e016-6e63-a6a7-a5b4-9bd3b4015d29",
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 45980,
+							name = "Casting Spread",
+							uuid = "cc808c53-4cc6-9084-95eb-e6b68ecb62dc",
 							version = 3,
 						},
 						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetContentID = 14300,
+							inGroupTargetType = "ContentID",
+							partyTargetType = "Event Entity",
+							uuid = "7ed6f148-6c1a-1abe-8010-32df33c823df",
+							version = 3,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -6540,13 +6676,14 @@ local tbl =
 						},
 					},
 				},
+				eventType = 3,
 				mechanicTime = 415.438,
 				name = "HoC (15)",
 				timeRange = true,
 				timelineIndex = 103,
 				timerOffset = -1,
-				timerStartOffset = -2,
-				uuid = "a630496d-091d-558f-b90b-09ba475a7a42",
+				timerStartOffset = -8,
+				uuid = "2316130c-0f6e-3452-be8a-515b64751346",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -6566,7 +6703,12 @@ local tbl =
 							{
 								
 								{
-									"a4edd847-1d59-0a05-b5a7-da85ab127ca3",
+									"81c34e71-0420-8378-bf5a-e8da6bc12697",
+									true,
+								},
+								
+								{
+									"7c27b88f-d857-9454-a1bb-4c72a6350e1b",
 									true,
 								},
 								
@@ -6611,7 +6753,12 @@ local tbl =
 							{
 								
 								{
-									"a4edd847-1d59-0a05-b5a7-da85ab127ca3",
+									"81c34e71-0420-8378-bf5a-e8da6bc12697",
+									true,
+								},
+								
+								{
+									"7c27b88f-d857-9454-a1bb-4c72a6350e1b",
 									true,
 								},
 								
@@ -6654,13 +6801,28 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Lua",
-							conditionLua = "return data.iscastingrolespread == true",
-							name = "Is Casting Spread",
-							uuid = "a4edd847-1d59-0a05-b5a7-da85ab127ca3",
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 45980,
+							name = "Casting Spread",
+							uuid = "81c34e71-0420-8378-bf5a-e8da6bc12697",
 							version = 3,
 						},
 						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetContentID = 14300,
+							inGroupTargetType = "ContentID",
+							partyTargetType = "Event Entity",
+							uuid = "7c27b88f-d857-9454-a1bb-4c72a6350e1b",
+							version = 3,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -6743,13 +6905,14 @@ local tbl =
 						},
 					},
 				},
+				eventType = 3,
 				mechanicTime = 415.438,
 				name = "Camou (10)",
 				timeRange = true,
 				timelineIndex = 103,
 				timerOffset = -10,
-				timerStartOffset = -10,
-				uuid = "8b1bbe0b-aeed-fdf0-9758-f49204a0522f",
+				timerStartOffset = -19,
+				uuid = "83cc8a2e-2199-72a8-bd68-2e001148acd1",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -6769,7 +6932,12 @@ local tbl =
 							{
 								
 								{
-									"481944dd-7fe8-711b-bb89-39ea1d8b319e",
+									"583c87e2-b7d7-26aa-ac74-58ef6740d149",
+									true,
+								},
+								
+								{
+									"72b6a39d-de3c-1721-b8c4-b8ccfd64cd33",
 									true,
 								},
 								
@@ -6814,7 +6982,12 @@ local tbl =
 							{
 								
 								{
-									"481944dd-7fe8-711b-bb89-39ea1d8b319e",
+									"583c87e2-b7d7-26aa-ac74-58ef6740d149",
+									true,
+								},
+								
+								{
+									"72b6a39d-de3c-1721-b8c4-b8ccfd64cd33",
 									true,
 								},
 								
@@ -6857,13 +7030,28 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Lua",
-							conditionLua = "return data.iscastingrolespread == true",
-							name = "Is Casting Spread",
-							uuid = "481944dd-7fe8-711b-bb89-39ea1d8b319e",
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 45980,
+							name = "Casting Spread",
+							uuid = "583c87e2-b7d7-26aa-ac74-58ef6740d149",
 							version = 3,
 						},
 						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetContentID = 14300,
+							inGroupTargetType = "ContentID",
+							partyTargetType = "Event Entity",
+							uuid = "72b6a39d-de3c-1721-b8c4-b8ccfd64cd33",
+							version = 3,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -6946,13 +7134,14 @@ local tbl =
 						},
 					},
 				},
+				eventType = 3,
 				mechanicTime = 415.438,
 				name = "Rampart (20)",
 				timeRange = true,
 				timelineIndex = 103,
 				timerOffset = -15,
-				timerStartOffset = -5,
-				uuid = "861caf42-85e9-efc9-9af0-4a3050aba13c",
+				timerStartOffset = -19,
+				uuid = "da55646f-e5e9-7c20-a6a0-b80eb8f99698",
 				version = 2,
 			},
 			inheritedIndex = 3,
@@ -6972,7 +7161,12 @@ local tbl =
 							{
 								
 								{
-									"2b1bd9d8-5794-e234-80d0-00731099c61d",
+									"d09737d0-0874-d954-8084-c7e22f67f9d8",
+									true,
+								},
+								
+								{
+									"f9da09b1-c378-f700-8db4-f86c0cf59e9d",
 									true,
 								},
 								
@@ -7017,7 +7211,12 @@ local tbl =
 							{
 								
 								{
-									"2b1bd9d8-5794-e234-80d0-00731099c61d",
+									"d09737d0-0874-d954-8084-c7e22f67f9d8",
+									true,
+								},
+								
+								{
+									"f9da09b1-c378-f700-8db4-f86c0cf59e9d",
 									true,
 								},
 								
@@ -7061,13 +7260,28 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Lua",
-							conditionLua = "return data.iscastingrolespread == true",
-							name = "Is Casting Spread",
-							uuid = "2b1bd9d8-5794-e234-80d0-00731099c61d",
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 45980,
+							name = "Casting Spread",
+							uuid = "d09737d0-0874-d954-8084-c7e22f67f9d8",
 							version = 3,
 						},
 						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetContentID = 14300,
+							inGroupTargetType = "ContentID",
+							partyTargetType = "Event Entity",
+							uuid = "f9da09b1-c378-f700-8db4-f86c0cf59e9d",
+							version = 3,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -7151,12 +7365,13 @@ local tbl =
 					},
 				},
 				enabled = false,
+				eventType = 3,
 				mechanicTime = 415.438,
 				name = "Great Nebula (40)",
 				timeRange = true,
 				timelineIndex = 103,
-				timerStartOffset = -10,
-				uuid = "9b0c84e6-32f6-4073-a645-9f91e51e914f",
+				timerStartOffset = -14,
+				uuid = "8e3b1595-6a61-10ce-9855-69ba6245eda7",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -7243,7 +7458,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 103,
 				timerEndOffset = 10,
-				uuid = "a9bcf59f-2024-bfb1-8dce-4c516132fa73",
+				uuid = "b01b6f29-650b-a2c8-a21d-d9a0d3794555",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -7333,7 +7548,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 103,
 				timerEndOffset = 10,
-				uuid = "0b441a3f-a750-9bda-bf37-bfeae49bc887",
+				uuid = "46e1156c-512e-41bb-821e-216e782e92d4",
 				version = 2,
 			},
 			inheritedIndex = 6,
@@ -7351,7 +7566,7 @@ local tbl =
 				mechanicTime = 415.438,
 				name = "_________________",
 				timelineIndex = 103,
-				uuid = "463a6535-ba90-e43a-9b16-7cb3fd251deb",
+				uuid = "66564615-0ec6-4909-8b07-a8214dc695ca",
 				version = 2,
 			},
 			inheritedIndex = 7,
@@ -7371,6 +7586,16 @@ local tbl =
 							{
 								
 								{
+									"16e9bc2f-3148-2401-8ac2-c32b5fd1cd35",
+									true,
+								},
+								
+								{
+									"6a290bb0-3b30-5179-a48a-65e282a684bd",
+									true,
+								},
+								
+								{
 									"7e0d26db-790b-1b75-bfca-ad4daf3ae049",
 									true,
 								},
@@ -7382,11 +7607,6 @@ local tbl =
 								
 								{
 									"df505c51-c9e6-b149-a5a7-a408517c9afa",
-									true,
-								},
-								
-								{
-									"a179f7f9-c2a0-51b1-bba4-2dd6cf979c40",
 									true,
 								},
 								
@@ -7414,13 +7634,28 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Lua",
-							conditionLua = "return data.iscastingrolespread == true",
-							name = "Is Casting Spread",
-							uuid = "a179f7f9-c2a0-51b1-bba4-2dd6cf979c40",
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 45980,
+							name = "Casting Spread",
+							uuid = "16e9bc2f-3148-2401-8ac2-c32b5fd1cd35",
 							version = 3,
 						},
 						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetContentID = 14300,
+							inGroupTargetType = "ContentID",
+							partyTargetType = "Event Entity",
+							uuid = "6a290bb0-3b30-5179-a48a-65e282a684bd",
+							version = 3,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -7504,13 +7739,14 @@ local tbl =
 					},
 				},
 				enabled = false,
+				eventType = 3,
 				mechanicTime = 415.438,
 				name = "Superbolide (Invinsible)",
 				timeRange = true,
 				timelineIndex = 103,
 				timerOffset = -1,
-				timerStartOffset = -2.2999999523163,
-				uuid = "020cf85b-ec6e-bc38-afc8-cbfd8f19420e",
+				timerStartOffset = -9,
+				uuid = "43945e04-7ceb-5f6e-8d5a-6aaaef761e4d",
 				version = 2,
 			},
 			inheritedIndex = 8,
@@ -7528,6 +7764,68 @@ local tbl =
 							actionID = 25758,
 							conditions = 
 							{
+								
+								{
+									"adbad49d-c2d8-3587-9e2e-f5a8d9045902",
+									true,
+								},
+								
+								{
+									"9599ed13-30a6-8a96-905e-9e915dbc5a68",
+									true,
+								},
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"c2c08b25-0b80-0834-8d69-9d342e2365c9",
+									true,
+								},
+								
+								{
+									"64f824b6-ef30-56dc-ab6f-4e707c076937",
+									true,
+								},
+								
+								{
+									"9b46475a-03a0-ba79-8e1c-daf5e5cdd0ff",
+									true,
+								},
+								
+								{
+									"3ead7af9-2217-69b0-8001-c88ebb998803",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "549106e5-efb1-9bcc-9a32-e56fbdaf9323",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"adbad49d-c2d8-3587-9e2e-f5a8d9045902",
+									true,
+								},
+								
+								{
+									"9599ed13-30a6-8a96-905e-9e915dbc5a68",
+									true,
+								},
 								
 								{
 									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
@@ -7548,6 +7846,11 @@ local tbl =
 									"9b46475a-03a0-ba79-8e1c-daf5e5cdd0ff",
 									true,
 								},
+								
+								{
+									"3ead7af9-2217-69b0-8001-c88ebb998803",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -7565,6 +7868,33 @@ local tbl =
 					{
 						data = 
 						{
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 45980,
+							name = "Casting Spread",
+							uuid = "adbad49d-c2d8-3587-9e2e-f5a8d9045902",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetContentID = 14300,
+							inGroupTargetType = "ContentID",
+							partyTargetType = "Event Entity",
+							uuid = "9599ed13-30a6-8a96-905e-9e915dbc5a68",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
 							actionID = 25758,
 							category = "Self",
 							comparator = 2,
@@ -7573,6 +7903,18 @@ local tbl =
 							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
 							version = 3,
 						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "c2c08b25-0b80-0834-8d69-9d342e2365c9",
+							version = 3,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -7613,69 +7955,41 @@ local tbl =
 							version = 3,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								4731,
+								4732,
+								4733,
+								4734,
+								4735,
+								4736,
+								4737,
+								4738,
+							},
+							category = "Self",
+							dequeueIfLuaFalse = true,
+							name = "InCell",
+							uuid = "3ead7af9-2217-69b0-8001-c88ebb998803",
+							version = 3,
+						},
+					},
 				},
-				enabled = false,
+				eventType = 3,
 				mechanicTime = 415.438,
 				name = "HoC (15) ST",
 				timeRange = true,
 				timelineIndex = 103,
 				timerOffset = -1,
-				timerStartOffset = -2,
-				uuid = "4469f548-bbdd-2ea9-96b4-4bc41a160741",
+				timerStartOffset = -8,
+				uuid = "5cadd119-cde8-708f-a526-9aa383039715",
 				version = 2,
 			},
 			inheritedIndex = 9,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "Lua",
-							actionLua = "data.iscastingrolespread = nil\nself.used = true\n",
-							conditions = 
-							{
-								
-								{
-									"72f1338e-fbc2-a14b-8033-ba289b577989",
-									true,
-								},
-							},
-							gVar = "ACR_RikuGNB3_CD",
-							name = "Reset Trigger",
-							uuid = "71eca76d-469f-6966-8c33-d77065b5dd55",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return data.iscastingrolespread == true",
-							name = "Is Casting Spread",
-							uuid = "72f1338e-fbc2-a14b-8033-ba289b577989",
-							version = 3,
-						},
-						inheritedIndex = 1,
-					},
-				},
-				mechanicTime = 415.438,
-				name = "Reset Role Trigger",
-				timelineIndex = 103,
-				timerOffset = 1,
-				uuid = "4fd8050f-ab1a-2c01-b104-cf27cc2c0e5d",
-				version = 2,
-			},
-			inheritedIndex = 16,
 		},
 	},
 	[110] = 
@@ -7695,7 +8009,12 @@ local tbl =
 							{
 								
 								{
-									"19a2e016-6e63-a6a7-a5b4-9bd3b4015d29",
+									"cc808c53-4cc6-9084-95eb-e6b68ecb62dc",
+									true,
+								},
+								
+								{
+									"7ed6f148-6c1a-1abe-8010-32df33c823df",
 									true,
 								},
 								
@@ -7740,7 +8059,12 @@ local tbl =
 							{
 								
 								{
-									"19a2e016-6e63-a6a7-a5b4-9bd3b4015d29",
+									"cc808c53-4cc6-9084-95eb-e6b68ecb62dc",
+									true,
+								},
+								
+								{
+									"7ed6f148-6c1a-1abe-8010-32df33c823df",
 									true,
 								},
 								
@@ -7783,13 +8107,28 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Lua",
-							conditionLua = "return data.iscastingrolespread == true",
-							name = "Is Casting Spread",
-							uuid = "19a2e016-6e63-a6a7-a5b4-9bd3b4015d29",
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 45980,
+							name = "Casting Spread",
+							uuid = "cc808c53-4cc6-9084-95eb-e6b68ecb62dc",
 							version = 3,
 						},
 						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetContentID = 14300,
+							inGroupTargetType = "ContentID",
+							partyTargetType = "Event Entity",
+							uuid = "7ed6f148-6c1a-1abe-8010-32df33c823df",
+							version = 3,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -7873,13 +8212,14 @@ local tbl =
 						},
 					},
 				},
+				eventType = 3,
 				mechanicTime = 430.281,
 				name = "HoC (15)",
 				timeRange = true,
 				timelineIndex = 110,
 				timerOffset = -1,
-				timerStartOffset = -2,
-				uuid = "5af1e2d6-e921-9110-9242-f10592c575aa",
+				timerStartOffset = -8,
+				uuid = "6cf7fa29-53e2-98c5-8f3d-cbcbc89728f1",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -7899,7 +8239,12 @@ local tbl =
 							{
 								
 								{
-									"a4edd847-1d59-0a05-b5a7-da85ab127ca3",
+									"81c34e71-0420-8378-bf5a-e8da6bc12697",
+									true,
+								},
+								
+								{
+									"7c27b88f-d857-9454-a1bb-4c72a6350e1b",
 									true,
 								},
 								
@@ -7944,7 +8289,12 @@ local tbl =
 							{
 								
 								{
-									"a4edd847-1d59-0a05-b5a7-da85ab127ca3",
+									"81c34e71-0420-8378-bf5a-e8da6bc12697",
+									true,
+								},
+								
+								{
+									"7c27b88f-d857-9454-a1bb-4c72a6350e1b",
 									true,
 								},
 								
@@ -7987,13 +8337,28 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Lua",
-							conditionLua = "return data.iscastingrolespread == true",
-							name = "Is Casting Spread",
-							uuid = "a4edd847-1d59-0a05-b5a7-da85ab127ca3",
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 45980,
+							name = "Casting Spread",
+							uuid = "81c34e71-0420-8378-bf5a-e8da6bc12697",
 							version = 3,
 						},
 						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetContentID = 14300,
+							inGroupTargetType = "ContentID",
+							partyTargetType = "Event Entity",
+							uuid = "7c27b88f-d857-9454-a1bb-4c72a6350e1b",
+							version = 3,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -8076,13 +8441,14 @@ local tbl =
 						},
 					},
 				},
+				eventType = 3,
 				mechanicTime = 430.281,
 				name = "Camou (10)",
 				timeRange = true,
 				timelineIndex = 110,
 				timerOffset = -10,
-				timerStartOffset = -10,
-				uuid = "a4297943-a411-5f0c-b3dd-2c03bcf2e81b",
+				timerStartOffset = -19,
+				uuid = "38c920df-bfeb-e47a-867e-8cd36204d696",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -8102,7 +8468,12 @@ local tbl =
 							{
 								
 								{
-									"481944dd-7fe8-711b-bb89-39ea1d8b319e",
+									"583c87e2-b7d7-26aa-ac74-58ef6740d149",
+									true,
+								},
+								
+								{
+									"72b6a39d-de3c-1721-b8c4-b8ccfd64cd33",
 									true,
 								},
 								
@@ -8147,7 +8518,12 @@ local tbl =
 							{
 								
 								{
-									"481944dd-7fe8-711b-bb89-39ea1d8b319e",
+									"583c87e2-b7d7-26aa-ac74-58ef6740d149",
+									true,
+								},
+								
+								{
+									"72b6a39d-de3c-1721-b8c4-b8ccfd64cd33",
 									true,
 								},
 								
@@ -8190,13 +8566,28 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Lua",
-							conditionLua = "return data.iscastingrolespread == true",
-							name = "Is Casting Spread",
-							uuid = "481944dd-7fe8-711b-bb89-39ea1d8b319e",
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 45980,
+							name = "Casting Spread",
+							uuid = "583c87e2-b7d7-26aa-ac74-58ef6740d149",
 							version = 3,
 						},
 						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetContentID = 14300,
+							inGroupTargetType = "ContentID",
+							partyTargetType = "Event Entity",
+							uuid = "72b6a39d-de3c-1721-b8c4-b8ccfd64cd33",
+							version = 3,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -8279,13 +8670,14 @@ local tbl =
 						},
 					},
 				},
+				eventType = 3,
 				mechanicTime = 430.281,
 				name = "Rampart (20)",
 				timeRange = true,
 				timelineIndex = 110,
 				timerOffset = -15,
-				timerStartOffset = -5,
-				uuid = "a6e237c3-b8e4-0d4b-8471-95b1dcb967e2",
+				timerStartOffset = -19,
+				uuid = "d591656f-d228-eb74-adfa-3e73a4ee4d6a",
 				version = 2,
 			},
 			inheritedIndex = 3,
@@ -8305,7 +8697,12 @@ local tbl =
 							{
 								
 								{
-									"2b1bd9d8-5794-e234-80d0-00731099c61d",
+									"d09737d0-0874-d954-8084-c7e22f67f9d8",
+									true,
+								},
+								
+								{
+									"f9da09b1-c378-f700-8db4-f86c0cf59e9d",
 									true,
 								},
 								
@@ -8350,7 +8747,12 @@ local tbl =
 							{
 								
 								{
-									"2b1bd9d8-5794-e234-80d0-00731099c61d",
+									"d09737d0-0874-d954-8084-c7e22f67f9d8",
+									true,
+								},
+								
+								{
+									"f9da09b1-c378-f700-8db4-f86c0cf59e9d",
 									true,
 								},
 								
@@ -8394,13 +8796,28 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Lua",
-							conditionLua = "return data.iscastingrolespread == true",
-							name = "Is Casting Spread",
-							uuid = "2b1bd9d8-5794-e234-80d0-00731099c61d",
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 45980,
+							name = "Casting Spread",
+							uuid = "d09737d0-0874-d954-8084-c7e22f67f9d8",
 							version = 3,
 						},
 						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetContentID = 14300,
+							inGroupTargetType = "ContentID",
+							partyTargetType = "Event Entity",
+							uuid = "f9da09b1-c378-f700-8db4-f86c0cf59e9d",
+							version = 3,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -8484,12 +8901,13 @@ local tbl =
 					},
 				},
 				enabled = false,
+				eventType = 3,
 				mechanicTime = 430.281,
 				name = "Great Nebula (40)",
 				timeRange = true,
 				timelineIndex = 110,
-				timerStartOffset = -10,
-				uuid = "93ddf063-3cd2-73b5-ba75-1c3e1164b776",
+				timerStartOffset = -14,
+				uuid = "0c473fa9-b081-1632-bf32-af12cd4c2fcc",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -8576,7 +8994,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 110,
 				timerEndOffset = 10,
-				uuid = "1f3787f5-2ace-1c4b-8f62-03a71b2fa79e",
+				uuid = "dd03a121-d6b7-bbbb-bd2b-651461885fe8",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -8666,7 +9084,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 110,
 				timerEndOffset = 10,
-				uuid = "88729c79-ef4e-1bdc-858f-d4ab67f7142f",
+				uuid = "42b5cd87-d7ec-776c-988e-b935bb498318",
 				version = 2,
 			},
 			inheritedIndex = 6,
@@ -8684,7 +9102,7 @@ local tbl =
 				mechanicTime = 430.281,
 				name = "_________________",
 				timelineIndex = 110,
-				uuid = "b82b8e56-6210-5185-a637-48b029460944",
+				uuid = "64c3b20d-4b57-338d-83e5-8c92ed1014bc",
 				version = 2,
 			},
 			inheritedIndex = 7,
@@ -8704,6 +9122,16 @@ local tbl =
 							{
 								
 								{
+									"16e9bc2f-3148-2401-8ac2-c32b5fd1cd35",
+									true,
+								},
+								
+								{
+									"6a290bb0-3b30-5179-a48a-65e282a684bd",
+									true,
+								},
+								
+								{
 									"7e0d26db-790b-1b75-bfca-ad4daf3ae049",
 									true,
 								},
@@ -8715,11 +9143,6 @@ local tbl =
 								
 								{
 									"df505c51-c9e6-b149-a5a7-a408517c9afa",
-									true,
-								},
-								
-								{
-									"a179f7f9-c2a0-51b1-bba4-2dd6cf979c40",
 									true,
 								},
 								
@@ -8747,13 +9170,28 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Lua",
-							conditionLua = "return data.iscastingrolespread == true",
-							name = "Is Casting Spread",
-							uuid = "a179f7f9-c2a0-51b1-bba4-2dd6cf979c40",
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 45980,
+							name = "Casting Spread",
+							uuid = "16e9bc2f-3148-2401-8ac2-c32b5fd1cd35",
 							version = 3,
 						},
 						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetContentID = 14300,
+							inGroupTargetType = "ContentID",
+							partyTargetType = "Event Entity",
+							uuid = "6a290bb0-3b30-5179-a48a-65e282a684bd",
+							version = 3,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -8837,13 +9275,14 @@ local tbl =
 					},
 				},
 				enabled = false,
+				eventType = 3,
 				mechanicTime = 430.281,
 				name = "Superbolide (Invinsible)",
 				timeRange = true,
 				timelineIndex = 110,
 				timerOffset = -1,
-				timerStartOffset = -2.2999999523163,
-				uuid = "1007084b-cc5d-847c-980e-436dd735111f",
+				timerStartOffset = -9,
+				uuid = "7756da93-0d2c-a333-9cd4-51b084b64f23",
 				version = 2,
 			},
 			inheritedIndex = 8,
@@ -8861,6 +9300,68 @@ local tbl =
 							actionID = 25758,
 							conditions = 
 							{
+								
+								{
+									"adbad49d-c2d8-3587-9e2e-f5a8d9045902",
+									true,
+								},
+								
+								{
+									"9599ed13-30a6-8a96-905e-9e915dbc5a68",
+									true,
+								},
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"c2c08b25-0b80-0834-8d69-9d342e2365c9",
+									true,
+								},
+								
+								{
+									"64f824b6-ef30-56dc-ab6f-4e707c076937",
+									true,
+								},
+								
+								{
+									"9b46475a-03a0-ba79-8e1c-daf5e5cdd0ff",
+									true,
+								},
+								
+								{
+									"3ead7af9-2217-69b0-8001-c88ebb998803",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "549106e5-efb1-9bcc-9a32-e56fbdaf9323",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"adbad49d-c2d8-3587-9e2e-f5a8d9045902",
+									true,
+								},
+								
+								{
+									"9599ed13-30a6-8a96-905e-9e915dbc5a68",
+									true,
+								},
 								
 								{
 									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
@@ -8881,6 +9382,11 @@ local tbl =
 									"9b46475a-03a0-ba79-8e1c-daf5e5cdd0ff",
 									true,
 								},
+								
+								{
+									"3ead7af9-2217-69b0-8001-c88ebb998803",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -8898,6 +9404,33 @@ local tbl =
 					{
 						data = 
 						{
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 45980,
+							name = "Casting Spread",
+							uuid = "adbad49d-c2d8-3587-9e2e-f5a8d9045902",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetContentID = 14300,
+							inGroupTargetType = "ContentID",
+							partyTargetType = "Event Entity",
+							uuid = "9599ed13-30a6-8a96-905e-9e915dbc5a68",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
 							actionID = 25758,
 							category = "Self",
 							comparator = 2,
@@ -8906,6 +9439,18 @@ local tbl =
 							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
 							version = 3,
 						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "c2c08b25-0b80-0834-8d69-9d342e2365c9",
+							version = 3,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -8946,69 +9491,41 @@ local tbl =
 							version = 3,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								4731,
+								4732,
+								4733,
+								4734,
+								4735,
+								4736,
+								4737,
+								4738,
+							},
+							category = "Self",
+							dequeueIfLuaFalse = true,
+							name = "InCell",
+							uuid = "3ead7af9-2217-69b0-8001-c88ebb998803",
+							version = 3,
+						},
+					},
 				},
-				enabled = false,
+				eventType = 3,
 				mechanicTime = 430.281,
 				name = "HoC (15) ST",
 				timeRange = true,
 				timelineIndex = 110,
 				timerOffset = -1,
-				timerStartOffset = -2,
-				uuid = "9e44bb4b-30ed-ea58-b61d-00b1d741821c",
+				timerStartOffset = -8,
+				uuid = "317dc9c4-3a18-a632-a5b2-e72c74c959a6",
 				version = 2,
 			},
 			inheritedIndex = 9,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "Lua",
-							actionLua = "data.iscastingrolespread = nil\nself.used = true\n",
-							conditions = 
-							{
-								
-								{
-									"72f1338e-fbc2-a14b-8033-ba289b577989",
-									true,
-								},
-							},
-							gVar = "ACR_RikuGNB3_CD",
-							name = "Reset Trigger",
-							uuid = "71eca76d-469f-6966-8c33-d77065b5dd55",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return data.iscastingrolespread == true",
-							name = "Is Casting Spread",
-							uuid = "72f1338e-fbc2-a14b-8033-ba289b577989",
-							version = 3,
-						},
-						inheritedIndex = 1,
-					},
-				},
-				mechanicTime = 430.281,
-				name = "Reset Role Trigger",
-				timelineIndex = 110,
-				timerOffset = 1,
-				uuid = "b5a68d69-64bc-2bee-bfe0-a62de8dd387e",
-				version = 2,
-			},
-			inheritedIndex = 16,
 		},
 	},
 	[115] = 
@@ -9028,7 +9545,12 @@ local tbl =
 							{
 								
 								{
-									"19a2e016-6e63-a6a7-a5b4-9bd3b4015d29",
+									"cc808c53-4cc6-9084-95eb-e6b68ecb62dc",
+									true,
+								},
+								
+								{
+									"7ed6f148-6c1a-1abe-8010-32df33c823df",
 									true,
 								},
 								
@@ -9073,7 +9595,12 @@ local tbl =
 							{
 								
 								{
-									"19a2e016-6e63-a6a7-a5b4-9bd3b4015d29",
+									"cc808c53-4cc6-9084-95eb-e6b68ecb62dc",
+									true,
+								},
+								
+								{
+									"7ed6f148-6c1a-1abe-8010-32df33c823df",
 									true,
 								},
 								
@@ -9116,13 +9643,28 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Lua",
-							conditionLua = "return data.iscastingrolespread == true",
-							name = "Is Casting Spread",
-							uuid = "19a2e016-6e63-a6a7-a5b4-9bd3b4015d29",
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 45980,
+							name = "Casting Spread",
+							uuid = "cc808c53-4cc6-9084-95eb-e6b68ecb62dc",
 							version = 3,
 						},
 						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetContentID = 14300,
+							inGroupTargetType = "ContentID",
+							partyTargetType = "Event Entity",
+							uuid = "7ed6f148-6c1a-1abe-8010-32df33c823df",
+							version = 3,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -9206,13 +9748,14 @@ local tbl =
 						},
 					},
 				},
+				eventType = 3,
 				mechanicTime = 437.078,
 				name = "HoC (15)",
 				timeRange = true,
 				timelineIndex = 115,
 				timerOffset = -1,
-				timerStartOffset = -2,
-				uuid = "b07c658b-7501-6b9a-b281-8d998f2127ee",
+				timerStartOffset = -8,
+				uuid = "41ae2315-098a-7aaf-a6d4-9575224ff847",
 				version = 2,
 			},
 			inheritedIndex = 1,
@@ -9232,7 +9775,12 @@ local tbl =
 							{
 								
 								{
-									"a4edd847-1d59-0a05-b5a7-da85ab127ca3",
+									"81c34e71-0420-8378-bf5a-e8da6bc12697",
+									true,
+								},
+								
+								{
+									"7c27b88f-d857-9454-a1bb-4c72a6350e1b",
 									true,
 								},
 								
@@ -9277,7 +9825,12 @@ local tbl =
 							{
 								
 								{
-									"a4edd847-1d59-0a05-b5a7-da85ab127ca3",
+									"81c34e71-0420-8378-bf5a-e8da6bc12697",
+									true,
+								},
+								
+								{
+									"7c27b88f-d857-9454-a1bb-4c72a6350e1b",
 									true,
 								},
 								
@@ -9320,13 +9873,28 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Lua",
-							conditionLua = "return data.iscastingrolespread == true",
-							name = "Is Casting Spread",
-							uuid = "a4edd847-1d59-0a05-b5a7-da85ab127ca3",
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 45980,
+							name = "Casting Spread",
+							uuid = "81c34e71-0420-8378-bf5a-e8da6bc12697",
 							version = 3,
 						},
 						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetContentID = 14300,
+							inGroupTargetType = "ContentID",
+							partyTargetType = "Event Entity",
+							uuid = "7c27b88f-d857-9454-a1bb-4c72a6350e1b",
+							version = 3,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -9409,13 +9977,14 @@ local tbl =
 						},
 					},
 				},
+				eventType = 3,
 				mechanicTime = 437.078,
 				name = "Camou (10)",
 				timeRange = true,
 				timelineIndex = 115,
 				timerOffset = -10,
-				timerStartOffset = -10,
-				uuid = "0e0f6220-ede9-a57a-b492-45f2ed7d5b11",
+				timerStartOffset = -19,
+				uuid = "ab567225-5c04-8442-a29d-6c48c5b4a1b6",
 				version = 2,
 			},
 			inheritedIndex = 2,
@@ -9435,7 +10004,12 @@ local tbl =
 							{
 								
 								{
-									"481944dd-7fe8-711b-bb89-39ea1d8b319e",
+									"583c87e2-b7d7-26aa-ac74-58ef6740d149",
+									true,
+								},
+								
+								{
+									"72b6a39d-de3c-1721-b8c4-b8ccfd64cd33",
 									true,
 								},
 								
@@ -9480,7 +10054,12 @@ local tbl =
 							{
 								
 								{
-									"481944dd-7fe8-711b-bb89-39ea1d8b319e",
+									"583c87e2-b7d7-26aa-ac74-58ef6740d149",
+									true,
+								},
+								
+								{
+									"72b6a39d-de3c-1721-b8c4-b8ccfd64cd33",
 									true,
 								},
 								
@@ -9523,13 +10102,28 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Lua",
-							conditionLua = "return data.iscastingrolespread == true",
-							name = "Is Casting Spread",
-							uuid = "481944dd-7fe8-711b-bb89-39ea1d8b319e",
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 45980,
+							name = "Casting Spread",
+							uuid = "583c87e2-b7d7-26aa-ac74-58ef6740d149",
 							version = 3,
 						},
 						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetContentID = 14300,
+							inGroupTargetType = "ContentID",
+							partyTargetType = "Event Entity",
+							uuid = "72b6a39d-de3c-1721-b8c4-b8ccfd64cd33",
+							version = 3,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -9612,13 +10206,14 @@ local tbl =
 						},
 					},
 				},
+				eventType = 3,
 				mechanicTime = 437.078,
 				name = "Rampart (20)",
 				timeRange = true,
 				timelineIndex = 115,
 				timerOffset = -15,
-				timerStartOffset = -5,
-				uuid = "e314dba1-aed6-a835-9055-0311b0e3808c",
+				timerStartOffset = -19,
+				uuid = "b7b9a049-631f-97f1-bf9c-e708b91f8e02",
 				version = 2,
 			},
 			inheritedIndex = 3,
@@ -9638,7 +10233,12 @@ local tbl =
 							{
 								
 								{
-									"2b1bd9d8-5794-e234-80d0-00731099c61d",
+									"d09737d0-0874-d954-8084-c7e22f67f9d8",
+									true,
+								},
+								
+								{
+									"f9da09b1-c378-f700-8db4-f86c0cf59e9d",
 									true,
 								},
 								
@@ -9683,7 +10283,12 @@ local tbl =
 							{
 								
 								{
-									"2b1bd9d8-5794-e234-80d0-00731099c61d",
+									"d09737d0-0874-d954-8084-c7e22f67f9d8",
+									true,
+								},
+								
+								{
+									"f9da09b1-c378-f700-8db4-f86c0cf59e9d",
 									true,
 								},
 								
@@ -9727,13 +10332,28 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Lua",
-							conditionLua = "return data.iscastingrolespread == true",
-							name = "Is Casting Spread",
-							uuid = "2b1bd9d8-5794-e234-80d0-00731099c61d",
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 45980,
+							name = "Casting Spread",
+							uuid = "d09737d0-0874-d954-8084-c7e22f67f9d8",
 							version = 3,
 						},
 						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetContentID = 14300,
+							inGroupTargetType = "ContentID",
+							partyTargetType = "Event Entity",
+							uuid = "f9da09b1-c378-f700-8db4-f86c0cf59e9d",
+							version = 3,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -9817,12 +10437,13 @@ local tbl =
 					},
 				},
 				enabled = false,
+				eventType = 3,
 				mechanicTime = 437.078,
 				name = "Great Nebula (40)",
 				timeRange = true,
 				timelineIndex = 115,
-				timerStartOffset = -10,
-				uuid = "391cb503-30d7-f605-8a20-680a0dc3cb21",
+				timerStartOffset = -14,
+				uuid = "43b36932-fe53-2fa8-a075-40c26805dd0e",
 				version = 2,
 			},
 			inheritedIndex = 4,
@@ -9909,7 +10530,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 115,
 				timerEndOffset = 10,
-				uuid = "c48a5157-5991-c8a0-8fca-a58c21e8938c",
+				uuid = "0bcfeed3-18fc-65ea-9b39-3dbacc58c077",
 				version = 2,
 			},
 			inheritedIndex = 5,
@@ -9999,7 +10620,7 @@ local tbl =
 				timeRange = true,
 				timelineIndex = 115,
 				timerEndOffset = 10,
-				uuid = "8c2059e3-f441-dac8-afb7-ae9496e6574b",
+				uuid = "531f2811-f842-a298-8bdc-548adb41d347",
 				version = 2,
 			},
 			inheritedIndex = 6,
@@ -10017,7 +10638,7 @@ local tbl =
 				mechanicTime = 437.078,
 				name = "_________________",
 				timelineIndex = 115,
-				uuid = "365ca44a-8716-0b2a-82c9-b024b4184678",
+				uuid = "ecd695f8-2383-8abb-87ee-6122b0035589",
 				version = 2,
 			},
 			inheritedIndex = 7,
@@ -10037,6 +10658,16 @@ local tbl =
 							{
 								
 								{
+									"16e9bc2f-3148-2401-8ac2-c32b5fd1cd35",
+									true,
+								},
+								
+								{
+									"6a290bb0-3b30-5179-a48a-65e282a684bd",
+									true,
+								},
+								
+								{
 									"7e0d26db-790b-1b75-bfca-ad4daf3ae049",
 									true,
 								},
@@ -10048,11 +10679,6 @@ local tbl =
 								
 								{
 									"df505c51-c9e6-b149-a5a7-a408517c9afa",
-									true,
-								},
-								
-								{
-									"a179f7f9-c2a0-51b1-bba4-2dd6cf979c40",
 									true,
 								},
 								
@@ -10080,13 +10706,28 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Lua",
-							conditionLua = "return data.iscastingrolespread == true",
-							name = "Is Casting Spread",
-							uuid = "a179f7f9-c2a0-51b1-bba4-2dd6cf979c40",
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 45980,
+							name = "Casting Spread",
+							uuid = "16e9bc2f-3148-2401-8ac2-c32b5fd1cd35",
 							version = 3,
 						},
 						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetContentID = 14300,
+							inGroupTargetType = "ContentID",
+							partyTargetType = "Event Entity",
+							uuid = "6a290bb0-3b30-5179-a48a-65e282a684bd",
+							version = 3,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -10170,13 +10811,14 @@ local tbl =
 					},
 				},
 				enabled = false,
+				eventType = 3,
 				mechanicTime = 437.078,
 				name = "Superbolide (Invinsible)",
 				timeRange = true,
 				timelineIndex = 115,
 				timerOffset = -1,
-				timerStartOffset = -2.2999999523163,
-				uuid = "84d720cd-659c-d2eb-be64-6d19866a493a",
+				timerStartOffset = -9,
+				uuid = "d570e74b-d2ee-b2bd-963e-aec1eb5d8d13",
 				version = 2,
 			},
 			inheritedIndex = 8,
@@ -10194,6 +10836,68 @@ local tbl =
 							actionID = 25758,
 							conditions = 
 							{
+								
+								{
+									"adbad49d-c2d8-3587-9e2e-f5a8d9045902",
+									true,
+								},
+								
+								{
+									"9599ed13-30a6-8a96-905e-9e915dbc5a68",
+									true,
+								},
+								
+								{
+									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
+									true,
+								},
+								
+								{
+									"c2c08b25-0b80-0834-8d69-9d342e2365c9",
+									true,
+								},
+								
+								{
+									"64f824b6-ef30-56dc-ab6f-4e707c076937",
+									true,
+								},
+								
+								{
+									"9b46475a-03a0-ba79-8e1c-daf5e5cdd0ff",
+									true,
+								},
+								
+								{
+									"3ead7af9-2217-69b0-8001-c88ebb998803",
+									true,
+								},
+							},
+							endIfUsed = true,
+							gVar = "ACR_RikuGNB3_CD",
+							ignoreWeaveRules = true,
+							targetType = "Other Tank",
+							uuid = "549106e5-efb1-9bcc-9a32-e56fbdaf9323",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							actionID = 25758,
+							conditions = 
+							{
+								
+								{
+									"adbad49d-c2d8-3587-9e2e-f5a8d9045902",
+									true,
+								},
+								
+								{
+									"9599ed13-30a6-8a96-905e-9e915dbc5a68",
+									true,
+								},
 								
 								{
 									"aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
@@ -10214,6 +10918,11 @@ local tbl =
 									"9b46475a-03a0-ba79-8e1c-daf5e5cdd0ff",
 									true,
 								},
+								
+								{
+									"3ead7af9-2217-69b0-8001-c88ebb998803",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuGNB3_CD",
@@ -10231,6 +10940,33 @@ local tbl =
 					{
 						data = 
 						{
+							category = "Event",
+							eventArgType = 2,
+							eventSpellID = 45980,
+							name = "Casting Spread",
+							uuid = "adbad49d-c2d8-3587-9e2e-f5a8d9045902",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Party",
+							conditionType = 10,
+							inGroupTargetContentID = 14300,
+							inGroupTargetType = "ContentID",
+							partyTargetType = "Event Entity",
+							uuid = "9599ed13-30a6-8a96-905e-9e915dbc5a68",
+							version = 3,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
 							actionID = 25758,
 							category = "Self",
 							comparator = 2,
@@ -10239,6 +10975,18 @@ local tbl =
 							uuid = "aa47d4db-e3a7-7873-b33f-fc4b5b63ee52",
 							version = 3,
 						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
+							name = "RoleMit MT",
+							uuid = "c2c08b25-0b80-0834-8d69-9d342e2365c9",
+							version = 3,
+						},
+						inheritedIndex = 2,
 					},
 					
 					{
@@ -10279,69 +11027,41 @@ local tbl =
 							version = 3,
 						},
 					},
+					
+					{
+						data = 
+						{
+							buffCheckType = 5,
+							buffIDList = 
+							{
+								4731,
+								4732,
+								4733,
+								4734,
+								4735,
+								4736,
+								4737,
+								4738,
+							},
+							category = "Self",
+							dequeueIfLuaFalse = true,
+							name = "InCell",
+							uuid = "3ead7af9-2217-69b0-8001-c88ebb998803",
+							version = 3,
+						},
+					},
 				},
-				enabled = false,
+				eventType = 3,
 				mechanicTime = 437.078,
 				name = "HoC (15) ST",
 				timeRange = true,
 				timelineIndex = 115,
 				timerOffset = -1,
-				timerStartOffset = -2,
-				uuid = "957cda87-0378-a7a0-b93b-641e24049131",
+				timerStartOffset = -8,
+				uuid = "9c31b087-b2c5-0196-8996-1f5a819947d7",
 				version = 2,
 			},
 			inheritedIndex = 9,
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "Lua",
-							actionLua = "data.iscastingrolespread = nil\nself.used = true\n",
-							conditions = 
-							{
-								
-								{
-									"72f1338e-fbc2-a14b-8033-ba289b577989",
-									true,
-								},
-							},
-							gVar = "ACR_RikuGNB3_CD",
-							name = "Reset Trigger",
-							uuid = "71eca76d-469f-6966-8c33-d77065b5dd55",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return data.iscastingrolespread == true",
-							name = "Is Casting Spread",
-							uuid = "72f1338e-fbc2-a14b-8033-ba289b577989",
-							version = 3,
-						},
-						inheritedIndex = 1,
-					},
-				},
-				mechanicTime = 437.078,
-				name = "Reset Role Trigger",
-				timelineIndex = 115,
-				timerOffset = 1,
-				uuid = "6fb38b26-d15d-2224-b7ba-af004ff53341",
-				version = 2,
-			},
-			inheritedIndex = 16,
 		},
 	},
 	[155] = 
