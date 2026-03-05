@@ -775,17 +775,6 @@ local tbl =
 						data = 
 						{
 							aType = "Lua",
-							actionLua = "AAM_SetCanSend(false)\nreturn true",
-							gVar = "ACR_RikuDRK3_CD",
-							uuid = "1145964a-3b54-aee2-bc7f-fba7d8af6352",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							aType = "Lua",
 							actionLua = "SendTextCommand(\"/i-ching-commander anti_actionmove dispose\")\nself.used = true",
 							gVar = "ACR_RikuDRK3_CD",
 							uuid = "972f2160-d434-1039-af10-77908a583dc4",
@@ -801,34 +790,6 @@ local tbl =
 				timelineIndex = 137,
 				timerOffset = -11,
 				uuid = "ace46a15-8007-d31c-b2bc-72cfcf7b9f14",
-				version = 2,
-			},
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "Lua",
-							actionLua = "AAM_SetCanSend(true)\nreturn true",
-							gVar = "ACR_RikuDRK3_CD",
-							uuid = "1145964a-3b54-aee2-bc7f-fba7d8af6352",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 484.2,
-				name = "[i-Ching] AntiActionMove ON",
-				timelineIndex = 137,
-				uuid = "b70d7486-ae1f-8795-b67f-be2841e317c3",
 				version = 2,
 			},
 		},
@@ -1042,6 +1003,37 @@ local tbl =
 				name = "[i-Ching] AntiActionMove ON",
 				timelineIndex = 149,
 				uuid = "58113e24-8932-2243-9e2e-52d60df42b97",
+				version = 2,
+			},
+		},
+	},
+	[152] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "AAM_SetCanSend(true)\nreturn true",
+							gVar = "ACR_RikuDRK3_CD",
+							uuid = "1145964a-3b54-aee2-bc7f-fba7d8af6352",
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+				},
+				mechanicTime = 518,
+				name = "[i-Ching] AntiActionMove ON",
+				timelineIndex = 152,
+				uuid = "b8f38907-9385-1ac8-aee9-bc3ddd6d2db8",
 				version = 2,
 			},
 		},

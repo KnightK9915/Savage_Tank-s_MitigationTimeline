@@ -581,7 +581,7 @@ local tbl =
 							buffCheckType = 3,
 							category = "Lua",
 							comparator = 2,
-							conditionLua = "-- Condition: 若 5m 有效射程内存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\n-- 取敌对实体列表：优先 TensorCore，其次兼容 Minion 的 EntityList（若存在）\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    -- 常见：Enemy / Attackable / Aggro 等；这里用 Enemy，若你环境不是这个名字会直接降级到 false\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    -- Minion 常见过滤：attackable\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        -- 存活判断（不同对象字段可能不同，做兼容）\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        -- 可选中 / 可攻击（同样做兼容）\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" then\n                -- 目标命中半径字段兼容：hitradius / hitdarius\n                local hitr = 0\n                if type(e.hitradius) == \"number\" then\n                    hitr = e.hitradius\n                elseif type(e.hitdarius) == \"number\" then\n                    hitr = e.hitdarius\n                end\n\n                -- 有效距离：中心距 - 目标命中半径\n                if (d - hitr) <= RANGE then\n                    return true\n                end\n            end\n        end\n    end\nend\n\nreturn false\n",
+							conditionLua = "-- Condition: return true if player is inside ANY nearby attackable target's\n-- “original target ring” radius (same radius math you used: r = 4.0 + targetHR - playerHR)\n\nif not (TensorCore and TensorCore.mGetPlayer) then\n    return false\nend\n\nlocal p = TensorCore:mGetPlayer()\nif not (p and p.pos) then\n    return false\nend\n\nlocal pHR = p.hitradius or 0.5\n\n-- Safe 2D distance helper (XZ plane)\nlocal function Dist2D(a, b)\n    if Distance2DT then\n        return Distance2DT(a, b)\n    end\n    if not (a and b) then return math.huge end\n    local dx = (a.x or 0) - (b.x or 0)\n    local dz = (a.z or 0) - (b.z or 0)\n    return math.sqrt(dx*dx + dz*dz)\nend\n\n-- “Nearby” scan range (meters). Adjust as you like.\nlocal MAX_SCAN = 50\n\n-- Prefer Minion's EntityList when available\nif not EntityList then\n    -- Fallback: only check current target if we can't enumerate entities\n    local t = TensorCore:mGetTarget()\n    if not (t and t.attackable and t.pos) then\n        return false\n    end\n\n    local d = Dist2D(t.pos, p.pos)\n    if d > MAX_SCAN then return false end\n\n    local tHR = t.hitradius or 0\n    local r = 4.0 + tHR - pHR\n    return (r > 0) and (d <= r)\nend\n\nlocal ents = EntityList(\"attackable\")\nif type(ents) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(ents) do\n    if e and e.attackable and e.pos then\n        local d = Dist2D(e.pos, p.pos)\n        if d <= MAX_SCAN then\n            local eHR = e.hitradius or 0\n            local r = 4.0 + eHR - pHR  -- same as: targetHR - (playerHR - 0.5) + 3.5\n            if r > 0 and d <= r then\n                return true\n            end\n        end\n    end\nend\n\nreturn false",
 							conditionType = 6,
 							inRangeValue = 3.2799999713898,
 							name = "<Range",
@@ -2811,7 +2811,7 @@ local tbl =
 							buffCheckType = 3,
 							category = "Lua",
 							comparator = 2,
-							conditionLua = "-- Condition: 若 5m 有效射程内存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\n-- 取敌对实体列表：优先 TensorCore，其次兼容 Minion 的 EntityList（若存在）\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    -- 常见：Enemy / Attackable / Aggro 等；这里用 Enemy，若你环境不是这个名字会直接降级到 false\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    -- Minion 常见过滤：attackable\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        -- 存活判断（不同对象字段可能不同，做兼容）\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        -- 可选中 / 可攻击（同样做兼容）\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" then\n                -- 目标命中半径字段兼容：hitradius / hitdarius\n                local hitr = 0\n                if type(e.hitradius) == \"number\" then\n                    hitr = e.hitradius\n                elseif type(e.hitdarius) == \"number\" then\n                    hitr = e.hitdarius\n                end\n\n                -- 有效距离：中心距 - 目标命中半径\n                if (d - hitr) <= RANGE then\n                    return true\n                end\n            end\n        end\n    end\nend\n\nreturn false\n",
+							conditionLua = "-- Condition: return true if player is inside ANY nearby attackable target's\n-- “original target ring” radius (same radius math you used: r = 4.0 + targetHR - playerHR)\n\nif not (TensorCore and TensorCore.mGetPlayer) then\n    return false\nend\n\nlocal p = TensorCore:mGetPlayer()\nif not (p and p.pos) then\n    return false\nend\n\nlocal pHR = p.hitradius or 0.5\n\n-- Safe 2D distance helper (XZ plane)\nlocal function Dist2D(a, b)\n    if Distance2DT then\n        return Distance2DT(a, b)\n    end\n    if not (a and b) then return math.huge end\n    local dx = (a.x or 0) - (b.x or 0)\n    local dz = (a.z or 0) - (b.z or 0)\n    return math.sqrt(dx*dx + dz*dz)\nend\n\n-- “Nearby” scan range (meters). Adjust as you like.\nlocal MAX_SCAN = 50\n\n-- Prefer Minion's EntityList when available\nif not EntityList then\n    -- Fallback: only check current target if we can't enumerate entities\n    local t = TensorCore:mGetTarget()\n    if not (t and t.attackable and t.pos) then\n        return false\n    end\n\n    local d = Dist2D(t.pos, p.pos)\n    if d > MAX_SCAN then return false end\n\n    local tHR = t.hitradius or 0\n    local r = 4.0 + tHR - pHR\n    return (r > 0) and (d <= r)\nend\n\nlocal ents = EntityList(\"attackable\")\nif type(ents) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(ents) do\n    if e and e.attackable and e.pos then\n        local d = Dist2D(e.pos, p.pos)\n        if d <= MAX_SCAN then\n            local eHR = e.hitradius or 0\n            local r = 4.0 + eHR - pHR  -- same as: targetHR - (playerHR - 0.5) + 3.5\n            if r > 0 and d <= r then\n                return true\n            end\n        end\n    end\nend\n\nreturn false",
 							conditionType = 6,
 							inRangeValue = 3.2799999713898,
 							name = "<Range",
@@ -3346,7 +3346,7 @@ local tbl =
 							buffCheckType = 3,
 							category = "Lua",
 							comparator = 2,
-							conditionLua = "-- Condition: 若 5m 有效射程内存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\n-- 取敌对实体列表：优先 TensorCore，其次兼容 Minion 的 EntityList（若存在）\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    -- 常见：Enemy / Attackable / Aggro 等；这里用 Enemy，若你环境不是这个名字会直接降级到 false\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    -- Minion 常见过滤：attackable\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        -- 存活判断（不同对象字段可能不同，做兼容）\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        -- 可选中 / 可攻击（同样做兼容）\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" then\n                -- 目标命中半径字段兼容：hitradius / hitdarius\n                local hitr = 0\n                if type(e.hitradius) == \"number\" then\n                    hitr = e.hitradius\n                elseif type(e.hitdarius) == \"number\" then\n                    hitr = e.hitdarius\n                end\n\n                -- 有效距离：中心距 - 目标命中半径\n                if (d - hitr) <= RANGE then\n                    return true\n                end\n            end\n        end\n    end\nend\n\nreturn false\n",
+							conditionLua = "-- Condition: return true if player is inside ANY nearby attackable target's\n-- “original target ring” radius (same radius math you used: r = 4.0 + targetHR - playerHR)\n\nif not (TensorCore and TensorCore.mGetPlayer) then\n    return false\nend\n\nlocal p = TensorCore:mGetPlayer()\nif not (p and p.pos) then\n    return false\nend\n\nlocal pHR = p.hitradius or 0.5\n\n-- Safe 2D distance helper (XZ plane)\nlocal function Dist2D(a, b)\n    if Distance2DT then\n        return Distance2DT(a, b)\n    end\n    if not (a and b) then return math.huge end\n    local dx = (a.x or 0) - (b.x or 0)\n    local dz = (a.z or 0) - (b.z or 0)\n    return math.sqrt(dx*dx + dz*dz)\nend\n\n-- “Nearby” scan range (meters). Adjust as you like.\nlocal MAX_SCAN = 50\n\n-- Prefer Minion's EntityList when available\nif not EntityList then\n    -- Fallback: only check current target if we can't enumerate entities\n    local t = TensorCore:mGetTarget()\n    if not (t and t.attackable and t.pos) then\n        return false\n    end\n\n    local d = Dist2D(t.pos, p.pos)\n    if d > MAX_SCAN then return false end\n\n    local tHR = t.hitradius or 0\n    local r = 4.0 + tHR - pHR\n    return (r > 0) and (d <= r)\nend\n\nlocal ents = EntityList(\"attackable\")\nif type(ents) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(ents) do\n    if e and e.attackable and e.pos then\n        local d = Dist2D(e.pos, p.pos)\n        if d <= MAX_SCAN then\n            local eHR = e.hitradius or 0\n            local r = 4.0 + eHR - pHR  -- same as: targetHR - (playerHR - 0.5) + 3.5\n            if r > 0 and d <= r then\n                return true\n            end\n        end\n    end\nend\n\nreturn false",
 							conditionType = 6,
 							inRangeValue = 3.2799999713898,
 							name = "<Range",
@@ -5002,7 +5002,7 @@ local tbl =
 							buffCheckType = 3,
 							category = "Lua",
 							comparator = 2,
-							conditionLua = "-- Condition: 若 5m 有效射程内存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\n-- 取敌对实体列表：优先 TensorCore，其次兼容 Minion 的 EntityList（若存在）\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    -- 常见：Enemy / Attackable / Aggro 等；这里用 Enemy，若你环境不是这个名字会直接降级到 false\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    -- Minion 常见过滤：attackable\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        -- 存活判断（不同对象字段可能不同，做兼容）\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        -- 可选中 / 可攻击（同样做兼容）\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" then\n                -- 目标命中半径字段兼容：hitradius / hitdarius\n                local hitr = 0\n                if type(e.hitradius) == \"number\" then\n                    hitr = e.hitradius\n                elseif type(e.hitdarius) == \"number\" then\n                    hitr = e.hitdarius\n                end\n\n                -- 有效距离：中心距 - 目标命中半径\n                if (d - hitr) <= RANGE then\n                    return true\n                end\n            end\n        end\n    end\nend\n\nreturn false\n",
+							conditionLua = "-- Condition: return true if player is inside ANY nearby attackable target's\n-- “original target ring” radius (same radius math you used: r = 4.0 + targetHR - playerHR)\n\nif not (TensorCore and TensorCore.mGetPlayer) then\n    return false\nend\n\nlocal p = TensorCore:mGetPlayer()\nif not (p and p.pos) then\n    return false\nend\n\nlocal pHR = p.hitradius or 0.5\n\n-- Safe 2D distance helper (XZ plane)\nlocal function Dist2D(a, b)\n    if Distance2DT then\n        return Distance2DT(a, b)\n    end\n    if not (a and b) then return math.huge end\n    local dx = (a.x or 0) - (b.x or 0)\n    local dz = (a.z or 0) - (b.z or 0)\n    return math.sqrt(dx*dx + dz*dz)\nend\n\n-- “Nearby” scan range (meters). Adjust as you like.\nlocal MAX_SCAN = 50\n\n-- Prefer Minion's EntityList when available\nif not EntityList then\n    -- Fallback: only check current target if we can't enumerate entities\n    local t = TensorCore:mGetTarget()\n    if not (t and t.attackable and t.pos) then\n        return false\n    end\n\n    local d = Dist2D(t.pos, p.pos)\n    if d > MAX_SCAN then return false end\n\n    local tHR = t.hitradius or 0\n    local r = 4.0 + tHR - pHR\n    return (r > 0) and (d <= r)\nend\n\nlocal ents = EntityList(\"attackable\")\nif type(ents) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(ents) do\n    if e and e.attackable and e.pos then\n        local d = Dist2D(e.pos, p.pos)\n        if d <= MAX_SCAN then\n            local eHR = e.hitradius or 0\n            local r = 4.0 + eHR - pHR  -- same as: targetHR - (playerHR - 0.5) + 3.5\n            if r > 0 and d <= r then\n                return true\n            end\n        end\n    end\nend\n\nreturn false",
 							conditionType = 6,
 							inRangeValue = 3.2799999713898,
 							name = "<Range",
@@ -5393,6 +5393,879 @@ local tbl =
 				uuid = "38bbf0cb-351a-2fdd-bdf0-c229e3d6d120",
 				version = 2,
 			},
+		},
+	},
+	[83] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7386,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"a7adc4fe-47df-c8e4-8666-dd4c0d69de6e",
+									true,
+								},
+								
+								{
+									"10938913-c01d-53ff-b131-d705854b2ea0",
+									true,
+								},
+								
+								{
+									"fadacd08-84f1-679b-9ad3-253ae69f2ead",
+									true,
+								},
+								
+								{
+									"f06ac7c9-e997-57b7-bd3d-1c842aebd411",
+									true,
+								},
+								
+								{
+									"529d3257-1e25-9ac0-a9c2-d3ebfc46a8fe",
+									true,
+								},
+							},
+							fallthrough = true,
+							gVar = "ACR_RikuWAR3_Hotbar_Onslaught",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "f2ac831b-090a-3c01-a111-84685e62a922",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16461,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"f931b07c-7ca7-0e6d-8bed-c71b4a9e89ea",
+									true,
+								},
+								
+								{
+									"10938913-c01d-53ff-b131-d705854b2ea0",
+									true,
+								},
+								
+								{
+									"fadacd08-84f1-679b-9ad3-253ae69f2ead",
+									true,
+								},
+								
+								{
+									"f06ac7c9-e997-57b7-bd3d-1c842aebd411",
+									true,
+								},
+								
+								{
+									"529d3257-1e25-9ac0-a9c2-d3ebfc46a8fe",
+									true,
+								},
+							},
+							fallthrough = true,
+							gVar = "ACR_RikuPLD3_Hotbar_Intervene",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "6e14d463-2c91-9d5c-a583-245f65c25585",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36926,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"89674c1a-523d-7931-b22f-0e7220d46fe1",
+									true,
+								},
+								
+								{
+									"10938913-c01d-53ff-b131-d705854b2ea0",
+									true,
+								},
+								
+								{
+									"fadacd08-84f1-679b-9ad3-253ae69f2ead",
+									true,
+								},
+								
+								{
+									"f06ac7c9-e997-57b7-bd3d-1c842aebd411",
+									true,
+								},
+								
+								{
+									"529d3257-1e25-9ac0-a9c2-d3ebfc46a8fe",
+									true,
+								},
+							},
+							fallthrough = true,
+							gVar = "ACR_RikuDRK3_Hotbar_Shadowstride",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "168594ac-14b6-b4c1-a8ac-c1997ef1d28b",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36934,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"129eaf6a-1dcf-cfae-b514-c6e3afd609b5",
+									true,
+								},
+								
+								{
+									"10938913-c01d-53ff-b131-d705854b2ea0",
+									true,
+								},
+								
+								{
+									"fadacd08-84f1-679b-9ad3-253ae69f2ead",
+									true,
+								},
+								
+								{
+									"f06ac7c9-e997-57b7-bd3d-1c842aebd411",
+									true,
+								},
+								
+								{
+									"529d3257-1e25-9ac0-a9c2-d3ebfc46a8fe",
+									true,
+								},
+							},
+							fallthrough = true,
+							gVar = "ACR_RikuGNB3_Hotbar_Trajectory",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "5d95d42b-d93f-7234-af13-712eb8b749ce",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "WARRIOR",
+							name = "Warrior",
+							uuid = "a7adc4fe-47df-c8e4-8666-dd4c0d69de6e",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "Paladin",
+							uuid = "f931b07c-7ca7-0e6d-8bed-c71b4a9e89ea",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "Darkknight",
+							uuid = "89674c1a-523d-7931-b22f-0e7220d46fe1",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "Gunbreaker",
+							uuid = "129eaf6a-1dcf-cfae-b514-c6e3afd609b5",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "-- 没有目标直接 false\nif not Player or not Player:GetTarget() then\n    return false\nend\n\nlocal target = Player:GetTarget()\n\n-- 确保目标有效\nif not target or not target.pos then\n    return false\nend\n\n-- 计算平面距离（XZ）\nlocal dx = Player.pos.x - target.pos.x\nlocal dz = Player.pos.z - target.pos.z\nlocal distance = math.sqrt(dx * dx + dz * dz)\n\n-- 大于 3 米时返回 true\nreturn distance > 3.0\n",
+							name = "Out of Range",
+							uuid = "10938913-c01d-53ff-b131-d705854b2ea0",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "fadacd08-84f1-679b-9ad3-253ae69f2ead",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local p = TensorCore.mGetPlayer()\nif not p then return false end\n\nlocal myTethers = Argus.getTethersOnEnt(p.id)\n\nif myTethers ~= nil and #myTethers > 0 then\n    return true\nend\n\nreturn false",
+							name = "Have TB Tether",
+							uuid = "f06ac7c9-e997-57b7-bd3d-1c842aebd411",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							filterTargetType = "ContentID",
+							partyTargetContentID = 14305,
+							uuid = "529d3257-1e25-9ac0-a9c2-d3ebfc46a8fe",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 308.246,
+				name = "Instant Dash",
+				timeRange = true,
+				timelineIndex = 83,
+				timerStartOffset = -8,
+				uuid = "6f80a587-4d14-8dd7-ad2a-4cb60f2de018",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+	},
+	[88] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7386,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"a7adc4fe-47df-c8e4-8666-dd4c0d69de6e",
+									true,
+								},
+								
+								{
+									"10938913-c01d-53ff-b131-d705854b2ea0",
+									true,
+								},
+								
+								{
+									"fadacd08-84f1-679b-9ad3-253ae69f2ead",
+									true,
+								},
+								
+								{
+									"f06ac7c9-e997-57b7-bd3d-1c842aebd411",
+									true,
+								},
+								
+								{
+									"529d3257-1e25-9ac0-a9c2-d3ebfc46a8fe",
+									true,
+								},
+							},
+							fallthrough = true,
+							gVar = "ACR_RikuWAR3_Hotbar_Onslaught",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "f2ac831b-090a-3c01-a111-84685e62a922",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16461,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"f931b07c-7ca7-0e6d-8bed-c71b4a9e89ea",
+									true,
+								},
+								
+								{
+									"10938913-c01d-53ff-b131-d705854b2ea0",
+									true,
+								},
+								
+								{
+									"fadacd08-84f1-679b-9ad3-253ae69f2ead",
+									true,
+								},
+								
+								{
+									"f06ac7c9-e997-57b7-bd3d-1c842aebd411",
+									true,
+								},
+								
+								{
+									"529d3257-1e25-9ac0-a9c2-d3ebfc46a8fe",
+									true,
+								},
+							},
+							fallthrough = true,
+							gVar = "ACR_RikuPLD3_Hotbar_Intervene",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "6e14d463-2c91-9d5c-a583-245f65c25585",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36926,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"89674c1a-523d-7931-b22f-0e7220d46fe1",
+									true,
+								},
+								
+								{
+									"10938913-c01d-53ff-b131-d705854b2ea0",
+									true,
+								},
+								
+								{
+									"fadacd08-84f1-679b-9ad3-253ae69f2ead",
+									true,
+								},
+								
+								{
+									"f06ac7c9-e997-57b7-bd3d-1c842aebd411",
+									true,
+								},
+								
+								{
+									"529d3257-1e25-9ac0-a9c2-d3ebfc46a8fe",
+									true,
+								},
+							},
+							fallthrough = true,
+							gVar = "ACR_RikuDRK3_Hotbar_Shadowstride",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "168594ac-14b6-b4c1-a8ac-c1997ef1d28b",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36934,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"129eaf6a-1dcf-cfae-b514-c6e3afd609b5",
+									true,
+								},
+								
+								{
+									"10938913-c01d-53ff-b131-d705854b2ea0",
+									true,
+								},
+								
+								{
+									"fadacd08-84f1-679b-9ad3-253ae69f2ead",
+									true,
+								},
+								
+								{
+									"f06ac7c9-e997-57b7-bd3d-1c842aebd411",
+									true,
+								},
+								
+								{
+									"529d3257-1e25-9ac0-a9c2-d3ebfc46a8fe",
+									true,
+								},
+							},
+							fallthrough = true,
+							gVar = "ACR_RikuGNB3_Hotbar_Trajectory",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "5d95d42b-d93f-7234-af13-712eb8b749ce",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "WARRIOR",
+							name = "Warrior",
+							uuid = "a7adc4fe-47df-c8e4-8666-dd4c0d69de6e",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "Paladin",
+							uuid = "f931b07c-7ca7-0e6d-8bed-c71b4a9e89ea",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "Darkknight",
+							uuid = "89674c1a-523d-7931-b22f-0e7220d46fe1",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "Gunbreaker",
+							uuid = "129eaf6a-1dcf-cfae-b514-c6e3afd609b5",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "-- 没有目标直接 false\nif not Player or not Player:GetTarget() then\n    return false\nend\n\nlocal target = Player:GetTarget()\n\n-- 确保目标有效\nif not target or not target.pos then\n    return false\nend\n\n-- 计算平面距离（XZ）\nlocal dx = Player.pos.x - target.pos.x\nlocal dz = Player.pos.z - target.pos.z\nlocal distance = math.sqrt(dx * dx + dz * dz)\n\n-- 大于 3 米时返回 true\nreturn distance > 3.0\n",
+							name = "Out of Range",
+							uuid = "10938913-c01d-53ff-b131-d705854b2ea0",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "fadacd08-84f1-679b-9ad3-253ae69f2ead",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local p = TensorCore.mGetPlayer()\nif not p then return false end\n\nlocal myTethers = Argus.getTethersOnEnt(p.id)\n\nif myTethers ~= nil and #myTethers > 0 then\n    return true\nend\n\nreturn false",
+							name = "Have TB Tether",
+							uuid = "f06ac7c9-e997-57b7-bd3d-1c842aebd411",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							filterTargetType = "ContentID",
+							partyTargetContentID = 14305,
+							uuid = "529d3257-1e25-9ac0-a9c2-d3ebfc46a8fe",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 318.199,
+				name = "Instant Dash",
+				timeRange = true,
+				timelineIndex = 88,
+				timerStartOffset = -8,
+				uuid = "c40443f7-2773-1749-8529-c8dd626d6464",
+				version = 2,
+			},
+			inheritedIndex = 3,
+		},
+	},
+	[93] = 
+	{
+		
+		{
+			data = 
+			{
+				actions = 
+				{
+					
+					{
+						data = 
+						{
+							actionID = 7386,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"a7adc4fe-47df-c8e4-8666-dd4c0d69de6e",
+									true,
+								},
+								
+								{
+									"10938913-c01d-53ff-b131-d705854b2ea0",
+									true,
+								},
+								
+								{
+									"fadacd08-84f1-679b-9ad3-253ae69f2ead",
+									true,
+								},
+								
+								{
+									"f06ac7c9-e997-57b7-bd3d-1c842aebd411",
+									true,
+								},
+								
+								{
+									"529d3257-1e25-9ac0-a9c2-d3ebfc46a8fe",
+									true,
+								},
+							},
+							fallthrough = true,
+							gVar = "ACR_RikuWAR3_Hotbar_Onslaught",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "f2ac831b-090a-3c01-a111-84685e62a922",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 16461,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"f931b07c-7ca7-0e6d-8bed-c71b4a9e89ea",
+									true,
+								},
+								
+								{
+									"10938913-c01d-53ff-b131-d705854b2ea0",
+									true,
+								},
+								
+								{
+									"fadacd08-84f1-679b-9ad3-253ae69f2ead",
+									true,
+								},
+								
+								{
+									"f06ac7c9-e997-57b7-bd3d-1c842aebd411",
+									true,
+								},
+								
+								{
+									"529d3257-1e25-9ac0-a9c2-d3ebfc46a8fe",
+									true,
+								},
+							},
+							fallthrough = true,
+							gVar = "ACR_RikuPLD3_Hotbar_Intervene",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "6e14d463-2c91-9d5c-a583-245f65c25585",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36926,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"89674c1a-523d-7931-b22f-0e7220d46fe1",
+									true,
+								},
+								
+								{
+									"10938913-c01d-53ff-b131-d705854b2ea0",
+									true,
+								},
+								
+								{
+									"fadacd08-84f1-679b-9ad3-253ae69f2ead",
+									true,
+								},
+								
+								{
+									"f06ac7c9-e997-57b7-bd3d-1c842aebd411",
+									true,
+								},
+								
+								{
+									"529d3257-1e25-9ac0-a9c2-d3ebfc46a8fe",
+									true,
+								},
+							},
+							fallthrough = true,
+							gVar = "ACR_RikuDRK3_Hotbar_Shadowstride",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "168594ac-14b6-b4c1-a8ac-c1997ef1d28b",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							actionID = 36934,
+							allowInterrupt = true,
+							conditions = 
+							{
+								
+								{
+									"129eaf6a-1dcf-cfae-b514-c6e3afd609b5",
+									true,
+								},
+								
+								{
+									"10938913-c01d-53ff-b131-d705854b2ea0",
+									true,
+								},
+								
+								{
+									"fadacd08-84f1-679b-9ad3-253ae69f2ead",
+									true,
+								},
+								
+								{
+									"f06ac7c9-e997-57b7-bd3d-1c842aebd411",
+									true,
+								},
+								
+								{
+									"529d3257-1e25-9ac0-a9c2-d3ebfc46a8fe",
+									true,
+								},
+							},
+							fallthrough = true,
+							gVar = "ACR_RikuGNB3_Hotbar_Trajectory",
+							ignoreWeaveRules = true,
+							targetContentID = 14369,
+							targetType = "Detection Target",
+							uuid = "5d95d42b-d93f-7234-af13-712eb8b749ce",
+							variableTogglesType = 2,
+							version = 2.1,
+						},
+					},
+				},
+				conditions = 
+				{
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "WARRIOR",
+							name = "Warrior",
+							uuid = "a7adc4fe-47df-c8e4-8666-dd4c0d69de6e",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "PALADIN",
+							name = "Paladin",
+							uuid = "f931b07c-7ca7-0e6d-8bed-c71b4a9e89ea",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "DARKKNIGHT",
+							name = "Darkknight",
+							uuid = "89674c1a-523d-7931-b22f-0e7220d46fe1",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Self",
+							conditionType = 13,
+							jobValue = "GUNBREAKER",
+							name = "Gunbreaker",
+							uuid = "129eaf6a-1dcf-cfae-b514-c6e3afd609b5",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "-- 没有目标直接 false\nif not Player or not Player:GetTarget() then\n    return false\nend\n\nlocal target = Player:GetTarget()\n\n-- 确保目标有效\nif not target or not target.pos then\n    return false\nend\n\n-- 计算平面距离（XZ）\nlocal dx = Player.pos.x - target.pos.x\nlocal dz = Player.pos.z - target.pos.z\nlocal distance = math.sqrt(dx * dx + dz * dz)\n\n-- 大于 3 米时返回 true\nreturn distance > 3.0\n",
+							name = "Out of Range",
+							uuid = "10938913-c01d-53ff-b131-d705854b2ea0",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return FFXIV_Common_BotRunning",
+							name = "Bot Running",
+							uuid = "fadacd08-84f1-679b-9ad3-253ae69f2ead",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "local p = TensorCore.mGetPlayer()\nif not p then return false end\n\nlocal myTethers = Argus.getTethersOnEnt(p.id)\n\nif myTethers ~= nil and #myTethers > 0 then\n    return true\nend\n\nreturn false",
+							name = "Have TB Tether",
+							uuid = "f06ac7c9-e997-57b7-bd3d-1c842aebd411",
+							version = 3,
+						},
+					},
+					
+					{
+						data = 
+						{
+							category = "Filter",
+							filterTargetType = "ContentID",
+							partyTargetContentID = 14305,
+							uuid = "529d3257-1e25-9ac0-a9c2-d3ebfc46a8fe",
+							version = 3,
+						},
+					},
+				},
+				mechanicTime = 328.152,
+				name = "Instant Dash",
+				timeRange = true,
+				timelineIndex = 93,
+				timerStartOffset = -8,
+				uuid = "71e96a3c-4a2c-21ba-830c-da10474dee6c",
+				version = 2,
+			},
+			inheritedIndex = 3,
 		},
 	},
 	[104] = 
@@ -6736,7 +7609,7 @@ local tbl =
 							buffCheckType = 3,
 							category = "Lua",
 							comparator = 2,
-							conditionLua = "-- Condition: 若 5m 有效射程内存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\n-- 取敌对实体列表：优先 TensorCore，其次兼容 Minion 的 EntityList（若存在）\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    -- 常见：Enemy / Attackable / Aggro 等；这里用 Enemy，若你环境不是这个名字会直接降级到 false\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    -- Minion 常见过滤：attackable\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        -- 存活判断（不同对象字段可能不同，做兼容）\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        -- 可选中 / 可攻击（同样做兼容）\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" then\n                -- 目标命中半径字段兼容：hitradius / hitdarius\n                local hitr = 0\n                if type(e.hitradius) == \"number\" then\n                    hitr = e.hitradius\n                elseif type(e.hitdarius) == \"number\" then\n                    hitr = e.hitdarius\n                end\n\n                -- 有效距离：中心距 - 目标命中半径\n                if (d - hitr) <= RANGE then\n                    return true\n                end\n            end\n        end\n    end\nend\n\nreturn false\n",
+							conditionLua = "-- Condition: return true if player is inside ANY nearby attackable target's\n-- “original target ring” radius (same radius math you used: r = 4.0 + targetHR - playerHR)\n\nif not (TensorCore and TensorCore.mGetPlayer) then\n    return false\nend\n\nlocal p = TensorCore:mGetPlayer()\nif not (p and p.pos) then\n    return false\nend\n\nlocal pHR = p.hitradius or 0.5\n\n-- Safe 2D distance helper (XZ plane)\nlocal function Dist2D(a, b)\n    if Distance2DT then\n        return Distance2DT(a, b)\n    end\n    if not (a and b) then return math.huge end\n    local dx = (a.x or 0) - (b.x or 0)\n    local dz = (a.z or 0) - (b.z or 0)\n    return math.sqrt(dx*dx + dz*dz)\nend\n\n-- “Nearby” scan range (meters). Adjust as you like.\nlocal MAX_SCAN = 50\n\n-- Prefer Minion's EntityList when available\nif not EntityList then\n    -- Fallback: only check current target if we can't enumerate entities\n    local t = TensorCore:mGetTarget()\n    if not (t and t.attackable and t.pos) then\n        return false\n    end\n\n    local d = Dist2D(t.pos, p.pos)\n    if d > MAX_SCAN then return false end\n\n    local tHR = t.hitradius or 0\n    local r = 4.0 + tHR - pHR\n    return (r > 0) and (d <= r)\nend\n\nlocal ents = EntityList(\"attackable\")\nif type(ents) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(ents) do\n    if e and e.attackable and e.pos then\n        local d = Dist2D(e.pos, p.pos)\n        if d <= MAX_SCAN then\n            local eHR = e.hitradius or 0\n            local r = 4.0 + eHR - pHR  -- same as: targetHR - (playerHR - 0.5) + 3.5\n            if r > 0 and d <= r then\n                return true\n            end\n        end\n    end\nend\n\nreturn false",
 							conditionType = 6,
 							inRangeValue = 3.2799999713898,
 							name = "<Range",
@@ -7824,7 +8697,7 @@ local tbl =
 							buffCheckType = 3,
 							category = "Lua",
 							comparator = 2,
-							conditionLua = "-- Condition: 若 5m 有效射程内存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\n-- 取敌对实体列表：优先 TensorCore，其次兼容 Minion 的 EntityList（若存在）\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    -- 常见：Enemy / Attackable / Aggro 等；这里用 Enemy，若你环境不是这个名字会直接降级到 false\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    -- Minion 常见过滤：attackable\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        -- 存活判断（不同对象字段可能不同，做兼容）\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        -- 可选中 / 可攻击（同样做兼容）\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" then\n                -- 目标命中半径字段兼容：hitradius / hitdarius\n                local hitr = 0\n                if type(e.hitradius) == \"number\" then\n                    hitr = e.hitradius\n                elseif type(e.hitdarius) == \"number\" then\n                    hitr = e.hitdarius\n                end\n\n                -- 有效距离：中心距 - 目标命中半径\n                if (d - hitr) <= RANGE then\n                    return true\n                end\n            end\n        end\n    end\nend\n\nreturn false\n",
+							conditionLua = "-- Condition: return true if player is inside ANY nearby attackable target's\n-- “original target ring” radius (same radius math you used: r = 4.0 + targetHR - playerHR)\n\nif not (TensorCore and TensorCore.mGetPlayer) then\n    return false\nend\n\nlocal p = TensorCore:mGetPlayer()\nif not (p and p.pos) then\n    return false\nend\n\nlocal pHR = p.hitradius or 0.5\n\n-- Safe 2D distance helper (XZ plane)\nlocal function Dist2D(a, b)\n    if Distance2DT then\n        return Distance2DT(a, b)\n    end\n    if not (a and b) then return math.huge end\n    local dx = (a.x or 0) - (b.x or 0)\n    local dz = (a.z or 0) - (b.z or 0)\n    return math.sqrt(dx*dx + dz*dz)\nend\n\n-- “Nearby” scan range (meters). Adjust as you like.\nlocal MAX_SCAN = 50\n\n-- Prefer Minion's EntityList when available\nif not EntityList then\n    -- Fallback: only check current target if we can't enumerate entities\n    local t = TensorCore:mGetTarget()\n    if not (t and t.attackable and t.pos) then\n        return false\n    end\n\n    local d = Dist2D(t.pos, p.pos)\n    if d > MAX_SCAN then return false end\n\n    local tHR = t.hitradius or 0\n    local r = 4.0 + tHR - pHR\n    return (r > 0) and (d <= r)\nend\n\nlocal ents = EntityList(\"attackable\")\nif type(ents) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(ents) do\n    if e and e.attackable and e.pos then\n        local d = Dist2D(e.pos, p.pos)\n        if d <= MAX_SCAN then\n            local eHR = e.hitradius or 0\n            local r = 4.0 + eHR - pHR  -- same as: targetHR - (playerHR - 0.5) + 3.5\n            if r > 0 and d <= r then\n                return true\n            end\n        end\n    end\nend\n\nreturn false",
 							conditionType = 6,
 							inRangeValue = 3.2799999713898,
 							name = "<Range",
@@ -8359,7 +9232,7 @@ local tbl =
 							buffCheckType = 3,
 							category = "Lua",
 							comparator = 2,
-							conditionLua = "-- Condition: 若 5m 有效射程内存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\n-- 取敌对实体列表：优先 TensorCore，其次兼容 Minion 的 EntityList（若存在）\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    -- 常见：Enemy / Attackable / Aggro 等；这里用 Enemy，若你环境不是这个名字会直接降级到 false\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    -- Minion 常见过滤：attackable\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        -- 存活判断（不同对象字段可能不同，做兼容）\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        -- 可选中 / 可攻击（同样做兼容）\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" then\n                -- 目标命中半径字段兼容：hitradius / hitdarius\n                local hitr = 0\n                if type(e.hitradius) == \"number\" then\n                    hitr = e.hitradius\n                elseif type(e.hitdarius) == \"number\" then\n                    hitr = e.hitdarius\n                end\n\n                -- 有效距离：中心距 - 目标命中半径\n                if (d - hitr) <= RANGE then\n                    return true\n                end\n            end\n        end\n    end\nend\n\nreturn false\n",
+							conditionLua = "-- Condition: return true if player is inside ANY nearby attackable target's\n-- “original target ring” radius (same radius math you used: r = 4.0 + targetHR - playerHR)\n\nif not (TensorCore and TensorCore.mGetPlayer) then\n    return false\nend\n\nlocal p = TensorCore:mGetPlayer()\nif not (p and p.pos) then\n    return false\nend\n\nlocal pHR = p.hitradius or 0.5\n\n-- Safe 2D distance helper (XZ plane)\nlocal function Dist2D(a, b)\n    if Distance2DT then\n        return Distance2DT(a, b)\n    end\n    if not (a and b) then return math.huge end\n    local dx = (a.x or 0) - (b.x or 0)\n    local dz = (a.z or 0) - (b.z or 0)\n    return math.sqrt(dx*dx + dz*dz)\nend\n\n-- “Nearby” scan range (meters). Adjust as you like.\nlocal MAX_SCAN = 50\n\n-- Prefer Minion's EntityList when available\nif not EntityList then\n    -- Fallback: only check current target if we can't enumerate entities\n    local t = TensorCore:mGetTarget()\n    if not (t and t.attackable and t.pos) then\n        return false\n    end\n\n    local d = Dist2D(t.pos, p.pos)\n    if d > MAX_SCAN then return false end\n\n    local tHR = t.hitradius or 0\n    local r = 4.0 + tHR - pHR\n    return (r > 0) and (d <= r)\nend\n\nlocal ents = EntityList(\"attackable\")\nif type(ents) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(ents) do\n    if e and e.attackable and e.pos then\n        local d = Dist2D(e.pos, p.pos)\n        if d <= MAX_SCAN then\n            local eHR = e.hitradius or 0\n            local r = 4.0 + eHR - pHR  -- same as: targetHR - (playerHR - 0.5) + 3.5\n            if r > 0 and d <= r then\n                return true\n            end\n        end\n    end\nend\n\nreturn false",
 							conditionType = 6,
 							inRangeValue = 3.2799999713898,
 							name = "<Range",
@@ -8946,7 +9819,7 @@ local tbl =
 							buffCheckType = 3,
 							category = "Lua",
 							comparator = 2,
-							conditionLua = "-- Condition: 若 5m 有效射程内存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\n-- 取敌对实体列表：优先 TensorCore，其次兼容 Minion 的 EntityList（若存在）\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    -- 常见：Enemy / Attackable / Aggro 等；这里用 Enemy，若你环境不是这个名字会直接降级到 false\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    -- Minion 常见过滤：attackable\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        -- 存活判断（不同对象字段可能不同，做兼容）\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        -- 可选中 / 可攻击（同样做兼容）\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" then\n                -- 目标命中半径字段兼容：hitradius / hitdarius\n                local hitr = 0\n                if type(e.hitradius) == \"number\" then\n                    hitr = e.hitradius\n                elseif type(e.hitdarius) == \"number\" then\n                    hitr = e.hitdarius\n                end\n\n                -- 有效距离：中心距 - 目标命中半径\n                if (d - hitr) <= RANGE then\n                    return true\n                end\n            end\n        end\n    end\nend\n\nreturn false\n",
+							conditionLua = "-- Condition: return true if player is inside ANY nearby attackable target's\n-- “original target ring” radius (same radius math you used: r = 4.0 + targetHR - playerHR)\n\nif not (TensorCore and TensorCore.mGetPlayer) then\n    return false\nend\n\nlocal p = TensorCore:mGetPlayer()\nif not (p and p.pos) then\n    return false\nend\n\nlocal pHR = p.hitradius or 0.5\n\n-- Safe 2D distance helper (XZ plane)\nlocal function Dist2D(a, b)\n    if Distance2DT then\n        return Distance2DT(a, b)\n    end\n    if not (a and b) then return math.huge end\n    local dx = (a.x or 0) - (b.x or 0)\n    local dz = (a.z or 0) - (b.z or 0)\n    return math.sqrt(dx*dx + dz*dz)\nend\n\n-- “Nearby” scan range (meters). Adjust as you like.\nlocal MAX_SCAN = 50\n\n-- Prefer Minion's EntityList when available\nif not EntityList then\n    -- Fallback: only check current target if we can't enumerate entities\n    local t = TensorCore:mGetTarget()\n    if not (t and t.attackable and t.pos) then\n        return false\n    end\n\n    local d = Dist2D(t.pos, p.pos)\n    if d > MAX_SCAN then return false end\n\n    local tHR = t.hitradius or 0\n    local r = 4.0 + tHR - pHR\n    return (r > 0) and (d <= r)\nend\n\nlocal ents = EntityList(\"attackable\")\nif type(ents) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(ents) do\n    if e and e.attackable and e.pos then\n        local d = Dist2D(e.pos, p.pos)\n        if d <= MAX_SCAN then\n            local eHR = e.hitradius or 0\n            local r = 4.0 + eHR - pHR  -- same as: targetHR - (playerHR - 0.5) + 3.5\n            if r > 0 and d <= r then\n                return true\n            end\n        end\n    end\nend\n\nreturn false",
 							conditionType = 6,
 							inRangeValue = 3.2799999713898,
 							name = "<Range",
@@ -9518,7 +10391,7 @@ local tbl =
 							buffCheckType = 3,
 							category = "Lua",
 							comparator = 2,
-							conditionLua = "-- Condition: 若 5m 有效射程内存在任意“可选中 + 可攻击 + 存活”的目标，则返回 true\n\nlocal player = TensorCore.mGetPlayer()\nif not player or not player.pos then\n    return false\nend\n\nlocal RANGE = 5.0\n\n-- 取敌对实体列表：优先 TensorCore，其次兼容 Minion 的 EntityList（若存在）\nlocal enemies = nil\nif TensorCore.getEntityGroupList then\n    -- 常见：Enemy / Attackable / Aggro 等；这里用 Enemy，若你环境不是这个名字会直接降级到 false\n    enemies = TensorCore.getEntityGroupList(\"Enemy\")\nend\nif (not enemies) and type(EntityList) == \"function\" then\n    -- Minion 常见过滤：attackable\n    enemies = EntityList(\"attackable\")\nend\n\nif type(enemies) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(enemies) do\n    if e and e.pos then\n        -- 存活判断（不同对象字段可能不同，做兼容）\n        local alive = true\n        if e.alive ~= nil then\n            alive = (e.alive == true)\n        elseif e.hp ~= nil then\n            alive = (e.hp > 0)\n        end\n\n        -- 可选中 / 可攻击（同样做兼容）\n        local selectable = (e.selectable == nil) and true or (e.selectable == true)\n        local attackable = (e.attackable == nil) and true or (e.attackable == true)\n\n        if alive and selectable and attackable then\n            local d = TensorCore.getDistance2d(player.pos, e.pos)\n            if type(d) == \"number\" then\n                -- 目标命中半径字段兼容：hitradius / hitdarius\n                local hitr = 0\n                if type(e.hitradius) == \"number\" then\n                    hitr = e.hitradius\n                elseif type(e.hitdarius) == \"number\" then\n                    hitr = e.hitdarius\n                end\n\n                -- 有效距离：中心距 - 目标命中半径\n                if (d - hitr) <= RANGE then\n                    return true\n                end\n            end\n        end\n    end\nend\n\nreturn false\n",
+							conditionLua = "-- Condition: return true if player is inside ANY nearby attackable target's\n-- “original target ring” radius (same radius math you used: r = 4.0 + targetHR - playerHR)\n\nif not (TensorCore and TensorCore.mGetPlayer) then\n    return false\nend\n\nlocal p = TensorCore:mGetPlayer()\nif not (p and p.pos) then\n    return false\nend\n\nlocal pHR = p.hitradius or 0.5\n\n-- Safe 2D distance helper (XZ plane)\nlocal function Dist2D(a, b)\n    if Distance2DT then\n        return Distance2DT(a, b)\n    end\n    if not (a and b) then return math.huge end\n    local dx = (a.x or 0) - (b.x or 0)\n    local dz = (a.z or 0) - (b.z or 0)\n    return math.sqrt(dx*dx + dz*dz)\nend\n\n-- “Nearby” scan range (meters). Adjust as you like.\nlocal MAX_SCAN = 50\n\n-- Prefer Minion's EntityList when available\nif not EntityList then\n    -- Fallback: only check current target if we can't enumerate entities\n    local t = TensorCore:mGetTarget()\n    if not (t and t.attackable and t.pos) then\n        return false\n    end\n\n    local d = Dist2D(t.pos, p.pos)\n    if d > MAX_SCAN then return false end\n\n    local tHR = t.hitradius or 0\n    local r = 4.0 + tHR - pHR\n    return (r > 0) and (d <= r)\nend\n\nlocal ents = EntityList(\"attackable\")\nif type(ents) ~= \"table\" then\n    return false\nend\n\nfor _, e in pairs(ents) do\n    if e and e.attackable and e.pos then\n        local d = Dist2D(e.pos, p.pos)\n        if d <= MAX_SCAN then\n            local eHR = e.hitradius or 0\n            local r = 4.0 + eHR - pHR  -- same as: targetHR - (playerHR - 0.5) + 3.5\n            if r > 0 and d <= r then\n                return true\n            end\n        end\n    end\nend\n\nreturn false",
 							conditionType = 6,
 							inRangeValue = 3.2799999713898,
 							name = "<Range",
