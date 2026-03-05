@@ -8814,7 +8814,6 @@ local tbl =
 						{
 							actionID = 7386,
 							allowInterrupt = true,
-							atomicPriority = true,
 							conditions = 
 							{
 								
@@ -8867,7 +8866,6 @@ local tbl =
 						{
 							actionID = 16461,
 							allowInterrupt = true,
-							atomicPriority = true,
 							conditions = 
 							{
 								
@@ -8920,7 +8918,6 @@ local tbl =
 						{
 							actionID = 36926,
 							allowInterrupt = true,
-							atomicPriority = true,
 							conditions = 
 							{
 								
@@ -8973,7 +8970,6 @@ local tbl =
 						{
 							actionID = 36934,
 							allowInterrupt = true,
-							atomicPriority = true,
 							conditions = 
 							{
 								
@@ -10823,187 +10819,19 @@ local tbl =
 					{
 						data = 
 						{
-							actionID = 7386,
-							allowInterrupt = true,
+							aType = "Lua",
+							actionLua = "data.myTetherActive = true\nself.used = true",
 							conditions = 
 							{
 								
 								{
-									"9dc256c4-0973-92e1-b8d1-8c26c8338c69",
-									true,
-								},
-								
-								{
-									"c5b031d9-39d8-20ce-852d-fe2badd0c7de",
-									true,
-								},
-								
-								{
-									"20ca99f0-05b2-a371-a3d5-e0248c7794a5",
-									true,
-								},
-								
-								{
-									"b7bf2038-9e83-988e-bb35-53593e44a22a",
-									true,
-								},
-								
-								{
-									"9e30131a-f5cc-f4ef-aa07-dada79f7511c",
-									true,
-								},
-								
-								{
-									"be9e4661-c2c4-05a6-b609-359e384d3ce3",
+									"e7fb3072-e18a-3f0d-bdce-f8dcd7893af9",
 									true,
 								},
 							},
-							gVar = "ACR_TensorWeeb3_CD",
-							ignoreWeaveRules = true,
-							targetContentID = 14369,
-							targetType = "Detection Target",
-							uuid = "2b0f079f-660b-7638-8cbe-1f621b90d82d",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionID = 16461,
-							allowInterrupt = true,
-							conditions = 
-							{
-								
-								{
-									"d0073ae7-0925-b120-b077-e7fb8c5399c6",
-									true,
-								},
-								
-								{
-									"c5b031d9-39d8-20ce-852d-fe2badd0c7de",
-									true,
-								},
-								
-								{
-									"20ca99f0-05b2-a371-a3d5-e0248c7794a5",
-									true,
-								},
-								
-								{
-									"b7bf2038-9e83-988e-bb35-53593e44a22a",
-									true,
-								},
-								
-								{
-									"9e30131a-f5cc-f4ef-aa07-dada79f7511c",
-									true,
-								},
-								
-								{
-									"be9e4661-c2c4-05a6-b609-359e384d3ce3",
-									true,
-								},
-							},
-							gVar = "ACR_TensorWeeb3_CD",
-							ignoreWeaveRules = true,
-							targetContentID = 14369,
-							targetType = "Detection Target",
-							uuid = "a99eeb72-9584-d8ab-a668-2a31a50a1c99",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionID = 36926,
-							allowInterrupt = true,
-							conditions = 
-							{
-								
-								{
-									"369872b3-8031-7449-bcf6-1832505f319c",
-									true,
-								},
-								
-								{
-									"c5b031d9-39d8-20ce-852d-fe2badd0c7de",
-									true,
-								},
-								
-								{
-									"20ca99f0-05b2-a371-a3d5-e0248c7794a5",
-									true,
-								},
-								
-								{
-									"b7bf2038-9e83-988e-bb35-53593e44a22a",
-									true,
-								},
-								
-								{
-									"9e30131a-f5cc-f4ef-aa07-dada79f7511c",
-									true,
-								},
-								
-								{
-									"be9e4661-c2c4-05a6-b609-359e384d3ce3",
-									true,
-								},
-							},
-							gVar = "ACR_TensorWeeb3_CD",
-							ignoreWeaveRules = true,
-							targetContentID = 14369,
-							targetType = "Detection Target",
-							uuid = "0db81040-95bf-5bd8-b3d5-16f694e7ac66",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							actionID = 36934,
-							allowInterrupt = true,
-							conditions = 
-							{
-								
-								{
-									"2fe271b9-641f-23ab-afc7-80a85111a680",
-									true,
-								},
-								
-								{
-									"c5b031d9-39d8-20ce-852d-fe2badd0c7de",
-									true,
-								},
-								
-								{
-									"20ca99f0-05b2-a371-a3d5-e0248c7794a5",
-									true,
-								},
-								
-								{
-									"b7bf2038-9e83-988e-bb35-53593e44a22a",
-									true,
-								},
-								
-								{
-									"9e30131a-f5cc-f4ef-aa07-dada79f7511c",
-									true,
-								},
-								
-								{
-									"be9e4661-c2c4-05a6-b609-359e384d3ce3",
-									true,
-								},
-							},
-							gVar = "ACR_TensorWeeb3_CD",
-							ignoreWeaveRules = true,
-							targetContentID = 14369,
-							targetType = "Detection Target",
-							uuid = "916ad1dd-ba43-c585-949c-bed6700651e0",
+							gVar = "ACR_RikuGNB3_CD",
+							name = "Monitoring Tether",
+							uuid = "b437ffb1-9e6b-7429-b641-d1234a54720a",
 							version = 2.1,
 						},
 					},
@@ -11014,116 +10842,26 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Self",
-							conditionType = 13,
-							jobValue = "WARRIOR",
-							name = "Warrior",
-							uuid = "9dc256c4-0973-92e1-b8d1-8c26c8338c69",
-							version = 3,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 13,
-							jobValue = "PALADIN",
-							name = "Paladin",
-							uuid = "d0073ae7-0925-b120-b077-e7fb8c5399c6",
-							version = 3,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 13,
-							jobValue = "DARKKNIGHT",
-							name = "Darkknight",
-							uuid = "369872b3-8031-7449-bcf6-1832505f319c",
-							version = 3,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 13,
-							jobValue = "GUNBREAKER",
-							name = "Gunbreaker",
-							uuid = "2fe271b9-641f-23ab-afc7-80a85111a680",
-							version = 3,
-						},
-					},
-					
-					{
-						data = 
-						{
 							category = "Lua",
-							conditionLua = "-- 没有目标直接 false\nif not Player or not Player:GetTarget() then\n    return false\nend\n\nlocal target = Player:GetTarget()\n\n-- 确保目标有效\nif not target or not target.pos then\n    return false\nend\n\n-- 计算平面距离（XZ）\nlocal dx = Player.pos.x - target.pos.x\nlocal dz = Player.pos.z - target.pos.z\nlocal distance = math.sqrt(dx * dx + dz * dz)\n\n-- 大于 3 米时返回 true\nreturn distance > 3.0\n",
-							name = "Out of Range",
-							uuid = "c5b031d9-39d8-20ce-852d-fe2badd0c7de",
-							version = 3,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgType = 2,
-							eventSpellID = 46545,
-							uuid = "20ca99f0-05b2-a371-a3d5-e0248c7794a5",
-							version = 3,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 9,
-							partyTargetType = "Event Target",
-							uuid = "b7bf2038-9e83-988e-bb35-53593e44a22a",
-							version = 3,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Filter",
-							filterTargetType = "ContentID",
-							partyTargetContentID = 14373,
-							uuid = "9e30131a-f5cc-f4ef-aa07-dada79f7511c",
-							version = 3,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "return FFXIV_Common_BotRunning",
-							name = "Bot Running",
-							uuid = "be9e4661-c2c4-05a6-b609-359e384d3ce3",
+							conditionLua = "local playerID = TensorCore.mGetPlayer().id\nreturn eventArgs.newTargetID == playerID or eventArgs.sourceEntityID == playerID",
+							name = "Check Tether",
+							uuid = "e7fb3072-e18a-3f0d-bdce-f8dcd7893af9",
 							version = 3,
 						},
 					},
 				},
-				eventType = 2,
+				eventType = 15,
 				loop = true,
 				mechanicTime = 345.7,
-				name = "Instant Dash",
+				name = "Tether Trigger",
 				timeRange = true,
 				timelineIndex = 98,
-				timerEndOffset = 44.900001525879,
-				uuid = "6c5bfd79-312c-9824-a6b1-922abfbccc2c",
+				timerEndOffset = 45,
+				timerStartOffset = -5,
+				uuid = "3203ab87-7e13-810c-b0d0-30c185ce095f",
 				version = 2,
 			},
+			inheritedIndex = 1,
 		},
 		
 		{
@@ -11146,27 +10884,17 @@ local tbl =
 								},
 								
 								{
-									"c5b031d9-39d8-20ce-852d-fe2badd0c7de",
-									true,
-								},
-								
-								{
-									"20ca99f0-05b2-a371-a3d5-e0248c7794a5",
-									true,
-								},
-								
-								{
-									"b7bf2038-9e83-988e-bb35-53593e44a22a",
-									true,
-								},
-								
-								{
 									"9e30131a-f5cc-f4ef-aa07-dada79f7511c",
 									true,
 								},
 								
 								{
 									"be9e4661-c2c4-05a6-b609-359e384d3ce3",
+									true,
+								},
+								
+								{
+									"5f657d04-6112-0f83-8c68-33806ed437ee",
 									true,
 								},
 							},
@@ -11193,27 +10921,17 @@ local tbl =
 								},
 								
 								{
-									"c5b031d9-39d8-20ce-852d-fe2badd0c7de",
-									true,
-								},
-								
-								{
-									"20ca99f0-05b2-a371-a3d5-e0248c7794a5",
-									true,
-								},
-								
-								{
-									"b7bf2038-9e83-988e-bb35-53593e44a22a",
-									true,
-								},
-								
-								{
 									"9e30131a-f5cc-f4ef-aa07-dada79f7511c",
 									true,
 								},
 								
 								{
 									"be9e4661-c2c4-05a6-b609-359e384d3ce3",
+									true,
+								},
+								
+								{
+									"5f657d04-6112-0f83-8c68-33806ed437ee",
 									true,
 								},
 							},
@@ -11240,27 +10958,17 @@ local tbl =
 								},
 								
 								{
-									"c5b031d9-39d8-20ce-852d-fe2badd0c7de",
-									true,
-								},
-								
-								{
-									"20ca99f0-05b2-a371-a3d5-e0248c7794a5",
-									true,
-								},
-								
-								{
-									"b7bf2038-9e83-988e-bb35-53593e44a22a",
-									true,
-								},
-								
-								{
 									"9e30131a-f5cc-f4ef-aa07-dada79f7511c",
 									true,
 								},
 								
 								{
 									"be9e4661-c2c4-05a6-b609-359e384d3ce3",
+									true,
+								},
+								
+								{
+									"5f657d04-6112-0f83-8c68-33806ed437ee",
 									true,
 								},
 							},
@@ -11287,21 +10995,6 @@ local tbl =
 								},
 								
 								{
-									"c5b031d9-39d8-20ce-852d-fe2badd0c7de",
-									true,
-								},
-								
-								{
-									"20ca99f0-05b2-a371-a3d5-e0248c7794a5",
-									true,
-								},
-								
-								{
-									"b7bf2038-9e83-988e-bb35-53593e44a22a",
-									true,
-								},
-								
-								{
 									"9e30131a-f5cc-f4ef-aa07-dada79f7511c",
 									true,
 								},
@@ -11310,12 +11003,37 @@ local tbl =
 									"be9e4661-c2c4-05a6-b609-359e384d3ce3",
 									true,
 								},
+								
+								{
+									"5f657d04-6112-0f83-8c68-33806ed437ee",
+									true,
+								},
 							},
 							gVar = "ACR_TensorWeeb3_CD",
 							ignoreWeaveRules = true,
 							targetContentID = 14369,
 							targetType = "Detection Target",
 							uuid = "916ad1dd-ba43-c585-949c-bed6700651e0",
+							version = 2.1,
+						},
+					},
+					
+					{
+						data = 
+						{
+							aType = "Lua",
+							actionLua = "data.myTetherActive = false \nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"5f657d04-6112-0f83-8c68-33806ed437ee",
+									true,
+								},
+							},
+							gVar = "ACR_RikuGNB3_CD",
+							name = "Reset Trigger",
+							uuid = "a7a0b65a-09c1-c0f4-836e-591f2e20765e",
 							version = 2.1,
 						},
 					},
@@ -11374,39 +11092,6 @@ local tbl =
 					{
 						data = 
 						{
-							category = "Lua",
-							conditionLua = "-- 没有目标直接 false\nif not Player or not Player:GetTarget() then\n    return false\nend\n\nlocal target = Player:GetTarget()\n\n-- 确保目标有效\nif not target or not target.pos then\n    return false\nend\n\n-- 计算平面距离（XZ）\nlocal dx = Player.pos.x - target.pos.x\nlocal dz = Player.pos.z - target.pos.z\nlocal distance = math.sqrt(dx * dx + dz * dz)\n\n-- 大于 3 米时返回 true\nreturn distance > 3.0\n",
-							name = "Out of Range",
-							uuid = "c5b031d9-39d8-20ce-852d-fe2badd0c7de",
-							version = 3,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Event",
-							eventArgType = 2,
-							eventSpellID = 46546,
-							uuid = "20ca99f0-05b2-a371-a3d5-e0248c7794a5",
-							version = 3,
-						},
-					},
-					
-					{
-						data = 
-						{
-							category = "Self",
-							conditionType = 9,
-							partyTargetType = "Event Target",
-							uuid = "b7bf2038-9e83-988e-bb35-53593e44a22a",
-							version = 3,
-						},
-					},
-					
-					{
-						data = 
-						{
 							category = "Filter",
 							filterTargetType = "ContentID",
 							partyTargetContentID = 14373,
@@ -11425,15 +11110,26 @@ local tbl =
 							version = 3,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "if not data.myTetherActive then return false end\n\nlocal p = TensorCore.mGetPlayer()\nif not p then return false end\n\n-- 严谨的防空保护\nif not Argus then return false end\n\n-- 获取当前玩家身上的所有连线\nlocal myTethers = Argus.getTethersOnEnt(p.id)\n\n-- 如果获取不到连线表，或者连线数量为 0，说明连线已经消失了！\nif myTethers == nil or #myTethers == 0 then\n    return true\nend\n\nreturn false",
+							name = "Tether Ends",
+							uuid = "5f657d04-6112-0f83-8c68-33806ed437ee",
+							version = 3,
+						},
+					},
 				},
-				eventType = 2,
+				eventType = 12,
 				loop = true,
 				mechanicTime = 345.7,
 				name = "Instant Dash",
 				timeRange = true,
 				timelineIndex = 98,
 				timerEndOffset = 44.900001525879,
-				uuid = "6c5ae4a6-74db-ecbe-8397-22028174e4be",
+				uuid = "6c5bfd79-312c-9824-a6b1-922abfbccc2c",
 				version = 2,
 			},
 		},
