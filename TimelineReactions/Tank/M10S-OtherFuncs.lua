@@ -59,6 +59,11 @@ local tbl =
 									"44fd2292-c1a6-a39f-8185-166527db0a80",
 									true,
 								},
+								
+								{
+									"cf0c197b-bd7d-22a0-b784-b3bb7508343a",
+									true,
+								},
 							},
 							gVar = "ACR_RikuWAR3_CD",
 							uuid = "817883c7-8c81-f9c1-b6ad-0f941e7ce83d",
@@ -81,6 +86,11 @@ local tbl =
 								
 								{
 									"44fd2292-c1a6-a39f-8185-166527db0a80",
+									true,
+								},
+								
+								{
+									"cf0c197b-bd7d-22a0-b784-b3bb7508343a",
 									true,
 								},
 							},
@@ -115,6 +125,17 @@ local tbl =
 							version = 3,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return _G.RikuduoGadget\n   and _G.RikuduoGadget.Status\n   and _G.RikuduoGadget.Status.dalamud == true",
+							name = "Dalamud is running",
+							uuid = "cf0c197b-bd7d-22a0-b784-b3bb7508343a",
+							version = 3,
+						},
+					},
 				},
 				mechanicTime = 136.3,
 				name = "AKB command ON",
@@ -144,6 +165,11 @@ local tbl =
 									"a688fbb3-b1d0-69ff-bfba-fe7f51f24b50",
 									true,
 								},
+								
+								{
+									"989cadfe-a2e9-5035-8dd3-5cd81a644ec4",
+									true,
+								},
 							},
 							gVar = "ACR_RikuWAR3_CD",
 							uuid = "817883c7-8c81-f9c1-b6ad-0f941e7ce83d",
@@ -161,6 +187,11 @@ local tbl =
 								
 								{
 									"a688fbb3-b1d0-69ff-bfba-fe7f51f24b50",
+									true,
+								},
+								
+								{
+									"989cadfe-a2e9-5035-8dd3-5cd81a644ec4",
 									true,
 								},
 							},
@@ -183,6 +214,17 @@ local tbl =
 							version = 3,
 						},
 						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return _G.RikuduoGadget\n   and _G.RikuduoGadget.Status\n   and _G.RikuduoGadget.Status.dalamud == true",
+							name = "Dalamud is running",
+							uuid = "989cadfe-a2e9-5035-8dd3-5cd81a644ec4",
+							version = 3,
+						},
 					},
 				},
 				mechanicTime = 136.3,
@@ -209,10 +251,19 @@ local tbl =
 						{
 							aType = "Lua",
 							actionLua = "AAM_SetCanSend(false)\nreturn true",
+							conditions = 
+							{
+								
+								{
+									"d4281e7f-e0df-3840-aab1-c9b3b222c888",
+									true,
+								},
+							},
 							gVar = "ACR_RikuDRK3_CD",
-							uuid = "1145964a-3b54-aee2-bc7f-fba7d8af6352",
+							uuid = "01d15119-81ad-36b9-9a3d-f8dfa1e8b6b6",
 							version = 2.1,
 						},
+						inheritedIndex = 1,
 					},
 					
 					{
@@ -220,6 +271,14 @@ local tbl =
 						{
 							aType = "Lua",
 							actionLua = "SendTextCommand(\"/i-ching-commander anti_actionmove dispose\")\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"d4281e7f-e0df-3840-aab1-c9b3b222c888",
+									true,
+								},
+							},
 							gVar = "ACR_RikuDRK3_CD",
 							uuid = "972f2160-d434-1039-af10-77908a583dc4",
 							version = 2.1,
@@ -228,6 +287,17 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return _G.RikuduoGadget\n   and _G.RikuduoGadget.Status\n   and _G.RikuduoGadget.Status.dalamud == true",
+							name = "Dalamud is running",
+							uuid = "d4281e7f-e0df-3840-aab1-c9b3b222c888",
+							version = 3,
+						},
+					},
 				},
 				mechanicTime = 268.8,
 				name = "[i-Ching] AntiActionMove OFF",
@@ -249,6 +319,14 @@ local tbl =
 						{
 							aType = "Lua",
 							actionLua = "AAM_SetCanSend(true)\nreturn true",
+							conditions = 
+							{
+								
+								{
+									"ce216ba4-b86c-4973-9143-2f5e8787bc62",
+									true,
+								},
+							},
 							gVar = "ACR_RikuDRK3_CD",
 							uuid = "1145964a-3b54-aee2-bc7f-fba7d8af6352",
 							version = 2.1,
@@ -257,6 +335,17 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return _G.RikuduoGadget\n   and _G.RikuduoGadget.Status\n   and _G.RikuduoGadget.Status.dalamud == true",
+							name = "Dalamud is running",
+							uuid = "ce216ba4-b86c-4973-9143-2f5e8787bc62",
+							version = 3,
+						},
+					},
 				},
 				mechanicTime = 268.8,
 				name = "[i-Ching] AntiActionMove ON",
@@ -281,6 +370,14 @@ local tbl =
 						{
 							aType = "Lua",
 							actionLua = "AAM_SetCanSend(false)\nreturn true",
+							conditions = 
+							{
+								
+								{
+									"e44a9139-6e71-12ae-986e-fd7fe918e01d",
+									true,
+								},
+							},
 							gVar = "ACR_RikuDRK3_CD",
 							uuid = "1145964a-3b54-aee2-bc7f-fba7d8af6352",
 							version = 2.1,
@@ -292,6 +389,14 @@ local tbl =
 						{
 							aType = "Lua",
 							actionLua = "SendTextCommand(\"/i-ching-commander anti_actionmove dispose\")\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"e44a9139-6e71-12ae-986e-fd7fe918e01d",
+									true,
+								},
+							},
 							gVar = "ACR_RikuDRK3_CD",
 							uuid = "972f2160-d434-1039-af10-77908a583dc4",
 							version = 2.1,
@@ -300,6 +405,17 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return _G.RikuduoGadget\n   and _G.RikuduoGadget.Status\n   and _G.RikuduoGadget.Status.dalamud == true",
+							name = "Dalamud is running",
+							uuid = "e44a9139-6e71-12ae-986e-fd7fe918e01d",
+							version = 3,
+						},
+					},
 				},
 				mechanicTime = 290,
 				name = "[i-Ching] AntiActionMove OFF",
@@ -321,6 +437,14 @@ local tbl =
 						{
 							aType = "Lua",
 							actionLua = "AAM_SetCanSend(true)\nreturn true",
+							conditions = 
+							{
+								
+								{
+									"3cc11dba-a8fc-956e-b270-557f410a58b0",
+									true,
+								},
+							},
 							gVar = "ACR_RikuDRK3_CD",
 							uuid = "1145964a-3b54-aee2-bc7f-fba7d8af6352",
 							version = 2.1,
@@ -329,6 +453,17 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return _G.RikuduoGadget\n   and _G.RikuduoGadget.Status\n   and _G.RikuduoGadget.Status.dalamud == true",
+							name = "Dalamud is running",
+							uuid = "3cc11dba-a8fc-956e-b270-557f410a58b0",
+							version = 3,
+						},
+					},
 				},
 				mechanicTime = 290,
 				name = "[i-Ching] AntiActionMove ON",
@@ -360,6 +495,11 @@ local tbl =
 									"9543a1b2-9f9c-3baf-aa5d-18d4128d96c2",
 									true,
 								},
+								
+								{
+									"38b855cc-d26c-5faa-a054-ae099f0f02b8",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuWAR3_CD",
@@ -378,6 +518,11 @@ local tbl =
 								
 								{
 									"9543a1b2-9f9c-3baf-aa5d-18d4128d96c2",
+									true,
+								},
+								
+								{
+									"38b855cc-d26c-5faa-a054-ae099f0f02b8",
 									true,
 								},
 							},
@@ -404,6 +549,17 @@ local tbl =
 							version = 3,
 						},
 						inheritedIndex = 5,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return _G.RikuduoGadget\n   and _G.RikuduoGadget.Status\n   and _G.RikuduoGadget.Status.dalamud == true",
+							name = "Dalamud is running",
+							uuid = "38b855cc-d26c-5faa-a054-ae099f0f02b8",
+							version = 3,
+						},
 					},
 				},
 				mechanicTime = 301.3,
@@ -434,6 +590,11 @@ local tbl =
 									"b6c28c5a-14c3-e611-a729-d656b681ec6e",
 									true,
 								},
+								
+								{
+									"61d5eb89-a7b5-6391-98d1-cfe29c4a6ed0",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuWAR3_CD",
@@ -452,6 +613,11 @@ local tbl =
 								
 								{
 									"b6c28c5a-14c3-e611-a729-d656b681ec6e",
+									true,
+								},
+								
+								{
+									"61d5eb89-a7b5-6391-98d1-cfe29c4a6ed0",
 									true,
 								},
 							},
@@ -474,6 +640,17 @@ local tbl =
 							version = 3,
 						},
 						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return _G.RikuduoGadget\n   and _G.RikuduoGadget.Status\n   and _G.RikuduoGadget.Status.dalamud == true",
+							name = "Dalamud is running",
+							uuid = "61d5eb89-a7b5-6391-98d1-cfe29c4a6ed0",
+							version = 3,
+						},
 					},
 				},
 				mechanicTime = 301.3,
@@ -512,6 +689,11 @@ local tbl =
 									"44fd2292-c1a6-a39f-8185-166527db0a80",
 									true,
 								},
+								
+								{
+									"38fe3b72-8e53-0186-8a45-7fed2eb39cb9",
+									true,
+								},
 							},
 							gVar = "ACR_RikuWAR3_CD",
 							uuid = "817883c7-8c81-f9c1-b6ad-0f941e7ce83d",
@@ -534,6 +716,11 @@ local tbl =
 								
 								{
 									"44fd2292-c1a6-a39f-8185-166527db0a80",
+									true,
+								},
+								
+								{
+									"38fe3b72-8e53-0186-8a45-7fed2eb39cb9",
 									true,
 								},
 							},
@@ -568,6 +755,17 @@ local tbl =
 							version = 3,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return _G.RikuduoGadget\n   and _G.RikuduoGadget.Status\n   and _G.RikuduoGadget.Status.dalamud == true",
+							name = "Dalamud is running",
+							uuid = "38fe3b72-8e53-0186-8a45-7fed2eb39cb9",
+							version = 3,
+						},
+					},
 				},
 				mechanicTime = 313.2,
 				name = "AKB command ON",
@@ -597,6 +795,11 @@ local tbl =
 									"a688fbb3-b1d0-69ff-bfba-fe7f51f24b50",
 									true,
 								},
+								
+								{
+									"d24abe9f-8d74-9881-996b-3242e37e2302",
+									true,
+								},
 							},
 							gVar = "ACR_RikuWAR3_CD",
 							uuid = "817883c7-8c81-f9c1-b6ad-0f941e7ce83d",
@@ -614,6 +817,11 @@ local tbl =
 								
 								{
 									"a688fbb3-b1d0-69ff-bfba-fe7f51f24b50",
+									true,
+								},
+								
+								{
+									"d24abe9f-8d74-9881-996b-3242e37e2302",
 									true,
 								},
 							},
@@ -636,6 +844,17 @@ local tbl =
 							version = 3,
 						},
 						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return _G.RikuduoGadget\n   and _G.RikuduoGadget.Status\n   and _G.RikuduoGadget.Status.dalamud == true",
+							name = "Dalamud is running",
+							uuid = "d24abe9f-8d74-9881-996b-3242e37e2302",
+							version = 3,
+						},
 					},
 				},
 				mechanicTime = 313.2,
@@ -662,6 +881,14 @@ local tbl =
 						{
 							aType = "Lua",
 							actionLua = "SendTextCommand(\"/i-ching-commander anti_knock True\")\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"da64ae2f-506c-7020-9f29-417dfa3ee1fa",
+									true,
+								},
+							},
 							endIfUsed = true,
 							gVar = "ACR_RikuWAR3_CD",
 							uuid = "817883c7-8c81-f9c1-b6ad-0f941e7ce83d",
@@ -674,6 +901,14 @@ local tbl =
 						{
 							aType = "Lua",
 							actionLua = "data.akbtrue = true\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"da64ae2f-506c-7020-9f29-417dfa3ee1fa",
+									true,
+								},
+							},
 							gVar = "ACR_RikuWAR3_CD",
 							uuid = "6ad681e8-d1eb-27ee-a276-129c9bbd4651",
 							version = 2.1,
@@ -682,6 +917,17 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return _G.RikuduoGadget\n   and _G.RikuduoGadget.Status\n   and _G.RikuduoGadget.Status.dalamud == true",
+							name = "Dalamud is running",
+							uuid = "da64ae2f-506c-7020-9f29-417dfa3ee1fa",
+							version = 3,
+						},
+					},
 				},
 				mechanicTime = 444.7,
 				name = "AKB command ON",
@@ -711,6 +957,11 @@ local tbl =
 									"e9a0bebe-b9d0-85ff-bb2b-b48d6219c813",
 									true,
 								},
+								
+								{
+									"ec182aa1-9d14-db47-8a5e-fd3672f69929",
+									true,
+								},
 							},
 							endIfUsed = true,
 							gVar = "ACR_RikuWAR3_CD",
@@ -729,6 +980,11 @@ local tbl =
 								
 								{
 									"e9a0bebe-b9d0-85ff-bb2b-b48d6219c813",
+									true,
+								},
+								
+								{
+									"ec182aa1-9d14-db47-8a5e-fd3672f69929",
 									true,
 								},
 							},
@@ -751,6 +1007,17 @@ local tbl =
 							version = 3,
 						},
 						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return _G.RikuduoGadget\n   and _G.RikuduoGadget.Status\n   and _G.RikuduoGadget.Status.dalamud == true",
+							name = "Dalamud is running",
+							uuid = "ec182aa1-9d14-db47-8a5e-fd3672f69929",
+							version = 3,
+						},
 					},
 				},
 				mechanicTime = 444.7,
@@ -775,7 +1042,35 @@ local tbl =
 						data = 
 						{
 							aType = "Lua",
+							actionLua = "AAM_SetCanSend(false)\nreturn true",
+							conditions = 
+							{
+								
+								{
+									"230df212-9096-8642-8279-663638c2a48d",
+									true,
+								},
+							},
+							gVar = "ACR_RikuDRK3_CD",
+							uuid = "f1154cfb-214b-dd41-a7e9-7b73b0890377",
+							version = 2.1,
+						},
+						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							aType = "Lua",
 							actionLua = "SendTextCommand(\"/i-ching-commander anti_actionmove dispose\")\nself.used = true",
+							conditions = 
+							{
+								
+								{
+									"230df212-9096-8642-8279-663638c2a48d",
+									true,
+								},
+							},
 							gVar = "ACR_RikuDRK3_CD",
 							uuid = "972f2160-d434-1039-af10-77908a583dc4",
 							version = 2.1,
@@ -784,225 +1079,23 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return _G.RikuduoGadget\n   and _G.RikuduoGadget.Status\n   and _G.RikuduoGadget.Status.dalamud == true",
+							name = "Dalamud is running",
+							uuid = "230df212-9096-8642-8279-663638c2a48d",
+							version = 3,
+						},
+					},
 				},
 				mechanicTime = 484.2,
 				name = "[i-Ching] AntiActionMove OFF",
 				timelineIndex = 137,
 				timerOffset = -11,
 				uuid = "ace46a15-8007-d31c-b2bc-72cfcf7b9f14",
-				version = 2,
-			},
-		},
-	},
-	[141] = 
-	{
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "Lua",
-							actionLua = "AAM_SetCanSend(false)\nreturn true",
-							gVar = "ACR_RikuDRK3_CD",
-							uuid = "1145964a-3b54-aee2-bc7f-fba7d8af6352",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							aType = "Lua",
-							actionLua = "SendTextCommand(\"/i-ching-commander anti_actionmove dispose\")\nself.used = true",
-							gVar = "ACR_RikuDRK3_CD",
-							uuid = "972f2160-d434-1039-af10-77908a583dc4",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 494.7,
-				name = "[i-Ching] AntiActionMove OFF",
-				timelineIndex = 141,
-				timerOffset = -11,
-				uuid = "ded05dac-9c6f-2ba8-a32b-7265502819db",
-				version = 2,
-			},
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "Lua",
-							actionLua = "AAM_SetCanSend(true)\nreturn true",
-							gVar = "ACR_RikuDRK3_CD",
-							uuid = "1145964a-3b54-aee2-bc7f-fba7d8af6352",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 494.7,
-				name = "[i-Ching] AntiActionMove ON",
-				timelineIndex = 141,
-				uuid = "d6357570-980b-8238-b560-4353059428bf",
-				version = 2,
-			},
-		},
-	},
-	[145] = 
-	{
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "Lua",
-							actionLua = "AAM_SetCanSend(false)\nreturn true",
-							gVar = "ACR_RikuDRK3_CD",
-							uuid = "1145964a-3b54-aee2-bc7f-fba7d8af6352",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							aType = "Lua",
-							actionLua = "SendTextCommand(\"/i-ching-commander anti_actionmove dispose\")\nself.used = true",
-							gVar = "ACR_RikuDRK3_CD",
-							uuid = "972f2160-d434-1039-af10-77908a583dc4",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 505.1,
-				name = "[i-Ching] AntiActionMove OFF",
-				timelineIndex = 145,
-				timerOffset = -11,
-				uuid = "c5ebd147-ac75-9471-91ed-772a4c78065d",
-				version = 2,
-			},
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "Lua",
-							actionLua = "AAM_SetCanSend(true)\nreturn true",
-							gVar = "ACR_RikuDRK3_CD",
-							uuid = "1145964a-3b54-aee2-bc7f-fba7d8af6352",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 505.1,
-				name = "[i-Ching] AntiActionMove ON",
-				timelineIndex = 145,
-				uuid = "a767068f-efb9-2c08-82df-c64fbe05117e",
-				version = 2,
-			},
-		},
-	},
-	[149] = 
-	{
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "Lua",
-							actionLua = "AAM_SetCanSend(false)\nreturn true",
-							gVar = "ACR_RikuDRK3_CD",
-							uuid = "1145964a-3b54-aee2-bc7f-fba7d8af6352",
-							version = 2.1,
-						},
-					},
-					
-					{
-						data = 
-						{
-							aType = "Lua",
-							actionLua = "SendTextCommand(\"/i-ching-commander anti_actionmove dispose\")\nself.used = true",
-							gVar = "ACR_RikuDRK3_CD",
-							uuid = "972f2160-d434-1039-af10-77908a583dc4",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 515.5,
-				name = "[i-Ching] AntiActionMove OFF",
-				timelineIndex = 149,
-				timerOffset = -11,
-				uuid = "3767cf77-59f0-1646-b518-accae4e78dd2",
-				version = 2,
-			},
-		},
-		
-		{
-			data = 
-			{
-				actions = 
-				{
-					
-					{
-						data = 
-						{
-							aType = "Lua",
-							actionLua = "AAM_SetCanSend(true)\nreturn true",
-							gVar = "ACR_RikuDRK3_CD",
-							uuid = "1145964a-3b54-aee2-bc7f-fba7d8af6352",
-							version = 2.1,
-						},
-					},
-				},
-				conditions = 
-				{
-				},
-				mechanicTime = 515.5,
-				name = "[i-Ching] AntiActionMove ON",
-				timelineIndex = 149,
-				uuid = "58113e24-8932-2243-9e2e-52d60df42b97",
 				version = 2,
 			},
 		},
@@ -1021,6 +1114,14 @@ local tbl =
 						{
 							aType = "Lua",
 							actionLua = "AAM_SetCanSend(true)\nreturn true",
+							conditions = 
+							{
+								
+								{
+									"d64d9e7a-effc-db97-97d7-457471ad6546",
+									true,
+								},
+							},
 							gVar = "ACR_RikuDRK3_CD",
 							uuid = "1145964a-3b54-aee2-bc7f-fba7d8af6352",
 							version = 2.1,
@@ -1029,6 +1130,17 @@ local tbl =
 				},
 				conditions = 
 				{
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return _G.RikuduoGadget\n   and _G.RikuduoGadget.Status\n   and _G.RikuduoGadget.Status.dalamud == true",
+							name = "Dalamud is running",
+							uuid = "d64d9e7a-effc-db97-97d7-457471ad6546",
+							version = 3,
+						},
+					},
 				},
 				mechanicTime = 518,
 				name = "[i-Ching] AntiActionMove ON",
@@ -1116,6 +1228,11 @@ local tbl =
 									"44fd2292-c1a6-a39f-8185-166527db0a80",
 									true,
 								},
+								
+								{
+									"fceb3147-361b-df44-90aa-51d5557d449f",
+									true,
+								},
 							},
 							gVar = "ACR_RikuWAR3_CD",
 							uuid = "817883c7-8c81-f9c1-b6ad-0f941e7ce83d",
@@ -1138,6 +1255,11 @@ local tbl =
 								
 								{
 									"44fd2292-c1a6-a39f-8185-166527db0a80",
+									true,
+								},
+								
+								{
+									"fceb3147-361b-df44-90aa-51d5557d449f",
 									true,
 								},
 							},
@@ -1172,6 +1294,17 @@ local tbl =
 							version = 3,
 						},
 					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return _G.RikuduoGadget\n   and _G.RikuduoGadget.Status\n   and _G.RikuduoGadget.Status.dalamud == true",
+							name = "Dalamud is running",
+							uuid = "fceb3147-361b-df44-90aa-51d5557d449f",
+							version = 3,
+						},
+					},
 				},
 				mechanicTime = 553.2,
 				name = "AKB command ON",
@@ -1201,6 +1334,11 @@ local tbl =
 									"a688fbb3-b1d0-69ff-bfba-fe7f51f24b50",
 									true,
 								},
+								
+								{
+									"9182e3c6-917a-7c52-b6fe-6404cf2bafc6",
+									true,
+								},
 							},
 							gVar = "ACR_RikuWAR3_CD",
 							uuid = "817883c7-8c81-f9c1-b6ad-0f941e7ce83d",
@@ -1218,6 +1356,11 @@ local tbl =
 								
 								{
 									"a688fbb3-b1d0-69ff-bfba-fe7f51f24b50",
+									true,
+								},
+								
+								{
+									"9182e3c6-917a-7c52-b6fe-6404cf2bafc6",
 									true,
 								},
 							},
@@ -1240,6 +1383,17 @@ local tbl =
 							version = 3,
 						},
 						inheritedIndex = 1,
+					},
+					
+					{
+						data = 
+						{
+							category = "Lua",
+							conditionLua = "return _G.RikuduoGadget\n   and _G.RikuduoGadget.Status\n   and _G.RikuduoGadget.Status.dalamud == true",
+							name = "Dalamud is running",
+							uuid = "9182e3c6-917a-7c52-b6fe-6404cf2bafc6",
+							version = 3,
+						},
 					},
 				},
 				mechanicTime = 553.2,
