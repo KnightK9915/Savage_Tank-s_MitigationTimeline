@@ -47,7 +47,7 @@ local tbl =
 							conditionType = 4,
 							enmityValue = 99.999000549316,
 							uuid = "158e3d7c-aed1-3623-ad3e-9ac368bbd03d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -58,7 +58,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
 							name = "RoleMit ST",
 							uuid = "de94c739-9790-9f85-b372-5e79615ae8f4",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -123,7 +123,7 @@ local tbl =
 							conditionType = 4,
 							enmityValue = 99.999000549316,
 							uuid = "f0eaecb7-c7fd-4486-a153-e2ff288e57b4",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -136,7 +136,7 @@ local tbl =
 							conditionType = 9,
 							partyTargetType = "Other Tank",
 							uuid = "06e223a0-2c8e-bbf2-b4b3-9b6f87978bd8",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -147,7 +147,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
 							name = "RoleMit MT",
 							uuid = "8cf1a3da-04ee-4457-ba13-d9d5fa31b161",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -297,7 +297,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "63dbf2e0-035b-0e66-8f0a-8ac08dce2d06",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -309,7 +309,7 @@ local tbl =
 							category = "Self",
 							name = "GNB Buff",
 							uuid = "0d4040c7-f6af-e34d-ba6f-618b51d8b8a3",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -321,7 +321,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "fb23d70a-ab2d-a765-bc9b-17df1c27096b",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -333,7 +333,7 @@ local tbl =
 							category = "Self",
 							name = "PLD Buff",
 							uuid = "2bcad908-4e46-db31-9230-af99df012ce3",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -345,7 +345,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "19781f51-eddc-3eff-95a9-ddd1618b878e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -357,7 +357,7 @@ local tbl =
 							category = "Self",
 							name = "DRK Buff",
 							uuid = "33be190a-9610-f560-b213-ed9addbd25a9",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -373,7 +373,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "212e8816-70cc-5f86-9361-4157d0716b86",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -385,7 +385,7 @@ local tbl =
 							category = "Self",
 							name = "WAR Buff",
 							uuid = "d1df32be-4c29-3fb3-aa38-d163fad70355",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -396,7 +396,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "190ce7d2-ca17-cff3-97e8-11ab47431d79",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -458,7 +458,7 @@ local tbl =
 							conditionType = 4,
 							enmityValue = 99.999000549316,
 							uuid = "158e3d7c-aed1-3623-ad3e-9ac368bbd03d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -469,7 +469,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
 							name = "RoleMit MT",
 							uuid = "080684cd-4bd9-4d41-8d52-4ffae1a9feb4",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -534,7 +534,7 @@ local tbl =
 							conditionType = 4,
 							enmityValue = 99.999000549316,
 							uuid = "f0eaecb7-c7fd-4486-a153-e2ff288e57b4",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -547,7 +547,7 @@ local tbl =
 							conditionType = 9,
 							partyTargetType = "Other Tank",
 							uuid = "06e223a0-2c8e-bbf2-b4b3-9b6f87978bd8",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -558,7 +558,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
 							name = "RoleMit ST",
 							uuid = "8dad7787-01bd-0185-a647-ce39762aa055",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -712,7 +712,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "a9e5e01b-e5b2-4514-a4eb-3935696e7aa7",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -723,7 +723,7 @@ local tbl =
 							category = "Self",
 							name = "GNB Buff",
 							uuid = "2883e4db-0b44-0e7b-b8c5-268500cd1c01",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -735,7 +735,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "1a27cadd-453f-ae94-a6fb-7147e2a5be31",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -746,7 +746,7 @@ local tbl =
 							category = "Self",
 							name = "PLD Buff",
 							uuid = "e4baa41d-8b69-3f05-8f72-77bdd7e184a8",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -758,7 +758,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "18a3f6c0-eef3-16b3-847c-0f0db6a5c9f3",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -769,7 +769,7 @@ local tbl =
 							category = "Self",
 							name = "DRK Buff",
 							uuid = "43d73ca8-4789-2ead-88fe-1574b4b44864",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -785,7 +785,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "b6d49480-3a2a-1d6c-b219-0185726a1048",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -796,7 +796,7 @@ local tbl =
 							category = "Self",
 							name = "WAR Buff",
 							uuid = "176a9cb7-ff03-dec5-b465-109741f426c8",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -807,7 +807,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "d02bc20f-1121-85d9-8bd8-b56843c90185",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -878,7 +878,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -892,14 +892,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -909,7 +909,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -920,7 +920,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "690f3f2f-9278-b9e7-89aa-d3ad1bfbaf7c",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -987,7 +987,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1001,14 +1001,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -1018,7 +1018,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1029,7 +1029,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "cbe584c4-da9a-bc85-ae21-a3f69e537230",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -1095,7 +1095,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1109,14 +1109,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -1126,7 +1126,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -1138,7 +1138,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "8f860102-f342-4530-9fd4-23b37aa5e3a0",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -1204,7 +1204,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1218,14 +1218,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -1235,7 +1235,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -1247,7 +1247,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "8f4da8a5-d16e-4c78-b791-94297bbfba6d",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -1307,7 +1307,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1319,7 +1319,7 @@ local tbl =
 							dequeueIfLuaFalse = true,
 							inRangeValue = 5,
 							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -1331,7 +1331,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "db1a161c-13ea-a663-8b3e-0294cc793495",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -1402,7 +1402,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1416,14 +1416,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -1433,7 +1433,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1444,7 +1444,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "1840a727-5b28-17b3-9320-a0c92e80c57b",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -1511,7 +1511,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1525,14 +1525,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -1542,7 +1542,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1553,7 +1553,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "e34d691f-e397-fe1b-ac62-c0c8db68cd06",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -1619,7 +1619,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1633,14 +1633,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -1650,7 +1650,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -1662,7 +1662,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "0f27454a-862a-8d4b-943a-c9da044ae7d1",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -1728,7 +1728,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1742,14 +1742,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -1759,7 +1759,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -1771,7 +1771,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "9812494e-a95c-acde-ab26-b973173dc5c6",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -1831,7 +1831,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1843,7 +1843,7 @@ local tbl =
 							dequeueIfLuaFalse = true,
 							inRangeValue = 5,
 							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -1855,7 +1855,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "5339b6ce-8671-3ea3-b6ea-8dead57b51f2",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -1962,7 +1962,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1976,14 +1976,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -1993,7 +1993,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2004,7 +2004,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "f5c48142-1465-d090-957a-bd9ae9ff091a",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -2016,7 +2016,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "690f3f2f-9278-b9e7-89aa-d3ad1bfbaf7c",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -2118,7 +2118,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2132,14 +2132,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -2149,7 +2149,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2160,7 +2160,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "02bd56c0-627a-7563-8734-2253743ad4a9",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -2172,7 +2172,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "cbe584c4-da9a-bc85-ae21-a3f69e537230",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -2273,7 +2273,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2287,14 +2287,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -2304,7 +2304,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -2316,7 +2316,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "dea53727-5cbd-87d1-86cf-d64937ebee3c",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -2328,7 +2328,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "8f860102-f342-4530-9fd4-23b37aa5e3a0",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -2429,7 +2429,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2443,14 +2443,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -2460,7 +2460,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -2472,7 +2472,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "d454dd39-99b7-bd43-baaa-d1a4c88ff47b",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -2484,7 +2484,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "8f4da8a5-d16e-4c78-b791-94297bbfba6d",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -2575,7 +2575,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2587,7 +2587,7 @@ local tbl =
 							dequeueIfLuaFalse = true,
 							inRangeValue = 5,
 							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -2599,7 +2599,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "db1a161c-13ea-a663-8b3e-0294cc793495",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2610,7 +2610,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "c2b6086b-21af-2228-a985-37edfc99d259",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -2673,7 +2673,7 @@ local tbl =
 							conditionType = 4,
 							enmityValue = 99.999000549316,
 							uuid = "158e3d7c-aed1-3623-ad3e-9ac368bbd03d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2684,7 +2684,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
 							name = "RoleMit ST",
 							uuid = "de94c739-9790-9f85-b372-5e79615ae8f4",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -2749,7 +2749,7 @@ local tbl =
 							conditionType = 4,
 							enmityValue = 99.999000549316,
 							uuid = "f0eaecb7-c7fd-4486-a153-e2ff288e57b4",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2762,7 +2762,7 @@ local tbl =
 							conditionType = 9,
 							partyTargetType = "Other Tank",
 							uuid = "06e223a0-2c8e-bbf2-b4b3-9b6f87978bd8",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2773,7 +2773,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
 							name = "RoleMit MT",
 							uuid = "8cf1a3da-04ee-4457-ba13-d9d5fa31b161",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -2923,7 +2923,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "63dbf2e0-035b-0e66-8f0a-8ac08dce2d06",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2935,7 +2935,7 @@ local tbl =
 							category = "Self",
 							name = "GNB Buff",
 							uuid = "0d4040c7-f6af-e34d-ba6f-618b51d8b8a3",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2947,7 +2947,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "fb23d70a-ab2d-a765-bc9b-17df1c27096b",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2959,7 +2959,7 @@ local tbl =
 							category = "Self",
 							name = "PLD Buff",
 							uuid = "2bcad908-4e46-db31-9230-af99df012ce3",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2971,7 +2971,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "19781f51-eddc-3eff-95a9-ddd1618b878e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2983,7 +2983,7 @@ local tbl =
 							category = "Self",
 							name = "DRK Buff",
 							uuid = "33be190a-9610-f560-b213-ed9addbd25a9",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2999,7 +2999,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "212e8816-70cc-5f86-9361-4157d0716b86",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3011,7 +3011,7 @@ local tbl =
 							category = "Self",
 							name = "WAR Buff",
 							uuid = "d1df32be-4c29-3fb3-aa38-d163fad70355",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3022,7 +3022,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "190ce7d2-ca17-cff3-97e8-11ab47431d79",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -3084,7 +3084,7 @@ local tbl =
 							conditionType = 4,
 							enmityValue = 99.999000549316,
 							uuid = "158e3d7c-aed1-3623-ad3e-9ac368bbd03d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3095,7 +3095,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
 							name = "RoleMit MT",
 							uuid = "080684cd-4bd9-4d41-8d52-4ffae1a9feb4",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -3160,7 +3160,7 @@ local tbl =
 							conditionType = 4,
 							enmityValue = 99.999000549316,
 							uuid = "f0eaecb7-c7fd-4486-a153-e2ff288e57b4",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3173,7 +3173,7 @@ local tbl =
 							conditionType = 9,
 							partyTargetType = "Other Tank",
 							uuid = "06e223a0-2c8e-bbf2-b4b3-9b6f87978bd8",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3184,7 +3184,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
 							name = "RoleMit ST",
 							uuid = "8dad7787-01bd-0185-a647-ce39762aa055",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -3338,7 +3338,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "a9e5e01b-e5b2-4514-a4eb-3935696e7aa7",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3349,7 +3349,7 @@ local tbl =
 							category = "Self",
 							name = "GNB Buff",
 							uuid = "2883e4db-0b44-0e7b-b8c5-268500cd1c01",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3361,7 +3361,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "1a27cadd-453f-ae94-a6fb-7147e2a5be31",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3372,7 +3372,7 @@ local tbl =
 							category = "Self",
 							name = "PLD Buff",
 							uuid = "e4baa41d-8b69-3f05-8f72-77bdd7e184a8",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3384,7 +3384,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "18a3f6c0-eef3-16b3-847c-0f0db6a5c9f3",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3395,7 +3395,7 @@ local tbl =
 							category = "Self",
 							name = "DRK Buff",
 							uuid = "43d73ca8-4789-2ead-88fe-1574b4b44864",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3411,7 +3411,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "b6d49480-3a2a-1d6c-b219-0185726a1048",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3422,7 +3422,7 @@ local tbl =
 							category = "Self",
 							name = "WAR Buff",
 							uuid = "176a9cb7-ff03-dec5-b465-109741f426c8",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3433,7 +3433,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "d02bc20f-1121-85d9-8bd8-b56843c90185",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -3540,7 +3540,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3554,14 +3554,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -3571,7 +3571,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3582,7 +3582,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "f5c48142-1465-d090-957a-bd9ae9ff091a",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -3594,7 +3594,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "690f3f2f-9278-b9e7-89aa-d3ad1bfbaf7c",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -3696,7 +3696,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3710,14 +3710,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -3727,7 +3727,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3738,7 +3738,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "02bd56c0-627a-7563-8734-2253743ad4a9",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -3750,7 +3750,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "cbe584c4-da9a-bc85-ae21-a3f69e537230",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -3851,7 +3851,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3865,14 +3865,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -3882,7 +3882,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -3894,7 +3894,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "dea53727-5cbd-87d1-86cf-d64937ebee3c",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -3906,7 +3906,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "8f860102-f342-4530-9fd4-23b37aa5e3a0",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -4007,7 +4007,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4021,14 +4021,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -4038,7 +4038,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -4050,7 +4050,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "d454dd39-99b7-bd43-baaa-d1a4c88ff47b",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -4062,7 +4062,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "8f4da8a5-d16e-4c78-b791-94297bbfba6d",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -4153,7 +4153,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4165,7 +4165,7 @@ local tbl =
 							dequeueIfLuaFalse = true,
 							inRangeValue = 5,
 							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -4177,7 +4177,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "db1a161c-13ea-a663-8b3e-0294cc793495",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4188,7 +4188,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "c2b6086b-21af-2228-a985-37edfc99d259",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -4295,7 +4295,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4309,14 +4309,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -4326,7 +4326,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4337,7 +4337,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "f5c48142-1465-d090-957a-bd9ae9ff091a",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -4349,7 +4349,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "690f3f2f-9278-b9e7-89aa-d3ad1bfbaf7c",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -4451,7 +4451,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4465,14 +4465,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -4482,7 +4482,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4493,7 +4493,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "02bd56c0-627a-7563-8734-2253743ad4a9",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -4505,7 +4505,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "cbe584c4-da9a-bc85-ae21-a3f69e537230",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -4606,7 +4606,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4620,14 +4620,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -4637,7 +4637,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -4649,7 +4649,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "dea53727-5cbd-87d1-86cf-d64937ebee3c",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -4661,7 +4661,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "8f860102-f342-4530-9fd4-23b37aa5e3a0",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -4762,7 +4762,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4776,14 +4776,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -4793,7 +4793,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -4805,7 +4805,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "d454dd39-99b7-bd43-baaa-d1a4c88ff47b",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -4817,7 +4817,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "8f4da8a5-d16e-4c78-b791-94297bbfba6d",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -4908,7 +4908,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4920,7 +4920,7 @@ local tbl =
 							dequeueIfLuaFalse = true,
 							inRangeValue = 5,
 							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -4932,7 +4932,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "db1a161c-13ea-a663-8b3e-0294cc793495",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4943,7 +4943,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "c2b6086b-21af-2228-a985-37edfc99d259",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -5157,7 +5157,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "63dbf2e0-035b-0e66-8f0a-8ac08dce2d06",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5169,7 +5169,7 @@ local tbl =
 							category = "Self",
 							name = "GNB Buff",
 							uuid = "0d4040c7-f6af-e34d-ba6f-618b51d8b8a3",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5181,7 +5181,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "fb23d70a-ab2d-a765-bc9b-17df1c27096b",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5193,7 +5193,7 @@ local tbl =
 							category = "Self",
 							name = "PLD Buff",
 							uuid = "2bcad908-4e46-db31-9230-af99df012ce3",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5205,7 +5205,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "19781f51-eddc-3eff-95a9-ddd1618b878e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5217,7 +5217,7 @@ local tbl =
 							category = "Self",
 							name = "DRK Buff",
 							uuid = "33be190a-9610-f560-b213-ed9addbd25a9",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5233,7 +5233,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "212e8816-70cc-5f86-9361-4157d0716b86",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5245,7 +5245,7 @@ local tbl =
 							category = "Self",
 							name = "WAR Buff",
 							uuid = "d1df32be-4c29-3fb3-aa38-d163fad70355",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5256,7 +5256,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "190ce7d2-ca17-cff3-97e8-11ab47431d79",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -5321,7 +5321,7 @@ local tbl =
 							conditionType = 2,
 							contentid = 14096,
 							uuid = "8609c495-07f0-6cb8-9cdf-4cc755fc55f9",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -5333,7 +5333,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
 							name = "RoleMit MT",
 							uuid = "080684cd-4bd9-4d41-8d52-4ffae1a9feb4",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -5385,7 +5385,7 @@ local tbl =
 							conditionType = 2,
 							contentid = 14096,
 							uuid = "9dfa5c8b-eca9-fe1e-8cf4-c06cc07addf7",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -5397,7 +5397,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
 							name = "RoleMit ST",
 							uuid = "de94c739-9790-9f85-b372-5e79615ae8f4",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -5522,7 +5522,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "defdb8fd-e294-b918-8c41-42a8e2b10a5d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5534,7 +5534,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "8c0854e1-2427-c739-80ca-960ebe563b6c",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5546,7 +5546,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "4bc8277e-c01f-c4b4-b3ea-4d18c1cffe63",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5558,7 +5558,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "d8a81b5a-31f4-9918-bb57-d9e9fd25cf28",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -5712,7 +5712,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "a9e5e01b-e5b2-4514-a4eb-3935696e7aa7",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5723,7 +5723,7 @@ local tbl =
 							category = "Self",
 							name = "GNB Buff",
 							uuid = "2883e4db-0b44-0e7b-b8c5-268500cd1c01",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5735,7 +5735,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "1a27cadd-453f-ae94-a6fb-7147e2a5be31",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5746,7 +5746,7 @@ local tbl =
 							category = "Self",
 							name = "PLD Buff",
 							uuid = "e4baa41d-8b69-3f05-8f72-77bdd7e184a8",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5758,7 +5758,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "18a3f6c0-eef3-16b3-847c-0f0db6a5c9f3",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5769,7 +5769,7 @@ local tbl =
 							category = "Self",
 							name = "DRK Buff",
 							uuid = "43d73ca8-4789-2ead-88fe-1574b4b44864",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5785,7 +5785,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "b6d49480-3a2a-1d6c-b219-0185726a1048",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5796,7 +5796,7 @@ local tbl =
 							category = "Self",
 							name = "WAR Buff",
 							uuid = "176a9cb7-ff03-dec5-b465-109741f426c8",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5807,7 +5807,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "d02bc20f-1121-85d9-8bd8-b56843c90185",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -5914,7 +5914,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5928,14 +5928,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -5945,7 +5945,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5956,7 +5956,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "f5c48142-1465-d090-957a-bd9ae9ff091a",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -5968,7 +5968,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "690f3f2f-9278-b9e7-89aa-d3ad1bfbaf7c",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -6070,7 +6070,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6084,14 +6084,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -6101,7 +6101,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6112,7 +6112,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "02bd56c0-627a-7563-8734-2253743ad4a9",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -6124,7 +6124,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "cbe584c4-da9a-bc85-ae21-a3f69e537230",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -6225,7 +6225,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6239,14 +6239,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -6256,7 +6256,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -6268,7 +6268,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "dea53727-5cbd-87d1-86cf-d64937ebee3c",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -6280,7 +6280,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "8f860102-f342-4530-9fd4-23b37aa5e3a0",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -6381,7 +6381,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6395,14 +6395,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -6412,7 +6412,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -6424,7 +6424,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "d454dd39-99b7-bd43-baaa-d1a4c88ff47b",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -6436,7 +6436,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "8f4da8a5-d16e-4c78-b791-94297bbfba6d",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -6527,7 +6527,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6539,7 +6539,7 @@ local tbl =
 							dequeueIfLuaFalse = true,
 							inRangeValue = 5,
 							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -6551,7 +6551,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "db1a161c-13ea-a663-8b3e-0294cc793495",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6562,7 +6562,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "c2b6086b-21af-2228-a985-37edfc99d259",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -6702,7 +6702,7 @@ local tbl =
 							conditionType = 2,
 							contentid = 14093,
 							uuid = "8a857c30-526e-0da0-bbd6-699dc355783b",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -6715,7 +6715,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "2cbd2c2e-0ee7-6510-8af8-2f2f23a3d0ff",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6727,7 +6727,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "2808a591-03fd-23cb-8e49-c7f37ad3d95d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6739,7 +6739,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "2e923972-f5e3-1424-871d-e80627e5edb2",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6751,7 +6751,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "97c5d3d3-5828-926f-8003-27f2d31dbe1c",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -6811,7 +6811,7 @@ local tbl =
 							conditionType = 2,
 							contentid = 14093,
 							uuid = "45c7f86c-86e6-2027-acd6-01efc6e69dee",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -6823,7 +6823,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
 							name = "RoleMit MT",
 							uuid = "2658f2a4-18b8-d77c-bc39-d8601e38fab4",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -6883,7 +6883,7 @@ local tbl =
 							conditionType = 2,
 							contentid = 14093,
 							uuid = "8560efa1-b5f5-b602-aae9-a8c2f2768b9b",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -6895,7 +6895,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
 							name = "RoleMit MT",
 							uuid = "080684cd-4bd9-4d41-8d52-4ffae1a9feb4",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -7003,7 +7003,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7017,14 +7017,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -7034,7 +7034,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7045,7 +7045,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "f5c48142-1465-d090-957a-bd9ae9ff091a",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -7057,7 +7057,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "690f3f2f-9278-b9e7-89aa-d3ad1bfbaf7c",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -7159,7 +7159,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7173,14 +7173,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -7190,7 +7190,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7201,7 +7201,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "02bd56c0-627a-7563-8734-2253743ad4a9",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -7213,7 +7213,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "cbe584c4-da9a-bc85-ae21-a3f69e537230",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -7314,7 +7314,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7328,14 +7328,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -7345,7 +7345,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -7357,7 +7357,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "dea53727-5cbd-87d1-86cf-d64937ebee3c",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -7369,7 +7369,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "8f860102-f342-4530-9fd4-23b37aa5e3a0",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -7470,7 +7470,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7484,14 +7484,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -7501,7 +7501,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -7513,7 +7513,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "d454dd39-99b7-bd43-baaa-d1a4c88ff47b",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -7525,7 +7525,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "8f4da8a5-d16e-4c78-b791-94297bbfba6d",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -7616,7 +7616,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7628,7 +7628,7 @@ local tbl =
 							dequeueIfLuaFalse = true,
 							inRangeValue = 5,
 							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -7640,7 +7640,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "db1a161c-13ea-a663-8b3e-0294cc793495",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7651,7 +7651,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "c2b6086b-21af-2228-a985-37edfc99d259",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -7758,7 +7758,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7772,14 +7772,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -7789,7 +7789,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7800,7 +7800,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "f5c48142-1465-d090-957a-bd9ae9ff091a",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -7812,7 +7812,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "690f3f2f-9278-b9e7-89aa-d3ad1bfbaf7c",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -7914,7 +7914,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7928,14 +7928,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -7945,7 +7945,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7956,7 +7956,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "02bd56c0-627a-7563-8734-2253743ad4a9",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -7968,7 +7968,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "cbe584c4-da9a-bc85-ae21-a3f69e537230",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -8069,7 +8069,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8083,14 +8083,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -8100,7 +8100,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -8112,7 +8112,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "dea53727-5cbd-87d1-86cf-d64937ebee3c",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -8124,7 +8124,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "8f860102-f342-4530-9fd4-23b37aa5e3a0",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -8225,7 +8225,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8239,14 +8239,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -8256,7 +8256,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -8268,7 +8268,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "d454dd39-99b7-bd43-baaa-d1a4c88ff47b",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -8280,7 +8280,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "8f4da8a5-d16e-4c78-b791-94297bbfba6d",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -8371,7 +8371,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8383,7 +8383,7 @@ local tbl =
 							dequeueIfLuaFalse = true,
 							inRangeValue = 5,
 							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -8395,7 +8395,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "db1a161c-13ea-a663-8b3e-0294cc793495",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8406,7 +8406,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "c2b6086b-21af-2228-a985-37edfc99d259",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -8513,7 +8513,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8527,14 +8527,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -8544,7 +8544,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8555,7 +8555,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "f5c48142-1465-d090-957a-bd9ae9ff091a",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -8567,7 +8567,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "690f3f2f-9278-b9e7-89aa-d3ad1bfbaf7c",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -8669,7 +8669,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8683,14 +8683,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -8700,7 +8700,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8711,7 +8711,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "02bd56c0-627a-7563-8734-2253743ad4a9",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -8723,7 +8723,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "cbe584c4-da9a-bc85-ae21-a3f69e537230",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -8824,7 +8824,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8838,14 +8838,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -8855,7 +8855,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -8867,7 +8867,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "dea53727-5cbd-87d1-86cf-d64937ebee3c",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -8879,7 +8879,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "8f860102-f342-4530-9fd4-23b37aa5e3a0",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -8980,7 +8980,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8994,14 +8994,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -9011,7 +9011,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -9023,7 +9023,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "d454dd39-99b7-bd43-baaa-d1a4c88ff47b",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -9035,7 +9035,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "8f4da8a5-d16e-4c78-b791-94297bbfba6d",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -9126,7 +9126,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9138,7 +9138,7 @@ local tbl =
 							dequeueIfLuaFalse = true,
 							inRangeValue = 5,
 							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -9150,7 +9150,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "db1a161c-13ea-a663-8b3e-0294cc793495",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9161,7 +9161,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "c2b6086b-21af-2228-a985-37edfc99d259",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -9224,7 +9224,7 @@ local tbl =
 							conditionType = 4,
 							enmityValue = 99.999000549316,
 							uuid = "158e3d7c-aed1-3623-ad3e-9ac368bbd03d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9235,7 +9235,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
 							name = "RoleMit ST",
 							uuid = "de94c739-9790-9f85-b372-5e79615ae8f4",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -9300,7 +9300,7 @@ local tbl =
 							conditionType = 4,
 							enmityValue = 99.999000549316,
 							uuid = "f0eaecb7-c7fd-4486-a153-e2ff288e57b4",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9313,7 +9313,7 @@ local tbl =
 							conditionType = 9,
 							partyTargetType = "Other Tank",
 							uuid = "06e223a0-2c8e-bbf2-b4b3-9b6f87978bd8",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9324,7 +9324,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
 							name = "RoleMit MT",
 							uuid = "8cf1a3da-04ee-4457-ba13-d9d5fa31b161",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -9474,7 +9474,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "63dbf2e0-035b-0e66-8f0a-8ac08dce2d06",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9486,7 +9486,7 @@ local tbl =
 							category = "Self",
 							name = "GNB Buff",
 							uuid = "0d4040c7-f6af-e34d-ba6f-618b51d8b8a3",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9498,7 +9498,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "fb23d70a-ab2d-a765-bc9b-17df1c27096b",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9510,7 +9510,7 @@ local tbl =
 							category = "Self",
 							name = "PLD Buff",
 							uuid = "2bcad908-4e46-db31-9230-af99df012ce3",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9522,7 +9522,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "19781f51-eddc-3eff-95a9-ddd1618b878e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9534,7 +9534,7 @@ local tbl =
 							category = "Self",
 							name = "DRK Buff",
 							uuid = "33be190a-9610-f560-b213-ed9addbd25a9",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9550,7 +9550,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "212e8816-70cc-5f86-9361-4157d0716b86",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9562,7 +9562,7 @@ local tbl =
 							category = "Self",
 							name = "WAR Buff",
 							uuid = "d1df32be-4c29-3fb3-aa38-d163fad70355",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9573,7 +9573,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "190ce7d2-ca17-cff3-97e8-11ab47431d79",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -9635,7 +9635,7 @@ local tbl =
 							conditionType = 4,
 							enmityValue = 99.999000549316,
 							uuid = "158e3d7c-aed1-3623-ad3e-9ac368bbd03d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9646,7 +9646,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"MT\")) or false\n",
 							name = "RoleMit MT",
 							uuid = "080684cd-4bd9-4d41-8d52-4ffae1a9feb4",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -9711,7 +9711,7 @@ local tbl =
 							conditionType = 4,
 							enmityValue = 99.999000549316,
 							uuid = "f0eaecb7-c7fd-4486-a153-e2ff288e57b4",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9724,7 +9724,7 @@ local tbl =
 							conditionType = 9,
 							partyTargetType = "Other Tank",
 							uuid = "06e223a0-2c8e-bbf2-b4b3-9b6f87978bd8",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9735,7 +9735,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.is(\"ST\")) or false\n",
 							name = "RoleMit ST",
 							uuid = "8dad7787-01bd-0185-a647-ce39762aa055",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -9889,7 +9889,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "c1c74d83-c5f9-ea74-8cb7-b19e1b6f8a69",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9900,7 +9900,7 @@ local tbl =
 							category = "Self",
 							name = "GNB Buff",
 							uuid = "95d0f528-4ca3-1284-9cc9-062edd9fb984",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9912,7 +9912,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "a57aeaed-5cf4-12c0-84a2-e7e875a11814",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9923,7 +9923,7 @@ local tbl =
 							category = "Self",
 							name = "PLD Buff",
 							uuid = "b0bb6779-3768-9418-841f-c4060c300c3a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9935,7 +9935,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "24504577-df10-5412-9092-b1a5cc6e463f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9946,7 +9946,7 @@ local tbl =
 							category = "Self",
 							name = "DRK Buff",
 							uuid = "34bf6816-e50c-d30e-8d53-b439709ae3b2",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9962,7 +9962,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc930ac0-4774-a39f-be77-a5a1442bb609",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9973,7 +9973,7 @@ local tbl =
 							category = "Self",
 							name = "WAR Buff",
 							uuid = "70dc22c9-b9e4-39fe-ad22-e94de4a21af7",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9984,7 +9984,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "9e5b6cca-6558-48b7-9a93-f2c5de59e839",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -10091,7 +10091,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10105,14 +10105,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -10122,7 +10122,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10133,7 +10133,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "f5c48142-1465-d090-957a-bd9ae9ff091a",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -10145,7 +10145,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "690f3f2f-9278-b9e7-89aa-d3ad1bfbaf7c",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -10247,7 +10247,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10261,14 +10261,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -10278,7 +10278,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10289,7 +10289,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "02bd56c0-627a-7563-8734-2253743ad4a9",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -10301,7 +10301,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "cbe584c4-da9a-bc85-ae21-a3f69e537230",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -10402,7 +10402,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10416,14 +10416,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -10433,7 +10433,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -10445,7 +10445,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "dea53727-5cbd-87d1-86cf-d64937ebee3c",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -10457,7 +10457,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "8f860102-f342-4530-9fd4-23b37aa5e3a0",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -10558,7 +10558,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10572,14 +10572,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -10589,7 +10589,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -10601,7 +10601,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "d454dd39-99b7-bd43-baaa-d1a4c88ff47b",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -10613,7 +10613,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "8f4da8a5-d16e-4c78-b791-94297bbfba6d",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -10704,7 +10704,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10716,7 +10716,7 @@ local tbl =
 							dequeueIfLuaFalse = true,
 							inRangeValue = 5,
 							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -10728,7 +10728,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "db1a161c-13ea-a663-8b3e-0294cc793495",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10739,7 +10739,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "c2b6086b-21af-2228-a985-37edfc99d259",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -10846,7 +10846,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10860,14 +10860,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -10877,7 +10877,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10888,7 +10888,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "f5c48142-1465-d090-957a-bd9ae9ff091a",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -10900,7 +10900,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "690f3f2f-9278-b9e7-89aa-d3ad1bfbaf7c",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -11002,7 +11002,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11016,14 +11016,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -11033,7 +11033,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11044,7 +11044,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "02bd56c0-627a-7563-8734-2253743ad4a9",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -11056,7 +11056,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "cbe584c4-da9a-bc85-ae21-a3f69e537230",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -11157,7 +11157,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11171,14 +11171,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -11188,7 +11188,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -11200,7 +11200,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "dea53727-5cbd-87d1-86cf-d64937ebee3c",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -11212,7 +11212,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "8f860102-f342-4530-9fd4-23b37aa5e3a0",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -11313,7 +11313,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11327,14 +11327,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -11344,7 +11344,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -11356,7 +11356,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "d454dd39-99b7-bd43-baaa-d1a4c88ff47b",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -11368,7 +11368,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "8f4da8a5-d16e-4c78-b791-94297bbfba6d",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -11459,7 +11459,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11471,7 +11471,7 @@ local tbl =
 							dequeueIfLuaFalse = true,
 							inRangeValue = 5,
 							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -11483,7 +11483,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "db1a161c-13ea-a663-8b3e-0294cc793495",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11494,7 +11494,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "c2b6086b-21af-2228-a985-37edfc99d259",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -11601,7 +11601,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11615,14 +11615,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -11632,7 +11632,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11643,7 +11643,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "f5c48142-1465-d090-957a-bd9ae9ff091a",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -11655,7 +11655,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "690f3f2f-9278-b9e7-89aa-d3ad1bfbaf7c",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -11757,7 +11757,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11771,14 +11771,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -11788,7 +11788,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11799,7 +11799,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "02bd56c0-627a-7563-8734-2253743ad4a9",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -11811,7 +11811,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "cbe584c4-da9a-bc85-ae21-a3f69e537230",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -11912,7 +11912,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11926,14 +11926,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -11943,7 +11943,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -11955,7 +11955,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "dea53727-5cbd-87d1-86cf-d64937ebee3c",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -11967,7 +11967,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "8f860102-f342-4530-9fd4-23b37aa5e3a0",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -12068,7 +12068,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -12082,14 +12082,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -12099,7 +12099,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -12111,7 +12111,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "d454dd39-99b7-bd43-baaa-d1a4c88ff47b",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -12123,7 +12123,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "8f4da8a5-d16e-4c78-b791-94297bbfba6d",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -12214,7 +12214,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -12226,7 +12226,7 @@ local tbl =
 							dequeueIfLuaFalse = true,
 							inRangeValue = 5,
 							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -12238,7 +12238,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "db1a161c-13ea-a663-8b3e-0294cc793495",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -12249,7 +12249,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "c2b6086b-21af-2228-a985-37edfc99d259",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -12356,7 +12356,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -12370,14 +12370,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -12387,7 +12387,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -12398,7 +12398,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "f5c48142-1465-d090-957a-bd9ae9ff091a",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -12410,7 +12410,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "690f3f2f-9278-b9e7-89aa-d3ad1bfbaf7c",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -12512,7 +12512,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -12526,14 +12526,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -12543,7 +12543,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -12554,7 +12554,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "02bd56c0-627a-7563-8734-2253743ad4a9",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -12566,7 +12566,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "cbe584c4-da9a-bc85-ae21-a3f69e537230",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -12667,7 +12667,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -12681,14 +12681,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -12698,7 +12698,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -12710,7 +12710,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "dea53727-5cbd-87d1-86cf-d64937ebee3c",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -12722,7 +12722,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "8f860102-f342-4530-9fd4-23b37aa5e3a0",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -12823,7 +12823,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -12837,14 +12837,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -12854,7 +12854,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -12866,7 +12866,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "d454dd39-99b7-bd43-baaa-d1a4c88ff47b",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -12878,7 +12878,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "8f4da8a5-d16e-4c78-b791-94297bbfba6d",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -12969,7 +12969,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -12981,7 +12981,7 @@ local tbl =
 							dequeueIfLuaFalse = true,
 							inRangeValue = 5,
 							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -12993,7 +12993,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "db1a161c-13ea-a663-8b3e-0294cc793495",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13004,7 +13004,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "c2b6086b-21af-2228-a985-37edfc99d259",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -13111,7 +13111,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13125,14 +13125,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -13142,7 +13142,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13153,7 +13153,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "f5c48142-1465-d090-957a-bd9ae9ff091a",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -13165,7 +13165,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "690f3f2f-9278-b9e7-89aa-d3ad1bfbaf7c",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -13267,7 +13267,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13281,14 +13281,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -13298,7 +13298,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13309,7 +13309,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "02bd56c0-627a-7563-8734-2253743ad4a9",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -13321,7 +13321,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "cbe584c4-da9a-bc85-ae21-a3f69e537230",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -13422,7 +13422,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13436,14 +13436,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -13453,7 +13453,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -13465,7 +13465,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "dea53727-5cbd-87d1-86cf-d64937ebee3c",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -13477,7 +13477,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "8f860102-f342-4530-9fd4-23b37aa5e3a0",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -13578,7 +13578,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13592,14 +13592,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -13609,7 +13609,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -13621,7 +13621,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "d454dd39-99b7-bd43-baaa-d1a4c88ff47b",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -13633,7 +13633,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "8f4da8a5-d16e-4c78-b791-94297bbfba6d",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -13724,7 +13724,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13736,7 +13736,7 @@ local tbl =
 							dequeueIfLuaFalse = true,
 							inRangeValue = 5,
 							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -13748,7 +13748,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "db1a161c-13ea-a663-8b3e-0294cc793495",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13759,7 +13759,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "c2b6086b-21af-2228-a985-37edfc99d259",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -13866,7 +13866,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13880,14 +13880,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -13897,7 +13897,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13908,7 +13908,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "f5c48142-1465-d090-957a-bd9ae9ff091a",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -13920,7 +13920,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "690f3f2f-9278-b9e7-89aa-d3ad1bfbaf7c",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -14022,7 +14022,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -14036,14 +14036,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -14053,7 +14053,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -14064,7 +14064,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "02bd56c0-627a-7563-8734-2253743ad4a9",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -14076,7 +14076,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "cbe584c4-da9a-bc85-ae21-a3f69e537230",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -14177,7 +14177,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -14191,14 +14191,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -14208,7 +14208,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -14220,7 +14220,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "dea53727-5cbd-87d1-86cf-d64937ebee3c",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -14232,7 +14232,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "8f860102-f342-4530-9fd4-23b37aa5e3a0",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -14333,7 +14333,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -14347,14 +14347,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -14364,7 +14364,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -14376,7 +14376,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "d454dd39-99b7-bd43-baaa-d1a4c88ff47b",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 4,
 					},
@@ -14388,7 +14388,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "8f4da8a5-d16e-4c78-b791-94297bbfba6d",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -14479,7 +14479,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -14491,7 +14491,7 @@ local tbl =
 							dequeueIfLuaFalse = true,
 							inRangeValue = 5,
 							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -14503,7 +14503,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "db1a161c-13ea-a663-8b3e-0294cc793495",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -14514,7 +14514,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "c2b6086b-21af-2228-a985-37edfc99d259",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -14533,8 +14533,8 @@ local tbl =
 	inheritedProfiles = 
 	{
 	},
-	mapID = 1296,
-	version = 1,
+	timelineName = "necron-ex",
+	version = "1.0.1",
 }
 
 

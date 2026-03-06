@@ -50,7 +50,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -64,14 +64,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -81,7 +81,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -144,7 +144,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -158,14 +158,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -175,7 +175,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -237,7 +237,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -251,14 +251,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -268,7 +268,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -331,7 +331,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -345,14 +345,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -362,7 +362,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -419,7 +419,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -431,7 +431,7 @@ local tbl =
 							dequeueIfLuaFalse = true,
 							inRangeValue = 5,
 							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -564,7 +564,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -577,7 +577,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -589,7 +589,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -600,7 +600,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -732,7 +732,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -745,7 +745,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -757,7 +757,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -768,7 +768,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -923,7 +923,7 @@ local tbl =
 							conditionType = 6,
 							inRangeValue = 6,
 							uuid = "aae77abe-fb05-50a4-9346-c8aa68b5e213",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -936,7 +936,7 @@ local tbl =
 							conditionType = 2,
 							hpValue = 80,
 							uuid = "1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -949,7 +949,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "Warrior",
 							uuid = "d65d00ec-0105-268d-ace7-2d367b431eea",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -961,7 +961,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "Paladin",
 							uuid = "141bab94-d7aa-79e7-9987-f20285c48bb1",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -973,7 +973,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "Darkknight",
 							uuid = "058998a0-28fc-7f7e-b215-5d374c803274",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -985,7 +985,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "Gunbreaker",
 							uuid = "d9dbed19-25f5-7a0e-b7fa-ec367904db22",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -1136,7 +1136,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -1149,7 +1149,7 @@ local tbl =
 							category = "Self",
 							name = "GNB Buff",
 							uuid = "46cb0109-6c3a-2f84-a2c4-31984cecfea2",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1161,7 +1161,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1173,7 +1173,7 @@ local tbl =
 							category = "Self",
 							name = "PLD Buff",
 							uuid = "c87032d2-c148-cb6a-9a76-9a849a23a2b1",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1185,7 +1185,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1197,7 +1197,7 @@ local tbl =
 							category = "Self",
 							name = "DRK Buff",
 							uuid = "18f1b609-641e-ed19-9e7e-897be06b8984",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1213,7 +1213,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1225,7 +1225,7 @@ local tbl =
 							category = "Self",
 							name = "WAR Buff",
 							uuid = "bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 8,
 					},
@@ -1237,7 +1237,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "42c04f0e-3efd-343a-ace6-4c31d84fa947",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -1350,7 +1350,7 @@ local tbl =
 							category = "Self",
 							comparator = 2,
 							uuid = "138a5784-8591-337d-89c0-3c88e714ba2c",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -1416,7 +1416,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1430,14 +1430,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -1447,7 +1447,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -1510,7 +1510,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1524,14 +1524,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -1541,7 +1541,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -1602,7 +1602,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1616,14 +1616,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -1633,7 +1633,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -1695,7 +1695,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1709,14 +1709,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -1726,7 +1726,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -1782,7 +1782,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1794,7 +1794,7 @@ local tbl =
 							dequeueIfLuaFalse = true,
 							inRangeValue = 5,
 							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -1878,7 +1878,7 @@ local tbl =
 							buffID = 4454,
 							category = "Self",
 							uuid = "4032ed2a-58f3-b158-9a6e-5dbaeba022dc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -1891,7 +1891,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "01d39de9-2218-25a2-b698-da0fd8fa34b0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -1902,7 +1902,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "8e350aa5-d6e2-514f-a42f-efc991a52a09",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -2055,7 +2055,7 @@ local tbl =
 							category = "Lua",
 							conditionLua = "-- Custom Condition: Player outside target's hit radius\nlocal target = Player:GetTarget()\nif target and target.alive and target.attackable then\n    local dist = target.distance2d or 0\n    local hr   = target.hitboxradius or target.hitradius or 0\n    return dist > hr\nend\n\n-- 没有目标时直接返回 false\nreturn false\n",
 							uuid = "d9f79096-673c-c5a8-894d-e20a6022ae55",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -2068,7 +2068,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "Warrior",
 							uuid = "d65d00ec-0105-268d-ace7-2d367b431eea",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2080,7 +2080,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "Paladin",
 							uuid = "141bab94-d7aa-79e7-9987-f20285c48bb1",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2092,7 +2092,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "Darkknight",
 							uuid = "058998a0-28fc-7f7e-b215-5d374c803274",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2104,7 +2104,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "Gunbreaker",
 							uuid = "d9dbed19-25f5-7a0e-b7fa-ec367904db22",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2116,7 +2116,7 @@ local tbl =
 							conditionType = 2,
 							hpValue = 99.999000549316,
 							uuid = "1b2dda64-5f54-6eb4-abdf-aa64049b706b",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -2271,7 +2271,7 @@ local tbl =
 							conditionType = 6,
 							inRangeValue = 6,
 							uuid = "aae77abe-fb05-50a4-9346-c8aa68b5e213",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -2284,7 +2284,7 @@ local tbl =
 							conditionType = 2,
 							hpValue = 80,
 							uuid = "1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -2297,7 +2297,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "Warrior",
 							uuid = "d65d00ec-0105-268d-ace7-2d367b431eea",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2309,7 +2309,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "Paladin",
 							uuid = "141bab94-d7aa-79e7-9987-f20285c48bb1",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2321,7 +2321,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "Darkknight",
 							uuid = "058998a0-28fc-7f7e-b215-5d374c803274",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2333,7 +2333,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "Gunbreaker",
 							uuid = "d9dbed19-25f5-7a0e-b7fa-ec367904db22",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -2394,7 +2394,7 @@ local tbl =
 							conditionType = 4,
 							enmityValue = 99.999000549316,
 							uuid = "158e3d7c-aed1-3623-ad3e-9ac368bbd03d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2405,7 +2405,7 @@ local tbl =
 							buffID = 4454,
 							category = "Self",
 							uuid = "6d495a4e-8155-eb89-8b8a-98d8b04bc546",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -2465,7 +2465,7 @@ local tbl =
 							conditionType = 4,
 							enmityValue = 99.999000549316,
 							uuid = "f0eaecb7-c7fd-4486-a153-e2ff288e57b4",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2475,7 +2475,7 @@ local tbl =
 							buffID = 4454,
 							category = "Self",
 							uuid = "aad96c63-1de9-85f6-8a56-b431c00818b6",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -2562,7 +2562,7 @@ local tbl =
 							buffID = 4454,
 							category = "Self",
 							uuid = "4032ed2a-58f3-b158-9a6e-5dbaeba022dc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -2575,7 +2575,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "01d39de9-2218-25a2-b698-da0fd8fa34b0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2586,7 +2586,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "8e350aa5-d6e2-514f-a42f-efc991a52a09",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -2672,7 +2672,7 @@ local tbl =
 							buffID = 4454,
 							category = "Self",
 							uuid = "4032ed2a-58f3-b158-9a6e-5dbaeba022dc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -2685,7 +2685,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "01d39de9-2218-25a2-b698-da0fd8fa34b0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2696,7 +2696,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "8e350aa5-d6e2-514f-a42f-efc991a52a09",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -2828,7 +2828,7 @@ local tbl =
 							category = "Lua",
 							conditionLua = "-- Custom Condition: Player outside target's hit radius\nlocal target = Player:GetTarget()\nif target and target.alive and target.attackable then\n    local dist = target.distance2d or 0\n    local hr   = target.hitboxradius or target.hitradius or 0\n    return dist > hr\nend\n\n-- 没有目标时直接返回 false\nreturn false\n",
 							uuid = "0b9246a3-366a-eb7a-8992-0292f2e1f822",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -2841,7 +2841,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "Warrior",
 							uuid = "d65d00ec-0105-268d-ace7-2d367b431eea",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2853,7 +2853,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "Paladin",
 							uuid = "141bab94-d7aa-79e7-9987-f20285c48bb1",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2865,7 +2865,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "Darkknight",
 							uuid = "058998a0-28fc-7f7e-b215-5d374c803274",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2877,7 +2877,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "Gunbreaker",
 							uuid = "d9dbed19-25f5-7a0e-b7fa-ec367904db22",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -2940,7 +2940,7 @@ local tbl =
 							conditionType = 4,
 							enmityValue = 99.999000549316,
 							uuid = "158e3d7c-aed1-3623-ad3e-9ac368bbd03d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2951,7 +2951,7 @@ local tbl =
 							buffID = 4454,
 							category = "Self",
 							uuid = "6d495a4e-8155-eb89-8b8a-98d8b04bc546",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -2962,7 +2962,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "81e77c9e-c8ec-b0ca-819d-ad50d338f319",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -3027,7 +3027,7 @@ local tbl =
 							conditionType = 4,
 							enmityValue = 99.999000549316,
 							uuid = "f0eaecb7-c7fd-4486-a153-e2ff288e57b4",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3037,7 +3037,7 @@ local tbl =
 							buffID = 4454,
 							category = "Self",
 							uuid = "aad96c63-1de9-85f6-8a56-b431c00818b6",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3048,7 +3048,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "07fcd772-5fe0-4c45-a672-a6a7570f0619",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -3133,7 +3133,7 @@ local tbl =
 							buffID = 4454,
 							category = "Self",
 							uuid = "4032ed2a-58f3-b158-9a6e-5dbaeba022dc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -3146,7 +3146,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "01d39de9-2218-25a2-b698-da0fd8fa34b0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3157,7 +3157,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "8e350aa5-d6e2-514f-a42f-efc991a52a09",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -3289,7 +3289,7 @@ local tbl =
 							category = "Lua",
 							conditionLua = "-- Custom Condition: Player outside target's hit radius\nlocal target = Player:GetTarget()\nif target and target.alive and target.attackable then\n    local dist = target.distance2d or 0\n    local hr   = target.hitboxradius or target.hitradius or 0\n    return dist > hr\nend\n\n-- 没有目标时直接返回 false\nreturn false\n",
 							uuid = "0b9246a3-366a-eb7a-8992-0292f2e1f822",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -3302,7 +3302,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "Warrior",
 							uuid = "d65d00ec-0105-268d-ace7-2d367b431eea",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3314,7 +3314,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "Paladin",
 							uuid = "141bab94-d7aa-79e7-9987-f20285c48bb1",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3326,7 +3326,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "Darkknight",
 							uuid = "058998a0-28fc-7f7e-b215-5d374c803274",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3338,7 +3338,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "Gunbreaker",
 							uuid = "d9dbed19-25f5-7a0e-b7fa-ec367904db22",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -3417,7 +3417,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "01d39de9-2218-25a2-b698-da0fd8fa34b0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3428,7 +3428,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "8e350aa5-d6e2-514f-a42f-efc991a52a09",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -3493,7 +3493,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3507,14 +3507,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -3524,7 +3524,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -3586,7 +3586,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3600,14 +3600,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -3617,7 +3617,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -3678,7 +3678,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3692,14 +3692,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -3709,7 +3709,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -3771,7 +3771,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3785,14 +3785,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -3802,7 +3802,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -3858,7 +3858,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -3870,7 +3870,7 @@ local tbl =
 							dequeueIfLuaFalse = true,
 							inRangeValue = 5,
 							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -4027,7 +4027,7 @@ local tbl =
 							conditionType = 6,
 							inRangeValue = 6,
 							uuid = "aae77abe-fb05-50a4-9346-c8aa68b5e213",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -4040,7 +4040,7 @@ local tbl =
 							conditionType = 2,
 							hpValue = 80,
 							uuid = "1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -4053,7 +4053,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "Warrior",
 							uuid = "d65d00ec-0105-268d-ace7-2d367b431eea",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4065,7 +4065,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "Paladin",
 							uuid = "141bab94-d7aa-79e7-9987-f20285c48bb1",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4077,7 +4077,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "Darkknight",
 							uuid = "058998a0-28fc-7f7e-b215-5d374c803274",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4089,7 +4089,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "Gunbreaker",
 							uuid = "d9dbed19-25f5-7a0e-b7fa-ec367904db22",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -4141,7 +4141,7 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return data.M6SFeatherRaysLineRightDown == nil \nor data.M6SFeatherRaysLineRightUp == nil\nor data.M6SFeatherRaysLineLeftDown == nil \nor data.M6SFeatherRaysLineLeftUp == nil",
 							uuid = "871ff39f-7f54-aa59-84e3-03ab19fa9152",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -4168,7 +4168,7 @@ local tbl =
 						data = 
 						{
 							aType = "Lua",
-							actionLua = "-- M6S Auto Selector - Core (aggressive with MT-13831 & ST-13832 special)\n-- 每帧选最优：优先级 -> (特殊偏好) -> HP% -> 距离\n-- 特殊偏好：\n--   - MT 且 CID=13831：优先选仇恨不在自己身上的 13831；\n--   - ST 且 CID=13832：优先选仇恨不在自己身上的 13832；\n-- 若仇恨列表里没有优先清单(或都死) -> 选 13822（不限距离，HP%最低）。\n\nlocal SAVE_REL = [[TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\M6SAutoSelector.lua]]\nlocal function _save(tbl)\n  local base = GetLuaModsPath()\n  if not FolderExists(base .. [[TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\]]) then\n    FolderCreate(base .. [[TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\]])\n  end\n  FileSave(base .. SAVE_REL, tbl)\nend\n\nlocal function _load()\n  local path = GetLuaModsPath() .. SAVE_REL\n  if FileExists(path) then\n    local t = FileLoad(path)\n    if type(t) == \"table\" then return t end\n  end\n  return nil\nend\n\n-- 读档/初始化（与UI共享）\ndata._m6s = data._m6s or _load() or {\n  enabled = true,\n  role = \"MT\",\n  range = 6.0,\n  win = { x = 200, y = 300 }\n}\nlocal cfg = data._m6s\n\nif not cfg.enabled then return false end\n\n-- 优先级表\nlocal PRIORITY = {\n  MT = {13833,13834,13835,13831,13832},\n  ST = {13833,13835,13834,13832,13831},\n}\nlocal prio_list = PRIORITY[cfg.role] or PRIORITY.MT\nlocal prio_rank = {}\nfor i,cid in ipairs(prio_list) do prio_rank[cid] = i end\n\nlocal myID = Player.id or 0\nlocal rank13831 = prio_rank[13831] or 999\nlocal rank13832 = prio_rank[13832] or 999\n\n-- 收集范围内候选\nlocal filter = (\"alive,attackable,maxdistance=%g,contentid=%s\"):format(\n  cfg.range, table.concat(prio_list, \";\")\n)\nlocal elist = EntityList(filter)\n\n-- 选“当前帧最优”\n-- 排序： r(小好) -> pref(小好) -> hp%(小好) -> dist(小好)\n-- pref = 0 表示命中“仇恨不在我身上”的特殊优先，默认为 1\nlocal best, bestR, bestPref, bestHP, bestDist = nil, 999, 1, 101, 9999\nif elist then\n  for _, e in pairs(elist) do\n    local r = prio_rank[e.contentid]\n    if r and e.hp and e.hp.percent and e.distance2d then\n      local pref = 1\n      -- MT: 13831 优先“仇恨不在我身上”\n      if cfg.role == \"MT\" and r == rank13831 then\n        if e.targetid and e.targetid ~= myID then\n          pref = 0\n        end\n      end\n      -- ST: 13832 优先“仇恨不在我身上”\n      if cfg.role == \"ST\" and r == rank13832 then\n        if e.targetid and e.targetid ~= myID then\n          pref = 0\n        end\n      end\n\n      if (r < bestR)\n      or (r == bestR and pref < bestPref)\n      or (r == bestR and pref == bestPref and e.hp.percent < bestHP)\n      or (r == bestR and pref == bestPref and e.hp.percent == bestHP and e.distance2d < bestDist) then\n        best, bestR, bestPref, bestHP, bestDist = e, r, pref, e.hp.percent, e.distance2d\n      end\n    end\n  end\nend\n\n-- 若找到范围内最优，立即切过去\nif best and best.id then\n  local cur = Player:GetTarget()\n  if not cur or cur.id ~= best.id then\n    Player:SetTarget(best.id)\n  end\n  return false\nend\n\n-- 若范围内无优先清单：检查仇恨表里是否还有这些CID存活\nlocal wantAggro = EntityList(\"aggro,alive,attackable,contentid=\" .. table.concat(prio_list,\";\"))\nlocal hasAggroTargets = (wantAggro and next(wantAggro) ~= nil)\n\n-- 仇恨表里没它们(或都死) -> 选 13822（不限距离，HP%最低，距离兜底）\nif not hasAggroTargets then\n  local adds = EntityList(\"alive,attackable,contentid=13822\")\n  local pick, php, pdist = nil, 101, 9999\n  if adds then\n    for _, e in pairs(adds) do\n      local hpv = (e.hp and e.hp.percent) or 999\n      local dist = e.distance2d or 9999\n      if (hpv < php) or (hpv == php and dist < pdist) then\n        pick, php, pdist = e, hpv, dist\n      end\n    end\n  end\n  if pick and pick.id then\n    local cur = Player:GetTarget()\n    if not cur or cur.id ~= pick.id then\n      Player:SetTarget(pick.id)\n    end\n  end\nend",
+							actionLua = "-- M6S Auto Selector - Core (safe version)\n-- On Update / On Frame\n-- 逻辑：\n-- 1) 每帧在范围内从优先列表中选“当前最优”\n--    排序：priority rank -> special pref -> hp% -> distance\n-- 2) 特殊偏好：\n--    - MT 且 CID=13831：优先选仇恨不在自己身上的 13831\n--    - ST 且 CID=13832：优先选仇恨不在自己身上的 13832\n-- 3) 若仇恨表里没有优先清单(或都死) -> 选 13822（不限距离，HP%最低，距离兜底）\n--\n-- 注意：\n-- - 本 reaction 只做切目标，不施法\n-- - 每次结束都严格 return nil, 0, false, false\n\nif not Player or not Player.id then\n    return nil, 0, false, false\nend\n\nif type(data) ~= \"table\" then\n    data = {}\nend\n\nlocal SAVE_REL = [[TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\Settings\\M6SAutoSelector.lua]]\nlocal SAVE_DIR = [[TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\Settings\\]]\n\n-- =========================\n-- Save / Load\n-- =========================\nlocal function _save(tbl)\n    if type(tbl) ~= \"table\" then\n        return\n    end\n\n    local base = GetLuaModsPath and GetLuaModsPath() or nil\n    if type(base) ~= \"string\" or base == \"\" then\n        return\n    end\n\n    local dir = base .. SAVE_DIR\n    if FolderExists and not FolderExists(dir) then\n        if FolderCreate then\n            pcall(FolderCreate, dir)\n        end\n    end\n\n    if FileSave then\n        pcall(FileSave, base .. SAVE_REL, tbl)\n    end\nend\n\nlocal function _load()\n    local base = GetLuaModsPath and GetLuaModsPath() or nil\n    if type(base) ~= \"string\" or base == \"\" then\n        return nil\n    end\n\n    local path = base .. SAVE_REL\n    if FileExists and FileExists(path) and FileLoad then\n        local ok, t = pcall(FileLoad, path)\n        if ok and type(t) == \"table\" then\n            return t\n        end\n    end\n    return nil\nend\n\n-- =========================\n-- Config init\n-- =========================\ndata._m6s = data._m6s or _load() or {\n    enabled = true,\n    role = \"MT\", -- \"MT\" or \"ST\"\n    range = 6.0,\n    win = { x = 200, y = 300 },\n}\n\nlocal cfg = data._m6s\nif type(cfg) ~= \"table\" then\n    data._m6s = {\n        enabled = true,\n        role = \"MT\",\n        range = 6.0,\n        win = { x = 200, y = 300 },\n    }\n    cfg = data._m6s\nend\n\ncfg.enabled = (cfg.enabled ~= false)\ncfg.role = (cfg.role == \"ST\") and \"ST\" or \"MT\"\ncfg.range = tonumber(cfg.range) or 6.0\ncfg.win = type(cfg.win) == \"table\" and cfg.win or { x = 200, y = 300 }\n\nif not cfg.enabled then\n    return nil, 0, false, false\nend\n\n-- =========================\n-- Constants\n-- =========================\nlocal PRIORITY = {\n    MT = { 13833, 13834, 13835, 13831, 13832 },\n    ST = { 13833, 13835, 13834, 13832, 13831 },\n}\n\nlocal prio_list = PRIORITY[cfg.role] or PRIORITY.MT\nlocal prio_rank = {}\nlocal wanted_cids = {}\n\nfor i, cid in ipairs(prio_list) do\n    prio_rank[cid] = i\n    wanted_cids[cid] = true\nend\n\nlocal SPECIAL_MT_CID = 13831\nlocal SPECIAL_ST_CID = 13832\nlocal FALLBACK_CID = 13822\n\nlocal myID = tonumber(Player.id) or 0\nif myID == 0 then\n    return nil, 0, false, false\nend\n\n-- =========================\n-- Helpers\n-- =========================\nlocal function getEntityId(e)\n    if type(e) ~= \"table\" then\n        return 0\n    end\n    return tonumber(e.id or e.entityid or e.entityID) or 0\nend\n\nlocal function getContentId(e)\n    if type(e) ~= \"table\" then\n        return 0\n    end\n    return tonumber(e.contentid or e.contentID) or 0\nend\n\nlocal function getTargetId(e)\n    if type(e) ~= \"table\" then\n        return 0\n    end\n    return tonumber(e.targetid or e.targetID) or 0\nend\n\nlocal function getDistance2D(e)\n    if type(e) ~= \"table\" then\n        return math.huge\n    end\n    return tonumber(e.distance2d or e.distance) or math.huge\nend\n\nlocal function getHpPercent(e)\n    if type(e) ~= \"table\" then\n        return math.huge\n    end\n    if type(e.hp) == \"table\" and e.hp.percent then\n        return tonumber(e.hp.percent) or math.huge\n    end\n    return math.huge\nend\n\nlocal function safeEntityList(filter)\n    if not EntityList then\n        return {}\n    end\n\n    local ok, result = pcall(function()\n        return EntityList(filter)\n    end)\n\n    if ok and type(result) == \"table\" then\n        return result\n    end\n\n    return {}\nend\n\nlocal function getCurrentTargetId()\n    if Player.GetTarget then\n        local ok, cur = pcall(function()\n            return Player:GetTarget()\n        end)\n        if ok and cur then\n            return getEntityId(cur)\n        end\n    end\n\n    return tonumber(Player.targetid or Player.targetID) or 0\nend\n\nlocal function safeSetTarget(targetID)\n    targetID = tonumber(targetID) or 0\n    if targetID == 0 then\n        return\n    end\n\n    if Player and Player.SetTarget then\n        pcall(function()\n            Player:SetTarget(targetID)\n        end)\n    end\nend\n\nlocal function isBetterCandidate(r, pref, hpv, dist, bestR, bestPref, bestHP, bestDist)\n    if r < bestR then\n        return true\n    end\n    if r == bestR and pref < bestPref then\n        return true\n    end\n    if r == bestR and pref == bestPref and hpv < bestHP then\n        return true\n    end\n    if r == bestR and pref == bestPref and hpv == bestHP and dist < bestDist then\n        return true\n    end\n    return false\nend\n\n-- =========================\n-- Step 1: range candidates\n-- 注意：不能写 contentid=13833;13834;...\n-- 必须先取基础列表，再在 Lua 里匹配 wanted_cids\n-- =========================\nlocal rangeFilter = (\"alive,attackable,maxdistance=%g\"):format(cfg.range)\nlocal elist = safeEntityList(rangeFilter)\n\nlocal best = nil\nlocal bestR = math.huge\nlocal bestPref = 1\nlocal bestHP = math.huge\nlocal bestDist = math.huge\n\nfor _, e in pairs(elist) do\n    if type(e) == \"table\" then\n        local cid = getContentId(e)\n        local r = prio_rank[cid]\n\n        if r then\n            local hpv = getHpPercent(e)\n            local dist = getDistance2D(e)\n\n            if hpv < math.huge and dist < math.huge then\n                local pref = 1\n                local tid = getTargetId(e)\n\n                -- MT: 13831 优先仇恨不在自己身上\n                if cfg.role == \"MT\" and cid == SPECIAL_MT_CID then\n                    if tid ~= 0 and tid ~= myID then\n                        pref = 0\n                    end\n                end\n\n                -- ST: 13832 优先仇恨不在自己身上\n                if cfg.role == \"ST\" and cid == SPECIAL_ST_CID then\n                    if tid ~= 0 and tid ~= myID then\n                        pref = 0\n                    end\n                end\n\n                if isBetterCandidate(r, pref, hpv, dist, bestR, bestPref, bestHP, bestDist) then\n                    best = e\n                    bestR = r\n                    bestPref = pref\n                    bestHP = hpv\n                    bestDist = dist\n                end\n            end\n        end\n    end\nend\n\nif best then\n    local bestID = getEntityId(best)\n    if bestID ~= 0 then\n        local curID = getCurrentTargetId()\n        if curID ~= bestID then\n            safeSetTarget(bestID)\n        end\n    end\n    return nil, 0, false, false\nend\n\n-- =========================\n-- Step 2: check aggro list for any alive wanted targets\n-- 同样不能 contentid=1;2;3\n-- =========================\nlocal aggroList = safeEntityList(\"aggro,alive,attackable\")\nlocal hasAggroTargets = false\n\nfor _, e in pairs(aggroList) do\n    if type(e) == \"table\" then\n        local cid = getContentId(e)\n        if wanted_cids[cid] then\n            hasAggroTargets = true\n            break\n        end\n    end\nend\n\n-- =========================\n-- Step 3: fallback to 13822 if no aggro targets from priority list\n-- 不限距离，HP%最低，距离兜底\n-- =========================\nif not hasAggroTargets then\n    local adds = safeEntityList(\"alive,attackable\")\n    local pick = nil\n    local php = math.huge\n    local pdist = math.huge\n\n    for _, e in pairs(adds) do\n        if type(e) == \"table\" and getContentId(e) == FALLBACK_CID then\n            local hpv = getHpPercent(e)\n            local dist = getDistance2D(e)\n\n            if hpv < php or (hpv == php and dist < pdist) then\n                pick = e\n                php = hpv\n                pdist = dist\n            end\n        end\n    end\n\n    if pick then\n        local pickID = getEntityId(pick)\n        if pickID ~= 0 then\n            local curID = getCurrentTargetId()\n            if curID ~= pickID then\n                safeSetTarget(pickID)\n            end\n        end\n    end\nend\n\nreturn nil, 0, false, false",
 							gVar = "ACR_RikuPLD3_CD",
 							uuid = "d0e983b3-74b5-b936-9264-64580d8a002f",
 							version = 2.1,
@@ -4254,7 +4254,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "afa66b64-5b4f-22b9-b0d5-2520bf0d0bf7",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -4393,7 +4393,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -4406,7 +4406,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4418,7 +4418,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4429,7 +4429,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4440,7 +4440,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "eeb0f52c-a7e9-eb2b-bd48-5b1cfb4dc032",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -4580,7 +4580,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -4593,7 +4593,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4605,7 +4605,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4616,7 +4616,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4627,7 +4627,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "0e6720b3-7c86-6b1b-bc4f-bc65e07f8616",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -4766,7 +4766,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -4779,7 +4779,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4791,7 +4791,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4802,7 +4802,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -4813,7 +4813,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "00298d51-2dda-f2d9-9421-b5f78495b2e5",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -4886,7 +4886,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "9ca93d46-be3f-e94c-9524-2831e4dab17b",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -5025,7 +5025,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -5038,7 +5038,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5050,7 +5050,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5061,7 +5061,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5072,7 +5072,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "9d0faaed-36c7-e682-a769-6a652f90ec70",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -5212,7 +5212,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -5225,7 +5225,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5237,7 +5237,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5248,7 +5248,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5259,7 +5259,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "77ae49a2-c266-245a-b704-6c336ba6977f",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -5400,7 +5400,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -5413,7 +5413,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5425,7 +5425,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5436,7 +5436,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5447,7 +5447,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "0c8e2598-8077-7c7e-aff7-9c4c462eca3d",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -5526,7 +5526,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "01dbd163-d6f5-aebe-894d-9af20d9caaef",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -5677,7 +5677,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -5690,7 +5690,7 @@ local tbl =
 							category = "Self",
 							name = "GNB Buff",
 							uuid = "46cb0109-6c3a-2f84-a2c4-31984cecfea2",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5702,7 +5702,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5714,7 +5714,7 @@ local tbl =
 							category = "Self",
 							name = "PLD Buff",
 							uuid = "c87032d2-c148-cb6a-9a76-9a849a23a2b1",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5726,7 +5726,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5738,7 +5738,7 @@ local tbl =
 							category = "Self",
 							name = "DRK Buff",
 							uuid = "18f1b609-641e-ed19-9e7e-897be06b8984",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5750,7 +5750,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5762,7 +5762,7 @@ local tbl =
 							category = "Self",
 							name = "WAR Buff",
 							uuid = "bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 8,
 					},
@@ -5774,7 +5774,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "ad7592d4-d75b-7b88-9781-572497fff810",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -5951,7 +5951,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -5964,7 +5964,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5976,7 +5976,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5987,7 +5987,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -5998,7 +5998,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "a8ae1c03-9765-6092-abb1-e69f6c42a6a8",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6009,7 +6009,7 @@ local tbl =
 							conditionLua = "return table.size(TensorCore.entityList(\"alive,attackable,contentid=13831\")) > 0\n",
 							name = "is Mu alive",
 							uuid = "94ddea11-1bc4-c448-be6a-36c435afc95a",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -6086,7 +6086,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "6c7cef47-413b-96ff-8456-65bec4876dae",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -6237,7 +6237,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -6249,7 +6249,7 @@ local tbl =
 							category = "Self",
 							name = "GNB Buff",
 							uuid = "46cb0109-6c3a-2f84-a2c4-31984cecfea2",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6261,7 +6261,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6272,7 +6272,7 @@ local tbl =
 							category = "Self",
 							name = "PLD Buff",
 							uuid = "c87032d2-c148-cb6a-9a76-9a849a23a2b1",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6284,7 +6284,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6295,7 +6295,7 @@ local tbl =
 							category = "Self",
 							name = "DRK Buff",
 							uuid = "18f1b609-641e-ed19-9e7e-897be06b8984",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6311,7 +6311,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6322,7 +6322,7 @@ local tbl =
 							category = "Self",
 							name = "WAR Buff",
 							uuid = "bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 8,
 					},
@@ -6334,7 +6334,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "3c16aa15-ec6b-fb90-b731-d52895cb9f91",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -6472,7 +6472,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -6485,7 +6485,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6497,7 +6497,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6508,7 +6508,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6519,7 +6519,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "58e96a9a-1115-d40e-a473-da54fa435a34",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -6655,7 +6655,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -6668,7 +6668,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6680,7 +6680,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6691,7 +6691,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6702,7 +6702,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "d193b55e-c765-e7e7-be16-e07346566678",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -6838,7 +6838,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -6851,7 +6851,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6863,7 +6863,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6874,7 +6874,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -6885,7 +6885,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "f838153d-ef76-2901-a260-5b2e40d46ee6",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -6959,7 +6959,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "d23845a7-1e0e-ef24-a1c4-80c572e4603f",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -7094,7 +7094,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -7107,7 +7107,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7119,7 +7119,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7130,7 +7130,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7141,7 +7141,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "c797d4d9-a05b-5299-bf91-a3b878ceb2c6",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -7276,7 +7276,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -7289,7 +7289,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7301,7 +7301,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7312,7 +7312,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7323,7 +7323,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "0839f8e4-3eb4-d2a3-9f8e-360f7a05276b",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -7459,7 +7459,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -7472,7 +7472,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7484,7 +7484,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7495,7 +7495,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7506,7 +7506,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "6db0de0e-7e44-eb1f-832d-5ff486f66069",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -7562,7 +7562,7 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return data.M6SFeatherRaysLineRightUp ~= nil",
 							uuid = "169020c1-793f-cf51-88e3-47ed73e813d2",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -7574,7 +7574,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "b9bd580c-9576-e496-a6a0-b0d3545dc9bc",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -7782,7 +7782,7 @@ local tbl =
 							conditionLua = "return data.M6SFeatherRaysLineRightUp ~= nil and Player:GetTarget().id == data.M6SFeatherRaysLineRightUp",
 							name = "Ckeck if target is (RightUpFey)",
 							uuid = "8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -7795,7 +7795,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "Warrior",
 							uuid = "d65d00ec-0105-268d-ace7-2d367b431eea",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7807,7 +7807,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "Paladin",
 							uuid = "141bab94-d7aa-79e7-9987-f20285c48bb1",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7819,7 +7819,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "Darkknight",
 							uuid = "058998a0-28fc-7f7e-b215-5d374c803274",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7831,7 +7831,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "Gunbreaker",
 							uuid = "d9dbed19-25f5-7a0e-b7fa-ec367904db22",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7841,7 +7841,7 @@ local tbl =
 							conditionType = 2,
 							contentid = 13834,
 							uuid = "1b564b35-638f-3e37-8800-9fb551bfe6d2",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7852,7 +7852,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "78e27cb3-1096-80c0-afc1-6607f56bd845",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -7947,7 +7947,7 @@ local tbl =
 							buffID = 4454,
 							category = "Self",
 							uuid = "4032ed2a-58f3-b158-9a6e-5dbaeba022dc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -7960,7 +7960,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "01d39de9-2218-25a2-b698-da0fd8fa34b0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7971,7 +7971,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "8e350aa5-d6e2-514f-a42f-efc991a52a09",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -7982,7 +7982,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "62a35967-982c-3cf7-b71f-ff01da529bf8",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -8158,7 +8158,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -8171,7 +8171,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8183,7 +8183,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8194,7 +8194,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8205,7 +8205,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "a8ae1c03-9765-6092-abb1-e69f6c42a6a8",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8216,7 +8216,7 @@ local tbl =
 							conditionLua = "return table.size(TensorCore.entityList(\"alive,attackable,contentid=13831\")) > 0\n",
 							name = "is Mu alive",
 							uuid = "94ddea11-1bc4-c448-be6a-36c435afc95a",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -8293,7 +8293,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "621559cd-2d92-7275-8f96-45987a6dbb50",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -8444,7 +8444,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -8457,7 +8457,7 @@ local tbl =
 							category = "Self",
 							name = "GNB Buff",
 							uuid = "46cb0109-6c3a-2f84-a2c4-31984cecfea2",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8469,7 +8469,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8481,7 +8481,7 @@ local tbl =
 							category = "Self",
 							name = "PLD Buff",
 							uuid = "c87032d2-c148-cb6a-9a76-9a849a23a2b1",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8493,7 +8493,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8505,7 +8505,7 @@ local tbl =
 							category = "Self",
 							name = "DRK Buff",
 							uuid = "18f1b609-641e-ed19-9e7e-897be06b8984",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8521,7 +8521,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8533,7 +8533,7 @@ local tbl =
 							category = "Self",
 							name = "WAR Buff",
 							uuid = "bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 8,
 					},
@@ -8545,7 +8545,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "fababb3e-c91b-d5bf-893e-945e70f83f69",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -8688,7 +8688,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -8701,7 +8701,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8713,7 +8713,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8724,7 +8724,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8735,7 +8735,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "d8eb9a36-53bd-a7ff-b7b6-42a0a7d90ff4",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -8875,7 +8875,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -8888,7 +8888,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8900,7 +8900,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8911,7 +8911,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -8922,7 +8922,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "96b6c49c-5f4b-e963-9663-55c305b81e6f",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -9061,7 +9061,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -9074,7 +9074,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9086,7 +9086,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9097,7 +9097,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9108,7 +9108,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "2bced2b5-019a-b529-bb5a-fea417fe81ca",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -9159,7 +9159,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "53bdd55d-86da-d1c3-95ac-3711665df07d",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -9210,7 +9210,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "2cc2471b-4442-0c57-95f4-64bfe5617fb4",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -9284,7 +9284,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "b08429e0-4d05-ad69-a0fd-70c6c85c86f8",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -9423,7 +9423,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -9436,7 +9436,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9448,7 +9448,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9459,7 +9459,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9470,7 +9470,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "8c04d1e6-194b-3171-9b70-0f3d59d3cd6e",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -9610,7 +9610,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -9623,7 +9623,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9635,7 +9635,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9646,7 +9646,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9657,7 +9657,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "95405c64-0923-1f69-96f1-6203745b9330",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -9798,7 +9798,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -9811,7 +9811,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9823,7 +9823,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9834,7 +9834,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -9845,7 +9845,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "35190014-0c8b-8bfc-9f69-f34ac297c795",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -9927,7 +9927,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "e2453a46-d830-5e1b-8873-ce514ecfeedb",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -10042,7 +10042,7 @@ local tbl =
 							},
 							name = "is PLD",
 							uuid = "de384013-3bbf-f463-96a3-16c956198004",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10052,7 +10052,7 @@ local tbl =
 							conditionType = 2,
 							contentid = 13833,
 							uuid = "877de244-ea71-0cb1-a3cf-3f1febd4e668",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -10060,13 +10060,13 @@ local tbl =
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffIDList = 
 							{
 								2,
 							},
 							uuid = "f2b157f7-3ea2-a37e-a871-a8fa2ae83fd1",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10078,7 +10078,7 @@ local tbl =
 							category = "Self",
 							conditionType = 4,
 							uuid = "42726422-a374-dae9-b83e-5c77d958ea55",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10089,7 +10089,7 @@ local tbl =
 							conditionLua = "-- MTgroup 或 STgroup\nreturn (RikuduoGadget \n        and (RikuduoGadget.group_is(\"MTgroup\") or RikuduoGadget.group_is(\"STgroup\"))) \n       or false\n",
 							name = "GroupMit MT/ST",
 							uuid = "51e93b0b-939c-59cd-881f-f26f006bbac0",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -10154,7 +10154,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10166,7 +10166,7 @@ local tbl =
 							dequeueIfLuaFalse = true,
 							inRangeValue = 5,
 							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -10178,7 +10178,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "2c91acca-d550-f2ab-921f-7fec3aa11a92",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -10246,7 +10246,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10260,14 +10260,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -10277,7 +10277,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -10339,7 +10339,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10353,14 +10353,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -10370,7 +10370,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -10431,7 +10431,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10445,14 +10445,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -10462,7 +10462,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -10524,7 +10524,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10538,14 +10538,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -10555,7 +10555,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -10611,7 +10611,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10623,7 +10623,7 @@ local tbl =
 							dequeueIfLuaFalse = true,
 							inRangeValue = 5,
 							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -10703,7 +10703,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "3df9f216-799e-7527-a0a2-f1b9360e07e8",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -10838,7 +10838,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -10851,7 +10851,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10863,7 +10863,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10874,7 +10874,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -10885,7 +10885,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "b216f492-a281-a8ac-8f34-38bc723e55e0",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -11020,7 +11020,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -11033,7 +11033,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11045,7 +11045,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11056,7 +11056,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11067,7 +11067,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "06523473-e30f-904d-8142-3f9b0b30d5f6",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -11139,7 +11139,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "71a5a703-eec1-478d-927c-ac0ded23b1b0",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -11274,7 +11274,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -11287,7 +11287,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11299,7 +11299,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11310,7 +11310,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11321,7 +11321,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "6758ab6a-2fbc-038c-8b4c-b42f57e206cd",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -11458,7 +11458,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -11471,7 +11471,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11483,7 +11483,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11494,7 +11494,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11505,7 +11505,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "d2249e5e-8215-b977-b583-c95a90672a7e",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -11641,7 +11641,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -11654,7 +11654,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11666,7 +11666,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11677,7 +11677,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11688,7 +11688,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "90140104-2264-69df-b685-9113d5f1a480",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -11828,7 +11828,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -11841,7 +11841,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11853,7 +11853,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11864,7 +11864,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -11875,7 +11875,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "17c7952a-c96f-1efa-b645-b418bfc76b69",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -12016,7 +12016,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -12029,7 +12029,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -12041,7 +12041,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -12052,7 +12052,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -12063,7 +12063,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "22476102-0515-00ba-acd7-88bf6d0123cf",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -12200,7 +12200,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -12213,7 +12213,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -12225,7 +12225,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -12236,7 +12236,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -12247,7 +12247,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "722a1f60-621d-88b7-8eb2-ba044edc3cda",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -12303,7 +12303,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "0bdc53c0-561d-8090-98e9-da371506a50a",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -12356,7 +12356,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "5e02370b-89f9-a6e1-81eb-bfe30b552f1b",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -12413,7 +12413,7 @@ local tbl =
 							category = "Lua",
 							conditionLua = "return data.M6SFeatherRaysLineRightUp ~= nil",
 							uuid = "169020c1-793f-cf51-88e3-47ed73e813d2",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -12425,7 +12425,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "b9bd580c-9576-e496-a6a0-b0d3545dc9bc",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -12633,7 +12633,7 @@ local tbl =
 							conditionLua = "return data.M6SFeatherRaysLineRightUp ~= nil and Player:GetTarget().id == data.M6SFeatherRaysLineRightUp",
 							name = "Ckeck if target is (RightUpFey)",
 							uuid = "8b0fa312-5d84-c1d1-a3ba-11aa8f759630",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -12646,7 +12646,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "Warrior",
 							uuid = "d65d00ec-0105-268d-ace7-2d367b431eea",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -12658,7 +12658,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "Paladin",
 							uuid = "141bab94-d7aa-79e7-9987-f20285c48bb1",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -12670,7 +12670,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "Darkknight",
 							uuid = "058998a0-28fc-7f7e-b215-5d374c803274",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -12682,7 +12682,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "Gunbreaker",
 							uuid = "d9dbed19-25f5-7a0e-b7fa-ec367904db22",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -12692,7 +12692,7 @@ local tbl =
 							conditionType = 2,
 							contentid = 13834,
 							uuid = "1b564b35-638f-3e37-8800-9fb551bfe6d2",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -12703,7 +12703,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "78e27cb3-1096-80c0-afc1-6607f56bd845",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -12798,7 +12798,7 @@ local tbl =
 							buffID = 4454,
 							category = "Self",
 							uuid = "4032ed2a-58f3-b158-9a6e-5dbaeba022dc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -12811,7 +12811,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "01d39de9-2218-25a2-b698-da0fd8fa34b0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -12822,7 +12822,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "8e350aa5-d6e2-514f-a42f-efc991a52a09",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -12833,7 +12833,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "62a35967-982c-3cf7-b71f-ff01da529bf8",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -13009,7 +13009,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -13022,7 +13022,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13034,7 +13034,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13045,7 +13045,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13056,7 +13056,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"MTgroup\")) or false",
 							name = "GroupMit MT",
 							uuid = "a8ae1c03-9765-6092-abb1-e69f6c42a6a8",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13067,7 +13067,7 @@ local tbl =
 							conditionLua = "return table.size(TensorCore.entityList(\"alive,attackable,contentid=13831\")) > 0\n",
 							name = "is Mu alive",
 							uuid = "94ddea11-1bc4-c448-be6a-36c435afc95a",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -13182,7 +13182,7 @@ local tbl =
 							},
 							name = "is PLD",
 							uuid = "de384013-3bbf-f463-96a3-16c956198004",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13192,7 +13192,7 @@ local tbl =
 							conditionType = 2,
 							contentid = 13833,
 							uuid = "877de244-ea71-0cb1-a3cf-3f1febd4e668",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -13200,13 +13200,13 @@ local tbl =
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffIDList = 
 							{
 								2,
 							},
 							uuid = "f2b157f7-3ea2-a37e-a871-a8fa2ae83fd1",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13218,7 +13218,7 @@ local tbl =
 							category = "Self",
 							conditionType = 4,
 							uuid = "42726422-a374-dae9-b83e-5c77d958ea55",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13229,7 +13229,7 @@ local tbl =
 							conditionLua = "-- MTgroup 或 STgroup\nreturn (RikuduoGadget \n        and (RikuduoGadget.group_is(\"MTgroup\") or RikuduoGadget.group_is(\"STgroup\"))) \n       or false\n",
 							name = "GroupMit MT/ST",
 							uuid = "51e93b0b-939c-59cd-881f-f26f006bbac0",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -13293,7 +13293,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13305,7 +13305,7 @@ local tbl =
 							dequeueIfLuaFalse = true,
 							inRangeValue = 5,
 							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -13317,7 +13317,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "a7992048-f796-84bf-9eb2-6ac0b9962db4",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -13385,7 +13385,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13399,14 +13399,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -13416,7 +13416,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -13478,7 +13478,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13492,14 +13492,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -13509,7 +13509,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -13570,7 +13570,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13584,14 +13584,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -13601,7 +13601,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -13663,7 +13663,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13677,14 +13677,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -13694,7 +13694,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -13750,7 +13750,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13762,7 +13762,7 @@ local tbl =
 							dequeueIfLuaFalse = true,
 							inRangeValue = 5,
 							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -13899,7 +13899,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -13912,7 +13912,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13924,7 +13924,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13935,7 +13935,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -13946,7 +13946,7 @@ local tbl =
 							conditionLua = "return (RikuduoGadget and RikuduoGadget.group_is(\"STgroup\")) or false",
 							name = "GroupMit ST",
 							uuid = "3d7b614a-c435-ea7a-9df8-36396a5a3ed3",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -14061,7 +14061,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -14074,7 +14074,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -14086,7 +14086,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -14097,7 +14097,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -14210,7 +14210,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -14223,7 +14223,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -14235,7 +14235,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -14246,7 +14246,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -14397,7 +14397,7 @@ local tbl =
 							conditionType = 6,
 							inRangeValue = 6,
 							uuid = "aae77abe-fb05-50a4-9346-c8aa68b5e213",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -14410,7 +14410,7 @@ local tbl =
 							conditionType = 2,
 							hpValue = 80,
 							uuid = "1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -14423,7 +14423,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "Warrior",
 							uuid = "d65d00ec-0105-268d-ace7-2d367b431eea",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -14435,7 +14435,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "Paladin",
 							uuid = "141bab94-d7aa-79e7-9987-f20285c48bb1",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -14447,7 +14447,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "Darkknight",
 							uuid = "058998a0-28fc-7f7e-b215-5d374c803274",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -14459,7 +14459,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "Gunbreaker",
 							uuid = "d9dbed19-25f5-7a0e-b7fa-ec367904db22",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -14524,7 +14524,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -14538,14 +14538,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -14555,7 +14555,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -14617,7 +14617,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -14631,14 +14631,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -14648,7 +14648,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -14709,7 +14709,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -14723,14 +14723,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -14740,7 +14740,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -14802,7 +14802,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -14816,14 +14816,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -14833,7 +14833,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -14889,7 +14889,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -14901,7 +14901,7 @@ local tbl =
 							dequeueIfLuaFalse = true,
 							inRangeValue = 5,
 							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -14968,7 +14968,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -14982,14 +14982,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -14999,7 +14999,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -15061,7 +15061,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -15075,14 +15075,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -15092,7 +15092,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -15153,7 +15153,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -15167,14 +15167,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -15184,7 +15184,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -15246,7 +15246,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -15260,14 +15260,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -15277,7 +15277,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -15333,7 +15333,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -15345,7 +15345,7 @@ local tbl =
 							dequeueIfLuaFalse = true,
 							inRangeValue = 5,
 							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -15467,7 +15467,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -15480,7 +15480,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -15492,7 +15492,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -15503,7 +15503,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -15607,7 +15607,7 @@ local tbl =
 							eventArgType = 2,
 							eventMarkerID = 602,
 							uuid = "bf2d5893-2b7c-47a3-ad8b-cd55378c3028",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -15619,7 +15619,7 @@ local tbl =
 							inGroupTargetType = "Other Tank",
 							partyTargetType = "Event Entity",
 							uuid = "c2cb9d3b-196d-fc9d-b9a5-682ed76f4bf6",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -15632,7 +15632,7 @@ local tbl =
 							inGroupTargetType = "Self",
 							partyTargetType = "Event Entity",
 							uuid = "d73a437b-daee-5b25-9e29-bfcac45843c2",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -15644,7 +15644,7 @@ local tbl =
 							conditionType = 4,
 							enmityValue = 99.999000549316,
 							uuid = "793315f6-95e5-64dd-ad82-b5068ac21c08",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -15654,7 +15654,7 @@ local tbl =
 							conditionType = 4,
 							enmityValue = 100,
 							uuid = "463b432b-49d1-5a42-80c0-43e42e255c1c",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -15667,7 +15667,7 @@ local tbl =
 							conditionType = 9,
 							partyTargetType = "Other Tank",
 							uuid = "be926e37-9b25-df0d-aac9-210100a6bf39",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -15785,7 +15785,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -15798,7 +15798,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -15810,7 +15810,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -15821,7 +15821,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -15883,7 +15883,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -15897,14 +15897,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -15914,7 +15914,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -15976,7 +15976,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -15990,14 +15990,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -16007,7 +16007,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -16068,7 +16068,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -16082,14 +16082,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -16099,7 +16099,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -16161,7 +16161,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -16175,14 +16175,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -16192,7 +16192,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -16248,7 +16248,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -16260,7 +16260,7 @@ local tbl =
 							dequeueIfLuaFalse = true,
 							inRangeValue = 5,
 							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -16422,7 +16422,7 @@ local tbl =
 							},
 							filterTargetType = "Party",
 							uuid = "fcd897d9-5fd2-af94-b079-2d99de6abac2",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -16436,7 +16436,7 @@ local tbl =
 							hpValue = 50,
 							partyTargetType = "Detection Target",
 							uuid = "8c71da96-ad5e-4e67-be0e-d09d31309942",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -16449,7 +16449,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -16462,7 +16462,7 @@ local tbl =
 							category = "Self",
 							name = "GNB Buff",
 							uuid = "46cb0109-6c3a-2f84-a2c4-31984cecfea2",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -16474,7 +16474,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -16486,7 +16486,7 @@ local tbl =
 							category = "Self",
 							name = "PLD Buff",
 							uuid = "c87032d2-c148-cb6a-9a76-9a849a23a2b1",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -16498,7 +16498,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -16508,7 +16508,7 @@ local tbl =
 							buffCheckType = 2,
 							name = "DRK Buff",
 							uuid = "18f1b609-641e-ed19-9e7e-897be06b8984",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -16519,7 +16519,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -16530,7 +16530,7 @@ local tbl =
 							buffID = 91,
 							name = "WAR Buff",
 							uuid = "bb75180f-cd7a-d34c-99ee-b9d5b9b385d5",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 8,
 					},
@@ -16665,7 +16665,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "GNB Job",
 							uuid = "e7cd7de2-db26-53a7-b6a0-86996ef443d1",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -16678,7 +16678,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "PLD Job",
 							uuid = "3a2858d5-a3c7-b675-b541-ba378b3eeccd",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -16690,7 +16690,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "DRK Job",
 							uuid = "231b6a98-9a2f-8a76-bdab-236bd5622569",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -16701,7 +16701,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "WAR Job",
 							uuid = "bc680113-345f-6d33-add6-1f151475b614",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -16767,7 +16767,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -16781,14 +16781,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -16798,7 +16798,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -16860,7 +16860,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -16874,14 +16874,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -16891,7 +16891,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -16952,7 +16952,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -16966,14 +16966,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -16983,7 +16983,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -17045,7 +17045,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -17059,14 +17059,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -17076,7 +17076,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -17132,7 +17132,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -17144,7 +17144,7 @@ local tbl =
 							dequeueIfLuaFalse = true,
 							inRangeValue = 5,
 							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -17211,7 +17211,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "d509fc50-866e-82e0-a683-7f673386a79e",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -17225,14 +17225,14 @@ local tbl =
 								19,
 							},
 							uuid = "28cd0d5b-62ee-dcf0-9a27-a18b72f8e80d",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -17242,7 +17242,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a787167c-e665-8709-84d0-298a7dbe954a",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -17304,7 +17304,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "a810d2af-ef39-5b67-9d5f-95b37d750c7a",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -17318,14 +17318,14 @@ local tbl =
 								37,
 							},
 							uuid = "115eca71-8e25-2c76-be17-c29c66dcf324",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -17335,7 +17335,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "a6929435-5dcb-3407-8d89-b38a0596d1ac",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -17396,7 +17396,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "142e7d5f-3fc7-8773-b581-c9fe1ad51671",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -17410,14 +17410,14 @@ local tbl =
 								32,
 							},
 							uuid = "322dd20f-009d-0bff-941f-f877ce997638",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -17427,7 +17427,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "e17d5cf3-fee4-4a84-82d2-63f39144d1cb",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -17489,7 +17489,7 @@ local tbl =
 							comparator = 2,
 							conditionType = 4,
 							uuid = "c59381a9-a0cc-60ea-8a36-f27fa7afb9c0",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -17503,14 +17503,14 @@ local tbl =
 								21,
 							},
 							uuid = "cfdfeb27-fd18-76d8-915e-3d53780d23cf",
-							version = 2,
+							version = 3,
 						},
 					},
 					
 					{
 						data = 
 						{
-							buffCheckType = 5,
+							buffCheckType = 6,
 							buffID = 1457,
 							buffIDList = 
 							{
@@ -17520,7 +17520,7 @@ local tbl =
 							},
 							category = "Self",
 							uuid = "3e2075b4-140b-bff0-9500-2b8ae0ddf9da",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 3,
 					},
@@ -17576,7 +17576,7 @@ local tbl =
 							buffCheckType = 2,
 							buffID = 1193,
 							uuid = "5d8c1a06-2729-6214-9cb3-bf4683e9f41f",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -17588,7 +17588,7 @@ local tbl =
 							dequeueIfLuaFalse = true,
 							inRangeValue = 5,
 							uuid = "293daf40-34c7-3d12-ac20-7b597e340bdc",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -17745,7 +17745,7 @@ local tbl =
 							conditionType = 6,
 							inRangeValue = 6,
 							uuid = "aae77abe-fb05-50a4-9346-c8aa68b5e213",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 1,
 					},
@@ -17758,7 +17758,7 @@ local tbl =
 							conditionType = 2,
 							hpValue = 80,
 							uuid = "1a3e8829-f1ed-0b28-b3c3-e42677a4fc1d",
-							version = 2,
+							version = 3,
 						},
 						inheritedIndex = 2,
 					},
@@ -17771,7 +17771,7 @@ local tbl =
 							jobValue = "WARRIOR",
 							name = "Warrior",
 							uuid = "d65d00ec-0105-268d-ace7-2d367b431eea",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -17783,7 +17783,7 @@ local tbl =
 							jobValue = "PALADIN",
 							name = "Paladin",
 							uuid = "141bab94-d7aa-79e7-9987-f20285c48bb1",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -17795,7 +17795,7 @@ local tbl =
 							jobValue = "DARKKNIGHT",
 							name = "Darkknight",
 							uuid = "058998a0-28fc-7f7e-b215-5d374c803274",
-							version = 2,
+							version = 3,
 						},
 					},
 					
@@ -17807,7 +17807,7 @@ local tbl =
 							jobValue = "GUNBREAKER",
 							name = "Gunbreaker",
 							uuid = "d9dbed19-25f5-7a0e-b7fa-ec367904db22",
-							version = 2,
+							version = 3,
 						},
 					},
 				},
@@ -17825,8 +17825,8 @@ local tbl =
 	inheritedProfiles = 
 	{
 	},
-	mapID = 1259,
-	version = 2,
+	timelineName = "r6s",
+	version = "1.0.2",
 }
 
 
