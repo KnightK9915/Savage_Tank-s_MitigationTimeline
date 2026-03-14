@@ -422,7 +422,7 @@ local tbl =
 			uuid = "50870786-6581-7fcf-b12e-182a6cccb7b5",
 			version = 2,
 		},
-		inheritedIndex = 11,
+		inheritedIndex = 12,
 	},
 	
 	{
@@ -450,7 +450,7 @@ local tbl =
 			uuid = "006f6b04-b9ec-9ec2-b5fd-53014904a4a9",
 			version = 2,
 		},
-		inheritedIndex = 13,
+		inheritedIndex = 14,
 	},
 	
 	{
@@ -510,22 +510,17 @@ local tbl =
 					data = 
 					{
 						aType = "Lua",
-						actionLua = "if not Player or not Player.id then\n    return nil, 0, false, false\nend\nif type(data) ~= \"table\" then\n    data = {}\nend\n\n-- =========================\n-- Config\n-- =========================\nlocal RANGE_YALMS     = 6.0\nlocal CIRCLE_RADIUS   = 0.2\nlocal OUTLINE_THICK   = 0.0\nlocal USE_OLD_DRAW    = false\n\n-- 黄色（普通）\nlocal Y_START_A = 0.10\nlocal Y_END_A   = 0.55\n\n-- 红色（目标在打我）\nlocal R_START_A = 0.10\nlocal R_END_A   = 0.55\n\n-- 可选：轻微渐变柔化\nlocal GRADIENT_INTENSITY   = 3\nlocal GRADIENT_MIN_OPACITY = 0.05\n\n-- =========================\n-- Helpers\n-- =========================\nlocal function clamp01(v)\n    if type(v) ~= \"number\" then return 0 end\n    if v < 0 then return 0 end\n    if v > 1 then return 1 end\n    return v\nend\n\nlocal function ColorU32(r, g, b, a)\n    r, g, b, a = clamp01(r), clamp01(g), clamp01(b), clamp01(a)\n\n    if GUI and GUI.ColorConvertFloat4ToU32 then\n        return GUI:ColorConvertFloat4ToU32(r, g, b, a)\n    end\n\n    local R = math.floor(r * 255 + 0.5)\n    local G = math.floor(g * 255 + 0.5)\n    local B = math.floor(b * 255 + 0.5)\n    local A = math.floor(a * 255 + 0.5)\n\n    if bit32 and bit32.lshift and bit32.bor then\n        return bit32.bor(\n            bit32.lshift(A, 24),\n            bit32.lshift(B, 16),\n            bit32.lshift(G, 8),\n            R\n        )\n    end\n\n    return (A * 16777216) + (B * 65536) + (G * 256) + R\nend\n\nlocal function ValidTable(t)\n    return type(t) == \"table\" and next(t) ~= nil\nend\n\n-- =========================\n-- Guards\n-- =========================\nif not Argus2 or not Argus2.ShapeDrawer or not Argus2.ShapeDrawer.new then\n    return nil, 0, false, false\nend\nif not GUI then\n    return nil, 0, false, false\nend\nif not Player.pos then\n    return nil, 0, false, false\nend\n\n-- =========================\n-- Colors / Drawers\n-- =========================\nlocal YELLOW_START = ColorU32(1, 1, 0, Y_START_A)\nlocal YELLOW_END   = ColorU32(1, 1, 0, Y_END_A)\nlocal RED_START    = ColorU32(1, 0, 0, R_START_A)\nlocal RED_END      = ColorU32(1, 0, 0, R_END_A)\n\n-- colorEnd 必填；frame draw 实际主要使用 colorEnd，给 start 也没问题，便于统一配置\nlocal yellowDrawer = Argus2.ShapeDrawer:new(\n    YELLOW_START,\n    nil,\n    YELLOW_END,\n    nil,\n    OUTLINE_THICK\n)\nlocal redDrawer = Argus2.ShapeDrawer:new(\n    RED_START,\n    nil,\n    RED_END,\n    nil,\n    OUTLINE_THICK\n)\n\nif yellowDrawer and yellowDrawer.setGradient then\n    pcall(function()\n        yellowDrawer:setGradient(GRADIENT_INTENSITY, GRADIENT_MIN_OPACITY)\n    end)\nend\nif redDrawer and redDrawer.setGradient then\n    pcall(function()\n        redDrawer:setGradient(GRADIENT_INTENSITY, GRADIENT_MIN_OPACITY)\n    end)\nend\n\nif not yellowDrawer or not redDrawer then\n    return nil, 0, false, false\nend\n\n-- =========================\n-- Scan + Draw (same frame)\n-- =========================\nlocal el = EntityList(\"alive,attackable,maxdistance=\" .. tostring(RANGE_YALMS))\nif not ValidTable(el) then\n    return nil, 0, false, false\nend\n\nfor id, ent in pairs(el) do\n    if ent and ent.pos and ent.incombat == true then\n        local ex, ey, ez = ent.pos.x, ent.pos.y, ent.pos.z\n        if ex and ey and ez then\n            local tid = ent.targetid or 0\n            local onMe = (tid ~= 0 and tid == Player.id)\n\n            local drawer = onMe and redDrawer or yellowDrawer\n            if drawer and drawer.addCircle then\n                pcall(function()\n                    drawer:addCircle(ex, ey, ez, CIRCLE_RADIUS, USE_OLD_DRAW)\n                end)\n            end\n        end\n    end\nend\n\nreturn nil, 0, false, false",
+						actionLua = "local colorRed    = GUI:ColorConvertFloat4ToU32(1, 0.2, 0.2, 1)\nlocal colorYellow = GUI:ColorConvertFloat4ToU32(1, 1, 0.2, 1)\nlocal colorGray   = GUI:ColorConvertFloat4ToU32(0.5, 0.5, 0.5, 1)\n\nlocal drawerRed    = TensorCore.getStaticDrawer(colorRed, 1.5)\nlocal drawerYellow = TensorCore.getStaticDrawer(colorYellow, 1.5)\nlocal drawerGray   = TensorCore.getStaticDrawer(colorGray, 1.5)\n\nlocal myID = Player.id\n\nlocal partyIDs = {}\nlocal partyList = TensorCore.entityList(\"alive,myparty\")\nif partyList then\n    for id, ent in pairs(partyList) do\n        if id ~= myID then\n            partyIDs[id] = true\n        end\n    end\nend\n\nlocal entities = TensorCore.entityList(\"alive,attackable,targetable,incombat,maxdistance=25\")\nif entities then\n    for id, ent in pairs(entities) do\n        local tid = ent.targetid\n        local drawer\n\n        if tid == myID then\n            drawer = drawerRed\n        elseif tid and partyIDs[tid] then\n            drawer = drawerYellow\n        else\n            drawer = drawerGray\n        end\n\n        local hr = ent.hitradius or 1\n        drawer:addDonut(\n            ent.pos.x, ent.pos.y, ent.pos.z,\n            hr - 0.05,\n            hr,\n            false\n        )\n    end\nend",
 						conditions = 
 						{
 							
 							{
-								"59508357-27a3-016b-9172-cad17b4a8fa4",
-								true,
-							},
-							
-							{
-								"bf4c9ea4-55c9-7473-b034-11d745a17ffe",
+								"9278c985-abd4-dd7a-90d8-ce9025199e83",
 								true,
 							},
 						},
-						gVar = "ACR_RikuGNB3_CD",
-						uuid = "5fb15713-6c0c-c641-b9d4-5ea6e445161f",
+						gVar = "ACR_RikuPLD3_CD",
+						uuid = "aae08e9a-eeef-3c2e-a0bd-4c1b3b4b0945",
 						version = 2.1,
 					},
 				},
@@ -536,58 +531,10 @@ local tbl =
 				{
 					data = 
 					{
-						category = "Filter",
-						conditions = 
-						{
-							
-							{
-								"68de1e4d-67f0-f877-881f-9e1ce88a3d82",
-								true,
-							},
-							
-							{
-								"4ed642a7-0d7e-fba3-9e17-d03fb8ca26f3",
-								true,
-							},
-						},
-						matchAnyBuff = true,
-						uuid = "59508357-27a3-016b-9172-cad17b4a8fa4",
-						version = 3,
-					},
-					inheritedIndex = 1,
-				},
-				
-				{
-					data = 
-					{
-						category = "Self",
-						conditionType = 9,
-						name = "is Tank",
-						partyTargetType = "Tank",
-						uuid = "68de1e4d-67f0-f877-881f-9e1ce88a3d82",
-						version = 3,
-					},
-				},
-				
-				{
-					data = 
-					{
-						category = "Self",
-						conditionType = 9,
-						name = "is Melee DPS",
-						partyTargetType = "Melee DPS",
-						uuid = "4ed642a7-0d7e-fba3-9e17-d03fb8ca26f3",
-						version = 3,
-					},
-				},
-				
-				{
-					data = 
-					{
 						category = "Lua",
 						conditionLua = "return FFXIV_Common_BotRunning",
 						name = "Bot is Running",
-						uuid = "bf4c9ea4-55c9-7473-b034-11d745a17ffe",
+						uuid = "9278c985-abd4-dd7a-90d8-ce9025199e83",
 						version = 3,
 					},
 				},
@@ -595,9 +542,10 @@ local tbl =
 			enabled = false,
 			eventType = 12,
 			name = "[ForCasual] Highlight Attackable",
-			uuid = "07d5ac0f-dfc2-6720-9d36-fcd0ef70b294",
+			uuid = "50457304-5942-2e94-abb9-ef86d4b68b8e",
 			version = 2,
 		},
+		inheritedIndex = 10,
 	},
 	
 	{
