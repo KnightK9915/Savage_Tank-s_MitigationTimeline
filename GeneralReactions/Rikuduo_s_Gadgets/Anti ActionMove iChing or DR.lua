@@ -16,12 +16,7 @@ local tbl =
 						{
 							
 							{
-								"fab4d2eb-7b1e-ef9d-a1a7-ddad6c57b7c8",
-								true,
-							},
-							
-							{
-								"2287ec50-dc45-b70d-b56e-48b733ba5350",
+								"04f13ec3-fbd0-569e-8f39-1b759ffc76a0",
 								true,
 							},
 						},
@@ -38,27 +33,16 @@ local tbl =
 					data = 
 					{
 						category = "Lua",
-						conditionLua = "return (data.riku_modeToggle ~= nil) and ((data.riku_modeToggle.mode == \"iching\") or (data.riku_modeToggle.mode == \"speeder\")) or false\n",
-						name = "Cheeto On",
-						uuid = "fab4d2eb-7b1e-ef9d-a1a7-ddad6c57b7c8",
-						version = 3,
-					},
-				},
-				
-				{
-					data = 
-					{
-						category = "Lua",
 						conditionLua = "return _G.RikuduoGadget\n   and _G.RikuduoGadget.Status\n   and _G.RikuduoGadget.Status.dalamud == true",
 						name = "Dalamud is running",
-						uuid = "2287ec50-dc45-b70d-b56e-48b733ba5350",
+						uuid = "04f13ec3-fbd0-569e-8f39-1b759ffc76a0",
 						version = 3,
 					},
 				},
 			},
 			eventType = 13,
 			name = "[I-Ching] AntiActionMove Controll Panel",
-			uuid = "11c02847-4731-76e5-a0c8-cf32844e42f0",
+			uuid = "5aa1b4ff-82a4-23cf-8ef0-f207ab9db3cc",
 			version = 2,
 		},
 		inheritedIndex = 1,
@@ -74,17 +58,12 @@ local tbl =
 					data = 
 					{
 						aType = "Lua",
-						actionLua = "-- Dual Controller (OnFrame)\n-- AntiActionMove: auto by effective distance + hysteresis + rate limit + profile commands\n-- ActionRange: ONLY in i-Ching mode; manual slider N -> send command on value change\n--   + draw-only option: do not send\n\nlocal cfg = data._aam or {}\n-- Anti\ncfg.center_m        = cfg.center_m        or 6.0\ncfg.width_m         = cfg.width_m         or 0.4\ncfg.cooldown_ms     = cfg.cooldown_ms     or 120\ncfg.burst_ms        = cfg.burst_ms        or 1200\ncfg.burst_max       = cfg.burst_max       or 4\ncfg.use_hysteresis  = (cfg.use_hysteresis ~= false)\ncfg.mode_select     = cfg.mode_select or \"iching\"\ncfg.send_enabled    = (cfg.send_enabled ~= false)\n-- ActionRange manual\ncfg.ar_enabled      = (cfg.ar_enabled ~= false)\ncfg.ar_draw_only    = (cfg.ar_draw_only == true)\ncfg.ar_value        = cfg.ar_value or 6\ncfg.ar_cooldown_ms  = cfg.ar_cooldown_ms or 80\ndata._aam = cfg\n\nlocal function isIching()\n    return (cfg.mode_select == nil) or (cfg.mode_select == \"iching\")\nend\n\nlocal function SendCmd(text)\n    if not text or text == \"\" then return false end\n    if TensorCore and TensorCore.SendTextCommand then TensorCore.SendTextCommand(text); return true end\n    if SendTextCommand then SendTextCommand(text); return true end\n    if Player and Player.SendTextCommand then Player:SendTextCommand(text); return true end\n    return false\nend\n\n-- ===== target & effective distance (center - target radius) =====\nlocal t = TensorCore.getEntityByGroup and TensorCore.getEntityByGroup(\"Current Target\") or nil\nlocal has_target = (t ~= nil and t.pos ~= nil)\n\nlocal pr = (Player and (Player.hitradius or Player.radius)) or 0\nlocal tr = (t and (t.hitradius or t.radius)) or 0\n\nlocal dist_center, dist_eff\nif has_target and Player and Player.pos then\n    local dx = (Player.pos.x - t.pos.x)\n    local dy = (Player.pos.y - t.pos.y)\n    local dz = (Player.pos.z - t.pos.z)\n    dist_center = math.sqrt(dx*dx + dy*dy + dz*dz)\n    dist_eff    = dist_center - tr\nend\n\ndata._aam_dbg = data._aam_dbg or {}\nlocal dbg = data._aam_dbg\ndbg.has_target = has_target\ndbg.tradius    = tr\ndbg.pradius    = pr\ndbg.dist       = dist_center\ndbg.dist_edge  = dist_eff\n\nlocal function calc_desired(last, eff, center_m, width_m, use_hyst)\n    if eff == nil then return \"dispose\" end\n    local center = tonumber(center_m) or 6.0\n    local width  = math.max(0.1, tonumber(width_m) or 0.4)\n    local near = center - width * 0.5\n    local far  = center + width * 0.5\n    if not use_hyst then near = center; far = center end\n    if eff <= near then return \"enable\" end\n    if eff >= far then return \"dispose\" end\n    return last or \"dispose\"\nend\n\n-- ===== AntiActionMove command mapping =====\nlocal profile = cfg.mode_select\nlocal aa_on, aa_off\nif profile == \"pdr\" then\n    aa_on  = \"/pdr load TargetDashActionNoMove\"\n    aa_off = \"/pdr unload TargetDashActionNoMove\"\nelseif profile == \"speeder\" then\n    aa_on  = \"/runmacro 98\"\n    aa_off = \"/runmacro 99\"\nelse\n    aa_on  = \"/i-ching-commander anti_actionmove enable\"\n    aa_off = \"/i-ching-commander anti_actionmove dispose\"\nend\n\n-- ===== AntiActionMove rate limit =====\ndata._aam_rl = data._aam_rl or { lastAt = 0, winStart = 0, winCount = 0 }\nlocal rl = data._aam_rl\nlocal now = Now and Now() or 0\n\nlocal function aa_canSend()\n    local cd = tonumber(cfg.cooldown_ms) or 120\n    if now - (rl.lastAt or 0) < cd then return false end\n    local win = tonumber(cfg.burst_ms) or 1200\n    local maxc = tonumber(cfg.burst_max) or 4\n    if now - (rl.winStart or 0) > win then rl.winStart = now; rl.winCount = 0 end\n    if (rl.winCount or 0) >= maxc then return false end\n    return true\nend\nlocal function aa_markSent()\n    rl.lastAt = now\n    rl.winCount = (rl.winCount or 0) + 1\nend\n\nlocal aa_last = data._anti_move_state or \"dispose\"\nlocal aa_desired = (has_target and dist_eff ~= nil) and calc_desired(aa_last, dist_eff, cfg.center_m, cfg.width_m, cfg.use_hysteresis) or \"dispose\"\n\nif cfg.send_enabled then\n    if aa_desired ~= aa_last then\n        if aa_canSend() then\n            local cmd = (aa_desired == \"enable\") and aa_on or aa_off\n            if SendCmd(cmd) then\n                data._anti_move_state = aa_desired\n                dbg.state = aa_desired\n                aa_markSent()\n            end\n        end\n    else\n        dbg.state = aa_last\n    end\nelse\n    dbg.state = aa_desired\nend\n\n-- ===== ActionRange manual: ONLY i-Ching =====\nif not isIching() then\n    return\nend\n\n-- module disabled -> no send\nif not cfg.ar_enabled then\n    return\nend\n\n-- draw-only -> no send\nif cfg.ar_draw_only == true then\n    return\nend\n\ndata._ar_manual = data._ar_manual or { lastValue = nil, lastAt = 0 }\nlocal ar = data._ar_manual\n\nlocal v = math.floor(tonumber(cfg.ar_value) or 0)\n\n-- value not changed -> no send\nif ar.lastValue == v then\n    return\nend\n\n-- min gap (avoid spamming while dragging)\nlocal minGap = tonumber(cfg.ar_cooldown_ms) or 0\nif (now - (ar.lastAt or 0)) < minGap then\n    return\nend\n\nlocal cmd = \"/i-ching-commander action_range \" .. tostring(v)\nif SendCmd(cmd) then\n    ar.lastValue = v\n    ar.lastAt    = now\nend",
+						actionLua = "-- Dual Controller (OnFrame) - Strict SendTextCommand Version\n-- AntiActionMove: auto by effective distance + hysteresis + rate limit + profile commands\n-- ActionRange: ONLY in i-Ching mode; manual slider N -> send command on value change\n--   + draw-only option: do not send\n--\n-- Strict rules:\n-- - Only send commands through SendTextCommand(\"...\")\n-- - Every exit path strictly returns 4 values:\n--   return nil, 0, false, false\n\nif not Player or not Player.id then\n    return nil, 0, false, false\nend\n\nif type(data) ~= \"table\" then\n    data = {}\nend\n\n-- =========================================================\n-- Helpers\n-- =========================================================\nlocal function clamp(v, lo, hi)\n    v = tonumber(v) or lo\n    if lo ~= nil and v < lo then v = lo end\n    if hi ~= nil and v > hi then v = hi end\n    return v\nend\n\nlocal function safeNow()\n    if Now then\n        local ok, v = pcall(Now)\n        if ok and type(v) == \"number\" then\n            return v\n        end\n    end\n    return 0\nend\n\nlocal function safeSendCmd(text)\n    if type(text) ~= \"string\" or text == \"\" then\n        return false\n    end\n\n    if not text:match(\"^/\") then\n        return false\n    end\n\n    -- whitelist only\n    if not (\n        text:match(\"^/i%-ching%-commander%s\")\n        or text:match(\"^/pdr%s\")\n        or text:match(\"^/runmacro%s\")\n    ) then\n        return false\n    end\n\n    -- 防护1: Optifine 正在占用聊天输入时跳过本帧\n    if Optifine and Optifine.IsChatInputActive\n       and type(Optifine.IsChatInputActive) == \"function\" then\n        local ok, active = pcall(Optifine.IsChatInputActive)\n        if ok and active == true then\n            return false\n        end\n    end\n\n    -- 防护2: 先刷 /echo 把聊天频道切到安全模式，再发命令\n    if type(SendTextCommand) == \"function\" then\n        local ok = pcall(function()\n            SendTextCommand(\"/echo \")\n            SendTextCommand(text)\n        end)\n        return ok\n    end\n\n    return false\nend\n\nlocal function getCurrentTarget()\n    if TensorCore and TensorCore.getEntityByGroup then\n        local ok, ent = pcall(function()\n            return TensorCore.getEntityByGroup(\"Current Target\")\n        end)\n        if ok and ent then\n            return ent\n        end\n    end\n\n    if Player and Player.GetTarget then\n        local ok, ent = pcall(function()\n            return Player:GetTarget()\n        end)\n        if ok and ent then\n            return ent\n        end\n    end\n\n    return nil\nend\n\nlocal function calc_desired(last, eff, center_m, width_m, use_hyst)\n    if eff == nil then\n        return \"dispose\"\n    end\n\n    local center = tonumber(center_m) or 6.0\n    local width  = math.max(0.1, tonumber(width_m) or 0.4)\n\n    local near = center - width * 0.5\n    local far  = center + width * 0.5\n\n    if not use_hyst then\n        near = center\n        far  = center\n    end\n\n    if eff <= near then\n        return \"enable\"\n    end\n\n    if eff >= far then\n        return \"dispose\"\n    end\n\n    return last or \"dispose\"\nend\n\n-- =========================================================\n-- Config init / sanitize\n-- =========================================================\ndata._aam = data._aam or {}\nlocal cfg = data._aam\nif type(cfg) ~= \"table\" then\n    data._aam = {}\n    cfg = data._aam\nend\n\n-- Anti\ncfg.center_m       = clamp(cfg.center_m or 6.0, 0.1, 50.0)\ncfg.width_m        = clamp(cfg.width_m or 0.4, 0.1, 20.0)\ncfg.cooldown_ms    = math.floor(clamp(cfg.cooldown_ms or 120, 0, 10000))\ncfg.burst_ms       = math.floor(clamp(cfg.burst_ms or 1200, 1, 60000))\ncfg.burst_max      = math.floor(clamp(cfg.burst_max or 4, 1, 100))\ncfg.use_hysteresis = (cfg.use_hysteresis ~= false)\ncfg.mode_select    = cfg.mode_select or \"iching\"\ncfg.send_enabled   = (cfg.send_enabled ~= false)\n\n-- ActionRange manual\ncfg.ar_enabled     = (cfg.ar_enabled ~= false)\ncfg.ar_draw_only   = (cfg.ar_draw_only == true)\ncfg.ar_value       = math.floor(clamp(cfg.ar_value or 6, 0, 100))\ncfg.ar_cooldown_ms = math.floor(clamp(cfg.ar_cooldown_ms or 80, 0, 10000))\n\ndata._aam = cfg\n\nlocal function isIching()\n    return (cfg.mode_select == nil) or (cfg.mode_select == \"iching\")\nend\n\n-- =========================================================\n-- Target / effective distance (keep original behavior)\n-- effective distance = center distance - target radius\n-- =========================================================\nlocal t = getCurrentTarget()\nlocal has_target = (type(t) == \"table\" and type(t.pos) == \"table\")\n\nlocal pr = 0\nif Player then\n    pr = tonumber(Player.hitradius or Player.radius) or 0\nend\n\nlocal tr = 0\nif t then\n    tr = tonumber(t.hitradius or t.radius) or 0\nend\n\nlocal dist_center = nil\nlocal dist_eff = nil\n\nif has_target and type(Player.pos) == \"table\" then\n    local px = tonumber(Player.pos.x) or 0\n    local py = tonumber(Player.pos.y) or 0\n    local pz = tonumber(Player.pos.z) or 0\n\n    local tx = tonumber(t.pos.x) or 0\n    local ty = tonumber(t.pos.y) or 0\n    local tz = tonumber(t.pos.z) or 0\n\n    local dx = px - tx\n    local dy = py - ty\n    local dz = pz - tz\n\n    dist_center = math.sqrt(dx * dx + dy * dy + dz * dz)\n    dist_eff = dist_center - tr\nend\n\ndata._aam_dbg = data._aam_dbg or {}\nlocal dbg = data._aam_dbg\nif type(dbg) ~= \"table\" then\n    data._aam_dbg = {}\n    dbg = data._aam_dbg\nend\n\ndbg.has_target = has_target\ndbg.tradius    = tr\ndbg.pradius    = pr\ndbg.dist       = dist_center\ndbg.dist_edge  = dist_eff\n\n-- =========================================================\n-- AntiActionMove command mapping\n-- =========================================================\nlocal profile = cfg.mode_select\nlocal aa_on, aa_off\n\nif profile == \"pdr\" then\n    aa_on  = \"/pdr load TargetDashActionNoMove\"\n    aa_off = \"/pdr unload TargetDashActionNoMove\"\nelseif profile == \"speeder\" then\n    aa_on  = \"/runmacro 98\"\n    aa_off = \"/runmacro 99\"\nelse\n    aa_on  = \"/i-ching-commander anti_actionmove enable\"\n    aa_off = \"/i-ching-commander anti_actionmove dispose\"\nend\n\n-- =========================================================\n-- AntiActionMove rate limit state\n-- =========================================================\ndata._aam_rl = data._aam_rl or { lastAt = 0, winStart = 0, winCount = 0 }\nlocal rl = data._aam_rl\nif type(rl) ~= \"table\" then\n    data._aam_rl = { lastAt = 0, winStart = 0, winCount = 0 }\n    rl = data._aam_rl\nend\n\nlocal now = safeNow()\n\nlocal function aa_canSend()\n    local cd = math.floor(tonumber(cfg.cooldown_ms) or 120)\n    if now - (tonumber(rl.lastAt) or 0) < cd then\n        return false\n    end\n\n    local win = math.floor(tonumber(cfg.burst_ms) or 1200)\n    local maxc = math.floor(tonumber(cfg.burst_max) or 4)\n\n    if now - (tonumber(rl.winStart) or 0) > win then\n        rl.winStart = now\n        rl.winCount = 0\n    end\n\n    if (tonumber(rl.winCount) or 0) >= maxc then\n        return false\n    end\n\n    return true\nend\n\nlocal function aa_markSent()\n    rl.lastAt = now\n    rl.winCount = (tonumber(rl.winCount) or 0) + 1\nend\n\n-- =========================================================\n-- AntiActionMove desired state\n-- =========================================================\nlocal aa_last = data._anti_move_state or \"dispose\"\nlocal aa_desired = \"dispose\"\n\nif has_target and dist_eff ~= nil then\n    aa_desired = calc_desired(\n        aa_last,\n        dist_eff,\n        cfg.center_m,\n        cfg.width_m,\n        cfg.use_hysteresis\n    )\nelse\n    aa_desired = \"dispose\"\nend\n\nif cfg.send_enabled then\n    if aa_desired ~= aa_last then\n        if aa_canSend() then\n            local cmd = (aa_desired == \"enable\") and aa_on or aa_off\n            if safeSendCmd(cmd) then\n                data._anti_move_state = aa_desired\n                dbg.state = aa_desired\n                aa_markSent()\n            else\n                dbg.state = aa_last\n            end\n        else\n            dbg.state = aa_last\n        end\n    else\n        dbg.state = aa_last\n    end\nelse\n    -- preview only; do not modify sent-state\n    dbg.state = aa_desired\nend\n\n-- =========================================================\n-- ActionRange manual: ONLY i-Ching\n-- =========================================================\nif not isIching() then\n    return nil, 0, false, false\nend\n\nif not cfg.ar_enabled then\n    return nil, 0, false, false\nend\n\nif cfg.ar_draw_only == true then\n    return nil, 0, false, false\nend\n\ndata._ar_manual = data._ar_manual or { lastValue = nil, lastAt = 0 }\nlocal ar = data._ar_manual\nif type(ar) ~= \"table\" then\n    data._ar_manual = { lastValue = nil, lastAt = 0 }\n    ar = data._ar_manual\nend\n\nlocal v = math.floor(clamp(cfg.ar_value, 0, 100))\n\nif ar.lastValue == v then\n    return nil, 0, false, false\nend\n\nlocal minGap = math.floor(tonumber(cfg.ar_cooldown_ms) or 0)\nif (now - (tonumber(ar.lastAt) or 0)) < minGap then\n    return nil, 0, false, false\nend\n\nlocal cmd = \"/i-ching-commander action_range \" .. tostring(v)\nif safeSendCmd(cmd) then\n    ar.lastValue = v\n    ar.lastAt = now\nend\n\nreturn nil, 0, false, false",
 						conditions = 
 						{
 							
 							{
-								"ef1f552f-d0a4-df90-9f91-9f10dd1604c7",
-								true,
-							},
-							
-							{
-								"d9a5b353-19e4-f776-ba10-d1ff2f4d1e9b",
+								"c162236b-b165-faae-ae29-c5bf2c5ae25c",
 								true,
 							},
 						},
@@ -101,27 +80,16 @@ local tbl =
 					data = 
 					{
 						category = "Lua",
-						conditionLua = "return (data.riku_modeToggle ~= nil) and ((data.riku_modeToggle.mode == \"iching\") or (data.riku_modeToggle.mode == \"speeder\")) or false\n",
-						name = "Cheeto On",
-						uuid = "ef1f552f-d0a4-df90-9f91-9f10dd1604c7",
-						version = 3,
-					},
-				},
-				
-				{
-					data = 
-					{
-						category = "Lua",
 						conditionLua = "return _G.RikuduoGadget\n   and _G.RikuduoGadget.Status\n   and _G.RikuduoGadget.Status.dalamud == true",
 						name = "Dalamud is running",
-						uuid = "d9a5b353-19e4-f776-ba10-d1ff2f4d1e9b",
+						uuid = "c162236b-b165-faae-ae29-c5bf2c5ae25c",
 						version = 3,
 					},
 				},
 			},
 			eventType = 12,
 			name = "[I-Ching] AntiActionMove Logic",
-			uuid = "577b8969-748f-1d34-9303-fa4eea8ec856",
+			uuid = "77fe3578-51e8-6c75-9c16-23a6dff0fe2e",
 			version = 2,
 		},
 		inheritedIndex = 2,
@@ -138,6 +106,14 @@ local tbl =
 					{
 						aType = "Lua",
 						actionLua = "-- =========================================================\n-- [I-Ching Commander] UI Toggle & Config (OnDraw)\n-- 含 notify(/e) 与 tts(语音) 开关\n-- 默认速度 0.02\n-- =========================================================\n\nRikuIchingCmd = RikuIchingCmd or {}\nlocal mod = RikuIchingCmd\n\nlocal function iching_init()\n    if mod.initialized then return end\n\n    mod.settings_path = mod.settings_path or (\n        GetStartupPath() ..\n        [[\\LuaMods\\TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\Settings\\iching_speed.lua]]\n    )\n\n    local defaults = {\n        enabled      = false,\n        speed        = 0.02,\n        vk           = 0,\n        useShift     = false,\n        useCtrl      = false,\n        useAlt       = false,\n        menu_open    = false,\n        notify       = true,\n        tts          = true,\n\n        toggle_seq   = 0,\n        toggle_state = false,\n        tts_seen_seq = 0,\n    }\n\n    local loaded\n    if persistence and persistence.load then\n        local ok, res = pcall(persistence.load, mod.settings_path)\n        if ok and type(res) == \"table\" then loaded = res end\n    end\n\n    mod.cfg = mod.cfg or {}\n    for k, v in pairs(defaults) do\n        if loaded and loaded[k] ~= nil then\n            mod.cfg[k] = loaded[k]\n        elseif mod.cfg[k] == nil then\n            mod.cfg[k] = v\n        end\n    end\n\n    mod.need_send         = mod.need_send or false\n    mod.last_sent_enabled = mod.last_sent_enabled\n    mod.last_sent_speed   = mod.last_sent_speed\n\n    mod.initialized = true\nend\n\nlocal function iching_save()\n    if persistence and persistence.store and mod.settings_path and mod.cfg then\n        pcall(persistence.store, mod.settings_path, mod.cfg)\n    end\nend\n\niching_init()\nlocal cfg = mod.cfg\n\nlocal visible = GUI:Begin(\"I-Ching SpeedHack##iching_cmd\", true, GUI.WindowFlags_AlwaysAutoResize)\nif visible then\n\n    GUI:Spacing()\n\n    local on = cfg.enabled\n\n    local r,g,b    = 0.4,0.1,0.1\n    local rh,gh,bh = 0.7,0.2,0.2\n    if on then\n        r,g,b     = 0.1,0.5,0.1\n        rh,gh,bh  = 0.2,0.8,0.2\n    end\n\n    GUI:PushStyleColor(GUI.Col_Button,        r,g,b,1)\n    GUI:PushStyleColor(GUI.Col_ButtonHovered, rh,gh,bh,1)\n    GUI:PushStyleColor(GUI.Col_ButtonActive,  rh,gh,bh,1)\n\n    if GUI:Button(on and \"ON\" or \"OFF\", 60, 0) then\n        cfg.enabled   = not cfg.enabled\n        mod.need_send = true\n        iching_save()\n    end\n\n    GUI:PopStyleColor(3)\n\n    GUI:SameLine()\n    if GUI:Button(cfg.menu_open and \"-\" or \"+\", 25, 0) then\n        cfg.menu_open = not cfg.menu_open\n        iching_save()\n    end\n\n    if cfg.menu_open then\n        GUI:Spacing()\n        GUI:Separator()\n\n        GUI:Text(\"Speed\")\n        GUI:SameLine()\n        local speed = tonumber(cfg.speed) or 0.02\n        local newSpeed = GUI:InputFloat(\"##iching_speed\", speed, 0.01, 0.10, 2)\n        if newSpeed ~= speed then\n            if newSpeed < 0 then newSpeed = 0 end\n            cfg.speed = tonumber(string.format(\"%.2f\", newSpeed))\n            iching_save()\n            if cfg.enabled then mod.need_send = true end\n        end\n\n        GUI:Spacing()\n        GUI:Text(\"Hotkey (VK + Modifiers)\")\n\n        GUI:Text(\"VK Code\")\n        GUI:SameLine()\n        local vk = cfg.vk or 0\n        local newVK = GUI:InputInt(\"##iching_vk\", vk, 1, 10)\n        if newVK ~= vk then\n            if newVK < 0 then newVK = 0 end\n            cfg.vk = newVK\n            iching_save()\n        end\n\n        local newShift = GUI:Checkbox(\"Shift\", cfg.useShift)\n        if newShift ~= cfg.useShift then cfg.useShift = newShift; iching_save() end\n        GUI:SameLine()\n        local newCtrl = GUI:Checkbox(\"Ctrl\", cfg.useCtrl)\n        if newCtrl ~= cfg.useCtrl then cfg.useCtrl = newCtrl; iching_save() end\n        GUI:SameLine()\n        local newAlt = GUI:Checkbox(\"Alt\", cfg.useAlt)\n        if newAlt ~= cfg.useAlt then cfg.useAlt = newAlt; iching_save() end\n\n        GUI:Spacing()\n        GUI:Separator()\n\n        local newNotify = GUI:Checkbox(\"Echo (/e)\", cfg.notify ~= false)\n        if newNotify ~= (cfg.notify ~= false) then\n            cfg.notify = newNotify and true or false\n            iching_save()\n        end\n\n        local newTTS = GUI:Checkbox(\"TTS\", cfg.tts ~= false)\n        if newTTS ~= (cfg.tts ~= false) then\n            cfg.tts = newTTS and true or false\n            iching_save()\n        end\n\n        GUI:Spacing()\n        GUI:Separator()\n\n        if GUI:Button(\"Reset to default\", 140, 0) then\n            cfg.enabled      = false\n            cfg.speed        = 0.02\n            cfg.vk           = 0\n            cfg.useShift     = false\n            cfg.useCtrl      = false\n            cfg.useAlt       = false\n            cfg.notify       = true\n            cfg.tts          = true\n\n            cfg.toggle_seq   = 0\n            cfg.toggle_state = false\n            cfg.tts_seen_seq = 0\n\n            iching_save()\n            mod.need_send = true\n        end\n    end\nend\n\nGUI:End()\nreturn nil, 0, false, false\n",
+						conditions = 
+						{
+							
+							{
+								"54bb3bab-80c1-b753-9dd0-b106b34f6c8c",
+								true,
+							},
+						},
 						gVar = "ACR_RikuGNB3_CD",
 						uuid = "07742a0f-18b8-e7a8-ac62-05e7c7853b28",
 						version = 2.1,
@@ -147,6 +123,17 @@ local tbl =
 			},
 			conditions = 
 			{
+				
+				{
+					data = 
+					{
+						category = "Lua",
+						conditionLua = "return _G.RikuduoGadget\n   and _G.RikuduoGadget.Status\n   and _G.RikuduoGadget.Status.dalamud == true",
+						name = "Dalamud is running",
+						uuid = "54bb3bab-80c1-b753-9dd0-b106b34f6c8c",
+						version = 3,
+					},
+				},
 			},
 			eventType = 13,
 			name = "SpeedHackUI",
@@ -167,6 +154,14 @@ local tbl =
 					{
 						aType = "Lua",
 						actionLua = "-- =========================================================\n-- [I-Ching Commander] Speed Toggle & Hotkey (OnFrame / OnUpdate)\n-- 仅在变化时发送 /i-ching-commander speed\n-- 可选 /e 提示（cfg.notify）\n-- TTS 使用 settings 里的 toggle_seq/tts_seen_seq 防重播\n-- 默认速度 0.02\n-- =========================================================\n\nRikuIchingCmd = RikuIchingCmd or {}\nlocal mod = RikuIchingCmd\n\nlocal function iching_init()\n    if mod.initialized then return end\n\n    mod.settings_path = mod.settings_path or (\n        GetStartupPath() ..\n        [[\\LuaMods\\TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\Settings\\iching_speed.lua]]\n    )\n\n    local defaults = {\n        enabled      = false,\n        speed        = 0.02,\n        vk           = 0,\n        useShift     = false,\n        useCtrl      = false,\n        useAlt       = false,\n        menu_open    = false,\n        notify       = true,\n        tts          = true,\n\n        -- ★ 用于“只在切换时播报”且跨切图/重载不重复\n        toggle_seq   = 0,      -- 每次 ON<->OFF 生效时 +1\n        toggle_state = false,  -- 本次切换后的状态\n        tts_seen_seq = 0,      -- TTS 已播报到的 seq\n    }\n\n    local loaded\n    if persistence and persistence.load then\n        local ok, res = pcall(persistence.load, mod.settings_path)\n        if ok and type(res) == \"table\" then loaded = res end\n    end\n\n    mod.cfg = mod.cfg or {}\n    for k, v in pairs(defaults) do\n        if loaded and loaded[k] ~= nil then\n            mod.cfg[k] = loaded[k]\n        elseif mod.cfg[k] == nil then\n            mod.cfg[k] = v\n        end\n    end\n\n    mod.need_send         = mod.need_send or false\n    mod.last_sent_enabled = mod.last_sent_enabled\n    mod.last_sent_speed   = mod.last_sent_speed\n\n    mod.initialized = true\nend\n\nlocal function iching_save()\n    if persistence and persistence.store and mod.settings_path and mod.cfg then\n        pcall(persistence.store, mod.settings_path, mod.cfg)\n    end\nend\n\nlocal function is_vk_down(vk)\n    if not vk or vk == 0 then return false end\n    if not GUI then return false end\n    if GUI.IsKeyDown then\n        return GUI:IsKeyDown(vk)\n    elseif GUI.IsKeyPressed then\n        return GUI:IsKeyPressed(vk, true)\n    end\n    return false\nend\n\nlocal function hotkey_fired(cfg)\n    if not GUI or not GUI.IsKeyPressed then return false end\n    if not cfg or not cfg.vk or cfg.vk == 0 then return false end\n\n    if not GUI:IsKeyPressed(cfg.vk, false) then return false end\n\n    if cfg.useShift and not is_vk_down(0x10) then return false end\n    if cfg.useCtrl  and not is_vk_down(0x11) then return false end\n    if cfg.useAlt   and not is_vk_down(0x12) then return false end\n\n    return true\nend\n\nlocal function send_speed_command()\n    local cfg = mod.cfg\n    if not cfg then return end\n\n    local enabled = cfg.enabled and true or false\n    local speed_val\n\n    if enabled then\n        local s = tonumber(cfg.speed) or 0.02\n        if s < 0 then s = 0 end\n        s = tonumber(string.format(\"%.2f\", s))\n        if s <= 0 then s = 0.01 end\n        speed_val = s\n    else\n        speed_val = 0.00\n    end\n\n    local state_changed = (mod.last_sent_enabled == nil or mod.last_sent_enabled ~= enabled)\n\n    -- 1) ON/OFF 切换时（真正变化）更新 settings 里的 toggle_seq/toggle_state\n    if state_changed then\n        cfg.toggle_seq   = (tonumber(cfg.toggle_seq) or 0) + 1\n        cfg.toggle_state = enabled\n        -- 注意：不要在这里动 tts_seen_seq，TTS Reaction 播完会写回\n        iching_save()\n    end\n\n    -- 2) 可选 /e 提示（仅在切换时）\n    if SendTextCommand and state_changed and cfg.notify ~= false then\n        if enabled then\n            SendTextCommand('/e Speed Hack ON <se.1>')\n        else\n            SendTextCommand('/e Speed Hack OFF <se.11>')\n        end\n    end\n\n    -- 3) 去重：状态+数值都一样就不发 /i-ching-commander\n    if mod.last_sent_enabled ~= nil and mod.last_sent_speed ~= nil\n       and mod.last_sent_enabled == enabled\n       and mod.last_sent_speed   == speed_val then\n        return\n    end\n\n    local cmd = string.format(\"/i-ching-commander speed %.2f\", speed_val)\n    if SendTextCommand then\n        SendTextCommand(cmd)\n    end\n\n    mod.last_sent_enabled = enabled\n    mod.last_sent_speed   = speed_val\nend\n\niching_init()\nlocal cfg = mod.cfg\n\nif hotkey_fired(cfg) then\n    cfg.enabled   = not cfg.enabled\n    mod.need_send = true\n    iching_save()\nend\n\nif mod.need_send then\n    send_speed_command()\n    mod.need_send = false\nend\n\nreturn nil, 0, false, false\n",
+						conditions = 
+						{
+							
+							{
+								"a007b4ea-1d5a-86fe-89da-f46820ce6881",
+								true,
+							},
+						},
 						gVar = "ACR_RikuGNB3_CD",
 						uuid = "d4c5e45f-0199-6b7c-be86-b22602279c3a",
 						version = 2.1,
@@ -176,6 +171,17 @@ local tbl =
 			},
 			conditions = 
 			{
+				
+				{
+					data = 
+					{
+						category = "Lua",
+						conditionLua = "return _G.RikuduoGadget\n   and _G.RikuduoGadget.Status\n   and _G.RikuduoGadget.Status.dalamud == true",
+						name = "Dalamud is running",
+						uuid = "a007b4ea-1d5a-86fe-89da-f46820ce6881",
+						version = 3,
+					},
+				},
 			},
 			eventType = 12,
 			name = "SpeedHackLogic",
@@ -206,6 +212,11 @@ local tbl =
 								"fe097e60-b2d1-f7ac-a30b-c9eec0bd1936",
 								true,
 							},
+							
+							{
+								"c7d16109-6191-1d93-873d-898103f5d6f3",
+								true,
+							},
 						},
 						gVar = "ACR_RikuWAR3_CD",
 						uuid = "401ef24a-e1c2-1b1c-92af-7787ad33ddc0",
@@ -228,6 +239,11 @@ local tbl =
 							
 							{
 								"4d306eb3-c17d-cb51-915e-2d27cf7bd165",
+								true,
+							},
+							
+							{
+								"c7d16109-6191-1d93-873d-898103f5d6f3",
 								true,
 							},
 						},
@@ -257,6 +273,17 @@ local tbl =
 						category = "Lua",
 						conditionLua = "-- [I-Ching] SpeedHack TTS OFF - Condition\n-- 监测 settings 中 toggle_seq/toggle_state，只在 ON->OFF 切换时播一次\n-- 并把 tts_seen_seq 写回 settings，跨切图/重载不重复\n\nlocal mod = RikuIchingCmd\nlocal cfg = mod and mod.cfg\nif not (cfg and cfg.tts ~= false) then\n    return false\nend\n\nlocal seq  = tonumber(cfg.toggle_seq) or 0\nlocal seen = tonumber(cfg.tts_seen_seq) or 0\nlocal state = (cfg.toggle_state == true)\n\nif seq <= 0 or seen >= seq then\n    return false\nend\n\n-- 只对 OFF 事件播报\nif state == false then\n    cfg.tts_seen_seq = seq\n    if persistence and persistence.store and mod.settings_path then\n        pcall(persistence.store, mod.settings_path, cfg)\n    end\n    return true\nend\n\nreturn false\n",
 						uuid = "4d306eb3-c17d-cb51-915e-2d27cf7bd165",
+						version = 3,
+					},
+				},
+				
+				{
+					data = 
+					{
+						category = "Lua",
+						conditionLua = "return _G.RikuduoGadget\n   and _G.RikuduoGadget.Status\n   and _G.RikuduoGadget.Status.dalamud == true",
+						name = "Dalamud is running",
+						uuid = "c7d16109-6191-1d93-873d-898103f5d6f3",
 						version = 3,
 					},
 				},
