@@ -79,59 +79,51 @@ local tbl =
 					data = 
 					{
 						aType = "Lua",
-						actionLua = "-- ===== B) GroupMit — 单窗口竖排 + 便携存档（适配 show switch + only in instance）=====\n\n-- 便携路径（与 A 完全一致，确保共用同一文件）\nlocal LUA_MODS  = GetLuaModsPath()\nlocal SAVE_DIR  = LUA_MODS .. [[TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\Settings]]\nlocal SAVE_FILE = SAVE_DIR .. [[\\SelectionDR.lua]]\n\n-- 目录确保（逐级创建）\nlocal function ensure_dir_tree(path)\n    if not FolderExists(path) then\n        local acc = \"\"\n        for part in string.gmatch(path, [[[^\\\\]+]]) do\n            acc = (acc == \"\") and part or (acc .. [[\\]] .. part)\n            if not FolderExists(acc) then FolderCreate(acc) end\n        end\n    end\nend\n\n-- 共享存储（重用同一 RG.__store）\n_G.RikuduoGadget = _G.RikuduoGadget or {}\nlocal RG = _G.RikuduoGadget\nRG.__store = RG.__store or { loaded=false, data=nil }\n\nlocal function load_store()\n    if RG.__store.loaded then return end\n    local ok, data = pcall(FileLoad, SAVE_FILE)\n    if ok and type(data)==\"table\" then\n        -- 兼容旧版：把顶层 state/order 迁到 SelectionDR\n        if data.state and data.order and (not data.SelectionDR) then\n            data = { SelectionDR = { state=data.state, order=data.order } }\n        end\n        RG.__store.data = data\n    else\n        RG.__store.data = {}\n    end\n    RG.__store.loaded = true\nend\n\nlocal function save_store()\n    ensure_dir_tree(SAVE_DIR)\n    FileSave(SAVE_FILE, RG.__store.data)\nend\n\n-- ===== show switch 联动：关了就不画旧 UI =====\n-- 优先用 Toolbox API（RG.ShowSwitchEnabled / RG.show_switch）\n-- Toolbox 未加载时从存档读取 SwitchUI，并支持 onlyInInstance。\nlocal function show_switch_enabled()\n    -- 1) 优先用 Toolbox API\n    if RG.ShowSwitchEnabled then\n        return RG.ShowSwitchEnabled() == true\n    end\n    if RG.show_switch then\n        return RG.show_switch() == true\n    end\n\n    -- 2) 兜底：从存档读 SwitchUI\n    load_store()\n    local sw = RG.__store.data and RG.__store.data.SwitchUI\n    if not sw or type(sw.showSwitch) ~= \"boolean\" then\n        return true -- 默认显示\n    end\n    if sw.showSwitch ~= true then\n        return false\n    end\n\n    -- 3) only in instance\n    if sw.onlyInInstance == true then\n        if type(InInstance) == \"function\" then\n            return InInstance() == true\n        end\n        return false\n    end\n\n    return true\nend\n\nif not show_switch_enabled() then\n    self.used = true\n    return\nend\n\n-- GroupMit 节点（键名是 *group 后缀*，但 UI 标签显示 MT/ST/Manual）\nlocal LABELS = { MTgroup=\"MT\", STgroup=\"ST\", Manualgroup=\"Manual\" }\n\nlocal function ensure_groupmit_defaults()\n    load_store()\n    local node = RG.__store.data.GroupMit or {}\n    node.order = node.order or {\"MTgroup\",\"STgroup\",\"Manualgroup\"}\n    node.state = node.state or { MTgroup=true, STgroup=false, Manualgroup=false }\n    for _,k in ipairs({\"MTgroup\",\"STgroup\",\"Manualgroup\"}) do\n        if type(node.state[k]) ~= \"boolean\" then node.state[k] = (k==\"MTgroup\") end\n        local found=false; for __,v in ipairs(node.order) do if v==k then found=true end end\n        if not found then table.insert(node.order, k) end\n    end\n    RG.__store.data.GroupMit = node\nend\n\n-- 对外接口（供 Condition 使用）\nfunction RG.group_selection()   -- 返回 \"MTgroup\"/\"STgroup\"/\"Manualgroup\"\n    load_store()\n    local node = RG.__store.data.GroupMit\n    if not node then return \"MTgroup\" end\n    for _,name in ipairs(node.order) do\n        if node.state[name] then return name end\n    end\n    return \"MTgroup\"\nend\n\nfunction RG.group_is(name)      -- 例：RG.group_is(\"STgroup\")\n    load_store()\n    local node = RG.__store.data.GroupMit\n    return node and node.state[name] == true or false\nend\n\n-- UI（单窗口竖排）\nlocal function draw_chip(id, label, selected)\n    local w,h=85,32\n    local col = selected and {r=0,g=1,b=0,a=0.5} or {r=1,g=0,b=0,a=0.25}\n    GUI:PushStyleVar(GUI.StyleVar_ChildWindowRounding, 6)\n    GUI:PushStyleVar(GUI.StyleVar_ItemSpacing, 6, 6)\n    GUI:PushStyleColor(GUI.Col_ChildWindowBg, col.r,col.g,col.b,col.a)\n    GUI:BeginChild(id, w, h, false, GUI.WindowFlags_AlwaysAutoResize)\n        local tw=GUI:CalcTextSize(label)\n        GUI:SetCursorPosX((w-tw)*0.5)\n        GUI:SetCursorPosY((h-GUI:GetTextLineHeightWithSpacing())*0.5)\n        GUI:Text(label)\n    GUI:EndChild()\n    local clicked = GUI:IsItemHovered() and GUI:IsMouseClicked(0)\n    GUI:PopStyleColor(); GUI:PopStyleVar(2)\n    return clicked\nend\n\nlocal function draw_panel()\n    ensure_groupmit_defaults()\n    local node = RG.__store.data.GroupMit\n\n    GUI:Begin(\"GroupMit\", true, GUI.WindowFlags_AlwaysAutoResize)\n    for i,key in ipairs(node.order) do\n        local label = LABELS[key] or key\n        if draw_chip(\"grp_chip_\"..key, label, node.state[key]) then\n            for k,_ in pairs(node.state) do node.state[k] = (k==key) end\n            save_store()\n        end\n        if i < #node.order then GUI:Separator() end\n    end\n    GUI:End()\nend\n\ndraw_panel()\nself.used = true",
-						conditions = 
-						{
-							
-							{
-								"16cb3959-cd3c-d31b-bb1d-4a348da12fe4",
-								true,
-							},
-						},
+						actionLua = "--=========================================================\n-- Weave Mits Hotbar (OnDraw)\n-- 按当前职业显示减伤按钮；点击后写入 data.riku_hotbar 队列，\n-- 由 [ForCasual] Weave Mits Logic 逐个释放。\n-- step = { ids = {升级版, 原版, ...}, skip = 在CD中时是否跳过 }\n--=========================================================\nlocal player = TensorCore.mGetPlayer()\nif not player then return end\n\nlocal hb = data.riku_hotbar\nif not (hb and hb.jobs) then\n    hb = {\n        active = false, queue = nil, idx = 1,\n        startedAt = 0, nextAt = 0, pendingID = 0, pendingAt = 0,\n        ignoreWeave = false, allowInterrupt = false,\n        flashUntil = {},\n    }\n    data.riku_hotbar = hb\n\n    local function S(skip, ...) return { ids = { ... }, skip = skip } end\n    local function Q(name, ignoreWeave, steps)\n        return { name = name, ignoreWeave = ignoreWeave, allowInterrupt = false, steps = steps }\n    end\n\n    hb.jobs = {\n        [19] = { title = \"PLD\", entries = { -- PLD\n            Q(\"15+10+20\", true, { S(true, 7531), S(true, 22), S(false, 25746, 3542) }),\n            Q(\"15+40\",    true, { S(true, 36920), S(false, 25746, 3542) }),\n            Q(\"invuln\",   false, { S(false, 30) }),\n        } },\n        [21] = { title = \"WAR\", entries = { -- WAR\n            Q(\"15+10+20\", true, { S(true, 7531), S(true, 40), S(false, 25751, 3551) }),\n            Q(\"15+40\",    true, { S(true, 36923, 44), S(false, 25751, 3551) }),\n            Q(\"invuln\",   false, { S(false, 43) }),\n        } },\n        [32] = { title = \"DRK\", entries = { -- DRK\n            Q(\"15+10+20\", true, { S(true, 7531), S(true, 3634), S(true, 25754), S(false, 7393) }),\n            Q(\"15+40\",    true, { S(true, 36927, 3636), S(true, 25754), S(false, 7393) }),\n            Q(\"invuln\",   false, { S(false, 3638) }),\n        } },\n        [37] = { title = \"GNB\", entries = { -- GNB\n            Q(\"15+10+20\", true, { S(true, 7531), S(true, 16140), S(false, 25758, 16161) }),\n            Q(\"15+40\",    true, { S(true, 36935, 16148), S(false, 25758, 16161) }),\n            Q(\"invuln\",   false, { S(false, 16152) }),\n        } },\n    }\n\n    -- 按下后变红一段时间\n    function hb.button(self, label, flashMS)\n        local now = Now()\n        local untilMS = self.flashUntil[label]\n        local flashing = untilMS ~= nil and now < untilMS\n        if flashing then\n            GUI:PushStyleColor(GUI.Col_Button, 1, 0, 0, 1)\n            GUI:PushStyleColor(GUI.Col_ButtonHovered, 1, 0, 0, 1)\n            GUI:PushStyleColor(GUI.Col_ButtonActive, 1, 0, 0, 1)\n        end\n        local pressed = GUI:Button(label)\n        if flashing then GUI:PopStyleColor(3) end\n        if pressed then self.flashUntil[label] = now + flashMS end\n        return pressed\n    end\n\n    function hb.start(self, entry)\n        self.active = true\n        self.queue = entry\n        self.idx = 1\n        self.startedAt = Now()\n        self.nextAt = 0\n        self.ignoreWeave = entry.ignoreWeave\n        self.allowInterrupt = entry.allowInterrupt\n        self.pendingID = 0\n        self.pendingAt = 0\n    end\n\n    function hb.stop(self)\n        self.active = false\n        self.queue = nil\n        self.idx = 1\n        self.pendingID = 0\n        self.pendingAt = 0\n    end\nend\n\nlocal cfg = hb.jobs[player.job]\nif not cfg then return end\n\nlocal visible = GUI:Begin(cfg.title, true, GUI.WindowFlags_AlwaysAutoResize)\nif visible then\n    local entries = cfg.entries\n    for i = 1, #entries do\n        local e = entries[i]\n        if hb:button(e.name, 2000) then hb:start(e) end\n    end\n    if hb:button(\"STOP\", 500) then hb:stop() end\nend\nGUI:End()\n",
 						gVar = "ACR_RikuGNB3_CD",
-						uuid = "add1d230-614d-ce9b-b878-515d4b77db30",
+						name = "Tank Mits Hotbar",
+						uuid = "3ba46ba9-756f-0390-81fc-1d1749694cf4",
 						version = 2.1,
 					},
 				},
 			},
 			conditions = 
 			{
+			},
+			eventType = 13,
+			name = "[ForCasual] Weave Mits Hotbar",
+			uuid = "881d71ed-c206-e072-9ed6-da0593b0db1c",
+			version = 2,
+		},
+	},
+	
+	{
+		data = 
+		{
+			actions = 
+			{
 				
 				{
 					data = 
 					{
-						category = "Self",
-						conditionType = 14,
-						jobIDList = 
-						{
-							19,
-							21,
-							32,
-							37,
-						},
-						name = "is TANK",
-						uuid = "16cb3959-cd3c-d31b-bb1d-4a348da12fe4",
-						version = 3,
-					},
-				},
-				
-				{
-					data = 
-					{
-						category = "Lua",
-						conditionLua = "-- 当前是 MTgroup\nreturn (RikuduoGadget and RikuduoGadget.group_is and RikuduoGadget.group_is(\"MTgroup\")) or false\n\n-- 当前是 STgroup\nreturn (RikuduoGadget and RikuduoGadget.group_is and RikuduoGadget.group_is(\"STgroup\")) or false\n\n-- 当前是 Manualgroup\nreturn (RikuduoGadget and RikuduoGadget.group_is and RikuduoGadget.group_is(\"Manualgroup\")) or false\n\n-- 当前是 MTgroup 或 STgroup\nreturn (RikuduoGadget and RikuduoGadget.group_is and (RikuduoGadget.group_is(\"MTgroup\") or RikuduoGadget.group_is(\"STgroup\"))) or false",
-						name = "Readme:lua Condition Sample",
-						uuid = "bfed5e34-ed1f-0b47-bc5f-6c25c3351ac7",
-						version = 3,
+						aType = "Lua",
+						actionLua = "--=========================================================\n-- Weave Mits Logic (OnFrame)\n-- 执行 [ForCasual] Weave Mits Hotbar 写入 data.riku_hotbar 的减伤队列。\n-- step = { ids = {升级版, 原版, ...}, skip = 在CD中时是否跳过 }\n-- 返回: action, targetID, ignoreWeaveRules, allowInterrupt\n--=========================================================\nlocal hb = data.riku_hotbar\nif not (hb and hb.active and hb.queue and hb.stop) then return end\n\nlocal now = Now()\nif now < hb.nextAt then return end\n\n-- 安全超时：整条队列 10 秒\nif now - hb.startedAt > 10000 then\n    hb:stop()\n    return\nend\n\nlocal player = TensorCore.mGetPlayer()\nif not player then return end\n\nlocal steps = hb.queue.steps\nlocal act\nwhile hb.idx <= #steps do\n    local step = steps[hb.idx]\n    act = nil\n    -- 取第一个当前等级已学会的版本（升级版在前，同一冷却组）\n    for i = 1, #step.ids do\n        local a = ActionList:Get(1, step.ids[i])\n        if a and a.level <= player.level then\n            act = a\n            break\n        end\n    end\n    if act == nil\n        or (step.skip and hb.pendingID ~= act.id and act.isoncd and not act:IsReady(player.id)) then\n        hb.idx = hb.idx + 1\n        hb.pendingID = 0\n    else\n        break\n    end\nend\n\nif hb.idx > #steps then\n    hb:stop()\n    return\nend\n\n-- 已发出请求：确认真正放出后再前进\nif hb.pendingID == act.id then\n    local ci = player.castinginfo\n    if (ci and ci.lastcastid == act.id and ci.timesincecast < now - hb.pendingAt)\n        or (act.isoncd and not hb.pendingWasOnCD) then\n        hb.pendingID = 0\n        hb.idx = hb.idx + 1\n        hb.nextAt = now + 250\n        return\n    end\n    -- 单步超时 2 秒\n    if now - hb.pendingAt > 2000 then\n        hb:stop()\n        return\n    end\n    hb.nextAt = now + 100\n    return act, player.id, hb.ignoreWeave, hb.allowInterrupt\nend\n\nif not act:IsReady(player.id) then\n    hb.nextAt = now + 100\n    return\nend\n\nhb.pendingID = act.id\nhb.pendingAt = now\nhb.pendingWasOnCD = act.isoncd\nhb.nextAt = now + 100\nreturn act, player.id, hb.ignoreWeave, hb.allowInterrupt\n",
+						gVar = "ACR_RikuGNB3_CD",
+						name = "Mits Queue Executor",
+						uuid = "73c11531-015c-89dd-8f2c-678d6b221fb7",
+						version = 2.1,
 					},
 				},
 			},
-			eventType = 13,
-			name = "[Tank] GroupMit Control",
-			uuid = "dc9a04b0-743c-8547-886f-f1bb3578e917",
+			conditions = 
+			{
+			},
+			eventType = 12,
+			name = "[ForCasual] Weave Mits Logic",
+			uuid = "8e88a806-c537-a857-822f-36de6294dd02",
 			version = 2,
 		},
-		inheritedIndex = 4,
+		inheritedIndex = 3,
 	},
 	
 	{
@@ -196,7 +188,72 @@ local tbl =
 			uuid = "15508aa1-32c0-d8d1-b471-4e1098a38917",
 			version = 2,
 		},
-		inheritedIndex = 3,
+		inheritedIndex = 4,
+	},
+	
+	{
+		data = 
+		{
+			actions = 
+			{
+				
+				{
+					data = 
+					{
+						aType = "Lua",
+						actionLua = "-- ===== B) GroupMit — 单窗口竖排 + 便携存档（适配 show switch + only in instance）=====\n\n-- 便携路径（与 A 完全一致，确保共用同一文件）\nlocal LUA_MODS  = GetLuaModsPath()\nlocal SAVE_DIR  = LUA_MODS .. [[TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\Settings]]\nlocal SAVE_FILE = SAVE_DIR .. [[\\SelectionDR.lua]]\n\n-- 目录确保（逐级创建）\nlocal function ensure_dir_tree(path)\n    if not FolderExists(path) then\n        local acc = \"\"\n        for part in string.gmatch(path, [[[^\\\\]+]]) do\n            acc = (acc == \"\") and part or (acc .. [[\\]] .. part)\n            if not FolderExists(acc) then FolderCreate(acc) end\n        end\n    end\nend\n\n-- 共享存储（重用同一 RG.__store）\n_G.RikuduoGadget = _G.RikuduoGadget or {}\nlocal RG = _G.RikuduoGadget\nRG.__store = RG.__store or { loaded=false, data=nil }\n\nlocal function load_store()\n    if RG.__store.loaded then return end\n    local ok, data = pcall(FileLoad, SAVE_FILE)\n    if ok and type(data)==\"table\" then\n        -- 兼容旧版：把顶层 state/order 迁到 SelectionDR\n        if data.state and data.order and (not data.SelectionDR) then\n            data = { SelectionDR = { state=data.state, order=data.order } }\n        end\n        RG.__store.data = data\n    else\n        RG.__store.data = {}\n    end\n    RG.__store.loaded = true\nend\n\nlocal function save_store()\n    ensure_dir_tree(SAVE_DIR)\n    FileSave(SAVE_FILE, RG.__store.data)\nend\n\n-- ===== show switch 联动：关了就不画旧 UI =====\n-- 优先用 Toolbox API（RG.ShowSwitchEnabled / RG.show_switch）\n-- Toolbox 未加载时从存档读取 SwitchUI，并支持 onlyInInstance。\nlocal function show_switch_enabled()\n    -- 1) 优先用 Toolbox API\n    if RG.ShowSwitchEnabled then\n        return RG.ShowSwitchEnabled() == true\n    end\n    if RG.show_switch then\n        return RG.show_switch() == true\n    end\n\n    -- 2) 兜底：从存档读 SwitchUI\n    load_store()\n    local sw = RG.__store.data and RG.__store.data.SwitchUI\n    if not sw or type(sw.showSwitch) ~= \"boolean\" then\n        return true -- 默认显示\n    end\n    if sw.showSwitch ~= true then\n        return false\n    end\n\n    -- 3) only in instance\n    if sw.onlyInInstance == true then\n        if type(InInstance) == \"function\" then\n            return InInstance() == true\n        end\n        return false\n    end\n\n    return true\nend\n\nif not show_switch_enabled() then\n    self.used = true\n    return\nend\n\n-- GroupMit 节点（键名是 *group 后缀*，但 UI 标签显示 MT/ST/Manual）\nlocal LABELS = { MTgroup=\"MT\", STgroup=\"ST\", Manualgroup=\"Manual\" }\n\nlocal function ensure_groupmit_defaults()\n    load_store()\n    local node = RG.__store.data.GroupMit or {}\n    node.order = node.order or {\"MTgroup\",\"STgroup\",\"Manualgroup\"}\n    node.state = node.state or { MTgroup=true, STgroup=false, Manualgroup=false }\n    for _,k in ipairs({\"MTgroup\",\"STgroup\",\"Manualgroup\"}) do\n        if type(node.state[k]) ~= \"boolean\" then node.state[k] = (k==\"MTgroup\") end\n        local found=false; for __,v in ipairs(node.order) do if v==k then found=true end end\n        if not found then table.insert(node.order, k) end\n    end\n    RG.__store.data.GroupMit = node\nend\n\n-- 对外接口（供 Condition 使用）\nfunction RG.group_selection()   -- 返回 \"MTgroup\"/\"STgroup\"/\"Manualgroup\"\n    load_store()\n    local node = RG.__store.data.GroupMit\n    if not node then return \"MTgroup\" end\n    for _,name in ipairs(node.order) do\n        if node.state[name] then return name end\n    end\n    return \"MTgroup\"\nend\n\nfunction RG.group_is(name)      -- 例：RG.group_is(\"STgroup\")\n    load_store()\n    local node = RG.__store.data.GroupMit\n    return node and node.state[name] == true or false\nend\n\n-- UI（单窗口竖排）\nlocal function draw_chip(id, label, selected)\n    local w,h=85,32\n    local col = selected and {r=0,g=1,b=0,a=0.5} or {r=1,g=0,b=0,a=0.25}\n    GUI:PushStyleVar(GUI.StyleVar_ChildWindowRounding, 6)\n    GUI:PushStyleVar(GUI.StyleVar_ItemSpacing, 6, 6)\n    GUI:PushStyleColor(GUI.Col_ChildWindowBg, col.r,col.g,col.b,col.a)\n    GUI:BeginChild(id, w, h, false, GUI.WindowFlags_AlwaysAutoResize)\n        local tw=GUI:CalcTextSize(label)\n        GUI:SetCursorPosX((w-tw)*0.5)\n        GUI:SetCursorPosY((h-GUI:GetTextLineHeightWithSpacing())*0.5)\n        GUI:Text(label)\n    GUI:EndChild()\n    local clicked = GUI:IsItemHovered() and GUI:IsMouseClicked(0)\n    GUI:PopStyleColor(); GUI:PopStyleVar(2)\n    return clicked\nend\n\nlocal function draw_panel()\n    ensure_groupmit_defaults()\n    local node = RG.__store.data.GroupMit\n\n    GUI:Begin(\"GroupMit\", true, GUI.WindowFlags_AlwaysAutoResize)\n    for i,key in ipairs(node.order) do\n        local label = LABELS[key] or key\n        if draw_chip(\"grp_chip_\"..key, label, node.state[key]) then\n            for k,_ in pairs(node.state) do node.state[k] = (k==key) end\n            save_store()\n        end\n        if i < #node.order then GUI:Separator() end\n    end\n    GUI:End()\nend\n\ndraw_panel()\nself.used = true",
+						conditions = 
+						{
+							
+							{
+								"16cb3959-cd3c-d31b-bb1d-4a348da12fe4",
+								true,
+							},
+						},
+						gVar = "ACR_RikuGNB3_CD",
+						uuid = "add1d230-614d-ce9b-b878-515d4b77db30",
+						version = 2.1,
+					},
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					data = 
+					{
+						category = "Self",
+						conditionType = 14,
+						jobIDList = 
+						{
+							19,
+							21,
+							32,
+							37,
+						},
+						name = "is TANK",
+						uuid = "16cb3959-cd3c-d31b-bb1d-4a348da12fe4",
+						version = 3,
+					},
+				},
+				
+				{
+					data = 
+					{
+						category = "Lua",
+						conditionLua = "-- 当前是 MTgroup\nreturn (RikuduoGadget and RikuduoGadget.group_is and RikuduoGadget.group_is(\"MTgroup\")) or false\n\n-- 当前是 STgroup\nreturn (RikuduoGadget and RikuduoGadget.group_is and RikuduoGadget.group_is(\"STgroup\")) or false\n\n-- 当前是 Manualgroup\nreturn (RikuduoGadget and RikuduoGadget.group_is and RikuduoGadget.group_is(\"Manualgroup\")) or false\n\n-- 当前是 MTgroup 或 STgroup\nreturn (RikuduoGadget and RikuduoGadget.group_is and (RikuduoGadget.group_is(\"MTgroup\") or RikuduoGadget.group_is(\"STgroup\"))) or false",
+						name = "Readme:lua Condition Sample",
+						uuid = "bfed5e34-ed1f-0b47-bc5f-6c25c3351ac7",
+						version = 3,
+					},
+				},
+			},
+			eventType = 13,
+			name = "[Tank] GroupMit Control",
+			uuid = "dc9a04b0-743c-8547-886f-f1bb3578e917",
+			version = 2,
+		},
+		inheritedIndex = 5,
 	},
 	
 	{
@@ -266,7 +323,7 @@ local tbl =
 			uuid = "18a02a4e-2081-c247-bbf0-972288ea8f11",
 			version = 2,
 		},
-		inheritedIndex = 5,
+		inheritedIndex = 6,
 	},
 	
 	{
@@ -344,7 +401,7 @@ local tbl =
 			uuid = "38c7cf1c-1255-139d-a93c-53b4f4fedc0e",
 			version = 2,
 		},
-		inheritedIndex = 6,
+		inheritedIndex = 7,
 	},
 	
 	{
@@ -405,111 +462,6 @@ local tbl =
 					data = 
 					{
 						aType = "Lua",
-						actionLua = "local function drawQT(name, info)\n    GUI:Begin(\"Selection Damage Reduction GUI\", true,\n        GUI.WindowFlags_NoTitleBar +\n        GUI.WindowFlags_NoScrollbar +\n        GUI.WindowFlags_NoScrollWithMouse +\n        GUI.WindowFlags_NoCollapse +\n        GUI.WindowFlags_AlwaysAutoResize\n    )\n\n    local ChildColor = info.bool and \n        {r=0, g=1, b=0, a=0.5} or\n        {r=1, g=0.07, b=0, a=0.5}\n\n    GUI:PushStyleVar(GUI.StyleVar_ChildWindowRounding, 5)\n    GUI:PushStyleVar(GUI.StyleVar_ItemSpacing, 3, 3)\n    GUI:PushStyleColor(GUI.Col_ChildWindowBg, ChildColor.r, ChildColor.g, ChildColor.b, ChildColor.a)\n\n    local text_width = GUI:CalcTextSize(name)\n    GUI:BeginChild(name, 105, 30, false, GUI.WindowFlags_AlwaysAutoResize)\n    GUI:SetCursorPosX((105 - text_width) * 0.5)\n    GUI:SetCursorPosY((30 - GUI:GetTextLineHeightWithSpacing()) * 0.5)\n    GUI:Text(name)\n    GUI:EndChild()\n\n    if GUI:IsItemHovered() and GUI:IsMouseClicked(0) then\n        for otherName, otherInfo in pairs(data.string_SelectionDR) do\n            otherInfo.bool = (otherName == name)\n        end\n    end\n\n    GUI:PopStyleColor()\n    GUI:PopStyleVar(2)\n    GUI:End()\nend\n\n-- 初始化状态表\nif data.string_SelectionDR == nil then\n    data.string_SelectionDR = {\n        [\"正攻法\"] = {bool = false},\n        [\"1/3無敵\"] = {bool = true},\n        [\"2/4無敵\"] = {bool = false},\n    }\nend\n\n-- 初始化显示顺序\nif data.string_SelectionDR_Order == nil then\n    data.string_SelectionDR_Order = {\n        \"正攻法\",\n        \"1/3無敵\",\n        \"2/4無敵\",\n    }\nend\n\n-- 按指定顺序渲染按钮\nfor _, btnName in ipairs(data.string_SelectionDR_Order) do\n    local config = data.string_SelectionDR[btnName]\n    if config then\n        drawQT(btnName, config)\n    end\nend\n\nself.used = true\n",
-						gVar = "ACR_RikuGNB3_CD",
-						uuid = "1dc3214b-4ba8-2f2f-a8da-465fa6d69d46",
-						version = 2.1,
-					},
-					inheritedIndex = 1,
-				},
-			},
-			conditions = 
-			{
-			},
-			enabled = false,
-			eventType = 13,
-			name = "[Legacy] String UI Control Sample",
-			uuid = "50870786-6581-7fcf-b12e-182a6cccb7b5",
-			version = 2,
-		},
-		inheritedIndex = 12,
-	},
-	
-	{
-		data = 
-		{
-			actions = 
-			{
-				
-				{
-					data = 
-					{
-						aType = "Lua",
-						actionLua = "-- Casual Auto Selector - UI OnDraw (with modifier hotkey setup)\n\nlocal SAVE_REL = [[TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\Settings\\CasualSelector.lua]]\n\nlocal function _save(tbl)\n  local base = GetLuaModsPath()\n  local dir  = base .. [[TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\Settings\\]]\n  if not FolderExists(dir) then FolderCreate(dir) end\n  FileSave(base .. SAVE_REL, tbl)\nend\n\nlocal function _load()\n  local path = GetLuaModsPath() .. SAVE_REL\n  if FileExists(path) then\n    local t = FileLoad(path)\n    if type(t)==\"table\" then return t end\n  end\n  return nil\nend\n\ndata._casual = data._casual or _load() or {\n  enabled = true,\n  scene   = \"Tank\",\n  radius  = 10,\n  hotkey_vk = 0,\n  mod_shift = false,\n  mod_ctrl  = false,\n  mod_alt   = false,\n  win     = {x=200,y=300},\n}\nlocal cfg = data._casual\n\ndata._casual_ui = data._casual_ui or { menu=false, dragging=false, dx=0, dy=0 }\nlocal ui = data._casual_ui\n\nlocal flags = GUI.WindowFlags_AlwaysAutoResize | GUI.WindowFlags_NoScrollbar\nGUI:SetNextWindowPos(cfg.win.x or 200, cfg.win.y or 300, GUI.SetCond_Always)\nlocal visible, open = GUI:Begin(\"Casual Auto Selector##casual_ui\", true, flags)\nif visible then\n  -- ON/OFF button with color\n  if cfg.enabled then\n    GUI:PushStyleColor(GUI.Col_Button,        0.10, 0.50, 0.10, 0.95)\n    GUI:PushStyleColor(GUI.Col_ButtonHovered, 0.12, 0.60, 0.12, 0.95)\n    GUI:PushStyleColor(GUI.Col_ButtonActive,  0.08, 0.65, 0.08, 0.95)\n  else\n    GUI:PushStyleColor(GUI.Col_Button,        0.50, 0.15, 0.15, 0.95)\n    GUI:PushStyleColor(GUI.Col_ButtonHovered, 0.60, 0.22, 0.22, 0.95)\n    GUI:PushStyleColor(GUI.Col_ButtonActive,  0.75, 0.10, 0.10, 0.95)\n  end\n  if GUI:Button(cfg.enabled and \"ON##casual\" or \"OFF##casual\", 56, 24) then\n    cfg.enabled = not cfg.enabled\n    _save(cfg)\n  end\n  GUI:PopStyleColor(3)\n\n  GUI:SameLine(0,8)\n  if GUI:Button(ui.menu and \"-##casual_menu\" or \"+##casual_menu\", 24, 24) then\n    ui.menu = not ui.menu\n  end\n\n  if ui.menu then\n    GUI:Separator()\n\n    -- Scene\n    GUI:Text(\"Scene\")\n    GUI:SameLine(0,8)\n    local scenes = {\"Tank\",\"Other\"}\n    local curIdx = (cfg.scene == \"Other\") and 2 or 1\n    local newIdx, changed = GUI:Combo(\"##casual_scene\", curIdx, scenes, #scenes)\n    if changed and newIdx and newIdx ~= curIdx then\n      cfg.scene = (newIdx == 2) and \"Other\" or \"Tank\"\n      _save(cfg)\n    end\n\n    -- Radius\n    GUI:Text(\"Radius: \" .. tostring(cfg.radius or 10) .. \"m\")\n    local newR, rChanged = GUI:SliderInt(\"##casual_radius\", cfg.radius or 10, 0, 60)\n    if rChanged and newR ~= cfg.radius then\n      cfg.radius = newR\n      _save(cfg)\n    end\n\n    GUI:Separator()\n\n    -- Hotkey VK\n    GUI:Text(\"Hotkey (VK code)\")\n    GUI:SameLine(0,8)\n    local newVK, vkChanged = GUI:InputInt(\"##casual_vk\", cfg.hotkey_vk or 0, 1, 10)\n    if vkChanged then\n      newVK = math.max(0, math.floor(newVK or 0))\n      cfg.hotkey_vk = newVK\n      _save(cfg)\n    end\n    GUI:SameLine(0,8)\n    if GUI:Button(\"Clear##casual_vk_clear\", 60, 22) then\n      cfg.hotkey_vk = 0\n      _save(cfg)\n    end\n\n    -- Modifiers\n    GUI:Text(\"Modifiers:\")\n    GUI:SameLine(0,8)\n    local s = GUI:Checkbox(\"Shift##casual_modshift\", cfg.mod_shift or false)\n    GUI:SameLine(0,8)\n    local c = GUI:Checkbox(\"Ctrl##casual_modctrl\", cfg.mod_ctrl or false)\n    GUI:SameLine(0,8)\n    local a = GUI:Checkbox(\"Alt##casual_modalt\", cfg.mod_alt or false)\n    if s ~= (cfg.mod_shift or false) or c ~= (cfg.mod_ctrl or false) or a ~= (cfg.mod_alt or false) then\n      cfg.mod_shift, cfg.mod_ctrl, cfg.mod_alt = s, c, a\n      _save(cfg)\n    end\n\n    GUI:Separator()\n    if GUI:Button(\"Restore Defaults##casual\", 160, 22) then\n      local keepEnabled = cfg.enabled\n      local keepVK = cfg.hotkey_vk\n      local keepShift, keepCtrl, keepAlt = cfg.mod_shift, cfg.mod_ctrl, cfg.mod_alt\n      cfg.scene  = \"Tank\"\n      cfg.radius = 10\n      cfg.enabled = keepEnabled\n      cfg.hotkey_vk = keepVK\n      cfg.mod_shift, cfg.mod_ctrl, cfg.mod_alt = keepShift, keepCtrl, keepAlt\n      _save(cfg)\n    end\n  end\n\n  -- 右键拖动\n  local wx, wy = GUI:GetWindowPos()\n  if GUI:IsWindowHovered() and GUI:IsMouseClicked(1) then\n    local mx, my = GUI:GetMousePos()\n    ui.dragging = true\n    ui.dx = mx - wx\n    ui.dy = my - wy\n  end\n  if ui.dragging then\n    if GUI:IsMouseDown(1) then\n      local mx, my = GUI:GetMousePos()\n      local nx, ny = mx - ui.dx, my - ui.dy\n      GUI:SetWindowPos(nx, ny, GUI.SetCond_Always)\n      if nx ~= cfg.win.x or ny ~= cfg.win.y then\n        cfg.win.x, cfg.win.y = nx, ny\n        _save(cfg)\n      end\n    else\n      ui.dragging = false\n    end\n  else\n    if wx ~= cfg.win.x or wy ~= cfg.win.y then\n      cfg.win.x, cfg.win.y = wx, wy\n      _save(cfg)\n    end\n  end\nend\nGUI:End()\n",
-						gVar = "ACR_RikuGNB3_CD",
-						uuid = "3430ddff-9dbf-437a-a420-298309de8c8f",
-						version = 2.1,
-					},
-				},
-			},
-			conditions = 
-			{
-			},
-			eventType = 13,
-			name = "[ForCasual] TargetSelector UI",
-			uuid = "006f6b04-b9ec-9ec2-b5fd-53014904a4a9",
-			version = 2,
-		},
-		inheritedIndex = 14,
-	},
-	
-	{
-		data = 
-		{
-			actions = 
-			{
-				
-				{
-					data = 
-					{
-						aType = "Lua",
-						actionLua = "-- Casual Auto Selector - On Update / On Frame\n-- Safe version for TensorReactions Action node\n-- Every exit path strictly returns: action, targetID, ignoreWeaveRules, allowInterrupt\n\nif not Player or not Player.id then\n    return nil, 0, false, false\nend\n\nif type(data) ~= \"table\" then\n    data = {}\nend\n\nlocal SAVE_REL = [[TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\Settings\\CasualSelector.lua]]\nlocal SAVE_DIR = [[TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\Settings\\]]\n\n-- =========================\n-- Save / Load\n-- =========================\nlocal function _save(tbl)\n    if type(tbl) ~= \"table\" then\n        return\n    end\n\n    local base = GetLuaModsPath and GetLuaModsPath() or nil\n    if type(base) ~= \"string\" or base == \"\" then\n        return\n    end\n\n    local dir = base .. SAVE_DIR\n    if FolderExists and not FolderExists(dir) then\n        if FolderCreate then\n            FolderCreate(dir)\n        end\n    end\n\n    if FileSave then\n        pcall(FileSave, base .. SAVE_REL, tbl)\n    end\nend\n\nlocal function _load()\n    local base = GetLuaModsPath and GetLuaModsPath() or nil\n    if type(base) ~= \"string\" or base == \"\" then\n        return nil\n    end\n\n    local path = base .. SAVE_REL\n    if FileExists and FileExists(path) and FileLoad then\n        local ok, loaded = pcall(FileLoad, path)\n        if ok and type(loaded) == \"table\" then\n            return loaded\n        end\n    end\n\n    return nil\nend\n\n-- =========================\n-- Config init\n-- =========================\ndata._casual = data._casual or _load() or {\n    enabled = true,\n    scene = \"Tank\",     -- \"Tank\" or \"Other\"\n    radius = 10,\n    hotkey_vk = 0,      -- 0 = disabled\n    mod_shift = false,\n    mod_ctrl = false,\n    mod_alt = false,\n    win = { x = 200, y = 300 },\n}\n\nlocal cfg = data._casual\nif type(cfg) ~= \"table\" then\n    data._casual = {\n        enabled = true,\n        scene = \"Tank\",\n        radius = 10,\n        hotkey_vk = 0,\n        mod_shift = false,\n        mod_ctrl = false,\n        mod_alt = false,\n        win = { x = 200, y = 300 },\n    }\n    cfg = data._casual\nend\n\n-- hard sanitize\ncfg.enabled   = (cfg.enabled ~= false)\ncfg.scene     = (cfg.scene == \"Other\") and \"Other\" or \"Tank\"\ncfg.radius    = tonumber(cfg.radius) or 10\ncfg.hotkey_vk = tonumber(cfg.hotkey_vk) or 0\ncfg.mod_shift = (cfg.mod_shift == true)\ncfg.mod_ctrl  = (cfg.mod_ctrl == true)\ncfg.mod_alt   = (cfg.mod_alt == true)\ncfg.win       = type(cfg.win) == \"table\" and cfg.win or { x = 200, y = 300 }\n\n-- =========================\n-- Helpers\n-- =========================\nlocal function tsize(t)\n    local c = 0\n    if type(t) ~= \"table\" then\n        return 0\n    end\n    for _ in pairs(t) do\n        c = c + 1\n    end\n    return c\nend\n\nlocal function getHpValue(e)\n    if type(e) ~= \"table\" then\n        return math.huge\n    end\n\n    if type(e.hp) == \"table\" and e.hp.current then\n        return tonumber(e.hp.current) or math.huge\n    end\n\n    if type(e.hp) == \"number\" then\n        return e.hp\n    end\n\n    return math.huge\nend\n\nlocal function getEntityTargetId(e)\n    if type(e) ~= \"table\" then\n        return 0\n    end\n    return tonumber(e.targetid or e.targetID) or 0\nend\n\nlocal function getEntityId(e)\n    if type(e) ~= \"table\" then\n        return 0\n    end\n    return tonumber(e.id or e.entityid or e.entityID) or 0\nend\n\nlocal function getEntityJob(e)\n    if type(e) ~= \"table\" then\n        return nil\n    end\n    return tonumber(e.job or e.jobID or e.class)\nend\n\nlocal function getEntityDistance(e)\n    if type(e) ~= \"table\" then\n        return math.huge\n    end\n    return tonumber(e.distance2d or e.distance) or math.huge\nend\n\nlocal function getPlayerTargetId()\n    return tonumber(Player.targetid or Player.targetID) or 0\nend\n\nlocal function isKeyDownVK(vk)\n    vk = tonumber(vk) or 0\n    if vk == 0 then\n        return false\n    end\n\n    if GUI and GUI.IsKeyDown then\n        local ok, result = pcall(function()\n            return GUI:IsKeyDown(vk)\n        end)\n        if ok then\n            return result == true\n        end\n    end\n\n    return false\nend\n\nlocal function modComboActive()\n    if cfg.hotkey_vk == 0 then\n        return false\n    end\n\n    if not isKeyDownVK(cfg.hotkey_vk) then\n        return false\n    end\n    if cfg.mod_shift and not isKeyDownVK(16) then\n        return false\n    end\n    if cfg.mod_ctrl and not isKeyDownVK(17) then\n        return false\n    end\n    if cfg.mod_alt and not isKeyDownVK(18) then\n        return false\n    end\n\n    return true\nend\n\nlocal function getEntitiesInRange(radius)\n    radius = tonumber(radius) or 10\n    radius = math.max(0, math.min(60, math.floor(radius)))\n\n    local list = {}\n    local filter = string.format(\"alive,attackable,selectable,maxdistance=%d\", radius)\n\n    if TensorCore and TensorCore.entityList then\n        local ok, result = pcall(function()\n            return TensorCore.entityList(filter)\n        end)\n        if ok and type(result) == \"table\" then\n            list = result\n        end\n    end\n\n    return list\nend\n\nlocal TANK_JOBS = {\n    [19] = true, -- PLD\n    [21] = true, -- WAR\n    [32] = true, -- DRK\n    [37] = true, -- GNB\n}\n\nlocal function getEntityById(id)\n    id = tonumber(id) or 0\n    if id == 0 then\n        return nil\n    end\n\n    if EntityList and EntityList.Get then\n        local ok, result = pcall(function()\n            return EntityList:Get(id)\n        end)\n        if ok and result then\n            return result\n        end\n    end\n\n    if EntityList and EntityList.GetEntity then\n        local ok, result = pcall(function()\n            return EntityList:GetEntity(id)\n        end)\n        if ok and result then\n            return result\n        end\n    end\n\n    if TensorCore and TensorCore.entityList then\n        local ok, result = pcall(function()\n            return TensorCore.entityList(\"id=\" .. tostring(id))\n        end)\n        if ok and type(result) == \"table\" then\n            for _, v in pairs(result) do\n                if v then\n                    return v\n                end\n            end\n        end\n    end\n\n    return nil\nend\n\nlocal function mergeTankIdsFromList(outTbl, list)\n    if type(outTbl) ~= \"table\" or type(list) ~= \"table\" then\n        return\n    end\n\n    for _, x in pairs(list) do\n        if type(x) == \"table\" then\n            local job = getEntityJob(x)\n            local id = getEntityId(x)\n            if job and TANK_JOBS[job] and id ~= 0 then\n                outTbl[id] = true\n            end\n        end\n    end\nend\n\nlocal function getPartyTankIds()\n    local tankIds = {}\n\n    if TensorCore and TensorCore.entityList then\n        local ok1, list1 = pcall(function() return TensorCore.entityList(\"myparty,player\") end)\n        if ok1 and type(list1) == \"table\" then\n            mergeTankIdsFromList(tankIds, list1)\n        end\n\n        if tsize(tankIds) == 0 then\n            local ok2, list2 = pcall(function() return TensorCore.entityList(\"party,player\") end)\n            if ok2 and type(list2) == \"table\" then\n                mergeTankIdsFromList(tankIds, list2)\n            end\n        end\n\n        if tsize(tankIds) == 0 then\n            local ok3, list3 = pcall(function() return TensorCore.entityList(\"alliance,player\") end)\n            if ok3 and type(list3) == \"table\" then\n                mergeTankIdsFromList(tankIds, list3)\n            end\n        end\n\n        if tsize(tankIds) == 0 then\n            local ok4, list4 = pcall(function() return TensorCore.entityList(\"friendly,player,maxdistance=60\") end)\n            if ok4 and type(list4) == \"table\" then\n                mergeTankIdsFromList(tankIds, list4)\n            end\n        end\n    end\n\n    local myJob = tonumber(Player.job or Player.jobID or Player.class)\n    if myJob and TANK_JOBS[myJob] then\n        tankIds[Player.id] = true\n    end\n\n    return tankIds\nend\n\nlocal function safeSetTarget(targetId)\n    targetId = tonumber(targetId) or 0\n    if targetId == 0 then\n        return\n    end\n\n    if Player and Player.SetTarget then\n        pcall(function()\n            Player:SetTarget(targetId)\n        end)\n    end\nend\n\n-- =========================\n-- Hotkey toggle\n-- =========================\ndata._casual_hk_prev = (data._casual_hk_prev == true)\n\nlocal nowHotkey = modComboActive()\nif nowHotkey and not data._casual_hk_prev then\n    cfg.enabled = not cfg.enabled\n    _save(cfg)\nend\ndata._casual_hk_prev = nowHotkey\n\n-- =========================\n-- Main logic\n-- =========================\nif not cfg.enabled then\n    return nil, 0, false, false\nend\n\nlocal myId = tonumber(Player.id) or 0\nif myId == 0 then\n    return nil, 0, false, false\nend\n\nlocal elist = getEntitiesInRange(cfg.radius)\nif tsize(elist) == 0 then\n    return nil, 0, false, false\nend\n\nif cfg.scene == \"Tank\" then\n    local notOnMe = {}\n    local onMe = {}\n\n    for _, e in pairs(elist) do\n        if type(e) == \"table\" then\n            local tid = getEntityTargetId(e)\n            if tid ~= myId then\n                table.insert(notOnMe, e)\n            else\n                table.insert(onMe, e)\n            end\n        end\n    end\n\n    local selectId = 0\n\n    if #notOnMe > 0 then\n        local best = nil\n        local bestDist = math.huge\n\n        for _, e in pairs(notOnMe) do\n            local skip = false\n            local holderId = getEntityTargetId(e)\n\n            if holderId ~= 0 and holderId ~= myId then\n                local holder = getEntityById(holderId)\n                if holder then\n                    local holderJob = getEntityJob(holder)\n                    if holderJob and TANK_JOBS[holderJob] then\n                        skip = true\n                    end\n                end\n            end\n\n            if not skip then\n                local d = getEntityDistance(e)\n                if d < bestDist then\n                    bestDist = d\n                    best = e\n                end\n            end\n        end\n\n        if best then\n            selectId = getEntityId(best)\n        end\n    end\n\n    if selectId == 0 then\n        local best = nil\n        local bestHp = math.huge\n\n        for _, e in pairs(onMe) do\n            local hp = getHpValue(e)\n            if hp < bestHp then\n                bestHp = hp\n                best = e\n            end\n        end\n\n        if best then\n            selectId = getEntityId(best)\n        end\n    end\n\n    if selectId ~= 0 and getPlayerTargetId() ~= selectId then\n        safeSetTarget(selectId)\n    end\n\n    return nil, 0, false, false\nend\n\nif cfg.scene == \"Other\" then\n    local tankIds = getPartyTankIds()\n    local best = nil\n    local bestHp = math.huge\n    local foundPartyTankTarget = false\n\n    for _, e in pairs(elist) do\n        if type(e) == \"table\" then\n            local tid = getEntityTargetId(e)\n            if tankIds[tid] then\n                foundPartyTankTarget = true\n                local hp = getHpValue(e)\n                if hp < bestHp then\n                    bestHp = hp\n                    best = e\n                end\n            end\n        end\n    end\n\n    if not foundPartyTankTarget then\n        best = nil\n        bestHp = math.huge\n\n        for _, e in pairs(elist) do\n            if type(e) == \"table\" then\n                local holder = getEntityById(getEntityTargetId(e))\n                if holder then\n                    local holderJob = getEntityJob(holder)\n                    if holderJob and TANK_JOBS[holderJob] then\n                        local hp = getHpValue(e)\n                        if hp < bestHp then\n                            bestHp = hp\n                            best = e\n                        end\n                    end\n                end\n            end\n        end\n    end\n\n    local selectId = best and getEntityId(best) or 0\n    if selectId ~= 0 and getPlayerTargetId() ~= selectId then\n        safeSetTarget(selectId)\n    end\n\n    return nil, 0, false, false\nend\n\nreturn nil, 0, false, false",
-						conditions = 
-						{
-							
-							{
-								"2b9988a8-915c-20ac-811d-a491ff57683d",
-								true,
-							},
-						},
-						gVar = "ACR_RikuGNB3_CD",
-						uuid = "3430ddff-9dbf-437a-a420-298309de8c8f",
-						version = 2.1,
-					},
-				},
-			},
-			conditions = 
-			{
-				
-				{
-					data = 
-					{
-						category = "Lua",
-						conditionLua = "return FFXIV_Common_BotRunning",
-						name = "Bot is Running",
-						uuid = "2b9988a8-915c-20ac-811d-a491ff57683d",
-						version = 3,
-					},
-				},
-			},
-			eventType = 12,
-			name = "[ForCasual] TargetSelector Logic",
-			uuid = "d1fdd3b7-6cec-38a3-b901-aa66f4182a7f",
-			version = 2,
-		},
-		inheritedIndex = 9,
-	},
-	
-	{
-		data = 
-		{
-			actions = 
-			{
-				
-				{
-					data = 
-					{
-						aType = "Lua",
 						actionLua = "local colorRed    = GUI:ColorConvertFloat4ToU32(1, 0.2, 0.2, 1)\nlocal colorYellow = GUI:ColorConvertFloat4ToU32(1, 1, 0.2, 1)\nlocal colorGray   = GUI:ColorConvertFloat4ToU32(0.5, 0.5, 0.5, 1)\n\nlocal drawerRed    = TensorCore.getStaticDrawer(colorRed, 1.5)\nlocal drawerYellow = TensorCore.getStaticDrawer(colorYellow, 1.5)\nlocal drawerGray   = TensorCore.getStaticDrawer(colorGray, 1.5)\n\nlocal myID = Player.id\n\nlocal partyIDs = {}\nlocal partyList = TensorCore.entityList(\"alive,myparty\")\nif partyList then\n    for id, ent in pairs(partyList) do\n        if id ~= myID then\n            partyIDs[id] = true\n        end\n    end\nend\n\nlocal entities = TensorCore.entityList(\"alive,attackable,targetable,incombat,maxdistance=25\")\nif entities then\n    for id, ent in pairs(entities) do\n        local tid = ent.targetid\n        local drawer\n\n        if tid == myID then\n            drawer = drawerRed\n        elseif tid and partyIDs[tid] then\n            drawer = drawerYellow\n        else\n            drawer = drawerGray\n        end\n\n        local hr = ent.hitradius or 1\n        drawer:addDonut(\n            ent.pos.x, ent.pos.y, ent.pos.z,\n            hr - 0.05,\n            hr,\n            false\n        )\n    end\nend",
 						conditions = 
 						{
@@ -545,178 +497,7 @@ local tbl =
 			uuid = "50457304-5942-2e94-abb9-ef86d4b68b8e",
 			version = 2,
 		},
-		inheritedIndex = 10,
-	},
-	
-	{
-		data = 
-		{
-			actions = 
-			{
-				
-				{
-					data = 
-					{
-						aType = "Lua",
-						actionLua = "--=========================================================\n-- UI Hotbar (On Draw only) - \"最新版\"\n-- - 按钮按下后变红 2 秒（安全降级：无 PushStyleColor 时仍可用）\n-- - StartQueue 使用毫秒时间戳（NowMS），与 On Update 执行器一致\n-- - 窗口标题：GNB\n--=========================================================\n\nif not (GUI and GUI.Begin and GUI.End and GUI.Button) then\n    return\nend\n\ndata.riku_hotbar = data.riku_hotbar or {}\nlocal hb = data.riku_hotbar\n\n-- ---------- time helpers ----------\nlocal function NowMS()\n    if Now then return Now() end\n    if os and os.clock then return math.floor(os.clock() * 1000) end\n    return 0\nend\n\n-- ---------- init persistent fields ----------\nif hb.open == nil then hb.open = true end\n\nhb.active          = hb.active or false\nhb.queue           = hb.queue or nil\nhb.idx             = hb.idx or 1\nhb.startedAt       = hb.startedAt or 0\nhb.nextAt          = hb.nextAt or 0\nhb.ignoreWeave     = hb.ignoreWeave or false\nhb.allowInterrupt  = hb.allowInterrupt or false\nhb.pendingID       = hb.pendingID or 0\nhb.pendingAt       = hb.pendingAt or 0\n\n-- flash state: label -> untilMS\nhb.flashUntil      = hb.flashUntil or {}\n\n-- ---------- flash button ----------\nlocal function DrawFlashButton(label, flashMS)\n    flashMS = flashMS or 2000\n    local now = NowMS()\n    local flashing = (hb.flashUntil[label] ~= nil) and (now < hb.flashUntil[label])\n\n    local pushed = 0\n    if flashing\n        and GUI.PushStyleColor and GUI.PopStyleColor\n        and GUI.Col_Button and GUI.Col_ButtonHovered and GUI.Col_ButtonActive\n    then\n        -- Different GUI builds may differ in signature; pcall for safe downgrade\n        local ok1 = pcall(function() GUI:PushStyleColor(GUI.Col_Button,        1, 0, 0, 1) end)\n        local ok2 = pcall(function() GUI:PushStyleColor(GUI.Col_ButtonHovered, 1, 0, 0, 1) end)\n        local ok3 = pcall(function() GUI:PushStyleColor(GUI.Col_ButtonActive,  1, 0, 0, 1) end)\n        pushed = (ok1 and 1 or 0) + (ok2 and 1 or 0) + (ok3 and 1 or 0)\n    end\n\n    local pressed = GUI:Button(label)\n\n    if pushed > 0 then\n        pcall(function() GUI:PopStyleColor(pushed) end)\n    end\n\n    if pressed then\n        hb.flashUntil[label] = now + flashMS\n    end\n\n    return pressed\nend\n\n-- ---------- window ----------\nlocal flags = (GUI.WindowFlags_AlwaysAutoResize ~= nil) and GUI.WindowFlags_AlwaysAutoResize or 0\nlocal openRet, visibleRet = GUI:Begin(\"GNB\", hb.open, flags)\nhb.open = openRet\n\nif visibleRet then\n    local function StartQueue(name, steps, ignoreWeave, allowInterrupt)\n        hb.active = true\n        hb.queue = { name = name, steps = steps }\n        hb.idx = 1\n        hb.startedAt = NowMS()\n        hb.nextAt = 0\n        hb.ignoreWeave = (ignoreWeave == true)\n        hb.allowInterrupt = (allowInterrupt == true)\n        hb.pendingID = 0\n        hb.pendingAt = 0\n    end\n\n    -- 15+10+20: 7531, 16140, 25758, 16161\n    -- 你指定：前三个都允许“在CD就跳过”\n    if DrawFlashButton(\"15+10+20\", 2000) then\n        StartQueue(\"15+10+20\", {\n            { id = 7531,  skipIfOnCooldown = true  },\n            { id = 16140, skipIfOnCooldown = true  },\n            { id = 25758, skipIfOnCooldown = true  },\n            { id = 16161, skipIfOnCooldown = false },\n        }, true, false)\n    end\n\n    -- 15+40: 36935, 25758, 16148, 16161\n    if DrawFlashButton(\"15+40\", 2000) then\n        StartQueue(\"15+40\", {\n            { id = 36935, skipIfOnCooldown = true  },\n            { id = 25758, skipIfOnCooldown = true  },\n            { id = 16148, skipIfOnCooldown = true  },\n            { id = 16161, skipIfOnCooldown = false },\n        }, true, false)\n    end\n\n    -- invuln: 16152\n    if DrawFlashButton(\"invuln\", 2000) then\n        StartQueue(\"invuln\", {\n            { id = 16152, skipIfOnCooldown = false },\n        }, false, false)\n    end\n\n    if DrawFlashButton(\"STOP\", 500) then\n        hb.active = false\n        hb.queue = nil\n        hb.idx = 1\n        hb.pendingID = 0\n        hb.pendingAt = 0\n    end\nend\n\nGUI:End()\ndata.riku_hotbar = hb\n",
-						conditions = 
-						{
-							
-							{
-								"241c18ed-0dd2-5463-b026-892196b9f14d",
-								true,
-							},
-						},
-						gVar = "ACR_RikuGNB3_CD",
-						name = "GNB MIts",
-						uuid = "3ba46ba9-756f-0390-81fc-1d1749694cf4",
-						version = 2.1,
-					},
-				},
-				
-				{
-					data = 
-					{
-						aType = "Lua",
-						actionLua = "--=========================================================\n-- UI Hotbar (On Draw only) - \"最新版\"（DRK）\n-- - 按钮按下后变红 2 秒（安全降级：无 PushStyleColor 时仍可用）\n-- - StartQueue 使用毫秒时间戳（NowMS），与 On Update 执行器一致\n-- - 窗口标题：DRK\n--=========================================================\n\nif not (GUI and GUI.Begin and GUI.End and GUI.Button) then\n    return\nend\n\ndata.riku_hotbar = data.riku_hotbar or {}\nlocal hb = data.riku_hotbar\n\n-- ---------- time helpers ----------\nlocal function NowMS()\n    if Now then return Now() end\n    if os and os.clock then return math.floor(os.clock() * 1000) end\n    return 0\nend\n\n-- ---------- init persistent fields ----------\nif hb.open == nil then hb.open = true end\n\nhb.active          = hb.active or false\nhb.queue           = hb.queue or nil\nhb.idx             = hb.idx or 1\nhb.startedAt       = hb.startedAt or 0\nhb.nextAt          = hb.nextAt or 0\nhb.ignoreWeave     = hb.ignoreWeave or false\nhb.allowInterrupt  = hb.allowInterrupt or false\nhb.pendingID       = hb.pendingID or 0\nhb.pendingAt       = hb.pendingAt or 0\n\n-- flash state: label -> untilMS\nhb.flashUntil      = hb.flashUntil or {}\n\n-- ---------- flash button ----------\nlocal function DrawFlashButton(label, flashMS)\n    flashMS = flashMS or 2000\n    local now = NowMS()\n    local flashing = (hb.flashUntil[label] ~= nil) and (now < hb.flashUntil[label])\n\n    local pushed = 0\n    if flashing\n        and GUI.PushStyleColor and GUI.PopStyleColor\n        and GUI.Col_Button and GUI.Col_ButtonHovered and GUI.Col_ButtonActive\n    then\n        -- Different GUI builds may differ in signature; pcall for safe downgrade\n        local ok1 = pcall(function() GUI:PushStyleColor(GUI.Col_Button,        1, 0, 0, 1) end)\n        local ok2 = pcall(function() GUI:PushStyleColor(GUI.Col_ButtonHovered, 1, 0, 0, 1) end)\n        local ok3 = pcall(function() GUI:PushStyleColor(GUI.Col_ButtonActive,  1, 0, 0, 1) end)\n        pushed = (ok1 and 1 or 0) + (ok2 and 1 or 0) + (ok3 and 1 or 0)\n    end\n\n    local pressed = GUI:Button(label)\n\n    if pushed > 0 then\n        pcall(function() GUI:PopStyleColor(pushed) end)\n    end\n\n    if pressed then\n        hb.flashUntil[label] = now + flashMS\n    end\n\n    return pressed\nend\n\n-- ---------- window ----------\nlocal flags = (GUI.WindowFlags_AlwaysAutoResize ~= nil) and GUI.WindowFlags_AlwaysAutoResize or 0\nlocal openRet, visibleRet = GUI:Begin(\"DRK\", hb.open, flags)\nhb.open = openRet\n\nif visibleRet then\n    local function StartQueue(name, steps, ignoreWeave, allowInterrupt)\n        hb.active = true\n        hb.queue = { name = name, steps = steps }\n        hb.idx = 1\n        hb.startedAt = NowMS()\n        hb.nextAt = 0\n        hb.ignoreWeave = (ignoreWeave == true)\n        hb.allowInterrupt = (allowInterrupt == true)\n        hb.pendingID = 0\n        hb.pendingAt = 0\n    end\n\n    -- 15+10+20: 7531, 3634, 25754, 7393\n    -- 你指定：前三个都允许“在CD就跳过”\n    if DrawFlashButton(\"15+10+20\", 2000) then\n        StartQueue(\"15+10+20\", {\n            { id = 7531,  skipIfOnCooldown = true  },\n            { id = 3634,  skipIfOnCooldown = true  },\n            { id = 25754, skipIfOnCooldown = true  },\n            { id = 7393,  skipIfOnCooldown = false },\n        }, true, false)\n    end\n\n    -- 15+40: 36927, 25754, 3636, 7393\n    if DrawFlashButton(\"15+40\", 2000) then\n        StartQueue(\"15+40\", {\n            { id = 36927, skipIfOnCooldown = true  },\n            { id = 25754, skipIfOnCooldown = true  },\n            { id = 3636,  skipIfOnCooldown = true  },\n            { id = 7393,  skipIfOnCooldown = false },\n        }, true, false)\n    end\n\n    -- invuln: 3638\n    if DrawFlashButton(\"invuln\", 2000) then\n        StartQueue(\"invuln\", {\n            { id = 3638, skipIfOnCooldown = false },\n        }, false, false)\n    end\n\n    if DrawFlashButton(\"STOP\", 500) then\n        hb.active = false\n        hb.queue = nil\n        hb.idx = 1\n        hb.pendingID = 0\n        hb.pendingAt = 0\n    end\nend\n\nGUI:End()\ndata.riku_hotbar = hb\n",
-						conditions = 
-						{
-							
-							{
-								"737e1cb7-0dd8-a699-9fcd-020762c587a8",
-								true,
-							},
-						},
-						gVar = "ACR_RikuGNB3_CD",
-						name = "DRK Mits",
-						uuid = "4de73f74-0b14-2c6f-b43a-63b5177eceef",
-						version = 2.1,
-					},
-				},
-				
-				{
-					data = 
-					{
-						aType = "Lua",
-						actionLua = "--=========================================================\n-- UI Hotbar (On Draw only) - \"最新版\"（WAR）\n-- - 按钮按下后变红 2 秒（安全降级：无 PushStyleColor 时仍可用）\n-- - StartQueue 使用毫秒时间戳（NowMS），与 On Update 执行器一致\n-- - 窗口标题：WAR\n--=========================================================\n\nif not (GUI and GUI.Begin and GUI.End and GUI.Button) then\n    return\nend\n\ndata.riku_hotbar = data.riku_hotbar or {}\nlocal hb = data.riku_hotbar\n\n-- ---------- time helpers ----------\nlocal function NowMS()\n    if Now then return Now() end\n    if os and os.clock then return math.floor(os.clock() * 1000) end\n    return 0\nend\n\n-- ---------- init persistent fields ----------\nif hb.open == nil then hb.open = true end\n\nhb.active          = hb.active or false\nhb.queue           = hb.queue or nil\nhb.idx             = hb.idx or 1\nhb.startedAt       = hb.startedAt or 0\nhb.nextAt          = hb.nextAt or 0\nhb.ignoreWeave     = hb.ignoreWeave or false\nhb.allowInterrupt  = hb.allowInterrupt or false\nhb.pendingID       = hb.pendingID or 0\nhb.pendingAt       = hb.pendingAt or 0\n\n-- flash state: label -> untilMS\nhb.flashUntil      = hb.flashUntil or {}\n\n-- ---------- flash button ----------\nlocal function DrawFlashButton(label, flashMS)\n    flashMS = flashMS or 2000\n    local now = NowMS()\n    local flashing = (hb.flashUntil[label] ~= nil) and (now < hb.flashUntil[label])\n\n    local pushed = 0\n    if flashing\n        and GUI.PushStyleColor and GUI.PopStyleColor\n        and GUI.Col_Button and GUI.Col_ButtonHovered and GUI.Col_ButtonActive\n    then\n        -- Different GUI builds may differ in signature; pcall for safe downgrade\n        local ok1 = pcall(function() GUI:PushStyleColor(GUI.Col_Button,        1, 0, 0, 1) end)\n        local ok2 = pcall(function() GUI:PushStyleColor(GUI.Col_ButtonHovered, 1, 0, 0, 1) end)\n        local ok3 = pcall(function() GUI:PushStyleColor(GUI.Col_ButtonActive,  1, 0, 0, 1) end)\n        pushed = (ok1 and 1 or 0) + (ok2 and 1 or 0) + (ok3 and 1 or 0)\n    end\n\n    local pressed = GUI:Button(label)\n\n    if pushed > 0 then\n        pcall(function() GUI:PopStyleColor(pushed) end)\n    end\n\n    if pressed then\n        hb.flashUntil[label] = now + flashMS\n    end\n\n    return pressed\nend\n\n-- ---------- window ----------\nlocal flags = (GUI.WindowFlags_AlwaysAutoResize ~= nil) and GUI.WindowFlags_AlwaysAutoResize or 0\nlocal openRet, visibleRet = GUI:Begin(\"WAR\", hb.open, flags)\nhb.open = openRet\n\nif visibleRet then\n    local function StartQueue(name, steps, ignoreWeave, allowInterrupt)\n        hb.active = true\n        hb.queue = { name = name, steps = steps }\n        hb.idx = 1\n        hb.startedAt = NowMS()\n        hb.nextAt = 0\n        hb.ignoreWeave = (ignoreWeave == true)\n        hb.allowInterrupt = (allowInterrupt == true)\n        hb.pendingID = 0\n        hb.pendingAt = 0\n    end\n\n    -- 15+10+20: 7531, 40, 25751, 3551\n    -- 你指定：前三个都允许“在CD就跳过”\n    if DrawFlashButton(\"15+10+20\", 2000) then\n        StartQueue(\"15+10+20\", {\n            { id = 7531,  skipIfOnCooldown = true  },\n            { id = 40,    skipIfOnCooldown = true  },\n            { id = 25751, skipIfOnCooldown = true  },\n            { id = 3551,  skipIfOnCooldown = false },\n        }, true, false)\n    end\n\n    -- 15+40: 36923, 25751, 44, 3551\n    if DrawFlashButton(\"15+40\", 2000) then\n        StartQueue(\"15+40\", {\n            { id = 36923, skipIfOnCooldown = true  },\n            { id = 25751, skipIfOnCooldown = true  },\n            { id = 44,    skipIfOnCooldown = true  },\n            { id = 3551,  skipIfOnCooldown = false },\n        }, true, false)\n    end\n\n    -- invuln: 43\n    if DrawFlashButton(\"invuln\", 2000) then\n        StartQueue(\"invuln\", {\n            { id = 43, skipIfOnCooldown = false },\n        }, false, false)\n    end\n\n    if DrawFlashButton(\"STOP\", 500) then\n        hb.active = false\n        hb.queue = nil\n        hb.idx = 1\n        hb.pendingID = 0\n        hb.pendingAt = 0\n    end\nend\n\nGUI:End()\ndata.riku_hotbar = hb\n",
-						conditions = 
-						{
-							
-							{
-								"bff6c55b-1007-cc54-b960-44ac3d66cbfe",
-								true,
-							},
-						},
-						gVar = "ACR_RikuGNB3_CD",
-						name = "WAR Mits",
-						uuid = "abf1da7b-c1cb-059e-939f-27aad3596875",
-						version = 2.1,
-					},
-				},
-				
-				{
-					data = 
-					{
-						aType = "Lua",
-						actionLua = "--=========================================================\n-- UI Hotbar (On Draw only) - \"最新版\"（PLD）\n-- - 按钮按下后变红 2 秒（安全降级：无 PushStyleColor 时仍可用）\n-- - StartQueue 使用毫秒时间戳（NowMS），与 On Update 执行器一致\n-- - 窗口标题：PLD\n--=========================================================\n\nif not (GUI and GUI.Begin and GUI.End and GUI.Button) then\n    return\nend\n\ndata.riku_hotbar = data.riku_hotbar or {}\nlocal hb = data.riku_hotbar\n\n-- ---------- time helpers ----------\nlocal function NowMS()\n    if Now then return Now() end\n    if os and os.clock then return math.floor(os.clock() * 1000) end\n    return 0\nend\n\n-- ---------- init persistent fields ----------\nif hb.open == nil then hb.open = true end\n\nhb.active          = hb.active or false\nhb.queue           = hb.queue or nil\nhb.idx             = hb.idx or 1\nhb.startedAt       = hb.startedAt or 0\nhb.nextAt          = hb.nextAt or 0\nhb.ignoreWeave     = hb.ignoreWeave or false\nhb.allowInterrupt  = hb.allowInterrupt or false\nhb.pendingID       = hb.pendingID or 0\nhb.pendingAt       = hb.pendingAt or 0\n\n-- flash state: label -> untilMS\nhb.flashUntil      = hb.flashUntil or {}\n\n-- ---------- flash button ----------\nlocal function DrawFlashButton(label, flashMS)\n    flashMS = flashMS or 2000\n    local now = NowMS()\n    local flashing = (hb.flashUntil[label] ~= nil) and (now < hb.flashUntil[label])\n\n    local pushed = 0\n    if flashing\n        and GUI.PushStyleColor and GUI.PopStyleColor\n        and GUI.Col_Button and GUI.Col_ButtonHovered and GUI.Col_ButtonActive\n    then\n        -- Different GUI builds may differ in signature; pcall for safe downgrade\n        local ok1 = pcall(function() GUI:PushStyleColor(GUI.Col_Button,        1, 0, 0, 1) end)\n        local ok2 = pcall(function() GUI:PushStyleColor(GUI.Col_ButtonHovered, 1, 0, 0, 1) end)\n        local ok3 = pcall(function() GUI:PushStyleColor(GUI.Col_ButtonActive,  1, 0, 0, 1) end)\n        pushed = (ok1 and 1 or 0) + (ok2 and 1 or 0) + (ok3 and 1 or 0)\n    end\n\n    local pressed = GUI:Button(label)\n\n    if pushed > 0 then\n        pcall(function() GUI:PopStyleColor(pushed) end)\n    end\n\n    if pressed then\n        hb.flashUntil[label] = now + flashMS\n    end\n\n    return pressed\nend\n\n-- ---------- window ----------\nlocal flags = (GUI.WindowFlags_AlwaysAutoResize ~= nil) and GUI.WindowFlags_AlwaysAutoResize or 0\nlocal openRet, visibleRet = GUI:Begin(\"PLD\", hb.open, flags)\nhb.open = openRet\n\nif visibleRet then\n    local function StartQueue(name, steps, ignoreWeave, allowInterrupt)\n        hb.active = true\n        hb.queue = { name = name, steps = steps }\n        hb.idx = 1\n        hb.startedAt = NowMS()\n        hb.nextAt = 0\n        hb.ignoreWeave = (ignoreWeave == true)\n        hb.allowInterrupt = (allowInterrupt == true)\n        hb.pendingID = 0\n        hb.pendingAt = 0\n    end\n\n    -- 15+10+20: 7531, 22, 25746, 3542\n    -- 你指定：前三个都允许“在CD就跳过”\n    if DrawFlashButton(\"15+10+20\", 2000) then\n        StartQueue(\"15+10+20\", {\n            { id = 7531,  skipIfOnCooldown = true  },\n            { id = 22,    skipIfOnCooldown = true  },\n            { id = 25746, skipIfOnCooldown = true  },\n            { id = 3542,  skipIfOnCooldown = false },\n        }, true, false)\n    end\n\n    -- 15+40: 36920, 25746, 3542\n    if DrawFlashButton(\"15+40\", 2000) then\n        StartQueue(\"15+40\", {\n            { id = 36920, skipIfOnCooldown = true  },\n            { id = 25746, skipIfOnCooldown = true  },\n            { id = 3542,  skipIfOnCooldown = false },\n        }, true, false)\n    end\n\n    -- invuln: 30\n    if DrawFlashButton(\"invuln\", 2000) then\n        StartQueue(\"invuln\", {\n            { id = 30, skipIfOnCooldown = false },\n        }, false, false)\n    end\n\n    if DrawFlashButton(\"STOP\", 500) then\n        hb.active = false\n        hb.queue = nil\n        hb.idx = 1\n        hb.pendingID = 0\n        hb.pendingAt = 0\n    end\nend\n\nGUI:End()\ndata.riku_hotbar = hb\n",
-						conditions = 
-						{
-							
-							{
-								"a65cfc8c-7eb9-3afe-b937-ce967ca7e94e",
-								true,
-							},
-						},
-						gVar = "ACR_RikuGNB3_CD",
-						name = "PLD MIts",
-						uuid = "a95b9547-89be-19fd-8efc-90565aee4394",
-						version = 2.1,
-					},
-				},
-			},
-			conditions = 
-			{
-				
-				{
-					data = 
-					{
-						category = "Self",
-						conditionType = 13,
-						jobValue = "GUNBREAKER",
-						name = "GNB",
-						uuid = "241c18ed-0dd2-5463-b026-892196b9f14d",
-						version = 3,
-					},
-				},
-				
-				{
-					data = 
-					{
-						category = "Self",
-						conditionType = 13,
-						jobValue = "DARKKNIGHT",
-						name = "DRK",
-						uuid = "737e1cb7-0dd8-a699-9fcd-020762c587a8",
-						version = 3,
-					},
-				},
-				
-				{
-					data = 
-					{
-						category = "Self",
-						conditionType = 13,
-						jobValue = "WARRIOR",
-						name = "WAR",
-						uuid = "bff6c55b-1007-cc54-b960-44ac3d66cbfe",
-						version = 3,
-					},
-				},
-				
-				{
-					data = 
-					{
-						category = "Self",
-						conditionType = 13,
-						jobValue = "PALADIN",
-						name = "PLD",
-						uuid = "a65cfc8c-7eb9-3afe-b937-ce967ca7e94e",
-						version = 3,
-					},
-				},
-			},
-			eventType = 13,
-			name = "[ForCasual] Weave Mits Hotbar",
-			uuid = "881d71ed-c206-e072-9ed6-da0593b0db1c",
-			version = 2,
-		},
-	},
-	
-	{
-		data = 
-		{
-			actions = 
-			{
-				
-				{
-					data = 
-					{
-						aType = "Lua",
-						actionLua = "--=========================================================\n-- Reaction B (Event: On Update)\n-- Queue Executor (robust + skipIfOnCooldown)\n--=========================================================\n-- IMPORTANT:\n-- 1) Put this code into a separate Reaction with Event = On Update (or On Frame)\n-- 2) Enable \"Lua Returns Action\" on this Reaction\n-- Return signature used here:\n--   (table) action, (number) targetID, (bool) ignoreWeaveRules, (bool) allowInterrupt\n\nif not (data and data.riku_hotbar) then return end\nlocal hb = data.riku_hotbar\nif not hb.active or not hb.queue or not hb.queue.steps then return end\n\nif not (Player and Player.id and ActionList and ActionList.Get) then return end\n\nlocal function NowMS()\n    if Now then return Now() end\n    if os and os.clock then return math.floor(os.clock() * 1000) end\n    return 0\nend\n\nlocal now = NowMS()\n\nhb.nextAt = hb.nextAt or 0\nhb.pendingID = hb.pendingID or 0\nhb.pendingAt = hb.pendingAt or 0\nhb.idx = hb.idx or 1\nhb.startedAt = hb.startedAt or now\n\n-- throttle\nif now < hb.nextAt then return end\n\n-- global timeout: 10s -> auto cancel (safety)\nif hb.startedAt and hb.startedAt > 0 and (now - hb.startedAt) > 10000 then\n    hb.active, hb.queue, hb.idx, hb.pendingID, hb.pendingAt = false, nil, 1, 0, 0\n    data.riku_hotbar = hb\n    return\nend\n\nlocal steps = hb.queue.steps\n\nlocal function GetStep(idx)\n    local s = steps[idx]\n    if type(s) == \"table\" then\n        return s.id, (s.skipIfOnCooldown == true)\n    end\n    return s, false\nend\n\nlocal function IsReady(a)\n    if a and a.IsReady then\n        return a:IsReady()\n    end\n    if a and a.cd ~= nil then\n        return (a.cd <= 0.1)\n    end\n    return false\nend\n\nlocal function GetCD(a)\n    if a and a.cd ~= nil then return a.cd end\n    return nil\nend\n\nlocal function FinishQueue()\n    hb.active, hb.queue, hb.idx, hb.pendingID, hb.pendingAt = false, nil, 1, 0, 0\nend\n\n-- done\nif hb.idx > #steps then\n    FinishQueue()\n    data.riku_hotbar = hb\n    return\nend\n\nlocal actionID, skipIfOnCooldown = GetStep(hb.idx)\nif not actionID then\n    FinishQueue()\n    data.riku_hotbar = hb\n    return\nend\n\nlocal act = ActionList:Get(1, actionID)\nif not act then\n    FinishQueue()\n    data.riku_hotbar = hb\n    return\nend\n\n-- all are self-target skills for your request\nlocal targetID = Player.id\n\n-- pending: wait until we see CD > 0 to confirm the cast happened\nif hb.pendingID == actionID then\n    local cd = GetCD(act)\n    if cd ~= nil and cd > 0.1 then\n        -- confirmed cast -> advance\n        hb.pendingID, hb.pendingAt = 0, 0\n        hb.idx = hb.idx + 1\n        hb.nextAt = now + 250\n        data.riku_hotbar = hb\n        return\n    end\n\n    -- per-step timeout: 2s -> cancel queue (safety)\n    if hb.pendingAt > 0 and (now - hb.pendingAt) > 2000 then\n        FinishQueue()\n        data.riku_hotbar = hb\n        return\n    end\n\n    -- keep trying this step\n    hb.nextAt = now + 100\n    data.riku_hotbar = hb\n    return act, targetID, (hb.ignoreWeave == true), (hb.allowInterrupt == true)\nend\n\n-- not pending: apply \"skip if on cooldown\" rule ONLY when cd is explicitly > 0\nlocal ready = IsReady(act)\nif not ready then\n    local cd = GetCD(act)\n\n    -- Skip only if user requested skip rule and we can confirm it's on cooldown.\n    -- This avoids mistakenly skipping due to animation lock / ACR timing.\n    if skipIfOnCooldown and cd ~= nil and cd > 0.1 then\n        hb.idx = hb.idx + 1\n        hb.nextAt = now + 50\n        hb.pendingID, hb.pendingAt = 0, 0\n        if hb.idx > #steps then\n            FinishQueue()\n        end\n        data.riku_hotbar = hb\n        return\n    end\n\n    hb.nextAt = now + 100\n    data.riku_hotbar = hb\n    return\nend\n\n-- start trying this step (set pending, do NOT advance idx until CD confirms)\nhb.pendingID = actionID\nhb.pendingAt = now\nhb.nextAt = now + 100\ndata.riku_hotbar = hb\n\nreturn act, targetID, (hb.ignoreWeave == true), (hb.allowInterrupt == true)\n",
-						gVar = "ACR_RikuGNB3_CD",
-						uuid = "73c11531-015c-89dd-8f2c-678d6b221fb7",
-						version = 2.1,
-					},
-				},
-			},
-			conditions = 
-			{
-			},
-			eventType = 12,
-			name = "[ForCasual] Weave Mits Logic",
-			uuid = "8e88a806-c537-a857-822f-36de6294dd02",
-			version = 2,
-		},
+		inheritedIndex = 9,
 	},
 	
 	{
@@ -768,6 +549,113 @@ local tbl =
 			uuid = "719c8d4e-f72c-fe71-86fd-0b2ef54fa5ea",
 			version = 2,
 		},
+	},
+	
+	{
+		data = 
+		{
+			actions = 
+			{
+				
+				{
+					data = 
+					{
+						aType = "Lua",
+						actionLua = "local function drawQT(name, info)\n    GUI:Begin(\"Selection Damage Reduction GUI\", true,\n        GUI.WindowFlags_NoTitleBar +\n        GUI.WindowFlags_NoScrollbar +\n        GUI.WindowFlags_NoScrollWithMouse +\n        GUI.WindowFlags_NoCollapse +\n        GUI.WindowFlags_AlwaysAutoResize\n    )\n\n    local ChildColor = info.bool and \n        {r=0, g=1, b=0, a=0.5} or\n        {r=1, g=0.07, b=0, a=0.5}\n\n    GUI:PushStyleVar(GUI.StyleVar_ChildWindowRounding, 5)\n    GUI:PushStyleVar(GUI.StyleVar_ItemSpacing, 3, 3)\n    GUI:PushStyleColor(GUI.Col_ChildWindowBg, ChildColor.r, ChildColor.g, ChildColor.b, ChildColor.a)\n\n    local text_width = GUI:CalcTextSize(name)\n    GUI:BeginChild(name, 105, 30, false, GUI.WindowFlags_AlwaysAutoResize)\n    GUI:SetCursorPosX((105 - text_width) * 0.5)\n    GUI:SetCursorPosY((30 - GUI:GetTextLineHeightWithSpacing()) * 0.5)\n    GUI:Text(name)\n    GUI:EndChild()\n\n    if GUI:IsItemHovered() and GUI:IsMouseClicked(0) then\n        for otherName, otherInfo in pairs(data.string_SelectionDR) do\n            otherInfo.bool = (otherName == name)\n        end\n    end\n\n    GUI:PopStyleColor()\n    GUI:PopStyleVar(2)\n    GUI:End()\nend\n\n-- 初始化状态表\nif data.string_SelectionDR == nil then\n    data.string_SelectionDR = {\n        [\"正攻法\"] = {bool = false},\n        [\"1/3無敵\"] = {bool = true},\n        [\"2/4無敵\"] = {bool = false},\n    }\nend\n\n-- 初始化显示顺序\nif data.string_SelectionDR_Order == nil then\n    data.string_SelectionDR_Order = {\n        \"正攻法\",\n        \"1/3無敵\",\n        \"2/4無敵\",\n    }\nend\n\n-- 按指定顺序渲染按钮\nfor _, btnName in ipairs(data.string_SelectionDR_Order) do\n    local config = data.string_SelectionDR[btnName]\n    if config then\n        drawQT(btnName, config)\n    end\nend\n\nself.used = true\n",
+						gVar = "ACR_RikuGNB3_CD",
+						uuid = "1dc3214b-4ba8-2f2f-a8da-465fa6d69d46",
+						version = 2.1,
+					},
+					inheritedIndex = 1,
+				},
+			},
+			conditions = 
+			{
+			},
+			enabled = false,
+			eventType = 13,
+			name = "[Legacy] String UI Control Sample",
+			uuid = "50870786-6581-7fcf-b12e-182a6cccb7b5",
+			version = 2,
+		},
+		inheritedIndex = 11,
+	},
+	
+	{
+		data = 
+		{
+			actions = 
+			{
+				
+				{
+					data = 
+					{
+						aType = "Lua",
+						actionLua = "-- [ForCasual] TargetSelector UI (OnDraw)\n-- 紧凑面板：开关 + 模式 + 实时状态（锁定目标 / 手动暂停 / 漏怪数），展开后可调全部参数\n-- 配置与逻辑共用 data._casual；修改后在松开鼠标时才写盘，窗口位置在拖动结束后保存\n\nlocal SAVE_DIR = [[TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\Settings\\]]\nlocal SAVE_REL = SAVE_DIR .. [[CasualSelector.lua]]\n\n-- ---------- 配置读写（UI 与逻辑共用，谁先运行谁初始化） ----------\nif data._casual_io == nil then\n    local t = {}\n    t.DEFAULTS = {\n        enabled = true, scene = \"Auto\", radius = 15,\n        hotkey_vk = 0, mod_shift = false, mod_ctrl = false, mod_alt = false,\n        manual_pause = 4, cooldown = 0.4, margin = 15, sticky = 20,\n        pull_idle = false, respect_friendly = true, draw_markers = true,\n        win = { x = 200, y = 300 },\n    }\n\n    function t.save(cfg)\n        local base = GetLuaModsPath()\n        if not FolderExists(base .. SAVE_DIR) then FolderCreate(base .. SAVE_DIR) end\n        FileSave(base .. SAVE_REL, cfg)\n    end\n\n    function t.loadCfg()\n        local path = GetLuaModsPath() .. SAVE_REL\n        local cfg = FileExists(path) and FileLoad(path) or nil\n        if type(cfg) ~= \"table\" then cfg = {} end\n        for k, v in pairs(t.DEFAULTS) do\n            if cfg[k] == nil or type(cfg[k]) ~= type(v) then\n                cfg[k] = type(v) == \"table\" and { x = v.x, y = v.y } or v\n            end\n        end\n        if cfg.scene ~= \"Tank\" and cfg.scene ~= \"Other\" then cfg.scene = \"Auto\" end\n        cfg.radius = math.max(1, math.min(50, cfg.radius))\n        return cfg\n    end\n\n    data._casual_io = t\nend\nlocal cio = data._casual_io\n\ndata._casual = data._casual or cio.loadCfg()\nlocal cfg = data._casual\nlocal st = data._casual_state\n\ndata._casual_ui = data._casual_ui or {\n    menu = false, dirty = false,\n    modeKeys = { \"Auto\", \"Tank\", \"Other\" },\n}\nlocal ui = data._casual_ui\n-- Labels live in their own key so tables cached by an older version get replaced\nif ui.modeLabels == nil then ui.modeLabels = { \"Auto (by job)\", \"Tank\", \"DPS\" } end\n-- Toggle button shows the current mode; \"###\" keeps the button ID stable while the text changes\nif ui.btnLabels == nil then\n    ui.btnLabels = {\n        AutoTank = \"Auto: Tank###casual_toggle\", AutoOther = \"Auto: DPS###casual_toggle\",\n        TankTank = \"Tank###casual_toggle\", OtherOther = \"DPS###casual_toggle\",\n        TankOther = \"Tank###casual_toggle\", OtherTank = \"DPS###casual_toggle\",\n    }\nend\n\n-- Light polish: rounded corners and roomier spacing only; colors stay on Minion's defaults\nGUI:PushStyleVar(GUI.StyleVar_WindowRounding, 8)\nGUI:PushStyleVar(GUI.StyleVar_FrameRounding, 5)\nGUI:PushStyleVar(GUI.StyleVar_GrabRounding, 5)\nGUI:PushStyleVar(GUI.StyleVar_WindowPadding, 10, 8)\nGUI:PushStyleVar(GUI.StyleVar_FramePadding, 6, 3)\nGUI:PushStyleVar(GUI.StyleVar_ItemSpacing, 8, 6)\n\nlocal flags = GUI.WindowFlags_AlwaysAutoResize | GUI.WindowFlags_NoScrollbar | GUI.WindowFlags_NoTitleBar | GUI.WindowFlags_NoCollapse\nGUI:SetNextWindowPos(cfg.win.x, cfg.win.y, GUI.SetCond_Once)\nlocal visible = GUI:Begin(\"Casual Auto Selector##casual_ui\", true, flags)\nif visible then\n    -- ---- 开关 ----\n    if cfg.enabled then\n        GUI:PushStyleColor(GUI.Col_Button,        0.10, 0.50, 0.10, 0.95)\n        GUI:PushStyleColor(GUI.Col_ButtonHovered, 0.12, 0.60, 0.12, 0.95)\n        GUI:PushStyleColor(GUI.Col_ButtonActive,  0.08, 0.65, 0.08, 0.95)\n    else\n        GUI:PushStyleColor(GUI.Col_Button,        0.50, 0.15, 0.15, 0.95)\n        GUI:PushStyleColor(GUI.Col_ButtonHovered, 0.60, 0.22, 0.22, 0.95)\n        GUI:PushStyleColor(GUI.Col_ButtonActive,  0.75, 0.10, 0.10, 0.95)\n    end\n    -- Auto resolves from the logic's last evaluation (falls back to DPS until it has run)\n    local effective = (st and st.mode) or \"Other\"\n    if cfg.scene ~= \"Auto\" then effective = cfg.scene end\n    if GUI:Button(ui.btnLabels[cfg.scene .. effective], 0, 22) then\n        cfg.enabled = not cfg.enabled\n        ui.dirty = true\n    end\n    GUI:PopStyleColor(3)\n\n    GUI:SameLine(0, 6)\n    if GUI:Button(ui.menu and \"-##casual_menu\" or \"+##casual_menu\", 22, 22) then\n        ui.menu = not ui.menu\n    end\n\n    -- ---- 状态行 ----\n    local stale = not st or Now() - st.lastTick > 1000\n    if not cfg.enabled then\n        GUI:TextDisabled(\"Disabled (click to enable)\")\n    elseif stale then\n        GUI:TextColored(0.98, 0.75, 0.14, 1, \"Logic not running (bot stopped?)\")\n    else\n        if st.state == \"manual\" then\n            GUI:TextColored(0.98, 0.75, 0.14, 1, string.format(\"Manual %.1fs (click to resume)\", math.max(0, st.manualUntil - Now()) / 1000))\n            if GUI:IsItemClicked(0) then st.manualUntil = 0; st.nextEval = 0 end\n        elseif st.state == \"friendly\" then\n            GUI:TextColored(0.98, 0.75, 0.14, 1, \"Friendly target, paused\")\n        elseif st.state == \"locked\" then\n            local t = TensorCore.mGetTarget()\n            if t then\n                GUI:TextColored(0.24, 0.78, 0.94, 1, string.format(\"→ %s  %d%%\", t.name or \"?\", math.floor(t.hp and t.hp.percent or 0)))\n            else\n                GUI:TextDisabled(\"No valid target nearby\")\n            end\n        else\n            GUI:TextDisabled(\"No valid target nearby\")\n        end\n        if st.mode == \"Tank\" and st.loose > 0 then\n            GUI:TextColored(0.97, 0.44, 0.44, 1, string.format(\"Loose %d\", st.loose))\n            GUI:SameLine(0, 10)\n        end\n        GUI:TextDisabled(string.format(\"%dm | %d candidates\", cfg.radius, st.candidates))\n    end\n\n    -- ---- 展开设置 ----\n    if ui.menu then\n        GUI:Separator()\n        GUI:Text(\"Mode\")\n        GUI:SameLine(0, 8)\n        local curIdx = cfg.scene == \"Tank\" and 2 or cfg.scene == \"Other\" and 3 or 1\n        GUI:PushItemWidth(150)\n        local newIdx, modeChanged = GUI:Combo(\"##casual_scene\", curIdx, ui.modeLabels, 3)\n        GUI:PopItemWidth()\n        if modeChanged and newIdx ~= curIdx then\n            cfg.scene = ui.modeKeys[newIdx]\n            ui.dirty = true\n        end\n        GUI:PushItemWidth(150)\n        local v, c\n        v, c = GUI:SliderInt(\"Radius (y)##casual_radius\", cfg.radius, 1, 50); if c then ui.dirty = true; cfg.radius = v end\n        v, c = GUI:SliderFloat(\"Manual pause (s)##casual_pause\", cfg.manual_pause, 0, 15, \"%.1f\"); if c then ui.dirty = true; cfg.manual_pause = v end\n        if GUI:IsItemHovered() then GUI:SetTooltip(\"After you pick a target manually, auto-select stays off for this long. 0 = never pause.\") end\n        v, c = GUI:SliderFloat(\"Switch cooldown (s)##casual_cd\", cfg.cooldown, 0, 3, \"%.2f\"); if c then ui.dirty = true; cfg.cooldown = v end\n        v, c = GUI:SliderFloat(\"Switch margin##casual_margin\", cfg.margin, 0, 100, \"%.0f\"); if c then ui.dirty = true; cfg.margin = v end\n        if GUI:IsItemHovered() then GUI:SetTooltip(\"A new target must score this much higher than the current one. Higher = less target hopping.\") end\n        v, c = GUI:SliderFloat(\"Sticky bonus##casual_sticky\", cfg.sticky, 0, 100, \"%.0f\"); if c then ui.dirty = true; cfg.sticky = v end\n        GUI:PopItemWidth()\n\n        v, c = GUI:Checkbox(\"Tank: allow idle (unpulled) enemies##casual_pull\", cfg.pull_idle); if c then ui.dirty = true; cfg.pull_idle = v end\n        v, c = GUI:Checkbox(\"Pause while targeting a friendly##casual_friendly\", cfg.respect_friendly); if c then ui.dirty = true; cfg.respect_friendly = v end\n        v, c = GUI:Checkbox(\"Draw target / loose-enemy rings##casual_markers\", cfg.draw_markers); if c then ui.dirty = true; cfg.draw_markers = v end\n\n        GUI:Separator()\n        GUI:Text(\"Toggle hotkey (VK)\")\n        GUI:SameLine(0, 8)\n        GUI:PushItemWidth(90)\n        v, c = GUI:InputInt(\"##casual_vk\", cfg.hotkey_vk, 1, 10)\n        GUI:PopItemWidth()\n        if c then cfg.hotkey_vk = math.max(0, math.floor(v or 0)); ui.dirty = true end\n        GUI:SameLine(0, 8)\n        if GUI:Button(\"Clear##casual_vk_clear\", 44, 20) then cfg.hotkey_vk = 0; ui.dirty = true end\n        v, c = GUI:Checkbox(\"Shift##casual_modshift\", cfg.mod_shift); if c then ui.dirty = true; cfg.mod_shift = v end\n        GUI:SameLine(0, 8)\n        v, c = GUI:Checkbox(\"Ctrl##casual_modctrl\", cfg.mod_ctrl); if c then ui.dirty = true; cfg.mod_ctrl = v end\n        GUI:SameLine(0, 8)\n        v, c = GUI:Checkbox(\"Alt##casual_modalt\", cfg.mod_alt); if c then ui.dirty = true; cfg.mod_alt = v end\n\n        GUI:Separator()\n        if GUI:Button(\"Restore Defaults##casual\", 130, 20) then\n            local d = cio.DEFAULTS\n            cfg.scene, cfg.radius = d.scene, d.radius\n            cfg.manual_pause, cfg.cooldown, cfg.margin, cfg.sticky = d.manual_pause, d.cooldown, d.margin, d.sticky\n            cfg.pull_idle, cfg.respect_friendly, cfg.draw_markers = d.pull_idle, d.respect_friendly, d.draw_markers\n            ui.dirty = true\n        end\n    end\n\n    -- ---- 位置：拖动结束后记录 ----\n    local wx, wy = GUI:GetWindowPos()\n    if (wx ~= cfg.win.x or wy ~= cfg.win.y) and not GUI:IsMouseDown(0) then\n        cfg.win.x, cfg.win.y = wx, wy\n        ui.dirty = true\n    end\nend\nGUI:End()\nGUI:PopStyleVar(6)\n\n-- 拖动滑块时不反复写盘：松开鼠标后统一保存\nif ui.dirty and not GUI:IsMouseDown(0) then\n    ui.dirty = false\n    cio.save(cfg)\nend\n\nself.used = true\n",
+						gVar = "ACR_RikuGNB3_CD",
+						name = "TargetSelector UI",
+						uuid = "3430ddff-9dbf-437a-a420-298309de8c8f",
+						version = 2.1,
+					},
+				},
+			},
+			conditions = 
+			{
+			},
+			eventType = 13,
+			name = "[ForCasual] TargetSelector UI",
+			uuid = "006f6b04-b9ec-9ec2-b5fd-53014904a4a9",
+			version = 2,
+		},
+		inheritedIndex = 12,
+	},
+	
+	{
+		data = 
+		{
+			actions = 
+			{
+				
+				{
+					data = 
+					{
+						aType = "Lua",
+						actionLua = "-- [ForCasual] TargetSelector Logic (OnFrame)\n-- 坦克模式：优先抓打奶妈 / 队友的漏怪（越近越优先），不抢副 T 的怪，其次打自己身上残血的怪\n-- 输出模式：优先打坦克身上的怪，其次打队友身上的怪，血量百分比低的优先；不拉未开怪的敌人\n-- 手动选中目标后暂停接管；当前目标仍合格时保持（粘性），新目标明显更好才切换；切换有冷却\n-- 评估每 150ms 一次；标记每帧绘制。配置与 UI 共用 data._casual，状态写入 data._casual_state\n\nlocal SAVE_DIR = [[TensorReactions\\GeneralReactions\\Rikuduo_s_Gadgets\\Settings\\]]\nlocal SAVE_REL = SAVE_DIR .. [[CasualSelector.lua]]\n\n-- ---------- 配置读写（UI 与逻辑共用，谁先运行谁初始化） ----------\nif data._casual_io == nil then\n    local t = {}\n    t.DEFAULTS = {\n        enabled = true, scene = \"Auto\", radius = 15,\n        hotkey_vk = 0, mod_shift = false, mod_ctrl = false, mod_alt = false,\n        manual_pause = 4, cooldown = 0.4, margin = 15, sticky = 20,\n        pull_idle = false, respect_friendly = true, draw_markers = true,\n        win = { x = 200, y = 300 },\n    }\n\n    function t.save(cfg)\n        local base = GetLuaModsPath()\n        if not FolderExists(base .. SAVE_DIR) then FolderCreate(base .. SAVE_DIR) end\n        FileSave(base .. SAVE_REL, cfg)\n    end\n\n    function t.loadCfg()\n        local path = GetLuaModsPath() .. SAVE_REL\n        local cfg = FileExists(path) and FileLoad(path) or nil\n        if type(cfg) ~= \"table\" then cfg = {} end\n        for k, v in pairs(t.DEFAULTS) do\n            if cfg[k] == nil or type(cfg[k]) ~= type(v) then\n                cfg[k] = type(v) == \"table\" and { x = v.x, y = v.y } or v\n            end\n        end\n        if cfg.scene ~= \"Tank\" and cfg.scene ~= \"Other\" then cfg.scene = \"Auto\" end\n        cfg.radius = math.max(1, math.min(50, cfg.radius))\n        return cfg\n    end\n\n    data._casual_io = t\nend\nlocal cio = data._casual_io\n\n-- ---------- 逻辑辅助（每次 data 重置后初始化一次） ----------\nif data._casual_fn == nil then\n    local fn = {}\n    fn.TANK = { [1] = true, [3] = true, [19] = true, [21] = true, [32] = true, [37] = true }\n    fn.HEALER = { [6] = true, [24] = true, [28] = true, [33] = true, [40] = true }\n    -- 队伍角色缓存：id -> \"tank\" / \"healer\" / \"member\"\n    function fn.refreshParty(st, me)\n        local party = st.party\n        for k in pairs(party) do party[k] = nil end\n        local list = TensorCore.getEntityGroupList(\"Party\")\n        if list then\n            for _, e in pairs(list) do\n                if e.id ~= me.id then\n                    party[e.id] = fn.TANK[e.job] and \"tank\" or fn.HEALER[e.job] and \"healer\" or \"member\"\n                end\n            end\n        end\n    end\n\n    function fn.holderRole(st, me, holder)\n        if holder == 0 then return nil end\n        if holder == me.id then return \"me\" end\n        local r = st.party[holder]\n        if r then return r end\n        -- 宠物 / 陆行鸟 / 召唤物：主人是自己或队友时算“打队友”\n        local h = TensorCore.mGetEntity(holder)\n        if h and h.ownerid and h.ownerid ~= 0 and (h.ownerid == me.id or st.party[h.ownerid]) then\n            return \"member\"\n        end\n        return \"other\"\n    end\n\n    -- forEachEntity 回调：对每个候选评分（只在这里定义一次，状态通过参数传入）\n    function fn.scoreEntity(id, st, me, cfg)\n        local e = TensorCore.mGetEntity(id)\n        if not e or not e.alive or not e.attackable then return true end\n        local dist = math.max(0, e.distance2d or 999) -- distance2d 已是到目标圈边缘的距离\n        if dist > cfg.radius then return true end\n\n        local hp = e.hp and e.hp.percent or 100\n        local holder = e.targetid or 0\n        local role = fn.holderRole(st, me, holder)\n        local inCombat = e.incombat or holder ~= 0\n        local score\n\n        if st.tank then\n            if role == \"me\" then\n                score = 10 + (100 - hp) * 0.2\n            elseif role == \"tank\" then\n                return true -- 副 T 的怪不抢\n            elseif role == \"healer\" or role == \"member\" then\n                score = 100 + (role == \"healer\" and 50 or 0) - dist * 2\n                st.loose = st.loose + 1\n                st.looseIds[st.loose] = id\n            elseif not inCombat then\n                if not cfg.pull_idle then return true end\n                score = 30 - dist * 2\n            else\n                score = 20 - dist * 2\n            end\n        else\n            if not inCombat then return true end -- 输出模式绝不拉怪\n            if role == \"tank\" or (role == \"me\" and fn.TANK[me.job]) then\n                score = 200 + (100 - hp)\n            elseif role == \"me\" or role == \"healer\" or role == \"member\" then\n                score = 100 + (100 - hp)\n            else\n                return true\n            end\n        end\n\n        st.candidates = st.candidates + 1\n        if id == st.curId then\n            score = score + cfg.sticky\n            st.curScore = score\n        end\n        if score > st.bestScore then\n            st.bestScore = score\n            st.bestId = id\n        end\n        return true\n    end\n\n    function fn.drawRing(id, color, extra)\n        local e = TensorCore.mGetEntity(id)\n        if not e or not e.pos then return end\n        local r = math.max(0.5, e.hitradius or 0.5) + extra\n        Argus.addCircleFilled(e.pos.x, e.pos.y, e.pos.z, r, 40, nil, color, 2.5)\n    end\n\n    fn.colTarget = GUI:ColorConvertFloat4ToU32(0.24, 0.78, 0.94, 0.95)\n    fn.colLoose = GUI:ColorConvertFloat4ToU32(0.97, 0.44, 0.44, 0.90)\n    data._casual_fn = fn\nend\nlocal fn = data._casual_fn\n\ndata._casual = data._casual or cio.loadCfg()\nlocal cfg = data._casual\n\ndata._casual_state = data._casual_state or {\n    party = {}, looseIds = {}, nextEval = 0, nextParty = 0, lastSwitch = 0,\n    manualUntil = 0, lastAutoId = 0, hkPrev = false, filterRadius = -1, filter = \"\",\n    state = \"off\", mode = \"Other\", loose = 0, candidates = 0, lastTick = 0,\n}\nlocal st = data._casual_state\nlocal now = Now()\nst.lastTick = now\n\n-- ---------- 热键：上升沿切换开关 ----------\nif cfg.hotkey_vk ~= 0 then\n    local down = GUI:IsKeyDown(cfg.hotkey_vk)\n        and (not cfg.mod_shift or GUI:IsKeyDown(16))\n        and (not cfg.mod_ctrl or GUI:IsKeyDown(17))\n        and (not cfg.mod_alt or GUI:IsKeyDown(18))\n    if down and not st.hkPrev then\n        cfg.enabled = not cfg.enabled\n        cio.save(cfg)\n    end\n    st.hkPrev = down\nend\n\nif not cfg.enabled then\n    st.state = \"off\"\n    st.loose = 0\n    self.used = true\n    return\nend\n\nlocal me = TensorCore.mGetPlayer()\nif not me or not me.id then\n    self.used = true\n    return\nend\n\n-- ---------- 评估（150ms 一次） ----------\nif now >= st.nextEval then\n    st.nextEval = now + 150\n    if now >= st.nextParty then\n        fn.refreshParty(st, me)\n        st.nextParty = now + 1000\n    end\n\n    st.tank = cfg.scene == \"Tank\" or (cfg.scene == \"Auto\" and fn.TANK[me.job] == true)\n    st.mode = st.tank and \"Tank\" or \"Other\"\n\n    local target = TensorCore.mGetTarget()\n    local curId = target and target.id or 0\n    -- 当前目标不是脚本最后设置的 → 用户手动切换，暂停接管\n    if curId ~= 0 and curId ~= st.lastAutoId then\n        st.manualUntil = now + cfg.manual_pause * 1000\n        st.lastAutoId = curId\n    end\n\n    if st.filterRadius ~= cfg.radius then\n        st.filterRadius = cfg.radius\n        st.filter = string.format(\"alive,attackable,selectable,maxdistance=%d\", math.ceil(cfg.radius))\n    end\n\n    st.curId, st.curScore, st.bestId, st.bestScore = curId, nil, 0, -math.huge\n    st.candidates, st.loose = 0, 0\n    TensorCore.forEachEntity(st.filter, fn.scoreEntity, st, me, cfg)\n    for i = st.loose + 1, #st.looseIds do st.looseIds[i] = nil end\n\n    if now < st.manualUntil then\n        st.state = \"manual\"\n    elseif cfg.respect_friendly and target and not target.attackable then\n        st.state = \"friendly\"\n    elseif st.bestId == 0 then\n        st.state = st.curScore and \"locked\" or \"waiting\"\n    else\n        local switch = st.curScore == nil\n            or (st.bestId ~= curId and st.bestScore > st.curScore + cfg.margin)\n        if switch and st.bestId ~= curId and now - st.lastSwitch >= cfg.cooldown * 1000 then\n            Player:SetTarget(st.bestId)\n            st.lastAutoId = st.bestId\n            st.lastSwitch = now\n        end\n        st.state = \"locked\"\n    end\nend\n\n-- ---------- 标记（每帧） ----------\nif cfg.draw_markers then\n    if st.state == \"locked\" and st.lastAutoId ~= 0 and me.targetid == st.lastAutoId then\n        fn.drawRing(st.lastAutoId, fn.colTarget, 0)\n    end\n    for i = 1, st.loose do\n        fn.drawRing(st.looseIds[i], fn.colLoose, 0.3)\n    end\nend\n\nself.used = true\n",
+						conditions = 
+						{
+							
+							{
+								"2b9988a8-915c-20ac-811d-a491ff57683d",
+								true,
+							},
+						},
+						gVar = "ACR_RikuGNB3_CD",
+						name = "TargetSelector Logic",
+						uuid = "3430ddff-9dbf-437a-a420-298309de8c8f",
+						version = 2.1,
+					},
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					data = 
+					{
+						category = "Lua",
+						conditionLua = "return FFXIV_Common_BotRunning",
+						name = "Bot is Running",
+						uuid = "2b9988a8-915c-20ac-811d-a491ff57683d",
+						version = 3,
+					},
+				},
+			},
+			eventType = 12,
+			name = "[ForCasual] TargetSelector Logic",
+			uuid = "d1fdd3b7-6cec-38a3-b901-aa66f4182a7f",
+			version = 2,
+		},
+		inheritedIndex = 13,
 	}, 
 	inheritedProfiles = 
 	{
